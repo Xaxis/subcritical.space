@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "paperwright": {
+      "type": "http",
+      "url": "https://paperwright.diy/mcp"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "inspections-per-year": {
+    "value": 4.0,
+    "display": "4/yr",
+    "unit": "/yr",
+    "basis": "assumption",
+    "label": "challenge inspections a year reaching a given site, placeholder",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "data/inputs.toml#L8"
+  },
+  "detect-prob-per-inspection": {
+    "value": 0.3,
+    "display": "30%",
+    "unit": "",
+    "basis": "assumption",
+    "label": "chance one inspection finds a secret program it reaches, placeholder",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "data/inputs.toml#L15"
+  },
+  "breakout-years": {
+    "value": 1.0,
+    "display": "1.0 yr",
+    "unit": "yr",
+    "basis": "assumption",
+    "label": "breakout time of the secret program, placeholder",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "data/inputs.toml#L21"
+  },
+  "miss-prob-one-channel": {
+    "value": 0.30119421191220214,
+    "display": "30%",
+    "unit": "",
+    "basis": "derived",
+    "label": "chance one inspection channel misses a secret program for its whole breakout time",
+    "formula": "exp(-inspections-per-year * detect-prob-per-inspection * breakout-years)",
+    "inputs": [
+      "inspections-per-year",
+      "detect-prob-per-inspection",
+      "breakout-years"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/detent.py#L46"
+  }
+}

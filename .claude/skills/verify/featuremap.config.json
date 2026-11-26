@@ -1,0 +1,10 @@
+{
+  "manual": [
+    {"kind": "cli", "label": "model", "entry": "model/detent.py", "reach": "python3 model/detent.py [--only ID] [--set ID=VALUE] [--json] [--write]", "area": "model"},
+    {"kind": "job", "label": "make-model", "entry": "model/detent.py", "reach": "make model", "area": "model"},
+    {"kind": "cli", "label": "sync", "entry": "tools/sync.py", "reach": "make docs (python3 tools/sync.py [--check])", "area": "docs"},
+    {"kind": "cli", "label": "check", "entry": "tools/check.py", "reach": "make check", "area": "docs"},
+    {"kind": "cli", "label": "paper", "entry": "tools/paper.py", "reach": "make paper (python3 tools/paper.py [--ids] [--keys MAP.json] [--draft])", "area": "paper"}
+  ],
+  "tests": ["tools/check.py"]
+}

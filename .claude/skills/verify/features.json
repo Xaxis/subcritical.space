@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "generated_by": "featuremap (claude-core) - regenerate with `featuremap generate --write`; do not edit by hand",
+  "checks": [
+    {
+      "id": "check:make:check",
+      "kind": "verify",
+      "run": "make check",
+      "script": "(Makefile)"
+    }
+  ],
+  "launch": [],
+  "features": [
+    {
+      "id": "cli:check",
+      "kind": "cli",
+      "entry": "tools/check.py",
+      "reach": "make check",
+      "area": "docs",
+      "tests": []
+    },
+    {
+      "id": "cli:model",
+      "kind": "cli",
+      "entry": "model/detent.py",
+      "reach": "python3 model/detent.py [--only ID] [--set ID=VALUE] [--json] [--write]",
+      "area": "model",
+      "tests": []
+    },
+    {
+      "id": "cli:paper",
+      "kind": "cli",
+      "entry": "tools/paper.py",
+      "reach": "make paper (python3 tools/paper.py [--ids] [--keys MAP.json] [--draft])",
+      "area": "paper",
+      "tests": []
+    },
+    {
+      "id": "cli:sync",
+      "kind": "cli",
+      "entry": "tools/sync.py",
+      "reach": "make docs (python3 tools/sync.py [--check])",
+      "area": "docs",
+      "tests": []
+    },
+    {
+      "id": "job:make-model",
+      "kind": "job",
+      "entry": "model/detent.py",
+      "reach": "make model",
+      "area": "model",
+      "tests": []
+    }
+  ]
+}

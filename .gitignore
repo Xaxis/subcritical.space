@@ -1,0 +1,22 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# builds and scratch
+build/
+out/
+*.log
+.DS_Store
+
+# agent worktrees and local settings
+.claude/worktrees/
+.claude/settings.local.json
+
+# experiment caches: downloaded models and datasets (each tool says where it fetches from)
+tools/exp/cache/

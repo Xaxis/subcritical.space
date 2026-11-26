@@ -1,0 +1,26 @@
+# Detent's inputs. Every number the model reads starts here.
+# basis: measured | vendor | spec | design | assumption | modelled (see model/ledger.py).
+# A measured, vendor or spec input names its source, a key in research/sources.toml.
+
+# ---------------------------------------------------------------------------------------------
+# The detection bound (placeholders until the verification survey sources them)
+
+[inspections-per-year]
+value = 4
+unit = "/yr"
+basis = "assumption"
+fmt = ",.0f"
+label = "challenge inspections a year reaching a given site, placeholder"
+
+[detect-prob-per-inspection]
+value = 0.3
+basis = "assumption"
+fmt = "%"
+label = "chance one inspection finds a secret program it reaches, placeholder"
+
+[breakout-years]
+value = 1
+unit = "yr"
+basis = "assumption"
+fmt = ",.1f"
+label = "breakout time of the secret program, placeholder"
