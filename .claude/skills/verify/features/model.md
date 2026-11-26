@@ -1,13 +1,13 @@
 # Model
 
-Every derived number, computed from `data/inputs.toml` by `model/detent.py` through
+Every derived number, computed from `data/inputs.toml` by `model/subcritical.py` through
 `model/ledger.py`, with its formula, inputs, basis and the line that defines it.
 
 <!-- covers: cli:model, job:make-model -->
 
 ## Sub-features
 
-- all: `python3 model/detent.py` prints every number with its basis.
+- all: `python3 model/subcritical.py` prints every number with its basis.
 - only: `--only ID` prints one number, its formula, each input's value.
 - set: `--set ID=VALUE` (repeatable) reruns with an input changed; an unknown ID is an error.
 - json: `--json` prints the ledger as JSON.
@@ -16,9 +16,9 @@ Every derived number, computed from `data/inputs.toml` by `model/detent.py` thro
 ## How to check it
 
 ```sh
-python3 model/detent.py --only miss-prob-one-channel; echo "exit $?"
-python3 model/detent.py --set inspections-per-year=12 | grep miss-prob-one-channel
-python3 model/detent.py --set no-such-input=1; echo "exit $? (expect a KeyError)"
+python3 model/subcritical.py --only miss-prob-one-channel; echo "exit $?"
+python3 model/subcritical.py --set inspections-per-year=12 | grep miss-prob-one-channel
+python3 model/subcritical.py --set no-such-input=1; echo "exit $? (expect a KeyError)"
 make model && git diff --stat data/numbers.json research/numbers.md
 ```
 

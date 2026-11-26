@@ -82,9 +82,9 @@ def check_dashes() -> None:
 
 
 def check_model() -> None:
-    import detent
+    import subcritical
 
-    ledger = detent.build()
+    ledger = subcritical.build()
     want_json = json.dumps(ledger.to_json(), indent=2) + "\n"
     want_md = ledger.to_markdown()
     have_json = (ROOT / "data" / "numbers.json").read_text()

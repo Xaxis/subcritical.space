@@ -1,4 +1,4 @@
-# Detent's inputs. Every number the model reads starts here.
+# Subcritical's inputs. Every number the model reads starts here.
 # basis: measured | vendor | spec | design | assumption | modelled (see model/ledger.py).
 # A measured, vendor or spec input names its source, a key in research/sources.toml.
 

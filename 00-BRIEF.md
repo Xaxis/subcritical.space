@@ -57,3 +57,58 @@ verification results, and anything that needs the owner.
 
 Time is not a constraint: take several days if that is what it takes to get it right. Same
 verification bar as before.
+
+## A third addition: the anatomy of superintelligence
+
+A large part of the paper, not just a section, must define very specifically what
+superintelligence is and by what mechanisms it forms, from every relevant perspective:
+
+- **Physical and energetic:** the compute, energy, memory, bandwidth and hardware it takes;
+  thermodynamic and information-theoretic limits (for example Landauer's limit and the energy cost
+  per useful operation); and what physical footprint a system approaching it would leave, so it
+  can be detected.
+- **Computational and algorithmic:** scaling laws, architectures, data, search and planning, and
+  how capability compounds.
+- **Dynamical:** the feedback loops that turn a capable system into a superintelligent one
+  (continual learning, recursive self-improvement, autonomous resource acquisition), with rates,
+  thresholds and the conditions for runaway versus saturation.
+- **Cognitive and functional:** what it can do that humans and institutions cannot, measured
+  rather than asserted.
+- **Organizational and economic:** how labs, markets and states supply the inputs that let it form.
+
+Each mechanism needs a precise definition, a way to measure it, and the evidence for or against
+it. The protocol in the second half should then follow from these definitions: it limits the
+mechanisms that form it. Same verification bar.
+
+## A fourth addition: the site
+
+The project also becomes a website application, and it should be the best one built so far, like
+Corerope and Phosphoros (now starwright.space) but better.
+
+- **Name.** Pick the best name with a domain that checks out as likely available, build under it,
+  and post it so the owner can register the domain. Until it is registered, deploy to a preview
+  address and switch the moment it is live. The GitHub repository has the same name as the site,
+  under the owner's personal account, with the same visibility and licence as corerope.space and
+  phosphoros.space unless something here should not be public yet.
+- **What it does.** It presents the research as a living, interactive work, not a static paper:
+  the definitions and mechanisms of superintelligence explorable from each perspective (physical,
+  energetic, computational, dynamical, cognitive, organisational), the protocol laid out clearly,
+  and the experiments and simulations rerunnable or explorable in the browser, all with sources.
+- **Design.** Extremely elegant and meaningful, with heavy use of 3D, as on the owner's other
+  sites (Phosphoros and Starwright's 3D views, and the owner's other renderer; reuse what fits).
+  The 3D carries meaning, not decoration: the mechanisms of superintelligence forming as
+  explorable systems, the feedback loops and thresholds as dynamic models, energy and compute
+  scales you can move through, the protocol's verification layers as structures you can inspect.
+  Fast on phones, with graceful fallbacks when WebGL is unavailable or the reader prefers reduced
+  motion. Every 3D view checked in a real browser, including against the black-screen failure
+  Phosphoros's Explore view once had.
+- **Quality bar.** A polished, cohesive, very adaptive UI across phone, tablet and desktop, in both
+  themes, accessible, fast, and not generic in look or writing. Checked in a real browser at
+  several widths before anything is called done.
+- **Order.** The research and definitions come first, since the site presents them. Build the site
+  alongside once the memo and the definitions settle, deploy it the way the other project sites
+  deploy, and post the live link.
+- **Setup.** The owner's usual setup, as on the other project sites: the shared projects and the
+  typical stack, the owner's personal accounts (not any employer's), and environment variables or
+  keys taken from the other projects' existing config. Follow how corerope.space and
+  phosphoros.space are built and deployed. No new accounts or paid services without asking.

@@ -1,13 +1,16 @@
-# Detent
+# Subcritical
 
-An open research program on one question: can there be a protocol that prevents the development
-of artificial superintelligence while leaving useful AI free to keep improving?
+An open research program, and a site at subcritical.space, on one question: can there be a protocol
+that prevents the development of artificial superintelligence while leaving useful AI free to keep
+improving?
 
-A detent is the catch in a mechanism that lets it move freely up to a point and holds it there. In
-a chronometer's detent escapement it releases the wheel one tooth at a time. In diplomacy, détente
-is rivals agreeing to limits they can check. Detent asks for both: a precise, measurable line
-between useful AI and the path to superintelligence, and a way for rivals to verify that nobody
-crosses it without trusting one another.
+A subcritical reactor still makes useful power, but each generation of its chain reaction is
+smaller than the last, so it cannot run away. Subcritical asks for the same of AI: systems that are
+useful and keep getting better, held below the point where their improvement feeds on itself
+faster than anyone can check it. The first half of the work defines what superintelligence is and
+by what mechanisms it forms (physical, computational, dynamical, cognitive, organisational), each
+measured. The second half is a protocol that limits those mechanisms, verified without trusting
+any one party.
 
 ## Status
 
@@ -39,8 +42,8 @@ You need Python 3.11 or later.
 make model                                   # every number, from inputs and model
 make docs                                    # write those numbers into the documents
 make check                                   # em dashes, reproducibility, sync, every citation
-python3 model/detent.py --only miss-prob-one-channel
-python3 model/detent.py --set inspections-per-year=12
+python3 model/subcritical.py --only miss-prob-one-channel
+python3 model/subcritical.py --set inspections-per-year=12
 ```
 
 ## Licence

@@ -9,11 +9,83 @@ survives goes into `04-claims.md` and through all six levels in `06-verification
 
 Nuclear safeguards do not ban fission. They separate low-enriched uranium, which runs power
 reactors, from weapons-grade material, and they set their detection timeliness shorter than the
-time it would take to turn diverted material into a weapon. Detent tries the same for AI. Useful
+time it would take to turn diverted material into a weapon. Subcritical tries the same for AI. Useful
 AI stays allowed and keeps improving. The protocol triggers on a measurable line: the point at
 which a system, together with what it can reach, could become superintelligent faster than the
 regime can detect and respond. The line is drawn by time and by whether the improvement loop is
 closed, not by one capability score.
+
+## The anatomy: how superintelligence forms, from five perspectives
+
+Added after the owner's third note. Roughly the first half of the paper defines what
+superintelligence is and the mechanisms that form it, perspective by perspective. Each mechanism
+gets a precise definition, a measurement, and the evidence for and against it. The protocol in the
+second half limits these mechanisms, one by one. The candidates, before the survey:
+
+**Physical and energetic.**
+- *P1 Compute budget.* The training compute (operations) and sustained inference throughput
+  (operations a second, for a number of copies at a given speed) that a D1 system needs at a given
+  algorithmic efficiency. Measured from chip counts, peak rates and utilisation. Evidence: scaling
+  fits, and estimates of the brain's compute as a reference point, not a target.
+- *P2 Energy per useful operation, and the headroom to physics.* Joules per operation of current
+  accelerators against Landauer's bound of kT ln 2 per erased bit. The gap says how far efficiency
+  can still improve before physics binds, and so how small the footprint of a given computation
+  could become. Measured from specifications and independent power measurements.
+- *P3 Memory and bandwidth.* The state a system must hold, the memory bandwidth per copy (which
+  bounds serial speed) and the interconnect bandwidth (which bounds training at scale, and which
+  low-communication training methods loosen).
+- *P4 Footprint, and its floor.* The power, heat, water, chips and construction a system
+  approaching D1 leaves behind, and the footprint floor: the smallest facility that could produce
+  it at a given efficiency. Detection works while the floor sits above what satellites, grids and
+  supply-chain accounting can see. Algorithmic progress lowers the floor. Belief: the floor as a
+  defined, computed quantity may be new.
+
+**Computational and algorithmic.**
+- *A1 Capability as a function of effective compute:* scaling laws, and observational scaling
+  across public models.
+- *A2 The exchange rate between training and inference compute:* how much search, sampling and
+  reasoning at run time substitute for training. A training cap leaks through inference, so the
+  rate sets how far. Measured on small models and from published curves.
+- *A3 Algorithmic progress:* its rate and sources (architecture, data, reinforcement learning),
+  measured as compute-equivalent gains.
+- *A4 Data:* the stock of usable data, and when synthetic data and self-play substitute for it.
+  The evidence splits between collapse without a verifier and self-improvement with one (games,
+  mathematics, code).
+- *A5 Search and planning:* superhuman play by self-play and search already exists in closed
+  domains (narrow superintelligence). The open question is how much carries over to open ones.
+
+**Dynamical.**
+- *Y1 The loops:* software (AI improves algorithms, D2), hardware (AI improves chips and fabs),
+  economic (AI earns money that buys compute), experiential (continual learning) and acquisitive
+  (replication and resource acquisition). Each is written as a growth law, the rate of X a power
+  of X and of its inputs.
+- *Y2 Runaway versus saturation:* the condition for each loop (its returns above or below 1 once
+  diminishing returns are counted), its timescale, and which loop is fastest. Evidence: measured
+  research productivity in many fields, returns in software, and published takeoff models.
+- *Y3 Coupling:* loops that are each subcritical can be supercritical together. The protocol must
+  hold the combined gain below 1, which is where the project's name comes from.
+
+**Cognitive and functional.**
+- *F1 Kinds of advantage:* speed, number of copies and quality, measured separately: serial
+  throughput against human pace, copies that fit on held compute, and quality against the best
+  organisations (D1). The typology is prior work; measuring each against institutions may not be.
+- *F2 Decisive functions:* AI research, cyber operations, weapons-relevant science, persuasion and
+  strategy, and economic production. Each is benchmarked against expert or institutional
+  baselines.
+- *F3 Narrow versus general:* narrow superhuman systems (protein structure, games) are useful AI.
+  The line is generality across the decisive functions together with a closed loop.
+
+**Organisational and economic.**
+- *O1 The supply of inputs:* capital, chips (lithography, fabrication, high-bandwidth memory,
+  advanced packaging), power, talent and data. For each input: who supplies it, how concentrated
+  supply is, how fast it can grow and how visible it is.
+- *O2 Race dynamics:* how competition among labs and states lowers safety margins (prior models),
+  and what changes the payoffs.
+- *O3 Chokepoints:* the stages with the fewest suppliers and the largest, most visible plants.
+  These are where the protocol can stand.
+
+The protocol is then derived as a table: each mechanism, the limit that holds it below its
+threshold, the verification channel that sees it, and what the limit costs useful AI.
 
 ## Candidate definitions
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the paper for Paperwright: build/detent-paper.md and build/detent.bib.
+"""Build the paper for Paperwright: build/subcritical-paper.md and build/subcritical.bib.
 
 The paper's sources (paper/*.md, in name order) cite numbers as ledger links and sources as
 [@key]. Paperwright holds its own numbers and its own library, so this flattens every ledger link
@@ -8,7 +8,7 @@ to its text and writes a BibTeX file of the cited sources, with each one's DOI, 
   python3 tools/paper.py                     build both files
   python3 tools/paper.py --keys MAP.json     rename citation keys to the ones Paperwright gave
   python3 tools/paper.py --ids               print the identifiers to add, one per line
-  python3 tools/paper.py --draft             also write build/detent-draft.json: the sections and
+  python3 tools/paper.py --draft             also write build/subcritical-draft.json: the sections and
                                              tables as Paperwright's create_paper and bring_draft
                                              take them (each "# " heading a section; each pipe table
                                              after a "Table: caption {#tab:label}" line a table)
@@ -143,12 +143,12 @@ def main(argv: list[str]) -> int:
         flat = CITE_KEY.sub(lambda m: "@" + rename.get(m.group(1), m.group(1)), flat)
     out = ROOT / "build"
     out.mkdir(exist_ok=True)
-    (out / "detent-paper.md").write_text(flat)
-    (out / "detent.bib").write_text("\n".join(bibtex(rename.get(k, k), srcs[k]) for k in keys))
+    (out / "subcritical-paper.md").write_text(flat)
+    (out / "subcritical.bib").write_text("\n".join(bibtex(rename.get(k, k), srcs[k]) for k in keys))
     if "--draft" in argv:
-        (out / "detent-draft.json").write_text(json.dumps(draft(flat), indent=1) + "\n")
+        (out / "subcritical-draft.json").write_text(json.dumps(draft(flat), indent=1) + "\n")
     words = len(re.findall(r"\b\w+\b", flat))
-    print(f"wrote build/detent-paper.md ({words} words) and build/detent.bib ({len(keys)} sources)")
+    print(f"wrote build/subcritical-paper.md ({words} words) and build/subcritical.bib ({len(keys)} sources)")
     return 0
 
 

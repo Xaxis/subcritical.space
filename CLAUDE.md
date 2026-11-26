@@ -1,18 +1,20 @@
-# CLAUDE.md: Detent
+# CLAUDE.md: Subcritical
 
-Detent: an open research program on a protocol that prevents the development of artificial
-superintelligence while keeping useful AI allowed and improving. It rests on operational, testable
-definitions (what superintelligence is, what approaching it is, where useful AI ends and the
-weapons-grade path begins), an evidence-based ranking of which capabilities lead there, a
-verification design that trusts no single party, and proofs and rerunnable experiments for each key
-property. The owner's request is `00-BRIEF.md`; where the work stands is
-`.claude/handoffs/detent.md`. Read both first.
+Subcritical (subcritical.space): an open research program, and the site that presents it, on a
+protocol that prevents the development of artificial superintelligence while keeping useful AI
+allowed and improving. About half the work defines what superintelligence is and the mechanisms
+that form it (physical, computational, dynamical, cognitive, organisational), each measured; the
+protocol is derived from those mechanisms. It rests on operational, testable definitions (what
+superintelligence is, what approaching it is, where useful AI ends and the weapons-grade path
+begins), an evidence-based ranking of which capabilities lead there, a verification design that
+trusts no single party, and proofs and rerunnable experiments for each key property. The owner's request is `00-BRIEF.md`; where the work stands is
+`.claude/handoffs/subcritical.md`. Read both first.
 
 ## Rules that shape every change
 
 - **Nothing invented.** Every number comes from `data/inputs.toml` (each input says whether it is
   measured, a vendor claim, a spec value, a design choice or an assumption, and names its source)
-  or is derived in `model/detent.py`. Documents cite a number as a ledger link,
+  or is derived in `model/subcritical.py`. Documents cite a number as a ledger link,
   `[any text](numbers.md#id)` in research/ or `[any text](../research/numbers.md#id)` in paper/, and
   `make docs` rewrites the link text to the model's value. Never type a model number by hand.
 - **Every citation resolves.** Cite as `[@key]`; the key must be in `research/sources.toml` with a
@@ -25,7 +27,7 @@ property. The owner's request is `00-BRIEF.md`; where the work stands is
   a real adversary, and the documents say so wherever it matters. A definition is only as good as
   the test that measures it.
 - **Every contribution passes every level or is cut.** Each claimed contribution in
-  `research/04-claims.md` has its result recorded in `research/06-verification.md` for each level:
+  `research/04-claims.md` has its result recorded in `research/07-verification.md` for each level:
   (1) an independent prior-art search by a helper that did not propose it, (2) a formal statement
   and proof, (3) working experiments on real data, (4) a red team that only tries to break it,
   (5) Paperwright's integrity, reviewer and editor desks, resolved by us, (6) a fresh reviewer who
@@ -33,7 +35,7 @@ property. The owner's request is `00-BRIEF.md`; where the work stands is
 - **Experiments rerun from tools/.** Each experiment is `tools/exp/<name>.py`, deterministic given
   its seed, fetching real data or models into `tools/exp/cache/` (ignored) from a source it names,
   and writing its results to `data/results/<name>.json`. Results enter the ledger through
-  `model/detent.py`, so documents cite them as ledger links like any other number.
+  `model/subcritical.py`, so documents cite them as ledger links like any other number.
 - **Share the box.** CPU-heavy experiments run under `heavy`, GPU ones under `gpu` (the box's AMD
   GPU; browsers never). One heavy job at a time.
 - **No em dashes** anywhere: research text, code, comments, commit messages. `make check` fails on one.
@@ -46,18 +48,27 @@ property. The owner's request is `00-BRIEF.md`; where the work stands is
 make model     # data/numbers.json and research/numbers.md from inputs and model
 make docs      # rewrite every ledger link to the model's value
 make check     # em dashes, model reproduces, docs synced, citations and sources identified
-make paper     # build/detent-paper.md, the paper flattened for Paperwright
-python3 model/detent.py --only ID        # one number, its formula and inputs
-python3 model/detent.py --set ID=VALUE   # a variant
+make paper     # build/subcritical-paper.md, the paper flattened for Paperwright
+python3 model/subcritical.py --only ID        # one number, its formula and inputs
+python3 model/subcritical.py --set ID=VALUE   # a variant
 ```
 
 Gate before committing: `make model docs check` all exit 0.
 
 ## Working here
 
-- This repo is **public**. Commit as `Xaxis <396863+Xaxis@users.noreply.github.com>`; the local
-  pre-commit and pre-push hooks refuse any other address and block private project names, local
-  paths and personal addresses in staged text.
+- This repo is **public** and its site deploys through Vercel (team xaxis-projects), whose seat
+  check reads the commit author. Commit as the owner, `Xaxis` with the personal address the global
+  instructions give, as on corerope.space and phosphoros.space. The local pre-commit and pre-push
+  hooks refuse any other author and block private project names, local paths and personal
+  addresses in staged text. (The first commit, 51560a7, predates the site and is by the noreply
+  address.)
+- Notes that name the owner's private projects or local paths go in `.claude/handoffs/*.private.md`,
+  which git ignores.
+- The site (not yet built) follows corerope.space and phosphoros.space: pnpm, Next.js, Biome,
+  TypeScript, 3D in the browser with fallbacks, deployed by a `tools/site/deploy.sh` that uploads the
+  committed tree and proves it live. Until the owner registers subcritical.space it deploys to a
+  preview address.
 - Python 3.11 or later. The model and checks use the standard library only; experiments that need
   more (a model runtime, numerical libraries) list it in `tools/exp/requirements.txt` and run in
   the ignored `.venv/`.

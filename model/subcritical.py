@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Detent's model: every derived number in the research and the paper.
+"""Subcritical's model: every derived number in the research and the paper.
 
-  python3 model/detent.py                 every number
-  python3 model/detent.py --only ID       one number with its formula and inputs
-  python3 model/detent.py --set ID=VALUE  rerun with an input changed (repeatable)
-  python3 model/detent.py --json          every number as JSON
-  python3 model/detent.py --write         write data/numbers.json and research/numbers.md
+  python3 model/subcritical.py                 every number
+  python3 model/subcritical.py --only ID       one number with its formula and inputs
+  python3 model/subcritical.py --set ID=VALUE  rerun with an input changed (repeatable)
+  python3 model/subcritical.py --json          every number as JSON
+  python3 model/subcritical.py --write         write data/numbers.json and research/numbers.md
 
 Inputs are in data/inputs.toml with their basis and source. This file only derives. Experiment
 results under tools/exp/ enter the ledger here, so documents cite them as ledger links.
@@ -25,7 +25,7 @@ from ledger import Ledger, write_outputs  # noqa: E402
 
 
 def here() -> str:
-    return f"model/detent.py#L{sys._getframe(1).f_lineno}"
+    return f"model/subcritical.py#L{sys._getframe(1).f_lineno}"
 
 
 def build(overrides: dict | None = None) -> Ledger:

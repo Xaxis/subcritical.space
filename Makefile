@@ -1,4 +1,4 @@
-# Detent. Python 3.11 or later; the model and checks use the standard library only.
+# Subcritical. Python 3.11 or later; the model and checks use the standard library only.
 PY ?= python3
 
 .PHONY: all model docs check paper
@@ -6,7 +6,7 @@ PY ?= python3
 all: model docs check
 
 model:  ## write data/numbers.json and research/numbers.md from data/inputs.toml
-	$(PY) model/detent.py --write
+	$(PY) model/subcritical.py --write
 
 docs:   ## rewrite every ledger link to the model's value
 	$(PY) tools/sync.py
@@ -14,5 +14,5 @@ docs:   ## rewrite every ledger link to the model's value
 check:  ## em dashes, model reproduces, docs synced, every citation and source identified
 	$(PY) tools/check.py
 
-paper:  ## build/detent-paper.md, the paper with ledger links flattened, for Paperwright
+paper:  ## build/subcritical-paper.md, the paper with ledger links flattened, for Paperwright
 	$(PY) tools/paper.py

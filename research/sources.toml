@@ -1,4 +1,4 @@
-# Every source Detent cites, edited by hand. One [source.KEY] table each, with:
+# Every source Subcritical cites, edited by hand. One [source.KEY] table each, with:
 #   type   peer-reviewed | preprint | spec | book | official-docs | legislation |
 #          legal-scholarship | vendor | news | essay | code | dataset | report
 #   title, year (or undated = true), and at least one identifier: doi, arxiv, isbn or url.

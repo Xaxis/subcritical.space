@@ -22,8 +22,8 @@
     {
       "id": "cli:model",
       "kind": "cli",
-      "entry": "model/detent.py",
-      "reach": "python3 model/detent.py [--only ID] [--set ID=VALUE] [--json] [--write]",
+      "entry": "model/subcritical.py",
+      "reach": "python3 model/subcritical.py [--only ID] [--set ID=VALUE] [--json] [--write]",
       "area": "model",
       "tests": []
     },
@@ -46,7 +46,7 @@
     {
       "id": "job:make-model",
       "kind": "job",
-      "entry": "model/detent.py",
+      "entry": "model/subcritical.py",
       "reach": "make model",
       "area": "model",
       "tests": []
