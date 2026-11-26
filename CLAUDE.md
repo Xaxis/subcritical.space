@@ -7,8 +7,9 @@ that form it (physical, computational, dynamical, cognitive, organisational), ea
 protocol is derived from those mechanisms. It rests on operational, testable definitions (what
 superintelligence is, what approaching it is, where useful AI ends and the weapons-grade path
 begins), an evidence-based ranking of which capabilities lead there, a verification design that
-trusts no single party, and proofs and rerunnable experiments for each key property. The owner's request is `00-BRIEF.md`; where the work stands is
-`.claude/handoffs/subcritical.md`. Read both first.
+trusts no single party, and proofs and rerunnable experiments for each key property. The owner's
+request is `00-BRIEF.md`; where the work stands is `.claude/handoffs/subcritical.md`. Read both
+first.
 
 ## Rules that shape every change
 
