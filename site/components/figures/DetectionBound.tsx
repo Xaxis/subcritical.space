@@ -13,6 +13,13 @@ export interface Inputs {
   display: string;
 }
 
+/** What history says, from the ledger: undeclared weapons programmes and how long they went unseen. */
+export interface Precedent {
+  median: string;
+  hazard: string;
+  placeholderRate: string;
+}
+
 const MAX_CHANNELS = 6;
 const CHANNELS = Array.from({ length: MAX_CHANNELS }, (_, k) => k + 1);
 
@@ -46,7 +53,7 @@ function Control(p: {
   );
 }
 
-export function DetectionBound({ start }: { start: Inputs }) {
+export function DetectionBound({ start, record }: { start: Inputs; record?: Precedent }) {
   const [lam, setLam] = useState(start.inspections);
   const [p, setP] = useState(start.detect);
   const [years, setYears] = useState(start.years);
@@ -103,7 +110,8 @@ export function DetectionBound({ start }: { start: Inputs }) {
         {CHANNELS.map((n) => {
           const k = n - 1;
           const miss = missAll(one, k + 1);
-          const h = miss * (H - 40);
+          // Scaled to one channel's miss chance, so the fall with each added channel stays visible.
+          const h = (one > 0 ? miss / one : 0) * (H - 40);
           const x = 12 + k * bw + bw * 0.18;
           return (
             <g key={n} className={n === channels ? "chosen" : ""}>
@@ -127,7 +135,8 @@ export function DetectionBound({ start }: { start: Inputs }) {
       </svg>
       <figcaption>
         <strong>
-          {channels === 1 ? "One channel" : `All ${channels} channels`} miss it: {fmtProb(all)}.
+          {channels === 1 ? "One channel misses it" : `All ${channels} channels miss it`}:{" "}
+          {fmtProb(all)}.
         </strong>{" "}
         {atLedger && channels === 1 ? (
           <>
@@ -135,10 +144,19 @@ export function DetectionBound({ start }: { start: Inputs }) {
           </>
         ) : null}
         <span className="muted">
-          The starting inputs are the ledger&apos;s placeholders (basis: assumption) until the
-          verification survey sources them, and real channels are not independent or identical. The
-          formula is exp(-rate x chance x time) per channel, ported from the model.
-        </span>
+          The starting inputs are the ledger&apos;s placeholders (basis: assumption), and real
+          channels are not independent or identical: an evader picks the path the channels share.
+          The formula is exp(-rate x chance x time) per channel, ported from the model.
+        </span>{" "}
+        {record && (
+          <span className="muted">
+            The record is worse. Seven undeclared weapons programmes went unseen for a median of{" "}
+            <a href="/numbers#org-covert-years-median">{record.median}</a>, a discovery rate of{" "}
+            <a href="/numbers#org-covert-hazard">{record.hazard}</a> against the{" "}
+            <a href="/numbers#org-memo-detect-rate">{record.placeholderRate}</a> these placeholders
+            imply. That is a small sample of programmes that were found in the end.
+          </span>
+        )}
       </figcaption>
     </figure>
   );

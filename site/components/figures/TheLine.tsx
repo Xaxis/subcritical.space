@@ -47,9 +47,11 @@ export function TheLine() {
   const window_ = margin * response;
   const bad = weaponsGrade(breakout, response, margin);
   const x = (m: number) => PAD.l + (Math.min(m, SPAN) / SPAN) * (W - PAD.l - PAD.r);
-  const verdict = bad
-    ? `Weapons-grade: a breakout of ${breakout} months beats the ${window_}-month window the regime needs to detect and respond with its margin.`
-    : `Useful AI: a breakout of ${breakout} months is longer than the ${window_}-month window, so the regime would see it and respond in time. It may keep improving through the metered gates.`;
+  const head = bad ? "Weapons-grade." : "Useful AI.";
+  const body = bad
+    ? `A breakout of ${breakout} months beats the ${window_}-month window the regime needs to detect and respond with its margin.`
+    : `A breakout of ${breakout} months is longer than the ${window_}-month window, so the regime would see it and respond in time. It may keep improving through the metered gates.`;
+  const verdict = `${head} ${body}`;
   return (
     <figure className={`figure line ${bad ? "is-critical" : "is-sub"}`}>
       <Slider
@@ -109,8 +111,7 @@ export function TheLine() {
         </text>
       </svg>
       <figcaption>
-        <strong className="state">{bad ? "Weapons-grade." : "Useful AI."}</strong>{" "}
-        {verdict.split(": ")[1]}{" "}
+        <strong className="state">{head}</strong> {body}{" "}
         <span className="muted">
           The positions are for illustration. No breakout time has been computed yet: that is
           definition D3, from measured inputs.

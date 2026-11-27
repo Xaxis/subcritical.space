@@ -6,7 +6,7 @@ import { useId, useState } from "react";
 import { loopGains, loopLimit } from "@/lib/detection";
 
 const ROUNDS = 16;
-const YMAX = 20;
+const YMAX = 12;
 const W = 640;
 const H = 260;
 const PAD = { l: 40, r: 12, t: 14, b: 30 };
@@ -25,9 +25,11 @@ export function LoopGain({ initial = 0.8 }: { initial?: number }) {
   const ih = H - PAD.t - PAD.b;
   const bw = iw / ROUNDS;
   const y = (v: number) => PAD.t + ih - (Math.min(v, YMAX) / YMAX) * ih;
-  const state = critical
-    ? `g = ${g.toFixed(2)}: supercritical. After ${ROUNDS} rounds the total is ${fmt(last)} first-round gains and still growing, with no limit.`
-    : `g = ${g.toFixed(2)}: subcritical. After ${ROUNDS} rounds the total is ${fmt(last)} first-round gains, and it can never pass ${fmt(limit ?? 0)}.`;
+  const head = critical ? "Supercritical." : "Subcritical.";
+  const body = critical
+    ? `After ${ROUNDS} rounds the total is ${fmt(last)} first-round gains and still growing, with no limit.`
+    : `After ${ROUNDS} rounds the total is ${fmt(last)} first-round gains, and it can never pass ${fmt(limit ?? 0)}.`;
+  const state = `g = ${g.toFixed(2)}: ${head} ${body}`;
 
   return (
     <figure className={`figure loop ${critical ? "is-critical" : "is-sub"}`}>
@@ -50,7 +52,7 @@ export function LoopGain({ initial = 0.8 }: { initial?: number }) {
         </output>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={state}>
-        {[0, 5, 10, 15, 20].map((t) => (
+        {[0, 4, 8, 12].map((t) => (
           <g key={t}>
             <line className="grid" x1={PAD.l} x2={W - PAD.r} y1={y(t)} y2={y(t)} />
             <text className="tick" x={PAD.l - 8} y={y(t) + 4} textAnchor="end">
@@ -96,8 +98,7 @@ export function LoopGain({ initial = 0.8 }: { initial?: number }) {
         </text>
       </svg>
       <figcaption>
-        <strong className="state">{critical ? "Supercritical." : "Subcritical."}</strong>{" "}
-        {state.split(": ")[1]}{" "}
+        <strong className="state">{head}</strong> {body}{" "}
         <span className="muted">
           An illustration of definition D2, not a measurement: the experiment that estimates g (E4)
           has not run yet.

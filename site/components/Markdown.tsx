@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { entry, ledger } from "@/lib/ledger";
-import { citeLabel, sources } from "@/lib/sources";
+import { citeLabel, sourceIndex } from "@/lib/sources";
 import { docHref, ledgerId, linkCitations, slugify } from "@/lib/text";
 
 /** A number from the ledger, linked to its entry; its basis shows in its style and its title. */
@@ -63,8 +63,12 @@ function components(inline: boolean): Components {
 }
 
 export function Markdown({ md, inline = false }: { md: string; inline?: boolean }) {
-  const byKey = new Map(sources().map((s) => [s.key, s]));
-  const withCites = linkCitations(md, (k) => citeLabel(byKey.get(k), k));
+  const byKey = sourceIndex();
+  const withCites = linkCitations(
+    md,
+    (k) => citeLabel(byKey.get(k), k),
+    (k) => byKey.get(k)?.key ?? k,
+  );
   return (
     <ReactMarkdown remarkPlugins={[remarkGfm]} components={components(inline)}>
       {withCites}

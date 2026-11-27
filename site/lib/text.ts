@@ -39,10 +39,14 @@ const CITE_KEY = /(?<![\w.])@([A-Za-z][\w:-]*[\w])/g;
  * Pandoc citations, [@key] or [@a; @b], become links to the source list, labelled by `label`
  * (author and year). Anything that is already a Markdown link is left alone.
  */
-export function linkCitations(md: string, label: (key: string) => string): string {
+export function linkCitations(
+  md: string,
+  label: (key: string) => string,
+  anchor: (key: string) => string = (k) => k,
+): string {
   return md.replace(CITE_GROUP, (whole, inner: string) => {
     const keys = [...inner.matchAll(CITE_KEY)].map((m) => m[1] as string);
     if (keys.length === 0) return whole;
-    return `(${keys.map((k) => `[${label(k)}](/sources#${k})`).join("; ")})`;
+    return `(${keys.map((k) => `[${label(k)}](/sources#${anchor(k)})`).join("; ")})`;
   });
 }

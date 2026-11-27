@@ -89,13 +89,18 @@ test("citations become links to the source list, and ordinary links are left alo
     linkCitations("[see @ab; @b-2, p. 3]", label),
     "([AB](/sources#ab); [B-2](/sources#b-2))",
   );
+  // An alias links to the key its work is listed under.
+  assert.equal(
+    linkCitations("[@old-key]", label, (k) => (k === "old-key" ? "newkey" : k)),
+    "([OLD-KEY](/sources#newkey))",
+  );
   assert.equal(
     linkCitations("[30%](numbers.md#x) and mail@example.org", label),
     "[30%](numbers.md#x) and mail@example.org",
   );
 });
 
-test("the detection bound port equals the model's number exactly", () => {
+test("the detection bound port matches the model within a few ulps", () => {
   const got = missOneChannel(
     numbers["inspections-per-year"]?.value ?? Number.NaN,
     numbers["detect-prob-per-inspection"]?.value ?? Number.NaN,
@@ -118,4 +123,31 @@ test("the line and the loop behave as definitions D4 and D2 say", () => {
   const sup = loopGains(1.1, 30);
   assert.ok((sup.at(-1)?.total ?? 0) > 100);
   assert.equal(fmtProb(0.001), "1 in 1,000");
+});
+
+test("coupled loops: subcritical alone, supercritical together, and the radius matches power iteration", async () => {
+  const { radiusUniform, spectralRadius, step, steadyLevel, uniformCoupling } = await import(
+    "../lib/loops.ts"
+  );
+  // Five loops at 0.7 each, coupled at 0.05: 0.7 + 4 * 0.05 = 0.9, subcritical.
+  assert.ok(Math.abs(radiusUniform(5, 0.7, 0.05) - 0.9) < 1e-12);
+  // The same loops coupled at 0.1: 1.1, supercritical although each alone is 0.7.
+  assert.ok(Math.abs(radiusUniform(5, 0.7, 0.1) - 1.1) < 1e-12);
+  for (const [g, c] of [
+    [0.7, 0.05],
+    [0.7, 0.1],
+    [0.4, 0.2],
+  ] as const)
+    assert.ok(Math.abs(spectralRadius(uniformCoupling(5, g, c)) - radiusUniform(5, g, c)) < 1e-9);
+  // Iterated, a subcritical system settles at u / (1 - radius); a supercritical one hits the cap.
+  const run = (g: number, c: number) => {
+    let x = [0, 0, 0, 0, 0];
+    const G = uniformCoupling(5, g, c);
+    for (let k = 0; k < 400; k++) x = step(x, G, 0.12, 8);
+    return x;
+  };
+  const settled = steadyLevel(0.9, 0.12) ?? Number.NaN;
+  for (const v of run(0.7, 0.05)) assert.ok(Math.abs(v - settled) < 1e-6);
+  for (const v of run(0.7, 0.1)) assert.equal(v, 8);
+  assert.equal(steadyLevel(1.1, 0.12), null);
 });

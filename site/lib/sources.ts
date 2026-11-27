@@ -15,6 +15,8 @@ export interface Source {
   isbn?: string;
   url?: string;
   opened?: string;
+  /** Other keys the survey tracks gave this work; a note's [@alias] still resolves to it. */
+  aliases?: string[];
 }
 
 let cached: Source[] | null = null;
@@ -29,6 +31,16 @@ export function sources(): Source[] {
       .sort((a, b) => a.key.localeCompare(b.key));
   }
   return cached;
+}
+
+/** Every key and alias, to the source it names. */
+export function sourceIndex(): Map<string, Source> {
+  const index = new Map<string, Source>();
+  for (const s of sources()) {
+    index.set(s.key, s);
+    for (const a of s.aliases ?? []) index.set(a, s);
+  }
+  return index;
 }
 
 /** Where a reader can open the source: its DOI, arXiv page, URL, or a book search by ISBN. */

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 export default function Research() {
   const docs = researchDocs();
   const notes = surveyNotes();
+  const spot = notes.find((x) => x.file.endsWith("/11-spot-check.md"));
   const reported = tracksReported();
   return (
     <Page
@@ -65,6 +66,14 @@ export default function Research() {
           );
         })}
       </ol>
+      {spot && (
+        <p>
+          An independent checker, who wrote none of the notes, then fetched the sources behind the
+          claims each note leans on most and recorded what holds:{" "}
+          <a href={`/notes/${spot.slug}`}>the spot-check</a>. The research does not rely on what it
+          marks distorted.
+        </p>
+      )}
     </Page>
   );
 }

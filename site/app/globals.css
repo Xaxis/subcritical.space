@@ -851,6 +851,21 @@ em {
   padding-left: 1.3em;
 }
 
+.prose pre {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 1em 0;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.prose pre code {
+  overflow-wrap: normal;
+}
+
 .prose blockquote {
   margin: 1em 0;
   padding: 0 0 0 1em;
@@ -1056,8 +1071,13 @@ tbody th {
 }
 
 .entry:target,
-.source:target {
+.source:target,
+.source:has(.alias-anchor:target) {
   background: var(--sub-soft);
+}
+
+.alias-anchor {
+  scroll-margin-top: 5rem;
 }
 
 /* The source list. */
@@ -1075,7 +1095,115 @@ tbody th {
   border-bottom: 1px solid var(--line);
 }
 
+.source .title,
+.source .code {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
 .source .muted {
   font-family: var(--font-sans);
   font-size: 0.86rem;
+}
+
+/* --- 3D stages ------------------------------------------------------------------------------- */
+/* The stage is dark in both themes, like a viewer set into the page. Without WebGL it says in
+   words what the scene would show; under reduced motion it holds a still frame. */
+
+.stage {
+  position: relative;
+  background: #07090c;
+  overflow: hidden;
+  isolation: isolate;
+  color: #e9e7e2;
+  margin: 0.6rem 0 0.4rem;
+}
+
+.stage-loops {
+  aspect-ratio: 16 / 10;
+}
+
+@media (max-width: 40rem) {
+  .stage-loops {
+    aspect-ratio: 4 / 3.4;
+  }
+}
+
+.stage-gl {
+  position: absolute;
+  inset: 0;
+}
+
+.stage-gl canvas {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stage-gl canvas {
+    animation: stage-in 0.6s ease-out;
+  }
+}
+
+@keyframes stage-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.stage-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  color: #c6c3bc;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+.stage-pause {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 3;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(233, 231, 226, 0.3);
+  background: rgba(7, 9, 12, 0.6);
+  color: #e9e7e2;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.stage-pause:hover {
+  border-color: #e9e7e2;
+}
+
+.visually-hidden {
+  /* biome-ignore lint/complexity/noImportantStyles: hidden text must stay hidden whatever else applies */
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.loop-names {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0.2rem 0 0;
+}
+
+.revised {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 0;
+  max-width: var(--measure);
+  margin-bottom: 2rem;
 }

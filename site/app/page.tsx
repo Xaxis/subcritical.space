@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { CoupledLoops } from "@/components/figures/CoupledLoops";
 import { DetectionBound } from "@/components/figures/DetectionBound";
 import { LoopGain } from "@/components/figures/LoopGain";
 import { TheLine } from "@/components/figures/TheLine";
@@ -7,7 +8,9 @@ import { Markdown } from "@/components/Markdown";
 import { memo } from "@/lib/docs";
 import { entry } from "@/lib/ledger";
 import { progress } from "@/lib/progress";
+import { repoFileExists } from "@/lib/repo";
 import { repoLink, SITE } from "@/lib/site";
+import { citeLabel, sourceIndex } from "@/lib/sources";
 
 export default function Home() {
   const m = memo();
@@ -16,6 +19,25 @@ export default function Home() {
   const steps = progress();
   const miss = entry("miss-prob-one-channel");
   const [lead, ...ideaRest] = m.idea.split("\n\n");
+  const byKey = sourceIndex();
+  const cite = (key: string) => ({
+    href: `/sources#${byKey.get(key)?.key ?? key}`,
+    label: citeLabel(byKey.get(key), key),
+  });
+  const novelty = repoFileExists("research/03-novelty.md");
+  const revised = (
+    <p className="revised">
+      These are the memo&apos;s words, written before the survey. The survey has since found prior
+      work for several of them, including the line (D4), the loop gain (D2) and the comparison
+      against organisations (D1).{" "}
+      {novelty ? (
+        <a href="/research/novelty">The novelty file</a>
+      ) : (
+        <a href="/research#survey">The survey notes</a>
+      )}{" "}
+      says what remains ours.
+    </p>
+  );
 
   return (
     <>
@@ -77,6 +99,28 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="band" id="loops">
+          <div className="wrap two-col">
+            <div>
+              <p className="eyebrow">Why the name</p>
+              <h2>Loops that are safe alone can run away together</h2>
+              <p>
+                AI can improve itself through several loops at once: better algorithms, better
+                chips, money that buys compute, learning after deployment, and copying itself to
+                more machines. Each loop on its own may die out, every round adding less than the
+                last. But each also feeds the others, and the system as a whole runs away when its
+                combined gain, the spectral radius, reaches 1.
+              </p>
+              <p>
+                A subcritical reactor still makes useful power. The protocol asks the same of AI:
+                useful systems that keep improving, with the combined gain of every loop held below
+                1 and measured, not one loop at a time.
+              </p>
+            </div>
+            <CoupledLoops cite={[cite("davidson2026feedback"), cite("burtsev2026criticality")]} />
+          </div>
+        </section>
+
         <section className="band alt" id="anatomy">
           <div className="wrap">
             <p className="eyebrow">Part I, the centre of the work</p>
@@ -117,8 +161,9 @@ export default function Home() {
             <h2>Six definitions a protocol can trigger on</h2>
             <p className="section-lead">
               Each must be new or clearly improve on existing ones, and come with a test that can be
-              run. The labels in the text are beliefs before the independent prior-art search.
+              run.
             </p>
+            {revised}
             <div className="definitions">
               {m.definitions.map((d) => (
                 <article key={d.code} className="card definition" id={d.code.toLowerCase()}>
@@ -206,6 +251,11 @@ export default function Home() {
                     detect: entry("detect-prob-per-inspection").value,
                     years: entry("breakout-years").value,
                     display: miss.display,
+                  }}
+                  record={{
+                    median: entry("org-covert-years-median").display,
+                    hazard: entry("org-covert-hazard").display,
+                    placeholderRate: entry("org-memo-detect-rate").display,
                   }}
                 />
               </div>

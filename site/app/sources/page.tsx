@@ -38,6 +38,10 @@ export default function Sources() {
             const href = sourceHref(s);
             return (
               <li key={s.key} id={s.key} className="source">
+                {/* Old links to a key the work also went by still land here. */}
+                {(s.aliases ?? []).map((a) => (
+                  <span key={a} id={a} className="alias-anchor" />
+                ))}
                 <span className="code">{s.key}</span>
                 <span className="title">
                   {href ? (
