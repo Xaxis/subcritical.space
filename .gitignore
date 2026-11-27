@@ -21,3 +21,10 @@ out/
 # experiment caches: downloaded models and datasets (each tool says where it fetches from)
 tools/exp/cache/
 .claude/handoffs/*.private.md
+
+# the site
+node_modules/
+.next/
+*.tsbuildinfo
+next-env.d.ts
+.vercel/

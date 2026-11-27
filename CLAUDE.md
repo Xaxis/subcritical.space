@@ -53,9 +53,15 @@ make check     # em dashes, model reproduces, docs synced, citations and sources
 make paper     # build/subcritical-paper.md, the paper flattened for Paperwright
 python3 model/subcritical.py --only ID        # one number, its formula and inputs
 python3 model/subcritical.py --set ID=VALUE   # a variant
+
+pnpm install                       # the site's workspace (Node 24, pnpm 10)
+pnpm lint && pnpm typecheck && pnpm test
+heavy pnpm build                   # the site, static
+heavy tools/site/deploy.sh         # deploy HEAD to Vercel and prove it live
 ```
 
-Gate before committing: `make model docs check` all exit 0.
+Gate before committing: `make model docs check` all exit 0, and for a site change `pnpm lint`,
+`pnpm typecheck`, `pnpm test` and a build.
 
 ## Working here
 
@@ -67,10 +73,18 @@ Gate before committing: `make model docs check` all exit 0.
   address.)
 - Notes that name the owner's private projects or local paths go in `.claude/handoffs/*.private.md`,
   which git ignores.
-- The site (not yet built) follows corerope.space and phosphoros.space: pnpm, Next.js, Biome,
-  TypeScript, 3D in the browser with fallbacks, deployed by a `tools/site/deploy.sh` that uploads the
-  committed tree and proves it live. Until the owner registers subcritical.space it deploys to a
-  preview address.
+- The site is `site/` (pnpm workspace, Next.js 16, Biome, TypeScript), deployed as the Vercel
+  project `subcritical` by `heavy tools/site/deploy.sh`, which uploads the committed tree (git
+  archive of HEAD; pushing does not deploy) and proves it live: headers, build marker, assets,
+  every sitemap page shot at 1440 and 390 px in both themes with axe (`tools/site/shots.ts`), and
+  the figures and theme toggle driven in a browser (`tools/site/interact.ts`). Until the owner
+  registers subcritical.space it serves https://subcritical.vercel.app, the `url` in
+  `site/lib/site.ts`; switch that one line when the domain is live and rerun the deploy, which
+  adds the domain once it has nameservers. The site reads `research/` and `data/` at build time
+  and types no number: ledger links render the model's value, citations resolve through
+  `research/sources.toml`. Port 4527 for the local server (`pnpm --filter @subcritical/site
+  start` after a build). 3D, when added, follows corerope.space and phosphoros.space, with
+  fallbacks without WebGL and under reduced motion.
 - Python 3.11 or later. The model and checks use the standard library only; experiments that need
   more (a model runtime, numerical libraries) list it in `tools/exp/requirements.txt` and run in
   the ignored `.venv/`.

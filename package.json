@@ -1,0 +1,26 @@
+{
+  "name": "subcritical",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Subcritical: a protocol that prevents superintelligence and keeps useful AI. The research, its model and the site at subcritical.space.",
+  "packageManager": "pnpm@10.30.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @subcritical/site dev",
+    "build": "pnpm --filter @subcritical/site build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8",
+    "@types/node": "24.19.0",
+    "axe-core": "4.14.1",
+    "playwright-core": "1.65.1",
+    "typescript": "7.0.2"
+  }
+}

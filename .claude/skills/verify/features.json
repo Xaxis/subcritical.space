@@ -3,14 +3,89 @@
   "generated_by": "featuremap (claude-core) - regenerate with `featuremap generate --write`; do not edit by hand",
   "checks": [
     {
+      "id": "check:typecheck",
+      "kind": "typecheck",
+      "run": "pnpm typecheck",
+      "script": "pnpm -r typecheck"
+    },
+    {
+      "id": "check:lint",
+      "kind": "lint",
+      "run": "pnpm lint",
+      "script": "biome check ."
+    },
+    {
+      "id": "check:test",
+      "kind": "test",
+      "run": "pnpm test",
+      "script": "pnpm -r test"
+    },
+    {
+      "id": "check:build",
+      "kind": "build",
+      "run": "pnpm build",
+      "script": "pnpm --filter @subcritical/site build"
+    },
+    {
       "id": "check:make:check",
       "kind": "verify",
       "run": "make check",
       "script": "(Makefile)"
     }
   ],
-  "launch": [],
+  "launch": [
+    {
+      "id": "launch:dev",
+      "run": "pnpm dev",
+      "script": "pnpm --filter @subcritical/site dev"
+    },
+    {
+      "id": "launch:dev:site",
+      "run": "cd site && pnpm dev",
+      "script": "next dev --port 4527"
+    }
+  ],
   "features": [
+    {
+      "id": "api:GET /apple-icon",
+      "kind": "api",
+      "entry": "site/app/apple-icon.tsx",
+      "reach": "GET http://localhost:$PORT/apple-icon",
+      "area": "apple-icon",
+      "tests": []
+    },
+    {
+      "id": "api:GET /manifest.webmanifest",
+      "kind": "api",
+      "entry": "site/app/manifest.ts",
+      "reach": "GET http://localhost:$PORT/manifest.webmanifest",
+      "area": "manifest",
+      "tests": []
+    },
+    {
+      "id": "api:GET /opengraph-image",
+      "kind": "api",
+      "entry": "site/app/opengraph-image.tsx",
+      "reach": "GET http://localhost:$PORT/opengraph-image",
+      "area": "opengraph-image",
+      "tests": []
+    },
+    {
+      "id": "api:GET /robots.txt",
+      "kind": "api",
+      "entry": "site/app/robots.ts",
+      "reach": "GET http://localhost:$PORT/robots.txt",
+      "area": "robots",
+      "tests": []
+    },
+    {
+      "id": "api:GET /sitemap.xml",
+      "kind": "api",
+      "entry": "site/app/sitemap.ts",
+      "reach": "GET http://localhost:$PORT/sitemap.xml",
+      "area": "sitemap",
+      "tests": []
+    },
     {
       "id": "cli:check",
       "kind": "cli",
@@ -49,6 +124,58 @@
       "entry": "model/subcritical.py",
       "reach": "make model",
       "area": "model",
+      "tests": []
+    },
+    {
+      "id": "page:/",
+      "kind": "page",
+      "entry": "site/app/page.tsx",
+      "reach": "http://localhost:$PORT/",
+      "area": "home",
+      "tests": []
+    },
+    {
+      "id": "page:/notes/[slug]",
+      "kind": "page",
+      "entry": "site/app/notes/[slug]/page.tsx",
+      "reach": "http://localhost:$PORT/notes/[slug]",
+      "area": "notes",
+      "tests": []
+    },
+    {
+      "id": "page:/numbers",
+      "kind": "page",
+      "entry": "site/app/numbers/page.tsx",
+      "reach": "http://localhost:$PORT/numbers",
+      "area": "numbers",
+      "tests": []
+    },
+    {
+      "id": "page:/research",
+      "kind": "page",
+      "entry": "site/app/research/page.tsx",
+      "reach": "http://localhost:$PORT/research",
+      "area": "research",
+      "tests": [
+        "site/test/content.test.ts"
+      ]
+    },
+    {
+      "id": "page:/research/[slug]",
+      "kind": "page",
+      "entry": "site/app/research/[slug]/page.tsx",
+      "reach": "http://localhost:$PORT/research/[slug]",
+      "area": "research",
+      "tests": [
+        "site/test/content.test.ts"
+      ]
+    },
+    {
+      "id": "page:/sources",
+      "kind": "page",
+      "entry": "site/app/sources/page.tsx",
+      "reach": "http://localhost:$PORT/sources",
+      "area": "sources",
       "tests": []
     }
   ]

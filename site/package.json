@@ -1,0 +1,33 @@
+{
+  "name": "@subcritical/site",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "subcritical.space: the site, rendered from ../research and ../data, deployed as the Vercel project subcritical.",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev --port 4527",
+    "build": "next build",
+    "start": "next start --port 4527",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --test test/*.test.ts"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
+    "server-only": "0.0.1",
+    "smol-toml": "1.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "7.0.2"
+  }
+}

@@ -1,6 +1,7 @@
 # Subcritical
 
-An open research program, and a site at subcritical.space, on one question: can there be a protocol
+An open research program, and a site at subcritical.space (until the domain is registered,
+https://subcritical.vercel.app), on one question: can there be a protocol
 that prevents the development of artificial superintelligence while leaving useful AI free to keep
 improving?
 
@@ -33,6 +34,8 @@ data/inputs.toml           every input, with its basis (measured, vendor, spec, 
 model/                     the model that derives every other number
 tools/                     docs sync, the repository check, the paper build; tools/exp/ the experiments
 paper/                     the paper, in Markdown, built for Paperwright by tools/paper.py
+site/                      the website (Next.js), rendered from research/ and data/
+tools/site/                the site's deploy and its browser checks
 ```
 
 ## Reproduce
@@ -45,6 +48,13 @@ make docs                                    # write those numbers into the docu
 make check                                   # em dashes, reproducibility, sync, every citation
 python3 model/subcritical.py --only miss-prob-one-channel
 python3 model/subcritical.py --set inspections-per-year=12
+```
+
+The site needs Node 24 and pnpm 10:
+
+```sh
+pnpm install && pnpm test && pnpm build
+pnpm --filter @subcritical/site start        # http://localhost:4527
 ```
 
 ## Licence
