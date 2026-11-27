@@ -16,7 +16,8 @@ first.
 - **Nothing invented.** Every number comes from `data/inputs.toml` or `data/inputs/*.toml` (one file
   per part of the work, so parallel writers never share one; each input says whether it is
   measured, a vendor claim, a spec value, a design choice or an assumption, and names its source)
-  or is derived in `model/subcritical.py`. Documents cite a number as a ledger link,
+  or is derived in `model/subcritical.py` or `model/parts/NN_name.py` (one module per part, like the
+  inputs). Documents cite a number as a ledger link,
   `[any text](numbers.md#id)` in research/ or `[any text](../research/numbers.md#id)` in paper/, and
   `make docs` rewrites the link text to the model's value. Never type a model number by hand.
 - **Every citation resolves.** Cite as `[@key]`; the key must be in `research/sources.toml` with a

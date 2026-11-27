@@ -1,6 +1,6 @@
 # Model
 
-Every derived number, computed from `data/inputs.toml` and `data/inputs/*.toml` by `model/subcritical.py` through
+Every derived number, computed from `data/inputs.toml` and `data/inputs/*.toml` by `model/subcritical.py` (and one module per part in `model/parts/`) through
 `model/ledger.py`, with its formula, inputs, basis and the line that defines it.
 
 <!-- covers: cli:model, job:make-model -->

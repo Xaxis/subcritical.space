@@ -41,4 +41,4 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `exp(-inspections-per-year * detect-prob-per-inspection * breakout-years)`
 - inputs: [inspections-per-year](#inspections-per-year), [detect-prob-per-inspection](#detect-prob-per-inspection), [breakout-years](#breakout-years)
-- defined in: `model/subcritical.py#L46`
+- defined in: `model/subcritical.py#L68`

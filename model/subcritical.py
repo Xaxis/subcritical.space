@@ -10,11 +10,13 @@
 Inputs are in data/inputs.toml with their basis and source. This file only derives. Experiment
 results under tools/exp/ enter the ledger here, so documents cite them as ledger links.
 
-Sections so far: the detection bound (the memo's starting formula, research/00-memo.md).
+Sections so far: the detection bound (the memo's starting formula, research/00-memo.md). Each part
+of the work adds its own derivations in model/parts/NN_name.py (see build_parts).
 """
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import math
 import sys
@@ -25,7 +27,27 @@ from ledger import Ledger, write_outputs  # noqa: E402
 
 
 def here() -> str:
-    return f"model/subcritical.py#L{sys._getframe(1).f_lineno}"
+    """The file and line of the caller, for a number's `defined in`."""
+    frame = sys._getframe(1)
+    rel = Path(frame.f_code.co_filename).resolve().relative_to(ROOT).as_posix()
+    return f"{rel}#L{frame.f_lineno}"
+
+
+ROOT = Path(__file__).resolve().parent.parent
+PARTS = Path(__file__).resolve().parent / "parts"
+
+
+def build_parts(L: Ledger) -> None:
+    """Each part of the work derives its own numbers in model/parts/NN_name.py, a module with
+    build(L, here). They run in name order after the core below, so a later part may read an
+    earlier one's numbers. One file per part, so writers working in parallel never share one."""
+    for path in sorted(PARTS.glob("[0-9]*.py")):
+        spec = importlib.util.spec_from_file_location(f"parts.{path.stem}", path)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"cannot load {path}")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.build(L, here)
 
 
 def build(overrides: dict | None = None) -> Ledger:
@@ -45,6 +67,8 @@ def build(overrides: dict | None = None) -> Ledger:
         label="chance one inspection channel misses a secret program for its whole breakout time",
         defined_in=here(),
     )
+
+    build_parts(L)
     return L
 
 
