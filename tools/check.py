@@ -7,7 +7,7 @@
 4. Every citation [@key] in research/ and paper/ names a source in research/sources.toml, and every
    source there has a type, a title, a year (or says it is undated) and an identifier (DOI, arXiv
    ID, ISBN or URL). research/sources.toml is edited by hand.
-5. Every measured, vendor or spec input in data/inputs.toml names a source that exists.
+5. Every input in data/inputs.toml and data/inputs/*.toml that names a source names one that exists.
 """
 
 from __future__ import annotations
@@ -152,7 +152,11 @@ def check_sources() -> None:
 
 def check_inputs() -> None:
     sources = load_sources()
-    raw = tomllib.loads((ROOT / "data" / "inputs.toml").read_text())
+    from ledger import input_files
+
+    raw: dict = {}
+    for path in input_files():
+        raw.update(tomllib.loads(path.read_text()))
     missing = [k for k, v in raw.items() if v.get("source") and v["source"] not in sources]
     for key in missing:
         fail(f"input {key}: source {raw[key]['source']!r} is not in research/sources.toml")

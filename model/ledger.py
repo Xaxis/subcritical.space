@@ -1,6 +1,6 @@
 """The ledger: every number Subcritical publishes, with its value, unit, basis and where it comes from.
 
-Inputs live in data/inputs.toml. Each one says what kind of number it is:
+Inputs live in data/inputs.toml and data/inputs/*.toml. Each one says what kind of number it is:
   measured    an independent measurement, with a source and a date
   vendor      a claim by an interested party (a company about itself), with a source
   spec        fixed by a protocol specification (a BIP, a consensus rule)
@@ -74,11 +74,25 @@ def sig(value: float, digits: int) -> str:
     return f"{int(rounded):,}"
 
 
+def input_files() -> list[Path]:
+    """data/inputs.toml, then each data/inputs/*.toml in name order: one file per part of the work,
+    so writers working in parallel never edit the same file."""
+    folder = ROOT / "data" / "inputs"
+    return [ROOT / "data" / "inputs.toml", *sorted(folder.glob("*.toml"))]
+
+
 class Ledger:
-    def __init__(self, inputs_path: Path = ROOT / "data" / "inputs.toml", overrides: dict | None = None):
+    def __init__(self, inputs_paths: list[Path] | None = None, overrides: dict | None = None):
         self.q: dict[str, Quantity] = {}
         self.order: list[str] = []
         self._reading: list[str] | None = None
+        for inputs_path in inputs_paths or input_files():
+            self._load(inputs_path, overrides)
+        if overrides:
+            raise KeyError(f"--set names inputs that do not exist: {sorted(overrides)}")
+
+    def _load(self, inputs_path: Path, overrides: dict | None) -> None:
+        rel = inputs_path.relative_to(ROOT).as_posix()
         raw = tomllib.loads(inputs_path.read_text())
         lines = inputs_path.read_text().splitlines()
         for key, spec in raw.items():
@@ -102,11 +116,9 @@ class Ledger:
                     source=spec.get("source", ""),
                     date=spec.get("date", ""),
                     note=spec.get("note", ""),
-                    defined_in=f"data/inputs.toml#L{line}",
+                    defined_in=f"{rel}#L{line}",
                 )
             )
-        if overrides:
-            raise KeyError(f"--set names inputs that do not exist: {sorted(overrides)}")
 
     def _add(self, quantity: Quantity) -> None:
         if quantity.id in self.q:

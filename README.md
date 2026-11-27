@@ -28,7 +28,8 @@ research/00-memo.md        the first memo: candidate definitions, the protocol's
 research/notes/            the survey tracks, raw, with their sources
 research/numbers.md        the ledger: every number, generated, never edited by hand
 research/sources.toml      every source, with its identifier
-data/inputs.toml           every input, with its basis (measured, vendor, spec, design, assumption)
+data/inputs.toml           every input, with its basis (measured, vendor, spec, design, assumption);
+                           data/inputs/*.toml holds more, one file per part of the work
 model/                     the model that derives every other number
 tools/                     docs sync, the repository check, the paper build; tools/exp/ the experiments
 paper/                     the paper, in Markdown, built for Paperwright by tools/paper.py
