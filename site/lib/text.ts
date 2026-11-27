@@ -50,3 +50,12 @@ export function linkCitations(
     return `(${keys.map((k) => `[${label(k)}](/sources#${anchor(k)})`).join("; ")})`;
   });
 }
+
+/** The experiments research/04-claims.md numbers (its build list), or the memo's eleven before it. */
+export function plannedExperiments(claims: string | null): number {
+  if (claims === null) return 11;
+  const at = claims.search(/^## Experiments\b/m);
+  if (at < 0) return 11;
+  const list = claims.slice(at).split(/\n## /)[0] ?? "";
+  return new Set([...list.matchAll(/^\d+\. \*\*(E\d+)\b/gm)].map((m) => m[1])).size || 11;
+}

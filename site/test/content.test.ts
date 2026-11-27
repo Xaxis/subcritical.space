@@ -166,3 +166,15 @@ test("the pathways chapter's ranking table parses into the columns the home page
   assert.equal(r.rows.length - r.added, 5);
   assert.throws(() => parseRanking("## The ranking\n\n| Pathway |\n|---|\n| x |\n"), /no column/);
 });
+
+test("the planned experiments are counted from the claims file's numbered list", async () => {
+  const { plannedExperiments } = await import("../lib/text.ts");
+  assert.equal(plannedExperiments(null), 11);
+  const n = plannedExperiments(read("research/04-claims.md"));
+  // E4 is listed twice (its CPU and GPU parts), so the count is of distinct codes.
+  assert.ok(n >= 20 && n <= 30, `${n} experiments`);
+  assert.equal(
+    plannedExperiments("## Experiments\n\n1. **E1, a.** x\n2. **E4, b.** y\n3. **E4, c.** z\n"),
+    2,
+  );
+});

@@ -32,13 +32,13 @@ rendered at build time from `research/` and `data/`, deployed by `tools/site/dep
 ## How to check it
 
 ```sh
-pnpm lint && pnpm typecheck && pnpm test          # test/content.test.ts: memo parse, links, port, loops, ranking
+pnpm lint && pnpm typecheck && pnpm test          # test/content.test.ts: memo parse, links, port, loops, ranking, plan
 cd site && ~/.claude/claude-core/bin/heavy npx next build && (npx next start -p 4527 &) && cd ..
 ~/.claude/claude-core/bin/heavy node tools/site/shots.ts --url http://localhost:4527
 ~/.claude/claude-core/bin/heavy node tools/site/interact.ts --url http://localhost:4527
 ```
 
-Expect: tests pass (7); the build lists every page as static; shots.ts prints `"ok":true` with
+Expect: tests pass (8); the build lists every page as static; shots.ts prints `"ok":true` with
 each sitemap page at 200 and `/no-such-page` at 404, and writes shots to `out/site-shots/` (look at
 the ones you changed, both themes, both widths); interact.ts prints its `ok` lines and exits 0 (among them the 3D stage
 drawing, turning supercritical together at c = 0.1, the reduced-motion still frame and the words

@@ -320,6 +320,15 @@ url = "https://www.fool.com/earnings/call-transcripts/2026/07/15/asml-asml-q2-20
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
 
+[source.austin2021mbpp]
+type = "preprint"
+title = "Program Synthesis with Large Language Models"
+authors = "Jacob Austin, Augustus Odena, Maxwell Nye, Maarten Bosma, Henryk Michalewski, David Dohan, et al."
+year = 2021
+arxiv = "2108.07732"
+opened = "2026-11-27"
+found_in = "research/04-claims.md"
+
 [source.avenhaus1996compliance]
 type = "book"
 title = "Compliance Quantified: An Introduction to Data Verification"
@@ -506,6 +515,15 @@ year = 2024
 url = "https://epoch.ai/blog/do-the-returns-to-software-rnd-point-towards-a-singularity"
 opened = "2026-11-27"
 found_in = "research/notes/04-dynamics.md"
+
+[source.biderman2023pythia]
+type = "peer-reviewed"
+title = "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling"
+authors = "Stella Biderman, Hailey Schoelkopf, Quentin Anthony, Herbie Bradley, Kyle O'Brien, Eric Hallahan, et al."
+year = 2023
+arxiv = "2304.01373"
+opened = "2026-11-27"
+found_in = "research/04-claims.md"
 
 [source.bis2022advancedcomputing]
 type = "legislation"
@@ -832,6 +850,15 @@ year = 2025
 url = "https://www.alignmentforum.org/posts/u3taQsgxqCzrgErMM/when-does-capability-elicitation-bound-risk"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.cobbe2021gsm8k]
+type = "preprint"
+title = "Training Verifiers to Solve Math Word Problems"
+authors = "Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, et al."
+year = 2021
+arxiv = "2110.14168"
+opened = "2026-11-27"
+found_in = "research/04-claims.md"
 
 [source.cochran-2005]
 type = "report"

@@ -4,7 +4,8 @@ import "server-only";
 import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { TRACKS } from "./docs";
-import { ROOT, repoFileExists } from "./repo";
+import { ROOT, readRepoFile, repoFileExists } from "./repo";
+import { plannedExperiments } from "./text";
 
 export interface Step {
   name: string;
@@ -84,7 +85,7 @@ export function progress(): Step[] {
       name: "Experiments on real data and models",
       where: "tools/exp/",
       state: results > 0 ? "begun" : "not begun",
-      detail: `${results} of 11 planned experiments have results.`,
+      detail: `${results} of ${plannedExperiments(has("research/04-claims.md") ? readRepoFile("research/04-claims.md") : null)} planned experiments have results.`,
     },
     doc(
       "Proofs of the key properties",

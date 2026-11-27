@@ -1,0 +1,31 @@
+# Inputs for research/04-claims.md: the design targets that make each claim's test pass or fail.
+# Every id starts with claim-. Derived numbers are in model/parts/040_claims.py.
+
+[claim-confidence]
+value = 0.9
+basis = "design"
+fmt = "%"
+label = "confidence level for every interval a claim's test reports (two-sided unless the test says one-sided)"
+note = "the level the dynamical chapter already uses for E4(b)'s bootstrap interval"
+
+[claim-d2-rounds]
+value = 5
+unit = "rounds"
+basis = "design"
+fmt = ",.0f"
+label = "fewest staged rounds in the loop-gain estimator's test"
+note = "Part I, D2, 'What would test it': at least five rounds at fixed compute, data and time"
+
+[claim-d5-miss-target]
+value = 0.1
+basis = "design"
+fmt = "%"
+label = "target for the one-sided upper confidence bound on an elicitation protocol's miss rate"
+note = "a placeholder a regime would set by negotiation; here it only makes C5's test pass or fail"
+
+[claim-d5-false-alarm-target]
+value = 0.1
+basis = "design"
+fmt = "%"
+label = "target for the one-sided upper confidence bound on an elicitation protocol's false-alarm rate"
+note = "a placeholder a regime would set by negotiation; it is the cost to useful AI that C5 must state"

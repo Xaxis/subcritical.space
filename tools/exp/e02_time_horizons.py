@@ -5,7 +5,8 @@ METR publishes each frontier model's 50% and 80% time horizon (the length of tas
 experts, at which the agent succeeds half or 80% of the time) and its own fit of the doubling time.
 This refits that trend independently from the same file, so the research does not take the
 headline on trust, and records what the protocol needs from it: the doubling time with an
-interval, how much shorter the 80% horizon is than the 50%, and the latest frontier horizon.
+interval, how much shorter the 80% horizon is than the 50%, whether that ratio is stable,
+shrinking or growing, and the latest frontier horizon.
 
 Method, following METR's stated rule for its 2023-on fit: frontier (is_sota) models released from
 2023 on, excluding points whose central 50% horizon exceeds 16 hours; ordinary least squares of
@@ -14,7 +15,7 @@ each draw, each model's horizon within its published 95% interval (log-normal). 
 resamples tasks and runs, which the summary file cannot support, so the two intervals measure
 different things; both are recorded.
 
-  .venv/bin/python tools/exp/horizons.py      (CPU, seconds; see tools/exp/README.md)
+  .venv/bin/python tools/exp/e02_time_horizons.py      (CPU, seconds; see tools/exp/README.md)
 """
 
 from __future__ import annotations
@@ -49,7 +50,7 @@ def doubling(slope: float) -> float:
 
 
 def main() -> int:
-    res = Results("E2", "horizons", seed=SEED)
+    res = Results("E2", "e02_time_horizons", seed=SEED)
     path = fetch(URL, "metr/benchmark_results_1_1.yaml", res, what="METR-Horizon-v1.1 results")
     data = yaml.safe_load(path.read_text())
 
@@ -92,7 +93,8 @@ def main() -> int:
     hi = np.log([r["p50_hi"] for r in used])
     sd = (hi - lo) / (2 * Z95)
     n = len(used)
-    boots = []
+    log_ratio = log_p50 - log_p80
+    boots, ratio_slopes = [], []
     for _ in range(DRAWS):
         pick = gen.integers(0, n, n)
         if np.unique(days[pick]).size < 2:
@@ -101,7 +103,15 @@ def main() -> int:
         s = fit(days[pick], noisy)
         if s > 0:
             boots.append(doubling(s))
+        ratio_slopes.append(fit(days[pick], log_ratio[pick]))
     boots = np.sort(np.array(boots))
+    ratio_slopes = np.sort(np.array(ratio_slopes))
+    # The 50%-to-80% ratio's trend, as a change per year: stable if its interval spans zero.
+    per_year = lambda s: math.exp(s * 365.25)  # noqa: E731
+    ratio_trend = per_year(fit(days, log_ratio))
+    ratio_lo = per_year(float(np.quantile(ratio_slopes, 0.025)))
+    ratio_hi = per_year(float(np.quantile(ratio_slopes, 0.975)))
+    ratio_verdict = "growing" if ratio_lo > 1 else "shrinking" if ratio_hi < 1 else "stable"
     q = lambda p: float(np.quantile(boots, p))  # noqa: E731
 
     metr = data["doubling_time_in_days"]["from_2023_on"]
@@ -124,6 +134,12 @@ def main() -> int:
                label="our refitted doubling time over METR's published one (1 means the refit reproduces it)")
     res.number("e2-p50-over-p80", float(np.median(ratio)), fmt=".1f",
                label="median ratio of a frontier model's 50% horizon to its 80% horizon")
+    res.number("e2-ratio-trend", ratio_trend, fmt=".2f",
+               label=f"yearly factor by which the 50%-to-80% horizon ratio changes ({ratio_verdict}: its interval {'spans' if ratio_verdict == 'stable' else 'excludes'} 1)")
+    res.number("e2-ratio-trend-lo", ratio_lo, fmt=".2f",
+               label="yearly factor of the ratio's change, 2.5th percentile of resampling models")
+    res.number("e2-ratio-trend-hi", ratio_hi, fmt=".2f",
+               label="yearly factor of the ratio's change, 97.5th percentile of resampling models")
     res.number("e2-latest-p50", latest["p50"], unit="min", fmt=",.0f",
                label=f"50% time horizon of the latest frontier model in the file ({latest['model']}, {latest['released']})",
                note="above the 16-hour cut if so, which is why it is not in the fit")
@@ -131,6 +147,7 @@ def main() -> int:
     res.detail("all_models", rows)
     res.detail("metr_published", metr)
     res.detail("resampling", {"draws": DRAWS, "kept": int(boots.size), "median": q(0.5)})
+    res.detail("ratio_verdict", ratio_verdict)
     res.write()
     return 0
 

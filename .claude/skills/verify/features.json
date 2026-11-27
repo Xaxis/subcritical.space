@@ -95,10 +95,10 @@
       "tests": []
     },
     {
-      "id": "cli:exp-horizons",
+      "id": "cli:e02-time-horizons",
       "kind": "cli",
-      "entry": "tools/exp/horizons.py",
-      "reach": ".venv/bin/python tools/exp/horizons.py (E2)",
+      "entry": "tools/exp/e02_time_horizons.py",
+      "reach": ".venv/bin/python tools/exp/e02_time_horizons.py (E2)",
       "area": "experiments",
       "tests": []
     },

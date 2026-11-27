@@ -33,7 +33,15 @@ sys.path.insert(0, str(ROOT / "tools"))
 from check import ARXIV, DOI, TYPES, identifiers  # noqa: E402
 
 BLOCK = re.compile(r"```toml\n(.*?)```", re.S)
-HANDOVER = re.compile(r"\n## Sources to add\n+```toml\n(.*?)```\n*", re.S)
+HANDOVER = re.compile(r"\n## Sources to add\n.*?(?=\n## |\Z)", re.S)
+
+
+def handover(text: str) -> tuple[list[str], str]:
+    """A document's "## Sources to add" section: its toml blocks, and the text without it."""
+    m = HANDOVER.search(text)
+    if not m:
+        return [], text
+    return BLOCK.findall(m.group(0)), (text[: m.start()] + "\n" + text[m.end() :]).rstrip("\n") + "\n"
 FIELDS = ["type", "title", "authors", "year", "undated", "doi", "arxiv", "isbn", "url", "opened"]
 HEADER = """# Every source Subcritical cites, edited by hand. One [source.KEY] table each, with:
 #   type   peer-reviewed | preprint | spec | book | official-docs | legislation |
@@ -151,7 +159,7 @@ def main(argv: list[str]) -> int:
     for note in sorted((ROOT / "research" / "notes").glob("*.md")) + handovers:
         rel = note.relative_to(ROOT).as_posix()
         text = note.read_text()
-        blocks = HANDOVER.findall(text) if note in handovers else BLOCK.findall(text)
+        blocks = handover(text)[0] if note in handovers else BLOCK.findall(text)
         if not blocks:
             continue
         for block in blocks:
@@ -194,7 +202,7 @@ def main(argv: list[str]) -> int:
         print(f"wrote {path.relative_to(ROOT)}")
     if "--write" in argv:
         for doc in handovers:
-            doc.write_text(HANDOVER.sub("\n", doc.read_text()).rstrip("\n") + "\n")
+            doc.write_text(handover(doc.read_text())[1])
             print(f"moved the sources to add out of {doc.relative_to(ROOT)}")
     return 0
 

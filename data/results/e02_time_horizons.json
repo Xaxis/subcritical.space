@@ -376,6 +376,7 @@
         "sota": true
       }
     ],
+    "ratio_verdict": "stable",
     "resampling": {
       "draws": 10000,
       "kept": 10000,
@@ -383,7 +384,7 @@
     }
   },
   "experiment": "E2",
-  "name": "horizons",
+  "name": "e02_time_horizons",
   "numbers": {
     "e2-doubling-p50": {
       "fmt": ",.0f",
@@ -441,6 +442,27 @@
       "unit": "models",
       "value": 14.0
     },
+    "e2-ratio-trend": {
+      "fmt": ".2f",
+      "label": "yearly factor by which the 50%-to-80% horizon ratio changes (stable: its interval spans 1)",
+      "note": "",
+      "unit": "",
+      "value": 1.0711294284351862
+    },
+    "e2-ratio-trend-hi": {
+      "fmt": ".2f",
+      "label": "yearly factor of the ratio's change, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 1.2566772269766255
+    },
+    "e2-ratio-trend-lo": {
+      "fmt": ".2f",
+      "label": "yearly factor of the ratio's change, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 0.8818407035050659
+    },
     "e2-refit-over-metr": {
       "fmt": ".2f",
       "label": "our refitted doubling time over METR's published one (1 means the refit reproduces it)",
@@ -449,6 +471,6 @@
       "value": 0.9999984671190892
     }
   },
-  "script": "tools/exp/horizons.py",
+  "script": "tools/exp/e02_time_horizons.py",
   "seed": 20261127
 }

@@ -44,9 +44,9 @@
     },
     {
       "kind": "cli",
-      "label": "exp-horizons",
-      "entry": "tools/exp/horizons.py",
-      "reach": ".venv/bin/python tools/exp/horizons.py (E2)",
+      "label": "e02-time-horizons",
+      "entry": "tools/exp/e02_time_horizons.py",
+      "reach": ".venv/bin/python tools/exp/e02_time_horizons.py (E2)",
       "area": "experiments"
     }
   ],

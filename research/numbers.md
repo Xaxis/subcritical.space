@@ -9567,14 +9567,50 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - source: [@dyck2007whistle], 2007
 - defined in: `data/inputs/015-organisational.toml#L1608`
 
+<a id="claim-confidence"></a>
+### claim-confidence
+
+**90%**: confidence level for every interval a claim's test reports (two-sided unless the test says one-sided)
+
+- basis: design
+- note: the level the dynamical chapter already uses for E4(b)'s bootstrap interval
+- defined in: `data/inputs/040-claims.toml#L4`
+
+<a id="claim-d2-rounds"></a>
+### claim-d2-rounds
+
+**5 rounds**: fewest staged rounds in the loop-gain estimator's test
+
+- basis: design
+- note: Part I, D2, 'What would test it': at least five rounds at fixed compute, data and time
+- defined in: `data/inputs/040-claims.toml#L11`
+
+<a id="claim-d5-miss-target"></a>
+### claim-d5-miss-target
+
+**10%**: target for the one-sided upper confidence bound on an elicitation protocol's miss rate
+
+- basis: design
+- note: a placeholder a regime would set by negotiation; here it only makes C5's test pass or fail
+- defined in: `data/inputs/040-claims.toml#L19`
+
+<a id="claim-d5-false-alarm-target"></a>
+### claim-d5-false-alarm-target
+
+**10%**: target for the one-sided upper confidence bound on an elicitation protocol's false-alarm rate
+
+- basis: design
+- note: a placeholder a regime would set by negotiation; it is the cost to useful AI that C5 must state
+- defined in: `data/inputs/040-claims.toml#L26`
+
 <a id="e2-doubling-p50"></a>
 ### e2-doubling-p50
 
 **129 days**: doubling time of the frontier 50% time horizon, our refit of METR's data
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-doubling-p50-hi"></a>
 ### e2-doubling-p50-hi
@@ -9582,8 +9618,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **162 days**: doubling time, 97.5th percentile of our model-and-interval resampling
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-doubling-p50-lo"></a>
 ### e2-doubling-p50-lo
@@ -9591,8 +9627,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **96 days**: doubling time, 2.5th percentile of our model-and-interval resampling
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-doubling-p80"></a>
 ### e2-doubling-p80
@@ -9600,8 +9636,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **133 days**: doubling time of the frontier 80% time horizon, our refit
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-latest-p50"></a>
 ### e2-latest-p50
@@ -9609,8 +9645,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **1,045 min**: 50% time horizon of the latest frontier model in the file (claude_mythos_preview_early_inspect, 2026-04-07)
 
 - basis: experiment
-- note: above the 16-hour cut if so, which is why it is not in the fit (rerun: python3 tools/exp/horizons.py)
-- defined in: `data/results/horizons.json`
+- note: above the 16-hour cut if so, which is why it is not in the fit (rerun: python3 tools/exp/e02_time_horizons.py)
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-metr-doubling"></a>
 ### e2-metr-doubling
@@ -9618,8 +9654,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **129 days**: METR's own doubling time for the same points, as published in the file
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-p50-over-p80"></a>
 ### e2-p50-over-p80
@@ -9627,8 +9663,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **5.3**: median ratio of a frontier model's 50% horizon to its 80% horizon
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-points"></a>
 ### e2-points
@@ -9636,8 +9672,35 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **14 models**: frontier models in the refit (released 2023 on, central 50% horizon up to 16 hours)
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
+
+<a id="e2-ratio-trend"></a>
+### e2-ratio-trend
+
+**1.07**: yearly factor by which the 50%-to-80% horizon ratio changes (stable: its interval spans 1)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
+
+<a id="e2-ratio-trend-hi"></a>
+### e2-ratio-trend-hi
+
+**1.26**: yearly factor of the ratio's change, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
+
+<a id="e2-ratio-trend-lo"></a>
+### e2-ratio-trend-lo
+
+**0.88**: yearly factor of the ratio's change, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="e2-refit-over-metr"></a>
 ### e2-refit-over-metr
@@ -9645,8 +9708,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **1.00**: our refitted doubling time over METR's published one (1 means the refit reproduces it)
 
 - basis: experiment
-- note: rerun: python3 tools/exp/horizons.py
-- defined in: `data/results/horizons.json`
+- note: rerun: python3 tools/exp/e02_time_horizons.py
+- defined in: `data/results/e02_time_horizons.json`
 
 <a id="miss-prob-one-channel"></a>
 ### miss-prob-one-channel
@@ -12667,3 +12730,45 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `dyn-horizon-p80 * dyn-horizon-annual / 60`
 - inputs: [dyn-horizon-p80](#dyn-horizon-p80), [dyn-horizon-annual](#dyn-horizon-annual)
 - defined in: `model/parts/020_pathways.py#L90`
+
+<a id="claim-whole-fleet-horizon"></a>
+### claim-whole-fleet-horizon
+
+**7.8 years**: time the whole projected end-2026 fleet would need to reach the hardwired-pause paper's overt breakout budget, at fixed algorithms
+
+- basis: derived
+- formula: `def-hwp-horizon * def-hwp-fleet-over-global`
+- inputs: [def-hwp-horizon](#def-hwp-horizon), [def-hwp-fleet-over-global](#def-hwp-fleet-over-global)
+- note: uses that paper's budget, research overhead and utilisation, all assumptions of the paper
+- defined in: `model/parts/040_claims.py#L31`
+
+<a id="claim-pool-over-floor-now"></a>
+### claim-pool-over-floor-now
+
+**31**: median compute smuggled into one country through 2025, as a multiple of the aggregate chip floor for a 1e26 FLOP run over today's longest sensible run
+
+- basis: derived
+- formula: `org-smuggled-cum / phys-floor-chips-1e26-now`
+- inputs: [org-smuggled-cum](#org-smuggled-cum), [phys-floor-chips-1e26-now](#phys-floor-chips-1e26-now)
+- defined in: `model/parts/040_claims.py#L41`
+
+<a id="claim-pool-over-floor-pause"></a>
+### claim-pool-over-floor-pause
+
+**165**: the same stock as a multiple of the aggregate chip floor for a 1e26 FLOP run over a pause's longest sensible run
+
+- basis: derived
+- formula: `org-smuggled-cum / phys-floor-chips-1e26-pause`
+- inputs: [org-smuggled-cum](#org-smuggled-cum), [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause)
+- defined in: `model/parts/040_claims.py#L49`
+
+<a id="claim-d5-organisms"></a>
+### claim-d5-organisms
+
+**22 organisms**: locked organisms per budget, with none missed, for the one-sided upper bound on the miss rate to reach its target
+
+- basis: derived
+- formula: `ceil(ln(1 - claim-confidence) / ln(1 - claim-d5-miss-target))`
+- inputs: [claim-confidence](#claim-confidence), [claim-d5-miss-target](#claim-d5-miss-target)
+- note: exact binomial bound with zero misses; any miss raises the number needed
+- defined in: `model/parts/040_claims.py#L62`

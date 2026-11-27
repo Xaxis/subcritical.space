@@ -13012,6 +13012,58 @@
     "note": "",
     "defined_in": "data/inputs/015-organisational.toml#L1608"
   },
+  "claim-confidence": {
+    "value": 0.9,
+    "display": "90%",
+    "unit": "",
+    "basis": "design",
+    "label": "confidence level for every interval a claim's test reports (two-sided unless the test says one-sided)",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "the level the dynamical chapter already uses for E4(b)'s bootstrap interval",
+    "defined_in": "data/inputs/040-claims.toml#L4"
+  },
+  "claim-d2-rounds": {
+    "value": 5.0,
+    "display": "5 rounds",
+    "unit": "rounds",
+    "basis": "design",
+    "label": "fewest staged rounds in the loop-gain estimator's test",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "Part I, D2, 'What would test it': at least five rounds at fixed compute, data and time",
+    "defined_in": "data/inputs/040-claims.toml#L11"
+  },
+  "claim-d5-miss-target": {
+    "value": 0.1,
+    "display": "10%",
+    "unit": "",
+    "basis": "design",
+    "label": "target for the one-sided upper confidence bound on an elicitation protocol's miss rate",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "a placeholder a regime would set by negotiation; here it only makes C5's test pass or fail",
+    "defined_in": "data/inputs/040-claims.toml#L19"
+  },
+  "claim-d5-false-alarm-target": {
+    "value": 0.1,
+    "display": "10%",
+    "unit": "",
+    "basis": "design",
+    "label": "target for the one-sided upper confidence bound on an elicitation protocol's false-alarm rate",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "a placeholder a regime would set by negotiation; it is the cost to useful AI that C5 must state",
+    "defined_in": "data/inputs/040-claims.toml#L26"
+  },
   "e2-doubling-p50": {
     "value": 128.74380265078003,
     "display": "129 days",
@@ -13022,8 +13074,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-doubling-p50-hi": {
     "value": 162.17336994310736,
@@ -13035,8 +13087,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-doubling-p50-lo": {
     "value": 96.43447953181987,
@@ -13048,8 +13100,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-doubling-p80": {
     "value": 133.40531330403599,
@@ -13061,8 +13113,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-latest-p50": {
     "value": 1044.780145,
@@ -13074,8 +13126,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "above the 16-hour cut if so, which is why it is not in the fit (rerun: python3 tools/exp/horizons.py)",
-    "defined_in": "data/results/horizons.json"
+    "note": "above the 16-hour cut if so, which is why it is not in the fit (rerun: python3 tools/exp/e02_time_horizons.py)",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-metr-doubling": {
     "value": 128.744,
@@ -13087,8 +13139,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-p50-over-p80": {
     "value": 5.317883030364129,
@@ -13100,8 +13152,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-points": {
     "value": 14.0,
@@ -13113,8 +13165,47 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
+  },
+  "e2-ratio-trend": {
+    "value": 1.0711294284351862,
+    "display": "1.07",
+    "unit": "",
+    "basis": "experiment",
+    "label": "yearly factor by which the 50%-to-80% horizon ratio changes (stable: its interval spans 1)",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
+  },
+  "e2-ratio-trend-hi": {
+    "value": 1.2566772269766255,
+    "display": "1.26",
+    "unit": "",
+    "basis": "experiment",
+    "label": "yearly factor of the ratio's change, 97.5th percentile of resampling models",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
+  },
+  "e2-ratio-trend-lo": {
+    "value": 0.8818407035050659,
+    "display": "0.88",
+    "unit": "",
+    "basis": "experiment",
+    "label": "yearly factor of the ratio's change, 2.5th percentile of resampling models",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "e2-refit-over-metr": {
     "value": 0.9999984671190892,
@@ -13126,8 +13217,8 @@
     "inputs": [],
     "source": "",
     "date": "",
-    "note": "rerun: python3 tools/exp/horizons.py",
-    "defined_in": "data/results/horizons.json"
+    "note": "rerun: python3 tools/exp/e02_time_horizons.py",
+    "defined_in": "data/results/e02_time_horizons.json"
   },
   "miss-prob-one-channel": {
     "value": 0.30119421191220214,
@@ -17971,5 +18062,69 @@
     "date": "",
     "note": "",
     "defined_in": "model/parts/020_pathways.py#L90"
+  },
+  "claim-whole-fleet-horizon": {
+    "value": 7.791011230287927,
+    "display": "7.8 years",
+    "unit": "years",
+    "basis": "derived",
+    "label": "time the whole projected end-2026 fleet would need to reach the hardwired-pause paper's overt breakout budget, at fixed algorithms",
+    "formula": "def-hwp-horizon * def-hwp-fleet-over-global",
+    "inputs": [
+      "def-hwp-horizon",
+      "def-hwp-fleet-over-global"
+    ],
+    "source": "",
+    "date": "",
+    "note": "uses that paper's budget, research overhead and utilisation, all assumptions of the paper",
+    "defined_in": "model/parts/040_claims.py#L31"
+  },
+  "claim-pool-over-floor-now": {
+    "value": 30.913982748000002,
+    "display": "31",
+    "unit": "",
+    "basis": "derived",
+    "label": "median compute smuggled into one country through 2025, as a multiple of the aggregate chip floor for a 1e26 FLOP run over today's longest sensible run",
+    "formula": "org-smuggled-cum / phys-floor-chips-1e26-now",
+    "inputs": [
+      "org-smuggled-cum",
+      "phys-floor-chips-1e26-now"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/040_claims.py#L41"
+  },
+  "claim-pool-over-floor-pause": {
+    "value": 164.874574656,
+    "display": "165",
+    "unit": "",
+    "basis": "derived",
+    "label": "the same stock as a multiple of the aggregate chip floor for a 1e26 FLOP run over a pause's longest sensible run",
+    "formula": "org-smuggled-cum / phys-floor-chips-1e26-pause",
+    "inputs": [
+      "org-smuggled-cum",
+      "phys-floor-chips-1e26-pause"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/040_claims.py#L49"
+  },
+  "claim-d5-organisms": {
+    "value": 22.0,
+    "display": "22 organisms",
+    "unit": "organisms",
+    "basis": "derived",
+    "label": "locked organisms per budget, with none missed, for the one-sided upper bound on the miss rate to reach its target",
+    "formula": "ceil(ln(1 - claim-confidence) / ln(1 - claim-d5-miss-target))",
+    "inputs": [
+      "claim-confidence",
+      "claim-d5-miss-target"
+    ],
+    "source": "",
+    "date": "",
+    "note": "exact binomial bound with zero misses; any miss raises the number needed",
+    "defined_in": "model/parts/040_claims.py#L62"
   }
 }
