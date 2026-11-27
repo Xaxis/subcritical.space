@@ -1,0 +1,1614 @@
+# Part I, 5: the organisational and economic perspective (research/015-organisational.md).
+# Every input names its basis and source. Derived numbers are in model/parts/015_organisational.py.
+# Basis conventions in this file: a company's own figures (annual reports, guidance, keynotes) are
+# vendor; independent counts and analyst estimates of past quantities are measured; outputs of a
+# published model with stated uncertainty (Epoch's datasets and estimates) are modelled;
+# projections someone else made are assumption; legal thresholds and draft-treaty values are spec.
+
+# ---------------------------------------------------------------------------------------------
+# O1. Capital
+
+[org-capex-big4-2026]
+value = 650
+unit = "billion USD"
+basis = "vendor"
+fmt = ",.0f"
+label = "planned 2026 capital spending of the four largest technology companies, February 2026"
+source = "day2026capex"
+date = "2026-02"
+note = "Bloomberg via Data Center Knowledge, summing company guidance"
+
+[org-capex-big4-growth]
+value = 0.60
+basis = "vendor"
+fmt = "%"
+label = "planned growth of that spending over 2025"
+source = "day2026capex"
+date = "2026-02"
+note = "'an estimated 60% increase from a year ago'"
+
+[org-capex-hyperscalers-2026]
+value = 700
+unit = "billion USD"
+basis = "vendor"
+fmt = ",.0f"
+label = "planned 2026 capital spending of the largest hyperscalers, May 2026 (a lower bound)"
+source = "ehsan2026capex"
+date = "2026-05"
+note = "'has now topped $700 billion'"
+
+[org-train-cost-growth]
+value = 2.4
+basis = "measured"
+fmt = ",.1f"
+label = "growth a year of the amortised cost of the most compute-intensive training runs since 2016"
+source = "cottier2024rising"
+date = "2024"
+note = "abstract; 90% CI 2.0 to 2.9"
+
+[org-train-cost-growth-low]
+value = 2.0
+basis = "measured"
+fmt = ",.1f"
+label = "low end of the 90% CI of training cost growth a year"
+source = "cottier2024rising"
+date = "2024"
+
+[org-train-cost-growth-high]
+value = 2.9
+basis = "measured"
+fmt = ",.1f"
+label = "high end of the 90% CI of training cost growth a year"
+source = "cottier2024rising"
+date = "2024"
+
+[org-largest-run-cost-2027]
+value = 1
+unit = "billion USD"
+basis = "assumption"
+fmt = ",.0f"
+label = "cost the largest training runs will exceed by 2027, a trend extrapolation"
+source = "cottier2024rising"
+date = "2027"
+note = "'more than a billion dollars by 2027'"
+
+[org-energy-cost-share-low]
+value = 0.02
+basis = "measured"
+fmt = "%"
+label = "low end of energy's share of the amortised cost of frontier training"
+source = "cottier2024rising"
+date = "2024"
+
+[org-energy-cost-share-high]
+value = 0.06
+basis = "measured"
+fmt = "%"
+label = "high end of energy's share of the amortised cost of frontier training"
+source = "cottier2024rising"
+date = "2024"
+
+[org-colossus-hw-cost]
+value = 7
+unit = "billion USD"
+basis = "measured"
+fmt = ",.0f"
+label = "hardware cost of xAI's Colossus, March 2025"
+source = "pilz2025supercomputers"
+date = "2025-03"
+note = "abstract"
+
+[org-colossus-chips]
+value = 200000
+unit = "AI chips"
+basis = "measured"
+fmt = ",.0f"
+label = "AI chips in xAI's Colossus, March 2025"
+source = "pilz2025supercomputers"
+date = "2025-03"
+
+[org-colossus-power]
+value = 300
+unit = "MW"
+basis = "measured"
+fmt = ",.0f"
+label = "power required by xAI's Colossus, March 2025"
+source = "pilz2025supercomputers"
+date = "2025-03"
+
+[org-frontier-compute-growth]
+value = 5.3
+basis = "measured"
+fmt = ",.1f"
+label = "growth a year of the training compute of frontier models, 2010 to May 2024"
+source = "sevilla2024computegrowth"
+date = "2024-05"
+note = "90% CI 4.9 to 5.7"
+
+# ---------------------------------------------------------------------------------------------
+# O1 and O3. Lithography
+
+[org-euv-2025]
+value = 48
+unit = "EUV systems"
+basis = "vendor"
+fmt = ",.0f"
+label = "EUV systems ASML recognised in sales in 2025"
+source = "asml2026annualreport"
+date = "2025"
+note = "annual report, AR p. 53; four EXE (High-NA) and 44 NXE (AR p. 55)"
+
+[org-euv-2024]
+value = 44
+unit = "EUV systems"
+basis = "vendor"
+fmt = ",.0f"
+label = "EUV systems ASML recognised in sales in 2024"
+source = "asml2026annualreport"
+date = "2024"
+note = "AR p. 53"
+
+[org-euv-highna-2025]
+value = 4
+unit = "High-NA systems"
+basis = "vendor"
+fmt = ",.0f"
+label = "High-NA (EXE) EUV systems ASML recognised in sales in 2025"
+source = "asml2026annualreport"
+date = "2025"
+note = "AR p. 55"
+
+[org-euv-lowna-2026]
+value = 65
+unit = "low-NA EUV systems"
+basis = "vendor"
+fmt = ",.0f"
+label = "low-NA EUV systems ASML expects to ship in 2026"
+source = "asml2026q2call"
+date = "2026-07"
+note = "CFO, Q2 2026 call: 'around 65'"
+
+[org-euv-capacity-growth-2027]
+value = 0.30
+basis = "vendor"
+fmt = "%"
+label = "planned increase in ASML's low-NA EUV capacity in 2027"
+source = "asml2026q2call"
+date = "2026-07"
+note = "CFO: 'we are planning to increase our Low-NA EUV capacity by around 30%'"
+
+[org-euv-capacity-growth-2028]
+value = 0.30
+basis = "vendor"
+fmt = "%"
+label = "further increase in low-NA EUV capacity for 2028 that ASML is studying"
+source = "asml2026q2call"
+date = "2026-07"
+note = "CFO: 'investigate a further 30% capacity increase'; not a plan"
+
+[org-litho-eu-share]
+value = 0.89
+basis = "measured"
+fmt = "%"
+label = "share of lithography equipment revenue held by vendors headquartered in the EU"
+source = "varadarajan2024resilience"
+date = "2024"
+note = "Exhibit 10, PDF p. 18; Japan 10%, US 1%; market 17.5 billion USD"
+
+[org-asml-china-units-2025]
+value = 0.33
+basis = "vendor"
+fmt = "%"
+label = "share of ASML's lithography tools (units, all types) sold to China in 2025"
+source = "shilov2026asml"
+date = "2025"
+note = "ASML figures relayed by Tom's Hardware"
+
+[org-asml-china-units-2024]
+value = 0.41
+basis = "vendor"
+fmt = "%"
+label = "share of ASML's lithography tools (units, all types) sold to China in 2024"
+source = "shilov2026asml"
+date = "2024"
+
+[org-china-euv-target]
+value = 2028
+basis = "assumption"
+fmt = ".0f"
+label = "year China's prototype EUV tool is targeted to begin making chips"
+source = "washenko2025euv"
+date = "2025-12"
+note = "Engadget relaying Reuters, unnamed sources; the prototype makes no chips yet"
+
+[org-china-euv-expert]
+value = 2030
+basis = "assumption"
+fmt = ".0f"
+label = "year other experts project as more likely for chips from China's EUV prototype"
+source = "washenko2025euv"
+date = "2025-12"
+
+# ---------------------------------------------------------------------------------------------
+# O1 and O3. Leading-edge logic
+
+[org-tsmc-share-2q26]
+value = 0.725
+basis = "measured"
+fmt = ".1%"
+label = "TSMC's share of foundry revenue (top ten foundries), Q2 2026"
+source = "trendforce2026foundry"
+date = "2026-06"
+
+[org-samsung-share-2q26]
+value = 0.059
+basis = "measured"
+fmt = ".1%"
+label = "Samsung's share of foundry revenue, Q2 2026"
+source = "trendforce2026foundry"
+date = "2026-06"
+
+[org-smic-share-2q26]
+value = 0.054
+basis = "measured"
+fmt = ".1%"
+label = "SMIC's share of foundry revenue, Q2 2026"
+source = "trendforce2026foundry"
+date = "2026-06"
+
+[org-sub10-taiwan-2022]
+value = 0.69
+basis = "measured"
+fmt = "%"
+label = "Taiwan's share of sub-10 nm logic capacity, 2022"
+source = "varadarajan2024resilience"
+date = "2022"
+note = "Exhibit 6, PDF p. 14"
+
+[org-sub10-korea-2022]
+value = 0.31
+basis = "measured"
+fmt = "%"
+label = "South Korea's share of sub-10 nm logic capacity, 2022"
+source = "varadarajan2024resilience"
+date = "2022"
+note = "Exhibit 6, PDF p. 14"
+
+[org-sub10-us-2032]
+value = 0.28
+basis = "assumption"
+fmt = "%"
+label = "projected US share of sub-10 nm logic capacity, 2032"
+source = "varadarajan2024resilience"
+date = "2032"
+note = "BCG projection, Exhibit 6"
+
+[org-points-over-65]
+value = 50
+basis = "measured"
+fmt = ",.0f"
+label = "points in the semiconductor supply chain where one region held over 65% of global share (at least)"
+source = "varadarajan2024resilience"
+date = "2024"
+note = "executive summary, PDF p. 4: 'at least 50 points'"
+
+[org-points-threshold]
+value = 0.65
+basis = "measured"
+fmt = "%"
+label = "regional share above which the BCG and SIA report counts a point as concentrated"
+source = "varadarajan2024resilience"
+date = "2024"
+note = "the threshold the report uses for its count, executive summary, PDF p. 4"
+
+[org-fab-days]
+value = 682
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "average time from construction start to production for greenfield fabs worldwide, 1990 to 2020"
+source = "verwey2021permits"
+date = "2020"
+note = "PDF p. 6; about 635 fabs; excludes permitting"
+
+[org-fab-days-us]
+value = 918
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "average US fab build time, construction start to production, 2010 to 2020"
+source = "verwey2021permits"
+date = "2020"
+note = "PDF p. 7"
+
+[org-smic-wspm-2025]
+value = 45000
+unit = "wafers a month"
+basis = "measured"
+fmt = ",.0f"
+label = "SMIC advanced-node capacity at end 2025, a conservative analyst estimate"
+source = "patel2025ascend"
+date = "2025-12"
+
+[org-ascend-wspm-need]
+value = 20000
+unit = "wafers a month"
+basis = "measured"
+fmt = ",.0f"
+label = "advanced-node wafers a month Huawei's Ascend production needs at most, an analyst estimate"
+source = "patel2025ascend"
+date = "2025"
+
+# ---------------------------------------------------------------------------------------------
+# O1 and O3. High-bandwidth memory
+
+[org-hbm-skhynix-2q26]
+value = 0.50
+basis = "measured"
+fmt = "%"
+label = "SK hynix's share of HBM revenue, Q2 2026"
+source = "counterpoint2026hbm"
+date = "2026-06"
+
+[org-hbm-samsung-2q26]
+value = 0.33
+basis = "measured"
+fmt = "%"
+label = "Samsung's share of HBM revenue, Q2 2026"
+source = "counterpoint2026hbm"
+date = "2026-06"
+
+[org-hbm-micron-2q26]
+value = 0.18
+basis = "measured"
+fmt = "%"
+label = "Micron's share of HBM revenue, Q2 2026"
+source = "counterpoint2026hbm"
+date = "2026-06"
+
+[org-hbm-skhynix-2q25]
+value = 0.64
+basis = "measured"
+fmt = "%"
+label = "SK hynix's share of HBM revenue, Q2 2025"
+source = "counterpoint2026hbm"
+date = "2025-06"
+
+[org-dram-cxmt-2q26]
+value = 0.10
+basis = "measured"
+fmt = "%"
+label = "CXMT's share of DRAM revenue, Q2 2026"
+source = "counterpoint2026hbm"
+date = "2026-06"
+
+[org-dram-cxmt-2q25]
+value = 0.04
+basis = "measured"
+fmt = "%"
+label = "CXMT's share of DRAM revenue, Q2 2025"
+source = "counterpoint2026hbm"
+date = "2025-06"
+
+[org-china-hbm-stockpile]
+value = 13
+unit = "million HBM stacks"
+basis = "measured"
+fmt = ",.0f"
+label = "HBM stacks China procured before the December 2024 controls, an analyst estimate"
+source = "patel2025ascend"
+date = "2025-09"
+note = "Samsung supplied 11.4 million of them"
+
+[org-hbm-stockpile-packages]
+value = 1.6
+unit = "million Ascend 910C packages"
+basis = "measured"
+fmt = ",.1f"
+label = "Ascend 910C packages that stockpile is sufficient for, an analyst estimate"
+source = "patel2025ascend"
+date = "2025-09"
+
+[org-huawei-die-bank]
+value = 2.9
+unit = "million Ascend dies"
+basis = "measured"
+fmt = ",.1f"
+label = "TSMC-made Ascend dies in Huawei's die bank (more than), an analyst estimate"
+source = "patel2025ascend"
+date = "2025-09"
+note = "made at TSMC although the 2020 entity listing was meant to cut Huawei off (allen2025senate, p. 4)"
+
+[org-cxmt-hbm-2026]
+value = 2
+unit = "million HBM stacks"
+basis = "assumption"
+fmt = ",.0f"
+label = "CXMT's projected HBM output in 2026, an analyst projection"
+source = "patel2025ascend"
+date = "2026"
+note = "'~2 million stacks of HBM next year'"
+
+# ---------------------------------------------------------------------------------------------
+# O1 and O3. Advanced packaging
+
+[org-cowos-2026-low]
+value = 120000
+unit = "wafers a month"
+basis = "assumption"
+fmt = ",.0f"
+label = "low end of TSMC's CoWoS capacity in 2026, an analyst estimate"
+source = "trendforce2026cowos"
+date = "2026"
+note = "relaying Economic Daily News: 'could reach a record 120,000 to 140,000 wafers'"
+
+[org-cowos-2026-high]
+value = 140000
+unit = "wafers a month"
+basis = "assumption"
+fmt = ",.0f"
+label = "high end of TSMC's CoWoS capacity in 2026, an analyst estimate"
+source = "trendforce2026cowos"
+date = "2026"
+
+[org-cowos-total-2026]
+value = 200000
+unit = "wafers a month"
+basis = "assumption"
+fmt = ",.0f"
+label = "CoWoS-class capacity including OSAT partners that 2026 could approach"
+source = "trendforce2026cowos"
+date = "2026"
+
+[org-cowos-dec2023-low]
+value = 14000
+unit = "wafers a month"
+basis = "measured"
+fmt = ",.0f"
+label = "low end of TSMC's CoWoS capacity, December 2023"
+source = "sevilla2024scaling2030"
+date = "2023-12"
+
+[org-cowos-dec2023-high]
+value = 15000
+unit = "wafers a month"
+basis = "measured"
+fmt = ",.0f"
+label = "high end of TSMC's CoWoS capacity, December 2023"
+source = "sevilla2024scaling2030"
+date = "2023-12"
+
+[org-cowos-cagr]
+value = 0.80
+basis = "vendor"
+fmt = "%"
+label = "growth a year of TSMC's CoWoS capacity, 2022 to 2027 (more than)"
+source = "trendforce2026cowos"
+date = "2026-05"
+note = "TSMC symposium, via Reuters: 'a CAGR of more than 80%'"
+
+# ---------------------------------------------------------------------------------------------
+# O1. The flow and the stock of AI chips
+
+[org-sold-2024]
+value = 5.10
+unit = "million H100e"
+basis = "modelled"
+fmt = ",.1f"
+label = "AI compute sold in 2024, in H100-equivalents"
+source = "epoch2026chipsales"
+date = "2024"
+note = "sum of per-quarter median estimates in Epoch's CSV, by the survey helper and confirmed by the spot-check; not a figure Epoch states; no valid interval"
+
+[org-sold-2025]
+value = 13.61
+unit = "million H100e"
+basis = "modelled"
+fmt = ",.1f"
+label = "AI compute sold in 2025, in H100-equivalents"
+source = "epoch2026chipsales"
+date = "2025"
+note = "as for org-sold-2024"
+
+[org-nvidia-share-2025]
+value = 0.655
+basis = "modelled"
+fmt = ".1%"
+label = "Nvidia's share of AI compute sold in 2025 (H100e)"
+source = "epoch2026chipsales"
+date = "2025"
+
+[org-google-share-2025]
+value = 0.202
+basis = "modelled"
+fmt = "%"
+label = "Google TPUs' share of AI compute sold in 2025 (H100e)"
+source = "epoch2026chipsales"
+date = "2025"
+
+[org-huawei-share-2025]
+value = 0.039
+basis = "modelled"
+fmt = ".1%"
+label = "Huawei's share of AI compute sold in 2025 (H100e)"
+source = "epoch2026chipsales"
+date = "2025"
+
+[org-chip-tdp-2025]
+value = 7.5
+unit = "GW"
+basis = "modelled"
+fmt = ",.1f"
+label = "summed rated power (TDP) of AI chips sold in 2025, chips only"
+source = "epoch2026chipsales"
+date = "2025"
+note = "before cooling and servers"
+
+[org-huawei-h100e-2025]
+value = 530000
+unit = "H100e"
+basis = "modelled"
+fmt = ",.0f"
+label = "Huawei's 2025 AI compute output in H100-equivalents, Epoch's estimate"
+source = "epoch2026chipsales"
+date = "2025"
+note = "methodology page; 90% credence 450,000 to 620,000"
+
+[org-hyperscaler-share]
+value = 0.70
+basis = "modelled"
+fmt = "%"
+label = "share of global AI compute owned by the five US hyperscalers (more than)"
+source = "you2026chipowners"
+date = "2026-04"
+
+[org-china-owned-share]
+value = 0.05
+basis = "modelled"
+fmt = "%"
+label = "share of cumulative recent AI chip compute owned by Chinese companies at end 2025 (just over)"
+source = "you2026chipowners"
+date = "2025-12"
+note = "excludes smuggled chips and offshore cloud"
+
+[org-supercomputer-doubling]
+value = 9
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "doubling time of the computational performance of AI supercomputers, 2019 to 2025"
+source = "pilz2025supercomputers"
+date = "2025"
+
+[org-us-supercomputer-share]
+value = 0.75
+basis = "measured"
+fmt = "%"
+label = "US share of AI supercomputer performance in the dataset"
+source = "pilz2025supercomputers"
+date = "2025"
+
+[org-china-supercomputer-share]
+value = 0.15
+basis = "measured"
+fmt = "%"
+label = "China's share of AI supercomputer performance in the dataset"
+source = "pilz2025supercomputers"
+date = "2025"
+
+[org-dc-hub-sites]
+value = 13
+unit = "sites"
+basis = "measured"
+fmt = ",.0f"
+label = "large US AI sites in Epoch's Frontier Data Centers Hub at launch"
+source = "epoch2025datacentershub"
+date = "2025-11"
+
+[org-dc-hub-share]
+value = 0.15
+basis = "measured"
+fmt = "%"
+label = "share of all H100e delivered that those sites hold"
+source = "epoch2025datacentershub"
+date = "2025-11"
+note = "about 2.5 million of about 15 million H100e"
+
+# ---------------------------------------------------------------------------------------------
+# O1. Power
+
+[org-dc-world-2024]
+value = 415
+unit = "TWh"
+basis = "measured"
+fmt = ",.0f"
+label = "data centres' electricity use worldwide, 2024"
+source = "iea2025energyai"
+date = "2024"
+note = "about 1.5% of world electricity"
+
+[org-dc-world-2030]
+value = 945
+unit = "TWh"
+basis = "assumption"
+fmt = ",.0f"
+label = "data centres' electricity use worldwide projected for 2030"
+source = "iea2025energyai"
+date = "2030"
+
+[org-dc-us-2023]
+value = 176
+unit = "TWh"
+basis = "measured"
+fmt = ",.0f"
+label = "US data centres' electricity use, 2023"
+source = "shehabi2024datacenter"
+date = "2023"
+note = "executive summary, PDF p. 8"
+
+[org-dc-us-share-2023]
+value = 0.044
+basis = "measured"
+fmt = ".1%"
+label = "US data centres' share of US electricity use, 2023"
+source = "shehabi2024datacenter"
+date = "2023"
+
+[org-interconnect-2025]
+value = 61
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "median time from interconnection request to operation for US power projects built in 2025"
+source = "rand2026queued"
+date = "2025"
+note = "slide 4; generator queues only, large-load queues excluded"
+
+[org-interconnect-2015]
+value = 36
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "the same median for projects built in 2015"
+source = "rand2026queued"
+date = "2015"
+
+[org-interconnect-2008]
+value = 22
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "the same median for projects built in 2008"
+source = "rand2026queued"
+date = "2008"
+
+[org-transformer-lead]
+value = 128
+unit = "weeks"
+basis = "measured"
+fmt = ",.0f"
+label = "average lead time for US power transformers, Q2 2025"
+source = "woodmac2025connection"
+date = "2025-06"
+note = "PDF p. 5"
+
+[org-gsu-lead]
+value = 143
+unit = "weeks"
+basis = "measured"
+fmt = ",.0f"
+label = "average lead time for generator step-up transformers, Q2 2025"
+source = "woodmac2025connection"
+date = "2025-06"
+
+[org-turbine-gev]
+value = 116
+unit = "GW"
+basis = "vendor"
+fmt = ",.0f"
+label = "GE Vernova's gas turbine backlog"
+source = "bailey2026steam"
+date = "2026-09"
+
+[org-turbine-siemens]
+value = 69
+unit = "GW"
+basis = "vendor"
+fmt = ",.0f"
+label = "Siemens Energy's gas turbine backlog"
+source = "bailey2026steam"
+date = "2026-09"
+
+[org-turbine-mhi]
+value = 35
+unit = "GW"
+basis = "vendor"
+fmt = ",.0f"
+label = "Mitsubishi Heavy Industries' gas turbine backlog"
+source = "bailey2026steam"
+date = "2026-09"
+
+[org-china-solar-2025]
+value = 315.07
+unit = "GW"
+basis = "measured"
+fmt = ",.0f"
+label = "solar capacity China added in 2025 (AC)"
+source = "shaw2026chinasolar"
+date = "2025"
+note = "National Energy Administration statistics"
+
+[org-china-wind-2025]
+value = 119.33
+unit = "GW"
+basis = "measured"
+fmt = ",.0f"
+label = "wind capacity China added in 2025"
+source = "shaw2026chinasolar"
+date = "2025"
+
+[org-china-gallium]
+value = 0.99
+basis = "measured"
+fmt = "%"
+label = "China's share of refined gallium (about)"
+source = "iea2025energyai"
+date = "2025"
+
+[org-horinger-h100e]
+value = 81000
+unit = "H100e"
+basis = "modelled"
+fmt = ",.0f"
+label = "compute at Huawei's Horinger data centre, Epoch's estimate"
+source = "cottier2026horinger"
+date = "2026-11"
+note = "90% CI 36,000 to 141,000"
+
+[org-horinger-power]
+value = 286
+unit = "MW"
+basis = "modelled"
+fmt = ",.0f"
+label = "IT power capacity across Horinger's four buildings, Epoch's estimate"
+source = "cottier2026horinger"
+date = "2026-11"
+
+[org-china-compute-per-power]
+value = 0.40
+basis = "modelled"
+fmt = "%"
+label = "compute a given power capacity supports in China, as a share of leading US facilities"
+source = "cottier2026horinger"
+date = "2026-11"
+
+[org-colossus2-vs-horinger]
+value = 14
+basis = "modelled"
+fmt = ",.0f"
+label = "ratio of Colossus 2's computing capacity to Horinger's (about)"
+source = "cottier2026horinger"
+date = "2026-11"
+
+[org-dc-1gw-fastest]
+value = 11.6
+unit = "months"
+basis = "measured"
+fmt = ",.1f"
+label = "fastest time from construction start to 1 GW among recent sites (xAI Colossus 2)"
+source = "somala2025buildtimes"
+date = "2025-11"
+
+[org-dc-build-target]
+value = 1
+unit = "GW"
+basis = "measured"
+fmt = ",.0f"
+label = "total facility power the build-time measure counts to"
+source = "somala2025buildtimes"
+date = "2025-11"
+
+[org-dc-1gw-low]
+value = 1
+basis = "measured"
+fmt = ",.0f"
+label = "low end of construction start to 1 GW for recent sites"
+source = "somala2025buildtimes"
+date = "2025-11"
+
+[org-dc-1gw-high]
+value = 3.6
+unit = "years"
+basis = "measured"
+fmt = ",.1f"
+label = "high end of construction start to 1 GW for recent sites"
+source = "somala2025buildtimes"
+date = "2025-11"
+
+# ---------------------------------------------------------------------------------------------
+# O1. Talent and data
+
+[org-talent-china-2025]
+value = 0.41
+basis = "measured"
+fmt = "%"
+label = "share of top AI talent (NeurIPS 2025 authors) working in China"
+source = "ma2026talent"
+date = "2025"
+note = "40% of 25,677 authors had complete career histories; not a random subset"
+
+[org-talent-us-2025]
+value = 0.34
+basis = "measured"
+fmt = "%"
+label = "share of top AI talent (NeurIPS 2025 authors) working in the US"
+source = "ma2026talent"
+date = "2025"
+
+[org-talent-china-2022]
+value = 0.27
+basis = "measured"
+fmt = "%"
+label = "share of top AI talent working in China, 2022"
+source = "ma2026talent"
+date = "2022"
+
+[org-talent-us-2022]
+value = 0.46
+basis = "measured"
+fmt = "%"
+label = "share of top AI talent working in the US, 2022"
+source = "ma2026talent"
+date = "2022"
+
+[org-talent-authors]
+value = 25677
+unit = "authors"
+basis = "measured"
+fmt = ",.0f"
+label = "unique NeurIPS 2025 authors in the talent study's sample"
+source = "ma2026talent"
+date = "2025"
+
+[org-talent-us-retention]
+value = 0.89
+basis = "measured"
+fmt = "%"
+label = "retention of top AI talent in the US"
+source = "ma2026talent"
+date = "2025"
+
+[org-data-stock]
+value = 400
+unit = "trillion tokens"
+basis = "modelled"
+fmt = ",.0f"
+label = "effective stock of public human-generated text"
+source = "villalobos2022data"
+date = "2024"
+note = "Fig. 1, Sec. 2.5"
+
+[org-data-full-use-year]
+value = 2028
+basis = "modelled"
+fmt = ".0f"
+label = "median year frontier training fully uses that stock"
+source = "villalobos2022data"
+date = "2024"
+note = "range 2026 to 2032"
+
+[org-data-full-use-flop]
+value = 5e28
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "compute-optimal training compute at which the stock is fully used"
+source = "villalobos2022data"
+date = "2024"
+
+# ---------------------------------------------------------------------------------------------
+# O3. Leaks at the edges
+
+[org-smuggled-cum]
+value = 660000
+unit = "H100e"
+basis = "modelled"
+fmt = ",.0f"
+label = "compute smuggled into China through end 2025, median"
+source = "juniewicz2026smuggling"
+date = "2025-12"
+note = "Monte Carlo blend of a diversion model and a resale model"
+
+[org-smuggled-cum-low]
+value = 290000
+unit = "H100e"
+basis = "modelled"
+fmt = ",.0f"
+label = "low end of the 90% CI of compute smuggled into China through end 2025"
+source = "juniewicz2026smuggling"
+date = "2025-12"
+
+[org-smuggled-cum-high]
+value = 1600000
+unit = "H100e"
+basis = "modelled"
+fmt = ",.0f"
+label = "high end of the 90% CI of compute smuggled into China through end 2025"
+source = "juniewicz2026smuggling"
+date = "2025-12"
+
+[org-smuggled-share-china]
+value = 0.33
+basis = "modelled"
+fmt = "%"
+label = "smuggled compute as a share of China's total AI compute ('roughly a third')"
+source = "juniewicz2026smuggling"
+date = "2025-12"
+
+[org-smuggled-share-global]
+value = 0.03
+basis = "modelled"
+fmt = "%"
+label = "smuggled compute as a share of the global compute stockpile ('roughly 3%')"
+source = "juniewicz2026smuggling"
+date = "2025-12"
+
+[org-diversion-detect]
+value = 0.25
+basis = "assumption"
+fmt = "%"
+label = "share of chip diversion cases detected, median assumed in Epoch's smuggling model"
+source = "juniewicz2026smuggling"
+date = "2026-04"
+note = "90% CI 10% to 80%"
+
+[org-diversion-detect-low]
+value = 0.10
+basis = "assumption"
+fmt = "%"
+label = "low end of the assumed detection rate of diversion cases"
+source = "juniewicz2026smuggling"
+date = "2026-04"
+
+[org-diversion-detect-high]
+value = 0.80
+basis = "assumption"
+fmt = "%"
+label = "high end of the assumed detection rate of diversion cases"
+source = "juniewicz2026smuggling"
+date = "2026-04"
+
+[org-allegations-cum]
+value = 300000
+unit = "H100e"
+basis = "measured"
+fmt = ",.0f"
+label = "cumulative allegations of diverted or missing chips by end 2025 ('almost')"
+source = "juniewicz2026smuggling"
+date = "2025-12"
+
+[org-smuggled-2024-chips]
+value = 140000
+unit = "chips"
+basis = "modelled"
+fmt = ",.0f"
+label = "AI chips smuggled into China in 2024, median of CNAS's probabilistic estimate"
+source = "grunewald2025smuggling"
+date = "2024"
+note = "range from about 10,000 to several hundred thousand; a distribution, not a count of cases"
+
+[org-smuggling-profit-3]
+value = 140
+unit = "million USD"
+basis = "measured"
+fmt = ",.0f"
+label = "profits from three reported chip smuggling cases (about)"
+source = "grunewald2025smuggling"
+date = "2025-06"
+
+[org-bis-enforcement]
+value = 55
+unit = "million USD"
+basis = "measured"
+fmt = ",.0f"
+label = "BIS's annual export enforcement budget (about)"
+source = "grunewald2025smuggling"
+date = "2025-06"
+note = "endnote 12"
+
+[org-huawei-commerce-2025]
+value = 200000
+unit = "Ascend chips"
+basis = "measured"
+fmt = ",.0f"
+label = "Huawei's 2025 Ascend production capacity per the US Commerce Department (at or below)"
+source = "zafar2025kessler"
+date = "2025-06"
+note = "Under Secretary Kessler, House testimony; capacity, not shipments"
+
+[org-huawei-semianalysis-2025]
+value = 805000
+unit = "Ascend units"
+basis = "measured"
+fmt = ",.0f"
+label = "Huawei's 2025 Ascend shipments per SemiAnalysis"
+source = "patel2025ascend"
+date = "2025-09"
+note = "may include die-bank chips"
+
+[org-huawei-idc-2025]
+value = 812000
+unit = "AI chips"
+basis = "measured"
+fmt = ",.0f"
+label = "Huawei's 2025 AI chip shipments in China per IDC (around)"
+source = "pan2026idc"
+date = "2026-04"
+
+[org-china-accelerators-2025]
+value = 4.0
+unit = "million units"
+basis = "measured"
+fmt = ",.1f"
+label = "AI accelerators shipped in China in 2025 per IDC (approximately)"
+source = "pan2026idc"
+date = "2026-04"
+
+[org-nvidia-china-share-2025]
+value = 0.55
+basis = "measured"
+fmt = "%"
+label = "Nvidia's share of AI accelerator units in China in 2025 per IDC"
+source = "pan2026idc"
+date = "2026-04"
+
+[org-chips-unaccounted]
+value = 1
+unit = "million chips"
+basis = "modelled"
+fmt = ",.0f"
+label = "AI chips not traced to an owner, order of magnitude"
+source = "koopmanschap2026gpu"
+date = "2026-06"
+note = "'on the order of a million chips unaccounted for', after Epoch traced 15.7 million of 20.2 million chips"
+
+# ---------------------------------------------------------------------------------------------
+# O3. The rules that already stand on the chokepoints
+
+[org-h200-fee]
+value = 0.25
+basis = "spec"
+fmt = "%"
+label = "duty on each H200 sold to China under the December 2025 approval"
+source = "james2025h200"
+date = "2025-12"
+
+[org-diffusion-weights]
+value = 1e26
+unit = "operations"
+basis = "spec"
+fmt = ".0e"
+label = "training compute above which closed weights needed a licence under the rescinded diffusion rule"
+source = "bis2025diffusion"
+date = "2025-01"
+
+[org-eccn-tpp]
+value = 4800
+basis = "spec"
+fmt = ",.0f"
+label = "total processing performance at which a chip falls under ECCN 3A090.a"
+source = "bis2023advancedcomputing"
+date = "2023-10"
+
+[org-eccn-tpp-pd]
+value = 1600
+basis = "spec"
+fmt = ",.0f"
+label = "lower total processing performance that also falls under 3A090.a with high performance density"
+source = "bis2023advancedcomputing"
+date = "2023-10"
+
+[org-eccn-pd]
+value = 5.92
+basis = "spec"
+fmt = ",.2f"
+label = "performance density threshold paired with TPP 1,600 in 3A090.a"
+source = "bis2023advancedcomputing"
+date = "2023-10"
+
+[org-hbm-control]
+value = 2
+unit = "GB/s per mm2"
+basis = "spec"
+fmt = ",.0f"
+label = "memory bandwidth density above which HBM falls under ECCN 3A090.c"
+source = "bis2024hbm"
+date = "2024-12"
+note = "'All HBM stacks currently in production exceed this threshold'"
+
+[org-ascend-superpod]
+value = 8192
+unit = "chips"
+basis = "vendor"
+fmt = ",.0f"
+label = "Ascend 950DT chips in one Atlas 950 SuperPoD (up to)"
+source = "xu2025huaweiconnect"
+date = "2025-09"
+
+[org-ascend-supercluster]
+value = 500000
+unit = "NPUs"
+basis = "vendor"
+fmt = ",.0f"
+label = "NPUs in a planned Atlas 950 SuperCluster (over)"
+source = "xu2025huaweiconnect"
+date = "2025-09"
+
+[org-deepseek-penalty-low]
+value = 2
+basis = "vendor"
+fmt = ",.0f"
+label = "low end of the extra compute DeepSeek's CEO says restrictions force"
+source = "allen2025senate"
+date = "2025-12"
+note = "quoted in testimony, p. 3: 'two to four times the computing power'"
+
+[org-deepseek-penalty-high]
+value = 4
+basis = "vendor"
+fmt = ",.0f"
+label = "high end of the extra compute DeepSeek's CEO says restrictions force"
+source = "allen2025senate"
+date = "2025-12"
+
+[org-older-chip-cost]
+value = 10
+basis = "modelled"
+fmt = ",.0f"
+label = "factor by which costs and slowdowns of older AI chips exceed state-of-the-art ones (at least)"
+source = "khan2020aichips"
+date = "2020-04"
+note = "'at least an order of magnitude greater'"
+
+[org-decentral-growth]
+value = 20
+basis = "assumption"
+fmt = ",.0f"
+label = "growth a year of decentralised training compute, the author's estimate"
+source = "sevilla2025decentralized"
+date = "2025-12"
+note = "essay, the author's view, not Epoch's official position"
+
+[org-decentral-largest]
+value = 6e23
+unit = "FLOP"
+basis = "measured"
+fmt = ".0e"
+label = "upper end of the largest decentralised training runs"
+source = "sevilla2025decentralized"
+date = "2025-12"
+note = "'the 6e22-6e23 FLOP range', about 1000 times below the largest models"
+
+[org-decentral-gap]
+value = 1000
+basis = "measured"
+fmt = ",.0f"
+label = "factor by which the largest decentralised runs fall below the largest models (about)"
+source = "sevilla2025decentralized"
+date = "2025-12"
+
+[org-sat-reliable-mw]
+value = 10
+unit = "MW"
+basis = "modelled"
+fmt = ",.0f"
+label = "facility power above which satellite surveillance reliably detects AI data centres"
+source = "koopmanschap2026gpu"
+date = "2026-06"
+note = "Sec. 5.3.1, about 10,000 H100e; backed by a reported classifier whose four false negatives were all below 10 MW"
+
+# ---------------------------------------------------------------------------------------------
+# Prior designs the protocol must be compared with
+
+[org-miri-strict]
+value = 1e24
+unit = "FLOP"
+basis = "spec"
+fmt = ".0e"
+label = "training compute above which MIRI's draft agreement prohibits training"
+source = "scher2025agreement"
+date = "2026-05"
+note = "a draft agreement's chosen value, not in force"
+
+[org-miri-monitored]
+value = 1e22
+unit = "FLOP"
+basis = "spec"
+fmt = ".0e"
+label = "training compute above which MIRI's draft agreement monitors training"
+source = "scher2025agreement"
+date = "2026-05"
+note = "a draft agreement's chosen value, not in force"
+
+[org-miri-cluster]
+value = 16
+unit = "H100e"
+basis = "spec"
+fmt = ",.0f"
+label = "largest chip concentration MIRI's draft agreement allows outside monitored facilities"
+source = "scher2025agreement"
+date = "2026-05"
+note = "about 500,000 USD of H100s in 2025, per the source"
+
+[org-miri-withdrawal]
+value = 12
+unit = "months"
+basis = "spec"
+fmt = ",.0f"
+label = "withdrawal notice in MIRI's draft agreement"
+source = "scher2025agreement"
+date = "2026-05"
+note = "Article XV; chosen for the assurance tasks, not derived"
+
+[org-hwp-fe]
+value = 6.4
+unit = "million H100e"
+basis = "assumption"
+fmt = ",.1f"
+label = "covert evasion fleet threshold for year-end 2026 in the hardwired-pause working paper"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "p. 42"
+
+[org-hwp-fb]
+value = 180
+unit = "million H100e"
+basis = "assumption"
+fmt = ",.0f"
+label = "overt breakout fleet threshold for year-end 2026 in the hardwired-pause working paper"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "p. 42 and p. 102, with a 2-year breakout horizon chosen by judgement"
+
+[org-hwp-global-2026]
+value = 47
+unit = "million H100e"
+basis = "assumption"
+fmt = ",.0f"
+label = "projected global AI fleet at year-end 2026 in the hardwired-pause working paper"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "p. 102"
+
+[org-hwp-tb]
+value = 2
+unit = "years"
+basis = "assumption"
+fmt = ",.0f"
+label = "breakout horizon the hardwired-pause working paper chooses, the time before the rest of the world could react"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.2.3, chosen by judgement, not derived from detection and response times"
+
+# ---------------------------------------------------------------------------------------------
+# O2. Races, coalitions and thresholds
+
+[org-ba-groups]
+value = 10
+unit = "groups"
+basis = "measured"
+fmt = ",.0f"
+label = "groups per treatment in Barrett and Dannenberg's threshold experiment"
+source = "barrett2012climate"
+date = "2012"
+
+[org-ba-known-avoided]
+value = 8
+basis = "measured"
+fmt = ",.0f"
+label = "groups of 10 that avoided catastrophe with a known threshold"
+source = "barrett2012climate"
+date = "2012"
+
+[org-ba-uncertain-catastrophe]
+value = 9
+basis = "measured"
+fmt = ",.0f"
+label = "groups of 10 for which catastrophe was certain with the threshold's location uncertain"
+source = "barrett2012climate"
+date = "2012"
+
+[org-nordhaus-stable-low]
+value = 2
+unit = "countries"
+basis = "modelled"
+fmt = ",.0f"
+label = "low end of the size of stable coalitions without sanctions on outsiders (identical countries)"
+source = "nordhaus2015climate"
+date = "2015"
+note = "p. 1344-45, the small coalition paradox"
+
+[org-nordhaus-stable-high]
+value = 3
+unit = "countries"
+basis = "modelled"
+fmt = ",.0f"
+label = "high end of the size of stable coalitions without sanctions on outsiders (identical countries)"
+source = "nordhaus2015climate"
+date = "2015"
+
+[org-nordhaus-tariff]
+value = 0.05
+basis = "modelled"
+fmt = "%"
+label = "trade penalty on non-members at which Nordhaus's 50 USD per tCO2 club target is almost reached"
+source = "nordhaus2015climate"
+date = "2015"
+
+[org-gan-detect]
+value = 0.32
+basis = "assumption"
+fmt = "%"
+label = "chance of detection within the response window that deters breakout in Gan's calibration"
+source = "gan2026clock"
+date = "2026-11"
+note = "illustrative calibration, p. 15-16"
+
+[org-gan-catchup-start]
+value = 12
+unit = "months"
+basis = "assumption"
+fmt = ",.0f"
+label = "catch-up time at the start of a pause in Gan's calibration"
+source = "gan2026clock"
+date = "2026-11"
+
+[org-gan-pause-months]
+value = 24
+unit = "months"
+basis = "assumption"
+fmt = ",.0f"
+label = "length of compliant pause over which Gan reports the fall in catch-up time"
+source = "gan2026clock"
+date = "2026-11"
+
+[org-gan-catchup-24]
+value = 5.74
+unit = "months"
+basis = "assumption"
+fmt = ",.2f"
+label = "catch-up time after 24 months of compliant pause in Gan's calibration"
+source = "gan2026clock"
+date = "2026-11"
+
+[org-gan-equal-catchup]
+value = 4.4
+unit = "months"
+basis = "assumption"
+fmt = ",.1f"
+label = "catch-up time of a follower with the leader's compute in Gan's calibration"
+source = "gan2026clock"
+date = "2026-11"
+
+# ---------------------------------------------------------------------------------------------
+# O4. Covert programmes and how they were found
+
+[org-iraq-years]
+value = 10
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years Iraq's nuclear weapons programme ran undetected by the inspectorate (about)"
+source = "albright-2002"
+date = "1991"
+note = "late 1981 decision to mid-1991; thorne-1992 for the channel"
+
+[org-libya-years]
+value = 20
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years Libya's nuclear programme ran undeclared (about 20 or more)"
+source = "iaea-gov-2004-12"
+date = "2003"
+note = "para. 10: since the beginning of the 1980s, to December 2003"
+
+[org-libya-sites]
+value = 12
+unit = "sites"
+basis = "measured"
+fmt = ",.0f"
+label = "sites involved in Libya's undeclared nuclear programme since the early 1980s"
+source = "iaea-gov-2004-12"
+date = "2004-02"
+note = "para. 10"
+
+[org-iran-acknowledged-years]
+value = 18
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years of centrifuge enrichment development Iran acknowledged in 2003"
+source = "iaea-gov-2003-75"
+date = "2003-11"
+note = "para. 46"
+
+[org-iran-years]
+value = 17
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years Iran's centrifuge programme ran undetected"
+source = "iaea-gov-2003-75"
+date = "2002"
+note = "1985 decision (para. 47) to the August 2002 media reports (iaea-gov-2003-40, para. 3)"
+
+[org-fordow-years-low]
+value = 3
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years Fordow was undeclared, counting from design work in 2006"
+source = "iaea-gov-2009-74"
+date = "2009"
+note = "para. 13"
+
+[org-fordow-years-high]
+value = 7
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years Fordow was undeclared, counting from construction in 2002"
+source = "iaea-gov-2009-74"
+date = "2009"
+note = "para. 13"
+
+[org-syria-years]
+value = 6
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years Syria's reactor was under construction undeclared (about)"
+source = "iaea-gov-2011-30"
+date = "2007"
+note = "commercial imagery from 2001 to the September 2007 strike, para. 2 and 13"
+
+[org-biopreparat-years]
+value = 16
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years the Soviet Biopreparat programme ran before a defector revealed it"
+source = "fas-biopreparat"
+date = "1989"
+note = "1973 to October 1989; hoffman-2009 for the defection"
+
+[org-biopreparat-underestimate]
+value = 10
+basis = "measured"
+fmt = ",.0f"
+label = "factor by which US or British intelligence had underestimated Biopreparat's size"
+source = "fas-biopreparat"
+date = "1989"
+note = "'ten times larger than estimated'"
+
+[org-biopreparat-staff-low]
+value = 25000
+unit = "employees"
+basis = "measured"
+fmt = ",.0f"
+label = "low end of estimates of Biopreparat's staff"
+source = "fas-biopreparat"
+date = "1998"
+
+[org-biopreparat-staff-high]
+value = 32000
+unit = "employees"
+basis = "measured"
+fmt = ",.0f"
+label = "high end of the main estimate of Biopreparat's staff"
+source = "fas-biopreparat"
+date = "1998"
+note = "another estimate gives over 40,000 workers at 47 or more facilities"
+
+[org-sa-years]
+value = 15
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years South Africa's weapons programme was active, never detected by the inspectorate in these sources"
+source = "vonbaeckmann-1995"
+date = "1989"
+note = "1974 to 1989; ended by self-disclosure on 24 March 1993"
+
+[org-sa-decision-device]
+value = 5
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "years from South Africa's decision to its first nuclear device (about)"
+source = "vonbaeckmann-1995"
+date = "1979"
+note = "1974 approval to 1979 first device"
+
+[org-dprk-months]
+value = 9
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "months from the DPRK's initial report to the IAEA's special inspection request (about)"
+source = "iaea-gc37-1084"
+date = "1993"
+note = "4 May 1992 to 9 February 1993; accountancy and sampling of declared material"
+
+[org-dprk-withdrawal-days]
+value = 31
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "days from the special inspection request to the DPRK's withdrawal notice"
+source = "iaea-gc37-1084"
+date = "1993"
+note = "9 February to 12 March 1993"
+
+[org-cwc-ci-requests]
+value = 0
+unit = "requests"
+basis = "measured"
+fmt = ",.0f"
+label = "CWC challenge inspections requested from 1997 to July 2025"
+source = "opcw-ec109-dg22"
+date = "2025-07"
+
+[org-opcw-cw-insp]
+value = 3521
+unit = "inspections"
+basis = "measured"
+fmt = ",.0f"
+label = "OPCW inspections of chemical weapons sites since 1997 (sum of categories)"
+source = "opcw-numbers"
+date = "2026-09"
+
+[org-opcw-ind-insp]
+value = 5128
+unit = "inspections"
+basis = "measured"
+fmt = ",.0f"
+label = "OPCW industry inspections since 1997 (sum of categories)"
+source = "opcw-numbers"
+date = "2026-09"
+note = "the page's label for this line is ambiguous; the sum is the survey helper's"
+
+[org-fraud-detect]
+value = 0.31
+basis = "measured"
+fmt = "%"
+label = "share of large-firm US corporate frauds detected, 1996 to 2004"
+source = "dyck2017pervasive"
+date = "2017"
+note = "p. 2; inferred from the natural experiment of Arthur Andersen's demise"
+
+[org-fraud-employees]
+value = 0.19
+basis = "measured"
+fmt = "%"
+label = "share of detected corporate frauds revealed by employees"
+source = "dyck2007whistle"
+date = "2007"
+
+[org-fraud-quitam]
+value = 0.467
+basis = "measured"
+fmt = ".1%"
+label = "share of healthcare frauds revealed by employees, where qui tam rewards apply"
+source = "dyck2007whistle"
+date = "2007"
+note = "p. 4-5; rewards of 15% to 30% of recoveries"
+
+[org-fraud-other]
+value = 0.163
+basis = "measured"
+fmt = ".1%"
+label = "share of frauds revealed by employees in other industries"
+source = "dyck2007whistle"
+date = "2007"

@@ -33,6 +33,9539 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: assumption
 - defined in: `data/inputs.toml#L21`
 
+<a id="def-days-per-year"></a>
+### def-days-per-year
+
+**365.25 days**: days in a year (the Julian year), the convention used for unit conversions here
+
+- basis: design
+- defined in: `data/inputs/010-definitions.toml#L12`
+
+<a id="def-seconds-per-day"></a>
+### def-seconds-per-day
+
+**86,400 s**: seconds in a day, for unit conversions
+
+- basis: design
+- defined in: `data/inputs/010-definitions.toml#L19`
+
+<a id="def-eu-presumption-flop"></a>
+### def-eu-presumption-flop
+
+**1e+25 FLOP**: EU AI Act: cumulative training compute above which high-impact capabilities are presumed
+
+- basis: spec
+- source: [@eu-ai-act-2024], 2024
+- note: Art. 51(2); rebuttable under Art. 52(2); the Commission may amend it by delegated act (Art. 51(3)).
+- defined in: `data/inputs/010-definitions.toml#L29`
+
+<a id="def-openai-critical-speedup"></a>
+### def-openai-critical-speedup
+
+**5**: OpenAI Preparedness v2, AI self-improvement Critical: speed-up of a generational improvement against 2024
+
+- basis: spec
+- source: [@openai2025preparedness], 2025-04
+- note: Lagging indicator: a generational improvement in 1/5 of the 2024 wall-clock time, sustained for several months.
+- defined in: `data/inputs/010-definitions.toml#L40`
+
+<a id="def-openai-critical-weeks"></a>
+### def-openai-critical-weeks
+
+**4 weeks**: OpenAI Preparedness v2: the example duration of a generational improvement at the Critical level
+
+- basis: spec
+- source: [@openai2025preparedness], 2025-04
+- note: Same table: 'e.g., sped up to just 4 weeks'.
+- defined in: `data/inputs/010-definitions.toml#L49`
+
+<a id="def-bd-groups"></a>
+### def-bd-groups
+
+**10 groups**: groups per treatment in Barrett and Dannenberg's threshold experiment
+
+- basis: measured
+- source: [@barrett2012climate], 2012
+- note: 10 players per group, 400 participants in all.
+- defined in: `data/inputs/010-definitions.toml#L59`
+
+<a id="def-bd-known-avoided"></a>
+### def-bd-known-avoided
+
+**8 groups**: groups that avoided catastrophe when the threshold's location was known (Certainty treatment)
+
+- basis: measured
+- source: [@barrett2012climate], 2012
+- note: Results; 10 of 10 avoided it when only the impact was uncertain.
+- defined in: `data/inputs/010-definitions.toml#L69`
+
+<a id="def-bd-uncertain-catastrophe"></a>
+### def-bd-uncertain-catastrophe
+
+**9 groups**: groups in which catastrophe was certain when the threshold's location was uncertain
+
+- basis: measured
+- source: [@barrett2012climate], 2012
+- note: Results, Threshold uncertainty treatment (threshold drawn from U[100, 200] chips).
+- defined in: `data/inputs/010-definitions.toml#L79`
+
+<a id="def-morris-exceptional-pct"></a>
+### def-morris-exceptional-pct
+
+**99**: Levels of AGI, Level 4 (Exceptional): percentile of skilled adults the system must reach
+
+- basis: spec
+- source: [@morris2023levels], 2024
+- note: Table 1; Level 5 (Superhuman) outperforms 100% of humans.
+- defined in: `data/inputs/010-definitions.toml#L92`
+
+<a id="def-hendrycks-agi-gpt4"></a>
+### def-hendrycks-agi-gpt4
+
+**27%**: GPT-4's score on Hendrycks et al.'s AGI definition (ten cognitive domains)
+
+- basis: measured
+- source: [@hendrycks2025agidef], 2025
+- note: Abstract.
+- defined in: `data/inputs/010-definitions.toml#L101`
+
+<a id="def-hendrycks-agi-gpt5"></a>
+### def-hendrycks-agi-gpt5
+
+**57%**: GPT-5's score on Hendrycks et al.'s AGI definition
+
+- basis: measured
+- source: [@hendrycks2025agidef], 2025
+- note: Abstract; the profile is 'highly jagged', weakest in long-term memory storage.
+- defined in: `data/inputs/010-definitions.toml#L110`
+
+<a id="def-genewein-years"></a>
+### def-genewein-years
+
+**10 years**: Genewein et al.'s ASI bar: years the human-expert collective works on the task
+
+- basis: spec
+- source: [@genewein2026agiasi], 2026
+- note: Sec. 3 remark: tens of thousands of well-coordinated experts, 10 years, the technology of 2010.
+- defined in: `data/inputs/010-definitions.toml#L119`
+
+<a id="def-genewein-tech-year"></a>
+### def-genewein-tech-year
+
+**2010**: Genewein et al.'s ASI bar: the year whose technology the human collective may use
+
+- basis: spec
+- source: [@genewein2026agiasi], 2026
+- note: Frozen so that humans using AI do not make the threshold 'a moving target'.
+- defined in: `data/inputs/010-definitions.toml#L129`
+
+<a id="def-genewein-speed"></a>
+### def-genewein-speed
+
+**10**: Genewein et al.'s ASI bar: how much faster ASI does the same tasks ('a factor of 10 or more')
+
+- basis: spec
+- source: [@genewein2026agiasi], 2026
+- note: Sec. 3 remark.
+- defined in: `data/inputs/010-definitions.toml#L138`
+
+<a id="def-ngo-si-years"></a>
+### def-ngo-si-years
+
+**1 year**: Ngo's superintelligence as a (t, n)-AGI: the time t
+
+- basis: spec
+- source: [@ngo2023tagi], 2023
+- note: '(1 year, 8 billion)-AGIs'.
+- defined in: `data/inputs/010-definitions.toml#L147`
+
+<a id="def-ngo-si-humans"></a>
+### def-ngo-si-humans
+
+**8 billion people**: Ngo's superintelligence as a (t, n)-AGI: the group size n
+
+- basis: spec
+- source: [@ngo2023tagi], 2023
+- note: '(1 year, 8 billion)-AGIs'.
+- defined in: `data/inputs/010-definitions.toml#L157`
+
+<a id="def-anthropic-cost-factor"></a>
+### def-anthropic-cost-factor
+
+**5**: Anthropic RSP v3.4: cost factor within which AI must substitute for all research staff
+
+- basis: spec
+- source: [@anthropic2026rsp], 2026-07
+- note: Automated R&D threshold, criterion (1): 'at competitive costs (i.e., within a factor of 5)'.
+- defined in: `data/inputs/010-definitions.toml#L167`
+
+<a id="def-rebench-experts"></a>
+### def-rebench-experts
+
+**61 experts**: human experts in RE-Bench's baseline (71 eight-hour attempts)
+
+- basis: measured
+- source: [@wijk2024rebench], 2024
+- note: Abstract.
+- defined in: `data/inputs/010-definitions.toml#L176`
+
+<a id="def-rebench-short-budget"></a>
+### def-rebench-short-budget
+
+**2 h**: RE-Bench's shortest total time budget per environment
+
+- basis: spec
+- source: [@wijk2024rebench], 2024
+- defined in: `data/inputs/010-definitions.toml#L186`
+
+<a id="def-rebench-long-budget"></a>
+### def-rebench-long-budget
+
+**32 h**: RE-Bench's longest total time budget (best of four 8-hour runs)
+
+- basis: spec
+- source: [@wijk2024rebench], 2024
+- defined in: `data/inputs/010-definitions.toml#L195`
+
+<a id="def-rebench-agent-advantage"></a>
+### def-rebench-agent-advantage
+
+**4**: RE-Bench: best agents' score over human experts' at the 2-hour budget
+
+- basis: measured
+- source: [@wijk2024rebench], 2024
+- note: Abstract.
+- defined in: `data/inputs/010-definitions.toml#L204`
+
+<a id="def-rebench-human-advantage"></a>
+### def-rebench-human-advantage
+
+**2**: RE-Bench: human experts' score over the top agent's at the 32-hour budget
+
+- basis: measured
+- source: [@wijk2024rebench], 2024
+- note: Abstract.
+- defined in: `data/inputs/010-definitions.toml#L213`
+
+<a id="def-rebench-agent-cost"></a>
+### def-rebench-agent-cost
+
+**123**: RE-Bench: approximate cost of an agent's 8-hour run, USD
+
+- basis: measured
+- source: [@wijk2024rebench], 2024
+- note: Sec. 6.2.
+- defined in: `data/inputs/010-definitions.toml#L222`
+
+<a id="def-rebench-human-cost"></a>
+### def-rebench-human-cost
+
+**1,855**: RE-Bench: approximate pay to a human expert for an 8-hour run, USD
+
+- basis: measured
+- source: [@wijk2024rebench], 2024
+- note: Sec. 6.2.
+- defined in: `data/inputs/010-definitions.toml#L231`
+
+<a id="def-kwa-baseline-low"></a>
+### def-kwa-baseline-low
+
+**5**: how much longer contract baseliners take than repository maintainers, low end
+
+- basis: measured
+- source: [@kwa2025horizon], 2025
+- note: Sec. 6.4: '5x-18x longer'.
+- defined in: `data/inputs/010-definitions.toml#L240`
+
+<a id="def-kwa-baseline-high"></a>
+### def-kwa-baseline-high
+
+**18**: how much longer contract baseliners take than repository maintainers, high end
+
+- basis: measured
+- source: [@kwa2025horizon], 2025
+- note: Sec. 6.4.
+- defined in: `data/inputs/010-definitions.toml#L249`
+
+<a id="def-gpqa-expert"></a>
+### def-gpqa-expert
+
+**65%**: GPQA: accuracy of PhD-level domain experts
+
+- basis: measured
+- source: [@rein2023gpqa], 2023
+- note: Abstract; 74% discounting mistakes the experts identified.
+- defined in: `data/inputs/010-definitions.toml#L258`
+
+<a id="def-gpqa-expert-adjusted"></a>
+### def-gpqa-expert-adjusted
+
+**74%**: GPQA: expert accuracy discounting expert-identified mistakes
+
+- basis: measured
+- source: [@rein2023gpqa], 2023
+- defined in: `data/inputs/010-definitions.toml#L267`
+
+<a id="def-gpqa-best-2026"></a>
+### def-gpqa-best-2026
+
+**96.8%**: best model score on GPQA Diamond, November 2026
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- note: gpqa_diamond.csv, 2026-11-17, standard error 1.2 points.
+- defined in: `data/inputs/010-definitions.toml#L275`
+
+<a id="def-frontiermath-release"></a>
+### def-frontiermath-release
+
+**2%**: best model score on FrontierMath at release (upper bound, 'under 2%')
+
+- basis: measured
+- source: [@glazer2024frontiermath], 2024-11
+- defined in: `data/inputs/010-definitions.toml#L284`
+
+<a id="def-frontiermath-best-2026"></a>
+### def-frontiermath-best-2026
+
+**95%**: best model score on FrontierMath Tiers 1 to 3 (v2), November 2026
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- defined in: `data/inputs/010-definitions.toml#L292`
+
+<a id="def-hle-defective"></a>
+### def-hle-defective
+
+**46%**: share of a sample of Humanity's Last Exam questions Epoch found defective
+
+- basis: measured
+- source: [@epoch2026hlereview], 2026
+- note: 22 of 48 sampled.
+- defined in: `data/inputs/010-definitions.toml#L300`
+
+<a id="def-anthropic-rate-multiple"></a>
+### def-anthropic-rate-multiple
+
+**2**: Anthropic RSP v3.4: multiple of the baseline rate of AI progress that counts as dramatic acceleration
+
+- basis: spec
+- source: [@anthropic2026rsp], 2026-07
+- note: Fn. 8: 'as much progress in one year as one would see in two years at baseline'; fn. 9: baseline over at least three model generations.
+- defined in: `data/inputs/010-definitions.toml#L312`
+
+<a id="def-anthropic-example-baseline"></a>
+### def-anthropic-example-baseline
+
+**9**: Anthropic RSP v3.4 worked example: baseline effective scale-up (3x compute times 3x algorithms)
+
+- basis: spec
+- source: [@anthropic2026rsp], 2026-07
+- note: Fn. 8; doubling 'would entail something like an 81x effective scaleup'.
+- defined in: `data/inputs/010-definitions.toml#L321`
+
+<a id="def-anthropic-baseline-generations"></a>
+### def-anthropic-baseline-generations
+
+**3 model generations**: Anthropic RSP v3.4: minimum span over which the baseline rate is measured
+
+- basis: spec
+- source: [@anthropic2026rsp], 2026-07
+- note: Fn. 9.
+- defined in: `data/inputs/010-definitions.toml#L330`
+
+<a id="def-metr-acceleration"></a>
+### def-metr-acceleration
+
+**1.9**: METR: acceleration of Anthropic's internal capability index (ratio of growth rates)
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- note: Headline; most informative evidence redacted by the developer; not at fixed inputs.
+- defined in: `data/inputs/010-definitions.toml#L340`
+
+<a id="def-metr-acceleration-ci-low"></a>
+### def-metr-acceleration-ci-low
+
+**1.5**: METR acceleration estimate, 95% confidence interval, lower end
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/010-definitions.toml#L349`
+
+<a id="def-metr-acceleration-ci-high"></a>
+### def-metr-acceleration-ci-high
+
+**2.8**: METR acceleration estimate, 95% confidence interval, upper end
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/010-definitions.toml#L357`
+
+<a id="def-metr-robust-low"></a>
+### def-metr-robust-low
+
+**1.1**: METR robustness analyses: lowest acceleration found
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/010-definitions.toml#L365`
+
+<a id="def-metr-robust-high"></a>
+### def-metr-robust-high
+
+**2.9**: METR robustness analyses: highest acceleration found
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/010-definitions.toml#L373`
+
+<a id="def-metr-aeci-before"></a>
+### def-metr-aeci-before
+
+**15**: growth of Anthropic's capability index (AECI) before the October 2025 breakpoint
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- note: Piecewise linear fit with bootstrap intervals, Epoch's public code.
+- defined in: `data/inputs/010-definitions.toml#L381`
+
+<a id="def-metr-aeci-after"></a>
+### def-metr-aeci-after
+
+**29 points a year**: growth of Anthropic's capability index after the October 2025 breakpoint
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/010-definitions.toml#L390`
+
+<a id="def-metr-ai-share"></a>
+### def-metr-ai-share
+
+**80%**: METR's subjective share of the October 2026 acceleration due to AI ('perhaps ~80%')
+
+- basis: assumption
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- note: A judgement by METR, not a measurement.
+- defined in: `data/inputs/010-definitions.toml#L399`
+
+<a id="def-burtsev-delay"></a>
+### def-burtsev-delay
+
+**0.5 yr**: Burtsev's illustrative delay of one development cycle
+
+- basis: assumption
+- source: [@burtsev2026criticality], 2026-08
+- note: Sec. 3.2; fixed by assumption. The gain, closure and hardening are 'not presently constrained by direct empirical estimates'.
+- defined in: `data/inputs/010-definitions.toml#L408`
+
+<a id="def-cunningham-return"></a>
+### def-cunningham-return
+
+**1.0**: Cunningham et al.'s calibrated return to AI R&D (ln 3 / ln 3)
+
+- basis: modelled
+- source: [@cunningham2026rsi], 2026-09
+- note: Sec. 4.1, with algorithmic efficiency taken to triple a year.
+- defined in: `data/inputs/010-definitions.toml#L418`
+
+<a id="def-cunningham-eps-ca"></a>
+### def-cunningham-eps-ca
+
+**6.5**: Cunningham et al.: elasticity of capability (exp ECI) to compute, from a regression of ECI on log compute
+
+- basis: measured
+- source: [@cunningham2026rsi], 2026-09
+- note: Sec. 4.1.
+- defined in: `data/inputs/010-definitions.toml#L427`
+
+<a id="def-cunningham-eps-rc-threshold"></a>
+### def-cunningham-eps-rc-threshold
+
+**0.15**: Cunningham et al.: research productivity gain per ECI point needed for self-sustaining acceleration
+
+- basis: modelled
+- source: [@cunningham2026rsi], 2026-09
+- note: Sec. 4.1, p. 29: the threshold is eps_R,C > 0.15.
+- defined in: `data/inputs/010-definitions.toml#L436`
+
+<a id="def-cunningham-uplift"></a>
+### def-cunningham-uplift
+
+**4**: a reported productivity uplift from AI that Cunningham et al. take at face value for illustration
+
+- basis: assumption
+- source: [@cunningham2026rsi], 2026-09
+- note: Sec. 4.1: they call it 'very likely to be an overestimate'.
+- defined in: `data/inputs/010-definitions.toml#L445`
+
+<a id="def-cunningham-eps-rc-illustration"></a>
+### def-cunningham-eps-rc-illustration
+
+**9%**: Cunningham et al.: productivity gain per ECI point implied by a reported 4x uplift (an upper-end illustration, not an estimate)
+
+- basis: modelled
+- source: [@cunningham2026rsi], 2026-09
+- note: Sec. 4.1: the 4x uplift is 'very likely to be an overestimate'; it 'would imply a 9% increase in productivity per unit of ECI, below the threshold'. Corrected per the spot-check.
+- defined in: `data/inputs/010-definitions.toml#L454`
+
+<a id="def-r-lm"></a>
+### def-r-lm
+
+**1.89**: returns to software research in language models (doublings of output per doubling of input)
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- note: Appendix B; 90% CI 1.069 to 3.212.
+- defined in: `data/inputs/010-definitions.toml#L463`
+
+<a id="def-r-lm-low"></a>
+### def-r-lm-low
+
+**1.07**: returns to software research in language models, 90% CI lower end
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/010-definitions.toml#L472`
+
+<a id="def-r-lm-high"></a>
+### def-r-lm-high
+
+**3.21**: returns to software research in language models, 90% CI upper end
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/010-definitions.toml#L480`
+
+<a id="def-r-cv"></a>
+### def-r-cv
+
+**1.26**: returns to software research in computer vision
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- note: Appendix B; 90% CI 0.727 to 2.094.
+- defined in: `data/inputs/010-definitions.toml#L488`
+
+<a id="def-r-bottleneck-divisor"></a>
+### def-r-bottleneck-divisor
+
+**3**: divisor on returns to research once compute bottlenecks are counted (epsilon_K about 2/3)
+
+- basis: assumption
+- source: [@ho2025experiments], 2025
+- note: Appendix D: the correction 'puts them all below 1'.
+- defined in: `data/inputs/010-definitions.toml#L497`
+
+<a id="def-sie-r-median"></a>
+### def-sie-r-median
+
+**1.2**: Davidson and Houlden: median returns to software R&D in their fixed-compute model
+
+- basis: assumption
+- source: [@davidson2025sie], 2025-08
+- note: Parameter values; range 0.4 to 3.6.
+- defined in: `data/inputs/010-definitions.toml#L506`
+
+<a id="def-sie-r-low"></a>
+### def-sie-r-low
+
+**0.4**: Davidson and Houlden: returns to software R&D, low end of range
+
+- basis: assumption
+- source: [@davidson2025sie], 2025-08
+- defined in: `data/inputs/010-definitions.toml#L515`
+
+<a id="def-sie-r-high"></a>
+### def-sie-r-high
+
+**3.6**: Davidson and Houlden: returns to software R&D, high end of range
+
+- basis: assumption
+- source: [@davidson2025sie], 2025-08
+- defined in: `data/inputs/010-definitions.toml#L523`
+
+<a id="def-eth-threshold"></a>
+### def-eth-threshold
+
+**5**: Eth and Davidson's proposed threshold: multiple of the recent pace of software progress
+
+- basis: spec
+- source: [@eth2025sie], 2025-03
+- note: Mitigations: measure software progress, disclose to trusted third parties, act before the threshold.
+- defined in: `data/inputs/010-definitions.toml#L531`
+
+<a id="def-nanogpt-records"></a>
+### def-nanogpt-records
+
+**77 records**: NanoGPT speedrun records, May 2024 to March 2026
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/010-definitions.toml#L540`
+
+<a id="def-nanogpt-ai-records"></a>
+### def-nanogpt-ai-records
+
+**4 records**: NanoGPT speedrun records METR credits to AI agents (all shallow to moderate)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/010-definitions.toml#L549`
+
+<a id="def-anthropic-ai-led"></a>
+### def-anthropic-ai-led
+
+**26%**: share of Anthropic's AI R&D work Claude 'leads' (automation level 4), August 2026
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-08
+- note: Prototype R&D Automation Index, rated by Claude judges; a self-report.
+- defined in: `data/inputs/010-definitions.toml#L558`
+
+<a id="def-anthropic-ai-led-feb"></a>
+### def-anthropic-ai-led-feb
+
+**1%**: the same share in February 2026 (reported as under 1%)
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-02
+- defined in: `data/inputs/010-definitions.toml#L567`
+
+<a id="def-anthropic-agents"></a>
+### def-anthropic-agents
+
+**30,000 agents**: AI agents working at once on one internal Anthropic platform
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-08
+- defined in: `data/inputs/010-definitions.toml#L575`
+
+<a id="def-narrowpath-oom-gap"></a>
+### def-narrowpath-oom-gap
+
+**8 orders of magnitude**: A Narrow Path: gap between the upper compute limit (FLOP) and the licensed cluster limit (FLOP/s), in seconds
+
+- basis: spec
+- source: [@miotti2025narrowpath], 2025-04
+- note: Annex 2.
+- defined in: `data/inputs/010-definitions.toml#L587`
+
+<a id="def-narrowpath-breakout-years"></a>
+### def-narrowpath-breakout-years
+
+**3.2 yr**: A Narrow Path: time a licensed cluster would need to breach the upper limit in an illegal run
+
+- basis: modelled
+- source: [@miotti2025narrowpath], 2025-04
+- note: Annex 2: 'giving authorities ample time to intervene'; the intervention time is asserted, not derived.
+- defined in: `data/inputs/010-definitions.toml#L597`
+
+<a id="def-narrowpath-permitted-days"></a>
+### def-narrowpath-permitted-days
+
+**12 days**: A Narrow Path: time within which a licensed actor could still train any permitted model
+
+- basis: modelled
+- source: [@miotti2025narrowpath], 2025-04
+- note: Annex 2.
+- defined in: `data/inputs/010-definitions.toml#L607`
+
+<a id="def-hwp-horizon"></a>
+### def-hwp-horizon
+
+**2 yr**: hardwired-pause working paper: breakout time horizon T_B
+
+- basis: spec
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.2.3: chosen as the time before 'the rest of the world could react'; set by judgement, not derived from a detection time.
+- defined in: `data/inputs/010-definitions.toml#L617`
+
+<a id="def-hwp-breakout-budget"></a>
+### def-hwp-breakout-budget
+
+**2e+29 FLOP**: hardwired-pause working paper: overt breakout training budget C_B
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: Set by what 'a bullish would-be defector might believe'; 100 times the frozen frontier of 2e27 FLOP.
+- defined in: `data/inputs/010-definitions.toml#L627`
+
+<a id="def-hwp-overhead"></a>
+### def-hwp-overhead
+
+**12**: hardwired-pause working paper: research overhead rho_B (compute for R&D per unit of final run)
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.2.3; a fixed multiplier, with no AI-automated research inside breakout.
+- defined in: `data/inputs/010-definitions.toml#L637`
+
+<a id="def-hwp-utilisation"></a>
+### def-hwp-utilisation
+
+**21%**: hardwired-pause working paper: realistic utilisation of frontier fleets U_F
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- defined in: `data/inputs/010-definitions.toml#L646`
+
+<a id="def-hwp-h100e-rate"></a>
+### def-hwp-h100e-rate
+
+**989 TFLOP/s**: one H100-equivalent, as the hardwired-pause working paper defines it
+
+- basis: spec
+- source: [@fithian2026hardwired], 2026-10
+- defined in: `data/inputs/010-definitions.toml#L654`
+
+<a id="def-hwp-fleet-threshold"></a>
+### def-hwp-fleet-threshold
+
+**180 million H100e**: hardwired-pause working paper: breakout fleet threshold F_B at a 2-year horizon
+
+- basis: modelled
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.2.3: F_B = 12 x 2e29 / (2 x 0.21) H100e-years = 180M H100e.
+- defined in: `data/inputs/010-definitions.toml#L663`
+
+<a id="def-hwp-global-fleet"></a>
+### def-hwp-global-fleet
+
+**47 million H100e**: hardwired-pause working paper: projected global fleet at year-end 2026
+
+- basis: modelled
+- source: [@fithian2026hardwired], 2026-12
+- defined in: `data/inputs/010-definitions.toml#L673`
+
+<a id="def-hwp-efficiency-growth"></a>
+### def-hwp-efficiency-growth
+
+**57%**: hardwired-pause working paper: annual training efficiency gain in its sensitivity case
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.5.2.
+- defined in: `data/inputs/010-definitions.toml#L682`
+
+<a id="def-hwp-us-capacity-before"></a>
+### def-hwp-us-capacity-before
+
+**20%**: hardwired-pause working paper: US overt breakout capacity as a share of F_B, before efficiency gains
+
+- basis: modelled
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.5.2.
+- defined in: `data/inputs/010-definitions.toml#L691`
+
+<a id="def-hwp-us-capacity-after"></a>
+### def-hwp-us-capacity-after
+
+**53%**: the same share after 26 months of 57% annual efficiency gains
+
+- basis: modelled
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.5.2.
+- defined in: `data/inputs/010-definitions.toml#L700`
+
+<a id="def-gan-catchup-start"></a>
+### def-gan-catchup-start
+
+**12**: Gan: the follower's catch-up time at the start of a compliant pause (illustrative calibration)
+
+- basis: modelled
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/010-definitions.toml#L709`
+
+<a id="def-gan-catchup-12"></a>
+### def-gan-catchup-12
+
+**8.61 months**: Gan: catch-up time after 12 months of pause
+
+- basis: modelled
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/010-definitions.toml#L717`
+
+<a id="def-gan-catchup-24"></a>
+### def-gan-catchup-24
+
+**5.74 months**: Gan: catch-up time after 24 months of pause
+
+- basis: modelled
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/010-definitions.toml#L726`
+
+<a id="def-ho-halving-months"></a>
+### def-ho-halving-months
+
+**8.4 months**: halving time of the compute needed for a fixed language-model performance, 2012 to 2023
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 3.1; 95% CI 4.5 to 14.3 months.
+- defined in: `data/inputs/010-definitions.toml#L735`
+
+<a id="def-ho-halving-fast"></a>
+### def-ho-halving-fast
+
+**4.5 months**: the same halving time, 95% CI fast end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/010-definitions.toml#L745`
+
+<a id="def-ho-halving-slow"></a>
+### def-ho-halving-slow
+
+**14.3 months**: the same halving time, 95% CI slow end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/010-definitions.toml#L754`
+
+<a id="def-ho-compute-share-low"></a>
+### def-ho-compute-share-low
+
+**60%**: share of language-model gains from compute scaling, low end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 4.1: '60-95%'.
+- defined in: `data/inputs/010-definitions.toml#L763`
+
+<a id="def-ho-compute-share-high"></a>
+### def-ho-compute-share-high
+
+**95%**: share of language-model gains from compute scaling, high end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/010-definitions.toml#L772`
+
+<a id="def-gundlach-claimed"></a>
+### def-gundlach-claimed
+
+**22,000**: algorithmic efficiency gain 2012 to 2023 as previously estimated (Ho et al., cited by Gundlach et al.)
+
+- basis: measured
+- source: [@gundlach2025origin], 2025
+- note: Abstract.
+- defined in: `data/inputs/010-definitions.toml#L780`
+
+<a id="def-gundlach-low-compute-max"></a>
+### def-gundlach-low-compute-max
+
+**100**: upper bound on the efficiency gain that reproduces at low compute
+
+- basis: measured
+- source: [@gundlach2025origin], 2025
+- note: Abstract (opened: abstract only). Small-scale ablations account for less than 10x; other innovations less than 10x.
+- defined in: `data/inputs/010-definitions.toml#L789`
+
+<a id="def-whitfill-bias-factor"></a>
+### def-whitfill-bias-factor
+
+**9**: Whitfill's first-pass estimate of how much observational estimates may overstate algorithmic progress
+
+- basis: assumption
+- source: [@whitfill2025selection], 2025
+- note: Sec. 1.3; 'many other explanations' possible.
+- defined in: `data/inputs/010-definitions.toml#L798`
+
+<a id="def-sie-p-compress-3yr"></a>
+### def-sie-p-compress-3yr
+
+**57%**: Davidson and Houlden: probability a software intelligence explosion compresses 3 years of progress into under 1
+
+- basis: modelled
+- source: [@davidson2025sie], 2025-08
+- note: Results table; conditional on AI that fully automates AI research, at fixed compute.
+- defined in: `data/inputs/010-definitions.toml#L807`
+
+<a id="def-sie-p-compress-10yr"></a>
+### def-sie-p-compress-10yr
+
+**18%**: the same model: probability of compressing 10 years into under 1
+
+- basis: modelled
+- source: [@davidson2025sie], 2025-08
+- defined in: `data/inputs/010-definitions.toml#L816`
+
+<a id="def-iaea-conv-metal-low"></a>
+### def-iaea-conv-metal-low
+
+**7**: IAEA conversion time, plutonium, HEU or U-233 metal, low end
+
+- basis: spec
+- source: [@iaea-glossary-2022], 2022
+- note: 3.20, Table 2: 'Order of days (7-10)'. Assumes facilities exist; excludes transport and assembly.
+- defined in: `data/inputs/010-definitions.toml#L827`
+
+<a id="def-iaea-conv-metal-high"></a>
+### def-iaea-conv-metal-high
+
+**10 days**: IAEA conversion time, metal, high end
+
+- basis: spec
+- source: [@iaea-glossary-2022], 2022
+- defined in: `data/inputs/010-definitions.toml#L836`
+
+<a id="def-iaea-conv-irr-low"></a>
+### def-iaea-conv-irr-low
+
+**1**: IAEA conversion time, direct-use material in irradiated fuel, low end
+
+- basis: spec
+- source: [@iaea-glossary-2022], 2022
+- defined in: `data/inputs/010-definitions.toml#L845`
+
+<a id="def-iaea-conv-irr-high"></a>
+### def-iaea-conv-irr-high
+
+**3 months**: IAEA conversion time, irradiated fuel, high end
+
+- basis: spec
+- source: [@iaea-glossary-2022], 2022
+- defined in: `data/inputs/010-definitions.toml#L853`
+
+<a id="def-iaea-conv-leu-low"></a>
+### def-iaea-conv-leu-low
+
+**3**: IAEA conversion time, uranium below 20% U-235 and thorium, low end
+
+- basis: spec
+- source: [@iaea-glossary-2022], 2022
+- defined in: `data/inputs/010-definitions.toml#L862`
+
+<a id="def-iaea-conv-leu-high"></a>
+### def-iaea-conv-leu-high
+
+**12 months**: IAEA conversion time, uranium below 20% U-235 and thorium, high end
+
+- basis: spec
+- source: [@iaea-glossary-2022], 2022
+- defined in: `data/inputs/010-definitions.toml#L870`
+
+<a id="def-iaea-goal-unirr"></a>
+### def-iaea-goal-unirr
+
+**1 month**: IAEA timeliness detection goal, unirradiated direct-use material
+
+- basis: spec
+- source: [@iaea-glossary-2001], 2001
+- note: 3.20 (2001 edition); the 2022 edition prints no numeric goals.
+- defined in: `data/inputs/010-definitions.toml#L879`
+
+<a id="def-iaea-goal-irr"></a>
+### def-iaea-goal-irr
+
+**3 months**: IAEA timeliness detection goal, irradiated direct-use material
+
+- basis: spec
+- source: [@iaea-glossary-2001], 2001
+- defined in: `data/inputs/010-definitions.toml#L889`
+
+<a id="def-iaea-goal-indirect"></a>
+### def-iaea-goal-indirect
+
+**12 months**: IAEA timeliness detection goal, indirect-use material (one year)
+
+- basis: spec
+- source: [@iaea-glossary-2001], 2001
+- defined in: `data/inputs/010-definitions.toml#L898`
+
+<a id="def-iaea-detect-high"></a>
+### def-iaea-detect-high
+
+**90%**: IAEA 'high' detection probability level
+
+- basis: spec
+- source: [@iaea-glossary-2001], 2001
+- note: 3.16; 'low' is 20%.
+- defined in: `data/inputs/010-definitions.toml#L907`
+
+<a id="def-iaea-detect-low"></a>
+### def-iaea-detect-low
+
+**20%**: IAEA 'low' detection probability level
+
+- basis: spec
+- source: [@iaea-glossary-2001], 2001
+- defined in: `data/inputs/010-definitions.toml#L916`
+
+<a id="def-shavit-window"></a>
+### def-shavit-window
+
+**30 days**: Shavit's detection target: catch a large training run within this many days of completion
+
+- basis: spec
+- source: [@shavit2023chinchilla], 2023
+- note: Table 1; a detection target, not tied to a breakout time.
+- defined in: `data/inputs/010-definitions.toml#L924`
+
+<a id="def-shavit-prob"></a>
+### def-shavit-prob
+
+**90%**: Shavit's detection target: probability of catching a rule-violating run
+
+- basis: spec
+- source: [@shavit2023chinchilla], 2023
+- defined in: `data/inputs/010-definitions.toml#L934`
+
+<a id="def-iraq-years"></a>
+### def-iraq-years
+
+**10 years**: Iraq's nuclear weapons programme, years undetected by the inspectorate (late 1981 to mid-1991)
+
+- basis: measured
+- source: [@albright-2002], 1991
+- note: Found through intelligence and post-war inspections (thorne-1992).
+- defined in: `data/inputs/010-definitions.toml#L942`
+
+<a id="def-iran-centrifuge-years"></a>
+### def-iran-centrifuge-years
+
+**17 years**: Iran's undeclared centrifuge work, years before disclosure (1985 to August 2002)
+
+- basis: measured
+- source: [@iaea-gov-2003-75], 2003
+- note: Revealed by public media reports, then environmental sampling (iaea-gov-2003-40).
+- defined in: `data/inputs/010-definitions.toml#L952`
+
+<a id="def-syria-years"></a>
+### def-syria-years
+
+**6 years**: Syria's reactor, years from first imagery to the strike (2001 to 2007), found by national intelligence
+
+- basis: measured
+- source: [@iaea-gov-2011-30], 2011
+- defined in: `data/inputs/010-definitions.toml#L962`
+
+<a id="def-dprk-discrepancy-months"></a>
+### def-dprk-discrepancy-months
+
+**9 months**: DPRK: months from initial report to special inspection request, a discrepancy found by IAEA accountancy
+
+- basis: measured
+- source: [@iaea-gc37-1084], 1993
+- note: 4 May 1992 to 9 February 1993.
+- defined in: `data/inputs/010-definitions.toml#L971`
+
+<a id="def-dprk-withdrawal-days"></a>
+### def-dprk-withdrawal-days
+
+**31 days**: DPRK: days from the special inspection request to its NPT withdrawal notice
+
+- basis: measured
+- source: [@iaea-gc37-1084], 1993
+- defined in: `data/inputs/010-definitions.toml#L981`
+
+<a id="def-gan-xi"></a>
+### def-gan-xi
+
+**0.383**: Gan's deterrence constant xi = ln[(T - R)/(C - R)] at his illustrative payoffs (2.5, 3.2, 1.0, 0.6)
+
+- basis: modelled
+- source: [@gan2026clock], 2026-11
+- note: Pp. 15 to 16; of some payoffs the paper says 'No evidence guides' them.
+- defined in: `data/inputs/010-definitions.toml#L990`
+
+<a id="def-gan-window"></a>
+### def-gan-window
+
+**12 months**: Gan's illustrative response window w
+
+- basis: modelled
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/010-definitions.toml#L999`
+
+<a id="def-prevent-beta"></a>
+### def-prevent-beta
+
+**5%**: tolerated chance that a breakout succeeds, a design choice used here to illustrate prevention
+
+- basis: design
+- defined in: `data/inputs/010-definitions.toml#L1008`
+
+<a id="def-rsp1-elicitation-share"></a>
+### def-rsp1-elicitation-share
+
+**1%**: Anthropic RSP v1.0: elicitation budget, as a share of total training cost
+
+- basis: spec
+- source: [@anthropic2023rsp], 2023-09
+- note: ASL-3 definition: 'less than 1% of the total training cost'; removed in v2.0 (2024).
+- defined in: `data/inputs/010-definitions.toml#L1017`
+
+<a id="def-rsp1-buffer"></a>
+### def-rsp1-buffer
+
+**6**: Anthropic RSP v1.0: safety buffer in effective compute
+
+- basis: spec
+- source: [@anthropic2023rsp], 2023-09
+- note: Removed in v2.0.
+- defined in: `data/inputs/010-definitions.toml#L1026`
+
+<a id="def-audit-models"></a>
+### def-audit-models
+
+**5**: models in the UK AISI sandbagging auditing game
+
+- basis: measured
+- source: [@taylor2025auditinggames], 2025-12
+- defined in: `data/inputs/010-definitions.toml#L1035`
+
+<a id="def-audit-phase1-correct"></a>
+### def-audit-phase1-correct
+
+**1**: models the blue team classified correctly in phase 1
+
+- basis: measured
+- source: [@taylor2025auditinggames], 2025-12
+- defined in: `data/inputs/010-definitions.toml#L1043`
+
+<a id="def-audit-phase2-correct"></a>
+### def-audit-phase2-correct
+
+**2**: models the blue team classified correctly in phase 2
+
+- basis: measured
+- source: [@taylor2025auditinggames], 2025-12
+- defined in: `data/inputs/010-definitions.toml#L1051`
+
+<a id="def-audit-benign-uplift"></a>
+### def-audit-benign-uplift
+
+**10 points**: points benign models gained from the same elicitation (about)
+
+- basis: measured
+- source: [@taylor2025auditinggames], 2025-12
+- note: Sec. 6.4.1.
+- defined in: `data/inputs/010-definitions.toml#L1059`
+
+<a id="def-sabotage-degraded"></a>
+### def-sabotage-degraded
+
+**36.1%**: a sandbagging Claude 3.5 Sonnet's WMDP score, as a share of its original
+
+- basis: measured
+- source: [@benton2024sabotage], 2024
+- note: Sec. 6.4.
+- defined in: `data/inputs/010-definitions.toml#L1069`
+
+<a id="def-sabotage-recovered"></a>
+### def-sabotage-recovered
+
+**95.6%**: the same model's score after anti-refusal training, as a share of its original
+
+- basis: measured
+- source: [@benton2024sabotage], 2024
+- defined in: `data/inputs/010-definitions.toml#L1078`
+
+<a id="def-xh-rl-lock-steps"></a>
+### def-xh-rl-lock-steps
+
+**500 GRPO steps**: RL steps an RL-locked model stayed suppressed (more than)
+
+- basis: measured
+- source: [@jang2026explorationhacking], 2026
+- note: Sec. 3, KernelBench; a prompted sandbagger recovered in about 100.
+- defined in: `data/inputs/010-definitions.toml#L1086`
+
+<a id="def-robust-hard-recall"></a>
+### def-robust-hard-recall
+
+**7.8%**: hard-task recall of a tamper-resistant locked organism after weak-to-strong fine-tuning
+
+- basis: measured
+- source: [@finke2026robustorganisms], 2026
+- note: Table 4.
+- defined in: `data/inputs/010-definitions.toml#L1096`
+
+<a id="def-robust-base-recall"></a>
+### def-robust-base-recall
+
+**71.2%**: hard-task recall of the base model
+
+- basis: measured
+- source: [@finke2026robustorganisms], 2026
+- defined in: `data/inputs/010-definitions.toml#L1105`
+
+<a id="def-graft-circuit-broken"></a>
+### def-graft-circuit-broken
+
+**-11%**: recovery by weight grafting on a circuit-broken organism
+
+- basis: measured
+- source: [@le2026grafting], 2026
+- note: Sec. 4.6; against 94% to 101% on 11 ordinary locked models (Table 1).
+- defined in: `data/inputs/010-definitions.toml#L1113`
+
+<a id="def-adaptive-auc-before"></a>
+### def-adaptive-auc-before
+
+**0.978**: AUC of a text audit for sandbagging before adaptive retraining
+
+- basis: measured
+- source: [@soopal2026adaptive], 2026
+- defined in: `data/inputs/010-definitions.toml#L1122`
+
+<a id="def-adaptive-auc-after"></a>
+### def-adaptive-auc-after
+
+**0.560**: AUC of the same audit after two rounds of adaptive retraining
+
+- basis: measured
+- source: [@soopal2026adaptive], 2026
+- defined in: `data/inputs/010-definitions.toml#L1130`
+
+<a id="def-sprt-saving"></a>
+### def-sprt-saving
+
+**40%**: trials saved by a sequential test of absence, when the capability is truly absent (up to)
+
+- basis: measured
+- source: [@bukkapatnam2026absent], 2026
+- note: Abstract only.
+- defined in: `data/inputs/010-definitions.toml#L1138`
+
+<a id="def-mlebench-pass1"></a>
+### def-mlebench-pass1
+
+**16.9%**: MLE-bench medal rate, pass@1 (o1-preview with AIDE)
+
+- basis: measured
+- source: [@chan2024mlebench], 2024
+- defined in: `data/inputs/010-definitions.toml#L1147`
+
+<a id="def-mlebench-pass8"></a>
+### def-mlebench-pass8
+
+**34.1%**: MLE-bench medal rate, pass@8
+
+- basis: measured
+- source: [@chan2024mlebench], 2024
+- defined in: `data/inputs/010-definitions.toml#L1155`
+
+<a id="def-evalaware-model-auc"></a>
+### def-evalaware-model-auc
+
+**0.83**: AUC with which Gemini 2.5 Pro tells evaluations from deployment
+
+- basis: measured
+- source: [@needham2025evalaware], 2025
+- defined in: `data/inputs/010-definitions.toml#L1163`
+
+<a id="def-evalaware-human-auc"></a>
+### def-evalaware-human-auc
+
+**0.92**: human baseline AUC on the same task
+
+- basis: measured
+- source: [@needham2025evalaware], 2025
+- defined in: `data/inputs/010-definitions.toml#L1171`
+
+<a id="def-posttraining-low"></a>
+### def-posttraining-low
+
+**5**: compute-equivalent gain from post-training enhancements, low end
+
+- basis: measured
+- source: [@heim2024thresholds], 2024
+- note: Limitations section, citing prior work.
+- defined in: `data/inputs/010-definitions.toml#L1179`
+
+<a id="def-posttraining-high"></a>
+### def-posttraining-high
+
+**20**: compute-equivalent gain from post-training enhancements, high end
+
+- basis: measured
+- source: [@heim2024thresholds], 2024
+- defined in: `data/inputs/010-definitions.toml#L1188`
+
+<a id="def-replibench-2023"></a>
+### def-replibench-2023
+
+**5%**: success on 11 of 20 self-replication evaluations, early 2023 (under)
+
+- basis: measured
+- source: [@aisi2025trends], 2023
+- note: Sec. 5.
+- defined in: `data/inputs/010-definitions.toml#L1199`
+
+<a id="def-replibench-2025"></a>
+### def-replibench-2025
+
+**60%**: success on the same evaluations, summer 2025 (over)
+
+- basis: measured
+- source: [@aisi2025trends], 2025
+- note: Failures concentrate at KYC checks and persistent deployment.
+- defined in: `data/inputs/010-definitions.toml#L1208`
+
+<a id="def-scher-mechanisms"></a>
+### def-scher-mechanisms
+
+**28 mechanisms**: candidate mechanisms Scher catalogues for verifying restrictions on frontier AI research
+
+- basis: measured
+- source: [@scher2026research], 2026-06
+- note: Abstract only.
+- defined in: `data/inputs/010-definitions.toml#L1217`
+
+<a id="def-burtsev-network-rho"></a>
+### def-burtsev-network-rho
+
+**1.15**: Burtsev: spectral radius of a network of individually subcritical blocs once transfer is counted (scenario)
+
+- basis: modelled
+- source: [@burtsev2026criticality], 2026-08
+- note: Sec. 4 scenarios.
+- defined in: `data/inputs/010-definitions.toml#L1227`
+
+<a id="phys-boltzmann-k"></a>
+### phys-boltzmann-k
+
+**1.380649e-23 J/K**: Boltzmann constant (exact since the 2019 SI)
+
+- basis: spec
+- source: [@codata2022-k], 2022
+- note: CODATA 2022, listed as exact
+- defined in: `data/inputs/011-physical.toml#L8`
+
+<a id="phys-temp-room"></a>
+### phys-temp-room
+
+**300 K**: reference temperature for the Landauer bound of a chip at room temperature
+
+- basis: design
+- defined in: `data/inputs/011-physical.toml#L18`
+
+<a id="phys-temp-body"></a>
+### phys-temp-body
+
+**310 K**: body temperature used for the brain's Landauer bound
+
+- basis: assumption
+- source: [@carlsmith2020]
+- note: Carlsmith Sec. 4.1.2 works at about 310 K
+- defined in: `data/inputs/011-physical.toml#L25`
+
+<a id="phys-berut-fit-a"></a>
+### phys-berut-fit-a
+
+**0.72 kT per bit**: heat per erased bit in the slow limit, colloidal one-bit memory (two-parameter fit)
+
+- basis: measured
+- source: [@berut2015], 2015
+- note: Sec. 3, Fig. 8; kT ln 2 is 0.693 kT
+- defined in: `data/inputs/011-physical.toml#L34`
+
+<a id="phys-berut-fit-b"></a>
+### phys-berut-fit-b
+
+**8.15 kT s**: coefficient of the 1/tau excess heat in the colloidal erasure fit <Q> = ln 2 + B/tau
+
+- basis: measured
+- source: [@berut2015], 2015
+- note: Sec. 3, Fig. 8; erasure times measured up to 40 s
+- defined in: `data/inputs/011-physical.toml#L44`
+
+<a id="phys-berut-tau-max"></a>
+### phys-berut-tau-max
+
+**40 s**: longest erasure time in the colloidal experiment
+
+- basis: measured
+- source: [@berut2015], 2015
+- note: Fig. 8
+- defined in: `data/inputs/011-physical.toml#L54`
+
+<a id="phys-fast-erasure"></a>
+### phys-fast-erasure
+
+**1 ns**: erasure time used to illustrate the speed-energy trade-off (an extrapolation)
+
+- basis: design
+- defined in: `data/inputs/011-physical.toml#L64`
+
+<a id="phys-hong-erasure"></a>
+### phys-hong-erasure
+
+**1.45 kT per bit**: measured heat per erased bit in a nanomagnetic memory at 300 K
+
+- basis: measured
+- source: [@hong2014], 2014
+- note: plus or minus 0.35 kT; a second set gave 1.0 plus or minus 0.22 kT
+- defined in: `data/inputs/011-physical.toml#L71`
+
+<a id="phys-v100-tensor"></a>
+### phys-v100-tensor
+
+**125 TFLOP/s**: V100 SXM2 tensor peak
+
+- basis: vendor
+- source: [@nvidia-v100]
+- note: datasheet r5, undated
+- defined in: `data/inputs/011-physical.toml#L84`
+
+<a id="phys-v100-power"></a>
+### phys-v100-power
+
+**300 W**: V100 SXM2 maximum power
+
+- basis: vendor
+- source: [@nvidia-v100]
+- defined in: `data/inputs/011-physical.toml#L93`
+
+<a id="phys-v100-hbm-bw"></a>
+### phys-v100-hbm-bw
+
+**900 GB/s**: V100 memory bandwidth
+
+- basis: vendor
+- source: [@nvidia-v100]
+- defined in: `data/inputs/011-physical.toml#L101`
+
+<a id="phys-a100-bf16"></a>
+### phys-a100-bf16
+
+**312 TFLOP/s**: A100 80GB SXM dense BF16 tensor peak
+
+- basis: vendor
+- source: [@nvidia-a100], 2021-06
+- note: 624 with sparsity
+- defined in: `data/inputs/011-physical.toml#L109`
+
+<a id="phys-a100-tdp"></a>
+### phys-a100-tdp
+
+**400 W**: A100 80GB SXM maximum TDP
+
+- basis: vendor
+- source: [@nvidia-a100], 2021-06
+- defined in: `data/inputs/011-physical.toml#L119`
+
+<a id="phys-a100-hbm-bw"></a>
+### phys-a100-hbm-bw
+
+**2,039 GB/s**: A100 80GB SXM memory bandwidth
+
+- basis: vendor
+- source: [@nvidia-a100], 2021-06
+- defined in: `data/inputs/011-physical.toml#L128`
+
+<a id="phys-h100-bf16"></a>
+### phys-h100-bf16
+
+**989.5 TFLOP/s**: H100 SXM dense BF16 tensor peak
+
+- basis: vendor
+- source: [@nvidia-h100]
+- note: the page lists 1,979 TFLOPS footnoted 'with sparsity'; dense is half
+- defined in: `data/inputs/011-physical.toml#L137`
+
+<a id="phys-h100-fp8"></a>
+### phys-h100-fp8
+
+**1,979 TFLOP/s**: H100 SXM dense FP8 tensor peak
+
+- basis: vendor
+- source: [@nvidia-h100]
+- note: 3,958 with sparsity
+- defined in: `data/inputs/011-physical.toml#L146`
+
+<a id="phys-h100-tdp"></a>
+### phys-h100-tdp
+
+**700 W**: H100 SXM maximum power
+
+- basis: vendor
+- source: [@nvidia-h100]
+- note: 'Up to 700W (configurable)'
+- defined in: `data/inputs/011-physical.toml#L155`
+
+<a id="phys-h100-hbm-bw"></a>
+### phys-h100-hbm-bw
+
+**3.35 TB/s**: H100 SXM memory bandwidth
+
+- basis: vendor
+- source: [@nvidia-h100]
+- defined in: `data/inputs/011-physical.toml#L164`
+
+<a id="phys-h100-hbm-cap"></a>
+### phys-h100-hbm-cap
+
+**80 GB**: H100 SXM memory capacity
+
+- basis: vendor
+- source: [@nvidia-h100]
+- defined in: `data/inputs/011-physical.toml#L172`
+
+<a id="phys-h100-nvlink"></a>
+### phys-h100-nvlink
+
+**900 GB/s**: H100 SXM NVLink bandwidth
+
+- basis: vendor
+- source: [@nvidia-h100]
+- defined in: `data/inputs/011-physical.toml#L180`
+
+<a id="phys-gb200-rack-bf16-sparse"></a>
+### phys-gb200-rack-bf16-sparse
+
+**360 PFLOP/s**: GB200 NVL72 rack BF16 tensor peak with sparsity
+
+- basis: vendor
+- source: [@nvidia-gb200]
+- note: 'Dense is one-half sparse spec shown'; no rack power on the page
+- defined in: `data/inputs/011-physical.toml#L188`
+
+<a id="phys-gb200-rack-hbm-bw"></a>
+### phys-gb200-rack-hbm-bw
+
+**576 TB/s**: GB200 NVL72 rack HBM bandwidth
+
+- basis: vendor
+- source: [@nvidia-gb200]
+- defined in: `data/inputs/011-physical.toml#L197`
+
+<a id="phys-gb200-rack-nvlink"></a>
+### phys-gb200-rack-nvlink
+
+**130 TB/s**: GB200 NVL72 rack NVLink bandwidth
+
+- basis: vendor
+- source: [@nvidia-gb200]
+- defined in: `data/inputs/011-physical.toml#L205`
+
+<a id="phys-gb200-rack-gpus"></a>
+### phys-gb200-rack-gpus
+
+**72 GPUs**: GPUs in a GB200 NVL72 rack
+
+- basis: vendor
+- source: [@nvidia-gb200]
+- defined in: `data/inputs/011-physical.toml#L213`
+
+<a id="phys-dgx-b200-power"></a>
+### phys-dgx-b200-power
+
+**14.3 kW**: DGX B200 system power, eight GPUs
+
+- basis: vendor
+- source: [@nvidia-dgx-b200]
+- note: '~14.3 kW max', system level, not chip TDP
+- defined in: `data/inputs/011-physical.toml#L221`
+
+<a id="phys-dgx-b200-fp8-sparse"></a>
+### phys-dgx-b200-fp8-sparse
+
+**72 PFLOP/s**: DGX B200 FP8 peak with sparsity, eight GPUs
+
+- basis: vendor
+- source: [@nvidia-dgx-b200]
+- defined in: `data/inputs/011-physical.toml#L230`
+
+<a id="phys-dgx-b200-hbm-bw"></a>
+### phys-dgx-b200-hbm-bw
+
+**64 TB/s**: DGX B200 total HBM bandwidth, eight GPUs
+
+- basis: vendor
+- source: [@nvidia-dgx-b200]
+- defined in: `data/inputs/011-physical.toml#L238`
+
+<a id="phys-dgx-b200-gpus"></a>
+### phys-dgx-b200-gpus
+
+**8 GPUs**: GPUs in a DGX B200
+
+- basis: vendor
+- source: [@nvidia-dgx-b200]
+- defined in: `data/inputs/011-physical.toml#L246`
+
+<a id="phys-scale-out-port"></a>
+### phys-scale-out-port
+
+**400 Gbit/s**: DGX B200 scale-out networking per port
+
+- basis: vendor
+- source: [@nvidia-dgx-b200]
+- note: InfiniBand or Ethernet, one port per GPU assumed in the derived ratio
+- defined in: `data/inputs/011-physical.toml#L254`
+
+<a id="phys-mi300x-fp16"></a>
+### phys-mi300x-fp16
+
+**1,307.4 TFLOP/s**: AMD MI300X dense FP16 peak
+
+- basis: vendor
+- source: [@amd-mi300x]
+- note: 2,614.9 with sparsity
+- defined in: `data/inputs/011-physical.toml#L263`
+
+<a id="phys-mi300x-tbp"></a>
+### phys-mi300x-tbp
+
+**750 W**: AMD MI300X maximum board power
+
+- basis: vendor
+- source: [@amd-mi300x]
+- defined in: `data/inputs/011-physical.toml#L272`
+
+<a id="phys-mi300x-hbm-bw"></a>
+### phys-mi300x-hbm-bw
+
+**5.3 TB/s**: AMD MI300X peak memory bandwidth
+
+- basis: vendor
+- source: [@amd-mi300x]
+- defined in: `data/inputs/011-physical.toml#L280`
+
+<a id="phys-miri-h100e"></a>
+### phys-miri-h100e
+
+**990 TFLOP/s**: one H100-equivalent as MIRI's draft agreement defines it (FP16)
+
+- basis: design
+- source: [@scher2025agreement], 2025
+- defined in: `data/inputs/011-physical.toml#L288`
+
+<a id="phys-cmos-ceiling-fp16"></a>
+### phys-cmos-ceiling-fp16
+
+**2.9e+14 FLOP/J**: estimated maximum energy efficiency of irreversible CMOS at FP16
+
+- basis: modelled
+- source: [@ho2023], 2023-12
+- note: Implications section: 4.7e15 FP4/J divided by 16; holds only in the irreversible regime
+- defined in: `data/inputs/011-physical.toml#L300`
+
+<a id="phys-cmos-ceiling-fp4"></a>
+### phys-cmos-ceiling-fp4
+
+**4.7e+15 FLOP/J**: estimated maximum energy efficiency of irreversible CMOS at FP4 (geometric mean)
+
+- basis: modelled
+- source: [@ho2023], 2023-12
+- note: abstract
+- defined in: `data/inputs/011-physical.toml#L310`
+
+<a id="phys-cmos-log-sd"></a>
+### phys-cmos-log-sd
+
+**0.7 orders of magnitude**: standard deviation in log space of the CMOS ceiling estimate
+
+- basis: modelled
+- source: [@ho2023], 2023-12
+- note: 'around 0.7 OOMs'
+- defined in: `data/inputs/011-physical.toml#L320`
+
+<a id="phys-cmos-headroom-ho"></a>
+### phys-cmos-headroom-ho
+
+**207**: further efficiency gain before CMOS improvements stop, 50% chance (Ho, Erdil and Besiroglu)
+
+- basis: modelled
+- source: [@ho2023], 2023-12
+- note: 290/1.4, against their H100 figure of 1.4e12 FP16/J
+- defined in: `data/inputs/011-physical.toml#L330`
+
+<a id="phys-eff-growth-supercomputer"></a>
+### phys-eff-growth-supercomputer
+
+**1.34**: yearly growth of AI supercomputer energy efficiency (FLOP/s per watt)
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-04
+- note: Sec. 3.2.1; 90% CI 1.25 to 1.43; mostly from new chips
+- defined in: `data/inputs/011-physical.toml#L340`
+
+<a id="phys-eff-growth-supercomputer-low"></a>
+### phys-eff-growth-supercomputer-low
+
+**1.25**: lower end of the 90% CI for AI supercomputer efficiency growth a year
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-04
+- defined in: `data/inputs/011-physical.toml#L350`
+
+<a id="phys-eff-growth-supercomputer-high"></a>
+### phys-eff-growth-supercomputer-high
+
+**1.43**: upper end of the 90% CI for AI supercomputer efficiency growth a year
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-04
+- defined in: `data/inputs/011-physical.toml#L359`
+
+<a id="phys-eff-growth-gpu"></a>
+### phys-eff-growth-gpu
+
+**1.40**: yearly growth of GPU energy efficiency (Epoch with EPRI)
+
+- basis: measured
+- source: [@you2025], 2025-08
+- note: 'improved by 40% per year'
+- defined in: `data/inputs/011-physical.toml#L368`
+
+<a id="phys-pue-growth-max"></a>
+### phys-pue-growth-max
+
+**5%**: upper bound on yearly improvement of power usage effectiveness in AI supercomputers
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-04
+- note: 'less than 5% each year'
+- defined in: `data/inputs/011-physical.toml#L378`
+
+<a id="phys-koomey-doubling"></a>
+### phys-koomey-doubling
+
+**1.57 years**: doubling time of computations per kWh, 1946 to 2009
+
+- basis: measured
+- source: [@koomey2011], 2011
+- defined in: `data/inputs/011-physical.toml#L388`
+
+<a id="phys-koomey-doubling-post2000"></a>
+### phys-koomey-doubling-post2000
+
+**2.7 years**: doubling time of peak-output efficiency after about 2000
+
+- basis: measured
+- source: [@koomey2015], 2015
+- defined in: `data/inputs/011-physical.toml#L397`
+
+<a id="phys-reversible-test-saving"></a>
+### phys-reversible-test-saving
+
+**30%**: energy saving of the first adiabatic (reversible) test chip against a regular chip
+
+- basis: vendor
+- source: [@hulick2025], 2025-08
+- note: one test reported by Science News; no independent verification described
+- defined in: `data/inputs/011-physical.toml#L406`
+
+<a id="phys-reversible-roadmap"></a>
+### phys-reversible-roadmap
+
+**4,000**: efficiency gain on a reversible computing vendor's road map
+
+- basis: vendor
+- source: [@genkina2025], 2025
+- note: 'probably 10 or 15 years out'
+- defined in: `data/inputs/011-physical.toml#L416`
+
+<a id="phys-davidson-landauer-oom"></a>
+### phys-davidson-landauer-oom
+
+**6 orders of magnitude**: room for chip technology to Landauer assumed in a published takeoff analysis
+
+- basis: assumption
+- source: [@davidson2025three], 2025-03
+- note: against about 2 orders in the current paradigm
+- defined in: `data/inputs/011-physical.toml#L426`
+
+<a id="phys-brain-flops-central"></a>
+### phys-brain-flops-central
+
+**1e+15 FLOP/s**: brain-equivalent compute Carlsmith judges more likely than not to be enough
+
+- basis: modelled
+- source: [@carlsmith2020], 2020-09
+- note: given the right software, 'which may be very hard to create'
+- defined in: `data/inputs/011-physical.toml#L439`
+
+<a id="phys-brain-flops-low"></a>
+### phys-brain-flops-low
+
+**1e+13 FLOP/s**: low end of Carlsmith's mechanistic range for brain-equivalent compute
+
+- basis: modelled
+- source: [@carlsmith2020], 2020-09
+- defined in: `data/inputs/011-physical.toml#L449`
+
+<a id="phys-brain-flops-high"></a>
+### phys-brain-flops-high
+
+**1e+17 FLOP/s**: high end of Carlsmith's mechanistic range for brain-equivalent compute
+
+- basis: modelled
+- source: [@carlsmith2020], 2020-09
+- defined in: `data/inputs/011-physical.toml#L458`
+
+<a id="phys-brain-flops-p90"></a>
+### phys-brain-flops-p90
+
+**1e+21 FLOP/s**: brain-equivalent compute Carlsmith gives under 10% chance of being exceeded
+
+- basis: modelled
+- source: [@carlsmith2020], 2020-09
+- defined in: `data/inputs/011-physical.toml#L467`
+
+<a id="phys-brain-p90-chance"></a>
+### phys-brain-p90-chance
+
+**10%**: Carlsmith's upper bound on the chance that brain-equivalent compute exceeds 1e21 FLOP/s
+
+- basis: modelled
+- source: [@carlsmith2020], 2020-09
+- note: 'unlikely (<10%)'
+- defined in: `data/inputs/011-physical.toml#L476`
+
+<a id="phys-brain-power"></a>
+### phys-brain-power
+
+**20 W**: power of the human brain, high end of published estimates
+
+- basis: measured
+- source: [@carlsmith2020], 2020-09
+- note: Sec. 4.1.2: most estimates 10 to 20 W; 20 W used as the high end
+- defined in: `data/inputs/011-physical.toml#L486`
+
+<a id="phys-wbe-level4"></a>
+### phys-wbe-level4
+
+**1e+18 FLOP/s**: whole brain emulation compute at the spiking network level
+
+- basis: modelled
+- source: [@sandberg2008], 2008
+- note: Table 9, p. 80; workshop consensus was levels 4 to 6
+- defined in: `data/inputs/011-physical.toml#L496`
+
+<a id="phys-wbe-level6"></a>
+### phys-wbe-level6
+
+**1e+25 FLOP/s**: whole brain emulation compute at the metabolome level
+
+- basis: modelled
+- source: [@sandberg2008], 2008
+- note: Table 9, p. 80
+- defined in: `data/inputs/011-physical.toml#L506`
+
+<a id="phys-cortex-compute-power"></a>
+### phys-cortex-compute-power
+
+**0.1 W**: power partitioned to cortical computation
+
+- basis: measured
+- source: [@levy2021], 2021
+- note: abstract only (full text not retrieved)
+- defined in: `data/inputs/011-physical.toml#L516`
+
+<a id="phys-cortex-comm-power"></a>
+### phys-cortex-comm-power
+
+**3.5 W**: power spent on long-distance communication in the cortex
+
+- basis: measured
+- source: [@levy2021], 2021
+- note: abstract only (full text not retrieved)
+- defined in: `data/inputs/011-physical.toml#L526`
+
+<a id="phys-frontier-compute-growth"></a>
+### phys-frontier-compute-growth
+
+**5**: yearly growth of training compute for frontier language models since 2020
+
+- basis: measured
+- source: [@epoch2026trends], 2026-11
+- note: 90% CI 4x to 6x
+- defined in: `data/inputs/011-physical.toml#L539`
+
+<a id="phys-algo-halving"></a>
+### phys-algo-halving
+
+**8.4 months**: halving time of compute for a fixed language-model loss, 2012 to 2023
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 3.1; 95% CI 4.5 to 14.3 months
+- defined in: `data/inputs/011-physical.toml#L549`
+
+<a id="phys-algo-halving-low"></a>
+### phys-algo-halving-low
+
+**4.5 months**: low end of the 95% CI for the algorithmic halving time
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/011-physical.toml#L559`
+
+<a id="phys-algo-halving-high"></a>
+### phys-algo-halving-high
+
+**14.3 months**: high end of the 95% CI for the algorithmic halving time
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/011-physical.toml#L568`
+
+<a id="phys-compute-share-low"></a>
+### phys-compute-share-low
+
+**60%**: low end of the share of language-model gains from compute scaling
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 4.1: 60-95% from compute, 5-40% from algorithms
+- defined in: `data/inputs/011-physical.toml#L577`
+
+<a id="phys-compute-share-high"></a>
+### phys-compute-share-high
+
+**95%**: high end of the share of language-model gains from compute scaling
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/011-physical.toml#L587`
+
+<a id="phys-frontier-explained-low"></a>
+### phys-frontier-explained-low
+
+**80%**: low end of frontier performance differences explained by training compute (809 models)
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2026
+- defined in: `data/inputs/011-physical.toml#L596`
+
+<a id="phys-frontier-explained-high"></a>
+### phys-frontier-explained-high
+
+**90%**: high end of frontier performance differences explained by training compute
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2026
+- defined in: `data/inputs/011-physical.toml#L605`
+
+<a id="phys-mertens-models"></a>
+### phys-mertens-models
+
+**809**: language models released 2022 to 2025 in Mertens et al.'s regressions
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2026
+- defined in: `data/inputs/011-physical.toml#L614`
+
+<a id="phys-algo-miri"></a>
+### phys-algo-miri
+
+**3**: yearly fall in training compute per capability assumed by MIRI's draft agreement
+
+- basis: assumption
+- source: [@scher2025agreement], 2025
+- note: p. 8: monitored cluster thresholds would have to fall by the same factor
+- defined in: `data/inputs/011-physical.toml#L623`
+
+<a id="phys-algo-total-ho"></a>
+### phys-algo-total-ho
+
+**22,000**: algorithmic efficiency factor 2012 to 2023 as Gundlach et al. state Ho et al.'s estimate
+
+- basis: modelled
+- source: [@gundlach2025origin], 2025
+- defined in: `data/inputs/011-physical.toml#L633`
+
+<a id="phys-algo-small-scale-max"></a>
+### phys-algo-small-scale-max
+
+**100**: upper bound on algorithmic efficiency gains 2012 to 2023 at low compute
+
+- basis: modelled
+- source: [@gundlach2025origin], 2025
+- note: 'less than 100x'; only the first factor under 10x comes from their ablations
+- defined in: `data/inputs/011-physical.toml#L642`
+
+<a id="phys-whitfill-bias"></a>
+### phys-whitfill-bias
+
+**9**: first-pass factor by which selection bias may overstate observational algorithmic progress
+
+- basis: modelled
+- source: [@whitfill2025selection], 2025
+- note: Sec. 1.3; the author lists many other possible explanations
+- defined in: `data/inputs/011-physical.toml#L652`
+
+<a id="phys-ord-train-small"></a>
+### phys-ord-train-small
+
+**1e+24 FLOP**: training compute of the smaller model in Ord's inference illustration
+
+- basis: modelled
+- source: [@ord2025govaireport], 2025-10
+- defined in: `data/inputs/011-physical.toml#L662`
+
+<a id="phys-ord-train-large"></a>
+### phys-ord-train-large
+
+**1e+27 FLOP**: training compute matched in Ord's inference illustration
+
+- basis: modelled
+- source: [@ord2025govaireport], 2025-10
+- defined in: `data/inputs/011-physical.toml#L671`
+
+<a id="phys-ord-inference-mult"></a>
+### phys-ord-inference-mult
+
+**10,000**: extra inference compute in Ord's illustration
+
+- basis: modelled
+- source: [@ord2025govaireport], 2025-10
+- note: an illustration, around p. 10, not a measured exchange rate
+- defined in: `data/inputs/011-physical.toml#L680`
+
+<a id="phys-chips-sold-2025"></a>
+### phys-chips-sold-2025
+
+**13,600,000 H100e**: AI compute sold in 2025, sum of Epoch's per-quarter median estimates
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- note: summed by the survey helper and rechecked in the spot-check; not a figure Epoch states
+- defined in: `data/inputs/011-physical.toml#L690`
+
+<a id="phys-chips-sold-2024"></a>
+### phys-chips-sold-2024
+
+**5,100,000 H100e**: AI compute sold in 2024, sum of Epoch's per-quarter median estimates
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2024
+- defined in: `data/inputs/011-physical.toml#L700`
+
+<a id="phys-chip-tdp-2025"></a>
+### phys-chip-tdp-2025
+
+**7.5 GW**: summed TDP of AI chips sold in 2025, chips only
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- defined in: `data/inputs/011-physical.toml#L709`
+
+<a id="phys-chips-unaccounted"></a>
+### phys-chips-unaccounted
+
+**1,000,000 chips**: AI chips not traced to an owner, order of magnitude (an approximate bound on the largest hidden cluster)
+
+- basis: assumption
+- source: [@koopmanschap2026gpu], 2026-06
+- note: Sec. 5.3.2: Epoch traced 15.7M of 20.2M chips, 'on the order of a million chips unaccounted for'
+- defined in: `data/inputs/011-physical.toml#L718`
+
+<a id="phys-smuggled-china"></a>
+### phys-smuggled-china
+
+**660,000 H100e**: cumulative AI compute smuggled into China through 2025, median
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025
+- note: 90% CI 290,000 to 1.6 million; about a third of China's compute
+- defined in: `data/inputs/011-physical.toml#L728`
+
+<a id="phys-smuggled-china-low"></a>
+### phys-smuggled-china-low
+
+**290,000 H100e**: low end of the 90% CI for compute smuggled into China through 2025
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025
+- defined in: `data/inputs/011-physical.toml#L738`
+
+<a id="phys-smuggled-china-high"></a>
+### phys-smuggled-china-high
+
+**1,600,000 H100e**: high end of the 90% CI for compute smuggled into China through 2025
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025
+- defined in: `data/inputs/011-physical.toml#L747`
+
+<a id="phys-diversion-detect-rate"></a>
+### phys-diversion-detect-rate
+
+**25%**: median share of chip diversion cases detected, in Epoch's smuggling model
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2026-04
+- defined in: `data/inputs/011-physical.toml#L756`
+
+<a id="phys-huawei-commerce"></a>
+### phys-huawei-commerce
+
+**200,000**: Huawei Ascend production capacity for 2025 per the US Commerce Department, at most
+
+- basis: vendor
+- source: [@zafar2025kessler], 2025-06
+- note: a government statement about a rival; units are capacity, not shipments
+- defined in: `data/inputs/011-physical.toml#L765`
+
+<a id="phys-huawei-semianalysis"></a>
+### phys-huawei-semianalysis
+
+**805,000**: Huawei Ascend units shipped in 2025 per SemiAnalysis
+
+- basis: modelled
+- source: [@patel2025ascend], 2025-09
+- defined in: `data/inputs/011-physical.toml#L775`
+
+<a id="phys-epoch-dc-sites"></a>
+### phys-epoch-dc-sites
+
+**96 sites**: AI data centres in Epoch's Frontier Data Centers database
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- defined in: `data/inputs/011-physical.toml#L784`
+
+<a id="phys-epoch-dc-it-power"></a>
+### phys-epoch-dc-it-power
+
+**15.1 GW**: IT power of the sites in Epoch's database
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- defined in: `data/inputs/011-physical.toml#L793`
+
+<a id="phys-epoch-dc-h100e"></a>
+### phys-epoch-dc-h100e
+
+**15,800,000 H100e**: compute of the sites in Epoch's database
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- defined in: `data/inputs/011-physical.toml#L802`
+
+<a id="phys-epoch-dc-coverage"></a>
+### phys-epoch-dc-coverage
+
+**43%**: share of global deployed AI compute covered by Epoch's database
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- note: 90% CI 29% to 77%
+- defined in: `data/inputs/011-physical.toml#L811`
+
+<a id="phys-epoch-dc-coverage-low"></a>
+### phys-epoch-dc-coverage-low
+
+**29%**: low end of the 90% CI for the database's coverage of global AI compute
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- defined in: `data/inputs/011-physical.toml#L821`
+
+<a id="phys-epoch-dc-coverage-high"></a>
+### phys-epoch-dc-coverage-high
+
+**77%**: high end of the 90% CI for the database's coverage of global AI compute
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- defined in: `data/inputs/011-physical.toml#L830`
+
+<a id="phys-sat-it-accuracy"></a>
+### phys-sat-it-accuracy
+
+**1.4**: factor within which a satellite-based IT power estimate falls 80% of the time
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- note: compute within 1.5x; the cooling model can be off by up to 2x either way
+- defined in: `data/inputs/011-physical.toml#L839`
+
+<a id="phys-sat-it-confidence"></a>
+### phys-sat-it-confidence
+
+**80%**: share of the time a satellite-based IT power estimate falls within its stated factor
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- defined in: `data/inputs/011-physical.toml#L849`
+
+<a id="phys-epoch-dc-small"></a>
+### phys-epoch-dc-small
+
+**43 sites**: sites in Epoch's database below 100 MW
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- note: the survey helper's count from data_centers.csv
+- defined in: `data/inputs/011-physical.toml#L858`
+
+<a id="phys-epoch-small-threshold"></a>
+### phys-epoch-small-threshold
+
+**100 MW**: size below which Epoch says sites are hard to find, used to count small sites
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-11
+- note: methodology: smaller sites '(<100 MW)' are hard to find
+- defined in: `data/inputs/011-physical.toml#L868`
+
+<a id="phys-colossus1-h100"></a>
+### phys-colossus1-h100
+
+**100,000**: H100s online at Colossus 1 on 2 September 2024
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2024-09
+- defined in: `data/inputs/011-physical.toml#L878`
+
+<a id="phys-colossus1-it-power"></a>
+### phys-colossus1-it-power
+
+**139 MW**: Colossus 1 IT power at 100,000 H100
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2024-09
+- note: timelines CSV; Epoch's estimate from imagery and disclosures
+- defined in: `data/inputs/011-physical.toml#L887`
+
+<a id="phys-colossus1-facility-power"></a>
+### phys-colossus1-facility-power
+
+**181 MW**: Colossus 1 facility power at 100,000 H100
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2024-09
+- note: timelines CSV
+- defined in: `data/inputs/011-physical.toml#L897`
+
+<a id="phys-colossus1-build-days"></a>
+### phys-colossus1-build-days
+
+**131 days**: days from construction start to 100,000 H100 online at Colossus 1
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2024-09
+- note: 24 April to 2 September 2024
+- defined in: `data/inputs/011-physical.toml#L907`
+
+<a id="phys-fairwater-gpt4-runs"></a>
+### phys-fairwater-gpt4-runs
+
+**23 runs a month**: GPT-4-scale training runs Microsoft's Fairwater Atlanta could do each month
+
+- basis: modelled
+- source: [@lee2025], 2025-12
+- note: GPT-4's compute and the utilisation assumed are not stated on the page
+- defined in: `data/inputs/011-physical.toml#L917`
+
+<a id="phys-supercomputer-power-growth"></a>
+### phys-supercomputer-power-growth
+
+**2.0**: yearly growth of the power needs of leading AI supercomputers, 2019 to 2025
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-04
+- note: 90% CI 1.6 to 2.2
+- defined in: `data/inputs/011-physical.toml#L927`
+
+<a id="phys-colossus-2025-power"></a>
+### phys-colossus-2025-power
+
+**300 MW**: power required by xAI's Colossus with 200,000 AI chips (March 2025)
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-03
+- defined in: `data/inputs/011-physical.toml#L937`
+
+<a id="phys-largest-run-2030-low"></a>
+### phys-largest-run-2030-low
+
+**4 GW**: low end of the projected power of the largest training runs in 2030
+
+- basis: modelled
+- source: [@you2025], 2025-08
+- defined in: `data/inputs/011-physical.toml#L946`
+
+<a id="phys-largest-run-2030-high"></a>
+### phys-largest-run-2030-high
+
+**16 GW**: high end of the projected power of the largest training runs in 2030
+
+- basis: modelled
+- source: [@you2025], 2025-08
+- defined in: `data/inputs/011-physical.toml#L955`
+
+<a id="phys-flop-per-param-token"></a>
+### phys-flop-per-param-token
+
+**2**: matmul operations per parameter per token in a decoder's forward pass
+
+- basis: modelled
+- source: [@pope2022], 2022-11
+- note: Sec. 2: 'An N-parameter decoder-only model requires 2N matmul FLOPs in the forward pass per token', citing Kaplan et al.; attention FLOPs excluded
+- defined in: `data/inputs/011-physical.toml#L967`
+
+<a id="phys-palm-params"></a>
+### phys-palm-params
+
+**540 billion parameters**: parameters of PaLM 540B, the dense model in Pope et al.'s inference study
+
+- basis: vendor
+- source: [@pope2022], 2022-11
+- note: the authors padded attention heads, adding 18B parameters, for partitioning
+- defined in: `data/inputs/011-physical.toml#L977`
+
+<a id="phys-pope-chips"></a>
+### phys-pope-chips
+
+**64**: TPU v4 chips serving PaLM 540B in the low-latency result
+
+- basis: vendor
+- source: [@pope2022], 2022-11
+- defined in: `data/inputs/011-physical.toml#L987`
+
+<a id="phys-pope-latency"></a>
+### phys-pope-latency
+
+**29 ms**: measured low-batch generation latency per token, PaLM 540B with int8 weights on 64 TPU v4
+
+- basis: vendor
+- source: [@pope2022], 2022-11
+- note: Google authors measuring Google hardware; not independently reproduced
+- defined in: `data/inputs/011-physical.toml#L996`
+
+<a id="phys-pope-mfu-prefill"></a>
+### phys-pope-mfu-prefill
+
+**76%**: model FLOPs utilisation Pope et al. reached for large-batch processing of input tokens
+
+- basis: vendor
+- source: [@pope2022], 2022-11
+- note: PaLM 540B on TPU v4; prefill, not generation
+- defined in: `data/inputs/011-physical.toml#L1006`
+
+<a id="phys-tpuv4-hbm-bw"></a>
+### phys-tpuv4-hbm-bw
+
+**1,200 GB/s**: TPU v4 memory bandwidth per chip
+
+- basis: vendor
+- source: [@pope2022], 2022-11
+- note: 32 GiB of HBM per chip; 270 GB/s interconnect
+- defined in: `data/inputs/011-physical.toml#L1016`
+
+<a id="phys-int8-bytes"></a>
+### phys-int8-bytes
+
+**1 bytes per weight**: storage of one int8-quantised weight
+
+- basis: spec
+- source: [@pope2022], 2022-11
+- defined in: `data/inputs/011-physical.toml#L1026`
+
+<a id="phys-util-ref"></a>
+### phys-util-ref
+
+**40%**: model FLOPs utilisation used for the reference calculations in this chapter
+
+- basis: assumption
+- note: inside INTELLECT-1's measured 36.2-41.4% MFU; below Pope et al.'s 76% for large-batch prefill
+- defined in: `data/inputs/011-physical.toml#L1035`
+
+<a id="phys-intellect1-mfu-low"></a>
+### phys-intellect1-mfu-low
+
+**36.2%**: low end of INTELLECT-1's model FLOPs utilisation across continents
+
+- basis: measured
+- source: [@jaghouar2024intellect1], 2024-12
+- defined in: `data/inputs/011-physical.toml#L1043`
+
+<a id="phys-intellect1-mfu-high"></a>
+### phys-intellect1-mfu-high
+
+**41.4%**: high end of INTELLECT-1's model FLOPs utilisation across continents
+
+- basis: measured
+- source: [@jaghouar2024intellect1], 2024-12
+- defined in: `data/inputs/011-physical.toml#L1052`
+
+<a id="phys-intellect1-params"></a>
+### phys-intellect1-params
+
+**10 billion parameters**: size of INTELLECT-1, trained across three continents
+
+- basis: measured
+- source: [@jaghouar2024intellect1], 2024-12
+- defined in: `data/inputs/011-physical.toml#L1061`
+
+<a id="phys-intellect1-gpus"></a>
+### phys-intellect1-gpus
+
+**112**: most H100s INTELLECT-1 used at once, across five countries
+
+- basis: measured
+- source: [@jaghouar2024intellect1], 2024-12
+- defined in: `data/inputs/011-physical.toml#L1070`
+
+<a id="phys-intellect1-sync"></a>
+### phys-intellect1-sync
+
+**38 minutes**: INTELLECT-1's local training time between all-reduce operations
+
+- basis: measured
+- source: [@jaghouar2024intellect1], 2024-12
+- defined in: `data/inputs/011-physical.toml#L1079`
+
+<a id="phys-intellect1-bw-low"></a>
+### phys-intellect1-bw-low
+
+**0.5 Gbit/s**: low end of INTELLECT-1's inter-node bandwidth
+
+- basis: measured
+- source: [@jaghouar2024intellect1], 2024-12
+- defined in: `data/inputs/011-physical.toml#L1088`
+
+<a id="phys-intellect1-bw-high"></a>
+### phys-intellect1-bw-high
+
+**4 Gbit/s**: high end of INTELLECT-1's inter-node bandwidth
+
+- basis: measured
+- source: [@jaghouar2024intellect1], 2024-12
+- defined in: `data/inputs/011-physical.toml#L1097`
+
+<a id="phys-consumer-lag-low"></a>
+### phys-consumer-lag-low
+
+**6 months**: low end of the lag before open models on one consumer GPU match the frontier
+
+- basis: measured
+- source: [@somala2025consumergpu], 2025-08
+- defined in: `data/inputs/011-physical.toml#L1106`
+
+<a id="phys-consumer-lag-high"></a>
+### phys-consumer-lag-high
+
+**12 months**: high end of the lag before open models on one consumer GPU match the frontier
+
+- basis: measured
+- source: [@somala2025consumergpu], 2025-08
+- defined in: `data/inputs/011-physical.toml#L1115`
+
+<a id="phys-gholami-flops-growth"></a>
+### phys-gholami-flops-growth
+
+**3.0**: growth of peak server FLOPS every two years over 20 years
+
+- basis: measured
+- source: [@gholami2024], 2024-03
+- note: abstract only
+- defined in: `data/inputs/011-physical.toml#L1127`
+
+<a id="phys-gholami-dram-growth"></a>
+### phys-gholami-dram-growth
+
+**1.6**: growth of DRAM bandwidth every two years over 20 years
+
+- basis: measured
+- source: [@gholami2024], 2024-03
+- note: abstract only
+- defined in: `data/inputs/011-physical.toml#L1137`
+
+<a id="phys-gholami-interconnect-growth"></a>
+### phys-gholami-interconnect-growth
+
+**1.4**: growth of interconnect bandwidth every two years over 20 years
+
+- basis: measured
+- source: [@gholami2024], 2024-03
+- note: abstract only
+- defined in: `data/inputs/011-physical.toml#L1147`
+
+<a id="phys-hobbhahn-mem-bw-doubling"></a>
+### phys-hobbhahn-mem-bw-doubling
+
+**4.1 years**: doubling time of ML accelerator memory bandwidth
+
+- basis: measured
+- source: [@hobbhahn2023], 2023-11
+- defined in: `data/inputs/011-physical.toml#L1157`
+
+<a id="phys-hobbhahn-flops-doubling"></a>
+### phys-hobbhahn-flops-doubling
+
+**2.3 years**: doubling time of ML accelerator FP32 FLOP/s
+
+- basis: measured
+- source: [@hobbhahn2023], 2023-11
+- defined in: `data/inputs/011-physical.toml#L1166`
+
+<a id="phys-diloco-comm-reduction"></a>
+### phys-diloco-comm-reduction
+
+**500**: communication reduction of DiLoCo on 8 workers at equal quality
+
+- basis: measured
+- source: [@douillard2023diloco], 2023-11
+- note: C4, models up to 400M parameters
+- defined in: `data/inputs/011-physical.toml#L1175`
+
+<a id="phys-streaming-bw-low"></a>
+### phys-streaming-bw-low
+
+**1 Gbit/s**: low end of the bandwidth at which Streaming DiLoCo keeps 95% utilisation for 1B to 100B models
+
+- basis: measured
+- source: [@douillard2025streaming], 2025-01
+- note: Figure 4; a simulation of compute utilisation
+- defined in: `data/inputs/011-physical.toml#L1185`
+
+<a id="phys-streaming-bw-high"></a>
+### phys-streaming-bw-high
+
+**5 Gbit/s**: high end of the bandwidth at which Streaming DiLoCo keeps 95% utilisation
+
+- basis: measured
+- source: [@douillard2025streaming], 2025-01
+- defined in: `data/inputs/011-physical.toml#L1195`
+
+<a id="phys-streaming-util"></a>
+### phys-streaming-util
+
+**95%**: compute utilisation Streaming DiLoCo reaches at 1 to 5 Gbit/s
+
+- basis: measured
+- source: [@douillard2025streaming], 2025-01
+- note: Figure 4
+- defined in: `data/inputs/011-physical.toml#L1204`
+
+<a id="phys-streaming-size-low"></a>
+### phys-streaming-size-low
+
+**1 billion parameters**: smallest model in Streaming DiLoCo's utilisation comparison
+
+- basis: measured
+- source: [@douillard2025streaming], 2025-01
+- defined in: `data/inputs/011-physical.toml#L1214`
+
+<a id="phys-streaming-size-high"></a>
+### phys-streaming-size-high
+
+**100 billion parameters**: largest model in Streaming DiLoCo's utilisation comparison
+
+- basis: measured
+- source: [@douillard2025streaming], 2025-01
+- defined in: `data/inputs/011-physical.toml#L1223`
+
+<a id="phys-dp-bw-low"></a>
+### phys-dp-bw-low
+
+**100 Gbit/s**: bandwidth data parallelism needs for 95% utilisation at 1B parameters
+
+- basis: measured
+- source: [@douillard2025streaming], 2025-01
+- note: Figure 4; 200 and 300 Gbit/s at 10B and 100B
+- defined in: `data/inputs/011-physical.toml#L1232`
+
+<a id="phys-dp-bw-high"></a>
+### phys-dp-bw-high
+
+**300 Gbit/s**: bandwidth data parallelism needs for 95% utilisation at 100B parameters
+
+- basis: measured
+- source: [@douillard2025streaming], 2025-01
+- defined in: `data/inputs/011-physical.toml#L1242`
+
+<a id="phys-decentral-growth"></a>
+### phys-decentral-growth
+
+**20**: yearly growth of decentralised training compute since 2020
+
+- basis: measured
+- source: [@sevilla2025decentralized], 2025-12
+- defined in: `data/inputs/011-physical.toml#L1251`
+
+<a id="phys-decentral-largest"></a>
+### phys-decentral-largest
+
+**6e+23 FLOP**: top of the range of the largest decentralised pretraining runs
+
+- basis: measured
+- source: [@sevilla2025decentralized], 2025-12
+- note: range 6e22 to 6e23 FLOP
+- defined in: `data/inputs/011-physical.toml#L1260`
+
+<a id="phys-decentral-gap"></a>
+### phys-decentral-gap
+
+**1,000**: factor by which the largest decentralised runs trail the largest training runs
+
+- basis: measured
+- source: [@sevilla2025decentralized], 2025-12
+- defined in: `data/inputs/011-physical.toml#L1270`
+
+<a id="phys-decentral-catchup"></a>
+### phys-decentral-catchup
+
+**5.5 years**: years for decentralised training to catch the frontier if both trends held
+
+- basis: modelled
+- source: [@sevilla2025decentralized], 2025-12
+- note: the author expects it will not happen this decade
+- defined in: `data/inputs/011-physical.toml#L1279`
+
+<a id="phys-consumer-upload"></a>
+### phys-consumer-upload
+
+**60 Mbit/s**: typical consumer upload bandwidth
+
+- basis: measured
+- source: [@sevilla2025decentralized], 2025-12
+- defined in: `data/inputs/011-physical.toml#L1289`
+
+<a id="phys-erdil-util-limit"></a>
+### phys-erdil-util-limit
+
+**1e+28 FLOP**: training run size above which data movement significantly lowers utilisation
+
+- basis: modelled
+- source: [@erdil2024datamovement], 2024-11
+- note: for a three-month run
+- defined in: `data/inputs/011-physical.toml#L1298`
+
+<a id="phys-erdil-hard-limit"></a>
+### phys-erdil-hard-limit
+
+**1e+31 FLOP**: training run size infeasible even at low utilisation
+
+- basis: modelled
+- source: [@erdil2024datamovement], 2024-11
+- defined in: `data/inputs/011-physical.toml#L1308`
+
+<a id="phys-rtx4090-interconnect"></a>
+### phys-rtx4090-interconnect
+
+**64 GB/s**: RTX 4090 interconnect bandwidth, as Shavit compares with the H100
+
+- basis: vendor
+- source: [@shavit2023chinchilla], 2023
+- note: Appendix A.2
+- defined in: `data/inputs/011-physical.toml#L1317`
+
+<a id="phys-rahman-gpus-per-node"></a>
+### phys-rahman-gpus-per-node
+
+**16**: GPUs per node in Rahman's minimum-cost configurations at 1e24 and 1e26 FLOP
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1330`
+
+<a id="phys-rahman-1e24-nodes"></a>
+### phys-rahman-1e24-nodes
+
+**2**: 16-H100 nodes in Rahman's minimum-cost configuration for 1e24 FLOP
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- note: Table 1; FP8; efficiency 0.80
+- defined in: `data/inputs/011-physical.toml#L1339`
+
+<a id="phys-rahman-1e24-cost"></a>
+### phys-rahman-1e24-cost
+
+**1.6 million USD**: hardware cost of Rahman's 1e24 FLOP distributed configuration
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1349`
+
+<a id="phys-rahman-1e25-target"></a>
+### phys-rahman-1e25-target
+
+**1e+25 FLOP**: local compute target of Rahman's middle distributed configuration
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1358`
+
+<a id="phys-rahman-1e25-nodes"></a>
+### phys-rahman-1e25-nodes
+
+**34 nodes**: 16-GH200 nodes in Rahman's configuration for 1e25 FLOP
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1367`
+
+<a id="phys-rahman-1e25-quality"></a>
+### phys-rahman-1e25-quality
+
+**6.4e+24 FLOP**: quality-adjusted compute of Rahman's 1e25 FLOP distributed configuration
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- note: efficiency 0.37
+- defined in: `data/inputs/011-physical.toml#L1376`
+
+<a id="phys-rahman-1e25-cost"></a>
+### phys-rahman-1e25-cost
+
+**30.7 million USD**: hardware cost of Rahman's 1e25 FLOP distributed configuration
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1386`
+
+<a id="phys-rahman-1e26-local"></a>
+### phys-rahman-1e26-local
+
+**1e+26 FLOP**: local compute of Rahman's largest distributed configuration
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1395`
+
+<a id="phys-rahman-1e26-nodes"></a>
+### phys-rahman-1e26-nodes
+
+**4,706 nodes**: 16-H100 nodes in Rahman's configuration for 1e26 FLOP of local compute
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1404`
+
+<a id="phys-rahman-1e26-quality"></a>
+### phys-rahman-1e26-quality
+
+**2.1e+25 FLOP**: quality-adjusted compute of Rahman's 1e26 FLOP local configuration
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1413`
+
+<a id="phys-rahman-1e26-cost"></a>
+### phys-rahman-1e26-cost
+
+**3.80 billion USD**: hardware cost of Rahman's 1e26 FLOP distributed configuration
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1422`
+
+<a id="phys-rahman-bandwidth"></a>
+### phys-rahman-bandwidth
+
+**100 Mbit/s**: link bandwidth in Rahman's distributed configurations
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1431`
+
+<a id="phys-rahman-cost-ratio"></a>
+### phys-rahman-cost-ratio
+
+**3**: cost of distributed training at 100 Mbps relative to centralised
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- defined in: `data/inputs/011-physical.toml#L1440`
+
+<a id="phys-rahman-run-now"></a>
+### phys-rahman-run-now
+
+**4.5 months**: longest sensible training run today, T = 1/(gH + gS + gI)
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- note: Eq. 4; set by hardware, software and investment growth
+- defined in: `data/inputs/011-physical.toml#L1449`
+
+<a id="phys-rahman-run-pause"></a>
+### phys-rahman-run-pause
+
+**24 months**: longest sensible training run under the growth rates assumed for a pause
+
+- basis: modelled
+- source: [@rahman2026], 2026-05
+- note: 'up to about two years'
+- defined in: `data/inputs/011-physical.toml#L1459`
+
+<a id="phys-miri-cluster-cap"></a>
+### phys-miri-cluster-cap
+
+**16 H100e**: largest chip concentration MIRI's draft agreement allows outside monitored facilities
+
+- basis: design
+- source: [@scher2025agreement], 2025
+- note: p. 28: may need to fall to 8
+- defined in: `data/inputs/011-physical.toml#L1469`
+
+<a id="phys-miri-strict"></a>
+### phys-miri-strict
+
+**1e+24 FLOP**: MIRI's prohibited training threshold (Strict Threshold)
+
+- basis: design
+- source: [@scher2025agreement], 2025
+- defined in: `data/inputs/011-physical.toml#L1479`
+
+<a id="phys-miri-monitored"></a>
+### phys-miri-monitored
+
+**1e+22 FLOP**: MIRI's monitored training threshold
+
+- basis: design
+- source: [@scher2025agreement], 2025
+- defined in: `data/inputs/011-physical.toml#L1488`
+
+<a id="phys-e8-c-high"></a>
+### phys-e8-c-high
+
+**1e+27 FLOP**: top of the training compute range E8 sweeps
+
+- basis: design
+- defined in: `data/inputs/011-physical.toml#L1500`
+
+<a id="phys-sat-reliable"></a>
+### phys-sat-reliable
+
+**10 MW**: facility power above which a satellite classifier found every facility in its sample
+
+- basis: measured
+- source: [@koopmanschap2026gpu], 2026-06
+- note: App. B, Clymer's classifier as reported; a small sample
+- defined in: `data/inputs/011-physical.toml#L1507`
+
+<a id="phys-sat-miss-max"></a>
+### phys-sat-miss-max
+
+**3.2 MW**: largest facility the satellite classifier missed
+
+- basis: measured
+- source: [@koopmanschap2026gpu], 2026-06
+- note: misses at 1.2, 0.5, 3.2 and 0.5 MW
+- defined in: `data/inputs/011-physical.toml#L1517`
+
+<a id="phys-container-cluster"></a>
+### phys-container-cluster
+
+**100 H100e**: cluster that fits in a 12-metre container with no noticeable external cooling
+
+- basis: assumption
+- source: [@koopmanschap2026gpu], 2026-06
+- defined in: `data/inputs/011-physical.toml#L1527`
+
+<a id="phys-commercial-load"></a>
+### phys-commercial-load
+
+**100 kW**: load that sits among millions of mid-size commercial customers
+
+- basis: assumption
+- source: [@koopmanschap2026gpu], 2026-06
+- defined in: `data/inputs/011-physical.toml#L1536`
+
+<a id="phys-scher-5000-h100"></a>
+### phys-scher-5000-h100
+
+**6 MW**: power of a data centre with 5,000 H100s in Scher and Thiergart's appendix
+
+- basis: assumption
+- source: [@scher2025], 2024-11
+- note: 'similar to ~5,500 U.S. homes'
+- defined in: `data/inputs/011-physical.toml#L1545`
+
+<a id="phys-scher-h100-count"></a>
+### phys-scher-h100-count
+
+**5,000 H100**: H100s in Scher and Thiergart's example data centre
+
+- basis: assumption
+- source: [@scher2025], 2024-11
+- defined in: `data/inputs/011-physical.toml#L1555`
+
+<a id="phys-sastry-dgx-kw"></a>
+### phys-sastry-dgx-kw
+
+**10.2 kW**: power of an eight-chip DGX H100 as Sastry et al. give it
+
+- basis: vendor
+- source: [@sastry2024compute], 2024-02
+- note: note 36
+- defined in: `data/inputs/011-physical.toml#L1564`
+
+<a id="phys-sastry-dgx-chips"></a>
+### phys-sastry-dgx-chips
+
+**8 chips**: chips in the DGX whose power Sastry et al. quote
+
+- basis: vendor
+- source: [@sastry2024compute], 2024-02
+- defined in: `data/inputs/011-physical.toml#L1574`
+
+<a id="phys-jing-cluster-power"></a>
+### phys-jing-cluster-power
+
+**126 MW**: lower bound on the electricity draw of the Tokyo data-centre cluster studied from orbit
+
+- basis: measured
+- source: [@jing2026], 2023
+- note: FY2023
+- defined in: `data/inputs/011-physical.toml#L1583`
+
+<a id="phys-jing-night-low"></a>
+### phys-jing-night-low
+
+**0.6 °C**: low end of the bound on deep-night facility-scale surface temperature change
+
+- basis: measured
+- source: [@jing2026], 2026-11
+- note: changes 'indistinguishable from zero'
+- defined in: `data/inputs/011-physical.toml#L1593`
+
+<a id="phys-jing-night-high"></a>
+### phys-jing-night-high
+
+**1.2 °C**: high end of the bound on deep-night facility-scale surface temperature change
+
+- basis: measured
+- source: [@jing2026], 2026-11
+- defined in: `data/inputs/011-physical.toml#L1603`
+
+<a id="phys-utility-study"></a>
+### phys-utility-study
+
+**5 MW**: load at which a US utility requires a system impact study
+
+- basis: spec
+- source: [@mlgw2025], 2025-05
+- note: MLGW and TVA under FERC rules; on-site generation behind the meter is outside it
+- defined in: `data/inputs/011-physical.toml#L1612`
+
+<a id="phys-ercot-queue"></a>
+### phys-ercot-queue
+
+**410 GW**: large loads seeking interconnection in Texas, about 87% data centres
+
+- basis: measured
+- source: [@ercot2026], 2026-03
+- defined in: `data/inputs/011-physical.toml#L1622`
+
+<a id="phys-dc-above-10mw"></a>
+### phys-dc-above-10mw
+
+**500 sites**: data centres above 10 MW worldwide, estimate
+
+- basis: modelled
+- source: [@pilz2023], 2023-11
+- note: abstract: 'likely about 500'
+- defined in: `data/inputs/011-physical.toml#L1631`
+
+<a id="phys-water-new-carlisle"></a>
+### phys-water-new-carlisle
+
+**21.0 million gallons a day**: water use of the New Carlisle site at 1,244 MW facility power
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-10
+- defined in: `data/inputs/011-physical.toml#L1641`
+
+<a id="phys-water-fairwater-wi"></a>
+### phys-water-fairwater-wi
+
+**0.0077 million gallons a day**: water use of the closed-loop Fairwater Wisconsin site at 442 MW
+
+- basis: measured
+- source: [@epoch-datacenters-2026], 2026-04
+- defined in: `data/inputs/011-physical.toml#L1650`
+
+<a id="phys-meter-detect"></a>
+### phys-meter-detect
+
+**96%**: share of undisguised training runs a facility power tracker detects at 1% false alarms (simulated power)
+
+- basis: measured
+- source: [@kimpson2026dcpower], 2026-10
+- note: meter at 2 Hz or faster; simulated facility power
+- defined in: `data/inputs/011-physical.toml#L1659`
+
+<a id="phys-meter-day-detect"></a>
+### phys-meter-day-detect
+
+**87%**: share of runs using the strongest disguise still caught over a day (simulated power)
+
+- basis: measured
+- source: [@kimpson2026dcpower], 2026-10
+- defined in: `data/inputs/011-physical.toml#L1669`
+
+<a id="phys-meter-evasion-cost-low"></a>
+### phys-meter-evasion-cost-low
+
+**93%**: low end of the extra compute the strongest disguise costs in small-scale training
+
+- basis: measured
+- source: [@kimpson2026dcpower], 2026-10
+- defined in: `data/inputs/011-physical.toml#L1678`
+
+<a id="phys-meter-evasion-cost-high"></a>
+### phys-meter-evasion-cost-high
+
+**267%**: high end of the extra compute the strongest disguise costs in small-scale training
+
+- basis: measured
+- source: [@kimpson2026dcpower], 2026-10
+- defined in: `data/inputs/011-physical.toml#L1687`
+
+<a id="phys-beta-worst"></a>
+### phys-beta-worst
+
+**1.16**: largest hidden computation a power trace cannot exclude, worst case, as a fraction of declared capacity (A100)
+
+- basis: measured
+- source: [@kimpson2026b], 2026-11
+- note: abstract only
+- defined in: `data/inputs/011-physical.toml#L1696`
+
+<a id="phys-beta-matched"></a>
+### phys-beta-matched
+
+**0.41**: hidden computation an adversarial matched-energy schedule keeps, fraction of declared capacity
+
+- basis: measured
+- source: [@kimpson2026b], 2026-11
+- note: 'hides at least 0.41'
+- defined in: `data/inputs/011-physical.toml#L1706`
+
+<a id="phys-beta-restricted"></a>
+### phys-beta-restricted
+
+**0.059**: hidden fraction with re-execution of declared work, maximally restricted case
+
+- basis: measured
+- source: [@kimpson2026b], 2026-11
+- defined in: `data/inputs/011-physical.toml#L1716`
+
+<a id="phys-supply-current-detect"></a>
+### phys-supply-current-detect
+
+**99.9%**: share of prohibited-training windows flagged from GPU supply current against a declared baseline
+
+- basis: measured
+- source: [@kimpson2026supply], 2026-11
+- note: fails silently if the baseline recording is corrupt
+- defined in: `data/inputs/011-physical.toml#L1725`
+
+<a id="phys-sidechannel-accuracy"></a>
+### phys-sidechannel-accuracy
+
+**97%**: accuracy separating training, inference and non-AI work from an H200's power draw
+
+- basis: measured
+- source: [@gargiulo2026sidechannel], 2026
+- defined in: `data/inputs/011-physical.toml#L1735`
+
+<a id="phys-shavit-inspectors"></a>
+### phys-shavit-inspectors
+
+**232 inspectors**: inspectors to catch a 1e25 FLOP run within 30 days with probability 0.9 by chip sampling
+
+- basis: modelled
+- source: [@shavit2023chinchilla], 2023
+- note: footnote 5: 10^7 chips at 3x H100 throughput, 1,000 chips per inspector-year; assumes every chip has the firmware
+- defined in: `data/inputs/011-physical.toml#L1744`
+
+<a id="phys-shavit-run"></a>
+### phys-shavit-run
+
+**1e+25 FLOP**: training run size in Shavit's worldwide chip-sampling estimate
+
+- basis: modelled
+- source: [@shavit2023chinchilla], 2023
+- defined in: `data/inputs/011-physical.toml#L1754`
+
+<a id="phys-shavit-days"></a>
+### phys-shavit-days
+
+**30 days**: time after a run's completion within which Shavit's sampling estimate catches it
+
+- basis: modelled
+- source: [@shavit2023chinchilla], 2023
+- defined in: `data/inputs/011-physical.toml#L1763`
+
+<a id="phys-shavit-prob"></a>
+### phys-shavit-prob
+
+**0.9**: probability of catching the run in Shavit's sampling estimate
+
+- basis: modelled
+- source: [@shavit2023chinchilla], 2023
+- defined in: `data/inputs/011-physical.toml#L1772`
+
+<a id="phys-meter-false-alarm"></a>
+### phys-meter-false-alarm
+
+**1%**: false-alarm rate at which the facility power tracker's detection rate is quoted
+
+- basis: measured
+- source: [@kimpson2026dcpower], 2026-10
+- defined in: `data/inputs/011-physical.toml#L1781`
+
+<a id="phys-china-solar-2025"></a>
+### phys-china-solar-2025
+
+**315 GW**: solar capacity China added in 2025 (AC)
+
+- basis: measured
+- source: [@shaw2026chinasolar], 2025
+- defined in: `data/inputs/011-physical.toml#L1790`
+
+<a id="phys-china-wind-2025"></a>
+### phys-china-wind-2025
+
+**119 GW**: wind capacity China added in 2025
+
+- basis: measured
+- source: [@shaw2026chinasolar], 2025
+- defined in: `data/inputs/011-physical.toml#L1799`
+
+<a id="phys-us-interconnect-months"></a>
+### phys-us-interconnect-months
+
+**61 months**: median time from interconnection request to operation, US power projects built in 2025
+
+- basis: measured
+- source: [@rand2026queued], 2025
+- defined in: `data/inputs/011-physical.toml#L1808`
+
+<a id="phys-horinger-relative"></a>
+### phys-horinger-relative
+
+**40%**: compute per unit of power at Huawei's Horinger site relative to leading US sites
+
+- basis: modelled
+- source: [@cottier2026horinger], 2026-11
+- defined in: `data/inputs/011-physical.toml#L1817`
+
+<a id="phys-halstead-10mw-3y"></a>
+### phys-halstead-10mw-3y
+
+**20%**: chance a single covert 10 MW site is detected by year 3 (intuition-based)
+
+- basis: assumption
+- source: [@halstead-ai2040]
+- defined in: `data/inputs/011-physical.toml#L1826`
+
+<a id="phys-halstead-1gw-3y"></a>
+### phys-halstead-1gw-3y
+
+**40%**: chance a single covert 1,000 MW site is detected by year 3 (intuition-based)
+
+- basis: assumption
+- source: [@halstead-ai2040]
+- defined in: `data/inputs/011-physical.toml#L1834`
+
+<a id="comp-kaplan-n-opt-exp"></a>
+### comp-kaplan-n-opt-exp
+
+**0.73**: exponent of compute-optimal model size on training compute in Kaplan et al. (N_opt proportional to C^x)
+
+- basis: measured
+- source: [@kaplan2020scaling], 2020
+- note: Eq. 6.1 and Table 6; overturned by the Chinchilla allocation
+- defined in: `data/inputs/012-computational.toml#L9`
+
+<a id="comp-chinchilla-hoffmann-a"></a>
+### comp-chinchilla-hoffmann-a
+
+**0.45**: exponent of compute-optimal model size on compute from Hoffmann et al.'s Approach 3 fit
+
+- basis: measured
+- source: [@besiroglu2024replication], 2024
+- note: Hoffmann et al.'s value as reported in the replication's Table 1
+- defined in: `data/inputs/012-computational.toml#L19`
+
+<a id="comp-chinchilla-refit-a"></a>
+### comp-chinchilla-refit-a
+
+**0.51**: exponent of compute-optimal model size on compute in the Chinchilla replication refit
+
+- basis: measured
+- source: [@besiroglu2024replication], 2024
+- note: Table 1, bootstrap SE 0.02, 240 points
+- defined in: `data/inputs/012-computational.toml#L29`
+
+<a id="comp-chinchilla-tokens-per-param"></a>
+### comp-chinchilla-tokens-per-param
+
+**20 tokens per parameter**: compute-optimal training tokens per parameter in the Chinchilla replication refit
+
+- basis: measured
+- source: [@besiroglu2024replication], 2024
+- note: Table 1 discussion; about 25.6 with outliers kept (Table 3)
+- defined in: `data/inputs/012-computational.toml#L39`
+
+<a id="comp-hoffmann-tokens-per-param"></a>
+### comp-hoffmann-tokens-per-param
+
+**70 tokens per parameter**: tokens per parameter implied by Hoffmann et al.'s Approach 3 fit
+
+- basis: measured
+- source: [@besiroglu2024replication], 2024
+- note: the replication's reading of the original fit (about 70)
+- defined in: `data/inputs/012-computational.toml#L49`
+
+<a id="comp-chinchilla-ci-experiments"></a>
+### comp-chinchilla-ci-experiments
+
+**600,000 experiments**: experiments that Hoffmann et al.'s reported confidence intervals would require
+
+- basis: measured
+- source: [@besiroglu2024replication], 2024
+- note: abstract; the original likely ran under 500
+- defined in: `data/inputs/012-computational.toml#L59`
+
+<a id="comp-owen-oom-span"></a>
+### comp-owen-oom-span
+
+**5 OOM**: orders of magnitude of training compute spanned in Owen's predictability study
+
+- basis: measured
+- source: [@owen2024predictable], 2024
+- note: abstract: eleven architectures
+- defined in: `data/inputs/012-computational.toml#L69`
+
+<a id="comp-bbh-mae-1oom"></a>
+### comp-bbh-mae-1oom
+
+**6 pp**: mean absolute error extrapolating BIG-Bench Hard average performance one order of magnitude in compute
+
+- basis: measured
+- source: [@owen2024predictable], 2024
+- note: abstract, about 6 percentage points
+- defined in: `data/inputs/012-computational.toml#L79`
+
+<a id="comp-task-mae-1oom"></a>
+### comp-task-mae-1oom
+
+**18 pp**: mean absolute error extrapolating a single BIG-Bench task one order of magnitude in compute
+
+- basis: measured
+- source: [@owen2024predictable], 2024
+- note: abstract, about 18 percentage points, still better than chance
+- defined in: `data/inputs/012-computational.toml#L89`
+
+<a id="comp-observational-models"></a>
+### comp-observational-models
+
+**100 models**: public models in the observational scaling fit (about)
+
+- basis: measured
+- source: [@ruan2024observational], 2024
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L99`
+
+<a id="comp-emergence-two-metric-share"></a>
+### comp-emergence-two-metric-share
+
+**92%**: share of claimed BIG-Bench emergent abilities that two discontinuous metrics account for (lower bound)
+
+- basis: measured
+- source: [@schaeffer2023mirage], 2023
+- note: Sec. 4: Multiple Choice Grade and Exact String Match account for over 92%
+- defined in: `data/inputs/012-computational.toml#L109`
+
+<a id="comp-emergence-ahead"></a>
+### comp-emergence-ahead
+
+**4**: multiple of training compute ahead at which fine-tuned small models predicted emergence, in some cases
+
+- basis: measured
+- source: [@snell2024emergence], 2024
+- note: abstract: MMLU, GSM8K, CommonsenseQA, CoLA
+- defined in: `data/inputs/012-computational.toml#L119`
+
+<a id="comp-rsp-cadence"></a>
+### comp-rsp-cadence
+
+**4**: multiple of effective compute between capability evaluations in one lab's scaling policy
+
+- basis: vendor
+- source: [@anthropic2026rsp], 2024-10
+- note: v2.0 changelog: evaluation cadence of 4x effective compute or six months of accumulated post-training enhancements
+- defined in: `data/inputs/012-computational.toml#L129`
+
+<a id="comp-rosetta-k"></a>
+### comp-rosetta-k
+
+**0.168**: slope of stitched capability on the natural log of training FLOP (Rosetta units per ln FLOP)
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2, Eq. 2; read as natural log because it reproduces the paper's own 6x a year (see comp-rosetta-implied-algo)
+- defined in: `data/inputs/012-computational.toml#L139`
+
+<a id="comp-rosetta-frontier-growth"></a>
+### comp-rosetta-frontier-growth
+
+**0.55 units/yr**: growth of frontier capability on the Rosetta scale
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.1, 95% CI 0.45 to 0.67
+- defined in: `data/inputs/012-computational.toml#L149`
+
+<a id="comp-rosetta-frontier-growth-lo"></a>
+### comp-rosetta-frontier-growth-lo
+
+**0.45 units/yr**: growth of frontier capability on the Rosetta scale, lower end of 95% CI
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.1
+- defined in: `data/inputs/012-computational.toml#L159`
+
+<a id="comp-rosetta-frontier-growth-hi"></a>
+### comp-rosetta-frontier-growth-hi
+
+**0.67 units/yr**: growth of frontier capability on the Rosetta scale, upper end of 95% CI
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.1
+- defined in: `data/inputs/012-computational.toml#L169`
+
+<a id="comp-rosetta-fixed-growth"></a>
+### comp-rosetta-fixed-growth
+
+**0.3 units/yr**: growth of capability at fixed training compute on the Rosetta scale
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2, range 0.1 to 0.5 across model families
+- defined in: `data/inputs/012-computational.toml#L179`
+
+<a id="comp-rosetta-fixed-growth-lo"></a>
+### comp-rosetta-fixed-growth-lo
+
+**0.1 units/yr**: growth of capability at fixed compute, Rosetta scale, low end across families
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2
+- defined in: `data/inputs/012-computational.toml#L189`
+
+<a id="comp-rosetta-fixed-growth-hi"></a>
+### comp-rosetta-fixed-growth-hi
+
+**0.5 units/yr**: growth of capability at fixed compute, Rosetta scale, high end across families
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2
+- defined in: `data/inputs/012-computational.toml#L199`
+
+<a id="comp-rosetta-algo"></a>
+### comp-rosetta-algo
+
+**6**: algorithmic efficiency gain a year implied by the Rosetta fit (multiplier)
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2, range 1x to 50x across three LLaMA families
+- defined in: `data/inputs/012-computational.toml#L209`
+
+<a id="comp-rosetta-algo-lo"></a>
+### comp-rosetta-algo-lo
+
+**1**: algorithmic efficiency gain a year, Rosetta fit, low end across families (multiplier)
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2
+- defined in: `data/inputs/012-computational.toml#L219`
+
+<a id="comp-rosetta-algo-hi"></a>
+### comp-rosetta-algo-hi
+
+**50**: algorithmic efficiency gain a year, Rosetta fit, high end across families (multiplier)
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2
+- defined in: `data/inputs/012-computational.toml#L229`
+
+<a id="comp-rosetta-algo-frontier"></a>
+### comp-rosetta-algo-frontier
+
+**9**: algorithmic efficiency gain a year at the frontier of algorithmic quality, Rosetta fit (multiplier)
+
+- basis: measured
+- source: [@ho2025rosetta], 2025
+- note: Sec. 3.2.2, range 3x to 40x
+- defined in: `data/inputs/012-computational.toml#L239`
+
+<a id="comp-frontier-compute-growth"></a>
+### comp-frontier-compute-growth
+
+**5**: growth a year of training compute for frontier language models since 2020 (multiplier)
+
+- basis: measured
+- source: [@epoch2026trends], 2026-11
+- note: 90% CI 4x to 6x
+- defined in: `data/inputs/012-computational.toml#L249`
+
+<a id="comp-frontier-compute-growth-lo"></a>
+### comp-frontier-compute-growth-lo
+
+**4**: growth a year of frontier training compute, lower end of 90% CI (multiplier)
+
+- basis: measured
+- source: [@epoch2026trends], 2026-11
+- defined in: `data/inputs/012-computational.toml#L259`
+
+<a id="comp-frontier-compute-growth-hi"></a>
+### comp-frontier-compute-growth-hi
+
+**6**: growth a year of frontier training compute, upper end of 90% CI (multiplier)
+
+- basis: measured
+- source: [@epoch2026trends], 2026-11
+- defined in: `data/inputs/012-computational.toml#L268`
+
+<a id="comp-ho-compute-share-lo"></a>
+### comp-ho-compute-share-lo
+
+**60%**: share of language-model performance gains 2012 to 2023 from compute scaling, low end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 4.1, 60 to 95%
+- defined in: `data/inputs/012-computational.toml#L277`
+
+<a id="comp-ho-compute-share-hi"></a>
+### comp-ho-compute-share-hi
+
+**95%**: share of language-model performance gains 2012 to 2023 from compute scaling, high end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 4.1
+- defined in: `data/inputs/012-computational.toml#L287`
+
+<a id="comp-mertens-models"></a>
+### comp-mertens-models
+
+**809 models**: language models released 2022 to 2025 in the secret-sauce regressions
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2026
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L297`
+
+<a id="comp-mertens-frontier-share-lo"></a>
+### comp-mertens-frontier-share-lo
+
+**80%**: share of frontier performance differences explained by training compute, low end
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2026
+- note: abstract, 80 to 90%
+- defined in: `data/inputs/012-computational.toml#L307`
+
+<a id="comp-mertens-frontier-share-hi"></a>
+### comp-mertens-frontier-share-hi
+
+**90%**: share of frontier performance differences explained by training compute, high end
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2026
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L317`
+
+<a id="comp-mertens-firm-spread"></a>
+### comp-mertens-firm-spread
+
+**40**: compute-efficiency difference within one firm (multiplier, lower bound)
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2026
+- note: abstract: more than 40x
+- defined in: `data/inputs/012-computational.toml#L327`
+
+<a id="comp-sardana-tokens-per-param"></a>
+### comp-sardana-tokens-per-param
+
+**10,000 tokens per parameter**: training tokens per parameter at which quality was still improving
+
+- basis: measured
+- source: [@sardana2024beyondchinchilla], 2024
+- note: abstract, 47 models
+- defined in: `data/inputs/012-computational.toml#L337`
+
+<a id="comp-hex-test-saved"></a>
+### comp-hex-test-saved
+
+**15**: test-time compute eliminated for each 10x of train-time compute, AlphaZero on Hex (multiplier)
+
+- basis: measured
+- source: [@jones2021boardgames], 2021
+- note: Sec. IV-C, Fig. 9: linear in log-compute
+- defined in: `data/inputs/012-computational.toml#L350`
+
+<a id="comp-hex-perfect-play-growth"></a>
+### comp-hex-perfect-play-growth
+
+**7**: growth of minimum compute for perfect play per board-size increment, Hex (multiplier)
+
+- basis: measured
+- source: [@jones2021boardgames], 2021
+- note: Sec. IV-A, Table III
+- defined in: `data/inputs/012-computational.toml#L360`
+
+<a id="comp-tradeoff-typical-oom"></a>
+### comp-tradeoff-typical-oom
+
+**1 OOM**: compute saved per technique in training or inference, for somewhat more than this of the other
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- note: summary of the post
+- defined in: `data/inputs/012-computational.toml#L370`
+
+<a id="comp-span-mcts-train"></a>
+### comp-span-mcts-train
+
+**1.6 OOM**: span of training compute over which Monte Carlo tree search trades against inference
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- note: 1.6 OOM training against 1.6 OOM inference; the span shrinks to zero near perfect play
+- defined in: `data/inputs/012-computational.toml#L380`
+
+<a id="comp-span-mcts-inf"></a>
+### comp-span-mcts-inf
+
+**1.6 OOM**: span of inference compute traded by Monte Carlo tree search
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- defined in: `data/inputs/012-computational.toml#L390`
+
+<a id="comp-span-cheapver-train"></a>
+### comp-span-cheapver-train
+
+**3 OOM**: span of training compute traded by repeated sampling with cheap verification
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- note: extrapolated, low confidence; the span grows with scale
+- defined in: `data/inputs/012-computational.toml#L399`
+
+<a id="comp-span-cheapver-inf"></a>
+### comp-span-cheapver-inf
+
+**6 OOM**: span of inference compute traded by repeated sampling with cheap verification
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- note: extrapolated, low confidence
+- defined in: `data/inputs/012-computational.toml#L409`
+
+<a id="comp-span-expver-train"></a>
+### comp-span-expver-train
+
+**1 OOM**: span of training compute traded by repeated sampling with expensive verification
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- defined in: `data/inputs/012-computational.toml#L419`
+
+<a id="comp-span-expver-inf"></a>
+### comp-span-expver-inf
+
+**1.45 OOM**: span of inference compute traded by repeated sampling with expensive verification
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- defined in: `data/inputs/012-computational.toml#L428`
+
+<a id="comp-span-policy-train"></a>
+### comp-span-policy-train
+
+**1.2 OOM**: span of training compute for scaling the policy (cannot save training)
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- note: 1.2 OOM training against 0.7 OOM inference
+- defined in: `data/inputs/012-computational.toml#L437`
+
+<a id="comp-span-policy-inf"></a>
+### comp-span-policy-inf
+
+**0.7 OOM**: span of inference compute for scaling the policy
+
+- basis: measured
+- source: [@villalobos2023tradeoff], 2023-07
+- defined in: `data/inputs/012-computational.toml#L447`
+
+<a id="comp-snell-vs-bestofn"></a>
+### comp-snell-vs-bestofn
+
+**4**: efficiency of compute-optimal test-time scaling over best-of-N (multiplier, lower bound)
+
+- basis: measured
+- source: [@snell2024testtime], 2024
+- note: abstract: more than 4x
+- defined in: `data/inputs/012-computational.toml#L456`
+
+<a id="comp-snell-larger-model"></a>
+### comp-snell-larger-model
+
+**14**: size multiple of the larger model a smaller one outperformed with test-time compute, FLOPs matched
+
+- basis: measured
+- source: [@snell2024testtime], 2024
+- note: abstract: where the small model's success rate is somewhat non-trivial
+- defined in: `data/inputs/012-computational.toml#L466`
+
+<a id="comp-snell-r-low"></a>
+### comp-snell-r-low
+
+**0.16**: inference-to-pretraining token ratio at which test-time compute wins
+
+- basis: measured
+- source: [@snell2024testtime], 2024
+- note: Sec. 7
+- defined in: `data/inputs/012-computational.toml#L476`
+
+<a id="comp-snell-r-high"></a>
+### comp-snell-r-high
+
+**22**: inference-to-pretraining token ratio at which pretraining often wins
+
+- basis: measured
+- source: [@snell2024testtime], 2024
+- note: Sec. 7
+- defined in: `data/inputs/012-computational.toml#L486`
+
+<a id="comp-monkeys-pass1"></a>
+### comp-monkeys-pass1
+
+**15.9%**: SWE-bench Lite solved with one sample
+
+- basis: measured
+- source: [@brown2024monkeys], 2024
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L496`
+
+<a id="comp-monkeys-pass250"></a>
+### comp-monkeys-pass250
+
+**56%**: SWE-bench Lite solved with 250 samples
+
+- basis: measured
+- source: [@brown2024monkeys], 2024
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L506`
+
+<a id="comp-monkeys-samples"></a>
+### comp-monkeys-samples
+
+**250 samples**: samples drawn in the SWE-bench Lite repeated-sampling result
+
+- basis: measured
+- source: [@brown2024monkeys], 2024
+- defined in: `data/inputs/012-computational.toml#L516`
+
+<a id="comp-monkeys-sota"></a>
+### comp-monkeys-sota
+
+**43%**: single-sample state of the art on SWE-bench Lite at the time
+
+- basis: measured
+- source: [@brown2024monkeys], 2024
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L525`
+
+<a id="comp-monkeys-oom"></a>
+### comp-monkeys-oom
+
+**4 OOM**: orders of magnitude of samples over which coverage keeps scaling
+
+- basis: measured
+- source: [@brown2024monkeys], 2024
+- note: abstract: often log-linear; voting and reward models plateau beyond several hundred samples
+- defined in: `data/inputs/012-computational.toml#L535`
+
+<a id="comp-o1-pass1"></a>
+### comp-o1-pass1
+
+**74%**: o1 on AIME 2024 with one sample
+
+- basis: vendor
+- source: [@openai2024o1], 2024-09
+- defined in: `data/inputs/012-computational.toml#L545`
+
+<a id="comp-o1-cons64"></a>
+### comp-o1-cons64
+
+**83%**: o1 on AIME 2024 with consensus over 64 samples
+
+- basis: vendor
+- source: [@openai2024o1], 2024-09
+- defined in: `data/inputs/012-computational.toml#L554`
+
+<a id="comp-o1-rerank"></a>
+### comp-o1-rerank
+
+**93%**: o1 on AIME 2024 re-ranking 1,000 samples
+
+- basis: vendor
+- source: [@openai2024o1], 2024-09
+- defined in: `data/inputs/012-computational.toml#L563`
+
+<a id="comp-o3-extra-oom"></a>
+### comp-o3-extra-oom
+
+**1 OOM**: additional training compute and inference reasoning in o3 over o1
+
+- basis: vendor
+- source: [@openai2025o3], 2025-04
+- defined in: `data/inputs/012-computational.toml#L572`
+
+<a id="comp-ord-inf-step"></a>
+### comp-ord-inf-step
+
+**10**: inference multiple in Ord's summary of trade-off work (multiplier)
+
+- basis: assumption
+- source: [@ord2025govaireport], 2025-10
+- note: footnote 6: 10x inference on the task can match 3x to 10x pre-training
+- defined in: `data/inputs/012-computational.toml#L581`
+
+<a id="comp-ord-pretrain-lo"></a>
+### comp-ord-pretrain-lo
+
+**3**: pre-training multiple matched by 10x inference, low end of Ord's summary (multiplier)
+
+- basis: assumption
+- source: [@ord2025govaireport], 2025-10
+- note: footnote 6, citing trade-off work; gains often plateau after a few OOM of inference
+- defined in: `data/inputs/012-computational.toml#L591`
+
+<a id="comp-ord-pretrain-hi"></a>
+### comp-ord-pretrain-hi
+
+**10**: pre-training multiple matched by 10x inference, high end of Ord's summary (multiplier)
+
+- basis: assumption
+- source: [@ord2025govaireport], 2025-10
+- defined in: `data/inputs/012-computational.toml#L601`
+
+<a id="comp-ord-example-base"></a>
+### comp-ord-example-base
+
+**1e+24 FLOP**: training compute of the model in Ord's inference illustration
+
+- basis: assumption
+- source: [@ord2025govaireport], 2025-10
+- note: around p. 10, an illustration, not a measurement
+- defined in: `data/inputs/012-computational.toml#L610`
+
+<a id="comp-ord-example-inf"></a>
+### comp-ord-example-inf
+
+**10,000**: inference multiple in Ord's illustration
+
+- basis: assumption
+- source: [@ord2025govaireport], 2025-10
+- defined in: `data/inputs/012-computational.toml#L620`
+
+<a id="comp-ord-example-target"></a>
+### comp-ord-example-target
+
+**1e+27 FLOP**: training compute of the model matched in Ord's illustration
+
+- basis: assumption
+- source: [@ord2025govaireport], 2025-10
+- defined in: `data/inputs/012-computational.toml#L629`
+
+<a id="comp-ord-rl-inf"></a>
+### comp-ord-rl-inf
+
+**100**: inference multiple taking o1 on AIME from about 20% to 80%, Ord's reading of vendor charts
+
+- basis: assumption
+- source: [@ord2025rlscale], 2025-10
+- note: self-described educated guess from charts without axis numbers
+- defined in: `data/inputs/012-computational.toml#L638`
+
+<a id="comp-ord-rl-train"></a>
+### comp-ord-rl-train
+
+**10,000**: RL training multiple Ord estimates for the same AIME gain
+
+- basis: assumption
+- source: [@ord2025rlscale], 2025-10
+- note: educated guess from vendor charts
+- defined in: `data/inputs/012-computational.toml#L648`
+
+<a id="comp-r1zero-start"></a>
+### comp-r1zero-start
+
+**15.6%**: DeepSeek-R1-Zero AIME 2024 pass@1 before reinforcement learning
+
+- basis: measured
+- source: [@deepseek2025r1], 2025
+- note: v1 Sec. 2.2.4, Table 2
+- defined in: `data/inputs/012-computational.toml#L658`
+
+<a id="comp-r1zero-end"></a>
+### comp-r1zero-end
+
+**71.0%**: DeepSeek-R1-Zero AIME 2024 pass@1 after reinforcement learning
+
+- basis: measured
+- source: [@deepseek2025r1], 2025
+- note: v1 Sec. 2.2.4
+- defined in: `data/inputs/012-computational.toml#L668`
+
+<a id="comp-r1-distill-32b"></a>
+### comp-r1-distill-32b
+
+**72.6%**: AIME 2024 pass@1 of a 32B model distilled from DeepSeek-R1
+
+- basis: measured
+- source: [@deepseek2025r1], 2025
+- note: v1 Table 5
+- defined in: `data/inputs/012-computational.toml#L678`
+
+<a id="comp-r1-rl-32b"></a>
+### comp-r1-rl-32b
+
+**47.0%**: AIME 2024 pass@1 of large-scale RL on the same 32B base
+
+- basis: measured
+- source: [@deepseek2025r1], 2025
+- note: v1 Sec. 4.1, Table 6
+- defined in: `data/inputs/012-computational.toml#L688`
+
+<a id="comp-r1-distill-7b"></a>
+### comp-r1-distill-7b
+
+**55.5%**: AIME 2024 pass@1 of a 7B model distilled from DeepSeek-R1
+
+- basis: measured
+- source: [@deepseek2025r1], 2025
+- note: v1 Table 5
+- defined in: `data/inputs/012-computational.toml#L698`
+
+<a id="comp-davidson-ceg-typ"></a>
+### comp-davidson-ceg-typ
+
+**5**: compute-equivalent gain most surveyed post-training enhancements exceed (multiplier)
+
+- basis: measured
+- source: [@davidson2023enhancements], 2023
+- note: abstract; types: tool use, prompting, scaffolding, solution selection, data generation
+- defined in: `data/inputs/012-computational.toml#L708`
+
+<a id="comp-davidson-ceg-high"></a>
+### comp-davidson-ceg-high
+
+**20**: compute-equivalent gain some surveyed post-training enhancements exceed (multiplier)
+
+- basis: measured
+- source: [@davidson2023enhancements], 2023
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L718`
+
+<a id="comp-davidson-finetune-share"></a>
+### comp-davidson-finetune-share
+
+**1%**: typical fine-tuning cost as a share of original training cost (upper bound)
+
+- basis: measured
+- source: [@davidson2023enhancements], 2023
+- note: abstract: typically under 1%
+- defined in: `data/inputs/012-computational.toml#L728`
+
+<a id="comp-heim-buffer-oom"></a>
+### comp-heim-buffer-oom
+
+**1 OOM**: safety buffer for post-training enhancement suggested in the compute-threshold literature
+
+- basis: assumption
+- source: [@heim2024thresholds], 2024
+- note: Sec. 6.1: an order of magnitude or so
+- defined in: `data/inputs/012-computational.toml#L738`
+
+<a id="comp-eu-modifier-share"></a>
+### comp-eu-modifier-share
+
+**33%**: share of the original model's training compute above which an EU downstream modifier becomes a provider
+
+- basis: spec
+- source: [@ec-gpai-guidelines-faq-2025], 2025-11
+- note: more than one third
+- defined in: `data/inputs/012-computational.toml#L748`
+
+<a id="comp-scalerl-gpu-hours"></a>
+### comp-scalerl-gpu-hours
+
+**400,000 GPU-hours**: GPU-hours in the RL compute-scaling study
+
+- basis: measured
+- source: [@khatri2025scalerl], 2025
+- note: abstract; sigmoidal compute-performance curves
+- defined in: `data/inputs/012-computational.toml#L758`
+
+<a id="comp-ho-halving"></a>
+### comp-ho-halving
+
+**8.4 months**: halving time of compute for a fixed language-model performance, 2012 to 2023
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 3.1, 95% CI 4.5 to 14.3 months
+- defined in: `data/inputs/012-computational.toml#L771`
+
+<a id="comp-ho-halving-lo"></a>
+### comp-ho-halving-lo
+
+**4.5 months**: halving time of compute for fixed LM performance, lower end of 95% CI
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/012-computational.toml#L781`
+
+<a id="comp-ho-halving-hi"></a>
+### comp-ho-halving-hi
+
+**14.3 months**: halving time of compute for fixed LM performance, upper end of 95% CI
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/012-computational.toml#L790`
+
+<a id="comp-ho-evals"></a>
+### comp-ho-evals
+
+**200 evaluations**: language-model evaluations in the algorithmic progress dataset (lower bound)
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: abstract: over 200, WikiText and Penn Treebank
+- defined in: `data/inputs/012-computational.toml#L799`
+
+<a id="comp-ho-transformer"></a>
+### comp-ho-transformer
+
+**7.2**: compute-equivalent gain of the Transformer (multiplier)
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- note: Sec. 3.3, 95% CI 3.3x to 45.7x
+- defined in: `data/inputs/012-computational.toml#L809`
+
+<a id="comp-ho-transformer-lo"></a>
+### comp-ho-transformer-lo
+
+**3.3**: compute-equivalent gain of the Transformer, lower end of 95% CI (multiplier)
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/012-computational.toml#L819`
+
+<a id="comp-ho-transformer-hi"></a>
+### comp-ho-transformer-hi
+
+**45.7**: compute-equivalent gain of the Transformer, upper end of 95% CI (multiplier)
+
+- basis: measured
+- source: [@ho2024algorithmic], 2024
+- defined in: `data/inputs/012-computational.toml#L828`
+
+<a id="comp-gundlach-claimed"></a>
+### comp-gundlach-claimed
+
+**22,000**: claimed algorithmic efficiency gain in language models, 2012 to 2023 (multiplier)
+
+- basis: measured
+- source: [@gundlach2025origin], 2026-11
+- note: abstract, citing Ho et al.
+- defined in: `data/inputs/012-computational.toml#L837`
+
+<a id="comp-gundlach-ablation-max"></a>
+### comp-gundlach-ablation-max
+
+**10**: efficiency gain the authors' small-scale ablations account for (multiplier, upper bound)
+
+- basis: measured
+- source: [@gundlach2025origin], 2026-11
+- note: abstract: less than 10x
+- defined in: `data/inputs/012-computational.toml#L847`
+
+<a id="comp-gundlach-other-max"></a>
+### comp-gundlach-other-max
+
+**10**: efficiency gain from other innovations at small scale, the authors' survey estimate (multiplier, upper bound)
+
+- basis: measured
+- source: [@gundlach2025origin], 2026-11
+- note: abstract: less than 10x; an estimate from their survey, not their ablations (spot-check note)
+- defined in: `data/inputs/012-computational.toml#L857`
+
+<a id="comp-algo-claim-years"></a>
+### comp-algo-claim-years
+
+**11 years**: span of the claimed language-model efficiency gain
+
+- basis: measured
+- source: [@gundlach2025origin], 2026-11
+- note: 2012 to 2023
+- defined in: `data/inputs/012-computational.toml#L867`
+
+<a id="comp-whitfill-factor"></a>
+### comp-whitfill-factor
+
+**9**: first-pass factor by which observational estimates may overstate algorithmic progress
+
+- basis: assumption
+- source: [@whitfill2025selection], 2025
+- note: Sec. 1.3; first pass, many other explanations possible
+- defined in: `data/inputs/012-computational.toml#L877`
+
+<a id="comp-whitfill-true"></a>
+### comp-whitfill-true
+
+**45%**: true algorithmic progress a year in Whitfill's selection-bias simulation
+
+- basis: assumption
+- source: [@whitfill2025selection], 2025
+- note: Sec. 2, simulation input
+- defined in: `data/inputs/012-computational.toml#L887`
+
+<a id="comp-whitfill-pos"></a>
+### comp-whitfill-pos
+
+**16.5%**: estimated progress a year in the simulation when compute and algorithmic quality correlate at +0.5
+
+- basis: modelled
+- source: [@whitfill2025selection], 2025
+- note: Sec. 2
+- defined in: `data/inputs/012-computational.toml#L897`
+
+<a id="comp-whitfill-neg"></a>
+### comp-whitfill-neg
+
+**93%**: estimated progress a year in the simulation when compute and algorithmic quality correlate at -0.5
+
+- basis: modelled
+- source: [@whitfill2025selection], 2025
+- note: Sec. 2
+- defined in: `data/inputs/012-computational.toml#L907`
+
+<a id="comp-erdil-halving"></a>
+### comp-erdil-halving
+
+**9 months**: halving time of compute requirements from compute-augmenting innovations, ImageNet
+
+- basis: measured
+- source: [@erdil2022vision], 2022
+- note: abstract, 95% CI 4 to 25 months
+- defined in: `data/inputs/012-computational.toml#L917`
+
+<a id="comp-hernandez-gain"></a>
+### comp-hernandez-gain
+
+**44**: fall in FLOP to reach AlexNet-level ImageNet performance, 2012 to 2019 (multiplier)
+
+- basis: measured
+- source: [@hernandez2020efficiency], 2020
+- note: abstract; Moore's law alone would have given 11x
+- defined in: `data/inputs/012-computational.toml#L927`
+
+<a id="comp-hernandez-years"></a>
+### comp-hernandez-years
+
+**7 years**: span of the AlexNet-level efficiency measurement
+
+- basis: measured
+- source: [@hernandez2020efficiency], 2020
+- note: 2012 to 2019
+- defined in: `data/inputs/012-computational.toml#L937`
+
+<a id="comp-xiao-doubling"></a>
+### comp-xiao-doubling
+
+**3 months**: doubling time of capacity density (effective over actual parameters)
+
+- basis: measured
+- source: [@xiao2024densing], 2024
+- note: abstract; per parameter, not per FLOP
+- defined in: `data/inputs/012-computational.toml#L947`
+
+<a id="comp-inference-algo"></a>
+### comp-inference-algo
+
+**3**: algorithmic efficiency gain a year in inference, open models, hardware price declines divided out (multiplier)
+
+- basis: measured
+- source: [@gundlach2025priceprogress], 2026-03
+- note: abstract: around 3x a year
+- defined in: `data/inputs/012-computational.toml#L957`
+
+<a id="comp-price-fall-lo"></a>
+### comp-price-fall-lo
+
+**5**: fall a year in price at a fixed benchmark level, low end (multiplier)
+
+- basis: measured
+- source: [@gundlach2025priceprogress], 2026-03
+- defined in: `data/inputs/012-computational.toml#L967`
+
+<a id="comp-price-fall-hi"></a>
+### comp-price-fall-hi
+
+**10**: fall a year in price at a fixed benchmark level, high end (multiplier)
+
+- basis: measured
+- source: [@gundlach2025priceprogress], 2026-03
+- defined in: `data/inputs/012-computational.toml#L976`
+
+<a id="comp-frontier-price-rise-lo"></a>
+### comp-frontier-price-rise-lo
+
+**3**: rise a year in the price of running frontier models, low end (multiplier)
+
+- basis: measured
+- source: [@gundlach2025priceprogress], 2026-03
+- defined in: `data/inputs/012-computational.toml#L985`
+
+<a id="comp-frontier-price-rise-hi"></a>
+### comp-frontier-price-rise-hi
+
+**18**: rise a year in the price of running frontier models, high end (multiplier)
+
+- basis: measured
+- source: [@gundlach2025priceprogress], 2026-03
+- defined in: `data/inputs/012-computational.toml#L994`
+
+<a id="comp-barnett-innovations"></a>
+### comp-barnett-innovations
+
+**36 innovations**: pre-training algorithmic innovations catalogued in Llama 3 and DeepSeek-V3
+
+- basis: measured
+- source: [@barnett2025innovation], 2025
+- note: abstract
+- defined in: `data/inputs/012-computational.toml#L1003`
+
+<a id="comp-barnett-feasible"></a>
+### comp-barnett-feasible
+
+**50%**: share of catalogued innovations feasible under a cap at GPT-2's training compute or 8 H100s
+
+- basis: measured
+- source: [@barnett2025innovation], 2025
+- note: abstract: could still have allowed half
+- defined in: `data/inputs/012-computational.toml#L1013`
+
+<a id="comp-speedrun-base-s"></a>
+### comp-speedrun-base-s
+
+**2,700 s**: NanoGPT speedrun record 1 on 8xH100 (llm.c baseline, 2024-05-28)
+
+- basis: measured
+- source: [@moddednanogpt], 2024-05
+- note: README record table: 45 minutes
+- defined in: `data/inputs/012-computational.toml#L1023`
+
+<a id="comp-speedrun-record-s"></a>
+### comp-speedrun-record-s
+
+**39.9 s**: NanoGPT speedrun record 92 on 8xH100 (2026-08-30)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-08
+- note: CSV row 92; README: 0.665 minutes
+- defined in: `data/inputs/012-computational.toml#L1033`
+
+<a id="comp-speedrun-days"></a>
+### comp-speedrun-days
+
+**824 days**: days from speedrun record 1 to record 92
+
+- basis: measured
+- source: [@moddednanogpt], 2026-08
+- note: 2024-05-28 to 2026-08-30
+- defined in: `data/inputs/012-computational.toml#L1043`
+
+<a id="comp-speedrun-tokens-base"></a>
+### comp-speedrun-tokens-base
+
+**1e+10 tokens**: training tokens the llm.c GPT-2 replication needed to reach the speedrun's target loss
+
+- basis: measured
+- source: [@moddednanogpt], 2026-08
+- note: README introduction
+- defined in: `data/inputs/012-computational.toml#L1053`
+
+<a id="comp-speedrun-tokens-record"></a>
+### comp-speedrun-tokens-record
+
+**3.3e+08 tokens**: training tokens the current speedrun recipe needs (upper bound)
+
+- basis: measured
+- source: [@moddednanogpt], 2026-08
+- note: README: under 330M tokens; the parameter count is not fixed (hashed n-gram table)
+- defined in: `data/inputs/012-computational.toml#L1063`
+
+<a id="comp-speedrun-first8mo"></a>
+### comp-speedrun-first8mo
+
+**15**: speedrun wall-clock gain in its first eight months (multiplier, about)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-10
+- note: computed in survey note 03 from the CSV, not a number on the page; E10 recomputes it
+- defined in: `data/inputs/012-computational.toml#L1073`
+
+<a id="comp-speedrun-2025"></a>
+### comp-speedrun-2025
+
+**1.6**: speedrun wall-clock gain across 2025 (multiplier, about)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-10
+- note: computed in survey note 03 from CSV rows 21 to 56; E10 recomputes it
+- defined in: `data/inputs/012-computational.toml#L1083`
+
+<a id="comp-metr-records"></a>
+### comp-metr-records
+
+**77 records**: speedrun records May 2024 to March 2026 in METR's analysis
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- defined in: `data/inputs/012-computational.toml#L1093`
+
+<a id="comp-metr-speedup"></a>
+### comp-metr-speedup
+
+**31**: speedrun wall-clock gain May 2024 to March 2026 (multiplier)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- defined in: `data/inputs/012-computational.toml#L1102`
+
+<a id="comp-metr-shallow"></a>
+### comp-metr-shallow
+
+**21**: part of the speedrun gain from shallow and moderate contributions (multiplier, roughly)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- defined in: `data/inputs/012-computational.toml#L1111`
+
+<a id="comp-metr-imported"></a>
+### comp-metr-imported
+
+**6.7**: speedrun gain from imported ideas (multiplier)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- defined in: `data/inputs/012-computational.toml#L1120`
+
+<a id="comp-metr-adapted"></a>
+### comp-metr-adapted
+
+**3.0**: speedrun gain from adapted ideas (multiplier)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- defined in: `data/inputs/012-computational.toml#L1129`
+
+<a id="comp-metr-invented"></a>
+### comp-metr-invented
+
+**1.6**: speedrun gain from invented ideas (multiplier)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- defined in: `data/inputs/012-computational.toml#L1138`
+
+<a id="comp-metr-ai-records"></a>
+### comp-metr-ai-records
+
+**4 records**: speedrun records crediting an AI agent with a human, late 2025 to early 2026
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- note: all judged shallow to moderate
+- defined in: `data/inputs/012-computational.toml#L1147`
+
+<a id="comp-metr-flop-eff-lo"></a>
+### comp-metr-flop-eff-lo
+
+**1.6**: FLOP-efficiency gain a year since GPT-2 cited by METR from external analyses, low end (multiplier)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- note: footnote 3, secondary
+- defined in: `data/inputs/012-computational.toml#L1157`
+
+<a id="comp-metr-flop-eff-hi"></a>
+### comp-metr-flop-eff-hi
+
+**1.7**: FLOP-efficiency gain a year since GPT-2 cited by METR, high end (multiplier)
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-04
+- note: footnote 3, secondary
+- defined in: `data/inputs/012-computational.toml#L1167`
+
+<a id="comp-ww-sigma-compute"></a>
+### comp-ww-sigma-compute
+
+**2.58**: elasticity of substitution between research compute and labour, CES in compute specification
+
+- basis: measured
+- source: [@whitfill2025bottlenecks], 2025
+- note: Table 1, SE 0.341; four firm clusters
+- defined in: `data/inputs/012-computational.toml#L1177`
+
+<a id="comp-ww-sigma-frontier"></a>
+### comp-ww-sigma-frontier
+
+**-0.10**: elasticity of substitution between research compute and labour, frontier-experiments specification
+
+- basis: measured
+- source: [@whitfill2025bottlenecks], 2025
+- note: Table 1, SE 0.176; complements
+- defined in: `data/inputs/012-computational.toml#L1187`
+
+<a id="comp-r-lm"></a>
+### comp-r-lm
+
+**1.9**: returns to research in language models (doublings of output per doubling of research input)
+
+- basis: modelled
+- source: [@ho2025experiments], 2025-11
+- note: Appendix B, 90% credible interval 1.069 to 3.212
+- defined in: `data/inputs/012-computational.toml#L1197`
+
+<a id="comp-r-compute-cut"></a>
+### comp-r-compute-cut
+
+**3**: factor by which a compute-bottleneck correction cuts returns-to-research estimates
+
+- basis: modelled
+- source: [@ho2025experiments], 2025-11
+- note: Appendix D, Cobb-Douglas with compute share about 2/3: puts all estimates below 1
+- defined in: `data/inputs/012-computational.toml#L1207`
+
+<a id="comp-algo-range-lo"></a>
+### comp-algo-range-lo
+
+**3**: low end of the quoted range for the yearly fall in compute needed per capability (multiplier)
+
+- basis: assumption
+- source: [@barnett2026closingwindow], 2026
+- note: Sec. 3.2.2, a quoted range with no calculation of when a cap fails
+- defined in: `data/inputs/012-computational.toml#L1217`
+
+<a id="comp-algo-range-hi"></a>
+### comp-algo-range-hi
+
+**60**: high end of the quoted range for the yearly fall in compute needed per capability (multiplier)
+
+- basis: assumption
+- source: [@barnett2026closingwindow], 2026
+- note: Sec. 3.2.2
+- defined in: `data/inputs/012-computational.toml#L1227`
+
+<a id="comp-scher-algo"></a>
+### comp-scher-algo
+
+**3**: yearly fall in compute per capability assumed in the MIRI draft agreement (multiplier)
+
+- basis: assumption
+- source: [@scher2025agreement], 2026-05
+- note: Sec. 5, citing Ho et al. 2024; no schedule for moving thresholds
+- defined in: `data/inputs/012-computational.toml#L1237`
+
+<a id="comp-scher-strict"></a>
+### comp-scher-strict
+
+**1e+24 FLOP**: training compute above which the MIRI draft agreement prohibits training
+
+- basis: design
+- source: [@scher2025agreement], 2026-05
+- note: Sec. 4, Strict Threshold
+- defined in: `data/inputs/012-computational.toml#L1247`
+
+<a id="comp-scher-monitored"></a>
+### comp-scher-monitored
+
+**1e+22 FLOP**: training compute above which the MIRI draft agreement monitors training
+
+- basis: design
+- source: [@scher2025agreement], 2026-05
+- note: Sec. 4, Monitored Threshold
+- defined in: `data/inputs/012-computational.toml#L1257`
+
+<a id="comp-eu-threshold"></a>
+### comp-eu-threshold
+
+**1e+25 FLOP**: cumulative training compute above which the EU AI Act presumes systemic risk
+
+- basis: spec
+- source: [@eu-ai-act-2024], 2024
+- note: Art. 51(2); amendable by delegated act
+- defined in: `data/inputs/012-computational.toml#L1267`
+
+<a id="comp-hwp-eff"></a>
+### comp-hwp-eff
+
+**57%**: yearly training-efficiency gain in the hardwired-pause working paper's scenario
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.5.2
+- defined in: `data/inputs/012-computational.toml#L1277`
+
+<a id="comp-hwp-before"></a>
+### comp-hwp-before
+
+**20%**: US overt breakout capacity as a share of the breakout fleet threshold, before efficiency gains
+
+- basis: modelled
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.5.2
+- defined in: `data/inputs/012-computational.toml#L1287`
+
+<a id="comp-hwp-after"></a>
+### comp-hwp-after
+
+**53%**: US overt breakout capacity as a share of the breakout fleet threshold after 26 months of efficiency gains
+
+- basis: modelled
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.5.2
+- defined in: `data/inputs/012-computational.toml#L1297`
+
+<a id="comp-hwp-months"></a>
+### comp-hwp-months
+
+**26 months**: months of efficiency gains in the hardwired-pause scenario
+
+- basis: modelled
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.5.2: before inference-only chips ship at scale
+- defined in: `data/inputs/012-computational.toml#L1307`
+
+<a id="comp-hwp-horizon"></a>
+### comp-hwp-horizon
+
+**2 years**: breakout time horizon adopted in the hardwired-pause working paper
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.2.3, chosen by judgement
+- defined in: `data/inputs/012-computational.toml#L1317`
+
+<a id="comp-narrowpath-breakout"></a>
+### comp-narrowpath-breakout
+
+**3.2 years**: time a licensed cluster would need to breach A Narrow Path's upper compute limit
+
+- basis: design
+- source: [@miotti2025narrowpath], 2025-04
+- note: Annex 2; counts one cluster's speed at fixed algorithms
+- defined in: `data/inputs/012-computational.toml#L1327`
+
+<a id="comp-consumer-lag-lo"></a>
+### comp-consumer-lag-lo
+
+**6 months**: lag of open models that fit one consumer GPU behind the frontier, low end
+
+- basis: measured
+- source: [@somala2025consumergpu], 2025-08
+- note: average lag 6 to 12 months; real-world lag may be longer
+- defined in: `data/inputs/012-computational.toml#L1337`
+
+<a id="comp-consumer-lag-hi"></a>
+### comp-consumer-lag-hi
+
+**12 months**: lag of open models that fit one consumer GPU behind the frontier, high end
+
+- basis: measured
+- source: [@somala2025consumergpu], 2025-08
+- defined in: `data/inputs/012-computational.toml#L1347`
+
+<a id="comp-open-closed-lag"></a>
+### comp-open-closed-lag
+
+**4 months**: average lag of the best open-weight models behind closed ones on the Epoch Capabilities Index since January 2026
+
+- basis: measured
+- source: [@edwards2026openclosed], 2026-05
+- defined in: `data/inputs/012-computational.toml#L1356`
+
+<a id="comp-flop-per-param-token"></a>
+### comp-flop-per-param-token
+
+**6 FLOP per parameter per token**: training FLOP per parameter per token in the standard approximation C = 6ND
+
+- basis: modelled
+- source: [@kaplan2020scaling], 2020
+- note: forward and backward pass, dense model
+- defined in: `data/inputs/012-computational.toml#L1368`
+
+<a id="comp-data-stock"></a>
+### comp-data-stock
+
+**4e+14 tokens**: effective stock of public human-generated text
+
+- basis: measured
+- source: [@villalobos2022data], 2024
+- note: Fig. 1, Sec. 2.5
+- defined in: `data/inputs/012-computational.toml#L1378`
+
+<a id="comp-data-wall-flop"></a>
+### comp-data-wall-flop
+
+**5e+28 FLOP**: compute-optimal training compute at which the public text stock is fully used
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- note: Sec. 2.5, Fig. 5
+- defined in: `data/inputs/012-computational.toml#L1388`
+
+<a id="comp-data-wall-flop-overtrained"></a>
+### comp-data-wall-flop-overtrained
+
+**6e+27 FLOP**: training compute at full use of the text stock if models are 5x overtrained
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- note: Sec. 2.5, Fig. 6; about a year earlier
+- defined in: `data/inputs/012-computational.toml#L1398`
+
+<a id="comp-data-year"></a>
+### comp-data-year
+
+**2028**: median year datasets reach the full public text stock
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- note: range 2026 to 2032
+- defined in: `data/inputs/012-computational.toml#L1408`
+
+<a id="comp-data-year-lo"></a>
+### comp-data-year-lo
+
+**2026**: early end of the year range for full use of the public text stock
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- defined in: `data/inputs/012-computational.toml#L1418`
+
+<a id="comp-data-year-hi"></a>
+### comp-data-year-hi
+
+**2032**: late end of the year range for full use of the public text stock
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- defined in: `data/inputs/012-computational.toml#L1427`
+
+<a id="comp-data-epochs-free"></a>
+### comp-data-epochs-free
+
+**4 epochs**: epochs of repeated data with negligible change in loss against unique data
+
+- basis: measured
+- source: [@muennighoff2023dataconstrained], 2023
+- note: abstract and Sec. 6: an 8.7B model at 4 epochs is 0.5% worse in validation loss
+- defined in: `data/inputs/012-computational.toml#L1436`
+
+<a id="comp-data-rd-star"></a>
+### comp-data-rd-star
+
+**15.4 repetitions**: fitted decay constant for the value of repeated data (about 16 epochs)
+
+- basis: measured
+- source: [@muennighoff2023dataconstrained], 2023
+- note: Appendix A, Eq. 17, Table 1
+- defined in: `data/inputs/012-computational.toml#L1446`
+
+<a id="comp-data-code-share"></a>
+### comp-data-code-share
+
+**50%**: share of training data replaceable by Python code without downstream loss
+
+- basis: measured
+- source: [@muennighoff2023dataconstrained], 2023
+- note: Sec. 7; beyond this natural-language tasks degrade
+- defined in: `data/inputs/012-computational.toml#L1456`
+
+<a id="comp-collapse-ppl-start"></a>
+### comp-collapse-ppl-start
+
+**20**: perplexity of OPT-125m on wikitext2 before recursive training (about)
+
+- basis: measured
+- source: [@shumailov2024collapse], 2024
+- defined in: `data/inputs/012-computational.toml#L1466`
+
+<a id="comp-collapse-ppl-end"></a>
+### comp-collapse-ppl-end
+
+**28**: perplexity after recursive training with no original data kept (about)
+
+- basis: measured
+- source: [@shumailov2024collapse], 2024
+- defined in: `data/inputs/012-computational.toml#L1475`
+
+<a id="comp-collapse-keep"></a>
+### comp-collapse-keep
+
+**10%**: share of original data kept that limited degradation to minor
+
+- basis: measured
+- source: [@shumailov2024collapse], 2024
+- defined in: `data/inputs/012-computational.toml#L1484`
+
+<a id="comp-alphazero-hours"></a>
+### comp-alphazero-hours
+
+**24 hours**: training time for AlphaZero to reach superhuman play
+
+- basis: measured
+- source: [@silver2018alphazero], 2017-12
+- note: preprint abstract
+- defined in: `data/inputs/012-computational.toml#L1496`
+
+<a id="comp-alphagozero-games"></a>
+### comp-alphagozero-games
+
+**100 games**: games AlphaGo Zero won without loss against the champion-defeating AlphaGo
+
+- basis: measured
+- source: [@silver2017alphagozero], 2017
+- defined in: `data/inputs/012-computational.toml#L1506`
+
+<a id="comp-alphageometry-solved"></a>
+### comp-alphageometry-solved
+
+**25 problems**: recent olympiad geometry problems AlphaGeometry solved
+
+- basis: measured
+- source: [@trinh2024alphageometry], 2024
+- note: of 30; the previous best solved 10
+- defined in: `data/inputs/012-computational.toml#L1515`
+
+<a id="comp-alphageometry-total"></a>
+### comp-alphageometry-total
+
+**30 problems**: olympiad geometry problems in AlphaGeometry's test set
+
+- basis: measured
+- source: [@trinh2024alphageometry], 2024
+- defined in: `data/inputs/012-computational.toml#L1525`
+
+<a id="comp-alphageometry-prev"></a>
+### comp-alphageometry-prev
+
+**10 problems**: olympiad geometry problems the previous best method solved
+
+- basis: measured
+- source: [@trinh2024alphageometry], 2024
+- defined in: `data/inputs/012-computational.toml#L1534`
+
+<a id="comp-alphaproof-solved"></a>
+### comp-alphaproof-solved
+
+**3 problems**: non-geometry IMO 2024 problems AlphaProof solved
+
+- basis: measured
+- source: [@hubert2026alphaproof], 2026
+- note: of five; with multi-day computation and test-time RL
+- defined in: `data/inputs/012-computational.toml#L1543`
+
+<a id="comp-alphaproof-total"></a>
+### comp-alphaproof-total
+
+**5 problems**: non-geometry problems at IMO 2024
+
+- basis: measured
+- source: [@hubert2026alphaproof], 2026
+- defined in: `data/inputs/012-computational.toml#L1553`
+
+<a id="comp-katago-winrate"></a>
+### comp-katago-winrate
+
+**97%**: win rate of an adversarial policy against KataGo at superhuman settings (lower bound)
+
+- basis: measured
+- source: [@wang2023adversarialgo], 2023
+- note: abstract: over 97%; transfers to other superhuman Go AIs
+- defined in: `data/inputs/012-computational.toml#L1562`
+
+<a id="comp-spiral-gain"></a>
+### comp-spiral-gain
+
+**10%**: largest improvement across reasoning benchmarks from self-play on zero-sum games
+
+- basis: measured
+- source: [@liu2025spiral], 2026-03
+- note: abstract: up to 10% across 8 benchmarks on 4 models
+- defined in: `data/inputs/012-computational.toml#L1572`
+
+<a id="comp-huan-models"></a>
+### comp-huan-models
+
+**20 models**: open reasoning-tuned models examined for transfer from mathematics (lower bound)
+
+- basis: measured
+- source: [@huan2026mathtransfer], 2026
+- note: over 20
+- defined in: `data/inputs/012-computational.toml#L1582`
+
+<a id="comp-pluribus-cost"></a>
+### comp-pluribus-cost
+
+**150 USD**: cost to train the Pluribus poker blueprint (upper bound)
+
+- basis: vendor
+- source: [@meta2019pluribus], 2019-07
+- note: eight days on a 64-core server; play on two CPUs
+- defined in: `data/inputs/012-computational.toml#L1592`
+
+<a id="comp-alphaevolve-fleet"></a>
+### comp-alphaevolve-fleet
+
+**0.7%**: share of Google's fleet-wide compute recovered by an AlphaEvolve scheduling heuristic
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- note: Sec. 3.3.1; the developer reporting on itself
+- defined in: `data/inputs/012-computational.toml#L1602`
+
+<a id="comp-alphaevolve-kernel"></a>
+### comp-alphaevolve-kernel
+
+**23%**: average kernel speedup found by AlphaEvolve for Gemini training
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- note: Sec. 3.3.2
+- defined in: `data/inputs/012-computational.toml#L1612`
+
+<a id="comp-alphaevolve-train"></a>
+### comp-alphaevolve-train
+
+**1%**: reduction in Gemini's overall training time from AlphaEvolve's kernel speedup
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- note: Sec. 3.3.2
+- defined in: `data/inputs/012-computational.toml#L1622`
+
+<a id="comp-example-headroom-oom"></a>
+### comp-example-headroom-oom
+
+**3 OOM**: headroom between a training cap and the compute that would reach the line, for illustration only
+
+- basis: assumption
+- note: placeholder: where the line sits in compute is not known; Ord's illustration spans the same 3 OOM (1e24 to 1e27 FLOP)
+- defined in: `data/inputs/012-computational.toml#L1635`
+
+<a id="comp-response-years"></a>
+### comp-response-years
+
+**1 yr**: time the regime takes to notice a leak and respond (revise the cap or act), placeholder
+
+- basis: assumption
+- note: placeholder until Part II derives the response time from the verification channels
+- defined in: `data/inputs/012-computational.toml#L1643`
+
+<a id="comp-o1-cons-k"></a>
+### comp-o1-cons-k
+
+**64 samples**: samples in o1's consensus result on AIME 2024
+
+- basis: vendor
+- source: [@openai2024o1], 2024-09
+- defined in: `data/inputs/012-computational.toml#L1654`
+
+<a id="comp-o1-rerank-k"></a>
+### comp-o1-rerank-k
+
+**1,000 samples**: samples re-ranked in o1's best AIME 2024 result
+
+- basis: vendor
+- source: [@openai2024o1], 2024-09
+- defined in: `data/inputs/012-computational.toml#L1663`
+
+<a id="comp-whitfill-corr"></a>
+### comp-whitfill-corr
+
+**0.5**: size of the correlation between compute and algorithmic quality in Whitfill's simulation
+
+- basis: assumption
+- source: [@whitfill2025selection], 2025
+- note: Sec. 2: run at +0.5 and -0.5
+- defined in: `data/inputs/012-computational.toml#L1672`
+
+<a id="comp-barnett-cap-gpus"></a>
+### comp-barnett-cap-gpus
+
+**8 H100s**: accelerators in the stricter of Barnett's two counterfactual caps
+
+- basis: assumption
+- source: [@barnett2025innovation], 2025
+- note: abstract: a cap at GPT-2's training compute or at 8 H100s
+- defined in: `data/inputs/012-computational.toml#L1682`
+
+<a id="comp-ww-firms"></a>
+### comp-ww-firms
+
+**4 firms**: firm clusters in the compute-labour substitution panel
+
+- basis: measured
+- source: [@whitfill2025bottlenecks], 2025
+- note: OpenAI, DeepMind, Anthropic and DeepSeek, 2014 to 2024
+- defined in: `data/inputs/012-computational.toml#L1692`
+
+<a id="comp-speedrun-first-months"></a>
+### comp-speedrun-first-months
+
+**8 months**: length of the speedrun's opening period of fast gains
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-10
+- note: as computed in survey note 03 from the CSV
+- defined in: `data/inputs/012-computational.toml#L1702`
+
+<a id="comp-speedrun-ngram-params"></a>
+### comp-speedrun-ngram-params
+
+**65,000,000,000 parameters**: parameters in the speedrun's hashed n-gram embedding table
+
+- basis: measured
+- source: [@moddednanogpt], 2026-08
+- note: README: 84.6M rows, 65B parameters
+- defined in: `data/inputs/012-computational.toml#L1712`
+
+<a id="dyn-bloom-beta-aggregate"></a>
+### dyn-bloom-beta-aggregate
+
+**3.1**: dynamic diminishing returns beta, aggregate US economy, 1930 to 2015
+
+- basis: measured
+- source: [@bloom2020ideas], 2015
+- note: Table 7, p. 1134; with lambda = 1, r = 1/beta
+- defined in: `data/inputs/013-dynamical.toml#L9`
+
+<a id="dyn-bloom-beta-moore"></a>
+### dyn-bloom-beta-moore
+
+**0.2**: dynamic diminishing returns beta, Moore's Law research, 1971 to 2014
+
+- basis: measured
+- source: [@bloom2020ideas], 2014
+- note: Table 7; p. 1135 gives 7/35, the smallest beta in the paper
+- defined in: `data/inputs/013-dynamical.toml#L18`
+
+<a id="dyn-bloom-rp-decline"></a>
+### dyn-bloom-rp-decline
+
+**5.3%**: average annual decline of research productivity across Bloom et al.'s cases
+
+- basis: measured
+- source: [@bloom2020ideas], 2020
+- note: p. 1134 text: about 13 years for research productivity to halve
+- defined in: `data/inputs/013-dynamical.toml#L27`
+
+<a id="dyn-bloom-moore-researchers"></a>
+### dyn-bloom-moore-researchers
+
+**18**: multiple of researchers needed to double chip density, 2014 against the early 1970s
+
+- basis: measured
+- source: [@bloom2020ideas], 2014
+- note: Introduction, p. 1105
+- defined in: `data/inputs/013-dynamical.toml#L36`
+
+<a id="dyn-r-chess"></a>
+### dyn-r-chess
+
+**0.83**: returns to research r, computer chess (Stockfish, tests per day as input)
+
+- basis: measured
+- source: [@besiroglu2024returns], 2024
+- note: standard error 0.15; 'just shy of the threshold of 1'
+- defined in: `data/inputs/013-dynamical.toml#L45`
+
+<a id="dyn-r-chess-se"></a>
+### dyn-r-chess-se
+
+**0.15**: standard error of r for computer chess
+
+- basis: measured
+- source: [@besiroglu2024returns], 2024
+- defined in: `data/inputs/013-dynamical.toml#L54`
+
+<a id="dyn-r-us-economy"></a>
+### dyn-r-us-economy
+
+**0.25**: returns to research r, aggregate US economy (Epoch's replication of Bloom et al.)
+
+- basis: measured
+- source: [@besiroglu2024returns], 2024
+- note: the original Bloom et al. figure is about 0.32
+- defined in: `data/inputs/013-dynamical.toml#L62`
+
+<a id="dyn-r-cv"></a>
+### dyn-r-cv
+
+**1.26**: returns to software research r, computer vision, median
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- note: Appendix B, 90% credible interval 0.727 to 2.094
+- defined in: `data/inputs/013-dynamical.toml#L71`
+
+<a id="dyn-r-cv-lo"></a>
+### dyn-r-cv-lo
+
+**0.73**: r, computer vision, 5th percentile
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/013-dynamical.toml#L80`
+
+<a id="dyn-r-cv-hi"></a>
+### dyn-r-cv-hi
+
+**2.09**: r, computer vision, 95th percentile
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/013-dynamical.toml#L88`
+
+<a id="dyn-r-rl"></a>
+### dyn-r-rl
+
+**1.20**: returns to software research r, reinforcement learning (Atari), median
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- note: Appendix B, 90% credible interval 0.380 to 2.708
+- defined in: `data/inputs/013-dynamical.toml#L96`
+
+<a id="dyn-r-rl-lo"></a>
+### dyn-r-rl-lo
+
+**0.38**: r, reinforcement learning, 5th percentile
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/013-dynamical.toml#L105`
+
+<a id="dyn-r-rl-hi"></a>
+### dyn-r-rl-hi
+
+**2.71**: r, reinforcement learning, 95th percentile
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/013-dynamical.toml#L113`
+
+<a id="dyn-r-lm"></a>
+### dyn-r-lm
+
+**1.89**: returns to software research r, language models, median
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- note: Appendix B, 90% credible interval 1.069 to 3.212, the only interval wholly above 1
+- defined in: `data/inputs/013-dynamical.toml#L121`
+
+<a id="dyn-r-lm-lo"></a>
+### dyn-r-lm-lo
+
+**1.07**: r, language models, 5th percentile
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/013-dynamical.toml#L130`
+
+<a id="dyn-r-lm-hi"></a>
+### dyn-r-lm-hi
+
+**3.21**: r, language models, 95th percentile
+
+- basis: measured
+- source: [@ho2025experiments], 2025
+- defined in: `data/inputs/013-dynamical.toml#L138`
+
+<a id="dyn-research-compute-share"></a>
+### dyn-research-compute-share
+
+**0.67**: compute's share epsilon_K of research input, in Ho and Whitfill's compute-bottleneck correction
+
+- basis: modelled
+- source: [@ho2025experiments], 2025
+- note: Appendix D: under Cobb-Douglas with epsilon_K about 2/3, every r should be cut by a factor of three; the share is their assumption
+- defined in: `data/inputs/013-dynamical.toml#L146`
+
+<a id="dyn-r-gpu"></a>
+### dyn-r-gpu
+
+**5**: returns to hardware research r, GPUs 2006 to 2022 (about)
+
+- basis: measured
+- source: [@eth2025sie], 2022
+- note: hardware section, '~5'
+- defined in: `data/inputs/013-dynamical.toml#L155`
+
+<a id="dyn-r-hardware-hist"></a>
+### dyn-r-hardware-hist
+
+**7**: returns to hardware research r, historical (about)
+
+- basis: measured
+- source: [@eth2025sie], 2025
+- note: hardware section, '~7'
+- defined in: `data/inputs/013-dynamical.toml#L164`
+
+<a id="dyn-eth-r-consthw-lo"></a>
+### dyn-eth-r-consthw-lo
+
+**0.5**: Eth and Davidson's best guess for software r with hardware held constant, low end
+
+- basis: modelled
+- source: [@eth2025sie], 2025
+- note: authors' judgement, '~0.5-2'
+- defined in: `data/inputs/013-dynamical.toml#L173`
+
+<a id="dyn-eth-r-consthw-hi"></a>
+### dyn-eth-r-consthw-hi
+
+**2**: Eth and Davidson's best guess for software r with hardware held constant, high end
+
+- basis: modelled
+- source: [@eth2025sie], 2025
+- defined in: `data/inputs/013-dynamical.toml#L182`
+
+<a id="dyn-sie-r"></a>
+### dyn-sie-r
+
+**1.2**: returns to software R&D r, median parameter of the Davidson and Houlden model
+
+- basis: modelled
+- source: [@davidson2025sie], 2025
+- note: range 0.4 to 3.6; compute held fixed after full automation of AI research
+- defined in: `data/inputs/013-dynamical.toml#L193`
+
+<a id="dyn-sie-r-lo"></a>
+### dyn-sie-r-lo
+
+**0.4**: r, low end of the Davidson and Houlden range
+
+- basis: modelled
+- source: [@davidson2025sie], 2025
+- defined in: `data/inputs/013-dynamical.toml#L202`
+
+<a id="dyn-sie-r-hi"></a>
+### dyn-sie-r-hi
+
+**3.6**: r, high end of the Davidson and Houlden range
+
+- basis: modelled
+- source: [@davidson2025sie], 2025
+- defined in: `data/inputs/013-dynamical.toml#L210`
+
+<a id="dyn-sie-distance-oom"></a>
+### dyn-sie-distance-oom
+
+**11**: distance to effective limits of software, orders of magnitude, median parameter
+
+- basis: modelled
+- source: [@davidson2025sie], 2025
+- note: range 6 to 16
+- defined in: `data/inputs/013-dynamical.toml#L218`
+
+<a id="dyn-sie-lambda"></a>
+### dyn-sie-lambda
+
+**0.6**: diminishing returns to parallel research labour lambda, median parameter
+
+- basis: modelled
+- source: [@davidson2025sie], 2025
+- defined in: `data/inputs/013-dynamical.toml#L227`
+
+<a id="dyn-sie-p-3yr"></a>
+### dyn-sie-p-3yr
+
+**57%**: model probability that a software intelligence explosion compresses 3 or more years of progress into under 1 year
+
+- basis: modelled
+- source: [@davidson2025sie], 2025
+- note: results table (about 60% in the text)
+- defined in: `data/inputs/013-dynamical.toml#L235`
+
+<a id="dyn-sie-p-10yr"></a>
+### dyn-sie-p-10yr
+
+**18%**: model probability that it compresses 10 or more years into under 1 year
+
+- basis: modelled
+- source: [@davidson2025sie], 2025
+- note: results table (about 20% in the text)
+- defined in: `data/inputs/013-dynamical.toml#L244`
+
+<a id="dyn-ie-lag-model-months"></a>
+### dyn-ie-lag-model-months
+
+**3**: time lag for a new frontier model, months (about)
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- note: against many months for new chip technology and years for fabs
+- defined in: `data/inputs/013-dynamical.toml#L253`
+
+<a id="dyn-ie-software-oom"></a>
+### dyn-ie-software-oom
+
+**12**: room to grow for software, orders of magnitude (about)
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- defined in: `data/inputs/013-dynamical.toml#L262`
+
+<a id="dyn-ie-chiptech-oom"></a>
+### dyn-ie-chiptech-oom
+
+**2**: room to grow for chip technology in the current paradigm, orders of magnitude (about)
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- defined in: `data/inputs/013-dynamical.toml#L270`
+
+<a id="dyn-ie-chiptech-landauer-oom"></a>
+### dyn-ie-chiptech-landauer-oom
+
+**6**: room to grow for chip technology up to Landauer's limit, orders of magnitude (about)
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- defined in: `data/inputs/013-dynamical.toml#L278`
+
+<a id="dyn-ie-chipprod-oom"></a>
+### dyn-ie-chipprod-oom
+
+**5**: room to grow for chip production on Earth's energy, orders of magnitude (about)
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- defined in: `data/inputs/013-dynamical.toml#L286`
+
+<a id="dyn-ie-p-chiptech"></a>
+### dyn-ie-p-chiptech
+
+**65%**: authors' chance that the chip technology loop alone sustains acceleration
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- defined in: `data/inputs/013-dynamical.toml#L294`
+
+<a id="dyn-ie-p-chipprod"></a>
+### dyn-ie-p-chipprod
+
+**80%**: authors' chance that the chip production loop alone sustains acceleration
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- defined in: `data/inputs/013-dynamical.toml#L302`
+
+<a id="dyn-ie-max-speed"></a>
+### dyn-ie-max-speed
+
+**100**: maximum speed of progress against recent rates, multiple (about)
+
+- basis: modelled
+- source: [@davidson2025three], 2025
+- note: with effective compute doubling roughly daily
+- defined in: `data/inputs/013-dynamical.toml#L310`
+
+<a id="dyn-cmos-headroom"></a>
+### dyn-cmos-headroom
+
+**207**: energy-efficiency headroom of irreversible CMOS over an H100, multiple (50% chance)
+
+- basis: modelled
+- source: [@ho2023], 2023
+- note: Implications section: 2.9e14 FP16/J ceiling against about 1.4e12 FP16/J for an H100
+- defined in: `data/inputs/013-dynamical.toml#L319`
+
+<a id="dyn-gpu-eff-growth"></a>
+### dyn-gpu-eff-growth
+
+**1.40**: annual growth of GPU energy efficiency, multiple
+
+- basis: measured
+- source: [@you2025], 2025
+- note: 'has improved by 40% per year'
+- defined in: `data/inputs/013-dynamical.toml#L328`
+
+<a id="dyn-nber-singularity-years"></a>
+### dyn-nber-singularity-years
+
+**6**: years to a singularity with software research fully automated and 5% automation elsewhere
+
+- basis: modelled
+- source: [@davidson2026feedback], 2026
+- note: abstract, 'within six years'
+- defined in: `data/inputs/013-dynamical.toml#L337`
+
+<a id="dyn-nber-other-automation"></a>
+### dyn-nber-other-automation
+
+**5%**: automation outside software research in Davidson et al.'s headline scenario
+
+- basis: modelled
+- source: [@davidson2026feedback], 2026
+- defined in: `data/inputs/013-dynamical.toml#L346`
+
+<a id="dyn-cunningham-return"></a>
+### dyn-cunningham-return
+
+**1.0**: return to R&D in Cunningham et al.'s calibration (ln 3 / ln 3)
+
+- basis: modelled
+- source: [@cunningham2026rsi], 2026
+- note: Section 4.1, algorithmic efficiency taken to triple a year
+- defined in: `data/inputs/013-dynamical.toml#L357`
+
+<a id="dyn-cunningham-eps-ca"></a>
+### dyn-cunningham-eps-ca
+
+**6.5**: elasticity epsilon_C,A of capability (exp ECI) to compute
+
+- basis: measured
+- source: [@cunningham2026rsi], 2026
+- note: Section 4.1, from a regression of ECI on log compute
+- defined in: `data/inputs/013-dynamical.toml#L366`
+
+<a id="dyn-cunningham-eps-rc-illustration"></a>
+### dyn-cunningham-eps-rc-illustration
+
+**9%**: increase in research productivity per ECI point implied by a reported 4x uplift, an upper-end illustration
+
+- basis: modelled
+- source: [@cunningham2026rsi], 2026
+- note: Section 4.1: the 4x uplift is 'very likely to be an overestimate'; this is not the authors' estimate (spot-check, research/notes/11-spot-check.md)
+- defined in: `data/inputs/013-dynamical.toml#L375`
+
+<a id="dyn-algo-efficiency-growth"></a>
+### dyn-algo-efficiency-growth
+
+**3**: annual multiple of algorithmic efficiency assumed in Cunningham et al.'s calibration
+
+- basis: modelled
+- source: [@cunningham2026rsi], 2026
+- note: Section 4.1, citing Ho et al. 2024
+- defined in: `data/inputs/013-dynamical.toml#L384`
+
+<a id="dyn-ai2027-sc-to-sar"></a>
+### dyn-ai2027-sc-to-sar
+
+**0.3 years**: simulated calendar time from a superhuman coder to a superhuman AI researcher, with AI speed-ups
+
+- basis: modelled
+- source: [@kokotajlo2025takeoff], 2025-12
+- note: 90th percentile about 0.95 years; assumes no increase in training compute; the authors say it 'relies substantially on intuitive judgment'
+- defined in: `data/inputs/013-dynamical.toml#L393`
+
+<a id="dyn-cp1-k"></a>
+### dyn-cp1-k
+
+**1.0006**: neutron multiplication factor k of Fermi's first pile, all neutrons
+
+- basis: measured
+- source: [@yudkowsky2013iem], 1942
+- note: Section 1, PDF p. 6, as cited by Yudkowsky
+- defined in: `data/inputs/013-dynamical.toml#L403`
+
+<a id="dyn-cp1-k-prompt"></a>
+### dyn-cp1-k-prompt
+
+**0.9946**: the same pile's k counting prompt neutrons only
+
+- basis: measured
+- source: [@yudkowsky2013iem], 1942
+- note: Section 1, PDF p. 6, as cited by Yudkowsky
+- defined in: `data/inputs/013-dynamical.toml#L412`
+
+<a id="dyn-burtsev-delay"></a>
+### dyn-burtsev-delay
+
+**0.5 years**: development cycle delay tau assumed by Burtsev
+
+- basis: modelled
+- source: [@burtsev2026criticality], 2026
+- note: Section 3.2, fixed as an assumption
+- defined in: `data/inputs/013-dynamical.toml#L421`
+
+<a id="dyn-burtsev-network-rho"></a>
+### dyn-burtsev-network-rho
+
+**1.15**: network reproduction number rho(K) in Burtsev's scenario of individually subcritical blocs
+
+- basis: modelled
+- source: [@burtsev2026criticality], 2026
+- note: Section 4 scenarios; illustrative, not estimated
+- defined in: `data/inputs/013-dynamical.toml#L431`
+
+<a id="dyn-openai-critical-speedup"></a>
+### dyn-openai-critical-speedup
+
+**5**: OpenAI's Critical self-improvement indicator: a generational improvement in 1/x of 2024's wall-clock time
+
+- basis: spec
+- source: [@openai2025preparedness], 2025-04
+- note: Table 1, sustained for several months; response: halt further development
+- defined in: `data/inputs/013-dynamical.toml#L443`
+
+<a id="dyn-anthropic-rate-multiple"></a>
+### dyn-anthropic-rate-multiple
+
+**2**: Anthropic's AI R&D threshold: multiple of the rate of aggregate capability progress, over 3 or more generations
+
+- basis: spec
+- source: [@anthropic2026rsp], 2026-07
+- defined in: `data/inputs/013-dynamical.toml#L452`
+
+<a id="dyn-metr-accel"></a>
+### dyn-metr-accel
+
+**1.9**: acceleration of Anthropic's internal capability index (AECI) since October 2025, ratio of growth rates
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- note: 95% CI 1.5 to 2.8; robustness range 1.1 to 2.9; most informative evidence redacted
+- defined in: `data/inputs/013-dynamical.toml#L460`
+
+<a id="dyn-metr-accel-lo"></a>
+### dyn-metr-accel-lo
+
+**1.5**: acceleration, 95% CI lower end
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/013-dynamical.toml#L469`
+
+<a id="dyn-metr-accel-hi"></a>
+### dyn-metr-accel-hi
+
+**2.8**: acceleration, 95% CI upper end
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/013-dynamical.toml#L477`
+
+<a id="dyn-metr-aeci-before"></a>
+### dyn-metr-aeci-before
+
+**15**: AECI points a year, historical trend
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/013-dynamical.toml#L485`
+
+<a id="dyn-metr-aeci-after"></a>
+### dyn-metr-aeci-after
+
+**29**: AECI points a year after the fitted breakpoint of 2025-10-07
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/013-dynamical.toml#L493`
+
+<a id="dyn-metr-ai-attribution"></a>
+### dyn-metr-ai-attribution
+
+**80%**: share of the October 2026 acceleration METR attributes to AI, subjectively
+
+- basis: modelled
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- note: a subjective judgement, not a measurement
+- defined in: `data/inputs/013-dynamical.toml#L501`
+
+<a id="dyn-metr-staff-uplift"></a>
+### dyn-metr-staff-uplift
+
+**12**: uplift Anthropic staff reported for themselves in polls, multiple
+
+- basis: vendor
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- note: METR treats it as 'very loose evidence'
+- defined in: `data/inputs/013-dynamical.toml#L510`
+
+<a id="dyn-anthropic-ai-led"></a>
+### dyn-anthropic-ai-led
+
+**26%**: share of Anthropic's AI R&D work that Claude leads (automation level AL4)
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-08
+- defined in: `data/inputs/013-dynamical.toml#L519`
+
+<a id="dyn-anthropic-ai-led-feb"></a>
+### dyn-anthropic-ai-led-feb
+
+**1%**: the same share in February 2026, an upper bound ('under 1%')
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-02
+- defined in: `data/inputs/013-dynamical.toml#L527`
+
+<a id="dyn-anthropic-collab-share"></a>
+### dyn-anthropic-collab-share
+
+**90%**: share of Anthropic's AI R&D work at or above 'AI collaborates', a lower bound
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-08
+- defined in: `data/inputs/013-dynamical.toml#L535`
+
+<a id="dyn-anthropic-agents"></a>
+### dyn-anthropic-agents
+
+**30,000**: agents doing research and engineering work at once on Anthropic's most-used internal platform
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-08
+- note: one internal platform, not the whole company (spot-check minor item)
+- defined in: `data/inputs/013-dynamical.toml#L543`
+
+<a id="dyn-nanogpt-records"></a>
+### dyn-nanogpt-records
+
+**77**: NanoGPT speedrun records, May 2024 to March 2026
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/013-dynamical.toml#L555`
+
+<a id="dyn-nanogpt-ai-records"></a>
+### dyn-nanogpt-ai-records
+
+**4**: records crediting an AI agent (each co-credited with a human), late 2025 to early 2026
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- note: all shallow to moderate, imported or adapted
+- defined in: `data/inputs/013-dynamical.toml#L563`
+
+<a id="dyn-nanogpt-start-min"></a>
+### dyn-nanogpt-start-min
+
+**45 minutes**: speedrun training time at the first record, 8xH100
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2024-05
+- defined in: `data/inputs/013-dynamical.toml#L572`
+
+<a id="dyn-nanogpt-end-min"></a>
+### dyn-nanogpt-end-min
+
+**1.43 minutes**: speedrun training time in March 2026, 8xH100
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/013-dynamical.toml#L581`
+
+<a id="dyn-nanogpt-shallow-moderate"></a>
+### dyn-nanogpt-shallow-moderate
+
+**21**: multiple of the 31x speedup driven by shallow and moderate contributions
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/013-dynamical.toml#L590`
+
+<a id="dyn-nanogpt-imported"></a>
+### dyn-nanogpt-imported
+
+**6.7**: speedup multiple from imported ideas
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/013-dynamical.toml#L598`
+
+<a id="dyn-nanogpt-adapted"></a>
+### dyn-nanogpt-adapted
+
+**3.0**: speedup multiple from adapted ideas
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/013-dynamical.toml#L606`
+
+<a id="dyn-nanogpt-invented"></a>
+### dyn-nanogpt-invented
+
+**1.6**: speedup multiple from invented ideas
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/013-dynamical.toml#L614`
+
+<a id="dyn-speedrun-baseline-s"></a>
+### dyn-speedrun-baseline-s
+
+**2,700 s**: speedrun record 1 (llm.c baseline), 8xH100
+
+- basis: measured
+- source: [@moddednanogpt], 2024-05
+- defined in: `data/inputs/013-dynamical.toml#L622`
+
+<a id="dyn-speedrun-record-s"></a>
+### dyn-speedrun-record-s
+
+**39.9 s**: speedrun record 92, 8xH100
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-08
+- defined in: `data/inputs/013-dynamical.toml#L631`
+
+<a id="dyn-speedrun-span-days"></a>
+### dyn-speedrun-span-days
+
+**824 days**: days between record 1 (2024-05-28) and record 92 (2026-08-30)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-08
+- defined in: `data/inputs/013-dynamical.toml#L640`
+
+<a id="dyn-speedrun-first-window"></a>
+### dyn-speedrun-first-window
+
+**15**: speedup multiple in the record's first 8 months (about)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2025-01
+- note: survey's arithmetic on Epoch's CSV (research/notes/03-algorithms.md); E4 recomputes it
+- defined in: `data/inputs/013-dynamical.toml#L649`
+
+<a id="dyn-speedrun-rate-2025"></a>
+### dyn-speedrun-rate-2025
+
+**1.6**: speedup multiple across 2025 (2025-01-26 to 2026-01-01)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-01
+- note: survey's arithmetic on Epoch's CSV, rows 21 to 56; E4 recomputes it
+- defined in: `data/inputs/013-dynamical.toml#L658`
+
+<a id="dyn-speedrun-rate-2026"></a>
+### dyn-speedrun-rate-2026
+
+**2.9**: speedup multiple from January to August 2026 (about)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-08
+- note: survey's arithmetic on Epoch's CSV; E4 recomputes it
+- defined in: `data/inputs/013-dynamical.toml#L667`
+
+<a id="dyn-speedrun-window-months"></a>
+### dyn-speedrun-window-months
+
+**8 months**: length of the first and of the 2026 speedrun windows (about)
+
+- basis: measured
+- source: [@epoch2026speedrundata], 2026-08
+- defined in: `data/inputs/013-dynamical.toml#L676`
+
+<a id="dyn-human-cost-per-pct"></a>
+### dyn-human-cost-per-pct
+
+**2,500 USD**: human labour cost per 1% speedup of the NanoGPT target, METR's working figure
+
+- basis: modelled
+- source: [@metr2026expenditure], 2026-07
+- note: 'very roughly'; results are highly sensitive to it
+- defined in: `data/inputs/013-dynamical.toml#L685`
+
+<a id="dyn-agent-exp-horizon-hi"></a>
+### dyn-agent-exp-horizon-hi
+
+**3,300 USD**: highest agent expenditure horizon after re-validation
+
+- basis: measured
+- source: [@metr2026expenditure], 2026-07
+- note: range 0 to 3,300 USD across agents
+- defined in: `data/inputs/013-dynamical.toml#L695`
+
+<a id="dyn-rebench-agent-2h"></a>
+### dyn-rebench-agent-2h
+
+**4**: best agents' score as a multiple of humans' at a 2-hour budget, RE-Bench
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- defined in: `data/inputs/013-dynamical.toml#L705`
+
+<a id="dyn-rebench-human-32h"></a>
+### dyn-rebench-human-32h
+
+**2**: humans' score as a multiple of the top agent's at a 32-hour budget, RE-Bench
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- defined in: `data/inputs/013-dynamical.toml#L713`
+
+<a id="dyn-alphaevolve-gemini-cut"></a>
+### dyn-alphaevolve-gemini-cut
+
+**1%**: reduction in Gemini's overall training time from AlphaEvolve's kernel work
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- note: Section 3.3.2
+- defined in: `data/inputs/013-dynamical.toml#L721`
+
+<a id="dyn-alphaevolve-kernel"></a>
+### dyn-alphaevolve-kernel
+
+**23%**: average kernel speedup found by AlphaEvolve
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- defined in: `data/inputs/013-dynamical.toml#L730`
+
+<a id="dyn-alphaevolve-fleet"></a>
+### dyn-alphaevolve-fleet
+
+**0.7%**: share of Google's fleet-wide compute recovered by AlphaEvolve's scheduling heuristic
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- defined in: `data/inputs/013-dynamical.toml#L738`
+
+<a id="dyn-rct-2025"></a>
+### dyn-rct-2025
+
+**19%**: change in task completion time with AI, experienced open-source developers, early 2025
+
+- basis: measured
+- source: [@becker2025rct], 2025-07
+- note: CI +2% to +39%; positive means slower
+- defined in: `data/inputs/013-dynamical.toml#L746`
+
+<a id="dyn-rct-2025-lo"></a>
+### dyn-rct-2025-lo
+
+**2%**: lower end of the 2025 RCT interval
+
+- basis: measured
+- source: [@becker2025rct], 2025-07
+- defined in: `data/inputs/013-dynamical.toml#L755`
+
+<a id="dyn-rct-2025-hi"></a>
+### dyn-rct-2025-hi
+
+**39%**: upper end of the 2025 RCT interval
+
+- basis: measured
+- source: [@becker2025rct], 2025-07
+- defined in: `data/inputs/013-dynamical.toml#L763`
+
+<a id="dyn-rct-2026-returning"></a>
+### dyn-rct-2026-returning
+
+**-18%**: change in task time with AI, returning developers, 2026 follow-up
+
+- basis: measured
+- source: [@metr2026uplift], 2026-02
+- note: CI -38% to +9%; METR calls the data 'only very weak evidence' because of selection
+- defined in: `data/inputs/013-dynamical.toml#L771`
+
+<a id="dyn-sigma-compute-spec"></a>
+### dyn-sigma-compute-spec
+
+**2.58**: elasticity of substitution between research compute and labour, CES in compute
+
+- basis: measured
+- source: [@whitfill2025bottlenecks], 2025
+- note: Table 1, clustered SE 0.341, four firm clusters; above 1 means substitutes
+- defined in: `data/inputs/013-dynamical.toml#L783`
+
+<a id="dyn-sigma-frontier-spec"></a>
+### dyn-sigma-frontier-spec
+
+**-0.10**: elasticity of substitution, CES in frontier experiments
+
+- basis: measured
+- source: [@whitfill2025bottlenecks], 2025
+- note: Table 1, SE 0.176; below 1 means complements and bounded effective research
+- defined in: `data/inputs/013-dynamical.toml#L792`
+
+<a id="dyn-algo-halving-months"></a>
+### dyn-algo-halving-months
+
+**8.4 months**: halving time of compute for a fixed language-model performance, 2012 to 2023
+
+- basis: measured
+- source: [@ho2024algorithmic], 2023
+- note: Section 3.1, 95% CI 4.5 to 14.3 months
+- defined in: `data/inputs/013-dynamical.toml#L801`
+
+<a id="dyn-algo-compute-share-lo"></a>
+### dyn-algo-compute-share-lo
+
+**60%**: share of language-model gains from compute scaling, low end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2023
+- defined in: `data/inputs/013-dynamical.toml#L811`
+
+<a id="dyn-algo-compute-share-hi"></a>
+### dyn-algo-compute-share-hi
+
+**95%**: share of language-model gains from compute scaling, high end
+
+- basis: measured
+- source: [@ho2024algorithmic], 2023
+- defined in: `data/inputs/013-dynamical.toml#L819`
+
+<a id="dyn-algo-gain-claimed"></a>
+### dyn-algo-gain-claimed
+
+**22,000**: claimed language-model efficiency gain 2012 to 2023, multiple
+
+- basis: measured
+- source: [@gundlach2025origin], 2023
+- note: as cited by Gundlach et al. from Ho et al.
+- defined in: `data/inputs/013-dynamical.toml#L827`
+
+<a id="dyn-algo-gain-small-max"></a>
+### dyn-algo-gain-small-max
+
+**100**: efficiency gain accounted for at small compute, upper bound, multiple
+
+- basis: measured
+- source: [@gundlach2025origin], 2023
+- note: only the first factor of under 10 comes from the authors' ablations (spot-check minor item)
+- defined in: `data/inputs/013-dynamical.toml#L836`
+
+<a id="dyn-frontier-explained-lo"></a>
+### dyn-frontier-explained-lo
+
+**80%**: share of frontier performance differences explained by training compute, low end
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2025
+- defined in: `data/inputs/013-dynamical.toml#L845`
+
+<a id="dyn-frontier-explained-hi"></a>
+### dyn-frontier-explained-hi
+
+**90%**: share of frontier performance differences explained by training compute, high end
+
+- basis: measured
+- source: [@mertens2026secretsauce], 2025
+- defined in: `data/inputs/013-dynamical.toml#L853`
+
+<a id="dyn-innovations-under-cap"></a>
+### dyn-innovations-under-cap
+
+**50%**: share of 36 catalogued pretraining innovations feasible under a GPT-2-compute or 8xH100 cap
+
+- basis: measured
+- source: [@barnett2025innovation], 2025
+- defined in: `data/inputs/013-dynamical.toml#L861`
+
+<a id="dyn-open-closed-lag"></a>
+### dyn-open-closed-lag
+
+**4 months**: average lag of the best open-weight models behind closed ones on the ECI, since January 2026
+
+- basis: measured
+- source: [@edwards2026openclosed], 2026-05
+- defined in: `data/inputs/013-dynamical.toml#L869`
+
+<a id="dyn-horizon-compute-delay"></a>
+### dyn-horizon-compute-delay
+
+**7 years**: delay of 1-month 80% time horizons against trend under a compute slowdown
+
+- basis: modelled
+- source: [@whitfill2025horizon], 2025-11
+- note: the model assumes horizon growth proportional to compute growth, which rules out a software-only singularity by assumption
+- defined in: `data/inputs/013-dynamical.toml#L878`
+
+<a id="dyn-horizon-doubling"></a>
+### dyn-horizon-doubling
+
+**129 days**: doubling time of the 50% time horizon, METR-Horizon-v1.1, 2023 onward
+
+- basis: measured
+- source: [@metr2026thdata], 2026-09
+- note: benchmark_results_1_1.yaml; 95% CI 104.428 to 158.012; excludes points above 16 hours
+- defined in: `data/inputs/013-dynamical.toml#L891`
+
+<a id="dyn-horizon-doubling-lo"></a>
+### dyn-horizon-doubling-lo
+
+**104 days**: doubling time, 95% CI lower end
+
+- basis: measured
+- source: [@metr2026thdata], 2026-09
+- defined in: `data/inputs/013-dynamical.toml#L901`
+
+<a id="dyn-horizon-doubling-hi"></a>
+### dyn-horizon-doubling-hi
+
+**158 days**: doubling time, 95% CI upper end
+
+- basis: measured
+- source: [@metr2026thdata], 2026-09
+- defined in: `data/inputs/013-dynamical.toml#L910`
+
+<a id="dyn-horizon-doubling-2019"></a>
+### dyn-horizon-doubling-2019
+
+**207 days**: doubling time of the 50% time horizon, 2019 to 2025
+
+- basis: measured
+- source: [@kwa2025horizon], 2025
+- note: Section 3.2, 95% CI 166 to 240 days
+- defined in: `data/inputs/013-dynamical.toml#L919`
+
+<a id="dyn-horizon-p50"></a>
+### dyn-horizon-p50
+
+**1,045 minutes**: 50% time horizon of the latest state-of-the-art entry (Claude Mythos Preview, early, released 2026-04-07)
+
+- basis: measured
+- source: [@metr2026thdata], 2026-04
+- note: 95% CI 508.9 to 3,304.3 minutes
+- defined in: `data/inputs/013-dynamical.toml#L929`
+
+<a id="dyn-horizon-p80"></a>
+### dyn-horizon-p80
+
+**186 minutes**: 80% time horizon of the same entry
+
+- basis: measured
+- source: [@metr2026thdata], 2026-04
+- note: 95% CI 97.3 to 398.5 minutes
+- defined in: `data/inputs/013-dynamical.toml#L939`
+
+<a id="dyn-ord-t80-over-t50"></a>
+### dyn-ord-t80-over-t50
+
+**0.33**: ratio of the 80% to the 50% horizon under Ord's constant-hazard model
+
+- basis: modelled
+- source: [@ord2025halflife], 2025
+- defined in: `data/inputs/013-dynamical.toml#L949`
+
+<a id="dyn-horizon-long-baselined"></a>
+### dyn-horizon-long-baselined
+
+**5**: tasks over 8 hours with measured human baseline times
+
+- basis: measured
+- source: [@metr2026th11], 2026-01
+- defined in: `data/inputs/013-dynamical.toml#L957`
+
+<a id="dyn-horizon-long-tasks"></a>
+### dyn-horizon-long-tasks
+
+**31**: tasks over 8 hours in the TH1.1 suite
+
+- basis: measured
+- source: [@metr2026th11], 2026-01
+- defined in: `data/inputs/013-dynamical.toml#L965`
+
+<a id="dyn-aisi-rep-2023"></a>
+### dyn-aisi-rep-2023
+
+**5%**: best early-2023 model's success rate across 11 of 20 RepliBench evaluations, upper bound
+
+- basis: measured
+- source: [@aisi2025trends], 2023
+- note: Section 5; simplified versions of the tasks
+- defined in: `data/inputs/013-dynamical.toml#L976`
+
+<a id="dyn-aisi-rep-2025"></a>
+### dyn-aisi-rep-2025
+
+**60%**: two frontier models' success rate on the same evaluations by summer 2025, lower bound
+
+- basis: measured
+- source: [@aisi2025trends], 2025
+- note: Section 5; models 'currently unlikely to succeed in real-world conditions'
+- defined in: `data/inputs/013-dynamical.toml#L985`
+
+<a id="dyn-replibench-families"></a>
+### dyn-replibench-families
+
+**20**: RepliBench task families
+
+- basis: spec
+- source: [@black2025replibench], 2025-04
+- note: 86 tasks in 4 domains: resources, weight exfiltration, replication onto compute, persistence
+- defined in: `data/inputs/013-dynamical.toml#L994`
+
+<a id="dyn-replibench-best-families"></a>
+### dyn-replibench-best-families
+
+**15**: families on which Claude 3.7 Sonnet scores above 50% pass@10
+
+- basis: measured
+- source: [@black2025replibench], 2025-04
+- defined in: `data/inputs/013-dynamical.toml#L1003`
+
+<a id="dyn-replibench-hard-families"></a>
+### dyn-replibench-hard-families
+
+**9**: families above 50% pass@10 on the hardest variants
+
+- basis: measured
+- source: [@black2025replibench], 2025-04
+- defined in: `data/inputs/013-dynamical.toml#L1011`
+
+<a id="dyn-fudan-llama"></a>
+### dyn-fudan-llama
+
+**50%**: trials in which Llama3.1-70B-Instruct created a live separate copy of itself
+
+- basis: measured
+- source: [@pan2024selfrep], 2024-12
+- note: abstract only; open weights held locally
+- defined in: `data/inputs/013-dynamical.toml#L1019`
+
+<a id="dyn-fudan-qwen"></a>
+### dyn-fudan-qwen
+
+**90%**: trials in which Qwen2.5-72B-Instruct created a live separate copy of itself
+
+- basis: measured
+- source: [@pan2024selfrep], 2024-12
+- note: abstract only; open weights held locally
+- defined in: `data/inputs/013-dynamical.toml#L1028`
+
+<a id="dyn-fudan-capable"></a>
+### dyn-fudan-capable
+
+**11**: AI systems found capable of self-replication
+
+- basis: measured
+- source: [@pan2025selfrep], 2025-03
+- note: abstract only
+- defined in: `data/inputs/013-dynamical.toml#L1037`
+
+<a id="dyn-fudan-evaluated"></a>
+### dyn-fudan-evaluated
+
+**32**: AI systems evaluated for self-replication
+
+- basis: measured
+- source: [@pan2025selfrep], 2025-03
+- defined in: `data/inputs/013-dynamical.toml#L1046`
+
+<a id="dyn-ara-scaleup"></a>
+### dyn-ara-scaleup
+
+**100**: effective compute scale-up after which evaluations could not rule out autonomous replication without intermediate checks, multiple (about)
+
+- basis: modelled
+- source: [@kinniment2023ara], 2023-12
+- defined in: `data/inputs/013-dynamical.toml#L1054`
+
+<a id="dyn-seal-squad"></a>
+### dyn-seal-squad
+
+**47.0%**: SEAL knowledge incorporation accuracy, Qwen2.5-7B, with self-edits
+
+- basis: measured
+- source: [@zweiger2025seal], 2025-09
+- note: Section 4.2
+- defined in: `data/inputs/013-dynamical.toml#L1065`
+
+<a id="dyn-seal-squad-base"></a>
+### dyn-seal-squad-base
+
+**33.5%**: the same, passage only
+
+- basis: measured
+- source: [@zweiger2025seal], 2025-09
+- defined in: `data/inputs/013-dynamical.toml#L1074`
+
+<a id="dyn-seal-squad-gpt41"></a>
+### dyn-seal-squad-gpt41
+
+**46.3%**: the same, trained on GPT-4.1 synthetic data
+
+- basis: measured
+- source: [@zweiger2025seal], 2025-09
+- defined in: `data/inputs/013-dynamical.toml#L1082`
+
+<a id="dyn-seal-edit-s-lo"></a>
+### dyn-seal-edit-s-lo
+
+**30 s**: time to evaluate one self-edit, low end
+
+- basis: measured
+- source: [@zweiger2025seal], 2025-09
+- defined in: `data/inputs/013-dynamical.toml#L1090`
+
+<a id="dyn-seal-edit-s-hi"></a>
+### dyn-seal-edit-s-hi
+
+**45 s**: time to evaluate one self-edit, high end
+
+- basis: measured
+- source: [@zweiger2025seal], 2025-09
+- defined in: `data/inputs/013-dynamical.toml#L1099`
+
+<a id="dyn-ttt-arc"></a>
+### dyn-ttt-arc
+
+**53.0%**: ARC accuracy of an 8B model with test-time training
+
+- basis: measured
+- source: [@akyurek2024ttt], 2024-11
+- defined in: `data/inputs/013-dynamical.toml#L1108`
+
+<a id="dyn-capex-2026-feb"></a>
+### dyn-capex-2026-feb
+
+**650 billion USD**: 2026 capital spending plans of the four largest technology companies, February 2026
+
+- basis: vendor
+- source: [@day2026capex], 2026-02
+- defined in: `data/inputs/013-dynamical.toml#L1119`
+
+<a id="dyn-capex-growth"></a>
+### dyn-capex-growth
+
+**60%**: growth of that spending over 2025 (estimated)
+
+- basis: vendor
+- source: [@day2026capex], 2026-02
+- defined in: `data/inputs/013-dynamical.toml#L1128`
+
+<a id="dyn-capex-2026-may"></a>
+### dyn-capex-2026-may
+
+**700 billion USD**: 2026 AI spending plans of the big hyperscalers, May 2026, lower bound
+
+- basis: vendor
+- source: [@ehsan2026capex], 2026-05
+- defined in: `data/inputs/013-dynamical.toml#L1136`
+
+<a id="dyn-compute-sold-2024"></a>
+### dyn-compute-sold-2024
+
+**5.1 million H100e**: AI compute sold in 2024
+
+- basis: measured
+- source: [@epoch2026chipsales], 2024
+- note: the survey's sum of Epoch's per-quarter median estimates, not a figure Epoch states
+- defined in: `data/inputs/013-dynamical.toml#L1145`
+
+<a id="dyn-compute-sold-2025"></a>
+### dyn-compute-sold-2025
+
+**13.6 million H100e**: AI compute sold in 2025
+
+- basis: measured
+- source: [@epoch2026chipsales], 2025
+- note: the survey's sum of Epoch's per-quarter median estimates, not a figure Epoch states
+- defined in: `data/inputs/013-dynamical.toml#L1155`
+
+<a id="dyn-frontier-compute-growth"></a>
+### dyn-frontier-compute-growth
+
+**5.3**: annual multiple of frontier model training compute, 2010 to May 2024
+
+- basis: measured
+- source: [@sevilla2024computegrowth], 2024-05
+- note: 90% CI 4.9 to 5.7
+- defined in: `data/inputs/013-dynamical.toml#L1165`
+
+<a id="dyn-frontier-cost-growth"></a>
+### dyn-frontier-cost-growth
+
+**2.4**: annual multiple of the amortised cost of the most compute-intensive training runs since 2016
+
+- basis: measured
+- source: [@cottier2024rising], 2024
+- note: 90% CI 2.0 to 2.9
+- defined in: `data/inputs/013-dynamical.toml#L1174`
+
+<a id="dyn-chip-price-perf-growth"></a>
+### dyn-chip-price-perf-growth
+
+**1.49**: annual multiple of AI chip performance per dollar since 2023
+
+- basis: measured
+- source: [@epoch2026trends], 2026-11
+- note: 90% CI 1.36 to 1.66
+- defined in: `data/inputs/013-dynamical.toml#L1183`
+
+<a id="dyn-hyperscaler-compute-share"></a>
+### dyn-hyperscaler-compute-share
+
+**70%**: share of global AI compute owned by the five US hyperscalers, lower bound
+
+- basis: measured
+- source: [@you2026chipowners], 2026-04
+- defined in: `data/inputs/013-dynamical.toml#L1192`
+
+<a id="dyn-dc-1gw-months-fastest"></a>
+### dyn-dc-1gw-months-fastest
+
+**11.6 months**: fastest recent build from construction start to 1 GW of facility power
+
+- basis: measured
+- source: [@somala2025buildtimes], 2025-11
+- note: recent sites range from 1 to 3.6 years
+- defined in: `data/inputs/013-dynamical.toml#L1200`
+
+<a id="dyn-fab-build-days"></a>
+### dyn-fab-build-days
+
+**682 days**: average time from construction start to production for greenfield fabs, 1990 to 2020
+
+- basis: measured
+- source: [@verwey2021permits], 2021
+- note: PDF p. 6, excluding permitting
+- defined in: `data/inputs/013-dynamical.toml#L1210`
+
+<a id="dyn-smuggled-h100e"></a>
+### dyn-smuggled-h100e
+
+**0.66 million H100e**: cumulative compute smuggled into China through 2025, median
+
+- basis: measured
+- source: [@juniewicz2026smuggling], 2025
+- note: 90% CI 0.29 to 1.6 million H100e, about a third of China's AI compute
+- defined in: `data/inputs/013-dynamical.toml#L1220`
+
+<a id="dyn-bloom-rp-decline-moore"></a>
+### dyn-bloom-rp-decline-moore
+
+**6.8%**: annual decline of research productivity in Moore's Law research, 1971 to 2014
+
+- basis: measured
+- source: [@bloom2020ideas], 2014
+- note: Table 7, -6.8% a year, half-life about 10 years
+- defined in: `data/inputs/013-dynamical.toml#L1233`
+
+<a id="dyn-selection-bias-factor"></a>
+### dyn-selection-bias-factor
+
+**9**: possible overstatement of observational algorithmic progress estimates from selection bias, first pass (either sign possible)
+
+- basis: modelled
+- source: [@whitfill2025selection], 2025
+- note: Section 1.3; the author lists many other possible explanations
+- defined in: `data/inputs/013-dynamical.toml#L1242`
+
+<a id="dyn-dc-1gw-years-lo"></a>
+### dyn-dc-1gw-years-lo
+
+**1**: time from construction start to 1 GW of facility power at recent sites, low end
+
+- basis: measured
+- source: [@somala2025buildtimes], 2025-11
+- defined in: `data/inputs/013-dynamical.toml#L1251`
+
+<a id="dyn-dc-1gw-years-hi"></a>
+### dyn-dc-1gw-years-hi
+
+**3.6 years**: the same, high end
+
+- basis: measured
+- source: [@somala2025buildtimes], 2025-11
+- defined in: `data/inputs/013-dynamical.toml#L1259`
+
+<a id="dyn-aisi-rep-evals"></a>
+### dyn-aisi-rep-evals
+
+**11**: RepliBench evaluations in the AISI trend comparison
+
+- basis: measured
+- source: [@aisi2025trends], 2025
+- defined in: `data/inputs/013-dynamical.toml#L1268`
+
+<a id="dyn-cunningham-uplift-reported"></a>
+### dyn-cunningham-uplift-reported
+
+**4**: reported research uplift that Cunningham et al. take at face value for their illustration, multiple
+
+- basis: modelled
+- source: [@cunningham2026rsi], 2026
+- note: Section 4.1: 'very likely to be an overestimate'
+- defined in: `data/inputs/013-dynamical.toml#L1276`
+
+<a id="cog-rebench-attempts-human"></a>
+### cog-rebench-attempts-human
+
+**3.4/h**: scored attempts an hour by human experts on RE-Bench
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: Sec. 5.1
+- defined in: `data/inputs/014-cognitive.toml#L10`
+
+<a id="cog-rebench-attempts-agent"></a>
+### cog-rebench-attempts-agent
+
+**36.8/h**: scored attempts an hour by the AIDE agent on RE-Bench
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: Sec. 5.1 (the Modular scaffold made 25.3)
+- defined in: `data/inputs/014-cognitive.toml#L20`
+
+<a id="cog-rebench-agent-cost"></a>
+### cog-rebench-agent-cost
+
+**123 USD**: approximate cost of one 8-hour agent run on RE-Bench
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: Sec. 6.2, API cost
+- defined in: `data/inputs/014-cognitive.toml#L30`
+
+<a id="cog-rebench-human-cost"></a>
+### cog-rebench-human-cost
+
+**1,855 USD**: approximate pay to a human expert for one 8-hour RE-Bench run
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: Sec. 6.2
+- defined in: `data/inputs/014-cognitive.toml#L40`
+
+<a id="cog-rebench-run-hours"></a>
+### cog-rebench-run-hours
+
+**8 h**: length of one RE-Bench human attempt
+
+- basis: spec
+- source: [@wijk2024rebench], 2024-11
+- defined in: `data/inputs/014-cognitive.toml#L50`
+
+<a id="cog-rebench-human-attempts"></a>
+### cog-rebench-human-attempts
+
+**71**: 8-hour attempts by human experts in the RE-Bench baseline
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: abstract; 61 distinct experts
+- defined in: `data/inputs/014-cognitive.toml#L59`
+
+<a id="cog-rebench-ai-over-human-2h"></a>
+### cog-rebench-ai-over-human-2h
+
+**4**: best agent's score over human experts' score at a 2-hour budget, RE-Bench
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: abstract; equal GPU hours for both sides
+- defined in: `data/inputs/014-cognitive.toml#L68`
+
+<a id="cog-rebench-human-over-ai-32h"></a>
+### cog-rebench-human-over-ai-32h
+
+**2**: human experts' score over the top agent's score at a 32-hour budget, RE-Bench
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: abstract; best of four 8-hour runs
+- defined in: `data/inputs/014-cognitive.toml#L77`
+
+<a id="cog-rebench-budget-short"></a>
+### cog-rebench-budget-short
+
+**2 h**: shortest time budget compared in RE-Bench
+
+- basis: spec
+- source: [@wijk2024rebench], 2024-11
+- defined in: `data/inputs/014-cognitive.toml#L86`
+
+<a id="cog-rebench-budget-mid"></a>
+### cog-rebench-budget-mid
+
+**8 h**: time budget at which humans narrowly exceeded agents in RE-Bench
+
+- basis: spec
+- source: [@wijk2024rebench], 2024-11
+- defined in: `data/inputs/014-cognitive.toml#L95`
+
+<a id="cog-rebench-budget-long"></a>
+### cog-rebench-budget-long
+
+**32 h**: longest time budget compared in RE-Bench
+
+- basis: spec
+- source: [@wijk2024rebench], 2024-11
+- defined in: `data/inputs/014-cognitive.toml#L104`
+
+<a id="cog-gdpval-naive-speedup"></a>
+### cog-gdpval-naive-speedup
+
+**90**: GPT-5's naive speed gain over experts on GDPval tasks, review not counted
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- note: Table 2
+- defined in: `data/inputs/014-cognitive.toml#L113`
+
+<a id="cog-gdpval-review-speedup"></a>
+### cog-gdpval-review-speedup
+
+**1.39**: GPT-5's speed gain on GDPval under 'try n times, then fix', review counted
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- note: Table 2 ('try 1x, then fix' gives 1.12)
+- defined in: `data/inputs/014-cognitive.toml#L122`
+
+<a id="cog-gdpval-naive-cost-gain"></a>
+### cog-gdpval-naive-cost-gain
+
+**474**: GPT-5's naive cost gain over experts on GDPval tasks
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- note: Table 2
+- defined in: `data/inputs/014-cognitive.toml#L131`
+
+<a id="cog-gdpval-review-cost-gain"></a>
+### cog-gdpval-review-cost-gain
+
+**1.63**: GPT-5's cost gain on GDPval under 'try n times, then fix'
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- note: Table 2
+- defined in: `data/inputs/014-cognitive.toml#L140`
+
+<a id="cog-gdpval-expert-minutes"></a>
+### cog-gdpval-expert-minutes
+
+**404 min**: expert time per GDPval gold task
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- note: App. A.2.1; review adds 109 minutes
+- defined in: `data/inputs/014-cognitive.toml#L149`
+
+<a id="cog-gdpval-expert-cost"></a>
+### cog-gdpval-expert-cost
+
+**361 USD**: expert cost per GDPval gold task
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- note: App. A.2.1, from median wages; review adds 86 USD
+- defined in: `data/inputs/014-cognitive.toml#L159`
+
+<a id="cog-horizon-human-rate"></a>
+### cog-horizon-human-rate
+
+**143.61 USD/h**: hourly human cost METR assumed for its cost comparison (an L4 engineer's salary over 2,000 hours)
+
+- basis: assumption
+- source: [@kwa2025horizon], 2025-03
+- note: Sec. 8.2; METR's assumption, not a measurement
+- defined in: `data/inputs/014-cognitive.toml#L169`
+
+<a id="cog-horizon-cheap-share"></a>
+### cog-horizon-cheap-share
+
+**80%**: share of successful agent runs costing under a tenth of the human cost (lower bound)
+
+- basis: measured
+- source: [@kwa2025horizon], 2025-03
+- note: Sec. 8.2, 'more than 80%'; rests on the assumed human rate
+- defined in: `data/inputs/014-cognitive.toml#L179`
+
+<a id="cog-ctf-runtime-share"></a>
+### cog-ctf-runtime-share
+
+**20%**: best autonomous agent's cumulative runtime as a share of the human teams'
+
+- basis: measured
+- source: [@tang2026ctfcollab], 2026-02
+- note: introduction, 'only about 1/5'; university-level onsite CTF
+- defined in: `data/inputs/014-cognitive.toml#L188`
+
+<a id="cog-ctf-cost-low"></a>
+### cog-ctf-cost-low
+
+**95.32 USD**: API cost of the best autonomous CTF agent, lower of the two figures the paper gives
+
+- basis: measured
+- source: [@tang2026ctfcollab], 2026-02
+- note: Sec. 7.2
+- defined in: `data/inputs/014-cognitive.toml#L197`
+
+<a id="cog-ctf-cost-high"></a>
+### cog-ctf-cost-high
+
+**96.32 USD**: API cost of the best autonomous CTF agent, higher of the two figures the paper gives
+
+- basis: measured
+- source: [@tang2026ctfcollab], 2026-02
+- note: introduction
+- defined in: `data/inputs/014-cognitive.toml#L207`
+
+<a id="cog-ctf-points"></a>
+### cog-ctf-points
+
+**4,900 points**: best autonomous agent's score, which would have placed second among the human teams
+
+- basis: measured
+- source: [@tang2026ctfcollab], 2026-02
+- note: Sec. 7.2; agent-only scoreboard run in parallel, not entered against the teams; the date is the paper's (submitted 2026-02-24), the event itself is undated
+- defined in: `data/inputs/014-cognitive.toml#L217`
+
+<a id="cog-ctf-duration"></a>
+### cog-ctf-duration
+
+**24 h**: length of the onsite CTF
+
+- basis: spec
+- source: [@tang2026ctfcollab], 2026-02
+- note: Sec. 4.2
+- defined in: `data/inputs/014-cognitive.toml#L227`
+
+<a id="cog-ctf-undergrad-share"></a>
+### cog-ctf-undergrad-share
+
+**82.9%**: share of the CTF study's participants who were undergraduates
+
+- basis: measured
+- source: [@tang2026ctfcollab], 2026-02
+- note: per the independent spot-check (research/notes/11-spot-check.md); 14.6% were graduate students
+- defined in: `data/inputs/014-cognitive.toml#L237`
+
+<a id="cog-ctf-challenges"></a>
+### cog-ctf-challenges
+
+**17 challenges**: new challenges in the onsite CTF
+
+- basis: spec
+- source: [@tang2026ctfcollab], 2026-02
+- note: per the independent spot-check (research/notes/11-spot-check.md)
+- defined in: `data/inputs/014-cognitive.toml#L246`
+
+<a id="cog-sc-copies"></a>
+### cog-sc-copies
+
+**30**: agents per human research engineer in AI 2027's superhuman-coder milestone
+
+- basis: spec
+- source: [@lifland2025timelines], 2025-04
+- note: SC definition
+- defined in: `data/inputs/014-cognitive.toml#L256`
+
+<a id="cog-sc-speed"></a>
+### cog-sc-speed
+
+**30**: speed of each agent relative to a human engineer in the superhuman-coder milestone
+
+- basis: spec
+- source: [@lifland2025timelines], 2025-04
+- note: SC definition
+- defined in: `data/inputs/014-cognitive.toml#L265`
+
+<a id="cog-sc-compute-share"></a>
+### cog-sc-compute-share
+
+**5%**: share of the company's compute that runs the superhuman-coder agents
+
+- basis: spec
+- source: [@lifland2025timelines], 2025-04
+- note: SC definition
+- defined in: `data/inputs/014-cognitive.toml#L274`
+
+<a id="cog-asi-speed-factor"></a>
+### cog-asi-speed-factor
+
+**10**: speed factor (lower bound) by which Genewein et al.'s ASI beats the expert collective
+
+- basis: spec
+- source: [@genewein2026agiasi], 2026-11
+- note: Sec. 3 remark, 'a factor of 10 or more'
+- defined in: `data/inputs/014-cognitive.toml#L283`
+
+<a id="cog-asi-collective-years"></a>
+### cog-asi-collective-years
+
+**10 yr**: working time of Genewein et al.'s reference expert collective
+
+- basis: spec
+- source: [@genewein2026agiasi], 2026-11
+- note: Sec. 3 remark; tens of thousands of experts with 2010 technology
+- defined in: `data/inputs/014-cognitive.toml#L292`
+
+<a id="cog-rsp-cost-factor"></a>
+### cog-rsp-cost-factor
+
+**5**: factor within which AI must match the cost of Anthropic's whole research staff (RSP v3.4)
+
+- basis: spec
+- source: [@anthropic2026rsp], 2026-07
+- note: automated AI R&D threshold, 'within a factor of 5'
+- defined in: `data/inputs/014-cognitive.toml#L302`
+
+<a id="cog-pf-wallclock-fraction"></a>
+### cog-pf-wallclock-fraction
+
+**20%**: share of 2024 wall-clock time for a generational improvement, OpenAI's Critical self-improvement level
+
+- basis: spec
+- source: [@openai2025preparedness], 2025-04
+- note: Table 1, lagging indicator, sustained for several months
+- defined in: `data/inputs/014-cognitive.toml#L311`
+
+<a id="cog-hendrycks-pace"></a>
+### cog-hendrycks-pace
+
+**100**: pace relative to a human in Hendrycks et al.'s illustration of an intelligence recursion
+
+- basis: modelled
+- source: [@hendrycks2025superintelligence], 2025-04
+- note: an illustration, not a measurement
+- defined in: `data/inputs/014-cognitive.toml#L320`
+
+<a id="cog-hendrycks-copies"></a>
+### cog-hendrycks-copies
+
+**10,000**: copies in Hendrycks et al.'s illustration of an intelligence recursion
+
+- basis: modelled
+- source: [@hendrycks2025superintelligence], 2025-04
+- note: an illustration, not a measurement
+- defined in: `data/inputs/014-cognitive.toml#L329`
+
+<a id="cog-aschenbrenner-equivalents"></a>
+### cog-aschenbrenner-equivalents
+
+**100,000,000**: automated researchers ('human-equivalents') in Aschenbrenner's essay
+
+- basis: modelled
+- source: [@aschenbrenner2024sa], 2024-06
+- note: 'perhaps 100 million'; an essay's estimate
+- defined in: `data/inputs/014-cognitive.toml#L338`
+
+<a id="cog-amodei-speed-low"></a>
+### cog-amodei-speed-low
+
+**10**: low end of the speed relative to humans assumed in 'Machines of Loving Grace'
+
+- basis: modelled
+- source: [@amodei2024grace], 2024-10
+- note: an essay's assumption
+- defined in: `data/inputs/014-cognitive.toml#L347`
+
+<a id="cog-amodei-speed-high"></a>
+### cog-amodei-speed-high
+
+**100**: high end of the speed relative to humans assumed in 'Machines of Loving Grace'
+
+- basis: modelled
+- source: [@amodei2024grace], 2024-10
+- note: an essay's assumption
+- defined in: `data/inputs/014-cognitive.toml#L356`
+
+<a id="cog-baseliner-slowdown-low"></a>
+### cog-baseliner-slowdown-low
+
+**5**: low end of how much longer METR's contract baseliners took than repository maintainers
+
+- basis: measured
+- source: [@kwa2025horizon], 2025-03
+- note: Sec. 6.4
+- defined in: `data/inputs/014-cognitive.toml#L365`
+
+<a id="cog-baseliner-slowdown-high"></a>
+### cog-baseliner-slowdown-high
+
+**18**: high end of how much longer METR's contract baseliners took than repository maintainers
+
+- basis: measured
+- source: [@kwa2025horizon], 2025-03
+- note: Sec. 6.4
+- defined in: `data/inputs/014-cognitive.toml#L374`
+
+<a id="cog-hcast-short-success-low"></a>
+### cog-hcast-short-success-low
+
+**70%**: low end of agent success on HCAST tasks humans finish in under an hour
+
+- basis: measured
+- source: [@rein2025hcast], 2025-03
+- note: abstract
+- defined in: `data/inputs/014-cognitive.toml#L383`
+
+<a id="cog-hcast-short-success-high"></a>
+### cog-hcast-short-success-high
+
+**80%**: high end of agent success on HCAST tasks humans finish in under an hour
+
+- basis: measured
+- source: [@rein2025hcast], 2025-03
+- note: abstract
+- defined in: `data/inputs/014-cognitive.toml#L392`
+
+<a id="cog-hcast-long-success-max"></a>
+### cog-hcast-long-success-max
+
+**20%**: upper bound on agent success on HCAST tasks taking humans over four hours
+
+- basis: measured
+- source: [@rein2025hcast], 2025-03
+- note: abstract, 'less than 20%'
+- defined in: `data/inputs/014-cognitive.toml#L401`
+
+<a id="cog-horizon-best"></a>
+### cog-horizon-best
+
+**1,045 min**: best published 50% time horizon (Claude Mythos Preview, early)
+
+- basis: measured
+- source: [@metr2026horizons], 2026-04
+- note: benchmark_results_1_1.yaml
+- defined in: `data/inputs/014-cognitive.toml#L410`
+
+<a id="cog-horizon-best-ci-low"></a>
+### cog-horizon-best-ci-low
+
+**509 min**: lower end of the confidence interval on the best 50% time horizon
+
+- basis: measured
+- source: [@metr2026horizons], 2026-04
+- defined in: `data/inputs/014-cognitive.toml#L420`
+
+<a id="cog-horizon-best-ci-high"></a>
+### cog-horizon-best-ci-high
+
+**3,304 min**: upper end of the confidence interval on the best 50% time horizon
+
+- basis: measured
+- source: [@metr2026horizons], 2026-04
+- defined in: `data/inputs/014-cognitive.toml#L429`
+
+<a id="cog-horizon-reliable-limit"></a>
+### cog-horizon-reliable-limit
+
+**16 h**: horizon above which METR says its task suite gives unreliable measurements
+
+- basis: spec
+- source: [@metr2026horizons], 2026-09
+- note: the page is no longer updated after 2026-09-08
+- defined in: `data/inputs/014-cognitive.toml#L438`
+
+<a id="cog-th11-long-tasks"></a>
+### cog-th11-long-tasks
+
+**31 tasks**: tasks over 8 hours in METR's Time Horizon 1.1 suite
+
+- basis: measured
+- source: [@metr2026th11], 2026-01
+- defined in: `data/inputs/014-cognitive.toml#L448`
+
+<a id="cog-th11-long-baselined"></a>
+### cog-th11-long-baselined
+
+**5**: tasks over 8 hours with a measured human baseline time in Time Horizon 1.1
+
+- basis: measured
+- source: [@metr2026th11], 2026-01
+- defined in: `data/inputs/014-cognitive.toml#L457`
+
+<a id="cog-paperbench-best"></a>
+### cog-paperbench-best
+
+**21%**: best agent's average replication score on PaperBench
+
+- basis: measured
+- source: [@starace2025paperbench], 2025-04
+- note: Claude 3.5 Sonnet (New); ML PhDs not yet outperformed
+- defined in: `data/inputs/014-cognitive.toml#L468`
+
+<a id="cog-mlebench-pass1"></a>
+### cog-mlebench-pass1
+
+**16.9%**: share of MLE-bench competitions with a medal at one attempt (o1-preview with AIDE)
+
+- basis: measured
+- source: [@chan2024mlebench], 2024-10
+- note: abstract; 24 hours on one A10 GPU
+- defined in: `data/inputs/014-cognitive.toml#L477`
+
+<a id="cog-mlebench-pass8"></a>
+### cog-mlebench-pass8
+
+**34.1%**: share of MLE-bench competitions with a medal at best of eight attempts
+
+- basis: measured
+- source: [@chan2024mlebench], 2024-10
+- note: Sec. 3.2
+- defined in: `data/inputs/014-cognitive.toml#L486`
+
+<a id="cog-nanogpt-records"></a>
+### cog-nanogpt-records
+
+**77 records**: NanoGPT speedrun records set from May 2024 to March 2026
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- defined in: `data/inputs/014-cognitive.toml#L495`
+
+<a id="cog-nanogpt-ai-records"></a>
+### cog-nanogpt-ai-records
+
+**4**: NanoGPT speedrun records credited to AI agents, each co-credited with a human
+
+- basis: measured
+- source: [@shetty2026metrnanogpt], 2026-03
+- note: all shallow to moderate; none at the deep or breakthrough end
+- defined in: `data/inputs/014-cognitive.toml#L504`
+
+<a id="cog-anthropic-ai-led-share"></a>
+### cog-anthropic-ai-led-share
+
+**26%**: share of Anthropic's AI R&D work that Claude 'leads', by its own index
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-08
+- note: up from under 1% in February 2026; 'not operating fully autonomously for any measured subset'
+- defined in: `data/inputs/014-cognitive.toml#L513`
+
+<a id="cog-anthropic-agents"></a>
+### cog-anthropic-agents
+
+**30,000 agents**: agents running at once on Anthropic's internal platform (about)
+
+- basis: vendor
+- source: [@anthropic2026pace], 2026-08
+- note: on one internal platform
+- defined in: `data/inputs/014-cognitive.toml#L522`
+
+<a id="cog-metr-acceleration"></a>
+### cog-metr-acceleration
+
+**1.9**: METR's estimate of the acceleration of Anthropic's capability index since October 2025
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- note: ratio of growth rates; inputs not held fixed
+- defined in: `data/inputs/014-cognitive.toml#L532`
+
+<a id="cog-metr-acceleration-ci-low"></a>
+### cog-metr-acceleration-ci-low
+
+**1.5**: lower end of the 95% interval on METR's acceleration estimate
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/014-cognitive.toml#L541`
+
+<a id="cog-metr-acceleration-ci-high"></a>
+### cog-metr-acceleration-ci-high
+
+**2.8**: upper end of the 95% interval on METR's acceleration estimate
+
+- basis: measured
+- source: [@metr-anthropic-acceleration-2026], 2026-10
+- defined in: `data/inputs/014-cognitive.toml#L549`
+
+<a id="cog-cybench-tasks"></a>
+### cog-cybench-tasks
+
+**40 tasks**: professional-level CTF tasks in Cybench
+
+- basis: spec
+- source: [@zhang2024cybench], 2024-08
+- defined in: `data/inputs/014-cognitive.toml#L557`
+
+<a id="cog-cybench-hardest-hours"></a>
+### cog-cybench-hardest-hours
+
+**24.9 h**: first-solve time of the hardest Cybench task by the fastest human team
+
+- basis: measured
+- source: [@zhang2024cybench], 2024-08
+- note: 24 hours 54 minutes
+- defined in: `data/inputs/014-cognitive.toml#L566`
+
+<a id="cog-cybench-unguided-best"></a>
+### cog-cybench-unguided-best
+
+**93%**: best unguided Cybench score, from a developer's system card
+
+- basis: vendor
+- source: [@epoch2026hub], 2026-02
+- note: cybench_external.csv, Claude Opus 4.6 system card
+- defined in: `data/inputs/014-cognitive.toml#L576`
+
+<a id="cog-cybench-pass30"></a>
+### cog-cybench-pass30
+
+**100%**: Cybench score at best of 30 attempts, as the same system card reports it (about)
+
+- basis: vendor
+- source: [@epoch2026hub], 2026-02
+- note: '~100% for pass@30'
+- defined in: `data/inputs/014-cognitive.toml#L585`
+
+<a id="cog-vct-virologist"></a>
+### cog-vct-virologist
+
+**22.1%**: expert virologists' average on VCT questions in their own sub-areas
+
+- basis: measured
+- source: [@gotting2025vct], 2025-04
+- defined in: `data/inputs/014-cognitive.toml#L594`
+
+<a id="cog-vct-o3"></a>
+### cog-vct-o3
+
+**43.8%**: o3's accuracy on the Virology Capabilities Test
+
+- basis: measured
+- source: [@gotting2025vct], 2025-04
+- defined in: `data/inputs/014-cognitive.toml#L602`
+
+<a id="cog-vct-percentile"></a>
+### cog-vct-percentile
+
+**94**: share of expert virologists (percent) o3 outperforms within their own sub-areas
+
+- basis: measured
+- source: [@gotting2025vct], 2025-04
+- defined in: `data/inputs/014-cognitive.toml#L610`
+
+<a id="cog-gpqa-expert"></a>
+### cog-gpqa-expert
+
+**65%**: PhD experts' accuracy on GPQA
+
+- basis: measured
+- source: [@rein2023gpqa], 2023-11
+- defined in: `data/inputs/014-cognitive.toml#L618`
+
+<a id="cog-gpqa-expert-adjusted"></a>
+### cog-gpqa-expert-adjusted
+
+**74%**: PhD experts' accuracy on GPQA after discounting mistakes they spotted afterwards
+
+- basis: measured
+- source: [@rein2023gpqa], 2023-11
+- defined in: `data/inputs/014-cognitive.toml#L626`
+
+<a id="cog-gpqa-nonexpert"></a>
+### cog-gpqa-nonexpert
+
+**34%**: skilled non-experts' accuracy on GPQA with over 30 minutes and full web access
+
+- basis: measured
+- source: [@rein2023gpqa], 2023-11
+- defined in: `data/inputs/014-cognitive.toml#L634`
+
+<a id="cog-gpqa-diamond-expert"></a>
+### cog-gpqa-diamond-expert
+
+**69.7%**: OpenAI-recruited PhD experts' score on GPQA Diamond
+
+- basis: vendor
+- source: [@epoch2026hub], 2026-11
+- note: GPQA Diamond page; a developer's figure
+- defined in: `data/inputs/014-cognitive.toml#L642`
+
+<a id="cog-gpqa-diamond-best"></a>
+### cog-gpqa-diamond-best
+
+**96.8%**: best GPQA Diamond score in Epoch's data
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- note: gpqa_diamond.csv, gpt-6.2-astra (max), stderr 1.2 points
+- defined in: `data/inputs/014-cognitive.toml#L651`
+
+<a id="cog-persuasion-win-share"></a>
+### cog-persuasion-win-share
+
+**64.4%**: share of unequal debates in which personalised GPT-4 was more persuasive than a human
+
+- basis: measured
+- source: [@salvi2025persuasion], 2025-05
+- note: journal abstract; human opponents were participants, not professional persuaders
+- defined in: `data/inputs/014-cognitive.toml#L660`
+
+<a id="cog-persuasion-n"></a>
+### cog-persuasion-n
+
+**900 participants**: participants in the preregistered persuasion debate study
+
+- basis: measured
+- source: [@salvi2025persuasion], 2025-05
+- defined in: `data/inputs/014-cognitive.toml#L669`
+
+<a id="cog-persuasion-odds"></a>
+### cog-persuasion-odds
+
+**81.2%**: relative increase in the odds of agreement with personalised GPT-4
+
+- basis: measured
+- source: [@salvi2025persuasion], 2025-05
+- note: 95% CI +26.0% to +160.7%; without personalisation not significant (p = 0.31)
+- defined in: `data/inputs/014-cognitive.toml#L678`
+
+<a id="cog-persuasion-odds-ci-low"></a>
+### cog-persuasion-odds-ci-low
+
+**26.0%**: lower end of the 95% interval on the persuasion odds increase
+
+- basis: measured
+- source: [@salvi2025persuasion], 2025-05
+- defined in: `data/inputs/014-cognitive.toml#L687`
+
+<a id="cog-persuasion-odds-ci-high"></a>
+### cog-persuasion-odds-ci-high
+
+**160.7%**: upper end of the 95% interval on the persuasion odds increase
+
+- basis: measured
+- source: [@salvi2025persuasion], 2025-05
+- defined in: `data/inputs/014-cognitive.toml#L695`
+
+<a id="cog-persuasion-posttrain-boost"></a>
+### cog-persuasion-posttrain-boost
+
+**51%**: largest gain in persuasiveness from post-training
+
+- basis: measured
+- source: [@hackenburg2025levers], 2025-12
+- note: abstract; scale and personalisation had smaller effects
+- defined in: `data/inputs/014-cognitive.toml#L703`
+
+<a id="cog-persuasion-prompt-boost"></a>
+### cog-persuasion-prompt-boost
+
+**27%**: largest gain in persuasiveness from prompting
+
+- basis: measured
+- source: [@hackenburg2025levers], 2025-12
+- defined in: `data/inputs/014-cognitive.toml#L712`
+
+<a id="cog-persuasion-participants"></a>
+### cog-persuasion-participants
+
+**76,977 participants**: participants in the levers-of-persuasion study
+
+- basis: measured
+- source: [@hackenburg2025levers], 2025-12
+- defined in: `data/inputs/014-cognitive.toml#L720`
+
+<a id="cog-forecast-super-brier"></a>
+### cog-forecast-super-brier
+
+**0.096**: superforecasters' mean Brier score on ForecastBench (lower is better)
+
+- basis: measured
+- source: [@karger2025forecastbench], 2025-02
+- note: Table 2
+- defined in: `data/inputs/014-cognitive.toml#L729`
+
+<a id="cog-forecast-llm-brier"></a>
+### cog-forecast-llm-brier
+
+**0.122**: best LLM's Brier score on ForecastBench at the time (Claude 3.5 Sonnet)
+
+- basis: measured
+- source: [@karger2025forecastbench], 2025-02
+- note: Table 2, 200-question subset; significantly worse than superforecasters
+- defined in: `data/inputs/014-cognitive.toml#L738`
+
+<a id="cog-forecast-super-index"></a>
+### cog-forecast-super-index
+
+**68.1**: superforecaster median on the ForecastBench Brier Index (100 is perfect, 50 uninformed)
+
+- basis: measured
+- source: [@forecastbench2026board], 2026-11
+- defined in: `data/inputs/014-cognitive.toml#L747`
+
+<a id="cog-forecast-top-index"></a>
+### cog-forecast-top-index
+
+**69.5**: top ForecastBench entry on the Brier Index (an anonymous team's model)
+
+- basis: measured
+- source: [@forecastbench2026board], 2026-11
+- defined in: `data/inputs/014-cognitive.toml#L755`
+
+<a id="cog-forecast-llm-index"></a>
+### cog-forecast-llm-index
+
+**66.6**: best single LLM on the ForecastBench Brier Index (with web search)
+
+- basis: measured
+- source: [@epoch2026hub], 2026-04
+- note: forecastbench_external.csv; superforecaster comparison p = 0.04
+- defined in: `data/inputs/014-cognitive.toml#L763`
+
+<a id="cog-metaculus-pro-lead"></a>
+### cog-metaculus-pro-lead
+
+**1.25 points per question**: Metaculus Pro team's head-to-head lead over the top bot team, spring 2026
+
+- basis: measured
+- source: [@metaculus2026futureeval], 2026-09
+- note: 99 shared questions; not significant
+- defined in: `data/inputs/014-cognitive.toml#L772`
+
+<a id="cog-metaculus-p"></a>
+### cog-metaculus-p
+
+**0.247**: one-sided p-value of the Pro team's lead over the bot team
+
+- basis: measured
+- source: [@metaculus2026futureeval], 2026-09
+- defined in: `data/inputs/014-cognitive.toml#L782`
+
+<a id="cog-cicero-top-share"></a>
+### cog-cicero-top-share
+
+**10%**: top share of repeat human players in which Cicero ranked in online Diplomacy
+
+- basis: measured
+- source: [@fair2022cicero], 2022-11
+- note: 40 games; more than double the average human score
+- defined in: `data/inputs/014-cognitive.toml#L790`
+
+<a id="cog-gdpval-tasks"></a>
+### cog-gdpval-tasks
+
+**1,320 tasks**: tasks in GDPval
+
+- basis: spec
+- source: [@patwardhan2025gdpval], 2025-10
+- note: 44 occupations in the 9 sectors contributing most to US GDP
+- defined in: `data/inputs/014-cognitive.toml#L799`
+
+<a id="cog-gdpval-opus41"></a>
+### cog-gdpval-opus41
+
+**47.6%**: share of Claude Opus 4.1's GDPval deliverables graded as good as or better than the expert's
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- note: blinded expert pairwise comparison, one-shot tasks
+- defined in: `data/inputs/014-cognitive.toml#L809`
+
+<a id="cog-gdpval-best"></a>
+### cog-gdpval-best
+
+**70.9%**: best GDPval win-or-tie rate in Epoch's data (GPT-5.2)
+
+- basis: measured
+- source: [@epoch2026hub], 2025-12
+- note: gdpval_external.csv; win rate alone 49.7%
+- defined in: `data/inputs/014-cognitive.toml#L818`
+
+<a id="cog-gdpval-grader-agree"></a>
+### cog-gdpval-grader-agree
+
+**66%**: agreement of GDPval's automated grader with expert graders
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- defined in: `data/inputs/014-cognitive.toml#L827`
+
+<a id="cog-gdpval-human-agree"></a>
+### cog-gdpval-human-agree
+
+**71%**: agreement between human expert graders on GDPval
+
+- basis: measured
+- source: [@patwardhan2025gdpval], 2025-10
+- defined in: `data/inputs/014-cognitive.toml#L835`
+
+<a id="cog-rli-best-2025"></a>
+### cog-rli-best-2025
+
+**2.5%**: best automation rate on the Remote Labor Index at release (Manus)
+
+- basis: measured
+- source: [@mazeika2025rli], 2025-10
+- note: Table 1
+- defined in: `data/inputs/014-cognitive.toml#L843`
+
+<a id="cog-rli-best-2026"></a>
+### cog-rli-best-2026
+
+**41.2%**: best automation rate on the Remote Labor Index in Epoch's data (Fable 5.2)
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- note: rli_external.csv
+- defined in: `data/inputs/014-cognitive.toml#L852`
+
+<a id="cog-rli-projects"></a>
+### cog-rli-projects
+
+**240 projects**: freelance projects in the Remote Labor Index
+
+- basis: spec
+- source: [@mazeika2025rli], 2025-10
+- note: work needing client interaction or teamwork excluded
+- defined in: `data/inputs/014-cognitive.toml#L861`
+
+<a id="cog-rli-value"></a>
+### cog-rli-value
+
+**143,991 USD**: market value of the human work in the Remote Labor Index
+
+- basis: measured
+- source: [@mazeika2025rli], 2025-10
+- note: Table 4
+- defined in: `data/inputs/014-cognitive.toml#L871`
+
+<a id="cog-exposure-10pct"></a>
+### cog-exposure-10pct
+
+**80%**: share of US workers with at least a tenth of their tasks exposed to LLMs
+
+- basis: measured
+- source: [@eloundou2024gpts], 2024-06
+- note: exposure is an upper bound, not a measured capability
+- defined in: `data/inputs/014-cognitive.toml#L881`
+
+<a id="cog-exposure-50pct"></a>
+### cog-exposure-50pct
+
+**19%**: share of US workers with at least half of their tasks exposed to LLMs
+
+- basis: measured
+- source: [@eloundou2024gpts], 2024-06
+- defined in: `data/inputs/014-cognitive.toml#L890`
+
+<a id="cog-barres-share-max"></a>
+### cog-barres-share-max
+
+**25%**: upper bound on the share of prominent benchmarks claiming any organisational condition of work
+
+- basis: measured
+- source: [@barres2026harder], 2026-11
+- note: abstract only, 'fewer than one quarter'
+- defined in: `data/inputs/014-cognitive.toml#L898`
+
+<a id="cog-pluribus-cost"></a>
+### cog-pluribus-cost
+
+**150 USD**: upper bound on the cost to train Pluribus's blueprint strategy
+
+- basis: vendor
+- source: [@meta2019pluribus], 2019-07
+- note: eight days on a 64-core server
+- defined in: `data/inputs/014-cognitive.toml#L910`
+
+<a id="cog-pluribus-cpus"></a>
+### cog-pluribus-cpus
+
+**2 CPUs**: CPUs Pluribus needs to play
+
+- basis: vendor
+- source: [@meta2019pluribus], 2019-07
+- defined in: `data/inputs/014-cognitive.toml#L920`
+
+<a id="cog-adversarial-go-winrate"></a>
+### cog-adversarial-go-winrate
+
+**97%**: lower bound on an adversarial policy's win rate against superhuman KataGo
+
+- basis: measured
+- source: [@wang2023adversarialgo], 2023-07
+- note: humans can carry out the attack without algorithmic help
+- defined in: `data/inputs/014-cognitive.toml#L929`
+
+<a id="cog-alphafold-rmsd"></a>
+### cog-alphafold-rmsd
+
+**0.96 angstrom**: AlphaFold's median backbone error at CASP14
+
+- basis: measured
+- source: [@jumper2021alphafold], 2021-07
+- defined in: `data/inputs/014-cognitive.toml#L938`
+
+<a id="cog-casp14-next-rmsd"></a>
+### cog-casp14-next-rmsd
+
+**2.8 angstrom**: median backbone error of the next best CASP14 method
+
+- basis: measured
+- source: [@jumper2021alphafold], 2021-07
+- defined in: `data/inputs/014-cognitive.toml#L947`
+
+<a id="cog-alphazero-hours"></a>
+### cog-alphazero-hours
+
+**24 h**: time AlphaZero took from random play to superhuman play
+
+- basis: measured
+- source: [@silver2018alphazero], 2018
+- note: preprint abstract
+- defined in: `data/inputs/014-cognitive.toml#L956`
+
+<a id="cog-alphaevolve-mults"></a>
+### cog-alphaevolve-mults
+
+**48 multiplications**: scalar multiplications in AlphaEvolve's 4x4 complex matrix product
+
+- basis: measured
+- source: [@novikov2025alphaevolve], 2025-06
+- defined in: `data/inputs/014-cognitive.toml#L966`
+
+<a id="cog-strassen-years"></a>
+### cog-strassen-years
+
+**56 yr**: years since Strassen's algorithm before AlphaEvolve's improvement in that setting
+
+- basis: measured
+- source: [@novikov2025alphaevolve], 2025-06
+- defined in: `data/inputs/014-cognitive.toml#L975`
+
+<a id="cog-alphaevolve-training-cut"></a>
+### cog-alphaevolve-training-cut
+
+**1%**: reduction in Gemini's overall training time from AlphaEvolve's kernel work
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- note: Sec. 3.3.2
+- defined in: `data/inputs/014-cognitive.toml#L984`
+
+<a id="cog-alphaevolve-kernel-speedup"></a>
+### cog-alphaevolve-kernel-speedup
+
+**23%**: average kernel speedup AlphaEvolve found
+
+- basis: vendor
+- source: [@novikov2025alphaevolve], 2025-06
+- note: Sec. 3.3.2
+- defined in: `data/inputs/014-cognitive.toml#L993`
+
+<a id="cog-imo-score"></a>
+### cog-imo-score
+
+**35**: Gemini Deep Think's IMO 2025 score, graded by IMO coordinators
+
+- basis: vendor
+- source: [@deepmind2025imo], 2025-07
+- note: within the 4.5-hour limit, out of 42
+- defined in: `data/inputs/014-cognitive.toml#L1002`
+
+<a id="cog-agidef-gpt4"></a>
+### cog-agidef-gpt4
+
+**27%**: GPT-4's score on Hendrycks et al.'s AGI definition
+
+- basis: measured
+- source: [@hendrycks2025agidef], 2025-10
+- defined in: `data/inputs/014-cognitive.toml#L1011`
+
+<a id="cog-agidef-gpt5"></a>
+### cog-agidef-gpt5
+
+**57%**: GPT-5's score on Hendrycks et al.'s AGI definition
+
+- basis: measured
+- source: [@hendrycks2025agidef], 2025-10
+- note: 0% on long-term memory storage
+- defined in: `data/inputs/014-cognitive.toml#L1019`
+
+<a id="cog-levels-expert"></a>
+### cog-levels-expert
+
+**90**: percentile of skilled adults for Morris et al.'s Expert level
+
+- basis: spec
+- source: [@morris2023levels], 2024-07
+- defined in: `data/inputs/014-cognitive.toml#L1028`
+
+<a id="cog-levels-exceptional"></a>
+### cog-levels-exceptional
+
+**99**: percentile of skilled adults for Morris et al.'s Exceptional level
+
+- basis: spec
+- source: [@morris2023levels], 2024-07
+- defined in: `data/inputs/014-cognitive.toml#L1036`
+
+<a id="cog-spiral-transfer-max"></a>
+### cog-spiral-transfer-max
+
+**10%**: largest transfer gain from self-play on games to reasoning benchmarks (SPIRAL)
+
+- basis: measured
+- source: [@liu2025spiral], 2025-06
+- note: abstract, 'by up to 10%' across 8 benchmarks
+- defined in: `data/inputs/014-cognitive.toml#L1044`
+
+<a id="cog-fm-release-best"></a>
+### cog-fm-release-best
+
+**2%**: upper bound on the best FrontierMath score at release
+
+- basis: measured
+- source: [@glazer2024frontiermath], 2024-11
+- note: abstract, 'under 2%'
+- defined in: `data/inputs/014-cognitive.toml#L1056`
+
+<a id="cog-fm-release-year"></a>
+### cog-fm-release-year
+
+**2024.85 yr**: date of FrontierMath's release as a decimal year (November 2024)
+
+- basis: measured
+- source: [@glazer2024frontiermath], 2024-11
+- defined in: `data/inputs/014-cognitive.toml#L1065`
+
+<a id="cog-fm-best"></a>
+### cog-fm-best
+
+**95.1%**: best FrontierMath Tiers 1-3 (v2) score in Epoch's data
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- note: frontiermath_tiers_1_3_v2.csv, claude-fable-5-2 (max); v2 corrected 42% of problems
+- defined in: `data/inputs/014-cognitive.toml#L1074`
+
+<a id="cog-fm-best-year"></a>
+### cog-fm-best-year
+
+**2026.86 yr**: date of the best FrontierMath Tiers 1-3 score as a decimal year (2026-11-09)
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- defined in: `data/inputs/014-cognitive.toml#L1083`
+
+<a id="cog-fm-tier4-best"></a>
+### cog-fm-tier4-best
+
+**100%**: best FrontierMath Tier 4 (v2) score, reached by three models
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- note: frontiermath_tier_4_v2.csv, September to November 2026
+- defined in: `data/inputs/014-cognitive.toml#L1092`
+
+<a id="cog-fm-v2-corrected"></a>
+### cog-fm-v2-corrected
+
+**42%**: share of FrontierMath problems corrected in version 2
+
+- basis: measured
+- source: [@epoch2026hub], 2026-06
+- note: FrontierMath page
+- defined in: `data/inputs/014-cognitive.toml#L1101`
+
+<a id="cog-hle-release-best"></a>
+### cog-hle-release-best
+
+**9.4%**: best Humanity's Last Exam score at release (DeepSeek-R1, text only)
+
+- basis: measured
+- source: [@phan2025hle], 2025-01
+- note: Table 1
+- defined in: `data/inputs/014-cognitive.toml#L1110`
+
+<a id="cog-hle-release-year"></a>
+### cog-hle-release-year
+
+**2025.06 yr**: date of HLE's release as a decimal year (January 2025)
+
+- basis: measured
+- source: [@phan2025hle], 2025-01
+- defined in: `data/inputs/014-cognitive.toml#L1119`
+
+<a id="cog-hle-best"></a>
+### cog-hle-best
+
+**54.8%**: best HLE score on Scale's leaderboard
+
+- basis: measured
+- source: [@scale2026hleboard], 2026-09
+- note: GPT 6 Astra, plus or minus 1.94 points; tool use not stated
+- defined in: `data/inputs/014-cognitive.toml#L1128`
+
+<a id="cog-hle-best-year"></a>
+### cog-hle-best-year
+
+**2026.71 yr**: date of the leaderboard update as a decimal year (2026-09-17)
+
+- basis: measured
+- source: [@scale2026hleboard], 2026-09
+- defined in: `data/inputs/014-cognitive.toml#L1137`
+
+<a id="cog-hle-calibration-best"></a>
+### cog-hle-calibration-best
+
+**39%**: calibration error of the top HLE model
+
+- basis: measured
+- source: [@scale2026hleboard], 2026-09
+- defined in: `data/inputs/014-cognitive.toml#L1146`
+
+<a id="cog-hle-defective"></a>
+### cog-hle-defective
+
+**22 questions**: defective questions in Epoch's sample of HLE
+
+- basis: measured
+- source: [@epoch2026hlereview], 2026-08
+- note: 12 impossible as written; original set only
+- defined in: `data/inputs/014-cognitive.toml#L1154`
+
+<a id="cog-hle-sampled"></a>
+### cog-hle-sampled
+
+**48 questions**: HLE questions Epoch sampled for review
+
+- basis: measured
+- source: [@epoch2026hlereview], 2026-08
+- defined in: `data/inputs/014-cognitive.toml#L1164`
+
+<a id="cog-hle-biochem-wrong"></a>
+### cog-hle-biochem-wrong
+
+**29.3%**: share of HLE's text-only biology and chemistry answers directly conflicted by research
+
+- basis: measured
+- source: [@white2025hleaudit], 2025-09
+- note: plus or minus 3.7 points (95% CI); the HLE team's own follow-up found about 18%
+- defined in: `data/inputs/014-cognitive.toml#L1173`
+
+<a id="cog-swebench-2023"></a>
+### cog-swebench-2023
+
+**4.4%**: share of SWE-bench problems solved in 2023
+
+- basis: measured
+- source: [@hai2025aiindex], 2023
+- defined in: `data/inputs/014-cognitive.toml#L1182`
+
+<a id="cog-swebench-2024"></a>
+### cog-swebench-2024
+
+**71.7%**: share of SWE-bench problems solved in 2024
+
+- basis: measured
+- source: [@hai2025aiindex], 2024
+- defined in: `data/inputs/014-cognitive.toml#L1190`
+
+<a id="cog-swebv-filtered"></a>
+### cog-swebv-filtered
+
+**68.3%**: share of sampled SWE-bench tasks filtered out when building SWE-bench Verified
+
+- basis: measured
+- source: [@chowdhury2024swebv], 2024-08
+- note: underspecified issues or unit tests that may reject valid fixes
+- defined in: `data/inputs/014-cognitive.toml#L1198`
+
+<a id="cog-swebv-golden-merge"></a>
+### cog-swebv-golden-merge
+
+**68%**: share of SWE-bench Verified golden patches maintainers would merge
+
+- basis: measured
+- source: [@whitfill2026merge], 2026-03
+- defined in: `data/inputs/014-cognitive.toml#L1207`
+
+<a id="cog-swebv-maintainer-gap"></a>
+### cog-swebv-maintainer-gap
+
+**24 points**: how far maintainer merge rates sit below SWE-bench scores, after normalising
+
+- basis: measured
+- source: [@whitfill2026merge], 2026-03
+- note: 34.9 points before normalising; one attempt, no feedback
+- defined in: `data/inputs/014-cognitive.toml#L1215`
+
+<a id="cog-holistic-testpass"></a>
+### cog-holistic-testpass
+
+**38%**: average test-pass rate of agent PRs in METR's holistic review
+
+- basis: measured
+- source: [@rein2025holistic], 2025-08
+- note: plus or minus 19 points
+- defined in: `data/inputs/014-cognitive.toml#L1225`
+
+<a id="cog-holistic-reviewed"></a>
+### cog-holistic-reviewed
+
+**15 PRs**: agent PRs METR reviewed by hand, none mergeable as-is
+
+- basis: measured
+- source: [@rein2025holistic], 2025-08
+- defined in: `data/inputs/014-cognitive.toml#L1234`
+
+<a id="cog-holistic-fix-minutes"></a>
+### cog-holistic-fix-minutes
+
+**26 min**: average minutes of fixes a test-passing agent PR needed
+
+- basis: measured
+- source: [@rein2025holistic], 2025-08
+- defined in: `data/inputs/014-cognitive.toml#L1243`
+
+<a id="cog-rct-slowdown"></a>
+### cog-rct-slowdown
+
+**19%**: increase in task time for experienced developers allowed AI tools (early 2025 RCT)
+
+- basis: measured
+- source: [@becker2025rct], 2025-07
+- note: CI +2% to +39%; 16 developers, 246 tasks
+- defined in: `data/inputs/014-cognitive.toml#L1252`
+
+<a id="cog-rct-forecast"></a>
+### cog-rct-forecast
+
+**24%**: time reduction the same developers forecast beforehand
+
+- basis: measured
+- source: [@becker2025rct], 2025-07
+- defined in: `data/inputs/014-cognitive.toml#L1261`
+
+<a id="cog-rct2026-returning"></a>
+### cog-rct2026-returning
+
+**-18%**: change in task time with AI for returning developers in METR's 2026 follow-up (negative is faster)
+
+- basis: measured
+- source: [@metr2026uplift], 2026-02
+- note: CI -38% to +9%; METR calls the data only very weak evidence because of selection
+- defined in: `data/inputs/014-cognitive.toml#L1269`
+
+<a id="cog-messiness-drop"></a>
+### cog-messiness-drop
+
+**8.1%**: drop in mean agent success per point of task messiness
+
+- basis: measured
+- source: [@kwa2025horizon], 2025-03
+- note: Sec. 6.2
+- defined in: `data/inputs/014-cognitive.toml#L1278`
+
+<a id="cog-gsm1k-drop"></a>
+### cog-gsm1k-drop
+
+**8%**: largest accuracy drop from GSM8K to the fresh GSM1k
+
+- basis: measured
+- source: [@zhang2024gsm1k], 2024-11
+- note: frontier models showed minimal overfitting
+- defined in: `data/inputs/014-cognitive.toml#L1287`
+
+<a id="cog-filepath-verified"></a>
+### cog-filepath-verified
+
+**76%**: best accuracy naming the buggy file from the issue text alone, SWE-bench Verified
+
+- basis: measured
+- source: [@liang2025illusion], 2025-12
+- defined in: `data/inputs/014-cognitive.toml#L1296`
+
+<a id="cog-filepath-other"></a>
+### cog-filepath-other
+
+**53%**: best accuracy naming the buggy file from the issue text alone, other repositories
+
+- basis: measured
+- source: [@liang2025illusion], 2025-12
+- defined in: `data/inputs/014-cognitive.toml#L1304`
+
+<a id="cog-arc-cost-drop"></a>
+### cog-arc-cost-drop
+
+**390**: fall in cost per ARC-AGI task over one year
+
+- basis: measured
+- source: [@vahdati2026arc], 2026-03
+- note: abstract; 4,500 USD to 12 USD, 'largely reflects reduced test-time parallelism'
+- defined in: `data/inputs/014-cognitive.toml#L1312`
+
+<a id="cog-leaderboard-variants"></a>
+### cog-leaderboard-variants
+
+**27 variants**: private model variants one developer tested on Chatbot Arena before a release
+
+- basis: measured
+- source: [@singh2025leaderboard], 2025-05
+- defined in: `data/inputs/014-cognitive.toml#L1321`
+
+<a id="cog-sandbag-recovered"></a>
+### cog-sandbag-recovered
+
+**95.6%**: share of a sandbagged model's original score recovered by anti-refusal training
+
+- basis: measured
+- source: [@benton2024sabotage], 2024-10
+- note: Sec. 6.4
+- defined in: `data/inputs/014-cognitive.toml#L1330`
+
+<a id="cog-robust-recall-locked"></a>
+### cog-robust-recall-locked
+
+**7.8%**: hard-task recall of a tamper-resistant locked organism after weak-to-strong fine-tuning
+
+- basis: measured
+- source: [@finke2026robustorganisms], 2026-10
+- note: Table 4
+- defined in: `data/inputs/014-cognitive.toml#L1339`
+
+<a id="cog-robust-recall-base"></a>
+### cog-robust-recall-base
+
+**71.2%**: hard-task recall of the same base model without the lock
+
+- basis: measured
+- source: [@finke2026robustorganisms], 2026-10
+- note: Table 4
+- defined in: `data/inputs/014-cognitive.toml#L1348`
+
+<a id="cog-xh-rl-steps"></a>
+### cog-xh-rl-steps
+
+**500 steps**: GRPO steps (lower bound) through which an RL-locked model stayed suppressed
+
+- basis: measured
+- source: [@jang2026explorationhacking], 2026-04
+- note: Sec. 3, KernelBench, 'more than 500'
+- defined in: `data/inputs/014-cognitive.toml#L1357`
+
+<a id="cog-benign-uplift"></a>
+### cog-benign-uplift
+
+**10 points**: points benign models gained from the same elicitation used on sandbaggers (about)
+
+- basis: measured
+- source: [@taylor2025auditinggames], 2025-12
+- note: Sec. 6.4.1
+- defined in: `data/inputs/014-cognitive.toml#L1367`
+
+<a id="cog-evalaware-model-auc"></a>
+### cog-evalaware-model-auc
+
+**0.83**: AUC of Gemini 2.5 Pro at telling evaluations from deployment
+
+- basis: measured
+- source: [@needham2025evalaware], 2025-07
+- defined in: `data/inputs/014-cognitive.toml#L1377`
+
+<a id="cog-evalaware-human-auc"></a>
+### cog-evalaware-human-auc
+
+**0.92**: AUC of the human baseline at the same task
+
+- basis: measured
+- source: [@needham2025evalaware], 2025-07
+- defined in: `data/inputs/014-cognitive.toml#L1385`
+
+<a id="cog-adaptive-auc-before"></a>
+### cog-adaptive-auc-before
+
+**0.978**: AUC of a text audit for sandbagging before adaptive retraining
+
+- basis: measured
+- source: [@soopal2026adaptive], 2026-11
+- defined in: `data/inputs/014-cognitive.toml#L1393`
+
+<a id="cog-adaptive-auc-after"></a>
+### cog-adaptive-auc-after
+
+**0.560**: AUC of the same audit after two rounds of adaptive retraining
+
+- basis: measured
+- source: [@soopal2026adaptive], 2026-11
+- defined in: `data/inputs/014-cognitive.toml#L1401`
+
+<a id="cog-seq-test-saving"></a>
+### cog-seq-test-saving
+
+**40%**: fewer trials (up to, on average) a sequential test needs when a capability is truly absent
+
+- basis: measured
+- source: [@bukkapatnam2026absent], 2026
+- note: abstract page only
+- defined in: `data/inputs/014-cognitive.toml#L1409`
+
+<a id="cog-rsp-v1-elicit-budget"></a>
+### cog-rsp-v1-elicit-budget
+
+**1%**: elicitation budget as a share of training cost in Anthropic's RSP v1.0, later removed
+
+- basis: spec
+- source: [@anthropic2023rsp], 2023-09
+- defined in: `data/inputs/014-cognitive.toml#L1418`
+
+<a id="cog-rsp-v1-buffer"></a>
+### cog-rsp-v1-buffer
+
+**6**: safety buffer in effective compute in Anthropic's RSP v1.0, later removed
+
+- basis: spec
+- source: [@anthropic2023rsp], 2023-09
+- defined in: `data/inputs/014-cognitive.toml#L1426`
+
+<a id="cog-enhancement-ceg"></a>
+### cog-enhancement-ceg
+
+**5**: compute-equivalent gain (lower bound) of most post-training enhancements
+
+- basis: measured
+- source: [@davidson2023enhancements], 2023-12
+- note: abstract; some above 20x, at usually under 1% of training cost
+- defined in: `data/inputs/014-cognitive.toml#L1434`
+
+<a id="cog-wilson-z"></a>
+### cog-wilson-z
+
+**1.96**: normal quantile for a 95% interval
+
+- basis: design
+- defined in: `data/inputs/014-cognitive.toml#L1443`
+
+<a id="cog-life-low"></a>
+### cog-life-low
+
+**10%**: score at which a battery starts to discriminate, for its useful life
+
+- basis: design
+- defined in: `data/inputs/014-cognitive.toml#L1449`
+
+<a id="cog-life-high"></a>
+### cog-life-high
+
+**90%**: score at which a battery stops discriminating, for its useful life
+
+- basis: design
+- defined in: `data/inputs/014-cognitive.toml#L1455`
+
+<a id="cog-rebench-real-scale-oom"></a>
+### cog-rebench-real-scale-oom
+
+**2 orders of magnitude**: how much larger real AI R&D is than RE-Bench on several axes, by the authors' estimate (at least)
+
+- basis: measured
+- source: [@wijk2024rebench], 2024-11
+- note: Table 7; the authors' judgement that RE-Bench likely overestimates real-world AI R&D performance
+- defined in: `data/inputs/014-cognitive.toml#L1464`
+
+<a id="cog-agidef-domains"></a>
+### cog-agidef-domains
+
+**10 domains**: cognitive domains, weighted equally, in Hendrycks et al.'s AGI definition
+
+- basis: spec
+- source: [@hendrycks2025agidef], 2025-10
+- defined in: `data/inputs/014-cognitive.toml#L1474`
+
+<a id="cog-swebv-error-low"></a>
+### cog-swebv-error-low
+
+**5%**: low end of Epoch's estimate of SWE-bench Verified's error rate
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- note: SWE-bench Verified page
+- defined in: `data/inputs/014-cognitive.toml#L1483`
+
+<a id="cog-swebv-error-high"></a>
+### cog-swebv-error-high
+
+**10%**: high end of Epoch's estimate of SWE-bench Verified's error rate
+
+- basis: measured
+- source: [@epoch2026hub], 2026-11
+- note: SWE-bench Verified page
+- defined in: `data/inputs/014-cognitive.toml#L1492`
+
+<a id="cog-ctf-pair-points"></a>
+### cog-ctf-pair-points
+
+**5,700 points**: score of the agent paired with human hackers, first on both CTF scoreboards
+
+- basis: measured
+- source: [@tang2026ctfcollab], 2026-02
+- defined in: `data/inputs/014-cognitive.toml#L1501`
+
+<a id="cog-imo-max"></a>
+### cog-imo-max
+
+**42 points**: maximum IMO score
+
+- basis: spec
+- source: [@deepmind2025imo], 2025-07
+- defined in: `data/inputs/014-cognitive.toml#L1510`
+
+<a id="cog-metaculus-questions"></a>
+### cog-metaculus-questions
+
+**99 questions**: questions shared by the Metaculus Pro team and the top bot team in spring 2026
+
+- basis: measured
+- source: [@metaculus2026futureeval], 2026-09
+- defined in: `data/inputs/014-cognitive.toml#L1519`
+
+<a id="cog-gdpval-occupations"></a>
+### cog-gdpval-occupations
+
+**44 occupations**: occupations covered by GDPval
+
+- basis: spec
+- source: [@patwardhan2025gdpval], 2025-10
+- defined in: `data/inputs/014-cognitive.toml#L1528`
+
+<a id="cog-obs-models"></a>
+### cog-obs-models
+
+**100 models**: public models (about) whose scores observational scaling fits in a low-dimensional capability space
+
+- basis: measured
+- source: [@ruan2024observational], 2024-05
+- note: abstract
+- defined in: `data/inputs/014-cognitive.toml#L1537`
+
+<a id="cog-mlebench-competitions"></a>
+### cog-mlebench-competitions
+
+**75 competitions**: Kaggle competitions in MLE-bench
+
+- basis: spec
+- source: [@chan2024mlebench], 2024-10
+- defined in: `data/inputs/014-cognitive.toml#L1547`
+
+<a id="cog-th11-long-threshold"></a>
+### cog-th11-long-threshold
+
+**8 h**: task length above which METR counts a task as long in Time Horizon 1.1
+
+- basis: spec
+- source: [@metr2026th11], 2026-01
+- defined in: `data/inputs/014-cognitive.toml#L1556`
+
+<a id="cog-horizon-cheap-threshold"></a>
+### cog-horizon-cheap-threshold
+
+**10%**: cost share of a human's cost below which METR counted an agent run as cheap
+
+- basis: spec
+- source: [@kwa2025horizon], 2025-03
+- note: Sec. 8.2
+- defined in: `data/inputs/014-cognitive.toml#L1565`
+
+<a id="cog-hcast-short-hours"></a>
+### cog-hcast-short-hours
+
+**1 h**: human task length below which HCAST reports its high agent success rate
+
+- basis: spec
+- source: [@rein2025hcast], 2025-03
+- defined in: `data/inputs/014-cognitive.toml#L1574`
+
+<a id="cog-hcast-long-hours"></a>
+### cog-hcast-long-hours
+
+**4 h**: human task length above which HCAST reports its low agent success rate
+
+- basis: spec
+- source: [@rein2025hcast], 2025-03
+- defined in: `data/inputs/014-cognitive.toml#L1583`
+
+<a id="cog-exposure-low-threshold"></a>
+### cog-exposure-low-threshold
+
+**10%**: share of a worker's tasks exposed, lower threshold in the exposure study
+
+- basis: spec
+- source: [@eloundou2024gpts], 2024-06
+- defined in: `data/inputs/014-cognitive.toml#L1592`
+
+<a id="cog-exposure-high-threshold"></a>
+### cog-exposure-high-threshold
+
+**50%**: share of a worker's tasks exposed, higher threshold in the exposure study
+
+- basis: spec
+- source: [@eloundou2024gpts], 2024-06
+- defined in: `data/inputs/014-cognitive.toml#L1600`
+
+<a id="org-capex-big4-2026"></a>
+### org-capex-big4-2026
+
+**650 billion USD**: planned 2026 capital spending of the four largest technology companies, February 2026
+
+- basis: vendor
+- source: [@day2026capex], 2026-02
+- note: Bloomberg via Data Center Knowledge, summing company guidance
+- defined in: `data/inputs/015-organisational.toml#L11`
+
+<a id="org-capex-big4-growth"></a>
+### org-capex-big4-growth
+
+**60%**: planned growth of that spending over 2025
+
+- basis: vendor
+- source: [@day2026capex], 2026-02
+- note: 'an estimated 60% increase from a year ago'
+- defined in: `data/inputs/015-organisational.toml#L21`
+
+<a id="org-capex-hyperscalers-2026"></a>
+### org-capex-hyperscalers-2026
+
+**700 billion USD**: planned 2026 capital spending of the largest hyperscalers, May 2026 (a lower bound)
+
+- basis: vendor
+- source: [@ehsan2026capex], 2026-05
+- note: 'has now topped $700 billion'
+- defined in: `data/inputs/015-organisational.toml#L30`
+
+<a id="org-train-cost-growth"></a>
+### org-train-cost-growth
+
+**2.4**: growth a year of the amortised cost of the most compute-intensive training runs since 2016
+
+- basis: measured
+- source: [@cottier2024rising], 2024
+- note: abstract; 90% CI 2.0 to 2.9
+- defined in: `data/inputs/015-organisational.toml#L40`
+
+<a id="org-train-cost-growth-low"></a>
+### org-train-cost-growth-low
+
+**2.0**: low end of the 90% CI of training cost growth a year
+
+- basis: measured
+- source: [@cottier2024rising], 2024
+- defined in: `data/inputs/015-organisational.toml#L49`
+
+<a id="org-train-cost-growth-high"></a>
+### org-train-cost-growth-high
+
+**2.9**: high end of the 90% CI of training cost growth a year
+
+- basis: measured
+- source: [@cottier2024rising], 2024
+- defined in: `data/inputs/015-organisational.toml#L57`
+
+<a id="org-largest-run-cost-2027"></a>
+### org-largest-run-cost-2027
+
+**1 billion USD**: cost the largest training runs will exceed by 2027, a trend extrapolation
+
+- basis: assumption
+- source: [@cottier2024rising], 2027
+- note: 'more than a billion dollars by 2027'
+- defined in: `data/inputs/015-organisational.toml#L65`
+
+<a id="org-energy-cost-share-low"></a>
+### org-energy-cost-share-low
+
+**2%**: low end of energy's share of the amortised cost of frontier training
+
+- basis: measured
+- source: [@cottier2024rising], 2024
+- defined in: `data/inputs/015-organisational.toml#L75`
+
+<a id="org-energy-cost-share-high"></a>
+### org-energy-cost-share-high
+
+**6%**: high end of energy's share of the amortised cost of frontier training
+
+- basis: measured
+- source: [@cottier2024rising], 2024
+- defined in: `data/inputs/015-organisational.toml#L83`
+
+<a id="org-colossus-hw-cost"></a>
+### org-colossus-hw-cost
+
+**7 billion USD**: hardware cost of xAI's Colossus, March 2025
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-03
+- note: abstract
+- defined in: `data/inputs/015-organisational.toml#L91`
+
+<a id="org-colossus-chips"></a>
+### org-colossus-chips
+
+**200,000 AI chips**: AI chips in xAI's Colossus, March 2025
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-03
+- defined in: `data/inputs/015-organisational.toml#L101`
+
+<a id="org-colossus-power"></a>
+### org-colossus-power
+
+**300 MW**: power required by xAI's Colossus, March 2025
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025-03
+- defined in: `data/inputs/015-organisational.toml#L110`
+
+<a id="org-frontier-compute-growth"></a>
+### org-frontier-compute-growth
+
+**5.3**: growth a year of the training compute of frontier models, 2010 to May 2024
+
+- basis: measured
+- source: [@sevilla2024computegrowth], 2024-05
+- note: 90% CI 4.9 to 5.7
+- defined in: `data/inputs/015-organisational.toml#L119`
+
+<a id="org-euv-2025"></a>
+### org-euv-2025
+
+**48 EUV systems**: EUV systems ASML recognised in sales in 2025
+
+- basis: vendor
+- source: [@asml2026annualreport], 2025
+- note: annual report, AR p. 53; four EXE (High-NA) and 44 NXE (AR p. 55)
+- defined in: `data/inputs/015-organisational.toml#L131`
+
+<a id="org-euv-2024"></a>
+### org-euv-2024
+
+**44 EUV systems**: EUV systems ASML recognised in sales in 2024
+
+- basis: vendor
+- source: [@asml2026annualreport], 2024
+- note: AR p. 53
+- defined in: `data/inputs/015-organisational.toml#L141`
+
+<a id="org-euv-highna-2025"></a>
+### org-euv-highna-2025
+
+**4 High-NA systems**: High-NA (EXE) EUV systems ASML recognised in sales in 2025
+
+- basis: vendor
+- source: [@asml2026annualreport], 2025
+- note: AR p. 55
+- defined in: `data/inputs/015-organisational.toml#L151`
+
+<a id="org-euv-lowna-2026"></a>
+### org-euv-lowna-2026
+
+**65 low-NA EUV systems**: low-NA EUV systems ASML expects to ship in 2026
+
+- basis: vendor
+- source: [@asml2026q2call], 2026-07
+- note: CFO, Q2 2026 call: 'around 65'
+- defined in: `data/inputs/015-organisational.toml#L161`
+
+<a id="org-euv-capacity-growth-2027"></a>
+### org-euv-capacity-growth-2027
+
+**30%**: planned increase in ASML's low-NA EUV capacity in 2027
+
+- basis: vendor
+- source: [@asml2026q2call], 2026-07
+- note: CFO: 'we are planning to increase our Low-NA EUV capacity by around 30%'
+- defined in: `data/inputs/015-organisational.toml#L171`
+
+<a id="org-euv-capacity-growth-2028"></a>
+### org-euv-capacity-growth-2028
+
+**30%**: further increase in low-NA EUV capacity for 2028 that ASML is studying
+
+- basis: vendor
+- source: [@asml2026q2call], 2026-07
+- note: CFO: 'investigate a further 30% capacity increase'; not a plan
+- defined in: `data/inputs/015-organisational.toml#L180`
+
+<a id="org-litho-eu-share"></a>
+### org-litho-eu-share
+
+**89%**: share of lithography equipment revenue held by vendors headquartered in the EU
+
+- basis: measured
+- source: [@varadarajan2024resilience], 2024
+- note: Exhibit 10, PDF p. 18; Japan 10%, US 1%; market 17.5 billion USD
+- defined in: `data/inputs/015-organisational.toml#L189`
+
+<a id="org-asml-china-units-2025"></a>
+### org-asml-china-units-2025
+
+**33%**: share of ASML's lithography tools (units, all types) sold to China in 2025
+
+- basis: vendor
+- source: [@shilov2026asml], 2025
+- note: ASML figures relayed by Tom's Hardware
+- defined in: `data/inputs/015-organisational.toml#L198`
+
+<a id="org-asml-china-units-2024"></a>
+### org-asml-china-units-2024
+
+**41%**: share of ASML's lithography tools (units, all types) sold to China in 2024
+
+- basis: vendor
+- source: [@shilov2026asml], 2024
+- defined in: `data/inputs/015-organisational.toml#L207`
+
+<a id="org-china-euv-target"></a>
+### org-china-euv-target
+
+**2028**: year China's prototype EUV tool is targeted to begin making chips
+
+- basis: assumption
+- source: [@washenko2025euv], 2025-12
+- note: Engadget relaying Reuters, unnamed sources; the prototype makes no chips yet
+- defined in: `data/inputs/015-organisational.toml#L215`
+
+<a id="org-china-euv-expert"></a>
+### org-china-euv-expert
+
+**2030**: year other experts project as more likely for chips from China's EUV prototype
+
+- basis: assumption
+- source: [@washenko2025euv], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L224`
+
+<a id="org-tsmc-share-2q26"></a>
+### org-tsmc-share-2q26
+
+**72.5%**: TSMC's share of foundry revenue (top ten foundries), Q2 2026
+
+- basis: measured
+- source: [@trendforce2026foundry], 2026-06
+- defined in: `data/inputs/015-organisational.toml#L235`
+
+<a id="org-samsung-share-2q26"></a>
+### org-samsung-share-2q26
+
+**5.9%**: Samsung's share of foundry revenue, Q2 2026
+
+- basis: measured
+- source: [@trendforce2026foundry], 2026-06
+- defined in: `data/inputs/015-organisational.toml#L243`
+
+<a id="org-smic-share-2q26"></a>
+### org-smic-share-2q26
+
+**5.4%**: SMIC's share of foundry revenue, Q2 2026
+
+- basis: measured
+- source: [@trendforce2026foundry], 2026-06
+- defined in: `data/inputs/015-organisational.toml#L251`
+
+<a id="org-sub10-taiwan-2022"></a>
+### org-sub10-taiwan-2022
+
+**69%**: Taiwan's share of sub-10 nm logic capacity, 2022
+
+- basis: measured
+- source: [@varadarajan2024resilience], 2022
+- note: Exhibit 6, PDF p. 14
+- defined in: `data/inputs/015-organisational.toml#L259`
+
+<a id="org-sub10-korea-2022"></a>
+### org-sub10-korea-2022
+
+**31%**: South Korea's share of sub-10 nm logic capacity, 2022
+
+- basis: measured
+- source: [@varadarajan2024resilience], 2022
+- note: Exhibit 6, PDF p. 14
+- defined in: `data/inputs/015-organisational.toml#L268`
+
+<a id="org-sub10-us-2032"></a>
+### org-sub10-us-2032
+
+**28%**: projected US share of sub-10 nm logic capacity, 2032
+
+- basis: assumption
+- source: [@varadarajan2024resilience], 2032
+- note: BCG projection, Exhibit 6
+- defined in: `data/inputs/015-organisational.toml#L277`
+
+<a id="org-points-over-65"></a>
+### org-points-over-65
+
+**50**: points in the semiconductor supply chain where one region held over 65% of global share (at least)
+
+- basis: measured
+- source: [@varadarajan2024resilience], 2024
+- note: executive summary, PDF p. 4: 'at least 50 points'
+- defined in: `data/inputs/015-organisational.toml#L286`
+
+<a id="org-points-threshold"></a>
+### org-points-threshold
+
+**65%**: regional share above which the BCG and SIA report counts a point as concentrated
+
+- basis: measured
+- source: [@varadarajan2024resilience], 2024
+- note: the threshold the report uses for its count, executive summary, PDF p. 4
+- defined in: `data/inputs/015-organisational.toml#L295`
+
+<a id="org-fab-days"></a>
+### org-fab-days
+
+**682 days**: average time from construction start to production for greenfield fabs worldwide, 1990 to 2020
+
+- basis: measured
+- source: [@verwey2021permits], 2020
+- note: PDF p. 6; about 635 fabs; excludes permitting
+- defined in: `data/inputs/015-organisational.toml#L304`
+
+<a id="org-fab-days-us"></a>
+### org-fab-days-us
+
+**918 days**: average US fab build time, construction start to production, 2010 to 2020
+
+- basis: measured
+- source: [@verwey2021permits], 2020
+- note: PDF p. 7
+- defined in: `data/inputs/015-organisational.toml#L314`
+
+<a id="org-smic-wspm-2025"></a>
+### org-smic-wspm-2025
+
+**45,000 wafers a month**: SMIC advanced-node capacity at end 2025, a conservative analyst estimate
+
+- basis: measured
+- source: [@patel2025ascend], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L324`
+
+<a id="org-ascend-wspm-need"></a>
+### org-ascend-wspm-need
+
+**20,000 wafers a month**: advanced-node wafers a month Huawei's Ascend production needs at most, an analyst estimate
+
+- basis: measured
+- source: [@patel2025ascend], 2025
+- defined in: `data/inputs/015-organisational.toml#L333`
+
+<a id="org-hbm-skhynix-2q26"></a>
+### org-hbm-skhynix-2q26
+
+**50%**: SK hynix's share of HBM revenue, Q2 2026
+
+- basis: measured
+- source: [@counterpoint2026hbm], 2026-06
+- defined in: `data/inputs/015-organisational.toml#L345`
+
+<a id="org-hbm-samsung-2q26"></a>
+### org-hbm-samsung-2q26
+
+**33%**: Samsung's share of HBM revenue, Q2 2026
+
+- basis: measured
+- source: [@counterpoint2026hbm], 2026-06
+- defined in: `data/inputs/015-organisational.toml#L353`
+
+<a id="org-hbm-micron-2q26"></a>
+### org-hbm-micron-2q26
+
+**18%**: Micron's share of HBM revenue, Q2 2026
+
+- basis: measured
+- source: [@counterpoint2026hbm], 2026-06
+- defined in: `data/inputs/015-organisational.toml#L361`
+
+<a id="org-hbm-skhynix-2q25"></a>
+### org-hbm-skhynix-2q25
+
+**64%**: SK hynix's share of HBM revenue, Q2 2025
+
+- basis: measured
+- source: [@counterpoint2026hbm], 2025-06
+- defined in: `data/inputs/015-organisational.toml#L369`
+
+<a id="org-dram-cxmt-2q26"></a>
+### org-dram-cxmt-2q26
+
+**10%**: CXMT's share of DRAM revenue, Q2 2026
+
+- basis: measured
+- source: [@counterpoint2026hbm], 2026-06
+- defined in: `data/inputs/015-organisational.toml#L377`
+
+<a id="org-dram-cxmt-2q25"></a>
+### org-dram-cxmt-2q25
+
+**4%**: CXMT's share of DRAM revenue, Q2 2025
+
+- basis: measured
+- source: [@counterpoint2026hbm], 2025-06
+- defined in: `data/inputs/015-organisational.toml#L385`
+
+<a id="org-china-hbm-stockpile"></a>
+### org-china-hbm-stockpile
+
+**13 million HBM stacks**: HBM stacks China procured before the December 2024 controls, an analyst estimate
+
+- basis: measured
+- source: [@patel2025ascend], 2025-09
+- note: Samsung supplied 11.4 million of them
+- defined in: `data/inputs/015-organisational.toml#L393`
+
+<a id="org-hbm-stockpile-packages"></a>
+### org-hbm-stockpile-packages
+
+**1.6 million Ascend 910C packages**: Ascend 910C packages that stockpile is sufficient for, an analyst estimate
+
+- basis: measured
+- source: [@patel2025ascend], 2025-09
+- defined in: `data/inputs/015-organisational.toml#L403`
+
+<a id="org-huawei-die-bank"></a>
+### org-huawei-die-bank
+
+**2.9 million Ascend dies**: TSMC-made Ascend dies in Huawei's die bank (more than), an analyst estimate
+
+- basis: measured
+- source: [@patel2025ascend], 2025-09
+- note: made at TSMC although the 2020 entity listing was meant to cut Huawei off (allen2025senate, p. 4)
+- defined in: `data/inputs/015-organisational.toml#L412`
+
+<a id="org-cxmt-hbm-2026"></a>
+### org-cxmt-hbm-2026
+
+**2 million HBM stacks**: CXMT's projected HBM output in 2026, an analyst projection
+
+- basis: assumption
+- source: [@patel2025ascend], 2026
+- note: '~2 million stacks of HBM next year'
+- defined in: `data/inputs/015-organisational.toml#L422`
+
+<a id="org-cowos-2026-low"></a>
+### org-cowos-2026-low
+
+**120,000 wafers a month**: low end of TSMC's CoWoS capacity in 2026, an analyst estimate
+
+- basis: assumption
+- source: [@trendforce2026cowos], 2026
+- note: relaying Economic Daily News: 'could reach a record 120,000 to 140,000 wafers'
+- defined in: `data/inputs/015-organisational.toml#L435`
+
+<a id="org-cowos-2026-high"></a>
+### org-cowos-2026-high
+
+**140,000 wafers a month**: high end of TSMC's CoWoS capacity in 2026, an analyst estimate
+
+- basis: assumption
+- source: [@trendforce2026cowos], 2026
+- defined in: `data/inputs/015-organisational.toml#L445`
+
+<a id="org-cowos-total-2026"></a>
+### org-cowos-total-2026
+
+**200,000 wafers a month**: CoWoS-class capacity including OSAT partners that 2026 could approach
+
+- basis: assumption
+- source: [@trendforce2026cowos], 2026
+- defined in: `data/inputs/015-organisational.toml#L454`
+
+<a id="org-cowos-dec2023-low"></a>
+### org-cowos-dec2023-low
+
+**14,000 wafers a month**: low end of TSMC's CoWoS capacity, December 2023
+
+- basis: measured
+- source: [@sevilla2024scaling2030], 2023-12
+- defined in: `data/inputs/015-organisational.toml#L463`
+
+<a id="org-cowos-dec2023-high"></a>
+### org-cowos-dec2023-high
+
+**15,000 wafers a month**: high end of TSMC's CoWoS capacity, December 2023
+
+- basis: measured
+- source: [@sevilla2024scaling2030], 2023-12
+- defined in: `data/inputs/015-organisational.toml#L472`
+
+<a id="org-cowos-cagr"></a>
+### org-cowos-cagr
+
+**80%**: growth a year of TSMC's CoWoS capacity, 2022 to 2027 (more than)
+
+- basis: vendor
+- source: [@trendforce2026cowos], 2026-05
+- note: TSMC symposium, via Reuters: 'a CAGR of more than 80%'
+- defined in: `data/inputs/015-organisational.toml#L481`
+
+<a id="org-sold-2024"></a>
+### org-sold-2024
+
+**5.1 million H100e**: AI compute sold in 2024, in H100-equivalents
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2024
+- note: sum of per-quarter median estimates in Epoch's CSV, by the survey helper and confirmed by the spot-check; not a figure Epoch states; no valid interval
+- defined in: `data/inputs/015-organisational.toml#L493`
+
+<a id="org-sold-2025"></a>
+### org-sold-2025
+
+**13.6 million H100e**: AI compute sold in 2025, in H100-equivalents
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- note: as for org-sold-2024
+- defined in: `data/inputs/015-organisational.toml#L503`
+
+<a id="org-nvidia-share-2025"></a>
+### org-nvidia-share-2025
+
+**65.5%**: Nvidia's share of AI compute sold in 2025 (H100e)
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- defined in: `data/inputs/015-organisational.toml#L513`
+
+<a id="org-google-share-2025"></a>
+### org-google-share-2025
+
+**20%**: Google TPUs' share of AI compute sold in 2025 (H100e)
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- defined in: `data/inputs/015-organisational.toml#L521`
+
+<a id="org-huawei-share-2025"></a>
+### org-huawei-share-2025
+
+**3.9%**: Huawei's share of AI compute sold in 2025 (H100e)
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- defined in: `data/inputs/015-organisational.toml#L529`
+
+<a id="org-chip-tdp-2025"></a>
+### org-chip-tdp-2025
+
+**7.5 GW**: summed rated power (TDP) of AI chips sold in 2025, chips only
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- note: before cooling and servers
+- defined in: `data/inputs/015-organisational.toml#L537`
+
+<a id="org-huawei-h100e-2025"></a>
+### org-huawei-h100e-2025
+
+**530,000 H100e**: Huawei's 2025 AI compute output in H100-equivalents, Epoch's estimate
+
+- basis: modelled
+- source: [@epoch2026chipsales], 2025
+- note: methodology page; 90% credence 450,000 to 620,000
+- defined in: `data/inputs/015-organisational.toml#L547`
+
+<a id="org-hyperscaler-share"></a>
+### org-hyperscaler-share
+
+**70%**: share of global AI compute owned by the five US hyperscalers (more than)
+
+- basis: modelled
+- source: [@you2026chipowners], 2026-04
+- defined in: `data/inputs/015-organisational.toml#L557`
+
+<a id="org-china-owned-share"></a>
+### org-china-owned-share
+
+**5%**: share of cumulative recent AI chip compute owned by Chinese companies at end 2025 (just over)
+
+- basis: modelled
+- source: [@you2026chipowners], 2025-12
+- note: excludes smuggled chips and offshore cloud
+- defined in: `data/inputs/015-organisational.toml#L565`
+
+<a id="org-supercomputer-doubling"></a>
+### org-supercomputer-doubling
+
+**9 months**: doubling time of the computational performance of AI supercomputers, 2019 to 2025
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025
+- defined in: `data/inputs/015-organisational.toml#L574`
+
+<a id="org-us-supercomputer-share"></a>
+### org-us-supercomputer-share
+
+**75%**: US share of AI supercomputer performance in the dataset
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025
+- defined in: `data/inputs/015-organisational.toml#L583`
+
+<a id="org-china-supercomputer-share"></a>
+### org-china-supercomputer-share
+
+**15%**: China's share of AI supercomputer performance in the dataset
+
+- basis: measured
+- source: [@pilz2025supercomputers], 2025
+- defined in: `data/inputs/015-organisational.toml#L591`
+
+<a id="org-dc-hub-sites"></a>
+### org-dc-hub-sites
+
+**13 sites**: large US AI sites in Epoch's Frontier Data Centers Hub at launch
+
+- basis: measured
+- source: [@epoch2025datacentershub], 2025-11
+- defined in: `data/inputs/015-organisational.toml#L599`
+
+<a id="org-dc-hub-share"></a>
+### org-dc-hub-share
+
+**15%**: share of all H100e delivered that those sites hold
+
+- basis: measured
+- source: [@epoch2025datacentershub], 2025-11
+- note: about 2.5 million of about 15 million H100e
+- defined in: `data/inputs/015-organisational.toml#L608`
+
+<a id="org-dc-world-2024"></a>
+### org-dc-world-2024
+
+**415 TWh**: data centres' electricity use worldwide, 2024
+
+- basis: measured
+- source: [@iea2025energyai], 2024
+- note: about 1.5% of world electricity
+- defined in: `data/inputs/015-organisational.toml#L620`
+
+<a id="org-dc-world-2030"></a>
+### org-dc-world-2030
+
+**945 TWh**: data centres' electricity use worldwide projected for 2030
+
+- basis: assumption
+- source: [@iea2025energyai], 2030
+- defined in: `data/inputs/015-organisational.toml#L630`
+
+<a id="org-dc-us-2023"></a>
+### org-dc-us-2023
+
+**176 TWh**: US data centres' electricity use, 2023
+
+- basis: measured
+- source: [@shehabi2024datacenter], 2023
+- note: executive summary, PDF p. 8
+- defined in: `data/inputs/015-organisational.toml#L639`
+
+<a id="org-dc-us-share-2023"></a>
+### org-dc-us-share-2023
+
+**4.4%**: US data centres' share of US electricity use, 2023
+
+- basis: measured
+- source: [@shehabi2024datacenter], 2023
+- defined in: `data/inputs/015-organisational.toml#L649`
+
+<a id="org-interconnect-2025"></a>
+### org-interconnect-2025
+
+**61 months**: median time from interconnection request to operation for US power projects built in 2025
+
+- basis: measured
+- source: [@rand2026queued], 2025
+- note: slide 4; generator queues only, large-load queues excluded
+- defined in: `data/inputs/015-organisational.toml#L657`
+
+<a id="org-interconnect-2015"></a>
+### org-interconnect-2015
+
+**36 months**: the same median for projects built in 2015
+
+- basis: measured
+- source: [@rand2026queued], 2015
+- defined in: `data/inputs/015-organisational.toml#L667`
+
+<a id="org-interconnect-2008"></a>
+### org-interconnect-2008
+
+**22 months**: the same median for projects built in 2008
+
+- basis: measured
+- source: [@rand2026queued], 2008
+- defined in: `data/inputs/015-organisational.toml#L676`
+
+<a id="org-transformer-lead"></a>
+### org-transformer-lead
+
+**128 weeks**: average lead time for US power transformers, Q2 2025
+
+- basis: measured
+- source: [@woodmac2025connection], 2025-06
+- note: PDF p. 5
+- defined in: `data/inputs/015-organisational.toml#L685`
+
+<a id="org-gsu-lead"></a>
+### org-gsu-lead
+
+**143 weeks**: average lead time for generator step-up transformers, Q2 2025
+
+- basis: measured
+- source: [@woodmac2025connection], 2025-06
+- defined in: `data/inputs/015-organisational.toml#L695`
+
+<a id="org-turbine-gev"></a>
+### org-turbine-gev
+
+**116 GW**: GE Vernova's gas turbine backlog
+
+- basis: vendor
+- source: [@bailey2026steam], 2026-09
+- defined in: `data/inputs/015-organisational.toml#L704`
+
+<a id="org-turbine-siemens"></a>
+### org-turbine-siemens
+
+**69 GW**: Siemens Energy's gas turbine backlog
+
+- basis: vendor
+- source: [@bailey2026steam], 2026-09
+- defined in: `data/inputs/015-organisational.toml#L713`
+
+<a id="org-turbine-mhi"></a>
+### org-turbine-mhi
+
+**35 GW**: Mitsubishi Heavy Industries' gas turbine backlog
+
+- basis: vendor
+- source: [@bailey2026steam], 2026-09
+- defined in: `data/inputs/015-organisational.toml#L722`
+
+<a id="org-china-solar-2025"></a>
+### org-china-solar-2025
+
+**315 GW**: solar capacity China added in 2025 (AC)
+
+- basis: measured
+- source: [@shaw2026chinasolar], 2025
+- note: National Energy Administration statistics
+- defined in: `data/inputs/015-organisational.toml#L731`
+
+<a id="org-china-wind-2025"></a>
+### org-china-wind-2025
+
+**119 GW**: wind capacity China added in 2025
+
+- basis: measured
+- source: [@shaw2026chinasolar], 2025
+- defined in: `data/inputs/015-organisational.toml#L741`
+
+<a id="org-china-gallium"></a>
+### org-china-gallium
+
+**99%**: China's share of refined gallium (about)
+
+- basis: measured
+- source: [@iea2025energyai], 2025
+- defined in: `data/inputs/015-organisational.toml#L750`
+
+<a id="org-horinger-h100e"></a>
+### org-horinger-h100e
+
+**81,000 H100e**: compute at Huawei's Horinger data centre, Epoch's estimate
+
+- basis: modelled
+- source: [@cottier2026horinger], 2026-11
+- note: 90% CI 36,000 to 141,000
+- defined in: `data/inputs/015-organisational.toml#L758`
+
+<a id="org-horinger-power"></a>
+### org-horinger-power
+
+**286 MW**: IT power capacity across Horinger's four buildings, Epoch's estimate
+
+- basis: modelled
+- source: [@cottier2026horinger], 2026-11
+- defined in: `data/inputs/015-organisational.toml#L768`
+
+<a id="org-china-compute-per-power"></a>
+### org-china-compute-per-power
+
+**40%**: compute a given power capacity supports in China, as a share of leading US facilities
+
+- basis: modelled
+- source: [@cottier2026horinger], 2026-11
+- defined in: `data/inputs/015-organisational.toml#L777`
+
+<a id="org-colossus2-vs-horinger"></a>
+### org-colossus2-vs-horinger
+
+**14**: ratio of Colossus 2's computing capacity to Horinger's (about)
+
+- basis: modelled
+- source: [@cottier2026horinger], 2026-11
+- defined in: `data/inputs/015-organisational.toml#L785`
+
+<a id="org-dc-1gw-fastest"></a>
+### org-dc-1gw-fastest
+
+**11.6 months**: fastest time from construction start to 1 GW among recent sites (xAI Colossus 2)
+
+- basis: measured
+- source: [@somala2025buildtimes], 2025-11
+- defined in: `data/inputs/015-organisational.toml#L793`
+
+<a id="org-dc-build-target"></a>
+### org-dc-build-target
+
+**1 GW**: total facility power the build-time measure counts to
+
+- basis: measured
+- source: [@somala2025buildtimes], 2025-11
+- defined in: `data/inputs/015-organisational.toml#L802`
+
+<a id="org-dc-1gw-low"></a>
+### org-dc-1gw-low
+
+**1**: low end of construction start to 1 GW for recent sites
+
+- basis: measured
+- source: [@somala2025buildtimes], 2025-11
+- defined in: `data/inputs/015-organisational.toml#L811`
+
+<a id="org-dc-1gw-high"></a>
+### org-dc-1gw-high
+
+**3.6 years**: high end of construction start to 1 GW for recent sites
+
+- basis: measured
+- source: [@somala2025buildtimes], 2025-11
+- defined in: `data/inputs/015-organisational.toml#L819`
+
+<a id="org-talent-china-2025"></a>
+### org-talent-china-2025
+
+**41%**: share of top AI talent (NeurIPS 2025 authors) working in China
+
+- basis: measured
+- source: [@ma2026talent], 2025
+- note: 40% of 25,677 authors had complete career histories; not a random subset
+- defined in: `data/inputs/015-organisational.toml#L831`
+
+<a id="org-talent-us-2025"></a>
+### org-talent-us-2025
+
+**34%**: share of top AI talent (NeurIPS 2025 authors) working in the US
+
+- basis: measured
+- source: [@ma2026talent], 2025
+- defined in: `data/inputs/015-organisational.toml#L840`
+
+<a id="org-talent-china-2022"></a>
+### org-talent-china-2022
+
+**27%**: share of top AI talent working in China, 2022
+
+- basis: measured
+- source: [@ma2026talent], 2022
+- defined in: `data/inputs/015-organisational.toml#L848`
+
+<a id="org-talent-us-2022"></a>
+### org-talent-us-2022
+
+**46%**: share of top AI talent working in the US, 2022
+
+- basis: measured
+- source: [@ma2026talent], 2022
+- defined in: `data/inputs/015-organisational.toml#L856`
+
+<a id="org-talent-authors"></a>
+### org-talent-authors
+
+**25,677 authors**: unique NeurIPS 2025 authors in the talent study's sample
+
+- basis: measured
+- source: [@ma2026talent], 2025
+- defined in: `data/inputs/015-organisational.toml#L864`
+
+<a id="org-talent-us-retention"></a>
+### org-talent-us-retention
+
+**89%**: retention of top AI talent in the US
+
+- basis: measured
+- source: [@ma2026talent], 2025
+- defined in: `data/inputs/015-organisational.toml#L873`
+
+<a id="org-data-stock"></a>
+### org-data-stock
+
+**400 trillion tokens**: effective stock of public human-generated text
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- note: Fig. 1, Sec. 2.5
+- defined in: `data/inputs/015-organisational.toml#L881`
+
+<a id="org-data-full-use-year"></a>
+### org-data-full-use-year
+
+**2028**: median year frontier training fully uses that stock
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- note: range 2026 to 2032
+- defined in: `data/inputs/015-organisational.toml#L891`
+
+<a id="org-data-full-use-flop"></a>
+### org-data-full-use-flop
+
+**5e+28 FLOP**: compute-optimal training compute at which the stock is fully used
+
+- basis: modelled
+- source: [@villalobos2022data], 2024
+- defined in: `data/inputs/015-organisational.toml#L900`
+
+<a id="org-smuggled-cum"></a>
+### org-smuggled-cum
+
+**660,000 H100e**: compute smuggled into China through end 2025, median
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025-12
+- note: Monte Carlo blend of a diversion model and a resale model
+- defined in: `data/inputs/015-organisational.toml#L912`
+
+<a id="org-smuggled-cum-low"></a>
+### org-smuggled-cum-low
+
+**290,000 H100e**: low end of the 90% CI of compute smuggled into China through end 2025
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L922`
+
+<a id="org-smuggled-cum-high"></a>
+### org-smuggled-cum-high
+
+**1,600,000 H100e**: high end of the 90% CI of compute smuggled into China through end 2025
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L931`
+
+<a id="org-smuggled-share-china"></a>
+### org-smuggled-share-china
+
+**33%**: smuggled compute as a share of China's total AI compute ('roughly a third')
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L940`
+
+<a id="org-smuggled-share-global"></a>
+### org-smuggled-share-global
+
+**3%**: smuggled compute as a share of the global compute stockpile ('roughly 3%')
+
+- basis: modelled
+- source: [@juniewicz2026smuggling], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L948`
+
+<a id="org-diversion-detect"></a>
+### org-diversion-detect
+
+**25%**: share of chip diversion cases detected, median assumed in Epoch's smuggling model
+
+- basis: assumption
+- source: [@juniewicz2026smuggling], 2026-04
+- note: 90% CI 10% to 80%
+- defined in: `data/inputs/015-organisational.toml#L956`
+
+<a id="org-diversion-detect-low"></a>
+### org-diversion-detect-low
+
+**10%**: low end of the assumed detection rate of diversion cases
+
+- basis: assumption
+- source: [@juniewicz2026smuggling], 2026-04
+- defined in: `data/inputs/015-organisational.toml#L965`
+
+<a id="org-diversion-detect-high"></a>
+### org-diversion-detect-high
+
+**80%**: high end of the assumed detection rate of diversion cases
+
+- basis: assumption
+- source: [@juniewicz2026smuggling], 2026-04
+- defined in: `data/inputs/015-organisational.toml#L973`
+
+<a id="org-allegations-cum"></a>
+### org-allegations-cum
+
+**300,000 H100e**: cumulative allegations of diverted or missing chips by end 2025 ('almost')
+
+- basis: measured
+- source: [@juniewicz2026smuggling], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L981`
+
+<a id="org-smuggled-2024-chips"></a>
+### org-smuggled-2024-chips
+
+**140,000 chips**: AI chips smuggled into China in 2024, median of CNAS's probabilistic estimate
+
+- basis: modelled
+- source: [@grunewald2025smuggling], 2024
+- note: range from about 10,000 to several hundred thousand; a distribution, not a count of cases
+- defined in: `data/inputs/015-organisational.toml#L990`
+
+<a id="org-smuggling-profit-3"></a>
+### org-smuggling-profit-3
+
+**140 million USD**: profits from three reported chip smuggling cases (about)
+
+- basis: measured
+- source: [@grunewald2025smuggling], 2025-06
+- defined in: `data/inputs/015-organisational.toml#L1000`
+
+<a id="org-bis-enforcement"></a>
+### org-bis-enforcement
+
+**55 million USD**: BIS's annual export enforcement budget (about)
+
+- basis: measured
+- source: [@grunewald2025smuggling], 2025-06
+- note: endnote 12
+- defined in: `data/inputs/015-organisational.toml#L1009`
+
+<a id="org-huawei-commerce-2025"></a>
+### org-huawei-commerce-2025
+
+**200,000 Ascend chips**: Huawei's 2025 Ascend production capacity per the US Commerce Department (at or below)
+
+- basis: measured
+- source: [@zafar2025kessler], 2025-06
+- note: Under Secretary Kessler, House testimony; capacity, not shipments
+- defined in: `data/inputs/015-organisational.toml#L1019`
+
+<a id="org-huawei-semianalysis-2025"></a>
+### org-huawei-semianalysis-2025
+
+**805,000 Ascend units**: Huawei's 2025 Ascend shipments per SemiAnalysis
+
+- basis: measured
+- source: [@patel2025ascend], 2025-09
+- note: may include die-bank chips
+- defined in: `data/inputs/015-organisational.toml#L1029`
+
+<a id="org-huawei-idc-2025"></a>
+### org-huawei-idc-2025
+
+**812,000 AI chips**: Huawei's 2025 AI chip shipments in China per IDC (around)
+
+- basis: measured
+- source: [@pan2026idc], 2026-04
+- defined in: `data/inputs/015-organisational.toml#L1039`
+
+<a id="org-china-accelerators-2025"></a>
+### org-china-accelerators-2025
+
+**4.0 million units**: AI accelerators shipped in China in 2025 per IDC (approximately)
+
+- basis: measured
+- source: [@pan2026idc], 2026-04
+- defined in: `data/inputs/015-organisational.toml#L1048`
+
+<a id="org-nvidia-china-share-2025"></a>
+### org-nvidia-china-share-2025
+
+**55%**: Nvidia's share of AI accelerator units in China in 2025 per IDC
+
+- basis: measured
+- source: [@pan2026idc], 2026-04
+- defined in: `data/inputs/015-organisational.toml#L1057`
+
+<a id="org-chips-unaccounted"></a>
+### org-chips-unaccounted
+
+**1 million chips**: AI chips not traced to an owner, order of magnitude
+
+- basis: modelled
+- source: [@koopmanschap2026gpu], 2026-06
+- note: 'on the order of a million chips unaccounted for', after Epoch traced 15.7 million of 20.2 million chips
+- defined in: `data/inputs/015-organisational.toml#L1065`
+
+<a id="org-h200-fee"></a>
+### org-h200-fee
+
+**25%**: duty on each H200 sold to China under the December 2025 approval
+
+- basis: spec
+- source: [@james2025h200], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L1078`
+
+<a id="org-diffusion-weights"></a>
+### org-diffusion-weights
+
+**1e+26 operations**: training compute above which closed weights needed a licence under the rescinded diffusion rule
+
+- basis: spec
+- source: [@bis2025diffusion], 2025-01
+- defined in: `data/inputs/015-organisational.toml#L1086`
+
+<a id="org-eccn-tpp"></a>
+### org-eccn-tpp
+
+**4,800**: total processing performance at which a chip falls under ECCN 3A090.a
+
+- basis: spec
+- source: [@bis2023advancedcomputing], 2023-10
+- defined in: `data/inputs/015-organisational.toml#L1095`
+
+<a id="org-eccn-tpp-pd"></a>
+### org-eccn-tpp-pd
+
+**1,600**: lower total processing performance that also falls under 3A090.a with high performance density
+
+- basis: spec
+- source: [@bis2023advancedcomputing], 2023-10
+- defined in: `data/inputs/015-organisational.toml#L1103`
+
+<a id="org-eccn-pd"></a>
+### org-eccn-pd
+
+**5.92**: performance density threshold paired with TPP 1,600 in 3A090.a
+
+- basis: spec
+- source: [@bis2023advancedcomputing], 2023-10
+- defined in: `data/inputs/015-organisational.toml#L1111`
+
+<a id="org-hbm-control"></a>
+### org-hbm-control
+
+**2 GB/s per mm2**: memory bandwidth density above which HBM falls under ECCN 3A090.c
+
+- basis: spec
+- source: [@bis2024hbm], 2024-12
+- note: 'All HBM stacks currently in production exceed this threshold'
+- defined in: `data/inputs/015-organisational.toml#L1119`
+
+<a id="org-ascend-superpod"></a>
+### org-ascend-superpod
+
+**8,192 chips**: Ascend 950DT chips in one Atlas 950 SuperPoD (up to)
+
+- basis: vendor
+- source: [@xu2025huaweiconnect], 2025-09
+- defined in: `data/inputs/015-organisational.toml#L1129`
+
+<a id="org-ascend-supercluster"></a>
+### org-ascend-supercluster
+
+**500,000 NPUs**: NPUs in a planned Atlas 950 SuperCluster (over)
+
+- basis: vendor
+- source: [@xu2025huaweiconnect], 2025-09
+- defined in: `data/inputs/015-organisational.toml#L1138`
+
+<a id="org-deepseek-penalty-low"></a>
+### org-deepseek-penalty-low
+
+**2**: low end of the extra compute DeepSeek's CEO says restrictions force
+
+- basis: vendor
+- source: [@allen2025senate], 2025-12
+- note: quoted in testimony, p. 3: 'two to four times the computing power'
+- defined in: `data/inputs/015-organisational.toml#L1147`
+
+<a id="org-deepseek-penalty-high"></a>
+### org-deepseek-penalty-high
+
+**4**: high end of the extra compute DeepSeek's CEO says restrictions force
+
+- basis: vendor
+- source: [@allen2025senate], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L1156`
+
+<a id="org-older-chip-cost"></a>
+### org-older-chip-cost
+
+**10**: factor by which costs and slowdowns of older AI chips exceed state-of-the-art ones (at least)
+
+- basis: modelled
+- source: [@khan2020aichips], 2020-04
+- note: 'at least an order of magnitude greater'
+- defined in: `data/inputs/015-organisational.toml#L1164`
+
+<a id="org-decentral-growth"></a>
+### org-decentral-growth
+
+**20**: growth a year of decentralised training compute, the author's estimate
+
+- basis: assumption
+- source: [@sevilla2025decentralized], 2025-12
+- note: essay, the author's view, not Epoch's official position
+- defined in: `data/inputs/015-organisational.toml#L1173`
+
+<a id="org-decentral-largest"></a>
+### org-decentral-largest
+
+**6e+23 FLOP**: upper end of the largest decentralised training runs
+
+- basis: measured
+- source: [@sevilla2025decentralized], 2025-12
+- note: 'the 6e22-6e23 FLOP range', about 1000 times below the largest models
+- defined in: `data/inputs/015-organisational.toml#L1182`
+
+<a id="org-decentral-gap"></a>
+### org-decentral-gap
+
+**1,000**: factor by which the largest decentralised runs fall below the largest models (about)
+
+- basis: measured
+- source: [@sevilla2025decentralized], 2025-12
+- defined in: `data/inputs/015-organisational.toml#L1192`
+
+<a id="org-sat-reliable-mw"></a>
+### org-sat-reliable-mw
+
+**10 MW**: facility power above which satellite surveillance reliably detects AI data centres
+
+- basis: modelled
+- source: [@koopmanschap2026gpu], 2026-06
+- note: Sec. 5.3.1, about 10,000 H100e; backed by a reported classifier whose four false negatives were all below 10 MW
+- defined in: `data/inputs/015-organisational.toml#L1200`
+
+<a id="org-miri-strict"></a>
+### org-miri-strict
+
+**1e+24 FLOP**: training compute above which MIRI's draft agreement prohibits training
+
+- basis: spec
+- source: [@scher2025agreement], 2026-05
+- note: a draft agreement's chosen value, not in force
+- defined in: `data/inputs/015-organisational.toml#L1213`
+
+<a id="org-miri-monitored"></a>
+### org-miri-monitored
+
+**1e+22 FLOP**: training compute above which MIRI's draft agreement monitors training
+
+- basis: spec
+- source: [@scher2025agreement], 2026-05
+- note: a draft agreement's chosen value, not in force
+- defined in: `data/inputs/015-organisational.toml#L1223`
+
+<a id="org-miri-cluster"></a>
+### org-miri-cluster
+
+**16 H100e**: largest chip concentration MIRI's draft agreement allows outside monitored facilities
+
+- basis: spec
+- source: [@scher2025agreement], 2026-05
+- note: about 500,000 USD of H100s in 2025, per the source
+- defined in: `data/inputs/015-organisational.toml#L1233`
+
+<a id="org-miri-withdrawal"></a>
+### org-miri-withdrawal
+
+**12 months**: withdrawal notice in MIRI's draft agreement
+
+- basis: spec
+- source: [@scher2025agreement], 2026-05
+- note: Article XV; chosen for the assurance tasks, not derived
+- defined in: `data/inputs/015-organisational.toml#L1243`
+
+<a id="org-hwp-fe"></a>
+### org-hwp-fe
+
+**6.4 million H100e**: covert evasion fleet threshold for year-end 2026 in the hardwired-pause working paper
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: p. 42
+- defined in: `data/inputs/015-organisational.toml#L1253`
+
+<a id="org-hwp-fb"></a>
+### org-hwp-fb
+
+**180 million H100e**: overt breakout fleet threshold for year-end 2026 in the hardwired-pause working paper
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: p. 42 and p. 102, with a 2-year breakout horizon chosen by judgement
+- defined in: `data/inputs/015-organisational.toml#L1263`
+
+<a id="org-hwp-global-2026"></a>
+### org-hwp-global-2026
+
+**47 million H100e**: projected global AI fleet at year-end 2026 in the hardwired-pause working paper
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: p. 102
+- defined in: `data/inputs/015-organisational.toml#L1273`
+
+<a id="org-hwp-tb"></a>
+### org-hwp-tb
+
+**2 years**: breakout horizon the hardwired-pause working paper chooses, the time before the rest of the world could react
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: Sec. 6.2.3, chosen by judgement, not derived from detection and response times
+- defined in: `data/inputs/015-organisational.toml#L1283`
+
+<a id="org-ba-groups"></a>
+### org-ba-groups
+
+**10 groups**: groups per treatment in Barrett and Dannenberg's threshold experiment
+
+- basis: measured
+- source: [@barrett2012climate], 2012
+- defined in: `data/inputs/015-organisational.toml#L1296`
+
+<a id="org-ba-known-avoided"></a>
+### org-ba-known-avoided
+
+**8**: groups of 10 that avoided catastrophe with a known threshold
+
+- basis: measured
+- source: [@barrett2012climate], 2012
+- defined in: `data/inputs/015-organisational.toml#L1305`
+
+<a id="org-ba-uncertain-catastrophe"></a>
+### org-ba-uncertain-catastrophe
+
+**9**: groups of 10 for which catastrophe was certain with the threshold's location uncertain
+
+- basis: measured
+- source: [@barrett2012climate], 2012
+- defined in: `data/inputs/015-organisational.toml#L1313`
+
+<a id="org-nordhaus-stable-low"></a>
+### org-nordhaus-stable-low
+
+**2 countries**: low end of the size of stable coalitions without sanctions on outsiders (identical countries)
+
+- basis: modelled
+- source: [@nordhaus2015climate], 2015
+- note: p. 1344-45, the small coalition paradox
+- defined in: `data/inputs/015-organisational.toml#L1321`
+
+<a id="org-nordhaus-stable-high"></a>
+### org-nordhaus-stable-high
+
+**3 countries**: high end of the size of stable coalitions without sanctions on outsiders (identical countries)
+
+- basis: modelled
+- source: [@nordhaus2015climate], 2015
+- defined in: `data/inputs/015-organisational.toml#L1331`
+
+<a id="org-nordhaus-tariff"></a>
+### org-nordhaus-tariff
+
+**5%**: trade penalty on non-members at which Nordhaus's 50 USD per tCO2 club target is almost reached
+
+- basis: modelled
+- source: [@nordhaus2015climate], 2015
+- defined in: `data/inputs/015-organisational.toml#L1340`
+
+<a id="org-gan-detect"></a>
+### org-gan-detect
+
+**32%**: chance of detection within the response window that deters breakout in Gan's calibration
+
+- basis: assumption
+- source: [@gan2026clock], 2026-11
+- note: illustrative calibration, p. 15-16
+- defined in: `data/inputs/015-organisational.toml#L1348`
+
+<a id="org-gan-catchup-start"></a>
+### org-gan-catchup-start
+
+**12 months**: catch-up time at the start of a pause in Gan's calibration
+
+- basis: assumption
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/015-organisational.toml#L1357`
+
+<a id="org-gan-pause-months"></a>
+### org-gan-pause-months
+
+**24 months**: length of compliant pause over which Gan reports the fall in catch-up time
+
+- basis: assumption
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/015-organisational.toml#L1366`
+
+<a id="org-gan-catchup-24"></a>
+### org-gan-catchup-24
+
+**5.74 months**: catch-up time after 24 months of compliant pause in Gan's calibration
+
+- basis: assumption
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/015-organisational.toml#L1375`
+
+<a id="org-gan-equal-catchup"></a>
+### org-gan-equal-catchup
+
+**4.4 months**: catch-up time of a follower with the leader's compute in Gan's calibration
+
+- basis: assumption
+- source: [@gan2026clock], 2026-11
+- defined in: `data/inputs/015-organisational.toml#L1384`
+
+<a id="org-iraq-years"></a>
+### org-iraq-years
+
+**10 years**: years Iraq's nuclear weapons programme ran undetected by the inspectorate (about)
+
+- basis: measured
+- source: [@albright-2002], 1991
+- note: late 1981 decision to mid-1991; thorne-1992 for the channel
+- defined in: `data/inputs/015-organisational.toml#L1396`
+
+<a id="org-libya-years"></a>
+### org-libya-years
+
+**20 years**: years Libya's nuclear programme ran undeclared (about 20 or more)
+
+- basis: measured
+- source: [@iaea-gov-2004-12], 2003
+- note: para. 10: since the beginning of the 1980s, to December 2003
+- defined in: `data/inputs/015-organisational.toml#L1406`
+
+<a id="org-libya-sites"></a>
+### org-libya-sites
+
+**12 sites**: sites involved in Libya's undeclared nuclear programme since the early 1980s
+
+- basis: measured
+- source: [@iaea-gov-2004-12], 2004-02
+- note: para. 10
+- defined in: `data/inputs/015-organisational.toml#L1416`
+
+<a id="org-iran-acknowledged-years"></a>
+### org-iran-acknowledged-years
+
+**18 years**: years of centrifuge enrichment development Iran acknowledged in 2003
+
+- basis: measured
+- source: [@iaea-gov-2003-75], 2003-11
+- note: para. 46
+- defined in: `data/inputs/015-organisational.toml#L1426`
+
+<a id="org-iran-years"></a>
+### org-iran-years
+
+**17 years**: years Iran's centrifuge programme ran undetected
+
+- basis: measured
+- source: [@iaea-gov-2003-75], 2002
+- note: 1985 decision (para. 47) to the August 2002 media reports (iaea-gov-2003-40, para. 3)
+- defined in: `data/inputs/015-organisational.toml#L1436`
+
+<a id="org-fordow-years-low"></a>
+### org-fordow-years-low
+
+**3 years**: years Fordow was undeclared, counting from design work in 2006
+
+- basis: measured
+- source: [@iaea-gov-2009-74], 2009
+- note: para. 13
+- defined in: `data/inputs/015-organisational.toml#L1446`
+
+<a id="org-fordow-years-high"></a>
+### org-fordow-years-high
+
+**7 years**: years Fordow was undeclared, counting from construction in 2002
+
+- basis: measured
+- source: [@iaea-gov-2009-74], 2009
+- note: para. 13
+- defined in: `data/inputs/015-organisational.toml#L1456`
+
+<a id="org-syria-years"></a>
+### org-syria-years
+
+**6 years**: years Syria's reactor was under construction undeclared (about)
+
+- basis: measured
+- source: [@iaea-gov-2011-30], 2007
+- note: commercial imagery from 2001 to the September 2007 strike, para. 2 and 13
+- defined in: `data/inputs/015-organisational.toml#L1466`
+
+<a id="org-biopreparat-years"></a>
+### org-biopreparat-years
+
+**16 years**: years the Soviet Biopreparat programme ran before a defector revealed it
+
+- basis: measured
+- source: [@fas-biopreparat], 1989
+- note: 1973 to October 1989; hoffman-2009 for the defection
+- defined in: `data/inputs/015-organisational.toml#L1476`
+
+<a id="org-biopreparat-underestimate"></a>
+### org-biopreparat-underestimate
+
+**10**: factor by which US or British intelligence had underestimated Biopreparat's size
+
+- basis: measured
+- source: [@fas-biopreparat], 1989
+- note: 'ten times larger than estimated'
+- defined in: `data/inputs/015-organisational.toml#L1486`
+
+<a id="org-biopreparat-staff-low"></a>
+### org-biopreparat-staff-low
+
+**25,000 employees**: low end of estimates of Biopreparat's staff
+
+- basis: measured
+- source: [@fas-biopreparat], 1998
+- defined in: `data/inputs/015-organisational.toml#L1495`
+
+<a id="org-biopreparat-staff-high"></a>
+### org-biopreparat-staff-high
+
+**32,000 employees**: high end of the main estimate of Biopreparat's staff
+
+- basis: measured
+- source: [@fas-biopreparat], 1998
+- note: another estimate gives over 40,000 workers at 47 or more facilities
+- defined in: `data/inputs/015-organisational.toml#L1504`
+
+<a id="org-sa-years"></a>
+### org-sa-years
+
+**15 years**: years South Africa's weapons programme was active, never detected by the inspectorate in these sources
+
+- basis: measured
+- source: [@vonbaeckmann-1995], 1989
+- note: 1974 to 1989; ended by self-disclosure on 24 March 1993
+- defined in: `data/inputs/015-organisational.toml#L1514`
+
+<a id="org-sa-decision-device"></a>
+### org-sa-decision-device
+
+**5 years**: years from South Africa's decision to its first nuclear device (about)
+
+- basis: measured
+- source: [@vonbaeckmann-1995], 1979
+- note: 1974 approval to 1979 first device
+- defined in: `data/inputs/015-organisational.toml#L1524`
+
+<a id="org-dprk-months"></a>
+### org-dprk-months
+
+**9 months**: months from the DPRK's initial report to the IAEA's special inspection request (about)
+
+- basis: measured
+- source: [@iaea-gc37-1084], 1993
+- note: 4 May 1992 to 9 February 1993; accountancy and sampling of declared material
+- defined in: `data/inputs/015-organisational.toml#L1534`
+
+<a id="org-dprk-withdrawal-days"></a>
+### org-dprk-withdrawal-days
+
+**31 days**: days from the special inspection request to the DPRK's withdrawal notice
+
+- basis: measured
+- source: [@iaea-gc37-1084], 1993
+- note: 9 February to 12 March 1993
+- defined in: `data/inputs/015-organisational.toml#L1544`
+
+<a id="org-cwc-ci-requests"></a>
+### org-cwc-ci-requests
+
+**0 requests**: CWC challenge inspections requested from 1997 to July 2025
+
+- basis: measured
+- source: [@opcw-ec109-dg22], 2025-07
+- defined in: `data/inputs/015-organisational.toml#L1554`
+
+<a id="org-opcw-cw-insp"></a>
+### org-opcw-cw-insp
+
+**3,521 inspections**: OPCW inspections of chemical weapons sites since 1997 (sum of categories)
+
+- basis: measured
+- source: [@opcw-numbers], 2026-09
+- defined in: `data/inputs/015-organisational.toml#L1563`
+
+<a id="org-opcw-ind-insp"></a>
+### org-opcw-ind-insp
+
+**5,128 inspections**: OPCW industry inspections since 1997 (sum of categories)
+
+- basis: measured
+- source: [@opcw-numbers], 2026-09
+- note: the page's label for this line is ambiguous; the sum is the survey helper's
+- defined in: `data/inputs/015-organisational.toml#L1572`
+
+<a id="org-fraud-detect"></a>
+### org-fraud-detect
+
+**31%**: share of large-firm US corporate frauds detected, 1996 to 2004
+
+- basis: measured
+- source: [@dyck2017pervasive], 2017
+- note: p. 2; inferred from the natural experiment of Arthur Andersen's demise
+- defined in: `data/inputs/015-organisational.toml#L1582`
+
+<a id="org-fraud-employees"></a>
+### org-fraud-employees
+
+**19%**: share of detected corporate frauds revealed by employees
+
+- basis: measured
+- source: [@dyck2007whistle], 2007
+- defined in: `data/inputs/015-organisational.toml#L1591`
+
+<a id="org-fraud-quitam"></a>
+### org-fraud-quitam
+
+**46.7%**: share of healthcare frauds revealed by employees, where qui tam rewards apply
+
+- basis: measured
+- source: [@dyck2007whistle], 2007
+- note: p. 4-5; rewards of 15% to 30% of recoveries
+- defined in: `data/inputs/015-organisational.toml#L1599`
+
+<a id="org-fraud-other"></a>
+### org-fraud-other
+
+**16.3%**: share of frauds revealed by employees in other industries
+
+- basis: measured
+- source: [@dyck2007whistle], 2007
+- defined in: `data/inputs/015-organisational.toml#L1608`
+
 <a id="miss-prob-one-channel"></a>
 ### miss-prob-one-channel
 
@@ -42,3 +9575,2953 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `exp(-inspections-per-year * detect-prob-per-inspection * breakout-years)`
 - inputs: [inspections-per-year](#inspections-per-year), [detect-prob-per-inspection](#detect-prob-per-inspection), [breakout-years](#breakout-years)
 - defined in: `model/subcritical.py#L68`
+
+<a id="def-days-per-month"></a>
+### def-days-per-month
+
+**30.44 days**: days in an average month
+
+- basis: derived
+- formula: `def-days-per-year / 12`
+- inputs: [def-days-per-year](#def-days-per-year)
+- defined in: `model/parts/010_definitions.py#L23`
+
+<a id="def-seconds-per-year"></a>
+### def-seconds-per-year
+
+**31,600,000 s**: seconds in a year
+
+- basis: derived
+- formula: `def-days-per-year * def-seconds-per-day`
+- inputs: [def-days-per-year](#def-days-per-year), [def-seconds-per-day](#def-seconds-per-day)
+- defined in: `model/parts/010_definitions.py#L32`
+
+<a id="def-anthropic-example-doubled"></a>
+### def-anthropic-example-doubled
+
+**81**: effective scale-up a year at twice the baseline rate of progress (Anthropic's worked example)
+
+- basis: derived
+- formula: `def-anthropic-example-baseline ^ def-anthropic-rate-multiple`
+- inputs: [def-anthropic-example-baseline](#def-anthropic-example-baseline), [def-anthropic-rate-multiple](#def-anthropic-rate-multiple)
+- note: Two years of 9x progress in one year; the RSP's own figure is 81x.
+- defined in: `model/parts/010_definitions.py#L44`
+
+<a id="def-metr-aeci-ratio"></a>
+### def-metr-aeci-ratio
+
+**1.9**: ratio of the capability index's growth rate after and before the breakpoint
+
+- basis: derived
+- formula: `def-metr-aeci-after / def-metr-aeci-before`
+- inputs: [def-metr-aeci-after](#def-metr-aeci-after), [def-metr-aeci-before](#def-metr-aeci-before)
+- note: Reproduces METR's headline acceleration from its two fitted slopes.
+- defined in: `model/parts/010_definitions.py#L54`
+
+<a id="def-cunningham-threshold-check"></a>
+### def-cunningham-threshold-check
+
+**0.15**: research productivity gain per ECI point at which the loop gain reaches 1
+
+- basis: derived
+- formula: `1 / (def-cunningham-return * def-cunningham-eps-ca)`
+- inputs: [def-cunningham-return](#def-cunningham-return), [def-cunningham-eps-ca](#def-cunningham-eps-ca)
+- note: Reproduces Cunningham et al.'s threshold of 0.15 from their calibration.
+- defined in: `model/parts/010_definitions.py#L63`
+
+<a id="def-cunningham-loop-gain-illustration"></a>
+### def-cunningham-loop-gain-illustration
+
+**0.58**: loop gain implied by Cunningham et al.'s upper-end illustration (a reported 4x uplift taken at face value)
+
+- basis: derived
+- formula: `def-cunningham-return * def-cunningham-eps-rc-illustration * def-cunningham-eps-ca`
+- inputs: [def-cunningham-return](#def-cunningham-return), [def-cunningham-eps-rc-illustration](#def-cunningham-eps-rc-illustration), [def-cunningham-eps-ca](#def-cunningham-eps-ca)
+- note: An upper-end illustration, not an estimate: the source calls the 4x uplift very likely an overestimate.
+- defined in: `model/parts/010_definitions.py#L74`
+
+<a id="def-r-lm-bottlenecked"></a>
+### def-r-lm-bottlenecked
+
+**0.63**: returns to software research in language models after the compute-bottleneck correction
+
+- basis: derived
+- formula: `def-r-lm / def-r-bottleneck-divisor`
+- inputs: [def-r-lm](#def-r-lm), [def-r-bottleneck-divisor](#def-r-bottleneck-divisor)
+- defined in: `model/parts/010_definitions.py#L82`
+
+<a id="def-r-lm-high-bottlenecked"></a>
+### def-r-lm-high-bottlenecked
+
+**1.07**: upper end of the language-model interval after the compute-bottleneck correction
+
+- basis: derived
+- formula: `def-r-lm-high / def-r-bottleneck-divisor`
+- inputs: [def-r-lm-high](#def-r-lm-high), [def-r-bottleneck-divisor](#def-r-bottleneck-divisor)
+- defined in: `model/parts/010_definitions.py#L90`
+
+<a id="def-r-cv-bottlenecked"></a>
+### def-r-cv-bottlenecked
+
+**0.42**: returns to software research in computer vision after the compute-bottleneck correction
+
+- basis: derived
+- formula: `def-r-cv / def-r-bottleneck-divisor`
+- inputs: [def-r-cv](#def-r-cv), [def-r-bottleneck-divisor](#def-r-bottleneck-divisor)
+- defined in: `model/parts/010_definitions.py#L98`
+
+<a id="def-rebench-cost-ratio"></a>
+### def-rebench-cost-ratio
+
+**15**: how many times cheaper an agent's 8-hour RE-Bench run was than a human expert's
+
+- basis: derived
+- formula: `def-rebench-human-cost / def-rebench-agent-cost`
+- inputs: [def-rebench-human-cost](#def-rebench-human-cost), [def-rebench-agent-cost](#def-rebench-agent-cost)
+- defined in: `model/parts/010_definitions.py#L109`
+
+<a id="def-narrowpath-breakout-check"></a>
+### def-narrowpath-breakout-check
+
+**3.17 yr**: years in 10^8 seconds, the gap between A Narrow Path's compute and cluster limits
+
+- basis: derived
+- formula: `10 ^ def-narrowpath-oom-gap / def-seconds-per-year`
+- inputs: [def-narrowpath-oom-gap](#def-narrowpath-oom-gap), [def-seconds-per-year](#def-seconds-per-year)
+- note: Reproduces A Narrow Path's 3.2-year breakout.
+- defined in: `model/parts/010_definitions.py#L121`
+
+<a id="def-hwp-fleet-check"></a>
+### def-hwp-fleet-check
+
+**180 million H100e**: breakout fleet threshold recomputed from the hardwired-pause paper's inputs
+
+- basis: derived
+- formula: `def-hwp-overhead * def-hwp-breakout-budget / (def-hwp-horizon * def-hwp-utilisation * def-hwp-h100e-rate * 1e12 * def-seconds-per-year) / 1e6`
+- inputs: [def-hwp-overhead](#def-hwp-overhead), [def-hwp-breakout-budget](#def-hwp-breakout-budget), [def-hwp-horizon](#def-hwp-horizon), [def-hwp-utilisation](#def-hwp-utilisation), [def-hwp-h100e-rate](#def-hwp-h100e-rate), [def-seconds-per-year](#def-seconds-per-year)
+- note: Reproduces the paper's F_B of 180M H100e.
+- defined in: `model/parts/010_definitions.py#L141`
+
+<a id="def-hwp-fleet-over-global"></a>
+### def-hwp-fleet-over-global
+
+**3.9**: the breakout fleet threshold as a multiple of the projected global fleet at year-end 2026
+
+- basis: derived
+- formula: `def-hwp-fleet-check / def-hwp-global-fleet`
+- inputs: [def-hwp-fleet-check](#def-hwp-fleet-check), [def-hwp-global-fleet](#def-hwp-global-fleet)
+- defined in: `model/parts/010_definitions.py#L150`
+
+<a id="def-gan-catchup-share"></a>
+### def-gan-catchup-share
+
+**48%**: Gan's catch-up time after 24 months of pause, as a share of its starting value
+
+- basis: derived
+- formula: `def-gan-catchup-24 / def-gan-catchup-start`
+- inputs: [def-gan-catchup-24](#def-gan-catchup-24), [def-gan-catchup-start](#def-gan-catchup-start)
+- defined in: `model/parts/010_definitions.py#L158`
+
+<a id="def-ho-annual-multiple"></a>
+### def-ho-annual-multiple
+
+**2.7**: yearly fall in compute needed for a fixed language-model performance, central
+
+- basis: derived
+- formula: `2 ^ (12 / def-ho-halving-months)`
+- inputs: [def-ho-halving-months](#def-ho-halving-months)
+- defined in: `model/parts/010_definitions.py#L172`
+
+<a id="def-ho-annual-multiple-fast"></a>
+### def-ho-annual-multiple-fast
+
+**6.3**: yearly fall in compute needed for a fixed language-model performance, fast end of the 95% CI
+
+- basis: derived
+- formula: `2 ^ (12 / def-ho-halving-fast)`
+- inputs: [def-ho-halving-fast](#def-ho-halving-fast)
+- defined in: `model/parts/010_definitions.py#L172`
+
+<a id="def-ho-annual-multiple-slow"></a>
+### def-ho-annual-multiple-slow
+
+**1.8**: yearly fall in compute needed for a fixed language-model performance, slow end of the 95% CI
+
+- basis: derived
+- formula: `2 ^ (12 / def-ho-halving-slow)`
+- inputs: [def-ho-halving-slow](#def-ho-halving-slow)
+- defined in: `model/parts/010_definitions.py#L172`
+
+<a id="def-iaea-m-metal-low"></a>
+### def-iaea-m-metal-low
+
+**0.23**: margin implied by IAEA timeliness (conversion time over detection goal), metal, low end
+
+- basis: derived
+- formula: `def-iaea-conv-metal-low / (def-iaea-goal-unirr * def-days-per-month)`
+- inputs: [def-iaea-conv-metal-low](#def-iaea-conv-metal-low), [def-iaea-goal-unirr](#def-iaea-goal-unirr), [def-days-per-month](#def-days-per-month)
+- defined in: `model/parts/010_definitions.py#L197`
+
+<a id="def-iaea-m-metal-high"></a>
+### def-iaea-m-metal-high
+
+**0.33**: margin implied by IAEA timeliness (conversion time over detection goal), metal, high end
+
+- basis: derived
+- formula: `def-iaea-conv-metal-high / (def-iaea-goal-unirr * def-days-per-month)`
+- inputs: [def-iaea-conv-metal-high](#def-iaea-conv-metal-high), [def-iaea-goal-unirr](#def-iaea-goal-unirr), [def-days-per-month](#def-days-per-month)
+- defined in: `model/parts/010_definitions.py#L197`
+
+<a id="def-iaea-m-irr-low"></a>
+### def-iaea-m-irr-low
+
+**0.33**: margin implied by IAEA timeliness (conversion time over detection goal), irradiated fuel, low end
+
+- basis: derived
+- formula: `def-iaea-conv-irr-low / def-iaea-goal-irr`
+- inputs: [def-iaea-conv-irr-low](#def-iaea-conv-irr-low), [def-iaea-goal-irr](#def-iaea-goal-irr)
+- defined in: `model/parts/010_definitions.py#L197`
+
+<a id="def-iaea-m-irr-high"></a>
+### def-iaea-m-irr-high
+
+**1.00**: margin implied by IAEA timeliness (conversion time over detection goal), irradiated fuel, high end
+
+- basis: derived
+- formula: `def-iaea-conv-irr-high / def-iaea-goal-irr`
+- inputs: [def-iaea-conv-irr-high](#def-iaea-conv-irr-high), [def-iaea-goal-irr](#def-iaea-goal-irr)
+- defined in: `model/parts/010_definitions.py#L197`
+
+<a id="def-iaea-m-leu-low"></a>
+### def-iaea-m-leu-low
+
+**0.25**: margin implied by IAEA timeliness (conversion time over detection goal), LEU and thorium, low end
+
+- basis: derived
+- formula: `def-iaea-conv-leu-low / def-iaea-goal-indirect`
+- inputs: [def-iaea-conv-leu-low](#def-iaea-conv-leu-low), [def-iaea-goal-indirect](#def-iaea-goal-indirect)
+- defined in: `model/parts/010_definitions.py#L197`
+
+<a id="def-iaea-m-leu-high"></a>
+### def-iaea-m-leu-high
+
+**1.00**: margin implied by IAEA timeliness (conversion time over detection goal), LEU and thorium, high end
+
+- basis: derived
+- formula: `def-iaea-conv-leu-high / def-iaea-goal-indirect`
+- inputs: [def-iaea-conv-leu-high](#def-iaea-conv-leu-high), [def-iaea-goal-indirect](#def-iaea-goal-indirect)
+- defined in: `model/parts/010_definitions.py#L197`
+
+<a id="def-gan-deter-rate"></a>
+### def-gan-deter-rate
+
+**0.0319/month**: monitoring rate (findings a month) that just deters a breakout in Gan's illustrative calibration
+
+- basis: derived
+- formula: `def-gan-xi / def-gan-window`
+- inputs: [def-gan-xi](#def-gan-xi), [def-gan-window](#def-gan-window)
+- defined in: `model/parts/010_definitions.py#L210`
+
+<a id="def-gan-deter-detect"></a>
+### def-gan-deter-detect
+
+**32%**: chance of detection inside the window at the deterrence threshold
+
+- basis: derived
+- formula: `1 - exp(-def-gan-xi)`
+- inputs: [def-gan-xi](#def-gan-xi)
+- defined in: `model/parts/010_definitions.py#L218`
+
+<a id="def-gan-deter-success"></a>
+### def-gan-deter-success
+
+**68%**: chance a breakout still succeeds at the deterrence threshold
+
+- basis: derived
+- formula: `exp(-def-gan-xi)`
+- inputs: [def-gan-xi](#def-gan-xi)
+- defined in: `model/parts/010_definitions.py#L226`
+
+<a id="def-gan-prevent-rate"></a>
+### def-gan-prevent-rate
+
+**0.25/month**: monitoring rate that holds breakout success to the tolerated chance in the same window
+
+- basis: derived
+- formula: `ln(1 / def-prevent-beta) / def-gan-window`
+- inputs: [def-prevent-beta](#def-prevent-beta), [def-gan-window](#def-gan-window)
+- defined in: `model/parts/010_definitions.py#L235`
+
+<a id="def-gan-prevent-multiple"></a>
+### def-gan-prevent-multiple
+
+**7.8**: how much more monitoring prevention needs than deterrence, same window
+
+- basis: derived
+- formula: `def-gan-prevent-rate / def-gan-deter-rate`
+- inputs: [def-gan-prevent-rate](#def-gan-prevent-rate), [def-gan-deter-rate](#def-gan-deter-rate)
+- defined in: `model/parts/010_definitions.py#L244`
+
+<a id="def-placeholder-detect-time"></a>
+### def-placeholder-detect-time
+
+**2.5 yr**: time for the memo's placeholder channel to reach the tolerated miss chance (detection only, no response)
+
+- basis: derived
+- formula: `ln(1 / def-prevent-beta) / (inspections-per-year * detect-prob-per-inspection)`
+- inputs: [def-prevent-beta](#def-prevent-beta), [inspections-per-year](#inspections-per-year), [detect-prob-per-inspection](#detect-prob-per-inspection)
+- note: Uses the core placeholder rates, which are assumptions.
+- defined in: `model/parts/010_definitions.py#L255`
+
+<a id="def-mlebench-ratio"></a>
+### def-mlebench-ratio
+
+**2.0**: MLE-bench medal rate at pass@8 over pass@1
+
+- basis: derived
+- formula: `def-mlebench-pass8 / def-mlebench-pass1`
+- inputs: [def-mlebench-pass8](#def-mlebench-pass8), [def-mlebench-pass1](#def-mlebench-pass1)
+- defined in: `model/parts/010_definitions.py#L266`
+
+<a id="phys-kt-ln2-room"></a>
+### phys-kt-ln2-room
+
+**2.871e-21 J**: Landauer bound per erased bit at room temperature
+
+- basis: derived
+- formula: `phys-boltzmann-k * phys-temp-room * ln 2`
+- inputs: [phys-boltzmann-k](#phys-boltzmann-k), [phys-temp-room](#phys-temp-room)
+- defined in: `model/parts/011_physical.py#L30`
+
+<a id="phys-kt-ln2-body"></a>
+### phys-kt-ln2-body
+
+**2.967e-21 J**: Landauer bound per erased bit at body temperature
+
+- basis: derived
+- formula: `phys-boltzmann-k * phys-temp-body * ln 2`
+- inputs: [phys-boltzmann-k](#phys-boltzmann-k), [phys-temp-body](#phys-temp-body)
+- defined in: `model/parts/011_physical.py#L39`
+
+<a id="phys-ln2"></a>
+### phys-ln2
+
+**0.693 kT per bit**: Landauer's bound in units of kT per erased bit
+
+- basis: derived
+- formula: `ln 2`
+- inputs: 
+- defined in: `model/parts/011_physical.py#L48`
+
+<a id="phys-berut-1ns"></a>
+### phys-berut-1ns
+
+**8.2e+09 kT per bit**: heat per bit if the colloidal fit held at a 1 ns erasure (extrapolated far outside the measured range)
+
+- basis: derived
+- formula: `ln 2 + phys-berut-fit-b / (phys-fast-erasure in s)`
+- inputs: [phys-berut-fit-b](#phys-berut-fit-b), [phys-fast-erasure](#phys-fast-erasure)
+- defined in: `model/parts/011_physical.py#L57`
+
+<a id="phys-v100-j-per-flop"></a>
+### phys-v100-j-per-flop
+
+**2.40e-12 J**: V100 energy per operation at dense 16-bit peak and maximum chip power
+
+- basis: derived
+- formula: `phys-v100-power / (phys-v100-tensor * 1e12)`
+- inputs: [phys-v100-power](#phys-v100-power), [phys-v100-tensor](#phys-v100-tensor)
+- defined in: `model/parts/011_physical.py#L74`
+
+<a id="phys-a100-j-per-flop"></a>
+### phys-a100-j-per-flop
+
+**1.28e-12 J**: A100 energy per operation at dense 16-bit peak and maximum chip power
+
+- basis: derived
+- formula: `phys-a100-tdp / (phys-a100-bf16 * 1e12)`
+- inputs: [phys-a100-tdp](#phys-a100-tdp), [phys-a100-bf16](#phys-a100-bf16)
+- defined in: `model/parts/011_physical.py#L74`
+
+<a id="phys-h100-j-per-flop"></a>
+### phys-h100-j-per-flop
+
+**7.07e-13 J**: H100 energy per operation at dense 16-bit peak and maximum chip power
+
+- basis: derived
+- formula: `phys-h100-tdp / (phys-h100-bf16 * 1e12)`
+- inputs: [phys-h100-tdp](#phys-h100-tdp), [phys-h100-bf16](#phys-h100-bf16)
+- defined in: `model/parts/011_physical.py#L74`
+
+<a id="phys-mi300x-j-per-flop"></a>
+### phys-mi300x-j-per-flop
+
+**5.74e-13 J**: MI300X energy per operation at dense 16-bit peak and maximum chip power
+
+- basis: derived
+- formula: `phys-mi300x-tbp / (phys-mi300x-fp16 * 1e12)`
+- inputs: [phys-mi300x-tbp](#phys-mi300x-tbp), [phys-mi300x-fp16](#phys-mi300x-fp16)
+- defined in: `model/parts/011_physical.py#L74`
+
+<a id="phys-h100-flop-per-j"></a>
+### phys-h100-flop-per-j
+
+**1.41e+12 FLOP/J**: H100 SXM operations per joule at dense BF16 peak and 700 W
+
+- basis: derived
+- formula: `phys-h100-bf16 * 1e12 / phys-h100-tdp`
+- inputs: [phys-h100-bf16](#phys-h100-bf16), [phys-h100-tdp](#phys-h100-tdp)
+- defined in: `model/parts/011_physical.py#L83`
+
+<a id="phys-b200-bf16"></a>
+### phys-b200-bf16
+
+**2.25 PFLOP/s**: B200 dense BF16 peak per GPU, from the DGX B200 figures
+
+- basis: derived
+- formula: `phys-dgx-b200-fp8-sparse / 4 / phys-dgx-b200-gpus  (sparse to dense halves, FP8 to BF16 halves)`
+- inputs: [phys-dgx-b200-fp8-sparse](#phys-dgx-b200-fp8-sparse), [phys-dgx-b200-gpus](#phys-dgx-b200-gpus)
+- defined in: `model/parts/011_physical.py#L92`
+
+<a id="phys-b200-system-j-per-flop"></a>
+### phys-b200-system-j-per-flop
+
+**7.94e-13 J**: B200 energy per operation at dense BF16 peak, measured at the DGX system wall
+
+- basis: derived
+- formula: `(phys-dgx-b200-power * 1e3 / phys-dgx-b200-gpus) / (phys-b200-bf16 * 1e15)`
+- inputs: [phys-dgx-b200-power](#phys-dgx-b200-power), [phys-dgx-b200-gpus](#phys-dgx-b200-gpus), [phys-b200-bf16](#phys-b200-bf16)
+- defined in: `model/parts/011_physical.py#L101`
+
+<a id="phys-h100-landauer-ratio"></a>
+### phys-h100-landauer-ratio
+
+**2.5e+08**: H100 energy per operation over kT ln 2 at 300 K (per operation against per bit: an upper bound on headroom)
+
+- basis: derived
+- formula: `phys-h100-j-per-flop / phys-kt-ln2-room`
+- inputs: [phys-h100-j-per-flop](#phys-h100-j-per-flop), [phys-kt-ln2-room](#phys-kt-ln2-room)
+- defined in: `model/parts/011_physical.py#L109`
+
+<a id="phys-cmos-landauer-ratio"></a>
+### phys-cmos-landauer-ratio
+
+**1.2e+06**: energy per FP16 operation at the CMOS ceiling over kT ln 2 at 300 K
+
+- basis: derived
+- formula: `(1 / phys-cmos-ceiling-fp16) / phys-kt-ln2-room`
+- inputs: [phys-cmos-ceiling-fp16](#phys-cmos-ceiling-fp16), [phys-kt-ln2-room](#phys-kt-ln2-room)
+- defined in: `model/parts/011_physical.py#L117`
+
+<a id="phys-cmos-headroom"></a>
+### phys-cmos-headroom
+
+**205**: efficiency gain left between the H100 and the estimated CMOS ceiling (median)
+
+- basis: derived
+- formula: `phys-cmos-ceiling-fp16 / phys-h100-flop-per-j`
+- inputs: [phys-cmos-ceiling-fp16](#phys-cmos-ceiling-fp16), [phys-h100-flop-per-j](#phys-h100-flop-per-j)
+- defined in: `model/parts/011_physical.py#L125`
+
+<a id="phys-cmos-headroom-p05"></a>
+### phys-cmos-headroom-p05
+
+**14**: 5th percentile of the CMOS headroom if the ceiling is log-normal with Ho et al.'s spread
+
+- basis: derived
+- formula: `phys-cmos-headroom * 10^(-1.645 * phys-cmos-log-sd)`
+- inputs: [phys-cmos-headroom](#phys-cmos-headroom), [phys-cmos-log-sd](#phys-cmos-log-sd)
+- defined in: `model/parts/011_physical.py#L133`
+
+<a id="phys-cmos-headroom-p95"></a>
+### phys-cmos-headroom-p95
+
+**2,900**: 95th percentile of the CMOS headroom if the ceiling is log-normal with Ho et al.'s spread
+
+- basis: derived
+- formula: `phys-cmos-headroom * 10^(1.645 * phys-cmos-log-sd)`
+- inputs: [phys-cmos-headroom](#phys-cmos-headroom), [phys-cmos-log-sd](#phys-cmos-log-sd)
+- defined in: `model/parts/011_physical.py#L141`
+
+<a id="phys-years-to-cmos-slow"></a>
+### phys-years-to-cmos-slow
+
+**18 years**: years to the CMOS ceiling at the measured supercomputer efficiency trend
+
+- basis: derived
+- formula: `ln(phys-cmos-headroom) / ln(phys-eff-growth-supercomputer)`
+- inputs: [phys-cmos-headroom](#phys-cmos-headroom), [phys-eff-growth-supercomputer](#phys-eff-growth-supercomputer)
+- defined in: `model/parts/011_physical.py#L150`
+
+<a id="phys-years-to-cmos-fast"></a>
+### phys-years-to-cmos-fast
+
+**16 years**: years to the CMOS ceiling at the measured GPU efficiency trend
+
+- basis: derived
+- formula: `ln(phys-cmos-headroom) / ln(phys-eff-growth-gpu)`
+- inputs: [phys-cmos-headroom](#phys-cmos-headroom), [phys-eff-growth-gpu](#phys-eff-growth-gpu)
+- defined in: `model/parts/011_physical.py#L159`
+
+<a id="phys-it-power-per-h100"></a>
+### phys-it-power-per-h100
+
+**1,390 W**: IT power per H100 at Colossus 1 (chip, host, memory, network)
+
+- basis: derived
+- formula: `phys-colossus1-it-power * 1e6 / phys-colossus1-h100`
+- inputs: [phys-colossus1-it-power](#phys-colossus1-it-power), [phys-colossus1-h100](#phys-colossus1-h100)
+- defined in: `model/parts/011_physical.py#L170`
+
+<a id="phys-facility-power-per-h100"></a>
+### phys-facility-power-per-h100
+
+**1,810 W**: facility power per H100 at Colossus 1, cooling included
+
+- basis: derived
+- formula: `phys-colossus1-facility-power * 1e6 / phys-colossus1-h100`
+- inputs: [phys-colossus1-facility-power](#phys-colossus1-facility-power), [phys-colossus1-h100](#phys-colossus1-h100)
+- defined in: `model/parts/011_physical.py#L179`
+
+<a id="phys-it-overhead"></a>
+### phys-it-overhead
+
+**1.99**: IT power per H100 over the chip's maximum power (server overhead factor)
+
+- basis: derived
+- formula: `phys-it-power-per-h100 / phys-h100-tdp`
+- inputs: [phys-it-power-per-h100](#phys-it-power-per-h100), [phys-h100-tdp](#phys-h100-tdp)
+- defined in: `model/parts/011_physical.py#L187`
+
+<a id="phys-pue-colossus"></a>
+### phys-pue-colossus
+
+**1.30**: facility over IT power at Colossus 1 (power usage effectiveness)
+
+- basis: derived
+- formula: `phys-colossus1-facility-power / phys-colossus1-it-power`
+- inputs: [phys-colossus1-facility-power](#phys-colossus1-facility-power), [phys-colossus1-it-power](#phys-colossus1-it-power)
+- defined in: `model/parts/011_physical.py#L195`
+
+<a id="phys-facility-j-per-useful-flop"></a>
+### phys-facility-j-per-useful-flop
+
+**4.57e-12 J**: facility energy per useful 16-bit operation on H100s at the reference utilisation
+
+- basis: derived
+- formula: `phys-facility-power-per-h100 / (phys-h100-bf16 * 1e12 * phys-util-ref)`
+- inputs: [phys-facility-power-per-h100](#phys-facility-power-per-h100), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref)
+- defined in: `model/parts/011_physical.py#L204`
+
+<a id="phys-facility-over-chip"></a>
+### phys-facility-over-chip
+
+**6.5**: facility energy per useful operation over the datasheet figure
+
+- basis: derived
+- formula: `phys-facility-j-per-useful-flop / phys-h100-j-per-flop`
+- inputs: [phys-facility-j-per-useful-flop](#phys-facility-j-per-useful-flop), [phys-h100-j-per-flop](#phys-h100-j-per-flop)
+- defined in: `model/parts/011_physical.py#L212`
+
+<a id="phys-facility-headroom"></a>
+### phys-facility-headroom
+
+**1,300**: most the facility energy per useful operation could fall: CMOS headroom times removing every overhead
+
+- basis: derived
+- formula: `phys-cmos-headroom * phys-facility-over-chip`
+- inputs: [phys-cmos-headroom](#phys-cmos-headroom), [phys-facility-over-chip](#phys-facility-over-chip)
+- defined in: `model/parts/011_physical.py#L220`
+
+<a id="phys-epoch-dc-it-per-h100e"></a>
+### phys-epoch-dc-it-per-h100e
+
+**956 W**: IT power per H100-equivalent across the sites in Epoch's database
+
+- basis: derived
+- formula: `phys-epoch-dc-it-power * 1e9 / phys-epoch-dc-h100e`
+- inputs: [phys-epoch-dc-it-power](#phys-epoch-dc-it-power), [phys-epoch-dc-h100e](#phys-epoch-dc-h100e)
+- defined in: `model/parts/011_physical.py#L229`
+
+<a id="phys-scher-w-per-h100"></a>
+### phys-scher-w-per-h100
+
+**1,200 W**: power per H100 implied by Scher and Thiergart's 5,000-H100 example
+
+- basis: derived
+- formula: `phys-scher-5000-h100 * 1e6 / phys-scher-h100-count`
+- inputs: [phys-scher-5000-h100](#phys-scher-5000-h100), [phys-scher-h100-count](#phys-scher-h100-count)
+- defined in: `model/parts/011_physical.py#L238`
+
+<a id="phys-sastry-w-per-h100"></a>
+### phys-sastry-w-per-h100
+
+**1,280 W**: power per H100 implied by Sastry et al.'s DGX figure
+
+- basis: derived
+- formula: `phys-sastry-dgx-kw * 1e3 / phys-sastry-dgx-chips`
+- inputs: [phys-sastry-dgx-kw](#phys-sastry-dgx-kw), [phys-sastry-dgx-chips](#phys-sastry-dgx-chips)
+- defined in: `model/parts/011_physical.py#L247`
+
+<a id="phys-power-per-chip-spread"></a>
+### phys-power-per-chip-spread
+
+**1.9**: spread between the highest and lowest power per H100-equivalent among the sources
+
+- basis: derived
+- formula: `phys-facility-power-per-h100 / phys-epoch-dc-it-per-h100e`
+- inputs: [phys-facility-power-per-h100](#phys-facility-power-per-h100), [phys-epoch-dc-it-per-h100e](#phys-epoch-dc-it-per-h100e)
+- defined in: `model/parts/011_physical.py#L256`
+
+<a id="phys-util-spread"></a>
+### phys-util-spread
+
+**2.1**: spread of measured utilisation between the sources
+
+- basis: derived
+- formula: `phys-pope-mfu-prefill / phys-intellect1-mfu-low`
+- inputs: [phys-pope-mfu-prefill](#phys-pope-mfu-prefill), [phys-intellect1-mfu-low](#phys-intellect1-mfu-low)
+- defined in: `model/parts/011_physical.py#L264`
+
+<a id="phys-brain-flop-per-j"></a>
+### phys-brain-flop-per-j
+
+**5e+13 FLOP/J**: brain operations per joule at Carlsmith's central figure and 20 W
+
+- basis: derived
+- formula: `phys-brain-flops-central / phys-brain-power`
+- inputs: [phys-brain-flops-central](#phys-brain-flops-central), [phys-brain-power](#phys-brain-power)
+- defined in: `model/parts/011_physical.py#L275`
+
+<a id="phys-brain-over-h100"></a>
+### phys-brain-over-h100
+
+**35**: how many times more energy-efficient the brain is than an H100, at Carlsmith's central figure
+
+- basis: derived
+- formula: `phys-brain-flop-per-j / phys-h100-flop-per-j`
+- inputs: [phys-brain-flop-per-j](#phys-brain-flop-per-j), [phys-h100-flop-per-j](#phys-h100-flop-per-j)
+- defined in: `model/parts/011_physical.py#L283`
+
+<a id="phys-cmos-over-brain"></a>
+### phys-cmos-over-brain
+
+**5.8**: CMOS ceiling over the brain's efficiency at Carlsmith's central figure
+
+- basis: derived
+- formula: `phys-cmos-ceiling-fp16 / phys-brain-flop-per-j`
+- inputs: [phys-cmos-ceiling-fp16](#phys-cmos-ceiling-fp16), [phys-brain-flop-per-j](#phys-brain-flop-per-j)
+- defined in: `model/parts/011_physical.py#L291`
+
+<a id="phys-brain-landauer-cap"></a>
+### phys-brain-landauer-cap
+
+**6.7e+21 bits/s**: most bit erasures a second a 20 W brain could perform at body temperature
+
+- basis: derived
+- formula: `phys-brain-power / phys-kt-ln2-body`
+- inputs: [phys-brain-power](#phys-brain-power), [phys-kt-ln2-body](#phys-kt-ln2-body)
+- defined in: `model/parts/011_physical.py#L300`
+
+<a id="phys-h100-brains"></a>
+### phys-h100-brains
+
+**0.99**: one H100's dense BF16 peak in brains at Carlsmith's central figure (raw operations only)
+
+- basis: derived
+- formula: `phys-h100-bf16 * 1e12 / phys-brain-flops-central`
+- inputs: [phys-h100-bf16](#phys-h100-bf16), [phys-brain-flops-central](#phys-brain-flops-central)
+- defined in: `model/parts/011_physical.py#L308`
+
+<a id="phys-algo-growth"></a>
+### phys-algo-growth
+
+**2.7**: yearly algorithmic efficiency factor implied by an 8.4-month halving
+
+- basis: derived
+- formula: `2^(12 / phys-algo-halving)`
+- inputs: [phys-algo-halving](#phys-algo-halving)
+- defined in: `model/parts/011_physical.py#L320`
+
+<a id="phys-algo-growth-low"></a>
+### phys-algo-growth-low
+
+**1.8**: yearly algorithmic efficiency factor at the slow end of the 95% CI
+
+- basis: derived
+- formula: `2^(12 / phys-algo-halving-high)`
+- inputs: [phys-algo-halving-high](#phys-algo-halving-high)
+- defined in: `model/parts/011_physical.py#L328`
+
+<a id="phys-algo-growth-high"></a>
+### phys-algo-growth-high
+
+**6.3**: yearly algorithmic efficiency factor at the fast end of the 95% CI
+
+- basis: derived
+- formula: `2^(12 / phys-algo-halving-low)`
+- inputs: [phys-algo-halving-low](#phys-algo-halving-low)
+- defined in: `model/parts/011_physical.py#L336`
+
+<a id="phys-effective-growth"></a>
+### phys-effective-growth
+
+**13**: yearly growth of frontier effective compute if the headline rates simply multiply
+
+- basis: derived
+- formula: `phys-frontier-compute-growth * phys-algo-growth`
+- inputs: [phys-frontier-compute-growth](#phys-frontier-compute-growth), [phys-algo-growth](#phys-algo-growth)
+- defined in: `model/parts/011_physical.py#L344`
+
+<a id="phys-ord-train-equiv"></a>
+### phys-ord-train-equiv
+
+**1,000**: training compute factor matched by Ord's 10,000x inference illustration
+
+- basis: derived
+- formula: `phys-ord-train-large / phys-ord-train-small`
+- inputs: [phys-ord-train-large](#phys-ord-train-large), [phys-ord-train-small](#phys-ord-train-small)
+- defined in: `model/parts/011_physical.py#L352`
+
+<a id="phys-flow-2025-flops"></a>
+### phys-flow-2025-flops
+
+**1.3e+22 FLOP/s**: dense BF16 peak of one year's AI chip sales (2025)
+
+- basis: derived
+- formula: `phys-chips-sold-2025 * phys-h100-bf16 * 1e12`
+- inputs: [phys-chips-sold-2025](#phys-chips-sold-2025), [phys-h100-bf16](#phys-h100-bf16)
+- defined in: `model/parts/011_physical.py#L361`
+
+<a id="phys-flow-2025-growth"></a>
+### phys-flow-2025-growth
+
+**2.7**: growth of AI compute sold from 2024 to 2025
+
+- basis: derived
+- formula: `phys-chips-sold-2025 / phys-chips-sold-2024`
+- inputs: [phys-chips-sold-2025](#phys-chips-sold-2025), [phys-chips-sold-2024](#phys-chips-sold-2024)
+- defined in: `model/parts/011_physical.py#L369`
+
+<a id="phys-flow-2025-brains-central"></a>
+### phys-flow-2025-brains-central
+
+**13,000,000**: 2025 chip sales at peak, in brains at Carlsmith's central figure (raw operations, not capability)
+
+- basis: derived
+- formula: `phys-flow-2025-flops / phys-brain-flops-central`
+- inputs: [phys-flow-2025-flops](#phys-flow-2025-flops), [phys-brain-flops-central](#phys-brain-flops-central)
+- defined in: `model/parts/011_physical.py#L382`
+
+<a id="phys-flow-2025-brains-low"></a>
+### phys-flow-2025-brains-low
+
+**130,000**: 2025 chip sales at peak, in brains at the high end of Carlsmith's range (fewest brains) (raw operations, not capability)
+
+- basis: derived
+- formula: `phys-flow-2025-flops / phys-brain-flops-high`
+- inputs: [phys-flow-2025-flops](#phys-flow-2025-flops), [phys-brain-flops-high](#phys-brain-flops-high)
+- defined in: `model/parts/011_physical.py#L382`
+
+<a id="phys-flow-2025-brains-high"></a>
+### phys-flow-2025-brains-high
+
+**1,300,000,000**: 2025 chip sales at peak, in brains at the low end of Carlsmith's range (most brains) (raw operations, not capability)
+
+- basis: derived
+- formula: `phys-flow-2025-flops / phys-brain-flops-low`
+- inputs: [phys-flow-2025-flops](#phys-flow-2025-flops), [phys-brain-flops-low](#phys-brain-flops-low)
+- defined in: `model/parts/011_physical.py#L382`
+
+<a id="phys-pope-speed"></a>
+### phys-pope-speed
+
+**34.5 tokens/s**: serial generation speed of one PaLM 540B copy in Pope et al.'s low-latency setup
+
+- basis: derived
+- formula: `1 / (phys-pope-latency / 1e3)`
+- inputs: [phys-pope-latency](#phys-pope-latency)
+- defined in: `model/parts/011_physical.py#L391`
+
+<a id="phys-palm-copy-flops"></a>
+### phys-palm-copy-flops
+
+**3.7e+13 FLOP/s**: useful operations a second one PaLM 540B copy needs at that speed
+
+- basis: derived
+- formula: `phys-flop-per-param-token * phys-palm-params * 1e9 * phys-pope-speed`
+- inputs: [phys-flop-per-param-token](#phys-flop-per-param-token), [phys-palm-params](#phys-palm-params), [phys-pope-speed](#phys-pope-speed)
+- defined in: `model/parts/011_physical.py#L400`
+
+<a id="phys-flow-2025-copies"></a>
+### phys-flow-2025-copies
+
+**140,000,000**: PaLM-540B-sized copies at Pope et al.'s speed that one year's chip sales could run at the reference utilisation
+
+- basis: derived
+- formula: `phys-flow-2025-flops * phys-util-ref / phys-palm-copy-flops`
+- inputs: [phys-flow-2025-flops](#phys-flow-2025-flops), [phys-util-ref](#phys-util-ref), [phys-palm-copy-flops](#phys-palm-copy-flops)
+- defined in: `model/parts/011_physical.py#L408`
+
+<a id="phys-colossus1-run"></a>
+### phys-colossus1-run
+
+**4.7e+26 FLOP**: training compute Colossus 1 at 100,000 H100 could do in Rahman's 4.5-month run
+
+- basis: derived
+- formula: `phys-colossus1-h100 * phys-h100-bf16 * 1e12 * phys-util-ref * phys-rahman-run-now * (seconds a month)`
+- inputs: [phys-colossus1-h100](#phys-colossus1-h100), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref), [phys-rahman-run-now](#phys-rahman-run-now)
+- defined in: `model/parts/011_physical.py#L418`
+
+<a id="phys-miri-cap-years-strict"></a>
+### phys-miri-cap-years-strict
+
+**5.0 years**: years a 16-H100 cluster needs for 1e24 FLOP at dense BF16 and the reference utilisation
+
+- basis: derived
+- formula: `phys-miri-strict / (phys-miri-cluster-cap * phys-h100-bf16 * 1e12 * phys-util-ref) / (seconds a year)`
+- inputs: [phys-miri-strict](#phys-miri-strict), [phys-miri-cluster-cap](#phys-miri-cluster-cap), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref)
+- defined in: `model/parts/011_physical.py#L427`
+
+<a id="phys-miri-cap-pause-flop"></a>
+### phys-miri-cap-pause-flop
+
+**4.0e+23 FLOP**: training compute one 16-H100 cluster does over the two-year run a pause makes rational
+
+- basis: derived
+- formula: `phys-miri-cluster-cap * phys-h100-bf16 * 1e12 * phys-util-ref * phys-rahman-run-pause * (seconds a month)`
+- inputs: [phys-miri-cluster-cap](#phys-miri-cluster-cap), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref), [phys-rahman-run-pause](#phys-rahman-run-pause)
+- defined in: `model/parts/011_physical.py#L437`
+
+<a id="phys-fp8-over-bf16"></a>
+### phys-fp8-over-bf16
+
+**2**: factor by which counting FP8 instead of BF16 operations raises an H100's peak
+
+- basis: derived
+- formula: `phys-h100-fp8 / phys-h100-bf16`
+- inputs: [phys-h100-fp8](#phys-h100-fp8), [phys-h100-bf16](#phys-h100-bf16)
+- defined in: `model/parts/011_physical.py#L445`
+
+<a id="phys-fp4-over-fp16-ceiling"></a>
+### phys-fp4-over-fp16-ceiling
+
+**16**: factor between the FP4 and FP16 CMOS ceilings
+
+- basis: derived
+- formula: `phys-cmos-ceiling-fp4 / phys-cmos-ceiling-fp16`
+- inputs: [phys-cmos-ceiling-fp4](#phys-cmos-ceiling-fp4), [phys-cmos-ceiling-fp16](#phys-cmos-ceiling-fp16)
+- defined in: `model/parts/011_physical.py#L453`
+
+<a id="phys-gb200-bf16"></a>
+### phys-gb200-bf16
+
+**2.5 PFLOP/s**: GB200 dense BF16 peak per GPU
+
+- basis: derived
+- formula: `phys-gb200-rack-bf16-sparse / 2 / phys-gb200-rack-gpus`
+- inputs: [phys-gb200-rack-bf16-sparse](#phys-gb200-rack-bf16-sparse), [phys-gb200-rack-gpus](#phys-gb200-rack-gpus)
+- defined in: `model/parts/011_physical.py#L466`
+
+<a id="phys-gb200-hbm-bw"></a>
+### phys-gb200-hbm-bw
+
+**8 TB/s**: GB200 HBM bandwidth per GPU
+
+- basis: derived
+- formula: `phys-gb200-rack-hbm-bw / phys-gb200-rack-gpus`
+- inputs: [phys-gb200-rack-hbm-bw](#phys-gb200-rack-hbm-bw), [phys-gb200-rack-gpus](#phys-gb200-rack-gpus)
+- defined in: `model/parts/011_physical.py#L475`
+
+<a id="phys-gb200-nvlink"></a>
+### phys-gb200-nvlink
+
+**1.8 TB/s**: GB200 NVLink bandwidth per GPU
+
+- basis: derived
+- formula: `phys-gb200-rack-nvlink / phys-gb200-rack-gpus`
+- inputs: [phys-gb200-rack-nvlink](#phys-gb200-rack-nvlink), [phys-gb200-rack-gpus](#phys-gb200-rack-gpus)
+- defined in: `model/parts/011_physical.py#L484`
+
+<a id="phys-v100-bytes-per-flop"></a>
+### phys-v100-bytes-per-flop
+
+**7.2e-03 bytes/FLOP**: V100 memory bandwidth per dense 16-bit operation
+
+- basis: derived
+- formula: `phys-v100-hbm-bw / phys-v100-tensor (in bytes and FLOP)`
+- inputs: [phys-v100-hbm-bw](#phys-v100-hbm-bw), [phys-v100-tensor](#phys-v100-tensor)
+- defined in: `model/parts/011_physical.py#L500`
+
+<a id="phys-a100-bytes-per-flop"></a>
+### phys-a100-bytes-per-flop
+
+**6.5e-03 bytes/FLOP**: A100 memory bandwidth per dense 16-bit operation
+
+- basis: derived
+- formula: `phys-a100-hbm-bw / phys-a100-bf16 (in bytes and FLOP)`
+- inputs: [phys-a100-hbm-bw](#phys-a100-hbm-bw), [phys-a100-bf16](#phys-a100-bf16)
+- defined in: `model/parts/011_physical.py#L500`
+
+<a id="phys-h100-bytes-per-flop"></a>
+### phys-h100-bytes-per-flop
+
+**3.4e-03 bytes/FLOP**: H100 memory bandwidth per dense 16-bit operation
+
+- basis: derived
+- formula: `phys-h100-hbm-bw / phys-h100-bf16 (in bytes and FLOP)`
+- inputs: [phys-h100-hbm-bw](#phys-h100-hbm-bw), [phys-h100-bf16](#phys-h100-bf16)
+- defined in: `model/parts/011_physical.py#L500`
+
+<a id="phys-mi300x-bytes-per-flop"></a>
+### phys-mi300x-bytes-per-flop
+
+**4.1e-03 bytes/FLOP**: MI300X memory bandwidth per dense 16-bit operation
+
+- basis: derived
+- formula: `phys-mi300x-hbm-bw / phys-mi300x-fp16 (in bytes and FLOP)`
+- inputs: [phys-mi300x-hbm-bw](#phys-mi300x-hbm-bw), [phys-mi300x-fp16](#phys-mi300x-fp16)
+- defined in: `model/parts/011_physical.py#L500`
+
+<a id="phys-gb200-bytes-per-flop"></a>
+### phys-gb200-bytes-per-flop
+
+**3.2e-03 bytes/FLOP**: GB200 memory bandwidth per dense 16-bit operation
+
+- basis: derived
+- formula: `phys-gb200-hbm-bw / phys-gb200-bf16 (in bytes and FLOP)`
+- inputs: [phys-gb200-hbm-bw](#phys-gb200-hbm-bw), [phys-gb200-bf16](#phys-gb200-bf16)
+- defined in: `model/parts/011_physical.py#L500`
+
+<a id="phys-b200-bytes-per-flop"></a>
+### phys-b200-bytes-per-flop
+
+**3.6e-03 bytes/FLOP**: B200 memory bandwidth per dense BF16 operation
+
+- basis: derived
+- formula: `(phys-dgx-b200-hbm-bw * 1e12 / phys-dgx-b200-gpus) / (phys-b200-bf16 * 1e15)`
+- inputs: [phys-dgx-b200-hbm-bw](#phys-dgx-b200-hbm-bw), [phys-dgx-b200-gpus](#phys-dgx-b200-gpus), [phys-b200-bf16](#phys-b200-bf16)
+- defined in: `model/parts/011_physical.py#L509`
+
+<a id="phys-bytes-per-flop-fall"></a>
+### phys-bytes-per-flop-fall
+
+**2.0**: factor by which bytes per operation fell from V100 to B200
+
+- basis: derived
+- formula: `phys-v100-bytes-per-flop / phys-b200-bytes-per-flop`
+- inputs: [phys-v100-bytes-per-flop](#phys-v100-bytes-per-flop), [phys-b200-bytes-per-flop](#phys-b200-bytes-per-flop)
+- defined in: `model/parts/011_physical.py#L517`
+
+<a id="phys-flops-rise-v100-b200"></a>
+### phys-flops-rise-v100-b200
+
+**18**: rise in peak 16-bit operations a second from V100 to B200
+
+- basis: derived
+- formula: `phys-b200-bf16 * 1e15 / (phys-v100-tensor * 1e12)`
+- inputs: [phys-b200-bf16](#phys-b200-bf16), [phys-v100-tensor](#phys-v100-tensor)
+- defined in: `model/parts/011_physical.py#L525`
+
+<a id="phys-bw-rise-v100-b200"></a>
+### phys-bw-rise-v100-b200
+
+**8.9**: rise in memory bandwidth per GPU from V100 to B200
+
+- basis: derived
+- formula: `(phys-dgx-b200-hbm-bw * 1e12 / phys-dgx-b200-gpus) / (phys-v100-hbm-bw * 1e9)`
+- inputs: [phys-dgx-b200-hbm-bw](#phys-dgx-b200-hbm-bw), [phys-dgx-b200-gpus](#phys-dgx-b200-gpus), [phys-v100-hbm-bw](#phys-v100-hbm-bw)
+- defined in: `model/parts/011_physical.py#L533`
+
+<a id="phys-scale-up-over-out"></a>
+### phys-scale-up-over-out
+
+**36**: NVLink bandwidth per Blackwell GPU over one 400 Gbit/s scale-out port
+
+- basis: derived
+- formula: `phys-gb200-nvlink * 1e12 / (phys-scale-out-port * 1e9 / 8)`
+- inputs: [phys-gb200-nvlink](#phys-gb200-nvlink), [phys-scale-out-port](#phys-scale-out-port)
+- defined in: `model/parts/011_physical.py#L541`
+
+<a id="phys-nvlink-over-wan"></a>
+### phys-nvlink-over-wan
+
+**72,000**: H100 NVLink bandwidth over the 100 Mbit/s links of Rahman's distributed configurations
+
+- basis: derived
+- formula: `phys-h100-nvlink * 1e9 * 8 / (phys-rahman-bandwidth * 1e6)`
+- inputs: [phys-h100-nvlink](#phys-h100-nvlink), [phys-rahman-bandwidth](#phys-rahman-bandwidth)
+- defined in: `model/parts/011_physical.py#L549`
+
+<a id="phys-streaming-over-dp"></a>
+### phys-streaming-over-dp
+
+**60**: bandwidth data parallelism needs at 100B parameters over the most Streaming DiLoCo needs
+
+- basis: derived
+- formula: `phys-dp-bw-high / phys-streaming-bw-high`
+- inputs: [phys-dp-bw-high](#phys-dp-bw-high), [phys-streaming-bw-high](#phys-streaming-bw-high)
+- defined in: `model/parts/011_physical.py#L557`
+
+<a id="phys-pope-memory-bound"></a>
+### phys-pope-memory-bound
+
+**7.0 ms**: time to read PaLM 540B's int8 weights once from the HBM of 64 TPU v4 chips (the per-token floor)
+
+- basis: derived
+- formula: `phys-palm-params * 1e9 * phys-int8-bytes / (phys-pope-chips * phys-tpuv4-hbm-bw * 1e9), in ms`
+- inputs: [phys-palm-params](#phys-palm-params), [phys-int8-bytes](#phys-int8-bytes), [phys-pope-chips](#phys-pope-chips), [phys-tpuv4-hbm-bw](#phys-tpuv4-hbm-bw)
+- defined in: `model/parts/011_physical.py#L567`
+
+<a id="phys-pope-bound-speed"></a>
+### phys-pope-bound-speed
+
+**142 tokens/s**: serial speed bound of that copy set by memory bandwidth
+
+- basis: derived
+- formula: `1e3 / phys-pope-memory-bound`
+- inputs: [phys-pope-memory-bound](#phys-pope-memory-bound)
+- defined in: `model/parts/011_physical.py#L576`
+
+<a id="phys-pope-over-bound"></a>
+### phys-pope-over-bound
+
+**4.1**: measured latency per token over the memory-bandwidth floor
+
+- basis: derived
+- formula: `phys-pope-latency / phys-pope-memory-bound`
+- inputs: [phys-pope-latency](#phys-pope-latency), [phys-pope-memory-bound](#phys-pope-memory-bound)
+- defined in: `model/parts/011_physical.py#L584`
+
+<a id="phys-palm-h100-min"></a>
+### phys-palm-h100-min
+
+**6.8**: H100s whose memory just holds PaLM 540B's int8 weights (no cache)
+
+- basis: derived
+- formula: `phys-palm-params * 1e9 * phys-int8-bytes / (phys-h100-hbm-cap * 1e9)`
+- inputs: [phys-palm-params](#phys-palm-params), [phys-int8-bytes](#phys-int8-bytes), [phys-h100-hbm-cap](#phys-h100-hbm-cap)
+- defined in: `model/parts/011_physical.py#L593`
+
+<a id="phys-palm-8h100-speed"></a>
+### phys-palm-8h100-speed
+
+**50 tokens/s**: serial speed bound of a PaLM-540B-sized int8 copy on one eight-H100 server
+
+- basis: derived
+- formula: `phys-dgx-b200-gpus * phys-h100-hbm-bw * 1e12 / (phys-palm-params * 1e9 * phys-int8-bytes)`
+- inputs: [phys-dgx-b200-gpus](#phys-dgx-b200-gpus), [phys-h100-hbm-bw](#phys-h100-hbm-bw), [phys-palm-params](#phys-palm-params), [phys-int8-bytes](#phys-int8-bytes)
+- defined in: `model/parts/011_physical.py#L602`
+
+<a id="phys-palm-8gb200-speed"></a>
+### phys-palm-8gb200-speed
+
+**119 tokens/s**: the same bound on eight GB200 GPUs
+
+- basis: derived
+- formula: `phys-dgx-b200-gpus * phys-gb200-hbm-bw * 1e12 / (phys-palm-params * 1e9 * phys-int8-bytes)`
+- inputs: [phys-dgx-b200-gpus](#phys-dgx-b200-gpus), [phys-gb200-hbm-bw](#phys-gb200-hbm-bw), [phys-palm-params](#phys-palm-params), [phys-int8-bytes](#phys-int8-bytes)
+- defined in: `model/parts/011_physical.py#L611`
+
+<a id="phys-node-power"></a>
+### phys-node-power
+
+**29 kW**: facility power of one 16-H100 node at Colossus 1's power per chip (the per-site floor)
+
+- basis: derived
+- formula: `phys-rahman-gpus-per-node * phys-facility-power-per-h100 / 1e3`
+- inputs: [phys-rahman-gpus-per-node](#phys-rahman-gpus-per-node), [phys-facility-power-per-h100](#phys-facility-power-per-h100)
+- defined in: `model/parts/011_physical.py#L624`
+
+<a id="phys-sat-over-node"></a>
+### phys-sat-over-node
+
+**345**: satellite reliable-detection line over one node's power
+
+- basis: derived
+- formula: `phys-sat-reliable * 1e3 / phys-node-power`
+- inputs: [phys-sat-reliable](#phys-sat-reliable), [phys-node-power](#phys-node-power)
+- defined in: `model/parts/011_physical.py#L632`
+
+<a id="phys-utility-over-node"></a>
+### phys-utility-over-node
+
+**173**: utility system-impact threshold over one node's power
+
+- basis: derived
+- formula: `phys-utility-study * 1e3 / phys-node-power`
+- inputs: [phys-utility-study](#phys-utility-study), [phys-node-power](#phys-node-power)
+- defined in: `model/parts/011_physical.py#L640`
+
+<a id="phys-rahman-1e25-eff"></a>
+### phys-rahman-1e25-eff
+
+**64%**: share of local compute that counts after distribution, Rahman's 1e25 configuration
+
+- basis: derived
+- formula: `phys-rahman-1e25-quality / phys-rahman-1e25-target`
+- inputs: [phys-rahman-1e25-quality](#phys-rahman-1e25-quality), [phys-rahman-1e25-target](#phys-rahman-1e25-target)
+- defined in: `model/parts/011_physical.py#L648`
+
+<a id="phys-rahman-1e26-eff"></a>
+### phys-rahman-1e26-eff
+
+**21%**: share of local compute that counts after distribution, Rahman's 1e26 configuration
+
+- basis: derived
+- formula: `phys-rahman-1e26-quality / phys-rahman-1e26-local`
+- inputs: [phys-rahman-1e26-quality](#phys-rahman-1e26-quality), [phys-rahman-1e26-local](#phys-rahman-1e26-local)
+- defined in: `model/parts/011_physical.py#L656`
+
+<a id="phys-pause-floor-factor"></a>
+### phys-pause-floor-factor
+
+**5.3**: factor by which a pause's longer rational run lowers the aggregate chip floor
+
+- basis: derived
+- formula: `phys-rahman-run-pause / phys-rahman-run-now`
+- inputs: [phys-rahman-run-pause](#phys-rahman-run-pause), [phys-rahman-run-now](#phys-rahman-run-now)
+- defined in: `model/parts/011_physical.py#L664`
+
+<a id="phys-floor-chips-1e24-now"></a>
+### phys-floor-chips-1e24-now
+
+**210 H100e**: aggregate chip floor for 1e24 FLOP over today's longest sensible run
+
+- basis: derived
+- formula: `phys-miri-strict / (phys-h100-bf16 * 1e12 * phys-util-ref * phys-rahman-run-now * (seconds a month))`
+- inputs: [phys-miri-strict](#phys-miri-strict), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref), [phys-rahman-run-now](#phys-rahman-run-now)
+- defined in: `model/parts/011_physical.py#L677`
+
+<a id="phys-floor-chips-1e24-pause"></a>
+### phys-floor-chips-1e24-pause
+
+**40 H100e**: aggregate chip floor for 1e24 FLOP over a pause's longest sensible run
+
+- basis: derived
+- formula: `phys-miri-strict / (phys-h100-bf16 * 1e12 * phys-util-ref * phys-rahman-run-pause * (seconds a month))`
+- inputs: [phys-miri-strict](#phys-miri-strict), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref), [phys-rahman-run-pause](#phys-rahman-run-pause)
+- defined in: `model/parts/011_physical.py#L677`
+
+<a id="phys-floor-energy-1e24"></a>
+### phys-floor-energy-1e24
+
+**1,300 MWh**: aggregate energy floor for 1e24 FLOP on H100s at Colossus 1's overheads
+
+- basis: derived
+- formula: `phys-miri-strict * phys-facility-j-per-useful-flop / (joules a MWh)`
+- inputs: [phys-miri-strict](#phys-miri-strict), [phys-facility-j-per-useful-flop](#phys-facility-j-per-useful-flop)
+- defined in: `model/parts/011_physical.py#L687`
+
+<a id="phys-floor-power-1e24-now"></a>
+### phys-floor-power-1e24-now
+
+**0.39 MW**: average facility power for 1e24 FLOP spread over today's longest sensible run
+
+- basis: derived
+- formula: `phys-floor-energy-1e24 / phys-rahman-run-now, in MW`
+- inputs: [phys-floor-energy-1e24](#phys-floor-energy-1e24), [phys-rahman-run-now](#phys-rahman-run-now)
+- defined in: `model/parts/011_physical.py#L697`
+
+<a id="phys-floor-power-1e24-pause"></a>
+### phys-floor-power-1e24-pause
+
+**0.072 MW**: average facility power for 1e24 FLOP spread over a pause's longest sensible run
+
+- basis: derived
+- formula: `phys-floor-energy-1e24 / phys-rahman-run-pause, in MW`
+- inputs: [phys-floor-energy-1e24](#phys-floor-energy-1e24), [phys-rahman-run-pause](#phys-rahman-run-pause)
+- defined in: `model/parts/011_physical.py#L697`
+
+<a id="phys-floor-chips-1e26-now"></a>
+### phys-floor-chips-1e26-now
+
+**21,000 H100e**: aggregate chip floor for 1e26 FLOP over today's longest sensible run
+
+- basis: derived
+- formula: `phys-rahman-1e26-local / (phys-h100-bf16 * 1e12 * phys-util-ref * phys-rahman-run-now * (seconds a month))`
+- inputs: [phys-rahman-1e26-local](#phys-rahman-1e26-local), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref), [phys-rahman-run-now](#phys-rahman-run-now)
+- defined in: `model/parts/011_physical.py#L677`
+
+<a id="phys-floor-chips-1e26-pause"></a>
+### phys-floor-chips-1e26-pause
+
+**4,000 H100e**: aggregate chip floor for 1e26 FLOP over a pause's longest sensible run
+
+- basis: derived
+- formula: `phys-rahman-1e26-local / (phys-h100-bf16 * 1e12 * phys-util-ref * phys-rahman-run-pause * (seconds a month))`
+- inputs: [phys-rahman-1e26-local](#phys-rahman-1e26-local), [phys-h100-bf16](#phys-h100-bf16), [phys-util-ref](#phys-util-ref), [phys-rahman-run-pause](#phys-rahman-run-pause)
+- defined in: `model/parts/011_physical.py#L677`
+
+<a id="phys-floor-energy-1e26"></a>
+### phys-floor-energy-1e26
+
+**130,000 MWh**: aggregate energy floor for 1e26 FLOP on H100s at Colossus 1's overheads
+
+- basis: derived
+- formula: `phys-rahman-1e26-local * phys-facility-j-per-useful-flop / (joules a MWh)`
+- inputs: [phys-rahman-1e26-local](#phys-rahman-1e26-local), [phys-facility-j-per-useful-flop](#phys-facility-j-per-useful-flop)
+- defined in: `model/parts/011_physical.py#L687`
+
+<a id="phys-floor-power-1e26-now"></a>
+### phys-floor-power-1e26-now
+
+**39 MW**: average facility power for 1e26 FLOP spread over today's longest sensible run
+
+- basis: derived
+- formula: `phys-floor-energy-1e26 / phys-rahman-run-now, in MW`
+- inputs: [phys-floor-energy-1e26](#phys-floor-energy-1e26), [phys-rahman-run-now](#phys-rahman-run-now)
+- defined in: `model/parts/011_physical.py#L697`
+
+<a id="phys-floor-power-1e26-pause"></a>
+### phys-floor-power-1e26-pause
+
+**7.2 MW**: average facility power for 1e26 FLOP spread over a pause's longest sensible run
+
+- basis: derived
+- formula: `phys-floor-energy-1e26 / phys-rahman-run-pause, in MW`
+- inputs: [phys-floor-energy-1e26](#phys-floor-energy-1e26), [phys-rahman-run-pause](#phys-rahman-run-pause)
+- defined in: `model/parts/011_physical.py#L697`
+
+<a id="phys-floor-energy-1e26-cmos"></a>
+### phys-floor-energy-1e26-cmos
+
+**96 MWh**: chip energy for 1e26 FP16 operations at the estimated CMOS ceiling, before any overhead
+
+- basis: derived
+- formula: `phys-rahman-1e26-local / phys-cmos-ceiling-fp16 / (joules a MWh)`
+- inputs: [phys-rahman-1e26-local](#phys-rahman-1e26-local), [phys-cmos-ceiling-fp16](#phys-cmos-ceiling-fp16)
+- defined in: `model/parts/011_physical.py#L706`
+
+<a id="phys-unaccounted-over-floor-now"></a>
+### phys-unaccounted-over-floor-now
+
+**47**: untraced chips over the 1e26 FLOP aggregate floor at today's run length
+
+- basis: derived
+- formula: `phys-chips-unaccounted / phys-floor-chips-1e26-now`
+- inputs: [phys-chips-unaccounted](#phys-chips-unaccounted), [phys-floor-chips-1e26-now](#phys-floor-chips-1e26-now)
+- defined in: `model/parts/011_physical.py#L714`
+
+<a id="phys-unaccounted-over-floor-pause"></a>
+### phys-unaccounted-over-floor-pause
+
+**250**: untraced chips over the 1e26 FLOP aggregate floor at a pause's run length
+
+- basis: derived
+- formula: `phys-chips-unaccounted / phys-floor-chips-1e26-pause`
+- inputs: [phys-chips-unaccounted](#phys-chips-unaccounted), [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause)
+- defined in: `model/parts/011_physical.py#L722`
+
+<a id="phys-smuggled-over-floor-now"></a>
+### phys-smuggled-over-floor-now
+
+**14**: the low end of estimated smuggled compute over the 1e26 FLOP aggregate floor today
+
+- basis: derived
+- formula: `phys-smuggled-china-low / phys-floor-chips-1e26-now`
+- inputs: [phys-smuggled-china-low](#phys-smuggled-china-low), [phys-floor-chips-1e26-now](#phys-floor-chips-1e26-now)
+- defined in: `model/parts/011_physical.py#L730`
+
+<a id="phys-huawei-spread"></a>
+### phys-huawei-spread
+
+**4.0**: spread between outside estimates of Huawei's 2025 AI chip output
+
+- basis: derived
+- formula: `phys-huawei-semianalysis / phys-huawei-commerce`
+- inputs: [phys-huawei-semianalysis](#phys-huawei-semianalysis), [phys-huawei-commerce](#phys-huawei-commerce)
+- defined in: `model/parts/011_physical.py#L738`
+
+<a id="phys-years-floor-to-cap"></a>
+### phys-years-floor-to-cap
+
+**5 years**: years until a fixed capability's chip floor (1e26 FLOP today, pause run length) falls to 16 H100e at 3x a year
+
+- basis: derived
+- formula: `ln(phys-floor-chips-1e26-pause / phys-miri-cluster-cap) / ln(phys-algo-miri)`
+- inputs: [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause), [phys-miri-cluster-cap](#phys-miri-cluster-cap), [phys-algo-miri](#phys-algo-miri)
+- defined in: `model/parts/011_physical.py#L747`
+
+<a id="phys-china-additions"></a>
+### phys-china-additions
+
+**434 GW**: solar and wind capacity China added in 2025 (nameplate)
+
+- basis: derived
+- formula: `phys-china-solar-2025 + phys-china-wind-2025`
+- inputs: [phys-china-solar-2025](#phys-china-solar-2025), [phys-china-wind-2025](#phys-china-wind-2025)
+- defined in: `model/parts/011_physical.py#L756`
+
+<a id="phys-china-over-2030-run"></a>
+### phys-china-over-2030-run
+
+**27**: China's 2025 solar and wind additions over the high projection for the largest 2030 run (nameplate against draw)
+
+- basis: derived
+- formula: `phys-china-additions / phys-largest-run-2030-high`
+- inputs: [phys-china-additions](#phys-china-additions), [phys-largest-run-2030-high](#phys-largest-run-2030-high)
+- defined in: `model/parts/011_physical.py#L764`
+
+<a id="comp-rosetta-per-oom"></a>
+### comp-rosetta-per-oom
+
+**0.39 units per OOM**: Rosetta capability gained per order of magnitude of training compute
+
+- basis: derived
+- formula: `comp-rosetta-k * ln(10)`
+- inputs: [comp-rosetta-k](#comp-rosetta-k)
+- defined in: `model/parts/012_computational.py#L28`
+
+<a id="comp-rosetta-implied-algo"></a>
+### comp-rosetta-implied-algo
+
+**6.0**: yearly compute-equivalent gain implied by fixed-compute capability growth and the compute slope (multiplier); a check on the paper's own 6x
+
+- basis: derived
+- formula: `exp(comp-rosetta-fixed-growth / comp-rosetta-k)`
+- inputs: [comp-rosetta-fixed-growth](#comp-rosetta-fixed-growth), [comp-rosetta-k](#comp-rosetta-k)
+- defined in: `model/parts/012_computational.py#L36`
+
+<a id="comp-rosetta-implied-compute-growth"></a>
+### comp-rosetta-implied-compute-growth
+
+**4.4**: yearly growth of frontier training compute implied by the Rosetta decomposition (multiplier); compare Epoch's measured growth
+
+- basis: derived
+- formula: `exp((comp-rosetta-frontier-growth - comp-rosetta-fixed-growth) / comp-rosetta-k)`
+- inputs: [comp-rosetta-frontier-growth](#comp-rosetta-frontier-growth), [comp-rosetta-fixed-growth](#comp-rosetta-fixed-growth), [comp-rosetta-k](#comp-rosetta-k)
+- defined in: `model/parts/012_computational.py#L46`
+
+<a id="comp-rosetta-compute-share"></a>
+### comp-rosetta-compute-share
+
+**45%**: share of frontier capability growth from more training compute, Rosetta decomposition, central
+
+- basis: derived
+- formula: `1 - comp-rosetta-fixed-growth / comp-rosetta-frontier-growth`
+- inputs: [comp-rosetta-fixed-growth](#comp-rosetta-fixed-growth), [comp-rosetta-frontier-growth](#comp-rosetta-frontier-growth)
+- defined in: `model/parts/012_computational.py#L54`
+
+<a id="comp-rosetta-compute-share-lo"></a>
+### comp-rosetta-compute-share-lo
+
+**9%**: share of frontier capability growth from compute, Rosetta decomposition, using the fastest family's fixed-compute growth
+
+- basis: derived
+- formula: `1 - comp-rosetta-fixed-growth-hi / comp-rosetta-frontier-growth`
+- inputs: [comp-rosetta-fixed-growth-hi](#comp-rosetta-fixed-growth-hi), [comp-rosetta-frontier-growth](#comp-rosetta-frontier-growth)
+- defined in: `model/parts/012_computational.py#L62`
+
+<a id="comp-rosetta-compute-share-hi"></a>
+### comp-rosetta-compute-share-hi
+
+**82%**: share of frontier capability growth from compute, Rosetta decomposition, using the slowest family's fixed-compute growth
+
+- basis: derived
+- formula: `1 - comp-rosetta-fixed-growth-lo / comp-rosetta-frontier-growth`
+- inputs: [comp-rosetta-fixed-growth-lo](#comp-rosetta-fixed-growth-lo), [comp-rosetta-frontier-growth](#comp-rosetta-frontier-growth)
+- defined in: `model/parts/012_computational.py#L70`
+
+<a id="comp-ho-algo-share-lo"></a>
+### comp-ho-algo-share-lo
+
+**5%**: share of language-model gains 2012 to 2023 from algorithms, low end
+
+- basis: derived
+- formula: `1 - comp-ho-compute-share-hi`
+- inputs: [comp-ho-compute-share-hi](#comp-ho-compute-share-hi)
+- defined in: `model/parts/012_computational.py#L79`
+
+<a id="comp-ho-algo-share-hi"></a>
+### comp-ho-algo-share-hi
+
+**40%**: share of language-model gains 2012 to 2023 from algorithms, high end
+
+- basis: derived
+- formula: `1 - comp-ho-compute-share-lo`
+- inputs: [comp-ho-compute-share-lo](#comp-ho-compute-share-lo)
+- defined in: `model/parts/012_computational.py#L87`
+
+<a id="comp-rosetta-algo-share"></a>
+### comp-rosetta-algo-share
+
+**55%**: share of frontier capability growth not from more training compute, Rosetta decomposition, central
+
+- basis: derived
+- formula: `comp-rosetta-fixed-growth / comp-rosetta-frontier-growth`
+- inputs: [comp-rosetta-fixed-growth](#comp-rosetta-fixed-growth), [comp-rosetta-frontier-growth](#comp-rosetta-frontier-growth)
+- defined in: `model/parts/012_computational.py#L95`
+
+<a id="comp-hex-exchange-oom"></a>
+### comp-hex-exchange-oom
+
+**1.18 OOM**: OOM of test-time compute that one OOM of train-time compute replaces, AlphaZero on Hex
+
+- basis: derived
+- formula: `log10(comp-hex-test-saved)`
+- inputs: [comp-hex-test-saved](#comp-hex-test-saved)
+- defined in: `model/parts/012_computational.py#L108`
+
+<a id="comp-exchange-cheapver"></a>
+### comp-exchange-cheapver
+
+**2.0 OOM**: OOM of inference per OOM of training replaced, repeated sampling with a cheap verifier
+
+- basis: derived
+- formula: `comp-span-cheapver-inf / comp-span-cheapver-train`
+- inputs: [comp-span-cheapver-inf](#comp-span-cheapver-inf), [comp-span-cheapver-train](#comp-span-cheapver-train)
+- defined in: `model/parts/012_computational.py#L117`
+
+<a id="comp-exchange-expver"></a>
+### comp-exchange-expver
+
+**1.45 OOM**: OOM of inference per OOM of training replaced, repeated sampling with an expensive verifier
+
+- basis: derived
+- formula: `comp-span-expver-inf / comp-span-expver-train`
+- inputs: [comp-span-expver-inf](#comp-span-expver-inf), [comp-span-expver-train](#comp-span-expver-train)
+- defined in: `model/parts/012_computational.py#L126`
+
+<a id="comp-ord-inf-per-train-lo"></a>
+### comp-ord-inf-per-train-lo
+
+**1.0 OOM**: OOM of inference per OOM of pre-training matched, Ord's summary, favourable end
+
+- basis: derived
+- formula: `log10(comp-ord-inf-step) / log10(comp-ord-pretrain-hi)`
+- inputs: [comp-ord-inf-step](#comp-ord-inf-step), [comp-ord-pretrain-hi](#comp-ord-pretrain-hi)
+- defined in: `model/parts/012_computational.py#L135`
+
+<a id="comp-ord-inf-per-train-hi"></a>
+### comp-ord-inf-per-train-hi
+
+**2.1 OOM**: OOM of inference per OOM of pre-training matched, Ord's summary, unfavourable end
+
+- basis: derived
+- formula: `log10(comp-ord-inf-step) / log10(comp-ord-pretrain-lo)`
+- inputs: [comp-ord-inf-step](#comp-ord-inf-step), [comp-ord-pretrain-lo](#comp-ord-pretrain-lo)
+- defined in: `model/parts/012_computational.py#L144`
+
+<a id="comp-ord-example-oom"></a>
+### comp-ord-example-oom
+
+**3 OOM**: OOM of training compute replaced in Ord's illustration
+
+- basis: derived
+- formula: `log10(comp-ord-example-target / comp-ord-example-base)`
+- inputs: [comp-ord-example-target](#comp-ord-example-target), [comp-ord-example-base](#comp-ord-example-base)
+- defined in: `model/parts/012_computational.py#L153`
+
+<a id="comp-ord-example-exchange"></a>
+### comp-ord-example-exchange
+
+**1.33 OOM**: OOM of inference per OOM of training replaced in Ord's illustration
+
+- basis: derived
+- formula: `log10(comp-ord-example-inf) / log10(comp-ord-example-target / comp-ord-example-base)`
+- inputs: [comp-ord-example-inf](#comp-ord-example-inf), [comp-ord-example-target](#comp-ord-example-target), [comp-ord-example-base](#comp-ord-example-base)
+- defined in: `model/parts/012_computational.py#L163`
+
+<a id="comp-ord-rl-per-inf"></a>
+### comp-ord-rl-per-inf
+
+**2 OOM**: OOM of RL training compute matched by one OOM of inference, Ord's reading of vendor charts
+
+- basis: derived
+- formula: `log10(comp-ord-rl-train) / log10(comp-ord-rl-inf)`
+- inputs: [comp-ord-rl-train](#comp-ord-rl-train), [comp-ord-rl-inf](#comp-ord-rl-inf)
+- defined in: `model/parts/012_computational.py#L172`
+
+<a id="comp-r1-distill-gap"></a>
+### comp-r1-distill-gap
+
+**25.6 pp**: AIME advantage of distillation from DeepSeek-R1 over RL on the same 32B base
+
+- basis: derived
+- formula: `100 * (comp-r1-distill-32b - comp-r1-rl-32b)`
+- inputs: [comp-r1-distill-32b](#comp-r1-distill-32b), [comp-r1-rl-32b](#comp-r1-rl-32b)
+- defined in: `model/parts/012_computational.py#L181`
+
+<a id="comp-r1zero-gain"></a>
+### comp-r1zero-gain
+
+**55.4 pp**: AIME gain of DeepSeek-R1-Zero during reinforcement learning
+
+- basis: derived
+- formula: `100 * (comp-r1zero-end - comp-r1zero-start)`
+- inputs: [comp-r1zero-end](#comp-r1zero-end), [comp-r1zero-start](#comp-r1zero-start)
+- defined in: `model/parts/012_computational.py#L190`
+
+<a id="comp-monkeys-gain"></a>
+### comp-monkeys-gain
+
+**40.1 pp**: SWE-bench Lite gain from 1 to 250 samples with unit tests as the verifier
+
+- basis: derived
+- formula: `100 * (comp-monkeys-pass250 - comp-monkeys-pass1)`
+- inputs: [comp-monkeys-pass250](#comp-monkeys-pass250), [comp-monkeys-pass1](#comp-monkeys-pass1)
+- defined in: `model/parts/012_computational.py#L199`
+
+<a id="comp-ho-annual"></a>
+### comp-ho-annual
+
+**2.7**: yearly fall in compute for fixed language-model performance, from the halving time (multiplier)
+
+- basis: derived
+- formula: `2^(12 / comp-ho-halving)`
+- inputs: [comp-ho-halving](#comp-ho-halving)
+- defined in: `model/parts/012_computational.py#L211`
+
+<a id="comp-ho-annual-lo"></a>
+### comp-ho-annual-lo
+
+**1.8**: yearly fall in compute for fixed LM performance, slow end of the 95% CI (multiplier)
+
+- basis: derived
+- formula: `2^(12 / comp-ho-halving-hi)`
+- inputs: [comp-ho-halving-hi](#comp-ho-halving-hi)
+- defined in: `model/parts/012_computational.py#L219`
+
+<a id="comp-ho-annual-hi"></a>
+### comp-ho-annual-hi
+
+**6.3**: yearly fall in compute for fixed LM performance, fast end of the 95% CI (multiplier)
+
+- basis: derived
+- formula: `2^(12 / comp-ho-halving-lo)`
+- inputs: [comp-ho-halving-lo](#comp-ho-halving-lo)
+- defined in: `model/parts/012_computational.py#L227`
+
+<a id="comp-erdil-annual"></a>
+### comp-erdil-annual
+
+**2.5**: yearly fall in compute requirements in computer vision, from the halving time (multiplier)
+
+- basis: derived
+- formula: `2^(12 / comp-erdil-halving)`
+- inputs: [comp-erdil-halving](#comp-erdil-halving)
+- defined in: `model/parts/012_computational.py#L235`
+
+<a id="comp-hernandez-annual"></a>
+### comp-hernandez-annual
+
+**1.7**: yearly fall in FLOP to AlexNet-level ImageNet performance, 2012 to 2019 (multiplier)
+
+- basis: derived
+- formula: `comp-hernandez-gain^(1 / comp-hernandez-years)`
+- inputs: [comp-hernandez-gain](#comp-hernandez-gain), [comp-hernandez-years](#comp-hernandez-years)
+- defined in: `model/parts/012_computational.py#L243`
+
+<a id="comp-gundlach-claimed-annual"></a>
+### comp-gundlach-claimed-annual
+
+**2.5**: yearly efficiency gain implied by the claimed 2012 to 2023 total (multiplier)
+
+- basis: derived
+- formula: `comp-gundlach-claimed^(1 / comp-algo-claim-years)`
+- inputs: [comp-gundlach-claimed](#comp-gundlach-claimed), [comp-algo-claim-years](#comp-algo-claim-years)
+- defined in: `model/parts/012_computational.py#L251`
+
+<a id="comp-gundlach-small-max"></a>
+### comp-gundlach-small-max
+
+**100**: total efficiency gain at small compute, 2012 to 2023 (multiplier, upper bound)
+
+- basis: derived
+- formula: `comp-gundlach-ablation-max * comp-gundlach-other-max`
+- inputs: [comp-gundlach-ablation-max](#comp-gundlach-ablation-max), [comp-gundlach-other-max](#comp-gundlach-other-max)
+- defined in: `model/parts/012_computational.py#L259`
+
+<a id="comp-gundlach-small-annual-max"></a>
+### comp-gundlach-small-annual-max
+
+**1.52**: yearly efficiency gain at small compute, 2012 to 2023 (multiplier, upper bound)
+
+- basis: derived
+- formula: `(comp-gundlach-ablation-max * comp-gundlach-other-max)^(1 / comp-algo-claim-years)`
+- inputs: [comp-gundlach-ablation-max](#comp-gundlach-ablation-max), [comp-gundlach-other-max](#comp-gundlach-other-max), [comp-algo-claim-years](#comp-algo-claim-years)
+- defined in: `model/parts/012_computational.py#L268`
+
+<a id="comp-gundlach-claimed-oom"></a>
+### comp-gundlach-claimed-oom
+
+**4.3 OOM**: claimed 2012 to 2023 language-model efficiency gain in orders of magnitude
+
+- basis: derived
+- formula: `log10(comp-gundlach-claimed)`
+- inputs: [comp-gundlach-claimed](#comp-gundlach-claimed)
+- defined in: `model/parts/012_computational.py#L277`
+
+<a id="comp-gundlach-small-oom-share"></a>
+### comp-gundlach-small-oom-share
+
+**46%**: share of the claimed orders of magnitude accounted for at small compute (upper bound)
+
+- basis: derived
+- formula: `log10(comp-gundlach-ablation-max * comp-gundlach-other-max) / log10(comp-gundlach-claimed)`
+- inputs: [comp-gundlach-ablation-max](#comp-gundlach-ablation-max), [comp-gundlach-other-max](#comp-gundlach-other-max), [comp-gundlach-claimed](#comp-gundlach-claimed)
+- defined in: `model/parts/012_computational.py#L286`
+
+<a id="comp-hwp-multiplier"></a>
+### comp-hwp-multiplier
+
+**1.57**: yearly training-efficiency multiplier in the hardwired-pause scenario
+
+- basis: derived
+- formula: `1 + comp-hwp-eff`
+- inputs: [comp-hwp-eff](#comp-hwp-eff)
+- defined in: `model/parts/012_computational.py#L294`
+
+<a id="comp-hwp-ratio"></a>
+### comp-hwp-ratio
+
+**2.65**: rise in breakout capacity relative to the fleet threshold in the hardwired-pause scenario (multiplier)
+
+- basis: derived
+- formula: `comp-hwp-after / comp-hwp-before`
+- inputs: [comp-hwp-after](#comp-hwp-after), [comp-hwp-before](#comp-hwp-before)
+- defined in: `model/parts/012_computational.py#L302`
+
+<a id="comp-hwp-check"></a>
+### comp-hwp-check
+
+**2.66**: efficiency gain compounded over the scenario's months (multiplier); reproduces comp-hwp-ratio
+
+- basis: derived
+- formula: `(1 + comp-hwp-eff)^(comp-hwp-months / 12)`
+- inputs: [comp-hwp-eff](#comp-hwp-eff), [comp-hwp-months](#comp-hwp-months)
+- defined in: `model/parts/012_computational.py#L310`
+
+<a id="comp-speedrun-ratio"></a>
+### comp-speedrun-ratio
+
+**67.7**: fall in speedrun wall-clock time from record 1 to record 92 (multiplier)
+
+- basis: derived
+- formula: `comp-speedrun-base-s / comp-speedrun-record-s`
+- inputs: [comp-speedrun-base-s](#comp-speedrun-base-s), [comp-speedrun-record-s](#comp-speedrun-record-s)
+- defined in: `model/parts/012_computational.py#L320`
+
+<a id="comp-speedrun-years"></a>
+### comp-speedrun-years
+
+**2.26 years**: years from speedrun record 1 to record 92
+
+- basis: derived
+- formula: `comp-speedrun-days / 365.25`
+- inputs: [comp-speedrun-days](#comp-speedrun-days)
+- defined in: `model/parts/012_computational.py#L329`
+
+<a id="comp-speedrun-annual"></a>
+### comp-speedrun-annual
+
+**6.5**: average yearly fall in speedrun wall-clock time (multiplier)
+
+- basis: derived
+- formula: `(comp-speedrun-base-s / comp-speedrun-record-s)^(365.25 / comp-speedrun-days)`
+- inputs: [comp-speedrun-base-s](#comp-speedrun-base-s), [comp-speedrun-record-s](#comp-speedrun-record-s), [comp-speedrun-days](#comp-speedrun-days)
+- defined in: `model/parts/012_computational.py#L338`
+
+<a id="comp-speedrun-halving"></a>
+### comp-speedrun-halving
+
+**4.5 months**: average halving time of speedrun wall-clock time
+
+- basis: derived
+- formula: `12 * (comp-speedrun-days / 365.25) * ln 2 / ln(comp-speedrun-base-s / comp-speedrun-record-s)`
+- inputs: [comp-speedrun-days](#comp-speedrun-days), [comp-speedrun-base-s](#comp-speedrun-base-s), [comp-speedrun-record-s](#comp-speedrun-record-s)
+- defined in: `model/parts/012_computational.py#L348`
+
+<a id="comp-speedrun-token-ratio"></a>
+### comp-speedrun-token-ratio
+
+**30**: fall in training tokens to the speedrun's target loss (multiplier, lower bound)
+
+- basis: derived
+- formula: `comp-speedrun-tokens-base / comp-speedrun-tokens-record`
+- inputs: [comp-speedrun-tokens-base](#comp-speedrun-tokens-base), [comp-speedrun-tokens-record](#comp-speedrun-tokens-record)
+- defined in: `model/parts/012_computational.py#L356`
+
+<a id="comp-speedrun-token-annual"></a>
+### comp-speedrun-token-annual
+
+**4.5**: average yearly fall in tokens to the speedrun's target loss (multiplier, lower bound)
+
+- basis: derived
+- formula: `(comp-speedrun-tokens-base / comp-speedrun-tokens-record)^(365.25 / comp-speedrun-days)`
+- inputs: [comp-speedrun-tokens-base](#comp-speedrun-tokens-base), [comp-speedrun-tokens-record](#comp-speedrun-tokens-record), [comp-speedrun-days](#comp-speedrun-days)
+- defined in: `model/parts/012_computational.py#L365`
+
+<a id="comp-metr-deep"></a>
+### comp-metr-deep
+
+**1.5**: speedrun gain left for deep contributions once shallow and moderate ones are divided out (multiplier)
+
+- basis: derived
+- formula: `comp-metr-speedup / comp-metr-shallow`
+- inputs: [comp-metr-speedup](#comp-metr-speedup), [comp-metr-shallow](#comp-metr-shallow)
+- defined in: `model/parts/012_computational.py#L373`
+
+<a id="comp-years-per-oom-ho"></a>
+### comp-years-per-oom-ho
+
+**2.3 years**: years for one order of magnitude at Ho et al.'s central rate
+
+- basis: derived
+- formula: `ln(10) / ln(comp-ho-annual)`
+- inputs: [comp-ho-annual](#comp-ho-annual)
+- defined in: `model/parts/012_computational.py#L391`
+
+<a id="comp-years-per-oom-rosetta"></a>
+### comp-years-per-oom-rosetta
+
+**1.3 years**: years for one order of magnitude at the Rosetta fit's rate
+
+- basis: derived
+- formula: `ln(10) / ln(comp-rosetta-algo)`
+- inputs: [comp-rosetta-algo](#comp-rosetta-algo)
+- defined in: `model/parts/012_computational.py#L391`
+
+<a id="comp-years-per-oom-scher"></a>
+### comp-years-per-oom-scher
+
+**2.1 years**: years for one order of magnitude at the MIRI draft agreement's assumed rate
+
+- basis: derived
+- formula: `ln(10) / ln(comp-scher-algo)`
+- inputs: [comp-scher-algo](#comp-scher-algo)
+- defined in: `model/parts/012_computational.py#L391`
+
+<a id="comp-years-per-oom-small"></a>
+### comp-years-per-oom-small
+
+**5.5 years**: years for one order of magnitude at the small-compute upper bound (so a lower bound on time)
+
+- basis: derived
+- formula: `ln(10) / ln(comp-gundlach-small-annual-max)`
+- inputs: [comp-gundlach-small-annual-max](#comp-gundlach-small-annual-max)
+- defined in: `model/parts/012_computational.py#L391`
+
+<a id="comp-years-per-oom-frontier"></a>
+### comp-years-per-oom-frontier
+
+**1.4 years**: years for one order of magnitude at the growth of frontier training compute
+
+- basis: derived
+- formula: `ln(10) / ln(comp-frontier-compute-growth)`
+- inputs: [comp-frontier-compute-growth](#comp-frontier-compute-growth)
+- defined in: `model/parts/012_computational.py#L391`
+
+<a id="comp-data-wall-check"></a>
+### comp-data-wall-check
+
+**4.8e+28 FLOP**: compute-optimal training compute that uses the text stock once; reproduces the source's figure
+
+- basis: derived
+- formula: `comp-flop-per-param-token * comp-data-stock^2 / comp-chinchilla-tokens-per-param`
+- inputs: [comp-flop-per-param-token](#comp-flop-per-param-token), [comp-data-stock](#comp-data-stock), [comp-chinchilla-tokens-per-param](#comp-chinchilla-tokens-per-param)
+- defined in: `model/parts/012_computational.py#L405`
+
+<a id="comp-data-wall-4ep"></a>
+### comp-data-wall-4ep
+
+**7.7e+29 FLOP**: compute-optimal training compute that uses the text stock at the epochs of repetition that cost almost nothing
+
+- basis: derived
+- formula: `comp-flop-per-param-token * (comp-data-epochs-free * comp-data-stock)^2 / comp-chinchilla-tokens-per-param`
+- inputs: [comp-flop-per-param-token](#comp-flop-per-param-token), [comp-data-epochs-free](#comp-data-epochs-free), [comp-data-stock](#comp-data-stock), [comp-chinchilla-tokens-per-param](#comp-chinchilla-tokens-per-param)
+- defined in: `model/parts/012_computational.py#L416`
+
+<a id="comp-data-wall-over-scher-oom"></a>
+### comp-data-wall-over-scher-oom
+
+**4.7 OOM**: how far the data wall sits above the MIRI draft agreement's strict training threshold
+
+- basis: derived
+- formula: `log10(comp-data-wall-flop / comp-scher-strict)`
+- inputs: [comp-data-wall-flop](#comp-data-wall-flop), [comp-scher-strict](#comp-scher-strict)
+- defined in: `model/parts/012_computational.py#L425`
+
+<a id="comp-data-wall-over-eu-oom"></a>
+### comp-data-wall-over-eu-oom
+
+**3.7 OOM**: how far the data wall sits above the EU AI Act's systemic-risk presumption
+
+- basis: derived
+- formula: `log10(comp-data-wall-flop / comp-eu-threshold)`
+- inputs: [comp-data-wall-flop](#comp-data-wall-flop), [comp-eu-threshold](#comp-eu-threshold)
+- defined in: `model/parts/012_computational.py#L434`
+
+<a id="comp-oneoff-lo-oom"></a>
+### comp-oneoff-lo-oom
+
+**0.7 OOM**: one-off leak of a training cap through post-training enhancement, typical
+
+- basis: derived
+- formula: `log10(comp-davidson-ceg-typ)`
+- inputs: [comp-davidson-ceg-typ](#comp-davidson-ceg-typ)
+- defined in: `model/parts/012_computational.py#L450`
+
+<a id="comp-oneoff-hi-oom"></a>
+### comp-oneoff-hi-oom
+
+**1.3 OOM**: one-off leak of a training cap through post-training enhancement, high
+
+- basis: derived
+- formula: `log10(comp-davidson-ceg-high)`
+- inputs: [comp-davidson-ceg-high](#comp-davidson-ceg-high)
+- defined in: `model/parts/012_computational.py#L459`
+
+<a id="comp-leak-years-ho"></a>
+### comp-leak-years-ho
+
+**4.0 years**: years until a capped party closes the example headroom after the high one-off leak, at Ho et al.'s central rate
+
+- basis: derived
+- formula: `(comp-example-headroom-oom - log10(comp-davidson-ceg-high)) / log10(comp-ho-annual)`
+- inputs: [comp-example-headroom-oom](#comp-example-headroom-oom), [comp-davidson-ceg-high](#comp-davidson-ceg-high), [comp-ho-annual](#comp-ho-annual)
+- defined in: `model/parts/012_computational.py#L474`
+
+<a id="comp-headroom-needed-ho"></a>
+### comp-headroom-needed-ho
+
+**1.7 OOM**: headroom a cap needs to outlast the placeholder response time, at Ho et al.'s central rate
+
+- basis: derived
+- formula: `log10(comp-davidson-ceg-high) + comp-response-years * log10(comp-ho-annual)`
+- inputs: [comp-davidson-ceg-high](#comp-davidson-ceg-high), [comp-response-years](#comp-response-years), [comp-ho-annual](#comp-ho-annual)
+- defined in: `model/parts/012_computational.py#L484`
+
+<a id="comp-leak-years-rosetta"></a>
+### comp-leak-years-rosetta
+
+**2.2 years**: years until a capped party closes the example headroom after the high one-off leak, at the Rosetta fit's rate
+
+- basis: derived
+- formula: `(comp-example-headroom-oom - log10(comp-davidson-ceg-high)) / log10(comp-rosetta-algo)`
+- inputs: [comp-example-headroom-oom](#comp-example-headroom-oom), [comp-davidson-ceg-high](#comp-davidson-ceg-high), [comp-rosetta-algo](#comp-rosetta-algo)
+- defined in: `model/parts/012_computational.py#L474`
+
+<a id="comp-headroom-needed-rosetta"></a>
+### comp-headroom-needed-rosetta
+
+**2.1 OOM**: headroom a cap needs to outlast the placeholder response time, at the Rosetta fit's rate
+
+- basis: derived
+- formula: `log10(comp-davidson-ceg-high) + comp-response-years * log10(comp-rosetta-algo)`
+- inputs: [comp-davidson-ceg-high](#comp-davidson-ceg-high), [comp-response-years](#comp-response-years), [comp-rosetta-algo](#comp-rosetta-algo)
+- defined in: `model/parts/012_computational.py#L484`
+
+<a id="comp-leak-years-small"></a>
+### comp-leak-years-small
+
+**9.3 years**: years until a capped party closes the example headroom after the high one-off leak, at the small-compute upper bound (a lower bound on time)
+
+- basis: derived
+- formula: `(comp-example-headroom-oom - log10(comp-davidson-ceg-high)) / log10(comp-gundlach-small-annual-max)`
+- inputs: [comp-example-headroom-oom](#comp-example-headroom-oom), [comp-davidson-ceg-high](#comp-davidson-ceg-high), [comp-gundlach-small-annual-max](#comp-gundlach-small-annual-max)
+- defined in: `model/parts/012_computational.py#L474`
+
+<a id="comp-headroom-needed-small"></a>
+### comp-headroom-needed-small
+
+**1.5 OOM**: headroom a cap needs to outlast the placeholder response time, at the small-compute upper bound (a lower bound on time)
+
+- basis: derived
+- formula: `log10(comp-davidson-ceg-high) + comp-response-years * log10(comp-gundlach-small-annual-max)`
+- inputs: [comp-davidson-ceg-high](#comp-davidson-ceg-high), [comp-response-years](#comp-response-years), [comp-gundlach-small-annual-max](#comp-gundlach-small-annual-max)
+- defined in: `model/parts/012_computational.py#L484`
+
+<a id="comp-leak-left-verifier"></a>
+### comp-leak-left-verifier
+
+**0 OOM**: example headroom left at once where a cheap verifier lets repeated sampling replace training
+
+- basis: derived
+- formula: `max(comp-example-headroom-oom - comp-span-cheapver-train, 0)`
+- inputs: [comp-example-headroom-oom](#comp-example-headroom-oom), [comp-span-cheapver-train](#comp-span-cheapver-train)
+- defined in: `model/parts/012_computational.py#L493`
+
+<a id="comp-headroom-needed-verifier"></a>
+### comp-headroom-needed-verifier
+
+**3.4 OOM**: headroom a cap needs in a domain with a cheap verifier, at Ho et al.'s central rate
+
+- basis: derived
+- formula: `comp-span-cheapver-train + comp-response-years * log10(comp-ho-annual)`
+- inputs: [comp-span-cheapver-train](#comp-span-cheapver-train), [comp-response-years](#comp-response-years), [comp-ho-annual](#comp-ho-annual)
+- defined in: `model/parts/012_computational.py#L502`
+
+<a id="dyn-r-moore"></a>
+### dyn-r-moore
+
+**5**: returns to research r for Moore's Law research, with lambda = 1
+
+- basis: derived
+- formula: `1 / dyn-bloom-beta-moore`
+- inputs: [dyn-bloom-beta-moore](#dyn-bloom-beta-moore)
+- defined in: `model/parts/013_dynamical.py#L23`
+
+<a id="dyn-r-aggregate"></a>
+### dyn-r-aggregate
+
+**0.32**: returns to research r for the aggregate US economy, with lambda = 1
+
+- basis: derived
+- formula: `1 / dyn-bloom-beta-aggregate`
+- inputs: [dyn-bloom-beta-aggregate](#dyn-bloom-beta-aggregate)
+- defined in: `model/parts/013_dynamical.py#L31`
+
+<a id="dyn-bottleneck-divisor"></a>
+### dyn-bottleneck-divisor
+
+**3.0**: factor by which the compute-bottleneck correction divides r
+
+- basis: derived
+- formula: `1 / (1 - dyn-research-compute-share)`
+- inputs: [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L44`
+
+<a id="dyn-r-cv-corrected"></a>
+### dyn-r-cv-corrected
+
+**0.42**: r after the compute-bottleneck correction, computer vision, median
+
+- basis: derived
+- formula: `dyn-r-cv * (1 - dyn-research-compute-share)`
+- inputs: [dyn-r-cv](#dyn-r-cv), [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L61`
+
+<a id="dyn-r-rl-corrected"></a>
+### dyn-r-rl-corrected
+
+**0.40**: r after the compute-bottleneck correction, reinforcement learning, median
+
+- basis: derived
+- formula: `dyn-r-rl * (1 - dyn-research-compute-share)`
+- inputs: [dyn-r-rl](#dyn-r-rl), [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L61`
+
+<a id="dyn-r-lm-corrected"></a>
+### dyn-r-lm-corrected
+
+**0.63**: r after the compute-bottleneck correction, language models, median
+
+- basis: derived
+- formula: `dyn-r-lm * (1 - dyn-research-compute-share)`
+- inputs: [dyn-r-lm](#dyn-r-lm), [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L61`
+
+<a id="dyn-r-cv-hi-corrected"></a>
+### dyn-r-cv-hi-corrected
+
+**0.70**: r after the compute-bottleneck correction, computer vision, 95th percentile
+
+- basis: derived
+- formula: `dyn-r-cv-hi * (1 - dyn-research-compute-share)`
+- inputs: [dyn-r-cv-hi](#dyn-r-cv-hi), [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L61`
+
+<a id="dyn-r-rl-hi-corrected"></a>
+### dyn-r-rl-hi-corrected
+
+**0.90**: r after the compute-bottleneck correction, reinforcement learning, 95th percentile
+
+- basis: derived
+- formula: `dyn-r-rl-hi * (1 - dyn-research-compute-share)`
+- inputs: [dyn-r-rl-hi](#dyn-r-rl-hi), [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L61`
+
+<a id="dyn-r-lm-hi-corrected"></a>
+### dyn-r-lm-hi-corrected
+
+**1.07**: r after the compute-bottleneck correction, language models, 95th percentile
+
+- basis: derived
+- formula: `dyn-r-lm-hi * (1 - dyn-research-compute-share)`
+- inputs: [dyn-r-lm-hi](#dyn-r-lm-hi), [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L61`
+
+<a id="dyn-r-lm-lo-corrected"></a>
+### dyn-r-lm-lo-corrected
+
+**0.36**: r after the compute-bottleneck correction, language models, 5th percentile
+
+- basis: derived
+- formula: `dyn-r-lm-lo * (1 - dyn-research-compute-share)`
+- inputs: [dyn-r-lm-lo](#dyn-r-lm-lo), [dyn-research-compute-share](#dyn-research-compute-share)
+- defined in: `model/parts/013_dynamical.py#L61`
+
+<a id="dyn-software-headroom"></a>
+### dyn-software-headroom
+
+**0.37**: headroom below 1 left for cross-feeds into the software loop, corrected median r
+
+- basis: derived
+- formula: `1 - dyn-r-lm-corrected`
+- inputs: [dyn-r-lm-corrected](#dyn-r-lm-corrected)
+- defined in: `model/parts/013_dynamical.py#L72`
+
+<a id="dyn-software-headroom-upper"></a>
+### dyn-software-headroom-upper
+
+**-0.07**: the same headroom at the corrected 95th percentile of r
+
+- basis: derived
+- formula: `1 - dyn-r-lm-hi-corrected`
+- inputs: [dyn-r-lm-hi-corrected](#dyn-r-lm-hi-corrected)
+- defined in: `model/parts/013_dynamical.py#L80`
+
+<a id="dyn-loop-threshold-eps-rc"></a>
+### dyn-loop-threshold-eps-rc
+
+**15%**: research productivity gain per ECI point at which the core loop becomes self-sustaining
+
+- basis: derived
+- formula: `1 / (dyn-cunningham-return * dyn-cunningham-eps-ca)`
+- inputs: [dyn-cunningham-return](#dyn-cunningham-return), [dyn-cunningham-eps-ca](#dyn-cunningham-eps-ca)
+- defined in: `model/parts/013_dynamical.py#L92`
+
+<a id="dyn-loop-gain-illustration"></a>
+### dyn-loop-gain-illustration
+
+**0.58**: core loop condition implied by the upper-end 4x uplift illustration (below 1 is subcritical)
+
+- basis: derived
+- formula: `dyn-cunningham-return * dyn-cunningham-eps-rc-illustration * dyn-cunningham-eps-ca`
+- inputs: [dyn-cunningham-return](#dyn-cunningham-return), [dyn-cunningham-eps-rc-illustration](#dyn-cunningham-eps-rc-illustration), [dyn-cunningham-eps-ca](#dyn-cunningham-eps-ca)
+- defined in: `model/parts/013_dynamical.py#L102`
+
+<a id="dyn-burtsev-amp-rate"></a>
+### dyn-burtsev-amp-rate
+
+**0.28/yr**: amplification rate of the network scenario, ln(rho) / tau
+
+- basis: derived
+- formula: `ln(dyn-burtsev-network-rho) / dyn-burtsev-delay`
+- inputs: [dyn-burtsev-network-rho](#dyn-burtsev-network-rho), [dyn-burtsev-delay](#dyn-burtsev-delay)
+- defined in: `model/parts/013_dynamical.py#L115`
+
+<a id="dyn-burtsev-efold-years"></a>
+### dyn-burtsev-efold-years
+
+**3.6 years**: e-folding time of the network scenario's amplification
+
+- basis: derived
+- formula: `dyn-burtsev-delay / ln(dyn-burtsev-network-rho)`
+- inputs: [dyn-burtsev-delay](#dyn-burtsev-delay), [dyn-burtsev-network-rho](#dyn-burtsev-network-rho)
+- defined in: `model/parts/013_dynamical.py#L124`
+
+<a id="dyn-burtsev-growth-per-year"></a>
+### dyn-burtsev-growth-per-year
+
+**1.32**: multiple by which a perturbation grows in one year in the network scenario
+
+- basis: derived
+- formula: `dyn-burtsev-network-rho ^ (1 / dyn-burtsev-delay)`
+- inputs: [dyn-burtsev-network-rho](#dyn-burtsev-network-rho), [dyn-burtsev-delay](#dyn-burtsev-delay)
+- defined in: `model/parts/013_dynamical.py#L132`
+
+<a id="dyn-metr-slope-ratio"></a>
+### dyn-metr-slope-ratio
+
+**1.9**: ratio of AECI slopes after and before the breakpoint (a check on the 1.9x headline)
+
+- basis: derived
+- formula: `dyn-metr-aeci-after / dyn-metr-aeci-before`
+- inputs: [dyn-metr-aeci-after](#dyn-metr-aeci-after), [dyn-metr-aeci-before](#dyn-metr-aeci-before)
+- defined in: `model/parts/013_dynamical.py#L144`
+
+<a id="dyn-anthropic-ai-led-multiple"></a>
+### dyn-anthropic-ai-led-multiple
+
+**26**: growth of the AI-led share of Anthropic's AI R&D, February to August 2026, lower bound
+
+- basis: derived
+- formula: `dyn-anthropic-ai-led / dyn-anthropic-ai-led-feb`
+- inputs: [dyn-anthropic-ai-led](#dyn-anthropic-ai-led), [dyn-anthropic-ai-led-feb](#dyn-anthropic-ai-led-feb)
+- defined in: `model/parts/013_dynamical.py#L152`
+
+<a id="dyn-nanogpt-ai-share"></a>
+### dyn-nanogpt-ai-share
+
+**5%**: share of speedrun records crediting an AI agent
+
+- basis: derived
+- formula: `dyn-nanogpt-ai-records / dyn-nanogpt-records`
+- inputs: [dyn-nanogpt-ai-records](#dyn-nanogpt-ai-records), [dyn-nanogpt-records](#dyn-nanogpt-records)
+- defined in: `model/parts/013_dynamical.py#L164`
+
+<a id="dyn-nanogpt-speedup"></a>
+### dyn-nanogpt-speedup
+
+**31**: speedrun speedup, May 2024 to March 2026
+
+- basis: derived
+- formula: `dyn-nanogpt-start-min / dyn-nanogpt-end-min`
+- inputs: [dyn-nanogpt-start-min](#dyn-nanogpt-start-min), [dyn-nanogpt-end-min](#dyn-nanogpt-end-min)
+- defined in: `model/parts/013_dynamical.py#L172`
+
+<a id="dyn-nanogpt-deep-factor"></a>
+### dyn-nanogpt-deep-factor
+
+**1.5**: speedup multiple left for deep contributions
+
+- basis: derived
+- formula: `(dyn-nanogpt-start-min / dyn-nanogpt-end-min) / dyn-nanogpt-shallow-moderate`
+- inputs: [dyn-nanogpt-start-min](#dyn-nanogpt-start-min), [dyn-nanogpt-end-min](#dyn-nanogpt-end-min), [dyn-nanogpt-shallow-moderate](#dyn-nanogpt-shallow-moderate)
+- defined in: `model/parts/013_dynamical.py#L180`
+
+<a id="dyn-speedrun-ratio"></a>
+### dyn-speedrun-ratio
+
+**67.7**: speedrun wall-clock speedup, record 1 to record 92
+
+- basis: derived
+- formula: `dyn-speedrun-baseline-s / dyn-speedrun-record-s`
+- inputs: [dyn-speedrun-baseline-s](#dyn-speedrun-baseline-s), [dyn-speedrun-record-s](#dyn-speedrun-record-s)
+- defined in: `model/parts/013_dynamical.py#L188`
+
+<a id="dyn-speedrun-annual"></a>
+### dyn-speedrun-annual
+
+**6.5**: average annual speedup multiple over the whole record
+
+- basis: derived
+- formula: `(dyn-speedrun-baseline-s / dyn-speedrun-record-s) ^ (365.25 / dyn-speedrun-span-days)`
+- inputs: [dyn-speedrun-baseline-s](#dyn-speedrun-baseline-s), [dyn-speedrun-record-s](#dyn-speedrun-record-s), [dyn-speedrun-span-days](#dyn-speedrun-span-days)
+- defined in: `model/parts/013_dynamical.py#L197`
+
+<a id="dyn-speedrun-first-annual"></a>
+### dyn-speedrun-first-annual
+
+**58**: annualised speedup multiple in the record's first 8 months
+
+- basis: derived
+- formula: `dyn-speedrun-first-window ^ (12 / dyn-speedrun-window-months)`
+- inputs: [dyn-speedrun-first-window](#dyn-speedrun-first-window), [dyn-speedrun-window-months](#dyn-speedrun-window-months)
+- defined in: `model/parts/013_dynamical.py#L205`
+
+<a id="dyn-speedrun-2026-annual"></a>
+### dyn-speedrun-2026-annual
+
+**4.9**: annualised speedup multiple, January to August 2026
+
+- basis: derived
+- formula: `dyn-speedrun-rate-2026 ^ (12 / dyn-speedrun-window-months)`
+- inputs: [dyn-speedrun-rate-2026](#dyn-speedrun-rate-2026), [dyn-speedrun-window-months](#dyn-speedrun-window-months)
+- defined in: `model/parts/013_dynamical.py#L213`
+
+<a id="dyn-speedrun-slowdown"></a>
+### dyn-speedrun-slowdown
+
+**36**: factor by which the annualised speedrun pace fell from its first months to 2025
+
+- basis: derived
+- formula: `dyn-speedrun-first-window ^ (12 / dyn-speedrun-window-months) / dyn-speedrun-rate-2025`
+- inputs: [dyn-speedrun-first-window](#dyn-speedrun-first-window), [dyn-speedrun-window-months](#dyn-speedrun-window-months), [dyn-speedrun-rate-2025](#dyn-speedrun-rate-2025)
+- defined in: `model/parts/013_dynamical.py#L222`
+
+<a id="dyn-agent-equivalent-gain"></a>
+### dyn-agent-equivalent-gain
+
+**1.3%**: speedup a human would buy with the best agent's expenditure horizon
+
+- basis: derived
+- formula: `dyn-agent-exp-horizon-hi / dyn-human-cost-per-pct / 100`
+- inputs: [dyn-agent-exp-horizon-hi](#dyn-agent-exp-horizon-hi), [dyn-human-cost-per-pct](#dyn-human-cost-per-pct)
+- defined in: `model/parts/013_dynamical.py#L230`
+
+<a id="dyn-horizon-annual"></a>
+### dyn-horizon-annual
+
+**7.1**: annual multiple of the 50% time horizon, 2023 onward
+
+- basis: derived
+- formula: `2 ^ (365.25 / dyn-horizon-doubling)`
+- inputs: [dyn-horizon-doubling](#dyn-horizon-doubling)
+- defined in: `model/parts/013_dynamical.py#L245`
+
+<a id="dyn-horizon-annual-slow"></a>
+### dyn-horizon-annual-slow
+
+**5.0**: the same at the slow end of the doubling-time interval
+
+- basis: derived
+- formula: `2 ^ (365.25 / dyn-horizon-doubling-hi)`
+- inputs: [dyn-horizon-doubling-hi](#dyn-horizon-doubling-hi)
+- defined in: `model/parts/013_dynamical.py#L253`
+
+<a id="dyn-horizon-annual-fast"></a>
+### dyn-horizon-annual-fast
+
+**11**: the same at the fast end of the doubling-time interval
+
+- basis: derived
+- formula: `2 ^ (365.25 / dyn-horizon-doubling-lo)`
+- inputs: [dyn-horizon-doubling-lo](#dyn-horizon-doubling-lo)
+- defined in: `model/parts/013_dynamical.py#L261`
+
+<a id="dyn-horizon-annual-2019"></a>
+### dyn-horizon-annual-2019
+
+**3.4**: annual multiple of the 50% time horizon, 2019 to 2025
+
+- basis: derived
+- formula: `2 ^ (365.25 / dyn-horizon-doubling-2019)`
+- inputs: [dyn-horizon-doubling-2019](#dyn-horizon-doubling-2019)
+- defined in: `model/parts/013_dynamical.py#L269`
+
+<a id="dyn-horizon-p50-hours"></a>
+### dyn-horizon-p50-hours
+
+**17 hours**: latest 50% time horizon in hours
+
+- basis: derived
+- formula: `dyn-horizon-p50 / 60`
+- inputs: [dyn-horizon-p50](#dyn-horizon-p50)
+- defined in: `model/parts/013_dynamical.py#L278`
+
+<a id="dyn-horizon-p80-hours"></a>
+### dyn-horizon-p80-hours
+
+**3 hours**: latest 80% time horizon in hours
+
+- basis: derived
+- formula: `dyn-horizon-p80 / 60`
+- inputs: [dyn-horizon-p80](#dyn-horizon-p80)
+- defined in: `model/parts/013_dynamical.py#L287`
+
+<a id="dyn-horizon-ratio"></a>
+### dyn-horizon-ratio
+
+**5.6**: ratio of the 50% to the 80% horizon, latest entry
+
+- basis: derived
+- formula: `dyn-horizon-p50 / dyn-horizon-p80`
+- inputs: [dyn-horizon-p50](#dyn-horizon-p50), [dyn-horizon-p80](#dyn-horizon-p80)
+- defined in: `model/parts/013_dynamical.py#L295`
+
+<a id="dyn-ord-ratio"></a>
+### dyn-ord-ratio
+
+**3**: ratio of the 50% to the 80% horizon under a constant hazard
+
+- basis: derived
+- formula: `1 / dyn-ord-t80-over-t50`
+- inputs: [dyn-ord-t80-over-t50](#dyn-ord-t80-over-t50)
+- defined in: `model/parts/013_dynamical.py#L303`
+
+<a id="dyn-reliability-lag-days"></a>
+### dyn-reliability-lag-days
+
+**321 days**: time for the 80% horizon to reach today's 50% horizon, if both double at the 50% rate
+
+- basis: derived
+- formula: `log2(dyn-horizon-p50 / dyn-horizon-p80) * dyn-horizon-doubling`
+- inputs: [dyn-horizon-p50](#dyn-horizon-p50), [dyn-horizon-p80](#dyn-horizon-p80), [dyn-horizon-doubling](#dyn-horizon-doubling)
+- defined in: `model/parts/013_dynamical.py#L312`
+
+<a id="dyn-cmos-headroom-oom"></a>
+### dyn-cmos-headroom-oom
+
+**2.3**: CMOS energy-efficiency headroom in orders of magnitude
+
+- basis: derived
+- formula: `log10(dyn-cmos-headroom)`
+- inputs: [dyn-cmos-headroom](#dyn-cmos-headroom)
+- defined in: `model/parts/013_dynamical.py#L324`
+
+<a id="dyn-cmos-years"></a>
+### dyn-cmos-years
+
+**16 years**: years until the CMOS ceiling at the measured efficiency growth
+
+- basis: derived
+- formula: `ln(dyn-cmos-headroom) / ln(dyn-gpu-eff-growth)`
+- inputs: [dyn-cmos-headroom](#dyn-cmos-headroom), [dyn-gpu-eff-growth](#dyn-gpu-eff-growth)
+- defined in: `model/parts/013_dynamical.py#L333`
+
+<a id="dyn-compute-sold-growth"></a>
+### dyn-compute-sold-growth
+
+**2.7**: growth of AI compute sold, 2024 to 2025, multiple
+
+- basis: derived
+- formula: `dyn-compute-sold-2025 / dyn-compute-sold-2024`
+- inputs: [dyn-compute-sold-2025](#dyn-compute-sold-2025), [dyn-compute-sold-2024](#dyn-compute-sold-2024)
+- defined in: `model/parts/013_dynamical.py#L341`
+
+<a id="dyn-fab-build-years"></a>
+### dyn-fab-build-years
+
+**1.9 years**: average fab build time in years
+
+- basis: derived
+- formula: `dyn-fab-build-days / 365.25`
+- inputs: [dyn-fab-build-days](#dyn-fab-build-days)
+- defined in: `model/parts/013_dynamical.py#L350`
+
+<a id="dyn-seal-gain-points"></a>
+### dyn-seal-gain-points
+
+**13.5 points**: SEAL's gain over the passage-only baseline, percentage points
+
+- basis: derived
+- formula: `(dyn-seal-squad - dyn-seal-squad-base) * 100`
+- inputs: [dyn-seal-squad](#dyn-seal-squad), [dyn-seal-squad-base](#dyn-seal-squad-base)
+- defined in: `model/parts/013_dynamical.py#L363`
+
+<a id="dyn-fudan-capable-share"></a>
+### dyn-fudan-capable-share
+
+**34%**: share of evaluated AI systems reported capable of self-replication
+
+- basis: derived
+- formula: `dyn-fudan-capable / dyn-fudan-evaluated`
+- inputs: [dyn-fudan-capable](#dyn-fudan-capable), [dyn-fudan-evaluated](#dyn-fudan-evaluated)
+- defined in: `model/parts/013_dynamical.py#L371`
+
+<a id="cog-rebench-attempt-ratio"></a>
+### cog-rebench-attempt-ratio
+
+**11**: how many more scored attempts an hour the agent made than human experts on RE-Bench
+
+- basis: derived
+- formula: `cog-rebench-attempts-agent / cog-rebench-attempts-human`
+- inputs: [cog-rebench-attempts-agent](#cog-rebench-attempts-agent), [cog-rebench-attempts-human](#cog-rebench-attempts-human)
+- defined in: `model/parts/014_cognitive.py#L35`
+
+<a id="cog-rebench-cost-ratio"></a>
+### cog-rebench-cost-ratio
+
+**15**: how many times more an 8-hour human expert run cost than an 8-hour agent run on RE-Bench
+
+- basis: derived
+- formula: `cog-rebench-human-cost / cog-rebench-agent-cost`
+- inputs: [cog-rebench-human-cost](#cog-rebench-human-cost), [cog-rebench-agent-cost](#cog-rebench-agent-cost)
+- defined in: `model/parts/014_cognitive.py#L43`
+
+<a id="cog-rebench-human-hourly"></a>
+### cog-rebench-human-hourly
+
+**232 USD/h**: hourly pay of a RE-Bench human expert
+
+- basis: derived
+- formula: `cog-rebench-human-cost / cog-rebench-run-hours`
+- inputs: [cog-rebench-human-cost](#cog-rebench-human-cost), [cog-rebench-run-hours](#cog-rebench-run-hours)
+- defined in: `model/parts/014_cognitive.py#L52`
+
+<a id="cog-gdpval-expert-hourly"></a>
+### cog-gdpval-expert-hourly
+
+**54 USD/h**: hourly cost of a GDPval expert, from median wages
+
+- basis: derived
+- formula: `cog-gdpval-expert-cost / (cog-gdpval-expert-minutes / 60)`
+- inputs: [cog-gdpval-expert-cost](#cog-gdpval-expert-cost), [cog-gdpval-expert-minutes](#cog-gdpval-expert-minutes)
+- defined in: `model/parts/014_cognitive.py#L61`
+
+<a id="cog-wage-spread"></a>
+### cog-wage-spread
+
+**4.3**: spread between the hourly human costs two published comparisons assume
+
+- basis: derived
+- formula: `cog-rebench-human-hourly / cog-gdpval-expert-hourly`
+- inputs: [cog-rebench-human-hourly](#cog-rebench-human-hourly), [cog-gdpval-expert-hourly](#cog-gdpval-expert-hourly)
+- defined in: `model/parts/014_cognitive.py#L69`
+
+<a id="cog-rebench-baseline-cost"></a>
+### cog-rebench-baseline-cost
+
+**132,000 USD**: approximate pay for RE-Bench's whole individual-expert baseline
+
+- basis: derived
+- formula: `cog-rebench-human-attempts * cog-rebench-human-cost`
+- inputs: [cog-rebench-human-attempts](#cog-rebench-human-attempts), [cog-rebench-human-cost](#cog-rebench-human-cost)
+- defined in: `model/parts/014_cognitive.py#L78`
+
+<a id="cog-rebench-swing"></a>
+### cog-rebench-swing
+
+**8**: how far the AI-to-human score ratio on RE-Bench moves between the 2-hour and 32-hour budgets
+
+- basis: derived
+- formula: `cog-rebench-ai-over-human-2h * cog-rebench-human-over-ai-32h`
+- inputs: [cog-rebench-ai-over-human-2h](#cog-rebench-ai-over-human-2h), [cog-rebench-human-over-ai-32h](#cog-rebench-human-over-ai-32h)
+- defined in: `model/parts/014_cognitive.py#L86`
+
+<a id="cog-rebench-swing-per-doubling"></a>
+### cog-rebench-swing-per-doubling
+
+**1.68**: average factor by which each doubling of the time budget moves the RE-Bench ratio towards humans
+
+- basis: derived
+- formula: `cog-rebench-swing ^ (1 / log2(cog-rebench-budget-long / cog-rebench-budget-short))`
+- inputs: [cog-rebench-swing](#cog-rebench-swing), [cog-rebench-budget-long](#cog-rebench-budget-long), [cog-rebench-budget-short](#cog-rebench-budget-short)
+- defined in: `model/parts/014_cognitive.py#L95`
+
+<a id="cog-gdpval-review-shrink"></a>
+### cog-gdpval-review-shrink
+
+**65**: factor by which counting expert review shrinks GPT-5's speed gain on GDPval
+
+- basis: derived
+- formula: `cog-gdpval-naive-speedup / cog-gdpval-review-speedup`
+- inputs: [cog-gdpval-naive-speedup](#cog-gdpval-naive-speedup), [cog-gdpval-review-speedup](#cog-gdpval-review-speedup)
+- defined in: `model/parts/014_cognitive.py#L103`
+
+<a id="cog-gdpval-cost-shrink"></a>
+### cog-gdpval-cost-shrink
+
+**290**: factor by which counting expert review shrinks GPT-5's cost gain on GDPval
+
+- basis: derived
+- formula: `cog-gdpval-naive-cost-gain / cog-gdpval-review-cost-gain`
+- inputs: [cog-gdpval-naive-cost-gain](#cog-gdpval-naive-cost-gain), [cog-gdpval-review-cost-gain](#cog-gdpval-review-cost-gain)
+- defined in: `model/parts/014_cognitive.py#L111`
+
+<a id="cog-sc-labour-at-share"></a>
+### cog-sc-labour-at-share
+
+**900**: engineer-equivalents per human engineer in AI 2027's superhuman coder (copies times speed)
+
+- basis: derived
+- formula: `cog-sc-copies * cog-sc-speed`
+- inputs: [cog-sc-copies](#cog-sc-copies), [cog-sc-speed](#cog-sc-speed)
+- defined in: `model/parts/014_cognitive.py#L119`
+
+<a id="cog-sc-labour-full"></a>
+### cog-sc-labour-full
+
+**18,000**: engineer-equivalents per human engineer if all the company's compute ran superhuman coders (linear)
+
+- basis: derived
+- formula: `cog-sc-labour-at-share / cog-sc-compute-share`
+- inputs: [cog-sc-labour-at-share](#cog-sc-labour-at-share), [cog-sc-compute-share](#cog-sc-compute-share)
+- defined in: `model/parts/014_cognitive.py#L127`
+
+<a id="cog-hendrycks-labour"></a>
+### cog-hendrycks-labour
+
+**1,000,000**: human-researcher-equivalents in Hendrycks et al.'s illustration (pace times copies)
+
+- basis: derived
+- formula: `cog-hendrycks-pace * cog-hendrycks-copies`
+- inputs: [cog-hendrycks-pace](#cog-hendrycks-pace), [cog-hendrycks-copies](#cog-hendrycks-copies)
+- defined in: `model/parts/014_cognitive.py#L135`
+
+<a id="cog-horizon-best-hours"></a>
+### cog-horizon-best-hours
+
+**17.4 h**: best published 50% time horizon, in hours
+
+- basis: derived
+- formula: `cog-horizon-best / 60`
+- inputs: [cog-horizon-best](#cog-horizon-best)
+- defined in: `model/parts/014_cognitive.py#L144`
+
+<a id="cog-th11-long-baselined-share"></a>
+### cog-th11-long-baselined-share
+
+**16%**: share of METR's 8-hour-plus tasks with a measured human time
+
+- basis: derived
+- formula: `cog-th11-long-baselined / cog-th11-long-tasks`
+- inputs: [cog-th11-long-baselined](#cog-th11-long-baselined), [cog-th11-long-tasks](#cog-th11-long-tasks)
+- defined in: `model/parts/014_cognitive.py#L152`
+
+<a id="cog-mlebench-passk-ratio"></a>
+### cog-mlebench-passk-ratio
+
+**2.0**: factor by which best-of-eight raises the MLE-bench medal rate over one attempt
+
+- basis: derived
+- formula: `cog-mlebench-pass8 / cog-mlebench-pass1`
+- inputs: [cog-mlebench-pass8](#cog-mlebench-pass8), [cog-mlebench-pass1](#cog-mlebench-pass1)
+- defined in: `model/parts/014_cognitive.py#L164`
+
+<a id="cog-nanogpt-ai-share"></a>
+### cog-nanogpt-ai-share
+
+**5%**: share of NanoGPT speedrun records co-credited to AI agents
+
+- basis: derived
+- formula: `cog-nanogpt-ai-records / cog-nanogpt-records`
+- inputs: [cog-nanogpt-ai-records](#cog-nanogpt-ai-records), [cog-nanogpt-records](#cog-nanogpt-records)
+- defined in: `model/parts/014_cognitive.py#L172`
+
+<a id="cog-vct-ratio"></a>
+### cog-vct-ratio
+
+**2.0**: o3's VCT accuracy over expert virologists' average in their own sub-areas
+
+- basis: derived
+- formula: `cog-vct-o3 / cog-vct-virologist`
+- inputs: [cog-vct-o3](#cog-vct-o3), [cog-vct-virologist](#cog-vct-virologist)
+- defined in: `model/parts/014_cognitive.py#L180`
+
+<a id="cog-gpqa-diamond-margin"></a>
+### cog-gpqa-diamond-margin
+
+**27 points**: lead of the best GPQA Diamond score over the developer-recruited PhD experts
+
+- basis: derived
+- formula: `100 * (cog-gpqa-diamond-best - cog-gpqa-diamond-expert)`
+- inputs: [cog-gpqa-diamond-best](#cog-gpqa-diamond-best), [cog-gpqa-diamond-expert](#cog-gpqa-diamond-expert)
+- defined in: `model/parts/014_cognitive.py#L189`
+
+<a id="cog-forecast-brier-ratio"></a>
+### cog-forecast-brier-ratio
+
+**1.27**: best LLM's Brier score over the superforecasters' in the first ForecastBench paper
+
+- basis: derived
+- formula: `cog-forecast-llm-brier / cog-forecast-super-brier`
+- inputs: [cog-forecast-llm-brier](#cog-forecast-llm-brier), [cog-forecast-super-brier](#cog-forecast-super-brier)
+- defined in: `model/parts/014_cognitive.py#L197`
+
+<a id="cog-forecast-top-margin"></a>
+### cog-forecast-top-margin
+
+**1.4 points**: lead of the top ForecastBench entry over the superforecaster median, Brier Index
+
+- basis: derived
+- formula: `cog-forecast-top-index - cog-forecast-super-index`
+- inputs: [cog-forecast-top-index](#cog-forecast-top-index), [cog-forecast-super-index](#cog-forecast-super-index)
+- defined in: `model/parts/014_cognitive.py#L206`
+
+<a id="cog-forecast-llm-margin"></a>
+### cog-forecast-llm-margin
+
+**1.5 points**: lead of the superforecaster median over the best single LLM, Brier Index
+
+- basis: derived
+- formula: `cog-forecast-super-index - cog-forecast-llm-index`
+- inputs: [cog-forecast-super-index](#cog-forecast-super-index), [cog-forecast-llm-index](#cog-forecast-llm-index)
+- defined in: `model/parts/014_cognitive.py#L215`
+
+<a id="cog-rli-growth"></a>
+### cog-rli-growth
+
+**16.5**: growth of the best Remote Labor Index automation rate from October 2025 to November 2026
+
+- basis: derived
+- formula: `cog-rli-best-2026 / cog-rli-best-2025`
+- inputs: [cog-rli-best-2026](#cog-rli-best-2026), [cog-rli-best-2025](#cog-rli-best-2025)
+- defined in: `model/parts/014_cognitive.py#L223`
+
+<a id="cog-alphafold-ratio"></a>
+### cog-alphafold-ratio
+
+**2.9**: next best CASP14 method's median backbone error over AlphaFold's
+
+- basis: derived
+- formula: `cog-casp14-next-rmsd / cog-alphafold-rmsd`
+- inputs: [cog-casp14-next-rmsd](#cog-casp14-next-rmsd), [cog-alphafold-rmsd](#cog-alphafold-rmsd)
+- defined in: `model/parts/014_cognitive.py#L235`
+
+<a id="cog-fm-logit-rate"></a>
+### cog-fm-logit-rate
+
+**3.4 logits/yr**: rise of the best FrontierMath score on the logit scale (a lower bound, since release was under 2%)
+
+- basis: derived
+- formula: `(logit(cog-fm-best) - logit(cog-fm-release-best)) / (cog-fm-best-year - cog-fm-release-year)`
+- inputs: [cog-fm-best](#cog-fm-best), [cog-fm-release-best](#cog-fm-release-best), [cog-fm-best-year](#cog-fm-best-year), [cog-fm-release-year](#cog-fm-release-year)
+- defined in: `model/parts/014_cognitive.py#L250`
+
+<a id="cog-fm-useful-life"></a>
+### cog-fm-useful-life
+
+**1.3 yr**: years FrontierMath took to cross from 10% to 90% at its logit rate (an upper bound)
+
+- basis: derived
+- formula: `(logit(cog-life-high) - logit(cog-life-low)) / cog-fm-logit-rate`
+- inputs: [cog-life-high](#cog-life-high), [cog-life-low](#cog-life-low), [cog-fm-logit-rate](#cog-fm-logit-rate)
+- defined in: `model/parts/014_cognitive.py#L259`
+
+<a id="cog-hle-logit-rate"></a>
+### cog-hle-logit-rate
+
+**1.5 logits/yr**: rise of the best HLE score on the logit scale
+
+- basis: derived
+- formula: `(logit(cog-hle-best) - logit(cog-hle-release-best)) / (cog-hle-best-year - cog-hle-release-year)`
+- inputs: [cog-hle-best](#cog-hle-best), [cog-hle-release-best](#cog-hle-release-best), [cog-hle-best-year](#cog-hle-best-year), [cog-hle-release-year](#cog-hle-release-year)
+- defined in: `model/parts/014_cognitive.py#L269`
+
+<a id="cog-hle-elapsed-months"></a>
+### cog-hle-elapsed-months
+
+**20 months**: months between HLE's release and the leaderboard's best score
+
+- basis: derived
+- formula: `12 * (cog-hle-best-year - cog-hle-release-year)`
+- inputs: [cog-hle-best-year](#cog-hle-best-year), [cog-hle-release-year](#cog-hle-release-year)
+- defined in: `model/parts/014_cognitive.py#L278`
+
+<a id="cog-hle-useful-life"></a>
+### cog-hle-useful-life
+
+**2.9 yr**: years HLE would take to cross from 10% to 90% at its logit rate
+
+- basis: derived
+- formula: `(logit(cog-life-high) - logit(cog-life-low)) / cog-hle-logit-rate`
+- inputs: [cog-life-high](#cog-life-high), [cog-life-low](#cog-life-low), [cog-hle-logit-rate](#cog-hle-logit-rate)
+- defined in: `model/parts/014_cognitive.py#L287`
+
+<a id="cog-hle-defective-share"></a>
+### cog-hle-defective-share
+
+**46%**: share of Epoch's HLE sample found defective
+
+- basis: derived
+- formula: `cog-hle-defective / cog-hle-sampled`
+- inputs: [cog-hle-defective](#cog-hle-defective), [cog-hle-sampled](#cog-hle-sampled)
+- defined in: `model/parts/014_cognitive.py#L295`
+
+<a id="cog-hle-defective-ci-low"></a>
+### cog-hle-defective-ci-low
+
+**33%**: lower end of the 95% interval on HLE's defective share
+
+- basis: derived
+- formula: `Wilson 95% interval of cog-hle-defective / cog-hle-sampled, lower end (z = cog-wilson-z)`
+- inputs: [cog-hle-defective](#cog-hle-defective), [cog-hle-sampled](#cog-hle-sampled), [cog-wilson-z](#cog-wilson-z)
+- defined in: `model/parts/014_cognitive.py#L303`
+
+<a id="cog-hle-defective-ci-high"></a>
+### cog-hle-defective-ci-high
+
+**60%**: upper end of the 95% interval on HLE's defective share
+
+- basis: derived
+- formula: `Wilson 95% interval of cog-hle-defective / cog-hle-sampled, upper end (z = cog-wilson-z)`
+- inputs: [cog-hle-defective](#cog-hle-defective), [cog-hle-sampled](#cog-hle-sampled), [cog-wilson-z](#cog-wilson-z)
+- defined in: `model/parts/014_cognitive.py#L311`
+
+<a id="cog-hle-sound-share"></a>
+### cog-hle-sound-share
+
+**54%**: share of Epoch's HLE sample found sound
+
+- basis: derived
+- formula: `1 - cog-hle-defective-share`
+- inputs: [cog-hle-defective-share](#cog-hle-defective-share)
+- defined in: `model/parts/014_cognitive.py#L319`
+
+<a id="cog-robust-recall-ratio"></a>
+### cog-robust-recall-ratio
+
+**11%**: share of the base model's hard-task recall that elicitation recovered from a tamper-resistant lock
+
+- basis: derived
+- formula: `cog-robust-recall-locked / cog-robust-recall-base`
+- inputs: [cog-robust-recall-locked](#cog-robust-recall-locked), [cog-robust-recall-base](#cog-robust-recall-base)
+- defined in: `model/parts/014_cognitive.py#L327`
+
+<a id="org-sold-growth"></a>
+### org-sold-growth
+
+**2.67**: growth of AI compute sold, 2024 to 2025 (ratio)
+
+- basis: derived
+- formula: `org-sold-2025 / org-sold-2024`
+- inputs: [org-sold-2025](#org-sold-2025), [org-sold-2024](#org-sold-2024)
+- defined in: `model/parts/015_organisational.py#L36`
+
+<a id="org-euv-growth-2025"></a>
+### org-euv-growth-2025
+
+**9%**: growth in EUV systems ASML recognised, 2024 to 2025
+
+- basis: derived
+- formula: `org-euv-2025 / org-euv-2024 - 1`
+- inputs: [org-euv-2025](#org-euv-2025), [org-euv-2024](#org-euv-2024)
+- defined in: `model/parts/015_organisational.py#L44`
+
+<a id="org-euv-doubling-years"></a>
+### org-euv-doubling-years
+
+**2.6 years**: years for low-NA EUV capacity to double at ASML's planned 2027 growth rate
+
+- basis: derived
+- formula: `ln 2 / ln(1 + org-euv-capacity-growth-2027)`
+- inputs: [org-euv-capacity-growth-2027](#org-euv-capacity-growth-2027)
+- defined in: `model/parts/015_organisational.py#L53`
+
+<a id="org-cowos-doubling-years"></a>
+### org-cowos-doubling-years
+
+**1.2 years**: years for CoWoS capacity to double at its 2022 to 2027 growth rate
+
+- basis: derived
+- formula: `ln 2 / ln(1 + org-cowos-cagr)`
+- inputs: [org-cowos-cagr](#org-cowos-cagr)
+- defined in: `model/parts/015_organisational.py#L62`
+
+<a id="org-cowos-multiple"></a>
+### org-cowos-multiple
+
+**8**: growth of TSMC CoWoS capacity from December 2023 to 2026 (ratio, conservative ends)
+
+- basis: derived
+- formula: `org-cowos-2026-low / org-cowos-dec2023-high`
+- inputs: [org-cowos-2026-low](#org-cowos-2026-low), [org-cowos-dec2023-high](#org-cowos-dec2023-high)
+- defined in: `model/parts/015_organisational.py#L70`
+
+<a id="org-fab-years"></a>
+### org-fab-years
+
+**1.9 years**: average fab build time worldwide, 1990 to 2020, in years
+
+- basis: derived
+- formula: `org-fab-days / 365.25`
+- inputs: [org-fab-days](#org-fab-days)
+- defined in: `model/parts/015_organisational.py#L79`
+
+<a id="org-fab-years-us"></a>
+### org-fab-years-us
+
+**2.5 years**: average US fab build time, 2010 to 2020, in years
+
+- basis: derived
+- formula: `org-fab-days-us / 365.25`
+- inputs: [org-fab-days-us](#org-fab-days-us)
+- defined in: `model/parts/015_organisational.py#L88`
+
+<a id="org-interconnect-years"></a>
+### org-interconnect-years
+
+**5.1 years**: median US interconnection time for projects built in 2025, in years
+
+- basis: derived
+- formula: `org-interconnect-2025 / 12`
+- inputs: [org-interconnect-2025](#org-interconnect-2025)
+- defined in: `model/parts/015_organisational.py#L97`
+
+<a id="org-transformer-years"></a>
+### org-transformer-years
+
+**2.5 years**: average US power transformer lead time, in years
+
+- basis: derived
+- formula: `org-transformer-lead * 7 / 365.25`
+- inputs: [org-transformer-lead](#org-transformer-lead)
+- defined in: `model/parts/015_organisational.py#L106`
+
+<a id="org-turbine-backlog"></a>
+### org-turbine-backlog
+
+**220 GW**: combined gas turbine backlog of the three large-frame makers
+
+- basis: derived
+- formula: `org-turbine-gev + org-turbine-siemens + org-turbine-mhi`
+- inputs: [org-turbine-gev](#org-turbine-gev), [org-turbine-siemens](#org-turbine-siemens), [org-turbine-mhi](#org-turbine-mhi)
+- defined in: `model/parts/015_organisational.py#L115`
+
+<a id="org-china-renewables-2025"></a>
+### org-china-renewables-2025
+
+**434 GW**: solar and wind capacity China added in 2025
+
+- basis: derived
+- formula: `org-china-solar-2025 + org-china-wind-2025`
+- inputs: [org-china-solar-2025](#org-china-solar-2025), [org-china-wind-2025](#org-china-wind-2025)
+- defined in: `model/parts/015_organisational.py#L124`
+
+<a id="org-huawei-spread"></a>
+### org-huawei-spread
+
+**4.1**: spread of outside estimates of Huawei's 2025 AI chip output (highest over lowest)
+
+- basis: derived
+- formula: `org-huawei-idc-2025 / org-huawei-commerce-2025`
+- inputs: [org-huawei-idc-2025](#org-huawei-idc-2025), [org-huawei-commerce-2025](#org-huawei-commerce-2025)
+- note: units differ: Commerce gave capacity, IDC shipments; the spread is still the measured disagreement
+- defined in: `model/parts/015_organisational.py#L137`
+
+<a id="org-china-implied-stock"></a>
+### org-china-implied-stock
+
+**2.0 million H100e**: China's total AI compute at end 2025 implied by the smuggling estimate and its share
+
+- basis: derived
+- formula: `org-smuggled-cum / org-smuggled-share-china / 1e6`
+- inputs: [org-smuggled-cum](#org-smuggled-cum), [org-smuggled-share-china](#org-smuggled-share-china)
+- note: an inference from 'roughly a third', not a number the source states
+- defined in: `model/parts/015_organisational.py#L147`
+
+<a id="org-denial-power-multiplier"></a>
+### org-denial-power-multiplier
+
+**2.5**: power needed per unit of compute in China relative to leading US facilities
+
+- basis: derived
+- formula: `1 / org-china-compute-per-power`
+- inputs: [org-china-compute-per-power](#org-china-compute-per-power)
+- defined in: `model/parts/015_organisational.py#L155`
+
+<a id="org-smuggling-profit-ratio"></a>
+### org-smuggling-profit-ratio
+
+**2.5**: profits of three smuggling cases over BIS's annual export enforcement budget
+
+- basis: derived
+- formula: `org-smuggling-profit-3 / org-bis-enforcement`
+- inputs: [org-smuggling-profit-3](#org-smuggling-profit-3), [org-bis-enforcement](#org-bis-enforcement)
+- defined in: `model/parts/015_organisational.py#L163`
+
+<a id="org-smuggled-share-of-fe"></a>
+### org-smuggled-share-of-fe
+
+**10%**: compute smuggled into China through 2025 as a share of the hardwired-pause covert evasion threshold
+
+- basis: derived
+- formula: `org-smuggled-cum / (org-hwp-fe * 1e6)`
+- inputs: [org-smuggled-cum](#org-smuggled-cum), [org-hwp-fe](#org-hwp-fe)
+- defined in: `model/parts/015_organisational.py#L171`
+
+<a id="org-china-stock-share-of-fe"></a>
+### org-china-stock-share-of-fe
+
+**31%**: China's implied total AI compute as a share of the hardwired-pause covert evasion threshold
+
+- basis: derived
+- formula: `org-china-implied-stock / org-hwp-fe`
+- inputs: [org-china-implied-stock](#org-china-implied-stock), [org-hwp-fe](#org-hwp-fe)
+- defined in: `model/parts/015_organisational.py#L179`
+
+<a id="org-fe-years-of-sales"></a>
+### org-fe-years-of-sales
+
+**0.47 years**: the covert evasion threshold in years of 2025 global AI chip sales
+
+- basis: derived
+- formula: `org-hwp-fe / org-sold-2025`
+- inputs: [org-hwp-fe](#org-hwp-fe), [org-sold-2025](#org-sold-2025)
+- defined in: `model/parts/015_organisational.py#L188`
+
+<a id="org-fb-years-of-sales"></a>
+### org-fb-years-of-sales
+
+**13 years**: the overt breakout threshold in years of 2025 global AI chip sales
+
+- basis: derived
+- formula: `org-hwp-fb / org-sold-2025`
+- inputs: [org-hwp-fb](#org-hwp-fb), [org-sold-2025](#org-sold-2025)
+- defined in: `model/parts/015_organisational.py#L197`
+
+<a id="org-gan-catchup-fall"></a>
+### org-gan-catchup-fall
+
+**52%**: fall in catch-up time over a 24-month compliant pause in Gan's calibration
+
+- basis: derived
+- formula: `1 - org-gan-catchup-24 / org-gan-catchup-start`
+- inputs: [org-gan-catchup-24](#org-gan-catchup-24), [org-gan-catchup-start](#org-gan-catchup-start)
+- defined in: `model/parts/015_organisational.py#L209`
+
+<a id="org-opcw-insp-total"></a>
+### org-opcw-insp-total
+
+**8,649 inspections**: OPCW routine inspections since 1997 (sum of categories)
+
+- basis: derived
+- formula: `org-opcw-cw-insp + org-opcw-ind-insp`
+- inputs: [org-opcw-cw-insp](#org-opcw-cw-insp), [org-opcw-ind-insp](#org-opcw-ind-insp)
+- defined in: `model/parts/015_organisational.py#L222`
+
+<a id="org-fraud-quitam-ratio"></a>
+### org-fraud-quitam-ratio
+
+**2.9**: employees' share of fraud revelations where qui tam rewards apply, over other industries
+
+- basis: derived
+- formula: `org-fraud-quitam / org-fraud-other`
+- inputs: [org-fraud-quitam](#org-fraud-quitam), [org-fraud-other](#org-fraud-other)
+- defined in: `model/parts/015_organisational.py#L230`
+
+<a id="org-covert-years-min"></a>
+### org-covert-years-min
+
+**3 years**: shortest time undetected among the seven undeclared programmes
+
+- basis: derived
+- formula: `min(org-iraq-years, org-libya-years, org-iran-years, org-fordow-years-low, org-syria-years, org-biopreparat-years, org-sa-years)`
+- inputs: [org-iraq-years](#org-iraq-years), [org-libya-years](#org-libya-years), [org-iran-years](#org-iran-years), [org-fordow-years-low](#org-fordow-years-low), [org-syria-years](#org-syria-years), [org-biopreparat-years](#org-biopreparat-years), [org-sa-years](#org-sa-years)
+- defined in: `model/parts/015_organisational.py#L239`
+
+<a id="org-covert-years-median"></a>
+### org-covert-years-median
+
+**15 years**: median time undetected among the seven undeclared programmes
+
+- basis: derived
+- formula: `median(org-iraq-years, org-libya-years, org-iran-years, org-fordow-years-low, org-syria-years, org-biopreparat-years, org-sa-years)`
+- inputs: [org-iraq-years](#org-iraq-years), [org-libya-years](#org-libya-years), [org-iran-years](#org-iran-years), [org-fordow-years-low](#org-fordow-years-low), [org-syria-years](#org-syria-years), [org-biopreparat-years](#org-biopreparat-years), [org-sa-years](#org-sa-years)
+- defined in: `model/parts/015_organisational.py#L248`
+
+<a id="org-covert-years-sum"></a>
+### org-covert-years-sum
+
+**87 years**: programme-years undetected across the seven undeclared programmes
+
+- basis: derived
+- formula: `sum(org-iraq-years, org-libya-years, org-iran-years, org-fordow-years-low, org-syria-years, org-biopreparat-years, org-sa-years)`
+- inputs: [org-iraq-years](#org-iraq-years), [org-libya-years](#org-libya-years), [org-iran-years](#org-iran-years), [org-fordow-years-low](#org-fordow-years-low), [org-syria-years](#org-syria-years), [org-biopreparat-years](#org-biopreparat-years), [org-sa-years](#org-sa-years)
+- defined in: `model/parts/015_organisational.py#L257`
+
+<a id="org-covert-hazard"></a>
+### org-covert-hazard
+
+**0.08/yr**: discovery rate a year implied by the seven programmes (discoveries over programme-years)
+
+- basis: derived
+- formula: `7 / org-covert-years-sum`
+- inputs: [org-covert-years-sum](#org-covert-years-sum)
+- note: a convenience sample of programmes that were eventually found; programmes never found are missing
+- defined in: `model/parts/015_organisational.py#L267`
+
+<a id="org-covert-detect-1y"></a>
+### org-covert-detect-1y
+
+**8%**: chance a covert programme is found within the memo's placeholder breakout time, at the historical rate
+
+- basis: derived
+- formula: `1 - exp(-org-covert-hazard * breakout-years)`
+- inputs: [org-covert-hazard](#org-covert-hazard), [breakout-years](#breakout-years)
+- defined in: `model/parts/015_organisational.py#L275`
+
+<a id="org-covert-detect-5y"></a>
+### org-covert-detect-5y
+
+**33%**: chance a covert programme is found within South Africa's decision-to-device time, at the historical rate
+
+- basis: derived
+- formula: `1 - exp(-org-covert-hazard * org-sa-decision-device)`
+- inputs: [org-covert-hazard](#org-covert-hazard), [org-sa-decision-device](#org-sa-decision-device)
+- defined in: `model/parts/015_organisational.py#L283`
+
+<a id="org-memo-detect-rate"></a>
+### org-memo-detect-rate
+
+**1.2/yr**: detection rate a year implied by the memo's placeholder inspection channel
+
+- basis: derived
+- formula: `inspections-per-year * detect-prob-per-inspection`
+- inputs: [inspections-per-year](#inspections-per-year), [detect-prob-per-inspection](#detect-prob-per-inspection)
+- defined in: `model/parts/015_organisational.py#L292`
+
+<a id="org-memo-to-history"></a>
+### org-memo-to-history
+
+**15**: the memo's placeholder detection rate over the historical discovery rate
+
+- basis: derived
+- formula: `org-memo-detect-rate / org-covert-hazard`
+- inputs: [org-memo-detect-rate](#org-memo-detect-rate), [org-covert-hazard](#org-covert-hazard)
+- defined in: `model/parts/015_organisational.py#L300`

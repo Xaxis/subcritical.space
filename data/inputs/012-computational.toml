@@ -1,0 +1,1720 @@
+# Inputs for Part I, 2: the computational and algorithmic perspective (research/012-computational.md).
+# Derivations are in model/parts/012_computational.py. Every id starts with comp-.
+# basis: measured | vendor | spec | design | assumption | modelled (see model/ledger.py).
+# Multipliers have unit "" and the text writes the "x" after the link.
+
+# ---------------------------------------------------------------------------------------------
+# A1: capability as a function of effective compute
+
+[comp-kaplan-n-opt-exp]
+value = 0.73
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "exponent of compute-optimal model size on training compute in Kaplan et al. (N_opt proportional to C^x)"
+source = "kaplan2020scaling"
+date = "2020"
+note = "Eq. 6.1 and Table 6; overturned by the Chinchilla allocation"
+
+[comp-chinchilla-hoffmann-a]
+value = 0.454
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "exponent of compute-optimal model size on compute from Hoffmann et al.'s Approach 3 fit"
+source = "besiroglu2024replication"
+date = "2024"
+note = "Hoffmann et al.'s value as reported in the replication's Table 1"
+
+[comp-chinchilla-refit-a]
+value = 0.5126
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "exponent of compute-optimal model size on compute in the Chinchilla replication refit"
+source = "besiroglu2024replication"
+date = "2024"
+note = "Table 1, bootstrap SE 0.02, 240 points"
+
+[comp-chinchilla-tokens-per-param]
+value = 20
+unit = "tokens per parameter"
+basis = "measured"
+fmt = ",.0f"
+label = "compute-optimal training tokens per parameter in the Chinchilla replication refit"
+source = "besiroglu2024replication"
+date = "2024"
+note = "Table 1 discussion; about 25.6 with outliers kept (Table 3)"
+
+[comp-hoffmann-tokens-per-param]
+value = 70
+unit = "tokens per parameter"
+basis = "measured"
+fmt = ",.0f"
+label = "tokens per parameter implied by Hoffmann et al.'s Approach 3 fit"
+source = "besiroglu2024replication"
+date = "2024"
+note = "the replication's reading of the original fit (about 70)"
+
+[comp-chinchilla-ci-experiments]
+value = 600000
+unit = "experiments"
+basis = "measured"
+fmt = ",.0f"
+label = "experiments that Hoffmann et al.'s reported confidence intervals would require"
+source = "besiroglu2024replication"
+date = "2024"
+note = "abstract; the original likely ran under 500"
+
+[comp-owen-oom-span]
+value = 5
+unit = "OOM"
+basis = "measured"
+fmt = ",.0f"
+label = "orders of magnitude of training compute spanned in Owen's predictability study"
+source = "owen2024predictable"
+date = "2024"
+note = "abstract: eleven architectures"
+
+[comp-bbh-mae-1oom]
+value = 6
+unit = "pp"
+basis = "measured"
+fmt = ",.0f"
+label = "mean absolute error extrapolating BIG-Bench Hard average performance one order of magnitude in compute"
+source = "owen2024predictable"
+date = "2024"
+note = "abstract, about 6 percentage points"
+
+[comp-task-mae-1oom]
+value = 18
+unit = "pp"
+basis = "measured"
+fmt = ",.0f"
+label = "mean absolute error extrapolating a single BIG-Bench task one order of magnitude in compute"
+source = "owen2024predictable"
+date = "2024"
+note = "abstract, about 18 percentage points, still better than chance"
+
+[comp-observational-models]
+value = 100
+unit = "models"
+basis = "measured"
+fmt = ",.0f"
+label = "public models in the observational scaling fit (about)"
+source = "ruan2024observational"
+date = "2024"
+note = "abstract"
+
+[comp-emergence-two-metric-share]
+value = 0.92
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of claimed BIG-Bench emergent abilities that two discontinuous metrics account for (lower bound)"
+source = "schaeffer2023mirage"
+date = "2023"
+note = "Sec. 4: Multiple Choice Grade and Exact String Match account for over 92%"
+
+[comp-emergence-ahead]
+value = 4
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "multiple of training compute ahead at which fine-tuned small models predicted emergence, in some cases"
+source = "snell2024emergence"
+date = "2024"
+note = "abstract: MMLU, GSM8K, CommonsenseQA, CoLA"
+
+[comp-rsp-cadence]
+value = 4
+unit = ""
+basis = "vendor"
+fmt = ",.0f"
+label = "multiple of effective compute between capability evaluations in one lab's scaling policy"
+source = "anthropic2026rsp"
+date = "2024-10"
+note = "v2.0 changelog: evaluation cadence of 4x effective compute or six months of accumulated post-training enhancements"
+
+[comp-rosetta-k]
+value = 0.168
+unit = ""
+basis = "measured"
+fmt = ".3f"
+label = "slope of stitched capability on the natural log of training FLOP (Rosetta units per ln FLOP)"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2, Eq. 2; read as natural log because it reproduces the paper's own 6x a year (see comp-rosetta-implied-algo)"
+
+[comp-rosetta-frontier-growth]
+value = 0.55
+unit = "units/yr"
+basis = "measured"
+fmt = ".2f"
+label = "growth of frontier capability on the Rosetta scale"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.1, 95% CI 0.45 to 0.67"
+
+[comp-rosetta-frontier-growth-lo]
+value = 0.45
+unit = "units/yr"
+basis = "measured"
+fmt = ".2f"
+label = "growth of frontier capability on the Rosetta scale, lower end of 95% CI"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.1"
+
+[comp-rosetta-frontier-growth-hi]
+value = 0.67
+unit = "units/yr"
+basis = "measured"
+fmt = ".2f"
+label = "growth of frontier capability on the Rosetta scale, upper end of 95% CI"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.1"
+
+[comp-rosetta-fixed-growth]
+value = 0.3
+unit = "units/yr"
+basis = "measured"
+fmt = ".1f"
+label = "growth of capability at fixed training compute on the Rosetta scale"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2, range 0.1 to 0.5 across model families"
+
+[comp-rosetta-fixed-growth-lo]
+value = 0.1
+unit = "units/yr"
+basis = "measured"
+fmt = ".1f"
+label = "growth of capability at fixed compute, Rosetta scale, low end across families"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2"
+
+[comp-rosetta-fixed-growth-hi]
+value = 0.5
+unit = "units/yr"
+basis = "measured"
+fmt = ".1f"
+label = "growth of capability at fixed compute, Rosetta scale, high end across families"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2"
+
+[comp-rosetta-algo]
+value = 6
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "algorithmic efficiency gain a year implied by the Rosetta fit (multiplier)"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2, range 1x to 50x across three LLaMA families"
+
+[comp-rosetta-algo-lo]
+value = 1
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "algorithmic efficiency gain a year, Rosetta fit, low end across families (multiplier)"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2"
+
+[comp-rosetta-algo-hi]
+value = 50
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "algorithmic efficiency gain a year, Rosetta fit, high end across families (multiplier)"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2"
+
+[comp-rosetta-algo-frontier]
+value = 9
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "algorithmic efficiency gain a year at the frontier of algorithmic quality, Rosetta fit (multiplier)"
+source = "ho2025rosetta"
+date = "2025"
+note = "Sec. 3.2.2, range 3x to 40x"
+
+[comp-frontier-compute-growth]
+value = 5
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "growth a year of training compute for frontier language models since 2020 (multiplier)"
+source = "epoch2026trends"
+date = "2026-11"
+note = "90% CI 4x to 6x"
+
+[comp-frontier-compute-growth-lo]
+value = 4
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "growth a year of frontier training compute, lower end of 90% CI (multiplier)"
+source = "epoch2026trends"
+date = "2026-11"
+
+[comp-frontier-compute-growth-hi]
+value = 6
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "growth a year of frontier training compute, upper end of 90% CI (multiplier)"
+source = "epoch2026trends"
+date = "2026-11"
+
+[comp-ho-compute-share-lo]
+value = 0.60
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of language-model performance gains 2012 to 2023 from compute scaling, low end"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 4.1, 60 to 95%"
+
+[comp-ho-compute-share-hi]
+value = 0.95
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of language-model performance gains 2012 to 2023 from compute scaling, high end"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 4.1"
+
+[comp-mertens-models]
+value = 809
+unit = "models"
+basis = "measured"
+fmt = ",.0f"
+label = "language models released 2022 to 2025 in the secret-sauce regressions"
+source = "mertens2026secretsauce"
+date = "2026"
+note = "abstract"
+
+[comp-mertens-frontier-share-lo]
+value = 0.80
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of frontier performance differences explained by training compute, low end"
+source = "mertens2026secretsauce"
+date = "2026"
+note = "abstract, 80 to 90%"
+
+[comp-mertens-frontier-share-hi]
+value = 0.90
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of frontier performance differences explained by training compute, high end"
+source = "mertens2026secretsauce"
+date = "2026"
+note = "abstract"
+
+[comp-mertens-firm-spread]
+value = 40
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "compute-efficiency difference within one firm (multiplier, lower bound)"
+source = "mertens2026secretsauce"
+date = "2026"
+note = "abstract: more than 40x"
+
+[comp-sardana-tokens-per-param]
+value = 10000
+unit = "tokens per parameter"
+basis = "measured"
+fmt = ",.0f"
+label = "training tokens per parameter at which quality was still improving"
+source = "sardana2024beyondchinchilla"
+date = "2024"
+note = "abstract, 47 models"
+
+# ---------------------------------------------------------------------------------------------
+# A2: the exchange between training and inference compute
+
+[comp-hex-test-saved]
+value = 15
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "test-time compute eliminated for each 10x of train-time compute, AlphaZero on Hex (multiplier)"
+source = "jones2021boardgames"
+date = "2021"
+note = "Sec. IV-C, Fig. 9: linear in log-compute"
+
+[comp-hex-perfect-play-growth]
+value = 7
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "growth of minimum compute for perfect play per board-size increment, Hex (multiplier)"
+source = "jones2021boardgames"
+date = "2021"
+note = "Sec. IV-A, Table III"
+
+[comp-tradeoff-typical-oom]
+value = 1
+unit = "OOM"
+basis = "measured"
+fmt = ",.0f"
+label = "compute saved per technique in training or inference, for somewhat more than this of the other"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+note = "summary of the post"
+
+[comp-span-mcts-train]
+value = 1.6
+unit = "OOM"
+basis = "measured"
+fmt = ".1f"
+label = "span of training compute over which Monte Carlo tree search trades against inference"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+note = "1.6 OOM training against 1.6 OOM inference; the span shrinks to zero near perfect play"
+
+[comp-span-mcts-inf]
+value = 1.6
+unit = "OOM"
+basis = "measured"
+fmt = ".1f"
+label = "span of inference compute traded by Monte Carlo tree search"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+
+[comp-span-cheapver-train]
+value = 3
+unit = "OOM"
+basis = "measured"
+fmt = ",.0f"
+label = "span of training compute traded by repeated sampling with cheap verification"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+note = "extrapolated, low confidence; the span grows with scale"
+
+[comp-span-cheapver-inf]
+value = 6
+unit = "OOM"
+basis = "measured"
+fmt = ",.0f"
+label = "span of inference compute traded by repeated sampling with cheap verification"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+note = "extrapolated, low confidence"
+
+[comp-span-expver-train]
+value = 1
+unit = "OOM"
+basis = "measured"
+fmt = ",.0f"
+label = "span of training compute traded by repeated sampling with expensive verification"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+
+[comp-span-expver-inf]
+value = 1.45
+unit = "OOM"
+basis = "measured"
+fmt = ".2f"
+label = "span of inference compute traded by repeated sampling with expensive verification"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+
+[comp-span-policy-train]
+value = 1.2
+unit = "OOM"
+basis = "measured"
+fmt = ".1f"
+label = "span of training compute for scaling the policy (cannot save training)"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+note = "1.2 OOM training against 0.7 OOM inference"
+
+[comp-span-policy-inf]
+value = 0.7
+unit = "OOM"
+basis = "measured"
+fmt = ".1f"
+label = "span of inference compute for scaling the policy"
+source = "villalobos2023tradeoff"
+date = "2023-07"
+
+[comp-snell-vs-bestofn]
+value = 4
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "efficiency of compute-optimal test-time scaling over best-of-N (multiplier, lower bound)"
+source = "snell2024testtime"
+date = "2024"
+note = "abstract: more than 4x"
+
+[comp-snell-larger-model]
+value = 14
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "size multiple of the larger model a smaller one outperformed with test-time compute, FLOPs matched"
+source = "snell2024testtime"
+date = "2024"
+note = "abstract: where the small model's success rate is somewhat non-trivial"
+
+[comp-snell-r-low]
+value = 0.16
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "inference-to-pretraining token ratio at which test-time compute wins"
+source = "snell2024testtime"
+date = "2024"
+note = "Sec. 7"
+
+[comp-snell-r-high]
+value = 22
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "inference-to-pretraining token ratio at which pretraining often wins"
+source = "snell2024testtime"
+date = "2024"
+note = "Sec. 7"
+
+[comp-monkeys-pass1]
+value = 0.159
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "SWE-bench Lite solved with one sample"
+source = "brown2024monkeys"
+date = "2024"
+note = "abstract"
+
+[comp-monkeys-pass250]
+value = 0.56
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "SWE-bench Lite solved with 250 samples"
+source = "brown2024monkeys"
+date = "2024"
+note = "abstract"
+
+[comp-monkeys-samples]
+value = 250
+unit = "samples"
+basis = "measured"
+fmt = ",.0f"
+label = "samples drawn in the SWE-bench Lite repeated-sampling result"
+source = "brown2024monkeys"
+date = "2024"
+
+[comp-monkeys-sota]
+value = 0.43
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "single-sample state of the art on SWE-bench Lite at the time"
+source = "brown2024monkeys"
+date = "2024"
+note = "abstract"
+
+[comp-monkeys-oom]
+value = 4
+unit = "OOM"
+basis = "measured"
+fmt = ",.0f"
+label = "orders of magnitude of samples over which coverage keeps scaling"
+source = "brown2024monkeys"
+date = "2024"
+note = "abstract: often log-linear; voting and reward models plateau beyond several hundred samples"
+
+[comp-o1-pass1]
+value = 0.74
+unit = ""
+basis = "vendor"
+fmt = "%"
+label = "o1 on AIME 2024 with one sample"
+source = "openai2024o1"
+date = "2024-09"
+
+[comp-o1-cons64]
+value = 0.83
+unit = ""
+basis = "vendor"
+fmt = "%"
+label = "o1 on AIME 2024 with consensus over 64 samples"
+source = "openai2024o1"
+date = "2024-09"
+
+[comp-o1-rerank]
+value = 0.93
+unit = ""
+basis = "vendor"
+fmt = "%"
+label = "o1 on AIME 2024 re-ranking 1,000 samples"
+source = "openai2024o1"
+date = "2024-09"
+
+[comp-o3-extra-oom]
+value = 1
+unit = "OOM"
+basis = "vendor"
+fmt = ",.0f"
+label = "additional training compute and inference reasoning in o3 over o1"
+source = "openai2025o3"
+date = "2025-04"
+
+[comp-ord-inf-step]
+value = 10
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "inference multiple in Ord's summary of trade-off work (multiplier)"
+source = "ord2025govaireport"
+date = "2025-10"
+note = "footnote 6: 10x inference on the task can match 3x to 10x pre-training"
+
+[comp-ord-pretrain-lo]
+value = 3
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "pre-training multiple matched by 10x inference, low end of Ord's summary (multiplier)"
+source = "ord2025govaireport"
+date = "2025-10"
+note = "footnote 6, citing trade-off work; gains often plateau after a few OOM of inference"
+
+[comp-ord-pretrain-hi]
+value = 10
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "pre-training multiple matched by 10x inference, high end of Ord's summary (multiplier)"
+source = "ord2025govaireport"
+date = "2025-10"
+
+[comp-ord-example-base]
+value = 1e24
+unit = "FLOP"
+basis = "assumption"
+fmt = ".0e"
+label = "training compute of the model in Ord's inference illustration"
+source = "ord2025govaireport"
+date = "2025-10"
+note = "around p. 10, an illustration, not a measurement"
+
+[comp-ord-example-inf]
+value = 10000
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "inference multiple in Ord's illustration"
+source = "ord2025govaireport"
+date = "2025-10"
+
+[comp-ord-example-target]
+value = 1e27
+unit = "FLOP"
+basis = "assumption"
+fmt = ".0e"
+label = "training compute of the model matched in Ord's illustration"
+source = "ord2025govaireport"
+date = "2025-10"
+
+[comp-ord-rl-inf]
+value = 100
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "inference multiple taking o1 on AIME from about 20% to 80%, Ord's reading of vendor charts"
+source = "ord2025rlscale"
+date = "2025-10"
+note = "self-described educated guess from charts without axis numbers"
+
+[comp-ord-rl-train]
+value = 10000
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "RL training multiple Ord estimates for the same AIME gain"
+source = "ord2025rlscale"
+date = "2025-10"
+note = "educated guess from vendor charts"
+
+[comp-r1zero-start]
+value = 0.156
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "DeepSeek-R1-Zero AIME 2024 pass@1 before reinforcement learning"
+source = "deepseek2025r1"
+date = "2025"
+note = "v1 Sec. 2.2.4, Table 2"
+
+[comp-r1zero-end]
+value = 0.710
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "DeepSeek-R1-Zero AIME 2024 pass@1 after reinforcement learning"
+source = "deepseek2025r1"
+date = "2025"
+note = "v1 Sec. 2.2.4"
+
+[comp-r1-distill-32b]
+value = 0.726
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "AIME 2024 pass@1 of a 32B model distilled from DeepSeek-R1"
+source = "deepseek2025r1"
+date = "2025"
+note = "v1 Table 5"
+
+[comp-r1-rl-32b]
+value = 0.470
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "AIME 2024 pass@1 of large-scale RL on the same 32B base"
+source = "deepseek2025r1"
+date = "2025"
+note = "v1 Sec. 4.1, Table 6"
+
+[comp-r1-distill-7b]
+value = 0.555
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "AIME 2024 pass@1 of a 7B model distilled from DeepSeek-R1"
+source = "deepseek2025r1"
+date = "2025"
+note = "v1 Table 5"
+
+[comp-davidson-ceg-typ]
+value = 5
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "compute-equivalent gain most surveyed post-training enhancements exceed (multiplier)"
+source = "davidson2023enhancements"
+date = "2023"
+note = "abstract; types: tool use, prompting, scaffolding, solution selection, data generation"
+
+[comp-davidson-ceg-high]
+value = 20
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "compute-equivalent gain some surveyed post-training enhancements exceed (multiplier)"
+source = "davidson2023enhancements"
+date = "2023"
+note = "abstract"
+
+[comp-davidson-finetune-share]
+value = 0.01
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "typical fine-tuning cost as a share of original training cost (upper bound)"
+source = "davidson2023enhancements"
+date = "2023"
+note = "abstract: typically under 1%"
+
+[comp-heim-buffer-oom]
+value = 1
+unit = "OOM"
+basis = "assumption"
+fmt = ",.0f"
+label = "safety buffer for post-training enhancement suggested in the compute-threshold literature"
+source = "heim2024thresholds"
+date = "2024"
+note = "Sec. 6.1: an order of magnitude or so"
+
+[comp-eu-modifier-share]
+value = 0.3333333333
+unit = ""
+basis = "spec"
+fmt = "%"
+label = "share of the original model's training compute above which an EU downstream modifier becomes a provider"
+source = "ec-gpai-guidelines-faq-2025"
+date = "2025-11"
+note = "more than one third"
+
+[comp-scalerl-gpu-hours]
+value = 400000
+unit = "GPU-hours"
+basis = "measured"
+fmt = ",.0f"
+label = "GPU-hours in the RL compute-scaling study"
+source = "khatri2025scalerl"
+date = "2025"
+note = "abstract; sigmoidal compute-performance curves"
+
+# ---------------------------------------------------------------------------------------------
+# A3: algorithmic progress
+
+[comp-ho-halving]
+value = 8.4
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "halving time of compute for a fixed language-model performance, 2012 to 2023"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 3.1, 95% CI 4.5 to 14.3 months"
+
+[comp-ho-halving-lo]
+value = 4.5
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "halving time of compute for fixed LM performance, lower end of 95% CI"
+source = "ho2024algorithmic"
+date = "2024"
+
+[comp-ho-halving-hi]
+value = 14.3
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "halving time of compute for fixed LM performance, upper end of 95% CI"
+source = "ho2024algorithmic"
+date = "2024"
+
+[comp-ho-evals]
+value = 200
+unit = "evaluations"
+basis = "measured"
+fmt = ",.0f"
+label = "language-model evaluations in the algorithmic progress dataset (lower bound)"
+source = "ho2024algorithmic"
+date = "2024"
+note = "abstract: over 200, WikiText and Penn Treebank"
+
+[comp-ho-transformer]
+value = 7.2
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "compute-equivalent gain of the Transformer (multiplier)"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 3.3, 95% CI 3.3x to 45.7x"
+
+[comp-ho-transformer-lo]
+value = 3.3
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "compute-equivalent gain of the Transformer, lower end of 95% CI (multiplier)"
+source = "ho2024algorithmic"
+date = "2024"
+
+[comp-ho-transformer-hi]
+value = 45.7
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "compute-equivalent gain of the Transformer, upper end of 95% CI (multiplier)"
+source = "ho2024algorithmic"
+date = "2024"
+
+[comp-gundlach-claimed]
+value = 22000
+unit = ""
+basis = "measured"
+fmt = "sig2"
+label = "claimed algorithmic efficiency gain in language models, 2012 to 2023 (multiplier)"
+source = "gundlach2025origin"
+date = "2026-11"
+note = "abstract, citing Ho et al."
+
+[comp-gundlach-ablation-max]
+value = 10
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "efficiency gain the authors' small-scale ablations account for (multiplier, upper bound)"
+source = "gundlach2025origin"
+date = "2026-11"
+note = "abstract: less than 10x"
+
+[comp-gundlach-other-max]
+value = 10
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "efficiency gain from other innovations at small scale, the authors' survey estimate (multiplier, upper bound)"
+source = "gundlach2025origin"
+date = "2026-11"
+note = "abstract: less than 10x; an estimate from their survey, not their ablations (spot-check note)"
+
+[comp-algo-claim-years]
+value = 11
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "span of the claimed language-model efficiency gain"
+source = "gundlach2025origin"
+date = "2026-11"
+note = "2012 to 2023"
+
+[comp-whitfill-factor]
+value = 9
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "first-pass factor by which observational estimates may overstate algorithmic progress"
+source = "whitfill2025selection"
+date = "2025"
+note = "Sec. 1.3; first pass, many other explanations possible"
+
+[comp-whitfill-true]
+value = 0.45
+unit = ""
+basis = "assumption"
+fmt = "%"
+label = "true algorithmic progress a year in Whitfill's selection-bias simulation"
+source = "whitfill2025selection"
+date = "2025"
+note = "Sec. 2, simulation input"
+
+[comp-whitfill-pos]
+value = 0.165
+unit = ""
+basis = "modelled"
+fmt = ".1%"
+label = "estimated progress a year in the simulation when compute and algorithmic quality correlate at +0.5"
+source = "whitfill2025selection"
+date = "2025"
+note = "Sec. 2"
+
+[comp-whitfill-neg]
+value = 0.93
+unit = ""
+basis = "modelled"
+fmt = "%"
+label = "estimated progress a year in the simulation when compute and algorithmic quality correlate at -0.5"
+source = "whitfill2025selection"
+date = "2025"
+note = "Sec. 2"
+
+[comp-erdil-halving]
+value = 9
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "halving time of compute requirements from compute-augmenting innovations, ImageNet"
+source = "erdil2022vision"
+date = "2022"
+note = "abstract, 95% CI 4 to 25 months"
+
+[comp-hernandez-gain]
+value = 44
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "fall in FLOP to reach AlexNet-level ImageNet performance, 2012 to 2019 (multiplier)"
+source = "hernandez2020efficiency"
+date = "2020"
+note = "abstract; Moore's law alone would have given 11x"
+
+[comp-hernandez-years]
+value = 7
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "span of the AlexNet-level efficiency measurement"
+source = "hernandez2020efficiency"
+date = "2020"
+note = "2012 to 2019"
+
+[comp-xiao-doubling]
+value = 3
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "doubling time of capacity density (effective over actual parameters)"
+source = "xiao2024densing"
+date = "2024"
+note = "abstract; per parameter, not per FLOP"
+
+[comp-inference-algo]
+value = 3
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "algorithmic efficiency gain a year in inference, open models, hardware price declines divided out (multiplier)"
+source = "gundlach2025priceprogress"
+date = "2026-03"
+note = "abstract: around 3x a year"
+
+[comp-price-fall-lo]
+value = 5
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "fall a year in price at a fixed benchmark level, low end (multiplier)"
+source = "gundlach2025priceprogress"
+date = "2026-03"
+
+[comp-price-fall-hi]
+value = 10
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "fall a year in price at a fixed benchmark level, high end (multiplier)"
+source = "gundlach2025priceprogress"
+date = "2026-03"
+
+[comp-frontier-price-rise-lo]
+value = 3
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "rise a year in the price of running frontier models, low end (multiplier)"
+source = "gundlach2025priceprogress"
+date = "2026-03"
+
+[comp-frontier-price-rise-hi]
+value = 18
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "rise a year in the price of running frontier models, high end (multiplier)"
+source = "gundlach2025priceprogress"
+date = "2026-03"
+
+[comp-barnett-innovations]
+value = 36
+unit = "innovations"
+basis = "measured"
+fmt = ",.0f"
+label = "pre-training algorithmic innovations catalogued in Llama 3 and DeepSeek-V3"
+source = "barnett2025innovation"
+date = "2025"
+note = "abstract"
+
+[comp-barnett-feasible]
+value = 0.5
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of catalogued innovations feasible under a cap at GPT-2's training compute or 8 H100s"
+source = "barnett2025innovation"
+date = "2025"
+note = "abstract: could still have allowed half"
+
+[comp-speedrun-base-s]
+value = 2700
+unit = "s"
+basis = "measured"
+fmt = ",.0f"
+label = "NanoGPT speedrun record 1 on 8xH100 (llm.c baseline, 2024-05-28)"
+source = "moddednanogpt"
+date = "2024-05"
+note = "README record table: 45 minutes"
+
+[comp-speedrun-record-s]
+value = 39.9
+unit = "s"
+basis = "measured"
+fmt = ".1f"
+label = "NanoGPT speedrun record 92 on 8xH100 (2026-08-30)"
+source = "epoch2026speedrundata"
+date = "2026-08"
+note = "CSV row 92; README: 0.665 minutes"
+
+[comp-speedrun-days]
+value = 824
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "days from speedrun record 1 to record 92"
+source = "moddednanogpt"
+date = "2026-08"
+note = "2024-05-28 to 2026-08-30"
+
+[comp-speedrun-tokens-base]
+value = 1e10
+unit = "tokens"
+basis = "measured"
+fmt = ".0e"
+label = "training tokens the llm.c GPT-2 replication needed to reach the speedrun's target loss"
+source = "moddednanogpt"
+date = "2026-08"
+note = "README introduction"
+
+[comp-speedrun-tokens-record]
+value = 3.3e8
+unit = "tokens"
+basis = "measured"
+fmt = ".1e"
+label = "training tokens the current speedrun recipe needs (upper bound)"
+source = "moddednanogpt"
+date = "2026-08"
+note = "README: under 330M tokens; the parameter count is not fixed (hashed n-gram table)"
+
+[comp-speedrun-first8mo]
+value = 15
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "speedrun wall-clock gain in its first eight months (multiplier, about)"
+source = "epoch2026speedrundata"
+date = "2026-10"
+note = "computed in survey note 03 from the CSV, not a number on the page; E10 recomputes it"
+
+[comp-speedrun-2025]
+value = 1.6
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "speedrun wall-clock gain across 2025 (multiplier, about)"
+source = "epoch2026speedrundata"
+date = "2026-10"
+note = "computed in survey note 03 from CSV rows 21 to 56; E10 recomputes it"
+
+[comp-metr-records]
+value = 77
+unit = "records"
+basis = "measured"
+fmt = ",.0f"
+label = "speedrun records May 2024 to March 2026 in METR's analysis"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+
+[comp-metr-speedup]
+value = 31
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "speedrun wall-clock gain May 2024 to March 2026 (multiplier)"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+
+[comp-metr-shallow]
+value = 21
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "part of the speedrun gain from shallow and moderate contributions (multiplier, roughly)"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+
+[comp-metr-imported]
+value = 6.7
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "speedrun gain from imported ideas (multiplier)"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+
+[comp-metr-adapted]
+value = 3.0
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "speedrun gain from adapted ideas (multiplier)"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+
+[comp-metr-invented]
+value = 1.6
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "speedrun gain from invented ideas (multiplier)"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+
+[comp-metr-ai-records]
+value = 4
+unit = "records"
+basis = "measured"
+fmt = ",.0f"
+label = "speedrun records crediting an AI agent with a human, late 2025 to early 2026"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+note = "all judged shallow to moderate"
+
+[comp-metr-flop-eff-lo]
+value = 1.6
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "FLOP-efficiency gain a year since GPT-2 cited by METR from external analyses, low end (multiplier)"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+note = "footnote 3, secondary"
+
+[comp-metr-flop-eff-hi]
+value = 1.7
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "FLOP-efficiency gain a year since GPT-2 cited by METR, high end (multiplier)"
+source = "shetty2026metrnanogpt"
+date = "2026-04"
+note = "footnote 3, secondary"
+
+[comp-ww-sigma-compute]
+value = 2.583
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "elasticity of substitution between research compute and labour, CES in compute specification"
+source = "whitfill2025bottlenecks"
+date = "2025"
+note = "Table 1, SE 0.341; four firm clusters"
+
+[comp-ww-sigma-frontier]
+value = -0.103
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "elasticity of substitution between research compute and labour, frontier-experiments specification"
+source = "whitfill2025bottlenecks"
+date = "2025"
+note = "Table 1, SE 0.176; complements"
+
+[comp-r-lm]
+value = 1.892
+unit = ""
+basis = "modelled"
+fmt = ".1f"
+label = "returns to research in language models (doublings of output per doubling of research input)"
+source = "ho2025experiments"
+date = "2025-11"
+note = "Appendix B, 90% credible interval 1.069 to 3.212"
+
+[comp-r-compute-cut]
+value = 3
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "factor by which a compute-bottleneck correction cuts returns-to-research estimates"
+source = "ho2025experiments"
+date = "2025-11"
+note = "Appendix D, Cobb-Douglas with compute share about 2/3: puts all estimates below 1"
+
+[comp-algo-range-lo]
+value = 3
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "low end of the quoted range for the yearly fall in compute needed per capability (multiplier)"
+source = "barnett2026closingwindow"
+date = "2026"
+note = "Sec. 3.2.2, a quoted range with no calculation of when a cap fails"
+
+[comp-algo-range-hi]
+value = 60
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "high end of the quoted range for the yearly fall in compute needed per capability (multiplier)"
+source = "barnett2026closingwindow"
+date = "2026"
+note = "Sec. 3.2.2"
+
+[comp-scher-algo]
+value = 3
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "yearly fall in compute per capability assumed in the MIRI draft agreement (multiplier)"
+source = "scher2025agreement"
+date = "2026-05"
+note = "Sec. 5, citing Ho et al. 2024; no schedule for moving thresholds"
+
+[comp-scher-strict]
+value = 1e24
+unit = "FLOP"
+basis = "design"
+fmt = ".0e"
+label = "training compute above which the MIRI draft agreement prohibits training"
+source = "scher2025agreement"
+date = "2026-05"
+note = "Sec. 4, Strict Threshold"
+
+[comp-scher-monitored]
+value = 1e22
+unit = "FLOP"
+basis = "design"
+fmt = ".0e"
+label = "training compute above which the MIRI draft agreement monitors training"
+source = "scher2025agreement"
+date = "2026-05"
+note = "Sec. 4, Monitored Threshold"
+
+[comp-eu-threshold]
+value = 1e25
+unit = "FLOP"
+basis = "spec"
+fmt = ".0e"
+label = "cumulative training compute above which the EU AI Act presumes systemic risk"
+source = "eu-ai-act-2024"
+date = "2024"
+note = "Art. 51(2); amendable by delegated act"
+
+[comp-hwp-eff]
+value = 0.57
+unit = ""
+basis = "assumption"
+fmt = "%"
+label = "yearly training-efficiency gain in the hardwired-pause working paper's scenario"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.5.2"
+
+[comp-hwp-before]
+value = 0.20
+unit = ""
+basis = "modelled"
+fmt = "%"
+label = "US overt breakout capacity as a share of the breakout fleet threshold, before efficiency gains"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.5.2"
+
+[comp-hwp-after]
+value = 0.53
+unit = ""
+basis = "modelled"
+fmt = "%"
+label = "US overt breakout capacity as a share of the breakout fleet threshold after 26 months of efficiency gains"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.5.2"
+
+[comp-hwp-months]
+value = 26
+unit = "months"
+basis = "modelled"
+fmt = ",.0f"
+label = "months of efficiency gains in the hardwired-pause scenario"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.5.2: before inference-only chips ship at scale"
+
+[comp-hwp-horizon]
+value = 2
+unit = "years"
+basis = "assumption"
+fmt = ",.0f"
+label = "breakout time horizon adopted in the hardwired-pause working paper"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.2.3, chosen by judgement"
+
+[comp-narrowpath-breakout]
+value = 3.2
+unit = "years"
+basis = "design"
+fmt = ".1f"
+label = "time a licensed cluster would need to breach A Narrow Path's upper compute limit"
+source = "miotti2025narrowpath"
+date = "2025-04"
+note = "Annex 2; counts one cluster's speed at fixed algorithms"
+
+[comp-consumer-lag-lo]
+value = 6
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "lag of open models that fit one consumer GPU behind the frontier, low end"
+source = "somala2025consumergpu"
+date = "2025-08"
+note = "average lag 6 to 12 months; real-world lag may be longer"
+
+[comp-consumer-lag-hi]
+value = 12
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "lag of open models that fit one consumer GPU behind the frontier, high end"
+source = "somala2025consumergpu"
+date = "2025-08"
+
+[comp-open-closed-lag]
+value = 4
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "average lag of the best open-weight models behind closed ones on the Epoch Capabilities Index since January 2026"
+source = "edwards2026openclosed"
+date = "2026-05"
+
+# ---------------------------------------------------------------------------------------------
+# A4: data
+
+[comp-flop-per-param-token]
+value = 6
+unit = "FLOP per parameter per token"
+basis = "modelled"
+fmt = ",.0f"
+label = "training FLOP per parameter per token in the standard approximation C = 6ND"
+source = "kaplan2020scaling"
+date = "2020"
+note = "forward and backward pass, dense model"
+
+[comp-data-stock]
+value = 4e14
+unit = "tokens"
+basis = "measured"
+fmt = ".0e"
+label = "effective stock of public human-generated text"
+source = "villalobos2022data"
+date = "2024"
+note = "Fig. 1, Sec. 2.5"
+
+[comp-data-wall-flop]
+value = 5e28
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "compute-optimal training compute at which the public text stock is fully used"
+source = "villalobos2022data"
+date = "2024"
+note = "Sec. 2.5, Fig. 5"
+
+[comp-data-wall-flop-overtrained]
+value = 6e27
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "training compute at full use of the text stock if models are 5x overtrained"
+source = "villalobos2022data"
+date = "2024"
+note = "Sec. 2.5, Fig. 6; about a year earlier"
+
+[comp-data-year]
+value = 2028
+unit = ""
+basis = "modelled"
+fmt = ".0f"
+label = "median year datasets reach the full public text stock"
+source = "villalobos2022data"
+date = "2024"
+note = "range 2026 to 2032"
+
+[comp-data-year-lo]
+value = 2026
+unit = ""
+basis = "modelled"
+fmt = ".0f"
+label = "early end of the year range for full use of the public text stock"
+source = "villalobos2022data"
+date = "2024"
+
+[comp-data-year-hi]
+value = 2032
+unit = ""
+basis = "modelled"
+fmt = ".0f"
+label = "late end of the year range for full use of the public text stock"
+source = "villalobos2022data"
+date = "2024"
+
+[comp-data-epochs-free]
+value = 4
+unit = "epochs"
+basis = "measured"
+fmt = ",.0f"
+label = "epochs of repeated data with negligible change in loss against unique data"
+source = "muennighoff2023dataconstrained"
+date = "2023"
+note = "abstract and Sec. 6: an 8.7B model at 4 epochs is 0.5% worse in validation loss"
+
+[comp-data-rd-star]
+value = 15.39
+unit = "repetitions"
+basis = "measured"
+fmt = ".1f"
+label = "fitted decay constant for the value of repeated data (about 16 epochs)"
+source = "muennighoff2023dataconstrained"
+date = "2023"
+note = "Appendix A, Eq. 17, Table 1"
+
+[comp-data-code-share]
+value = 0.5
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of training data replaceable by Python code without downstream loss"
+source = "muennighoff2023dataconstrained"
+date = "2023"
+note = "Sec. 7; beyond this natural-language tasks degrade"
+
+[comp-collapse-ppl-start]
+value = 20
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "perplexity of OPT-125m on wikitext2 before recursive training (about)"
+source = "shumailov2024collapse"
+date = "2024"
+
+[comp-collapse-ppl-end]
+value = 28
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "perplexity after recursive training with no original data kept (about)"
+source = "shumailov2024collapse"
+date = "2024"
+
+[comp-collapse-keep]
+value = 0.10
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of original data kept that limited degradation to minor"
+source = "shumailov2024collapse"
+date = "2024"
+
+# ---------------------------------------------------------------------------------------------
+# A5: search and planning
+
+[comp-alphazero-hours]
+value = 24
+unit = "hours"
+basis = "measured"
+fmt = ",.0f"
+label = "training time for AlphaZero to reach superhuman play"
+source = "silver2018alphazero"
+date = "2017-12"
+note = "preprint abstract"
+
+[comp-alphagozero-games]
+value = 100
+unit = "games"
+basis = "measured"
+fmt = ",.0f"
+label = "games AlphaGo Zero won without loss against the champion-defeating AlphaGo"
+source = "silver2017alphagozero"
+date = "2017"
+
+[comp-alphageometry-solved]
+value = 25
+unit = "problems"
+basis = "measured"
+fmt = ",.0f"
+label = "recent olympiad geometry problems AlphaGeometry solved"
+source = "trinh2024alphageometry"
+date = "2024"
+note = "of 30; the previous best solved 10"
+
+[comp-alphageometry-total]
+value = 30
+unit = "problems"
+basis = "measured"
+fmt = ",.0f"
+label = "olympiad geometry problems in AlphaGeometry's test set"
+source = "trinh2024alphageometry"
+date = "2024"
+
+[comp-alphageometry-prev]
+value = 10
+unit = "problems"
+basis = "measured"
+fmt = ",.0f"
+label = "olympiad geometry problems the previous best method solved"
+source = "trinh2024alphageometry"
+date = "2024"
+
+[comp-alphaproof-solved]
+value = 3
+unit = "problems"
+basis = "measured"
+fmt = ",.0f"
+label = "non-geometry IMO 2024 problems AlphaProof solved"
+source = "hubert2026alphaproof"
+date = "2026"
+note = "of five; with multi-day computation and test-time RL"
+
+[comp-alphaproof-total]
+value = 5
+unit = "problems"
+basis = "measured"
+fmt = ",.0f"
+label = "non-geometry problems at IMO 2024"
+source = "hubert2026alphaproof"
+date = "2026"
+
+[comp-katago-winrate]
+value = 0.97
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "win rate of an adversarial policy against KataGo at superhuman settings (lower bound)"
+source = "wang2023adversarialgo"
+date = "2023"
+note = "abstract: over 97%; transfers to other superhuman Go AIs"
+
+[comp-spiral-gain]
+value = 0.10
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "largest improvement across reasoning benchmarks from self-play on zero-sum games"
+source = "liu2025spiral"
+date = "2026-03"
+note = "abstract: up to 10% across 8 benchmarks on 4 models"
+
+[comp-huan-models]
+value = 20
+unit = "models"
+basis = "measured"
+fmt = ",.0f"
+label = "open reasoning-tuned models examined for transfer from mathematics (lower bound)"
+source = "huan2026mathtransfer"
+date = "2026"
+note = "over 20"
+
+[comp-pluribus-cost]
+value = 150
+unit = "USD"
+basis = "vendor"
+fmt = ",.0f"
+label = "cost to train the Pluribus poker blueprint (upper bound)"
+source = "meta2019pluribus"
+date = "2019-07"
+note = "eight days on a 64-core server; play on two CPUs"
+
+[comp-alphaevolve-fleet]
+value = 0.007
+unit = ""
+basis = "vendor"
+fmt = ".1%"
+label = "share of Google's fleet-wide compute recovered by an AlphaEvolve scheduling heuristic"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+note = "Sec. 3.3.1; the developer reporting on itself"
+
+[comp-alphaevolve-kernel]
+value = 0.23
+unit = ""
+basis = "vendor"
+fmt = "%"
+label = "average kernel speedup found by AlphaEvolve for Gemini training"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+note = "Sec. 3.3.2"
+
+[comp-alphaevolve-train]
+value = 0.01
+unit = ""
+basis = "vendor"
+fmt = "%"
+label = "reduction in Gemini's overall training time from AlphaEvolve's kernel speedup"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+note = "Sec. 3.3.2"
+
+# ---------------------------------------------------------------------------------------------
+# The combined leak (illustration; placeholders are labelled)
+
+[comp-example-headroom-oom]
+value = 3
+unit = "OOM"
+basis = "assumption"
+fmt = ",.0f"
+label = "headroom between a training cap and the compute that would reach the line, for illustration only"
+note = "placeholder: where the line sits in compute is not known; Ord's illustration spans the same 3 OOM (1e24 to 1e27 FLOP)"
+
+[comp-response-years]
+value = 1
+unit = "yr"
+basis = "assumption"
+fmt = ",.0f"
+label = "time the regime takes to notice a leak and respond (revise the cap or act), placeholder"
+note = "placeholder until Part II derives the response time from the verification channels"
+
+# ---------------------------------------------------------------------------------------------
+# Counts and settings quoted in the text
+
+[comp-o1-cons-k]
+value = 64
+unit = "samples"
+basis = "vendor"
+fmt = ",.0f"
+label = "samples in o1's consensus result on AIME 2024"
+source = "openai2024o1"
+date = "2024-09"
+
+[comp-o1-rerank-k]
+value = 1000
+unit = "samples"
+basis = "vendor"
+fmt = ",.0f"
+label = "samples re-ranked in o1's best AIME 2024 result"
+source = "openai2024o1"
+date = "2024-09"
+
+[comp-whitfill-corr]
+value = 0.5
+unit = ""
+basis = "assumption"
+fmt = ".1f"
+label = "size of the correlation between compute and algorithmic quality in Whitfill's simulation"
+source = "whitfill2025selection"
+date = "2025"
+note = "Sec. 2: run at +0.5 and -0.5"
+
+[comp-barnett-cap-gpus]
+value = 8
+unit = "H100s"
+basis = "assumption"
+fmt = ",.0f"
+label = "accelerators in the stricter of Barnett's two counterfactual caps"
+source = "barnett2025innovation"
+date = "2025"
+note = "abstract: a cap at GPT-2's training compute or at 8 H100s"
+
+[comp-ww-firms]
+value = 4
+unit = "firms"
+basis = "measured"
+fmt = ",.0f"
+label = "firm clusters in the compute-labour substitution panel"
+source = "whitfill2025bottlenecks"
+date = "2025"
+note = "OpenAI, DeepMind, Anthropic and DeepSeek, 2014 to 2024"
+
+[comp-speedrun-first-months]
+value = 8
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "length of the speedrun's opening period of fast gains"
+source = "epoch2026speedrundata"
+date = "2026-10"
+note = "as computed in survey note 03 from the CSV"
+
+[comp-speedrun-ngram-params]
+value = 65e9
+unit = "parameters"
+basis = "measured"
+fmt = "sig2"
+label = "parameters in the speedrun's hashed n-gram embedding table"
+source = "moddednanogpt"
+date = "2026-08"
+note = "README: 84.6M rows, 65B parameters"

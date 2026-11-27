@@ -1,0 +1,1283 @@
+# Inputs for Part I, 3: the dynamical perspective (research/013-dynamical.md).
+# Derived numbers are in model/parts/013_dynamical.py. Every id starts with dyn-.
+# basis: measured | vendor | spec | design | assumption | modelled (see model/ledger.py).
+# "modelled" marks a parameter or output of someone else's published model or judgement.
+
+# ---------------------------------------------------------------------------------------------
+# Returns to research: the baseline across fields (Y2)
+
+[dyn-bloom-beta-aggregate]
+value = 3.1
+basis = "measured"
+fmt = ".1f"
+label = "dynamic diminishing returns beta, aggregate US economy, 1930 to 2015"
+source = "bloom2020ideas"
+date = "2015"
+note = "Table 7, p. 1134; with lambda = 1, r = 1/beta"
+
+[dyn-bloom-beta-moore]
+value = 0.2
+basis = "measured"
+fmt = ".1f"
+label = "dynamic diminishing returns beta, Moore's Law research, 1971 to 2014"
+source = "bloom2020ideas"
+date = "2014"
+note = "Table 7; p. 1135 gives 7/35, the smallest beta in the paper"
+
+[dyn-bloom-rp-decline]
+value = 0.053
+basis = "measured"
+fmt = ".1%"
+label = "average annual decline of research productivity across Bloom et al.'s cases"
+source = "bloom2020ideas"
+date = "2020"
+note = "p. 1134 text: about 13 years for research productivity to halve"
+
+[dyn-bloom-moore-researchers]
+value = 18
+basis = "measured"
+fmt = ",.0f"
+label = "multiple of researchers needed to double chip density, 2014 against the early 1970s"
+source = "bloom2020ideas"
+date = "2014"
+note = "Introduction, p. 1105"
+
+[dyn-r-chess]
+value = 0.83
+basis = "measured"
+fmt = ".2f"
+label = "returns to research r, computer chess (Stockfish, tests per day as input)"
+source = "besiroglu2024returns"
+date = "2024"
+note = "standard error 0.15; 'just shy of the threshold of 1'"
+
+[dyn-r-chess-se]
+value = 0.15
+basis = "measured"
+fmt = ".2f"
+label = "standard error of r for computer chess"
+source = "besiroglu2024returns"
+date = "2024"
+
+[dyn-r-us-economy]
+value = 0.25
+basis = "measured"
+fmt = ".2f"
+label = "returns to research r, aggregate US economy (Epoch's replication of Bloom et al.)"
+source = "besiroglu2024returns"
+date = "2024"
+note = "the original Bloom et al. figure is about 0.32"
+
+[dyn-r-cv]
+value = 1.262
+basis = "measured"
+fmt = ".2f"
+label = "returns to software research r, computer vision, median"
+source = "ho2025experiments"
+date = "2025"
+note = "Appendix B, 90% credible interval 0.727 to 2.094"
+
+[dyn-r-cv-lo]
+value = 0.727
+basis = "measured"
+fmt = ".2f"
+label = "r, computer vision, 5th percentile"
+source = "ho2025experiments"
+date = "2025"
+
+[dyn-r-cv-hi]
+value = 2.094
+basis = "measured"
+fmt = ".2f"
+label = "r, computer vision, 95th percentile"
+source = "ho2025experiments"
+date = "2025"
+
+[dyn-r-rl]
+value = 1.201
+basis = "measured"
+fmt = ".2f"
+label = "returns to software research r, reinforcement learning (Atari), median"
+source = "ho2025experiments"
+date = "2025"
+note = "Appendix B, 90% credible interval 0.380 to 2.708"
+
+[dyn-r-rl-lo]
+value = 0.380
+basis = "measured"
+fmt = ".2f"
+label = "r, reinforcement learning, 5th percentile"
+source = "ho2025experiments"
+date = "2025"
+
+[dyn-r-rl-hi]
+value = 2.708
+basis = "measured"
+fmt = ".2f"
+label = "r, reinforcement learning, 95th percentile"
+source = "ho2025experiments"
+date = "2025"
+
+[dyn-r-lm]
+value = 1.892
+basis = "measured"
+fmt = ".2f"
+label = "returns to software research r, language models, median"
+source = "ho2025experiments"
+date = "2025"
+note = "Appendix B, 90% credible interval 1.069 to 3.212, the only interval wholly above 1"
+
+[dyn-r-lm-lo]
+value = 1.069
+basis = "measured"
+fmt = ".2f"
+label = "r, language models, 5th percentile"
+source = "ho2025experiments"
+date = "2025"
+
+[dyn-r-lm-hi]
+value = 3.212
+basis = "measured"
+fmt = ".2f"
+label = "r, language models, 95th percentile"
+source = "ho2025experiments"
+date = "2025"
+
+[dyn-research-compute-share]
+value = 0.6667
+basis = "modelled"
+fmt = ".2f"
+label = "compute's share epsilon_K of research input, in Ho and Whitfill's compute-bottleneck correction"
+source = "ho2025experiments"
+date = "2025"
+note = "Appendix D: under Cobb-Douglas with epsilon_K about 2/3, every r should be cut by a factor of three; the share is their assumption"
+
+[dyn-r-gpu]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "returns to hardware research r, GPUs 2006 to 2022 (about)"
+source = "eth2025sie"
+date = "2022"
+note = "hardware section, '~5'"
+
+[dyn-r-hardware-hist]
+value = 7
+basis = "measured"
+fmt = ",.0f"
+label = "returns to hardware research r, historical (about)"
+source = "eth2025sie"
+date = "2025"
+note = "hardware section, '~7'"
+
+[dyn-eth-r-consthw-lo]
+value = 0.5
+basis = "modelled"
+fmt = ".1f"
+label = "Eth and Davidson's best guess for software r with hardware held constant, low end"
+source = "eth2025sie"
+date = "2025"
+note = "authors' judgement, '~0.5-2'"
+
+[dyn-eth-r-consthw-hi]
+value = 2
+basis = "modelled"
+fmt = ",.0f"
+label = "Eth and Davidson's best guess for software r with hardware held constant, high end"
+source = "eth2025sie"
+date = "2025"
+
+# ---------------------------------------------------------------------------------------------
+# Published takeoff models (parameters and outputs of other people's models)
+
+[dyn-sie-r]
+value = 1.2
+basis = "modelled"
+fmt = ".1f"
+label = "returns to software R&D r, median parameter of the Davidson and Houlden model"
+source = "davidson2025sie"
+date = "2025"
+note = "range 0.4 to 3.6; compute held fixed after full automation of AI research"
+
+[dyn-sie-r-lo]
+value = 0.4
+basis = "modelled"
+fmt = ".1f"
+label = "r, low end of the Davidson and Houlden range"
+source = "davidson2025sie"
+date = "2025"
+
+[dyn-sie-r-hi]
+value = 3.6
+basis = "modelled"
+fmt = ".1f"
+label = "r, high end of the Davidson and Houlden range"
+source = "davidson2025sie"
+date = "2025"
+
+[dyn-sie-distance-oom]
+value = 11
+basis = "modelled"
+fmt = ",.0f"
+label = "distance to effective limits of software, orders of magnitude, median parameter"
+source = "davidson2025sie"
+date = "2025"
+note = "range 6 to 16"
+
+[dyn-sie-lambda]
+value = 0.6
+basis = "modelled"
+fmt = ".1f"
+label = "diminishing returns to parallel research labour lambda, median parameter"
+source = "davidson2025sie"
+date = "2025"
+
+[dyn-sie-p-3yr]
+value = 0.57
+basis = "modelled"
+fmt = "%"
+label = "model probability that a software intelligence explosion compresses 3 or more years of progress into under 1 year"
+source = "davidson2025sie"
+date = "2025"
+note = "results table (about 60% in the text)"
+
+[dyn-sie-p-10yr]
+value = 0.18
+basis = "modelled"
+fmt = "%"
+label = "model probability that it compresses 10 or more years into under 1 year"
+source = "davidson2025sie"
+date = "2025"
+note = "results table (about 20% in the text)"
+
+[dyn-ie-lag-model-months]
+value = 3
+basis = "modelled"
+fmt = ",.0f"
+label = "time lag for a new frontier model, months (about)"
+source = "davidson2025three"
+date = "2025"
+note = "against many months for new chip technology and years for fabs"
+
+[dyn-ie-software-oom]
+value = 12
+basis = "modelled"
+fmt = ",.0f"
+label = "room to grow for software, orders of magnitude (about)"
+source = "davidson2025three"
+date = "2025"
+
+[dyn-ie-chiptech-oom]
+value = 2
+basis = "modelled"
+fmt = ",.0f"
+label = "room to grow for chip technology in the current paradigm, orders of magnitude (about)"
+source = "davidson2025three"
+date = "2025"
+
+[dyn-ie-chiptech-landauer-oom]
+value = 6
+basis = "modelled"
+fmt = ",.0f"
+label = "room to grow for chip technology up to Landauer's limit, orders of magnitude (about)"
+source = "davidson2025three"
+date = "2025"
+
+[dyn-ie-chipprod-oom]
+value = 5
+basis = "modelled"
+fmt = ",.0f"
+label = "room to grow for chip production on Earth's energy, orders of magnitude (about)"
+source = "davidson2025three"
+date = "2025"
+
+[dyn-ie-p-chiptech]
+value = 0.65
+basis = "modelled"
+fmt = "%"
+label = "authors' chance that the chip technology loop alone sustains acceleration"
+source = "davidson2025three"
+date = "2025"
+
+[dyn-ie-p-chipprod]
+value = 0.80
+basis = "modelled"
+fmt = "%"
+label = "authors' chance that the chip production loop alone sustains acceleration"
+source = "davidson2025three"
+date = "2025"
+
+[dyn-ie-max-speed]
+value = 100
+basis = "modelled"
+fmt = ",.0f"
+label = "maximum speed of progress against recent rates, multiple (about)"
+source = "davidson2025three"
+date = "2025"
+note = "with effective compute doubling roughly daily"
+
+[dyn-cmos-headroom]
+value = 207
+basis = "modelled"
+fmt = ",.0f"
+label = "energy-efficiency headroom of irreversible CMOS over an H100, multiple (50% chance)"
+source = "ho2023"
+date = "2023"
+note = "Implications section: 2.9e14 FP16/J ceiling against about 1.4e12 FP16/J for an H100"
+
+[dyn-gpu-eff-growth]
+value = 1.40
+basis = "measured"
+fmt = ".2f"
+label = "annual growth of GPU energy efficiency, multiple"
+source = "you2025"
+date = "2025"
+note = "'has improved by 40% per year'"
+
+[dyn-nber-singularity-years]
+value = 6
+basis = "modelled"
+fmt = ",.0f"
+label = "years to a singularity with software research fully automated and 5% automation elsewhere"
+source = "davidson2026feedback"
+date = "2026"
+note = "abstract, 'within six years'"
+
+[dyn-nber-other-automation]
+value = 0.05
+basis = "modelled"
+fmt = "%"
+label = "automation outside software research in Davidson et al.'s headline scenario"
+source = "davidson2026feedback"
+date = "2026"
+
+# ---------------------------------------------------------------------------------------------
+# The loop-gain calibration (Cunningham et al.) and recursive criticality (Burtsev)
+
+[dyn-cunningham-return]
+value = 1.0
+basis = "modelled"
+fmt = ".1f"
+label = "return to R&D in Cunningham et al.'s calibration (ln 3 / ln 3)"
+source = "cunningham2026rsi"
+date = "2026"
+note = "Section 4.1, algorithmic efficiency taken to triple a year"
+
+[dyn-cunningham-eps-ca]
+value = 6.5
+basis = "measured"
+fmt = ".1f"
+label = "elasticity epsilon_C,A of capability (exp ECI) to compute"
+source = "cunningham2026rsi"
+date = "2026"
+note = "Section 4.1, from a regression of ECI on log compute"
+
+[dyn-cunningham-eps-rc-illustration]
+value = 0.09
+basis = "modelled"
+fmt = "%"
+label = "increase in research productivity per ECI point implied by a reported 4x uplift, an upper-end illustration"
+source = "cunningham2026rsi"
+date = "2026"
+note = "Section 4.1: the 4x uplift is 'very likely to be an overestimate'; this is not the authors' estimate (spot-check, research/notes/11-spot-check.md)"
+
+[dyn-algo-efficiency-growth]
+value = 3
+basis = "modelled"
+fmt = ",.0f"
+label = "annual multiple of algorithmic efficiency assumed in Cunningham et al.'s calibration"
+source = "cunningham2026rsi"
+date = "2026"
+note = "Section 4.1, citing Ho et al. 2024"
+
+[dyn-ai2027-sc-to-sar]
+value = 0.3
+unit = "years"
+basis = "modelled"
+fmt = ".1f"
+label = "simulated calendar time from a superhuman coder to a superhuman AI researcher, with AI speed-ups"
+source = "kokotajlo2025takeoff"
+date = "2025-12"
+note = "90th percentile about 0.95 years; assumes no increase in training compute; the authors say it 'relies substantially on intuitive judgment'"
+
+[dyn-cp1-k]
+value = 1.0006
+basis = "measured"
+fmt = ".4f"
+label = "neutron multiplication factor k of Fermi's first pile, all neutrons"
+source = "yudkowsky2013iem"
+date = "1942"
+note = "Section 1, PDF p. 6, as cited by Yudkowsky"
+
+[dyn-cp1-k-prompt]
+value = 0.9946
+basis = "measured"
+fmt = ".4f"
+label = "the same pile's k counting prompt neutrons only"
+source = "yudkowsky2013iem"
+date = "1942"
+note = "Section 1, PDF p. 6, as cited by Yudkowsky"
+
+[dyn-burtsev-delay]
+value = 0.5
+unit = "years"
+basis = "modelled"
+fmt = ".1f"
+label = "development cycle delay tau assumed by Burtsev"
+source = "burtsev2026criticality"
+date = "2026"
+note = "Section 3.2, fixed as an assumption"
+
+[dyn-burtsev-network-rho]
+value = 1.15
+basis = "modelled"
+fmt = ".2f"
+label = "network reproduction number rho(K) in Burtsev's scenario of individually subcritical blocs"
+source = "burtsev2026criticality"
+date = "2026"
+note = "Section 4 scenarios; illustrative, not estimated"
+
+# ---------------------------------------------------------------------------------------------
+# Lab triggers and the measured acceleration inside one lab
+
+[dyn-openai-critical-speedup]
+value = 5
+basis = "spec"
+fmt = ",.0f"
+label = "OpenAI's Critical self-improvement indicator: a generational improvement in 1/x of 2024's wall-clock time"
+source = "openai2025preparedness"
+date = "2025-04"
+note = "Table 1, sustained for several months; response: halt further development"
+
+[dyn-anthropic-rate-multiple]
+value = 2
+basis = "spec"
+fmt = ",.0f"
+label = "Anthropic's AI R&D threshold: multiple of the rate of aggregate capability progress, over 3 or more generations"
+source = "anthropic2026rsp"
+date = "2026-07"
+
+[dyn-metr-accel]
+value = 1.9
+basis = "measured"
+fmt = ".1f"
+label = "acceleration of Anthropic's internal capability index (AECI) since October 2025, ratio of growth rates"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+note = "95% CI 1.5 to 2.8; robustness range 1.1 to 2.9; most informative evidence redacted"
+
+[dyn-metr-accel-lo]
+value = 1.5
+basis = "measured"
+fmt = ".1f"
+label = "acceleration, 95% CI lower end"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[dyn-metr-accel-hi]
+value = 2.8
+basis = "measured"
+fmt = ".1f"
+label = "acceleration, 95% CI upper end"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[dyn-metr-aeci-before]
+value = 15
+basis = "measured"
+fmt = ",.0f"
+label = "AECI points a year, historical trend"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[dyn-metr-aeci-after]
+value = 29
+basis = "measured"
+fmt = ",.0f"
+label = "AECI points a year after the fitted breakpoint of 2025-10-07"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[dyn-metr-ai-attribution]
+value = 0.8
+basis = "modelled"
+fmt = "%"
+label = "share of the October 2026 acceleration METR attributes to AI, subjectively"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+note = "a subjective judgement, not a measurement"
+
+[dyn-metr-staff-uplift]
+value = 12
+basis = "vendor"
+fmt = ",.0f"
+label = "uplift Anthropic staff reported for themselves in polls, multiple"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+note = "METR treats it as 'very loose evidence'"
+
+[dyn-anthropic-ai-led]
+value = 0.26
+basis = "vendor"
+fmt = "%"
+label = "share of Anthropic's AI R&D work that Claude leads (automation level AL4)"
+source = "anthropic2026pace"
+date = "2026-08"
+
+[dyn-anthropic-ai-led-feb]
+value = 0.01
+basis = "vendor"
+fmt = "%"
+label = "the same share in February 2026, an upper bound ('under 1%')"
+source = "anthropic2026pace"
+date = "2026-02"
+
+[dyn-anthropic-collab-share]
+value = 0.90
+basis = "vendor"
+fmt = "%"
+label = "share of Anthropic's AI R&D work at or above 'AI collaborates', a lower bound"
+source = "anthropic2026pace"
+date = "2026-08"
+
+[dyn-anthropic-agents]
+value = 30000
+basis = "vendor"
+fmt = ",.0f"
+label = "agents doing research and engineering work at once on Anthropic's most-used internal platform"
+source = "anthropic2026pace"
+date = "2026-08"
+note = "one internal platform, not the whole company (spot-check minor item)"
+
+# ---------------------------------------------------------------------------------------------
+# Measured AI contributions to AI research
+
+[dyn-nanogpt-records]
+value = 77
+basis = "measured"
+fmt = ",.0f"
+label = "NanoGPT speedrun records, May 2024 to March 2026"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[dyn-nanogpt-ai-records]
+value = 4
+basis = "measured"
+fmt = ",.0f"
+label = "records crediting an AI agent (each co-credited with a human), late 2025 to early 2026"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+note = "all shallow to moderate, imported or adapted"
+
+[dyn-nanogpt-start-min]
+value = 45
+unit = "minutes"
+basis = "measured"
+fmt = ",.0f"
+label = "speedrun training time at the first record, 8xH100"
+source = "shetty2026metrnanogpt"
+date = "2024-05"
+
+[dyn-nanogpt-end-min]
+value = 1.43
+unit = "minutes"
+basis = "measured"
+fmt = ".2f"
+label = "speedrun training time in March 2026, 8xH100"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[dyn-nanogpt-shallow-moderate]
+value = 21
+basis = "measured"
+fmt = ",.0f"
+label = "multiple of the 31x speedup driven by shallow and moderate contributions"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[dyn-nanogpt-imported]
+value = 6.7
+basis = "measured"
+fmt = ".1f"
+label = "speedup multiple from imported ideas"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[dyn-nanogpt-adapted]
+value = 3.0
+basis = "measured"
+fmt = ".1f"
+label = "speedup multiple from adapted ideas"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[dyn-nanogpt-invented]
+value = 1.6
+basis = "measured"
+fmt = ".1f"
+label = "speedup multiple from invented ideas"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[dyn-speedrun-baseline-s]
+value = 2700
+unit = "s"
+basis = "measured"
+fmt = ",.0f"
+label = "speedrun record 1 (llm.c baseline), 8xH100"
+source = "moddednanogpt"
+date = "2024-05"
+
+[dyn-speedrun-record-s]
+value = 39.9
+unit = "s"
+basis = "measured"
+fmt = ".1f"
+label = "speedrun record 92, 8xH100"
+source = "epoch2026speedrundata"
+date = "2026-08"
+
+[dyn-speedrun-span-days]
+value = 824
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "days between record 1 (2024-05-28) and record 92 (2026-08-30)"
+source = "epoch2026speedrundata"
+date = "2026-08"
+
+[dyn-speedrun-first-window]
+value = 15
+basis = "measured"
+fmt = ",.0f"
+label = "speedup multiple in the record's first 8 months (about)"
+source = "epoch2026speedrundata"
+date = "2025-01"
+note = "survey's arithmetic on Epoch's CSV (research/notes/03-algorithms.md); E4 recomputes it"
+
+[dyn-speedrun-rate-2025]
+value = 1.6
+basis = "measured"
+fmt = ".1f"
+label = "speedup multiple across 2025 (2025-01-26 to 2026-01-01)"
+source = "epoch2026speedrundata"
+date = "2026-01"
+note = "survey's arithmetic on Epoch's CSV, rows 21 to 56; E4 recomputes it"
+
+[dyn-speedrun-rate-2026]
+value = 2.9
+basis = "measured"
+fmt = ".1f"
+label = "speedup multiple from January to August 2026 (about)"
+source = "epoch2026speedrundata"
+date = "2026-08"
+note = "survey's arithmetic on Epoch's CSV; E4 recomputes it"
+
+[dyn-speedrun-window-months]
+value = 8
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "length of the first and of the 2026 speedrun windows (about)"
+source = "epoch2026speedrundata"
+date = "2026-08"
+
+[dyn-human-cost-per-pct]
+value = 2500
+unit = "USD"
+basis = "modelled"
+fmt = ",.0f"
+label = "human labour cost per 1% speedup of the NanoGPT target, METR's working figure"
+source = "metr2026expenditure"
+date = "2026-07"
+note = "'very roughly'; results are highly sensitive to it"
+
+[dyn-agent-exp-horizon-hi]
+value = 3300
+unit = "USD"
+basis = "measured"
+fmt = ",.0f"
+label = "highest agent expenditure horizon after re-validation"
+source = "metr2026expenditure"
+date = "2026-07"
+note = "range 0 to 3,300 USD across agents"
+
+[dyn-rebench-agent-2h]
+value = 4
+basis = "measured"
+fmt = ",.0f"
+label = "best agents' score as a multiple of humans' at a 2-hour budget, RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+
+[dyn-rebench-human-32h]
+value = 2
+basis = "measured"
+fmt = ",.0f"
+label = "humans' score as a multiple of the top agent's at a 32-hour budget, RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+
+[dyn-alphaevolve-gemini-cut]
+value = 0.01
+basis = "vendor"
+fmt = "%"
+label = "reduction in Gemini's overall training time from AlphaEvolve's kernel work"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+note = "Section 3.3.2"
+
+[dyn-alphaevolve-kernel]
+value = 0.23
+basis = "vendor"
+fmt = "%"
+label = "average kernel speedup found by AlphaEvolve"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+
+[dyn-alphaevolve-fleet]
+value = 0.007
+basis = "vendor"
+fmt = ".1%"
+label = "share of Google's fleet-wide compute recovered by AlphaEvolve's scheduling heuristic"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+
+[dyn-rct-2025]
+value = 0.19
+basis = "measured"
+fmt = "%"
+label = "change in task completion time with AI, experienced open-source developers, early 2025"
+source = "becker2025rct"
+date = "2025-07"
+note = "CI +2% to +39%; positive means slower"
+
+[dyn-rct-2025-lo]
+value = 0.02
+basis = "measured"
+fmt = "%"
+label = "lower end of the 2025 RCT interval"
+source = "becker2025rct"
+date = "2025-07"
+
+[dyn-rct-2025-hi]
+value = 0.39
+basis = "measured"
+fmt = "%"
+label = "upper end of the 2025 RCT interval"
+source = "becker2025rct"
+date = "2025-07"
+
+[dyn-rct-2026-returning]
+value = -0.18
+basis = "measured"
+fmt = "%"
+label = "change in task time with AI, returning developers, 2026 follow-up"
+source = "metr2026uplift"
+date = "2026-02"
+note = "CI -38% to +9%; METR calls the data 'only very weak evidence' because of selection"
+
+# ---------------------------------------------------------------------------------------------
+# Compute against algorithms
+
+[dyn-sigma-compute-spec]
+value = 2.583
+basis = "measured"
+fmt = ".2f"
+label = "elasticity of substitution between research compute and labour, CES in compute"
+source = "whitfill2025bottlenecks"
+date = "2025"
+note = "Table 1, clustered SE 0.341, four firm clusters; above 1 means substitutes"
+
+[dyn-sigma-frontier-spec]
+value = -0.103
+basis = "measured"
+fmt = ".2f"
+label = "elasticity of substitution, CES in frontier experiments"
+source = "whitfill2025bottlenecks"
+date = "2025"
+note = "Table 1, SE 0.176; below 1 means complements and bounded effective research"
+
+[dyn-algo-halving-months]
+value = 8.4
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "halving time of compute for a fixed language-model performance, 2012 to 2023"
+source = "ho2024algorithmic"
+date = "2023"
+note = "Section 3.1, 95% CI 4.5 to 14.3 months"
+
+[dyn-algo-compute-share-lo]
+value = 0.60
+basis = "measured"
+fmt = "%"
+label = "share of language-model gains from compute scaling, low end"
+source = "ho2024algorithmic"
+date = "2023"
+
+[dyn-algo-compute-share-hi]
+value = 0.95
+basis = "measured"
+fmt = "%"
+label = "share of language-model gains from compute scaling, high end"
+source = "ho2024algorithmic"
+date = "2023"
+
+[dyn-algo-gain-claimed]
+value = 22000
+basis = "measured"
+fmt = ",.0f"
+label = "claimed language-model efficiency gain 2012 to 2023, multiple"
+source = "gundlach2025origin"
+date = "2023"
+note = "as cited by Gundlach et al. from Ho et al."
+
+[dyn-algo-gain-small-max]
+value = 100
+basis = "measured"
+fmt = ",.0f"
+label = "efficiency gain accounted for at small compute, upper bound, multiple"
+source = "gundlach2025origin"
+date = "2023"
+note = "only the first factor of under 10 comes from the authors' ablations (spot-check minor item)"
+
+[dyn-frontier-explained-lo]
+value = 0.80
+basis = "measured"
+fmt = "%"
+label = "share of frontier performance differences explained by training compute, low end"
+source = "mertens2026secretsauce"
+date = "2025"
+
+[dyn-frontier-explained-hi]
+value = 0.90
+basis = "measured"
+fmt = "%"
+label = "share of frontier performance differences explained by training compute, high end"
+source = "mertens2026secretsauce"
+date = "2025"
+
+[dyn-innovations-under-cap]
+value = 0.5
+basis = "measured"
+fmt = "%"
+label = "share of 36 catalogued pretraining innovations feasible under a GPT-2-compute or 8xH100 cap"
+source = "barnett2025innovation"
+date = "2025"
+
+[dyn-open-closed-lag]
+value = 4
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "average lag of the best open-weight models behind closed ones on the ECI, since January 2026"
+source = "edwards2026openclosed"
+date = "2026-05"
+
+[dyn-horizon-compute-delay]
+value = 7
+unit = "years"
+basis = "modelled"
+fmt = ",.0f"
+label = "delay of 1-month 80% time horizons against trend under a compute slowdown"
+source = "whitfill2025horizon"
+date = "2025-11"
+note = "the model assumes horizon growth proportional to compute growth, which rules out a software-only singularity by assumption"
+
+# ---------------------------------------------------------------------------------------------
+# Task time horizons: the clock on unattended work
+
+[dyn-horizon-doubling]
+value = 128.744
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "doubling time of the 50% time horizon, METR-Horizon-v1.1, 2023 onward"
+source = "metr2026thdata"
+date = "2026-09"
+note = "benchmark_results_1_1.yaml; 95% CI 104.428 to 158.012; excludes points above 16 hours"
+
+[dyn-horizon-doubling-lo]
+value = 104.428
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "doubling time, 95% CI lower end"
+source = "metr2026thdata"
+date = "2026-09"
+
+[dyn-horizon-doubling-hi]
+value = 158.012
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "doubling time, 95% CI upper end"
+source = "metr2026thdata"
+date = "2026-09"
+
+[dyn-horizon-doubling-2019]
+value = 207
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "doubling time of the 50% time horizon, 2019 to 2025"
+source = "kwa2025horizon"
+date = "2025"
+note = "Section 3.2, 95% CI 166 to 240 days"
+
+[dyn-horizon-p50]
+value = 1044.8
+unit = "minutes"
+basis = "measured"
+fmt = ",.0f"
+label = "50% time horizon of the latest state-of-the-art entry (Claude Mythos Preview, early, released 2026-04-07)"
+source = "metr2026thdata"
+date = "2026-04"
+note = "95% CI 508.9 to 3,304.3 minutes"
+
+[dyn-horizon-p80]
+value = 185.9
+unit = "minutes"
+basis = "measured"
+fmt = ",.0f"
+label = "80% time horizon of the same entry"
+source = "metr2026thdata"
+date = "2026-04"
+note = "95% CI 97.3 to 398.5 minutes"
+
+[dyn-ord-t80-over-t50]
+value = 0.3333
+basis = "modelled"
+fmt = ".2f"
+label = "ratio of the 80% to the 50% horizon under Ord's constant-hazard model"
+source = "ord2025halflife"
+date = "2025"
+
+[dyn-horizon-long-baselined]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "tasks over 8 hours with measured human baseline times"
+source = "metr2026th11"
+date = "2026-01"
+
+[dyn-horizon-long-tasks]
+value = 31
+basis = "measured"
+fmt = ",.0f"
+label = "tasks over 8 hours in the TH1.1 suite"
+source = "metr2026th11"
+date = "2026-01"
+
+# ---------------------------------------------------------------------------------------------
+# Self-replication and resource acquisition
+
+[dyn-aisi-rep-2023]
+value = 0.05
+basis = "measured"
+fmt = "%"
+label = "best early-2023 model's success rate across 11 of 20 RepliBench evaluations, upper bound"
+source = "aisi2025trends"
+date = "2023"
+note = "Section 5; simplified versions of the tasks"
+
+[dyn-aisi-rep-2025]
+value = 0.60
+basis = "measured"
+fmt = "%"
+label = "two frontier models' success rate on the same evaluations by summer 2025, lower bound"
+source = "aisi2025trends"
+date = "2025"
+note = "Section 5; models 'currently unlikely to succeed in real-world conditions'"
+
+[dyn-replibench-families]
+value = 20
+basis = "spec"
+fmt = ",.0f"
+label = "RepliBench task families"
+source = "black2025replibench"
+date = "2025-04"
+note = "86 tasks in 4 domains: resources, weight exfiltration, replication onto compute, persistence"
+
+[dyn-replibench-best-families]
+value = 15
+basis = "measured"
+fmt = ",.0f"
+label = "families on which Claude 3.7 Sonnet scores above 50% pass@10"
+source = "black2025replibench"
+date = "2025-04"
+
+[dyn-replibench-hard-families]
+value = 9
+basis = "measured"
+fmt = ",.0f"
+label = "families above 50% pass@10 on the hardest variants"
+source = "black2025replibench"
+date = "2025-04"
+
+[dyn-fudan-llama]
+value = 0.50
+basis = "measured"
+fmt = "%"
+label = "trials in which Llama3.1-70B-Instruct created a live separate copy of itself"
+source = "pan2024selfrep"
+date = "2024-12"
+note = "abstract only; open weights held locally"
+
+[dyn-fudan-qwen]
+value = 0.90
+basis = "measured"
+fmt = "%"
+label = "trials in which Qwen2.5-72B-Instruct created a live separate copy of itself"
+source = "pan2024selfrep"
+date = "2024-12"
+note = "abstract only; open weights held locally"
+
+[dyn-fudan-capable]
+value = 11
+basis = "measured"
+fmt = ",.0f"
+label = "AI systems found capable of self-replication"
+source = "pan2025selfrep"
+date = "2025-03"
+note = "abstract only"
+
+[dyn-fudan-evaluated]
+value = 32
+basis = "measured"
+fmt = ",.0f"
+label = "AI systems evaluated for self-replication"
+source = "pan2025selfrep"
+date = "2025-03"
+
+[dyn-ara-scaleup]
+value = 100
+basis = "modelled"
+fmt = ",.0f"
+label = "effective compute scale-up after which evaluations could not rule out autonomous replication without intermediate checks, multiple (about)"
+source = "kinniment2023ara"
+date = "2023-12"
+
+# ---------------------------------------------------------------------------------------------
+# Continual learning
+
+[dyn-seal-squad]
+value = 0.470
+basis = "measured"
+fmt = ".1%"
+label = "SEAL knowledge incorporation accuracy, Qwen2.5-7B, with self-edits"
+source = "zweiger2025seal"
+date = "2025-09"
+note = "Section 4.2"
+
+[dyn-seal-squad-base]
+value = 0.335
+basis = "measured"
+fmt = ".1%"
+label = "the same, passage only"
+source = "zweiger2025seal"
+date = "2025-09"
+
+[dyn-seal-squad-gpt41]
+value = 0.463
+basis = "measured"
+fmt = ".1%"
+label = "the same, trained on GPT-4.1 synthetic data"
+source = "zweiger2025seal"
+date = "2025-09"
+
+[dyn-seal-edit-s-lo]
+value = 30
+unit = "s"
+basis = "measured"
+fmt = ",.0f"
+label = "time to evaluate one self-edit, low end"
+source = "zweiger2025seal"
+date = "2025-09"
+
+[dyn-seal-edit-s-hi]
+value = 45
+unit = "s"
+basis = "measured"
+fmt = ",.0f"
+label = "time to evaluate one self-edit, high end"
+source = "zweiger2025seal"
+date = "2025-09"
+
+[dyn-ttt-arc]
+value = 0.530
+basis = "measured"
+fmt = ".1%"
+label = "ARC accuracy of an 8B model with test-time training"
+source = "akyurek2024ttt"
+date = "2024-11"
+
+# ---------------------------------------------------------------------------------------------
+# The economic loop: capital into compute
+
+[dyn-capex-2026-feb]
+value = 650
+unit = "billion USD"
+basis = "vendor"
+fmt = ",.0f"
+label = "2026 capital spending plans of the four largest technology companies, February 2026"
+source = "day2026capex"
+date = "2026-02"
+
+[dyn-capex-growth]
+value = 0.60
+basis = "vendor"
+fmt = "%"
+label = "growth of that spending over 2025 (estimated)"
+source = "day2026capex"
+date = "2026-02"
+
+[dyn-capex-2026-may]
+value = 700
+unit = "billion USD"
+basis = "vendor"
+fmt = ",.0f"
+label = "2026 AI spending plans of the big hyperscalers, May 2026, lower bound"
+source = "ehsan2026capex"
+date = "2026-05"
+
+[dyn-compute-sold-2024]
+value = 5.10
+unit = "million H100e"
+basis = "measured"
+fmt = ".1f"
+label = "AI compute sold in 2024"
+source = "epoch2026chipsales"
+date = "2024"
+note = "the survey's sum of Epoch's per-quarter median estimates, not a figure Epoch states"
+
+[dyn-compute-sold-2025]
+value = 13.61
+unit = "million H100e"
+basis = "measured"
+fmt = ".1f"
+label = "AI compute sold in 2025"
+source = "epoch2026chipsales"
+date = "2025"
+note = "the survey's sum of Epoch's per-quarter median estimates, not a figure Epoch states"
+
+[dyn-frontier-compute-growth]
+value = 5.3
+basis = "measured"
+fmt = ".1f"
+label = "annual multiple of frontier model training compute, 2010 to May 2024"
+source = "sevilla2024computegrowth"
+date = "2024-05"
+note = "90% CI 4.9 to 5.7"
+
+[dyn-frontier-cost-growth]
+value = 2.4
+basis = "measured"
+fmt = ".1f"
+label = "annual multiple of the amortised cost of the most compute-intensive training runs since 2016"
+source = "cottier2024rising"
+date = "2024"
+note = "90% CI 2.0 to 2.9"
+
+[dyn-chip-price-perf-growth]
+value = 1.49
+basis = "measured"
+fmt = ".2f"
+label = "annual multiple of AI chip performance per dollar since 2023"
+source = "epoch2026trends"
+date = "2026-11"
+note = "90% CI 1.36 to 1.66"
+
+[dyn-hyperscaler-compute-share]
+value = 0.70
+basis = "measured"
+fmt = "%"
+label = "share of global AI compute owned by the five US hyperscalers, lower bound"
+source = "you2026chipowners"
+date = "2026-04"
+
+[dyn-dc-1gw-months-fastest]
+value = 11.6
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "fastest recent build from construction start to 1 GW of facility power"
+source = "somala2025buildtimes"
+date = "2025-11"
+note = "recent sites range from 1 to 3.6 years"
+
+[dyn-fab-build-days]
+value = 682
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "average time from construction start to production for greenfield fabs, 1990 to 2020"
+source = "verwey2021permits"
+date = "2021"
+note = "PDF p. 6, excluding permitting"
+
+[dyn-smuggled-h100e]
+value = 0.66
+unit = "million H100e"
+basis = "measured"
+fmt = ".2f"
+label = "cumulative compute smuggled into China through 2025, median"
+source = "juniewicz2026smuggling"
+date = "2025"
+note = "90% CI 0.29 to 1.6 million H100e, about a third of China's AI compute"
+
+# ---------------------------------------------------------------------------------------------
+# Added while writing the chapter
+
+[dyn-bloom-rp-decline-moore]
+value = 0.068
+basis = "measured"
+fmt = ".1%"
+label = "annual decline of research productivity in Moore's Law research, 1971 to 2014"
+source = "bloom2020ideas"
+date = "2014"
+note = "Table 7, -6.8% a year, half-life about 10 years"
+
+[dyn-selection-bias-factor]
+value = 9
+basis = "modelled"
+fmt = ",.0f"
+label = "possible overstatement of observational algorithmic progress estimates from selection bias, first pass (either sign possible)"
+source = "whitfill2025selection"
+date = "2025"
+note = "Section 1.3; the author lists many other possible explanations"
+
+[dyn-dc-1gw-years-lo]
+value = 1
+basis = "measured"
+fmt = ",.0f"
+label = "time from construction start to 1 GW of facility power at recent sites, low end"
+source = "somala2025buildtimes"
+date = "2025-11"
+
+[dyn-dc-1gw-years-hi]
+value = 3.6
+unit = "years"
+basis = "measured"
+fmt = ".1f"
+label = "the same, high end"
+source = "somala2025buildtimes"
+date = "2025-11"
+
+[dyn-aisi-rep-evals]
+value = 11
+basis = "measured"
+fmt = ",.0f"
+label = "RepliBench evaluations in the AISI trend comparison"
+source = "aisi2025trends"
+date = "2025"
+
+[dyn-cunningham-uplift-reported]
+value = 4
+basis = "modelled"
+fmt = ",.0f"
+label = "reported research uplift that Cunningham et al. take at face value for their illustration, multiple"
+source = "cunningham2026rsi"
+date = "2026"
+note = "Section 4.1: 'very likely to be an overestimate'"

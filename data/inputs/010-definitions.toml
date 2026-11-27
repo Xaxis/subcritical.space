@@ -1,0 +1,1234 @@
+# Inputs for Part I's opening chapter, research/01-anatomy.md: what superintelligence is, and the
+# six candidate definitions D1 to D6 restated after the survey. Every id starts with "def-".
+# basis: measured | vendor | spec | design | assumption | modelled (see model/ledger.py).
+# Convention here: a value fixed by a law, a framework or a published proposal is "spec"; a
+# parameter another author chose by judgement is "assumption" with that author as source; the
+# output of someone else's model is "modelled"; a company's claim about itself is "vendor"; a
+# choice this project makes is "design".
+
+# ---------------------------------------------------------------------------------------------
+# Conventions
+
+[def-days-per-year]
+value = 365.25
+unit = "days"
+basis = "design"
+fmt = ",.2f"
+label = "days in a year (the Julian year), the convention used for unit conversions here"
+
+[def-seconds-per-day]
+value = 86400
+unit = "s"
+basis = "design"
+fmt = ",.0f"
+label = "seconds in a day, for unit conversions"
+
+# ---------------------------------------------------------------------------------------------
+# Why a protocol needs operational definitions
+
+[def-eu-presumption-flop]
+value = 1e25
+unit = "FLOP"
+basis = "spec"
+fmt = ".0e"
+label = "EU AI Act: cumulative training compute above which high-impact capabilities are presumed"
+source = "eu-ai-act-2024"
+date = "2024"
+note = "Art. 51(2); rebuttable under Art. 52(2); the Commission may amend it by delegated act (Art. 51(3))."
+
+
+[def-openai-critical-speedup]
+value = 5
+basis = "spec"
+fmt = ",.0f"
+label = "OpenAI Preparedness v2, AI self-improvement Critical: speed-up of a generational improvement against 2024"
+source = "openai2025preparedness"
+date = "2025-04"
+note = "Lagging indicator: a generational improvement in 1/5 of the 2024 wall-clock time, sustained for several months."
+
+[def-openai-critical-weeks]
+value = 4
+unit = "weeks"
+basis = "spec"
+fmt = ",.0f"
+label = "OpenAI Preparedness v2: the example duration of a generational improvement at the Critical level"
+source = "openai2025preparedness"
+date = "2025-04"
+note = "Same table: 'e.g., sped up to just 4 weeks'."
+
+[def-bd-groups]
+value = 10
+unit = "groups"
+basis = "measured"
+fmt = ",.0f"
+label = "groups per treatment in Barrett and Dannenberg's threshold experiment"
+source = "barrett2012climate"
+date = "2012"
+note = "10 players per group, 400 participants in all."
+
+[def-bd-known-avoided]
+value = 8
+unit = "groups"
+basis = "measured"
+fmt = ",.0f"
+label = "groups that avoided catastrophe when the threshold's location was known (Certainty treatment)"
+source = "barrett2012climate"
+date = "2012"
+note = "Results; 10 of 10 avoided it when only the impact was uncertain."
+
+[def-bd-uncertain-catastrophe]
+value = 9
+unit = "groups"
+basis = "measured"
+fmt = ",.0f"
+label = "groups in which catastrophe was certain when the threshold's location was uncertain"
+source = "barrett2012climate"
+date = "2012"
+note = "Results, Threshold uncertainty treatment (threshold drawn from U[100, 200] chips)."
+
+# ---------------------------------------------------------------------------------------------
+# D1, the endpoint
+
+[def-morris-exceptional-pct]
+value = 99
+basis = "spec"
+fmt = ",.0f"
+label = "Levels of AGI, Level 4 (Exceptional): percentile of skilled adults the system must reach"
+source = "morris2023levels"
+date = "2024"
+note = "Table 1; Level 5 (Superhuman) outperforms 100% of humans."
+
+[def-hendrycks-agi-gpt4]
+value = 0.27
+basis = "measured"
+fmt = "%"
+label = "GPT-4's score on Hendrycks et al.'s AGI definition (ten cognitive domains)"
+source = "hendrycks2025agidef"
+date = "2025"
+note = "Abstract."
+
+[def-hendrycks-agi-gpt5]
+value = 0.57
+basis = "measured"
+fmt = "%"
+label = "GPT-5's score on Hendrycks et al.'s AGI definition"
+source = "hendrycks2025agidef"
+date = "2025"
+note = "Abstract; the profile is 'highly jagged', weakest in long-term memory storage."
+
+[def-genewein-years]
+value = 10
+unit = "years"
+basis = "spec"
+fmt = ",.0f"
+label = "Genewein et al.'s ASI bar: years the human-expert collective works on the task"
+source = "genewein2026agiasi"
+date = "2026"
+note = "Sec. 3 remark: tens of thousands of well-coordinated experts, 10 years, the technology of 2010."
+
+[def-genewein-tech-year]
+value = 2010
+basis = "spec"
+fmt = ".0f"
+label = "Genewein et al.'s ASI bar: the year whose technology the human collective may use"
+source = "genewein2026agiasi"
+date = "2026"
+note = "Frozen so that humans using AI do not make the threshold 'a moving target'."
+
+[def-genewein-speed]
+value = 10
+basis = "spec"
+fmt = ",.0f"
+label = "Genewein et al.'s ASI bar: how much faster ASI does the same tasks ('a factor of 10 or more')"
+source = "genewein2026agiasi"
+date = "2026"
+note = "Sec. 3 remark."
+
+[def-ngo-si-years]
+value = 1
+unit = "year"
+basis = "spec"
+fmt = ",.0f"
+label = "Ngo's superintelligence as a (t, n)-AGI: the time t"
+source = "ngo2023tagi"
+date = "2023"
+note = "'(1 year, 8 billion)-AGIs'."
+
+[def-ngo-si-humans]
+value = 8
+unit = "billion people"
+basis = "spec"
+fmt = ",.0f"
+label = "Ngo's superintelligence as a (t, n)-AGI: the group size n"
+source = "ngo2023tagi"
+date = "2023"
+note = "'(1 year, 8 billion)-AGIs'."
+
+[def-anthropic-cost-factor]
+value = 5
+basis = "spec"
+fmt = ",.0f"
+label = "Anthropic RSP v3.4: cost factor within which AI must substitute for all research staff"
+source = "anthropic2026rsp"
+date = "2026-07"
+note = "Automated R&D threshold, criterion (1): 'at competitive costs (i.e., within a factor of 5)'."
+
+[def-rebench-experts]
+value = 61
+unit = "experts"
+basis = "measured"
+fmt = ",.0f"
+label = "human experts in RE-Bench's baseline (71 eight-hour attempts)"
+source = "wijk2024rebench"
+date = "2024"
+note = "Abstract."
+
+[def-rebench-short-budget]
+value = 2
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "RE-Bench's shortest total time budget per environment"
+source = "wijk2024rebench"
+date = "2024"
+
+[def-rebench-long-budget]
+value = 32
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "RE-Bench's longest total time budget (best of four 8-hour runs)"
+source = "wijk2024rebench"
+date = "2024"
+
+[def-rebench-agent-advantage]
+value = 4
+basis = "measured"
+fmt = ",.0f"
+label = "RE-Bench: best agents' score over human experts' at the 2-hour budget"
+source = "wijk2024rebench"
+date = "2024"
+note = "Abstract."
+
+[def-rebench-human-advantage]
+value = 2
+basis = "measured"
+fmt = ",.0f"
+label = "RE-Bench: human experts' score over the top agent's at the 32-hour budget"
+source = "wijk2024rebench"
+date = "2024"
+note = "Abstract."
+
+[def-rebench-agent-cost]
+value = 123
+basis = "measured"
+fmt = ",.0f"
+label = "RE-Bench: approximate cost of an agent's 8-hour run, USD"
+source = "wijk2024rebench"
+date = "2024"
+note = "Sec. 6.2."
+
+[def-rebench-human-cost]
+value = 1855
+basis = "measured"
+fmt = ",.0f"
+label = "RE-Bench: approximate pay to a human expert for an 8-hour run, USD"
+source = "wijk2024rebench"
+date = "2024"
+note = "Sec. 6.2."
+
+[def-kwa-baseline-low]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "how much longer contract baseliners take than repository maintainers, low end"
+source = "kwa2025horizon"
+date = "2025"
+note = "Sec. 6.4: '5x-18x longer'."
+
+[def-kwa-baseline-high]
+value = 18
+basis = "measured"
+fmt = ",.0f"
+label = "how much longer contract baseliners take than repository maintainers, high end"
+source = "kwa2025horizon"
+date = "2025"
+note = "Sec. 6.4."
+
+[def-gpqa-expert]
+value = 0.65
+basis = "measured"
+fmt = "%"
+label = "GPQA: accuracy of PhD-level domain experts"
+source = "rein2023gpqa"
+date = "2023"
+note = "Abstract; 74% discounting mistakes the experts identified."
+
+[def-gpqa-expert-adjusted]
+value = 0.74
+basis = "measured"
+fmt = "%"
+label = "GPQA: expert accuracy discounting expert-identified mistakes"
+source = "rein2023gpqa"
+date = "2023"
+
+[def-gpqa-best-2026]
+value = 0.9684
+basis = "measured"
+fmt = ".1%"
+label = "best model score on GPQA Diamond, November 2026"
+source = "epoch2026hub"
+date = "2026-11"
+note = "gpqa_diamond.csv, 2026-11-17, standard error 1.2 points."
+
+[def-frontiermath-release]
+value = 0.02
+basis = "measured"
+fmt = "%"
+label = "best model score on FrontierMath at release (upper bound, 'under 2%')"
+source = "glazer2024frontiermath"
+date = "2024-11"
+
+[def-frontiermath-best-2026]
+value = 0.9509
+basis = "measured"
+fmt = "%"
+label = "best model score on FrontierMath Tiers 1 to 3 (v2), November 2026"
+source = "epoch2026hub"
+date = "2026-11"
+
+[def-hle-defective]
+value = 0.46
+basis = "measured"
+fmt = "%"
+label = "share of a sample of Humanity's Last Exam questions Epoch found defective"
+source = "epoch2026hlereview"
+date = "2026"
+note = "22 of 48 sampled."
+
+# ---------------------------------------------------------------------------------------------
+# D2, loop gain
+
+[def-anthropic-rate-multiple]
+value = 2
+basis = "spec"
+fmt = ",.0f"
+label = "Anthropic RSP v3.4: multiple of the baseline rate of AI progress that counts as dramatic acceleration"
+source = "anthropic2026rsp"
+date = "2026-07"
+note = "Fn. 8: 'as much progress in one year as one would see in two years at baseline'; fn. 9: baseline over at least three model generations."
+
+[def-anthropic-example-baseline]
+value = 9
+basis = "spec"
+fmt = ",.0f"
+label = "Anthropic RSP v3.4 worked example: baseline effective scale-up (3x compute times 3x algorithms)"
+source = "anthropic2026rsp"
+date = "2026-07"
+note = "Fn. 8; doubling 'would entail something like an 81x effective scaleup'."
+
+[def-anthropic-baseline-generations]
+value = 3
+unit = "model generations"
+basis = "spec"
+fmt = ",.0f"
+label = "Anthropic RSP v3.4: minimum span over which the baseline rate is measured"
+source = "anthropic2026rsp"
+date = "2026-07"
+note = "Fn. 9."
+
+[def-metr-acceleration]
+value = 1.9
+basis = "measured"
+fmt = ",.1f"
+label = "METR: acceleration of Anthropic's internal capability index (ratio of growth rates)"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+note = "Headline; most informative evidence redacted by the developer; not at fixed inputs."
+
+[def-metr-acceleration-ci-low]
+value = 1.5
+basis = "measured"
+fmt = ",.1f"
+label = "METR acceleration estimate, 95% confidence interval, lower end"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[def-metr-acceleration-ci-high]
+value = 2.8
+basis = "measured"
+fmt = ",.1f"
+label = "METR acceleration estimate, 95% confidence interval, upper end"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[def-metr-robust-low]
+value = 1.1
+basis = "measured"
+fmt = ",.1f"
+label = "METR robustness analyses: lowest acceleration found"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[def-metr-robust-high]
+value = 2.9
+basis = "measured"
+fmt = ",.1f"
+label = "METR robustness analyses: highest acceleration found"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[def-metr-aeci-before]
+value = 15
+basis = "measured"
+fmt = ",.0f"
+label = "growth of Anthropic's capability index (AECI) before the October 2025 breakpoint"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+note = "Piecewise linear fit with bootstrap intervals, Epoch's public code."
+
+[def-metr-aeci-after]
+value = 29
+unit = "points a year"
+basis = "measured"
+fmt = ",.0f"
+label = "growth of Anthropic's capability index after the October 2025 breakpoint"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[def-metr-ai-share]
+value = 0.8
+basis = "assumption"
+fmt = "%"
+label = "METR's subjective share of the October 2026 acceleration due to AI ('perhaps ~80%')"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+note = "A judgement by METR, not a measurement."
+
+[def-burtsev-delay]
+value = 0.5
+unit = "yr"
+basis = "assumption"
+fmt = ",.1f"
+label = "Burtsev's illustrative delay of one development cycle"
+source = "burtsev2026criticality"
+date = "2026-08"
+note = "Sec. 3.2; fixed by assumption. The gain, closure and hardening are 'not presently constrained by direct empirical estimates'."
+
+[def-cunningham-return]
+value = 1
+basis = "modelled"
+fmt = ",.1f"
+label = "Cunningham et al.'s calibrated return to AI R&D (ln 3 / ln 3)"
+source = "cunningham2026rsi"
+date = "2026-09"
+note = "Sec. 4.1, with algorithmic efficiency taken to triple a year."
+
+[def-cunningham-eps-ca]
+value = 6.5
+basis = "measured"
+fmt = ",.1f"
+label = "Cunningham et al.: elasticity of capability (exp ECI) to compute, from a regression of ECI on log compute"
+source = "cunningham2026rsi"
+date = "2026-09"
+note = "Sec. 4.1."
+
+[def-cunningham-eps-rc-threshold]
+value = 0.15
+basis = "modelled"
+fmt = ",.2f"
+label = "Cunningham et al.: research productivity gain per ECI point needed for self-sustaining acceleration"
+source = "cunningham2026rsi"
+date = "2026-09"
+note = "Sec. 4.1, p. 29: the threshold is eps_R,C > 0.15."
+
+[def-cunningham-uplift]
+value = 4
+basis = "assumption"
+fmt = ",.0f"
+label = "a reported productivity uplift from AI that Cunningham et al. take at face value for illustration"
+source = "cunningham2026rsi"
+date = "2026-09"
+note = "Sec. 4.1: they call it 'very likely to be an overestimate'."
+
+[def-cunningham-eps-rc-illustration]
+value = 0.09
+basis = "modelled"
+fmt = "%"
+label = "Cunningham et al.: productivity gain per ECI point implied by a reported 4x uplift (an upper-end illustration, not an estimate)"
+source = "cunningham2026rsi"
+date = "2026-09"
+note = "Sec. 4.1: the 4x uplift is 'very likely to be an overestimate'; it 'would imply a 9% increase in productivity per unit of ECI, below the threshold'. Corrected per the spot-check."
+
+[def-r-lm]
+value = 1.892
+basis = "measured"
+fmt = ",.2f"
+label = "returns to software research in language models (doublings of output per doubling of input)"
+source = "ho2025experiments"
+date = "2025"
+note = "Appendix B; 90% CI 1.069 to 3.212."
+
+[def-r-lm-low]
+value = 1.069
+basis = "measured"
+fmt = ",.2f"
+label = "returns to software research in language models, 90% CI lower end"
+source = "ho2025experiments"
+date = "2025"
+
+[def-r-lm-high]
+value = 3.212
+basis = "measured"
+fmt = ",.2f"
+label = "returns to software research in language models, 90% CI upper end"
+source = "ho2025experiments"
+date = "2025"
+
+[def-r-cv]
+value = 1.262
+basis = "measured"
+fmt = ",.2f"
+label = "returns to software research in computer vision"
+source = "ho2025experiments"
+date = "2025"
+note = "Appendix B; 90% CI 0.727 to 2.094."
+
+[def-r-bottleneck-divisor]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "divisor on returns to research once compute bottlenecks are counted (epsilon_K about 2/3)"
+source = "ho2025experiments"
+date = "2025"
+note = "Appendix D: the correction 'puts them all below 1'."
+
+[def-sie-r-median]
+value = 1.2
+basis = "assumption"
+fmt = ",.1f"
+label = "Davidson and Houlden: median returns to software R&D in their fixed-compute model"
+source = "davidson2025sie"
+date = "2025-08"
+note = "Parameter values; range 0.4 to 3.6."
+
+[def-sie-r-low]
+value = 0.4
+basis = "assumption"
+fmt = ",.1f"
+label = "Davidson and Houlden: returns to software R&D, low end of range"
+source = "davidson2025sie"
+date = "2025-08"
+
+[def-sie-r-high]
+value = 3.6
+basis = "assumption"
+fmt = ",.1f"
+label = "Davidson and Houlden: returns to software R&D, high end of range"
+source = "davidson2025sie"
+date = "2025-08"
+
+[def-eth-threshold]
+value = 5
+basis = "spec"
+fmt = ",.0f"
+label = "Eth and Davidson's proposed threshold: multiple of the recent pace of software progress"
+source = "eth2025sie"
+date = "2025-03"
+note = "Mitigations: measure software progress, disclose to trusted third parties, act before the threshold."
+
+[def-nanogpt-records]
+value = 77
+unit = "records"
+basis = "measured"
+fmt = ",.0f"
+label = "NanoGPT speedrun records, May 2024 to March 2026"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[def-nanogpt-ai-records]
+value = 4
+unit = "records"
+basis = "measured"
+fmt = ",.0f"
+label = "NanoGPT speedrun records METR credits to AI agents (all shallow to moderate)"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[def-anthropic-ai-led]
+value = 0.26
+basis = "vendor"
+fmt = "%"
+label = "share of Anthropic's AI R&D work Claude 'leads' (automation level 4), August 2026"
+source = "anthropic2026pace"
+date = "2026-08"
+note = "Prototype R&D Automation Index, rated by Claude judges; a self-report."
+
+[def-anthropic-ai-led-feb]
+value = 0.01
+basis = "vendor"
+fmt = "%"
+label = "the same share in February 2026 (reported as under 1%)"
+source = "anthropic2026pace"
+date = "2026-02"
+
+[def-anthropic-agents]
+value = 30000
+unit = "agents"
+basis = "vendor"
+fmt = "sig2"
+label = "AI agents working at once on one internal Anthropic platform"
+source = "anthropic2026pace"
+date = "2026-08"
+
+# ---------------------------------------------------------------------------------------------
+# D3, breakout time
+
+[def-narrowpath-oom-gap]
+value = 8
+unit = "orders of magnitude"
+basis = "spec"
+fmt = ",.0f"
+label = "A Narrow Path: gap between the upper compute limit (FLOP) and the licensed cluster limit (FLOP/s), in seconds"
+source = "miotti2025narrowpath"
+date = "2025-04"
+note = "Annex 2."
+
+[def-narrowpath-breakout-years]
+value = 3.2
+unit = "yr"
+basis = "modelled"
+fmt = ",.1f"
+label = "A Narrow Path: time a licensed cluster would need to breach the upper limit in an illegal run"
+source = "miotti2025narrowpath"
+date = "2025-04"
+note = "Annex 2: 'giving authorities ample time to intervene'; the intervention time is asserted, not derived."
+
+[def-narrowpath-permitted-days]
+value = 12
+unit = "days"
+basis = "modelled"
+fmt = ",.0f"
+label = "A Narrow Path: time within which a licensed actor could still train any permitted model"
+source = "miotti2025narrowpath"
+date = "2025-04"
+note = "Annex 2."
+
+[def-hwp-horizon]
+value = 2
+unit = "yr"
+basis = "spec"
+fmt = ",.0f"
+label = "hardwired-pause working paper: breakout time horizon T_B"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.2.3: chosen as the time before 'the rest of the world could react'; set by judgement, not derived from a detection time."
+
+[def-hwp-breakout-budget]
+value = 2e29
+unit = "FLOP"
+basis = "assumption"
+fmt = ".0e"
+label = "hardwired-pause working paper: overt breakout training budget C_B"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Set by what 'a bullish would-be defector might believe'; 100 times the frozen frontier of 2e27 FLOP."
+
+[def-hwp-overhead]
+value = 12
+basis = "assumption"
+fmt = ",.0f"
+label = "hardwired-pause working paper: research overhead rho_B (compute for R&D per unit of final run)"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.2.3; a fixed multiplier, with no AI-automated research inside breakout."
+
+[def-hwp-utilisation]
+value = 0.21
+basis = "assumption"
+fmt = "%"
+label = "hardwired-pause working paper: realistic utilisation of frontier fleets U_F"
+source = "fithian2026hardwired"
+date = "2026-10"
+
+[def-hwp-h100e-rate]
+value = 989
+unit = "TFLOP/s"
+basis = "spec"
+fmt = ",.0f"
+label = "one H100-equivalent, as the hardwired-pause working paper defines it"
+source = "fithian2026hardwired"
+date = "2026-10"
+
+[def-hwp-fleet-threshold]
+value = 180
+unit = "million H100e"
+basis = "modelled"
+fmt = "sig2"
+label = "hardwired-pause working paper: breakout fleet threshold F_B at a 2-year horizon"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.2.3: F_B = 12 x 2e29 / (2 x 0.21) H100e-years = 180M H100e."
+
+[def-hwp-global-fleet]
+value = 47
+unit = "million H100e"
+basis = "modelled"
+fmt = "sig2"
+label = "hardwired-pause working paper: projected global fleet at year-end 2026"
+source = "fithian2026hardwired"
+date = "2026-12"
+
+[def-hwp-efficiency-growth]
+value = 0.57
+basis = "assumption"
+fmt = "%"
+label = "hardwired-pause working paper: annual training efficiency gain in its sensitivity case"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.5.2."
+
+[def-hwp-us-capacity-before]
+value = 0.20
+basis = "modelled"
+fmt = "%"
+label = "hardwired-pause working paper: US overt breakout capacity as a share of F_B, before efficiency gains"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.5.2."
+
+[def-hwp-us-capacity-after]
+value = 0.53
+basis = "modelled"
+fmt = "%"
+label = "the same share after 26 months of 57% annual efficiency gains"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "Sec. 6.5.2."
+
+[def-gan-catchup-start]
+value = 12
+basis = "modelled"
+fmt = ",.0f"
+label = "Gan: the follower's catch-up time at the start of a compliant pause (illustrative calibration)"
+source = "gan2026clock"
+date = "2026-11"
+
+[def-gan-catchup-12]
+value = 8.61
+unit = "months"
+basis = "modelled"
+fmt = ",.2f"
+label = "Gan: catch-up time after 12 months of pause"
+source = "gan2026clock"
+date = "2026-11"
+
+[def-gan-catchup-24]
+value = 5.74
+unit = "months"
+basis = "modelled"
+fmt = ",.2f"
+label = "Gan: catch-up time after 24 months of pause"
+source = "gan2026clock"
+date = "2026-11"
+
+[def-ho-halving-months]
+value = 8.4
+unit = "months"
+basis = "measured"
+fmt = ",.1f"
+label = "halving time of the compute needed for a fixed language-model performance, 2012 to 2023"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 3.1; 95% CI 4.5 to 14.3 months."
+
+[def-ho-halving-fast]
+value = 4.5
+unit = "months"
+basis = "measured"
+fmt = ",.1f"
+label = "the same halving time, 95% CI fast end"
+source = "ho2024algorithmic"
+date = "2024"
+
+[def-ho-halving-slow]
+value = 14.3
+unit = "months"
+basis = "measured"
+fmt = ",.1f"
+label = "the same halving time, 95% CI slow end"
+source = "ho2024algorithmic"
+date = "2024"
+
+[def-ho-compute-share-low]
+value = 0.60
+basis = "measured"
+fmt = "%"
+label = "share of language-model gains from compute scaling, low end"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 4.1: '60-95%'."
+
+[def-ho-compute-share-high]
+value = 0.95
+basis = "measured"
+fmt = "%"
+label = "share of language-model gains from compute scaling, high end"
+source = "ho2024algorithmic"
+date = "2024"
+
+[def-gundlach-claimed]
+value = 22000
+basis = "measured"
+fmt = "sig2"
+label = "algorithmic efficiency gain 2012 to 2023 as previously estimated (Ho et al., cited by Gundlach et al.)"
+source = "gundlach2025origin"
+date = "2025"
+note = "Abstract."
+
+[def-gundlach-low-compute-max]
+value = 100
+basis = "measured"
+fmt = ",.0f"
+label = "upper bound on the efficiency gain that reproduces at low compute"
+source = "gundlach2025origin"
+date = "2025"
+note = "Abstract (opened: abstract only). Small-scale ablations account for less than 10x; other innovations less than 10x."
+
+[def-whitfill-bias-factor]
+value = 9
+basis = "assumption"
+fmt = ",.0f"
+label = "Whitfill's first-pass estimate of how much observational estimates may overstate algorithmic progress"
+source = "whitfill2025selection"
+date = "2025"
+note = "Sec. 1.3; 'many other explanations' possible."
+
+[def-sie-p-compress-3yr]
+value = 0.57
+basis = "modelled"
+fmt = "%"
+label = "Davidson and Houlden: probability a software intelligence explosion compresses 3 years of progress into under 1"
+source = "davidson2025sie"
+date = "2025-08"
+note = "Results table; conditional on AI that fully automates AI research, at fixed compute."
+
+[def-sie-p-compress-10yr]
+value = 0.18
+basis = "modelled"
+fmt = "%"
+label = "the same model: probability of compressing 10 years into under 1"
+source = "davidson2025sie"
+date = "2025-08"
+
+# ---------------------------------------------------------------------------------------------
+# D4, the line, and the nuclear timeliness precedent
+
+[def-iaea-conv-metal-low]
+value = 7
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA conversion time, plutonium, HEU or U-233 metal, low end"
+source = "iaea-glossary-2022"
+date = "2022"
+note = "3.20, Table 2: 'Order of days (7-10)'. Assumes facilities exist; excludes transport and assembly."
+
+[def-iaea-conv-metal-high]
+value = 10
+unit = "days"
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA conversion time, metal, high end"
+source = "iaea-glossary-2022"
+date = "2022"
+
+[def-iaea-conv-irr-low]
+value = 1
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA conversion time, direct-use material in irradiated fuel, low end"
+source = "iaea-glossary-2022"
+date = "2022"
+
+[def-iaea-conv-irr-high]
+value = 3
+unit = "months"
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA conversion time, irradiated fuel, high end"
+source = "iaea-glossary-2022"
+date = "2022"
+
+[def-iaea-conv-leu-low]
+value = 3
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA conversion time, uranium below 20% U-235 and thorium, low end"
+source = "iaea-glossary-2022"
+date = "2022"
+
+[def-iaea-conv-leu-high]
+value = 12
+unit = "months"
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA conversion time, uranium below 20% U-235 and thorium, high end"
+source = "iaea-glossary-2022"
+date = "2022"
+
+[def-iaea-goal-unirr]
+value = 1
+unit = "month"
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA timeliness detection goal, unirradiated direct-use material"
+source = "iaea-glossary-2001"
+date = "2001"
+note = "3.20 (2001 edition); the 2022 edition prints no numeric goals."
+
+[def-iaea-goal-irr]
+value = 3
+unit = "months"
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA timeliness detection goal, irradiated direct-use material"
+source = "iaea-glossary-2001"
+date = "2001"
+
+[def-iaea-goal-indirect]
+value = 12
+unit = "months"
+basis = "spec"
+fmt = ",.0f"
+label = "IAEA timeliness detection goal, indirect-use material (one year)"
+source = "iaea-glossary-2001"
+date = "2001"
+
+[def-iaea-detect-high]
+value = 0.9
+basis = "spec"
+fmt = "%"
+label = "IAEA 'high' detection probability level"
+source = "iaea-glossary-2001"
+date = "2001"
+note = "3.16; 'low' is 20%."
+
+[def-iaea-detect-low]
+value = 0.2
+basis = "spec"
+fmt = "%"
+label = "IAEA 'low' detection probability level"
+source = "iaea-glossary-2001"
+date = "2001"
+
+[def-shavit-window]
+value = 30
+unit = "days"
+basis = "spec"
+fmt = ",.0f"
+label = "Shavit's detection target: catch a large training run within this many days of completion"
+source = "shavit2023chinchilla"
+date = "2023"
+note = "Table 1; a detection target, not tied to a breakout time."
+
+[def-shavit-prob]
+value = 0.9
+basis = "spec"
+fmt = "%"
+label = "Shavit's detection target: probability of catching a rule-violating run"
+source = "shavit2023chinchilla"
+date = "2023"
+
+[def-iraq-years]
+value = 10
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "Iraq's nuclear weapons programme, years undetected by the inspectorate (late 1981 to mid-1991)"
+source = "albright-2002"
+date = "1991"
+note = "Found through intelligence and post-war inspections (thorne-1992)."
+
+[def-iran-centrifuge-years]
+value = 17
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "Iran's undeclared centrifuge work, years before disclosure (1985 to August 2002)"
+source = "iaea-gov-2003-75"
+date = "2003"
+note = "Revealed by public media reports, then environmental sampling (iaea-gov-2003-40)."
+
+[def-syria-years]
+value = 6
+unit = "years"
+basis = "measured"
+fmt = ",.0f"
+label = "Syria's reactor, years from first imagery to the strike (2001 to 2007), found by national intelligence"
+source = "iaea-gov-2011-30"
+date = "2011"
+
+[def-dprk-discrepancy-months]
+value = 9
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "DPRK: months from initial report to special inspection request, a discrepancy found by IAEA accountancy"
+source = "iaea-gc37-1084"
+date = "1993"
+note = "4 May 1992 to 9 February 1993."
+
+[def-dprk-withdrawal-days]
+value = 31
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "DPRK: days from the special inspection request to its NPT withdrawal notice"
+source = "iaea-gc37-1084"
+date = "1993"
+
+[def-gan-xi]
+value = 0.383
+basis = "modelled"
+fmt = ",.3f"
+label = "Gan's deterrence constant xi = ln[(T - R)/(C - R)] at his illustrative payoffs (2.5, 3.2, 1.0, 0.6)"
+source = "gan2026clock"
+date = "2026-11"
+note = "Pp. 15 to 16; of some payoffs the paper says 'No evidence guides' them."
+
+[def-gan-window]
+value = 12
+unit = "months"
+basis = "modelled"
+fmt = ",.0f"
+label = "Gan's illustrative response window w"
+source = "gan2026clock"
+date = "2026-11"
+
+[def-prevent-beta]
+value = 0.05
+basis = "design"
+fmt = "%"
+label = "tolerated chance that a breakout succeeds, a design choice used here to illustrate prevention"
+
+# ---------------------------------------------------------------------------------------------
+# D5, elicited capability
+
+[def-rsp1-elicitation-share]
+value = 0.01
+basis = "spec"
+fmt = "%"
+label = "Anthropic RSP v1.0: elicitation budget, as a share of total training cost"
+source = "anthropic2023rsp"
+date = "2023-09"
+note = "ASL-3 definition: 'less than 1% of the total training cost'; removed in v2.0 (2024)."
+
+[def-rsp1-buffer]
+value = 6
+basis = "spec"
+fmt = ",.0f"
+label = "Anthropic RSP v1.0: safety buffer in effective compute"
+source = "anthropic2023rsp"
+date = "2023-09"
+note = "Removed in v2.0."
+
+[def-audit-models]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "models in the UK AISI sandbagging auditing game"
+source = "taylor2025auditinggames"
+date = "2025-12"
+
+[def-audit-phase1-correct]
+value = 1
+basis = "measured"
+fmt = ",.0f"
+label = "models the blue team classified correctly in phase 1"
+source = "taylor2025auditinggames"
+date = "2025-12"
+
+[def-audit-phase2-correct]
+value = 2
+basis = "measured"
+fmt = ",.0f"
+label = "models the blue team classified correctly in phase 2"
+source = "taylor2025auditinggames"
+date = "2025-12"
+
+[def-audit-benign-uplift]
+value = 10
+unit = "points"
+basis = "measured"
+fmt = ",.0f"
+label = "points benign models gained from the same elicitation (about)"
+source = "taylor2025auditinggames"
+date = "2025-12"
+note = "Sec. 6.4.1."
+
+[def-sabotage-degraded]
+value = 0.361
+basis = "measured"
+fmt = ".1%"
+label = "a sandbagging Claude 3.5 Sonnet's WMDP score, as a share of its original"
+source = "benton2024sabotage"
+date = "2024"
+note = "Sec. 6.4."
+
+[def-sabotage-recovered]
+value = 0.956
+basis = "measured"
+fmt = ".1%"
+label = "the same model's score after anti-refusal training, as a share of its original"
+source = "benton2024sabotage"
+date = "2024"
+
+[def-xh-rl-lock-steps]
+value = 500
+unit = "GRPO steps"
+basis = "measured"
+fmt = ",.0f"
+label = "RL steps an RL-locked model stayed suppressed (more than)"
+source = "jang2026explorationhacking"
+date = "2026"
+note = "Sec. 3, KernelBench; a prompted sandbagger recovered in about 100."
+
+[def-robust-hard-recall]
+value = 0.078
+basis = "measured"
+fmt = ".1%"
+label = "hard-task recall of a tamper-resistant locked organism after weak-to-strong fine-tuning"
+source = "finke2026robustorganisms"
+date = "2026"
+note = "Table 4."
+
+[def-robust-base-recall]
+value = 0.712
+basis = "measured"
+fmt = ".1%"
+label = "hard-task recall of the base model"
+source = "finke2026robustorganisms"
+date = "2026"
+
+[def-graft-circuit-broken]
+value = -0.11
+basis = "measured"
+fmt = "%"
+label = "recovery by weight grafting on a circuit-broken organism"
+source = "le2026grafting"
+date = "2026"
+note = "Sec. 4.6; against 94% to 101% on 11 ordinary locked models (Table 1)."
+
+[def-adaptive-auc-before]
+value = 0.978
+basis = "measured"
+fmt = ",.3f"
+label = "AUC of a text audit for sandbagging before adaptive retraining"
+source = "soopal2026adaptive"
+date = "2026"
+
+[def-adaptive-auc-after]
+value = 0.560
+basis = "measured"
+fmt = ",.3f"
+label = "AUC of the same audit after two rounds of adaptive retraining"
+source = "soopal2026adaptive"
+date = "2026"
+
+[def-sprt-saving]
+value = 0.40
+basis = "measured"
+fmt = "%"
+label = "trials saved by a sequential test of absence, when the capability is truly absent (up to)"
+source = "bukkapatnam2026absent"
+date = "2026"
+note = "Abstract only."
+
+[def-mlebench-pass1]
+value = 0.169
+basis = "measured"
+fmt = ".1%"
+label = "MLE-bench medal rate, pass@1 (o1-preview with AIDE)"
+source = "chan2024mlebench"
+date = "2024"
+
+[def-mlebench-pass8]
+value = 0.341
+basis = "measured"
+fmt = ".1%"
+label = "MLE-bench medal rate, pass@8"
+source = "chan2024mlebench"
+date = "2024"
+
+[def-evalaware-model-auc]
+value = 0.83
+basis = "measured"
+fmt = ",.2f"
+label = "AUC with which Gemini 2.5 Pro tells evaluations from deployment"
+source = "needham2025evalaware"
+date = "2025"
+
+[def-evalaware-human-auc]
+value = 0.92
+basis = "measured"
+fmt = ",.2f"
+label = "human baseline AUC on the same task"
+source = "needham2025evalaware"
+date = "2025"
+
+[def-posttraining-low]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "compute-equivalent gain from post-training enhancements, low end"
+source = "heim2024thresholds"
+date = "2024"
+note = "Limitations section, citing prior work."
+
+[def-posttraining-high]
+value = 20
+basis = "measured"
+fmt = ",.0f"
+label = "compute-equivalent gain from post-training enhancements, high end"
+source = "heim2024thresholds"
+date = "2024"
+
+# ---------------------------------------------------------------------------------------------
+# D6, closure
+
+[def-replibench-2023]
+value = 0.05
+basis = "measured"
+fmt = "%"
+label = "success on 11 of 20 self-replication evaluations, early 2023 (under)"
+source = "aisi2025trends"
+date = "2023"
+note = "Sec. 5."
+
+[def-replibench-2025]
+value = 0.60
+basis = "measured"
+fmt = "%"
+label = "success on the same evaluations, summer 2025 (over)"
+source = "aisi2025trends"
+date = "2025"
+note = "Failures concentrate at KYC checks and persistent deployment."
+
+[def-scher-mechanisms]
+value = 28
+unit = "mechanisms"
+basis = "measured"
+fmt = ",.0f"
+label = "candidate mechanisms Scher catalogues for verifying restrictions on frontier AI research"
+source = "scher2026research"
+date = "2026-06"
+note = "Abstract only."
+
+[def-burtsev-network-rho]
+value = 1.15
+basis = "modelled"
+fmt = ",.2f"
+label = "Burtsev: spectral radius of a network of individually subcritical blocs once transfer is counted (scenario)"
+source = "burtsev2026criticality"
+date = "2026-08"
+note = "Sec. 4 scenarios."

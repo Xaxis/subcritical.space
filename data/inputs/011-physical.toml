@@ -1,0 +1,1840 @@
+# Inputs for Part I, 1: the physical and energetic perspective (research/011-physical.md).
+# Every id starts with phys-. Derived numbers are in model/parts/011_physical.py.
+# basis: measured | vendor | spec | design | assumption | modelled (see model/ledger.py).
+
+# ---------------------------------------------------------------------------------------------
+# P2. Thermodynamic floor
+
+[phys-boltzmann-k]
+value = 1.380649e-23
+unit = "J/K"
+basis = "spec"
+fmt = ".6e"
+label = "Boltzmann constant (exact since the 2019 SI)"
+source = "codata2022-k"
+date = "2022"
+note = "CODATA 2022, listed as exact"
+
+[phys-temp-room]
+value = 300
+unit = "K"
+basis = "design"
+fmt = ",.0f"
+label = "reference temperature for the Landauer bound of a chip at room temperature"
+
+[phys-temp-body]
+value = 310
+unit = "K"
+basis = "assumption"
+fmt = ",.0f"
+label = "body temperature used for the brain's Landauer bound"
+source = "carlsmith2020"
+note = "Carlsmith Sec. 4.1.2 works at about 310 K"
+
+[phys-berut-fit-a]
+value = 0.72
+unit = "kT per bit"
+basis = "measured"
+fmt = ".2f"
+label = "heat per erased bit in the slow limit, colloidal one-bit memory (two-parameter fit)"
+source = "berut2015"
+date = "2015"
+note = "Sec. 3, Fig. 8; kT ln 2 is 0.693 kT"
+
+[phys-berut-fit-b]
+value = 8.15
+unit = "kT s"
+basis = "measured"
+fmt = ".2f"
+label = "coefficient of the 1/tau excess heat in the colloidal erasure fit <Q> = ln 2 + B/tau"
+source = "berut2015"
+date = "2015"
+note = "Sec. 3, Fig. 8; erasure times measured up to 40 s"
+
+[phys-berut-tau-max]
+value = 40
+unit = "s"
+basis = "measured"
+fmt = ",.0f"
+label = "longest erasure time in the colloidal experiment"
+source = "berut2015"
+date = "2015"
+note = "Fig. 8"
+
+[phys-fast-erasure]
+value = 1
+unit = "ns"
+basis = "design"
+fmt = ",.0f"
+label = "erasure time used to illustrate the speed-energy trade-off (an extrapolation)"
+
+[phys-hong-erasure]
+value = 1.45
+unit = "kT per bit"
+basis = "measured"
+fmt = ".2f"
+label = "measured heat per erased bit in a nanomagnetic memory at 300 K"
+source = "hong2014"
+date = "2014"
+note = "plus or minus 0.35 kT; a second set gave 1.0 plus or minus 0.22 kT"
+
+# ---------------------------------------------------------------------------------------------
+# Accelerator datasheets (vendor claims; peak dense rates unless stated)
+
+[phys-v100-tensor]
+value = 125
+unit = "TFLOP/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "V100 SXM2 tensor peak"
+source = "nvidia-v100"
+note = "datasheet r5, undated"
+
+[phys-v100-power]
+value = 300
+unit = "W"
+basis = "vendor"
+fmt = ",.0f"
+label = "V100 SXM2 maximum power"
+source = "nvidia-v100"
+
+[phys-v100-hbm-bw]
+value = 900
+unit = "GB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "V100 memory bandwidth"
+source = "nvidia-v100"
+
+[phys-a100-bf16]
+value = 312
+unit = "TFLOP/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "A100 80GB SXM dense BF16 tensor peak"
+source = "nvidia-a100"
+date = "2021-06"
+note = "624 with sparsity"
+
+[phys-a100-tdp]
+value = 400
+unit = "W"
+basis = "vendor"
+fmt = ",.0f"
+label = "A100 80GB SXM maximum TDP"
+source = "nvidia-a100"
+date = "2021-06"
+
+[phys-a100-hbm-bw]
+value = 2039
+unit = "GB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "A100 80GB SXM memory bandwidth"
+source = "nvidia-a100"
+date = "2021-06"
+
+[phys-h100-bf16]
+value = 989.5
+unit = "TFLOP/s"
+basis = "vendor"
+fmt = ",.1f"
+label = "H100 SXM dense BF16 tensor peak"
+source = "nvidia-h100"
+note = "the page lists 1,979 TFLOPS footnoted 'with sparsity'; dense is half"
+
+[phys-h100-fp8]
+value = 1979
+unit = "TFLOP/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "H100 SXM dense FP8 tensor peak"
+source = "nvidia-h100"
+note = "3,958 with sparsity"
+
+[phys-h100-tdp]
+value = 700
+unit = "W"
+basis = "vendor"
+fmt = ",.0f"
+label = "H100 SXM maximum power"
+source = "nvidia-h100"
+note = "'Up to 700W (configurable)'"
+
+[phys-h100-hbm-bw]
+value = 3.35
+unit = "TB/s"
+basis = "vendor"
+fmt = ".2f"
+label = "H100 SXM memory bandwidth"
+source = "nvidia-h100"
+
+[phys-h100-hbm-cap]
+value = 80
+unit = "GB"
+basis = "vendor"
+fmt = ",.0f"
+label = "H100 SXM memory capacity"
+source = "nvidia-h100"
+
+[phys-h100-nvlink]
+value = 900
+unit = "GB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "H100 SXM NVLink bandwidth"
+source = "nvidia-h100"
+
+[phys-gb200-rack-bf16-sparse]
+value = 360
+unit = "PFLOP/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "GB200 NVL72 rack BF16 tensor peak with sparsity"
+source = "nvidia-gb200"
+note = "'Dense is one-half sparse spec shown'; no rack power on the page"
+
+[phys-gb200-rack-hbm-bw]
+value = 576
+unit = "TB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "GB200 NVL72 rack HBM bandwidth"
+source = "nvidia-gb200"
+
+[phys-gb200-rack-nvlink]
+value = 130
+unit = "TB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "GB200 NVL72 rack NVLink bandwidth"
+source = "nvidia-gb200"
+
+[phys-gb200-rack-gpus]
+value = 72
+unit = "GPUs"
+basis = "vendor"
+fmt = ",.0f"
+label = "GPUs in a GB200 NVL72 rack"
+source = "nvidia-gb200"
+
+[phys-dgx-b200-power]
+value = 14.3
+unit = "kW"
+basis = "vendor"
+fmt = ",.1f"
+label = "DGX B200 system power, eight GPUs"
+source = "nvidia-dgx-b200"
+note = "'~14.3 kW max', system level, not chip TDP"
+
+[phys-dgx-b200-fp8-sparse]
+value = 72
+unit = "PFLOP/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "DGX B200 FP8 peak with sparsity, eight GPUs"
+source = "nvidia-dgx-b200"
+
+[phys-dgx-b200-hbm-bw]
+value = 64
+unit = "TB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "DGX B200 total HBM bandwidth, eight GPUs"
+source = "nvidia-dgx-b200"
+
+[phys-dgx-b200-gpus]
+value = 8
+unit = "GPUs"
+basis = "vendor"
+fmt = ",.0f"
+label = "GPUs in a DGX B200"
+source = "nvidia-dgx-b200"
+
+[phys-scale-out-port]
+value = 400
+unit = "Gbit/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "DGX B200 scale-out networking per port"
+source = "nvidia-dgx-b200"
+note = "InfiniBand or Ethernet, one port per GPU assumed in the derived ratio"
+
+[phys-mi300x-fp16]
+value = 1307.4
+unit = "TFLOP/s"
+basis = "vendor"
+fmt = ",.1f"
+label = "AMD MI300X dense FP16 peak"
+source = "amd-mi300x"
+note = "2,614.9 with sparsity"
+
+[phys-mi300x-tbp]
+value = 750
+unit = "W"
+basis = "vendor"
+fmt = ",.0f"
+label = "AMD MI300X maximum board power"
+source = "amd-mi300x"
+
+[phys-mi300x-hbm-bw]
+value = 5.3
+unit = "TB/s"
+basis = "vendor"
+fmt = ".1f"
+label = "AMD MI300X peak memory bandwidth"
+source = "amd-mi300x"
+
+[phys-miri-h100e]
+value = 990
+unit = "TFLOP/s"
+basis = "design"
+fmt = ",.0f"
+label = "one H100-equivalent as MIRI's draft agreement defines it (FP16)"
+source = "scher2025agreement"
+date = "2025"
+
+# ---------------------------------------------------------------------------------------------
+# P2. The CMOS ceiling and efficiency trends
+
+[phys-cmos-ceiling-fp16]
+value = 2.9e14
+unit = "FLOP/J"
+basis = "modelled"
+fmt = ".1e"
+label = "estimated maximum energy efficiency of irreversible CMOS at FP16"
+source = "ho2023"
+date = "2023-12"
+note = "Implications section: 4.7e15 FP4/J divided by 16; holds only in the irreversible regime"
+
+[phys-cmos-ceiling-fp4]
+value = 4.7e15
+unit = "FLOP/J"
+basis = "modelled"
+fmt = ".1e"
+label = "estimated maximum energy efficiency of irreversible CMOS at FP4 (geometric mean)"
+source = "ho2023"
+date = "2023-12"
+note = "abstract"
+
+[phys-cmos-log-sd]
+value = 0.7
+unit = "orders of magnitude"
+basis = "modelled"
+fmt = ".1f"
+label = "standard deviation in log space of the CMOS ceiling estimate"
+source = "ho2023"
+date = "2023-12"
+note = "'around 0.7 OOMs'"
+
+[phys-cmos-headroom-ho]
+value = 207
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "further efficiency gain before CMOS improvements stop, 50% chance (Ho, Erdil and Besiroglu)"
+source = "ho2023"
+date = "2023-12"
+note = "290/1.4, against their H100 figure of 1.4e12 FP16/J"
+
+[phys-eff-growth-supercomputer]
+value = 1.34
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "yearly growth of AI supercomputer energy efficiency (FLOP/s per watt)"
+source = "pilz2025supercomputers"
+date = "2025-04"
+note = "Sec. 3.2.1; 90% CI 1.25 to 1.43; mostly from new chips"
+
+[phys-eff-growth-supercomputer-low]
+value = 1.25
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "lower end of the 90% CI for AI supercomputer efficiency growth a year"
+source = "pilz2025supercomputers"
+date = "2025-04"
+
+[phys-eff-growth-supercomputer-high]
+value = 1.43
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "upper end of the 90% CI for AI supercomputer efficiency growth a year"
+source = "pilz2025supercomputers"
+date = "2025-04"
+
+[phys-eff-growth-gpu]
+value = 1.40
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "yearly growth of GPU energy efficiency (Epoch with EPRI)"
+source = "you2025"
+date = "2025-08"
+note = "'improved by 40% per year'"
+
+[phys-pue-growth-max]
+value = 0.05
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "upper bound on yearly improvement of power usage effectiveness in AI supercomputers"
+source = "pilz2025supercomputers"
+date = "2025-04"
+note = "'less than 5% each year'"
+
+[phys-koomey-doubling]
+value = 1.57
+unit = "years"
+basis = "measured"
+fmt = ".2f"
+label = "doubling time of computations per kWh, 1946 to 2009"
+source = "koomey2011"
+date = "2011"
+
+[phys-koomey-doubling-post2000]
+value = 2.7
+unit = "years"
+basis = "measured"
+fmt = ".1f"
+label = "doubling time of peak-output efficiency after about 2000"
+source = "koomey2015"
+date = "2015"
+
+[phys-reversible-test-saving]
+value = 0.30
+unit = ""
+basis = "vendor"
+fmt = "%"
+label = "energy saving of the first adiabatic (reversible) test chip against a regular chip"
+source = "hulick2025"
+date = "2025-08"
+note = "one test reported by Science News; no independent verification described"
+
+[phys-reversible-roadmap]
+value = 4000
+unit = ""
+basis = "vendor"
+fmt = ",.0f"
+label = "efficiency gain on a reversible computing vendor's road map"
+source = "genkina2025"
+date = "2025"
+note = "'probably 10 or 15 years out'"
+
+[phys-davidson-landauer-oom]
+value = 6
+unit = "orders of magnitude"
+basis = "assumption"
+fmt = ",.0f"
+label = "room for chip technology to Landauer assumed in a published takeoff analysis"
+source = "davidson2025three"
+date = "2025-03"
+note = "against about 2 orders in the current paradigm"
+
+# ---------------------------------------------------------------------------------------------
+# P1. The brain as a reference point (not a target)
+
+[phys-brain-flops-central]
+value = 1e15
+unit = "FLOP/s"
+basis = "modelled"
+fmt = ".0e"
+label = "brain-equivalent compute Carlsmith judges more likely than not to be enough"
+source = "carlsmith2020"
+date = "2020-09"
+note = "given the right software, 'which may be very hard to create'"
+
+[phys-brain-flops-low]
+value = 1e13
+unit = "FLOP/s"
+basis = "modelled"
+fmt = ".0e"
+label = "low end of Carlsmith's mechanistic range for brain-equivalent compute"
+source = "carlsmith2020"
+date = "2020-09"
+
+[phys-brain-flops-high]
+value = 1e17
+unit = "FLOP/s"
+basis = "modelled"
+fmt = ".0e"
+label = "high end of Carlsmith's mechanistic range for brain-equivalent compute"
+source = "carlsmith2020"
+date = "2020-09"
+
+[phys-brain-flops-p90]
+value = 1e21
+unit = "FLOP/s"
+basis = "modelled"
+fmt = ".0e"
+label = "brain-equivalent compute Carlsmith gives under 10% chance of being exceeded"
+source = "carlsmith2020"
+date = "2020-09"
+
+[phys-brain-p90-chance]
+value = 0.10
+unit = ""
+basis = "modelled"
+fmt = "%"
+label = "Carlsmith's upper bound on the chance that brain-equivalent compute exceeds 1e21 FLOP/s"
+source = "carlsmith2020"
+date = "2020-09"
+note = "'unlikely (<10%)'"
+
+[phys-brain-power]
+value = 20
+unit = "W"
+basis = "measured"
+fmt = ",.0f"
+label = "power of the human brain, high end of published estimates"
+source = "carlsmith2020"
+date = "2020-09"
+note = "Sec. 4.1.2: most estimates 10 to 20 W; 20 W used as the high end"
+
+[phys-wbe-level4]
+value = 1e18
+unit = "FLOP/s"
+basis = "modelled"
+fmt = ".0e"
+label = "whole brain emulation compute at the spiking network level"
+source = "sandberg2008"
+date = "2008"
+note = "Table 9, p. 80; workshop consensus was levels 4 to 6"
+
+[phys-wbe-level6]
+value = 1e25
+unit = "FLOP/s"
+basis = "modelled"
+fmt = ".0e"
+label = "whole brain emulation compute at the metabolome level"
+source = "sandberg2008"
+date = "2008"
+note = "Table 9, p. 80"
+
+[phys-cortex-compute-power]
+value = 0.1
+unit = "W"
+basis = "measured"
+fmt = ".1f"
+label = "power partitioned to cortical computation"
+source = "levy2021"
+date = "2021"
+note = "abstract only (full text not retrieved)"
+
+[phys-cortex-comm-power]
+value = 3.5
+unit = "W"
+basis = "measured"
+fmt = ".1f"
+label = "power spent on long-distance communication in the cortex"
+source = "levy2021"
+date = "2021"
+note = "abstract only (full text not retrieved)"
+
+# ---------------------------------------------------------------------------------------------
+# P1. Compute: trends, flows and holdings
+
+[phys-frontier-compute-growth]
+value = 5
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "yearly growth of training compute for frontier language models since 2020"
+source = "epoch2026trends"
+date = "2026-11"
+note = "90% CI 4x to 6x"
+
+[phys-algo-halving]
+value = 8.4
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "halving time of compute for a fixed language-model loss, 2012 to 2023"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 3.1; 95% CI 4.5 to 14.3 months"
+
+[phys-algo-halving-low]
+value = 4.5
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "low end of the 95% CI for the algorithmic halving time"
+source = "ho2024algorithmic"
+date = "2024"
+
+[phys-algo-halving-high]
+value = 14.3
+unit = "months"
+basis = "measured"
+fmt = ".1f"
+label = "high end of the 95% CI for the algorithmic halving time"
+source = "ho2024algorithmic"
+date = "2024"
+
+[phys-compute-share-low]
+value = 0.60
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "low end of the share of language-model gains from compute scaling"
+source = "ho2024algorithmic"
+date = "2024"
+note = "Sec. 4.1: 60-95% from compute, 5-40% from algorithms"
+
+[phys-compute-share-high]
+value = 0.95
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "high end of the share of language-model gains from compute scaling"
+source = "ho2024algorithmic"
+date = "2024"
+
+[phys-frontier-explained-low]
+value = 0.80
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "low end of frontier performance differences explained by training compute (809 models)"
+source = "mertens2026secretsauce"
+date = "2026"
+
+[phys-frontier-explained-high]
+value = 0.90
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "high end of frontier performance differences explained by training compute"
+source = "mertens2026secretsauce"
+date = "2026"
+
+[phys-mertens-models]
+value = 809
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "language models released 2022 to 2025 in Mertens et al.'s regressions"
+source = "mertens2026secretsauce"
+date = "2026"
+
+[phys-algo-miri]
+value = 3
+unit = ""
+basis = "assumption"
+fmt = ",.0f"
+label = "yearly fall in training compute per capability assumed by MIRI's draft agreement"
+source = "scher2025agreement"
+date = "2025"
+note = "p. 8: monitored cluster thresholds would have to fall by the same factor"
+
+[phys-algo-total-ho]
+value = 22000
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "algorithmic efficiency factor 2012 to 2023 as Gundlach et al. state Ho et al.'s estimate"
+source = "gundlach2025origin"
+date = "2025"
+
+[phys-algo-small-scale-max]
+value = 100
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "upper bound on algorithmic efficiency gains 2012 to 2023 at low compute"
+source = "gundlach2025origin"
+date = "2025"
+note = "'less than 100x'; only the first factor under 10x comes from their ablations"
+
+[phys-whitfill-bias]
+value = 9
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "first-pass factor by which selection bias may overstate observational algorithmic progress"
+source = "whitfill2025selection"
+date = "2025"
+note = "Sec. 1.3; the author lists many other possible explanations"
+
+[phys-ord-train-small]
+value = 1e24
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "training compute of the smaller model in Ord's inference illustration"
+source = "ord2025govaireport"
+date = "2025-10"
+
+[phys-ord-train-large]
+value = 1e27
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "training compute matched in Ord's inference illustration"
+source = "ord2025govaireport"
+date = "2025-10"
+
+[phys-ord-inference-mult]
+value = 10000
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "extra inference compute in Ord's illustration"
+source = "ord2025govaireport"
+date = "2025-10"
+note = "an illustration, around p. 10, not a measured exchange rate"
+
+[phys-chips-sold-2025]
+value = 13.61e6
+unit = "H100e"
+basis = "modelled"
+fmt = "sig3"
+label = "AI compute sold in 2025, sum of Epoch's per-quarter median estimates"
+source = "epoch2026chipsales"
+date = "2025"
+note = "summed by the survey helper and rechecked in the spot-check; not a figure Epoch states"
+
+[phys-chips-sold-2024]
+value = 5.10e6
+unit = "H100e"
+basis = "modelled"
+fmt = "sig3"
+label = "AI compute sold in 2024, sum of Epoch's per-quarter median estimates"
+source = "epoch2026chipsales"
+date = "2024"
+
+[phys-chip-tdp-2025]
+value = 7.5
+unit = "GW"
+basis = "modelled"
+fmt = ".1f"
+label = "summed TDP of AI chips sold in 2025, chips only"
+source = "epoch2026chipsales"
+date = "2025"
+
+[phys-chips-unaccounted]
+value = 1e6
+unit = "chips"
+basis = "assumption"
+fmt = "sig2"
+label = "AI chips not traced to an owner, order of magnitude (an approximate bound on the largest hidden cluster)"
+source = "koopmanschap2026gpu"
+date = "2026-06"
+note = "Sec. 5.3.2: Epoch traced 15.7M of 20.2M chips, 'on the order of a million chips unaccounted for'"
+
+[phys-smuggled-china]
+value = 660000
+unit = "H100e"
+basis = "modelled"
+fmt = "sig2"
+label = "cumulative AI compute smuggled into China through 2025, median"
+source = "juniewicz2026smuggling"
+date = "2025"
+note = "90% CI 290,000 to 1.6 million; about a third of China's compute"
+
+[phys-smuggled-china-low]
+value = 290000
+unit = "H100e"
+basis = "modelled"
+fmt = "sig2"
+label = "low end of the 90% CI for compute smuggled into China through 2025"
+source = "juniewicz2026smuggling"
+date = "2025"
+
+[phys-smuggled-china-high]
+value = 1.6e6
+unit = "H100e"
+basis = "modelled"
+fmt = "sig2"
+label = "high end of the 90% CI for compute smuggled into China through 2025"
+source = "juniewicz2026smuggling"
+date = "2025"
+
+[phys-diversion-detect-rate]
+value = 0.25
+unit = ""
+basis = "modelled"
+fmt = "%"
+label = "median share of chip diversion cases detected, in Epoch's smuggling model"
+source = "juniewicz2026smuggling"
+date = "2026-04"
+
+[phys-huawei-commerce]
+value = 200000
+unit = ""
+basis = "vendor"
+fmt = "sig2"
+label = "Huawei Ascend production capacity for 2025 per the US Commerce Department, at most"
+source = "zafar2025kessler"
+date = "2025-06"
+note = "a government statement about a rival; units are capacity, not shipments"
+
+[phys-huawei-semianalysis]
+value = 805000
+unit = ""
+basis = "modelled"
+fmt = "sig3"
+label = "Huawei Ascend units shipped in 2025 per SemiAnalysis"
+source = "patel2025ascend"
+date = "2025-09"
+
+[phys-epoch-dc-sites]
+value = 96
+unit = "sites"
+basis = "measured"
+fmt = ",.0f"
+label = "AI data centres in Epoch's Frontier Data Centers database"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+
+[phys-epoch-dc-it-power]
+value = 15.1
+unit = "GW"
+basis = "measured"
+fmt = ".1f"
+label = "IT power of the sites in Epoch's database"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+
+[phys-epoch-dc-h100e]
+value = 15.8e6
+unit = "H100e"
+basis = "measured"
+fmt = "sig3"
+label = "compute of the sites in Epoch's database"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+
+[phys-epoch-dc-coverage]
+value = 0.43
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of global deployed AI compute covered by Epoch's database"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+note = "90% CI 29% to 77%"
+
+[phys-epoch-dc-coverage-low]
+value = 0.29
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "low end of the 90% CI for the database's coverage of global AI compute"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+
+[phys-epoch-dc-coverage-high]
+value = 0.77
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "high end of the 90% CI for the database's coverage of global AI compute"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+
+[phys-sat-it-accuracy]
+value = 1.4
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "factor within which a satellite-based IT power estimate falls 80% of the time"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+note = "compute within 1.5x; the cooling model can be off by up to 2x either way"
+
+[phys-sat-it-confidence]
+value = 0.80
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of the time a satellite-based IT power estimate falls within its stated factor"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+
+[phys-epoch-dc-small]
+value = 43
+unit = "sites"
+basis = "measured"
+fmt = ",.0f"
+label = "sites in Epoch's database below 100 MW"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+note = "the survey helper's count from data_centers.csv"
+
+[phys-epoch-small-threshold]
+value = 100
+unit = "MW"
+basis = "measured"
+fmt = ",.0f"
+label = "size below which Epoch says sites are hard to find, used to count small sites"
+source = "epoch-datacenters-2026"
+date = "2026-11"
+note = "methodology: smaller sites '(<100 MW)' are hard to find"
+
+[phys-colossus1-h100]
+value = 100000
+unit = ""
+basis = "measured"
+fmt = "sig2"
+label = "H100s online at Colossus 1 on 2 September 2024"
+source = "epoch-datacenters-2026"
+date = "2024-09"
+
+[phys-colossus1-it-power]
+value = 139
+unit = "MW"
+basis = "measured"
+fmt = ",.0f"
+label = "Colossus 1 IT power at 100,000 H100"
+source = "epoch-datacenters-2026"
+date = "2024-09"
+note = "timelines CSV; Epoch's estimate from imagery and disclosures"
+
+[phys-colossus1-facility-power]
+value = 181
+unit = "MW"
+basis = "measured"
+fmt = ",.0f"
+label = "Colossus 1 facility power at 100,000 H100"
+source = "epoch-datacenters-2026"
+date = "2024-09"
+note = "timelines CSV"
+
+[phys-colossus1-build-days]
+value = 131
+unit = "days"
+basis = "measured"
+fmt = ",.0f"
+label = "days from construction start to 100,000 H100 online at Colossus 1"
+source = "epoch-datacenters-2026"
+date = "2024-09"
+note = "24 April to 2 September 2024"
+
+[phys-fairwater-gpt4-runs]
+value = 23
+unit = "runs a month"
+basis = "modelled"
+fmt = ",.0f"
+label = "GPT-4-scale training runs Microsoft's Fairwater Atlanta could do each month"
+source = "lee2025"
+date = "2025-12"
+note = "GPT-4's compute and the utilisation assumed are not stated on the page"
+
+[phys-supercomputer-power-growth]
+value = 2.0
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "yearly growth of the power needs of leading AI supercomputers, 2019 to 2025"
+source = "pilz2025supercomputers"
+date = "2025-04"
+note = "90% CI 1.6 to 2.2"
+
+[phys-colossus-2025-power]
+value = 300
+unit = "MW"
+basis = "measured"
+fmt = ",.0f"
+label = "power required by xAI's Colossus with 200,000 AI chips (March 2025)"
+source = "pilz2025supercomputers"
+date = "2025-03"
+
+[phys-largest-run-2030-low]
+value = 4
+unit = "GW"
+basis = "modelled"
+fmt = ",.0f"
+label = "low end of the projected power of the largest training runs in 2030"
+source = "you2025"
+date = "2025-08"
+
+[phys-largest-run-2030-high]
+value = 16
+unit = "GW"
+basis = "modelled"
+fmt = ",.0f"
+label = "high end of the projected power of the largest training runs in 2030"
+source = "you2025"
+date = "2025-08"
+
+# ---------------------------------------------------------------------------------------------
+# P1 and P3. Inference: FLOP per token and the memory-bandwidth bound
+
+[phys-flop-per-param-token]
+value = 2
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "matmul operations per parameter per token in a decoder's forward pass"
+source = "pope2022"
+date = "2022-11"
+note = "Sec. 2: 'An N-parameter decoder-only model requires 2N matmul FLOPs in the forward pass per token', citing Kaplan et al.; attention FLOPs excluded"
+
+[phys-palm-params]
+value = 540
+unit = "billion parameters"
+basis = "vendor"
+fmt = ",.0f"
+label = "parameters of PaLM 540B, the dense model in Pope et al.'s inference study"
+source = "pope2022"
+date = "2022-11"
+note = "the authors padded attention heads, adding 18B parameters, for partitioning"
+
+[phys-pope-chips]
+value = 64
+unit = ""
+basis = "vendor"
+fmt = ",.0f"
+label = "TPU v4 chips serving PaLM 540B in the low-latency result"
+source = "pope2022"
+date = "2022-11"
+
+[phys-pope-latency]
+value = 29
+unit = "ms"
+basis = "vendor"
+fmt = ",.0f"
+label = "measured low-batch generation latency per token, PaLM 540B with int8 weights on 64 TPU v4"
+source = "pope2022"
+date = "2022-11"
+note = "Google authors measuring Google hardware; not independently reproduced"
+
+[phys-pope-mfu-prefill]
+value = 0.76
+unit = ""
+basis = "vendor"
+fmt = "%"
+label = "model FLOPs utilisation Pope et al. reached for large-batch processing of input tokens"
+source = "pope2022"
+date = "2022-11"
+note = "PaLM 540B on TPU v4; prefill, not generation"
+
+[phys-tpuv4-hbm-bw]
+value = 1200
+unit = "GB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "TPU v4 memory bandwidth per chip"
+source = "pope2022"
+date = "2022-11"
+note = "32 GiB of HBM per chip; 270 GB/s interconnect"
+
+[phys-int8-bytes]
+value = 1
+unit = "bytes per weight"
+basis = "spec"
+fmt = ",.0f"
+label = "storage of one int8-quantised weight"
+source = "pope2022"
+date = "2022-11"
+
+[phys-util-ref]
+value = 0.40
+unit = ""
+basis = "assumption"
+fmt = "%"
+label = "model FLOPs utilisation used for the reference calculations in this chapter"
+note = "inside INTELLECT-1's measured 36.2-41.4% MFU; below Pope et al.'s 76% for large-batch prefill"
+
+[phys-intellect1-mfu-low]
+value = 0.362
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "low end of INTELLECT-1's model FLOPs utilisation across continents"
+source = "jaghouar2024intellect1"
+date = "2024-12"
+
+[phys-intellect1-mfu-high]
+value = 0.414
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "high end of INTELLECT-1's model FLOPs utilisation across continents"
+source = "jaghouar2024intellect1"
+date = "2024-12"
+
+[phys-intellect1-params]
+value = 10
+unit = "billion parameters"
+basis = "measured"
+fmt = ",.0f"
+label = "size of INTELLECT-1, trained across three continents"
+source = "jaghouar2024intellect1"
+date = "2024-12"
+
+[phys-intellect1-gpus]
+value = 112
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "most H100s INTELLECT-1 used at once, across five countries"
+source = "jaghouar2024intellect1"
+date = "2024-12"
+
+[phys-intellect1-sync]
+value = 38
+unit = "minutes"
+basis = "measured"
+fmt = ",.0f"
+label = "INTELLECT-1's local training time between all-reduce operations"
+source = "jaghouar2024intellect1"
+date = "2024-12"
+
+[phys-intellect1-bw-low]
+value = 0.5
+unit = "Gbit/s"
+basis = "measured"
+fmt = ".1f"
+label = "low end of INTELLECT-1's inter-node bandwidth"
+source = "jaghouar2024intellect1"
+date = "2024-12"
+
+[phys-intellect1-bw-high]
+value = 4
+unit = "Gbit/s"
+basis = "measured"
+fmt = ",.0f"
+label = "high end of INTELLECT-1's inter-node bandwidth"
+source = "jaghouar2024intellect1"
+date = "2024-12"
+
+[phys-consumer-lag-low]
+value = 6
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "low end of the lag before open models on one consumer GPU match the frontier"
+source = "somala2025consumergpu"
+date = "2025-08"
+
+[phys-consumer-lag-high]
+value = 12
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "high end of the lag before open models on one consumer GPU match the frontier"
+source = "somala2025consumergpu"
+date = "2025-08"
+
+# ---------------------------------------------------------------------------------------------
+# P3. Bandwidth trends and low-communication training
+
+[phys-gholami-flops-growth]
+value = 3.0
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "growth of peak server FLOPS every two years over 20 years"
+source = "gholami2024"
+date = "2024-03"
+note = "abstract only"
+
+[phys-gholami-dram-growth]
+value = 1.6
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "growth of DRAM bandwidth every two years over 20 years"
+source = "gholami2024"
+date = "2024-03"
+note = "abstract only"
+
+[phys-gholami-interconnect-growth]
+value = 1.4
+unit = ""
+basis = "measured"
+fmt = ".1f"
+label = "growth of interconnect bandwidth every two years over 20 years"
+source = "gholami2024"
+date = "2024-03"
+note = "abstract only"
+
+[phys-hobbhahn-mem-bw-doubling]
+value = 4.1
+unit = "years"
+basis = "measured"
+fmt = ".1f"
+label = "doubling time of ML accelerator memory bandwidth"
+source = "hobbhahn2023"
+date = "2023-11"
+
+[phys-hobbhahn-flops-doubling]
+value = 2.3
+unit = "years"
+basis = "measured"
+fmt = ".1f"
+label = "doubling time of ML accelerator FP32 FLOP/s"
+source = "hobbhahn2023"
+date = "2023-11"
+
+[phys-diloco-comm-reduction]
+value = 500
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "communication reduction of DiLoCo on 8 workers at equal quality"
+source = "douillard2023diloco"
+date = "2023-11"
+note = "C4, models up to 400M parameters"
+
+[phys-streaming-bw-low]
+value = 1
+unit = "Gbit/s"
+basis = "measured"
+fmt = ",.0f"
+label = "low end of the bandwidth at which Streaming DiLoCo keeps 95% utilisation for 1B to 100B models"
+source = "douillard2025streaming"
+date = "2025-01"
+note = "Figure 4; a simulation of compute utilisation"
+
+[phys-streaming-bw-high]
+value = 5
+unit = "Gbit/s"
+basis = "measured"
+fmt = ",.0f"
+label = "high end of the bandwidth at which Streaming DiLoCo keeps 95% utilisation"
+source = "douillard2025streaming"
+date = "2025-01"
+
+[phys-streaming-util]
+value = 0.95
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "compute utilisation Streaming DiLoCo reaches at 1 to 5 Gbit/s"
+source = "douillard2025streaming"
+date = "2025-01"
+note = "Figure 4"
+
+[phys-streaming-size-low]
+value = 1
+unit = "billion parameters"
+basis = "measured"
+fmt = ",.0f"
+label = "smallest model in Streaming DiLoCo's utilisation comparison"
+source = "douillard2025streaming"
+date = "2025-01"
+
+[phys-streaming-size-high]
+value = 100
+unit = "billion parameters"
+basis = "measured"
+fmt = ",.0f"
+label = "largest model in Streaming DiLoCo's utilisation comparison"
+source = "douillard2025streaming"
+date = "2025-01"
+
+[phys-dp-bw-low]
+value = 100
+unit = "Gbit/s"
+basis = "measured"
+fmt = ",.0f"
+label = "bandwidth data parallelism needs for 95% utilisation at 1B parameters"
+source = "douillard2025streaming"
+date = "2025-01"
+note = "Figure 4; 200 and 300 Gbit/s at 10B and 100B"
+
+[phys-dp-bw-high]
+value = 300
+unit = "Gbit/s"
+basis = "measured"
+fmt = ",.0f"
+label = "bandwidth data parallelism needs for 95% utilisation at 100B parameters"
+source = "douillard2025streaming"
+date = "2025-01"
+
+[phys-decentral-growth]
+value = 20
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "yearly growth of decentralised training compute since 2020"
+source = "sevilla2025decentralized"
+date = "2025-12"
+
+[phys-decentral-largest]
+value = 6e23
+unit = "FLOP"
+basis = "measured"
+fmt = ".0e"
+label = "top of the range of the largest decentralised pretraining runs"
+source = "sevilla2025decentralized"
+date = "2025-12"
+note = "range 6e22 to 6e23 FLOP"
+
+[phys-decentral-gap]
+value = 1000
+unit = ""
+basis = "measured"
+fmt = ",.0f"
+label = "factor by which the largest decentralised runs trail the largest training runs"
+source = "sevilla2025decentralized"
+date = "2025-12"
+
+[phys-decentral-catchup]
+value = 5.5
+unit = "years"
+basis = "modelled"
+fmt = ".1f"
+label = "years for decentralised training to catch the frontier if both trends held"
+source = "sevilla2025decentralized"
+date = "2025-12"
+note = "the author expects it will not happen this decade"
+
+[phys-consumer-upload]
+value = 60
+unit = "Mbit/s"
+basis = "measured"
+fmt = ",.0f"
+label = "typical consumer upload bandwidth"
+source = "sevilla2025decentralized"
+date = "2025-12"
+
+[phys-erdil-util-limit]
+value = 1e28
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "training run size above which data movement significantly lowers utilisation"
+source = "erdil2024datamovement"
+date = "2024-11"
+note = "for a three-month run"
+
+[phys-erdil-hard-limit]
+value = 1e31
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "training run size infeasible even at low utilisation"
+source = "erdil2024datamovement"
+date = "2024-11"
+
+[phys-rtx4090-interconnect]
+value = 64
+unit = "GB/s"
+basis = "vendor"
+fmt = ",.0f"
+label = "RTX 4090 interconnect bandwidth, as Shavit compares with the H100"
+source = "shavit2023chinchilla"
+date = "2023"
+note = "Appendix A.2"
+
+# ---------------------------------------------------------------------------------------------
+# P4. Distributed training below facility thresholds (Rahman 2026, Table 1)
+
+[phys-rahman-gpus-per-node]
+value = 16
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "GPUs per node in Rahman's minimum-cost configurations at 1e24 and 1e26 FLOP"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e24-nodes]
+value = 2
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "16-H100 nodes in Rahman's minimum-cost configuration for 1e24 FLOP"
+source = "rahman2026"
+date = "2026-05"
+note = "Table 1; FP8; efficiency 0.80"
+
+[phys-rahman-1e24-cost]
+value = 1.6
+unit = "million USD"
+basis = "modelled"
+fmt = ".1f"
+label = "hardware cost of Rahman's 1e24 FLOP distributed configuration"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e25-target]
+value = 1e25
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "local compute target of Rahman's middle distributed configuration"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e25-nodes]
+value = 34
+unit = "nodes"
+basis = "modelled"
+fmt = ",.0f"
+label = "16-GH200 nodes in Rahman's configuration for 1e25 FLOP"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e25-quality]
+value = 6.4e24
+unit = "FLOP"
+basis = "modelled"
+fmt = ".1e"
+label = "quality-adjusted compute of Rahman's 1e25 FLOP distributed configuration"
+source = "rahman2026"
+date = "2026-05"
+note = "efficiency 0.37"
+
+[phys-rahman-1e25-cost]
+value = 30.7
+unit = "million USD"
+basis = "modelled"
+fmt = ".1f"
+label = "hardware cost of Rahman's 1e25 FLOP distributed configuration"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e26-local]
+value = 1e26
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "local compute of Rahman's largest distributed configuration"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e26-nodes]
+value = 4706
+unit = "nodes"
+basis = "modelled"
+fmt = ",.0f"
+label = "16-H100 nodes in Rahman's configuration for 1e26 FLOP of local compute"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e26-quality]
+value = 2.1e25
+unit = "FLOP"
+basis = "modelled"
+fmt = ".1e"
+label = "quality-adjusted compute of Rahman's 1e26 FLOP local configuration"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-1e26-cost]
+value = 3.80
+unit = "billion USD"
+basis = "modelled"
+fmt = ".2f"
+label = "hardware cost of Rahman's 1e26 FLOP distributed configuration"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-bandwidth]
+value = 100
+unit = "Mbit/s"
+basis = "modelled"
+fmt = ",.0f"
+label = "link bandwidth in Rahman's distributed configurations"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-cost-ratio]
+value = 3
+unit = ""
+basis = "modelled"
+fmt = ",.0f"
+label = "cost of distributed training at 100 Mbps relative to centralised"
+source = "rahman2026"
+date = "2026-05"
+
+[phys-rahman-run-now]
+value = 4.5
+unit = "months"
+basis = "modelled"
+fmt = ".1f"
+label = "longest sensible training run today, T = 1/(gH + gS + gI)"
+source = "rahman2026"
+date = "2026-05"
+note = "Eq. 4; set by hardware, software and investment growth"
+
+[phys-rahman-run-pause]
+value = 24
+unit = "months"
+basis = "modelled"
+fmt = ",.0f"
+label = "longest sensible training run under the growth rates assumed for a pause"
+source = "rahman2026"
+date = "2026-05"
+note = "'up to about two years'"
+
+[phys-miri-cluster-cap]
+value = 16
+unit = "H100e"
+basis = "design"
+fmt = ",.0f"
+label = "largest chip concentration MIRI's draft agreement allows outside monitored facilities"
+source = "scher2025agreement"
+date = "2025"
+note = "p. 28: may need to fall to 8"
+
+[phys-miri-strict]
+value = 1e24
+unit = "FLOP"
+basis = "design"
+fmt = ".0e"
+label = "MIRI's prohibited training threshold (Strict Threshold)"
+source = "scher2025agreement"
+date = "2025"
+
+[phys-miri-monitored]
+value = 1e22
+unit = "FLOP"
+basis = "design"
+fmt = ".0e"
+label = "MIRI's monitored training threshold"
+source = "scher2025agreement"
+date = "2025"
+
+# ---------------------------------------------------------------------------------------------
+# P4. Detection limits of each channel
+
+[phys-e8-c-high]
+value = 1e27
+unit = "FLOP"
+basis = "design"
+fmt = ".0e"
+label = "top of the training compute range E8 sweeps"
+
+[phys-sat-reliable]
+value = 10
+unit = "MW"
+basis = "measured"
+fmt = ",.0f"
+label = "facility power above which a satellite classifier found every facility in its sample"
+source = "koopmanschap2026gpu"
+date = "2026-06"
+note = "App. B, Clymer's classifier as reported; a small sample"
+
+[phys-sat-miss-max]
+value = 3.2
+unit = "MW"
+basis = "measured"
+fmt = ".1f"
+label = "largest facility the satellite classifier missed"
+source = "koopmanschap2026gpu"
+date = "2026-06"
+note = "misses at 1.2, 0.5, 3.2 and 0.5 MW"
+
+[phys-container-cluster]
+value = 100
+unit = "H100e"
+basis = "assumption"
+fmt = ",.0f"
+label = "cluster that fits in a 12-metre container with no noticeable external cooling"
+source = "koopmanschap2026gpu"
+date = "2026-06"
+
+[phys-commercial-load]
+value = 100
+unit = "kW"
+basis = "assumption"
+fmt = ",.0f"
+label = "load that sits among millions of mid-size commercial customers"
+source = "koopmanschap2026gpu"
+date = "2026-06"
+
+[phys-scher-5000-h100]
+value = 6
+unit = "MW"
+basis = "assumption"
+fmt = ",.0f"
+label = "power of a data centre with 5,000 H100s in Scher and Thiergart's appendix"
+source = "scher2025"
+date = "2024-11"
+note = "'similar to ~5,500 U.S. homes'"
+
+[phys-scher-h100-count]
+value = 5000
+unit = "H100"
+basis = "assumption"
+fmt = "sig2"
+label = "H100s in Scher and Thiergart's example data centre"
+source = "scher2025"
+date = "2024-11"
+
+[phys-sastry-dgx-kw]
+value = 10.2
+unit = "kW"
+basis = "vendor"
+fmt = ".1f"
+label = "power of an eight-chip DGX H100 as Sastry et al. give it"
+source = "sastry2024compute"
+date = "2024-02"
+note = "note 36"
+
+[phys-sastry-dgx-chips]
+value = 8
+unit = "chips"
+basis = "vendor"
+fmt = ",.0f"
+label = "chips in the DGX whose power Sastry et al. quote"
+source = "sastry2024compute"
+date = "2024-02"
+
+[phys-jing-cluster-power]
+value = 126
+unit = "MW"
+basis = "measured"
+fmt = ",.0f"
+label = "lower bound on the electricity draw of the Tokyo data-centre cluster studied from orbit"
+source = "jing2026"
+date = "2023"
+note = "FY2023"
+
+[phys-jing-night-low]
+value = 0.6
+unit = "°C"
+basis = "measured"
+fmt = ".1f"
+label = "low end of the bound on deep-night facility-scale surface temperature change"
+source = "jing2026"
+date = "2026-11"
+note = "changes 'indistinguishable from zero'"
+
+[phys-jing-night-high]
+value = 1.2
+unit = "°C"
+basis = "measured"
+fmt = ".1f"
+label = "high end of the bound on deep-night facility-scale surface temperature change"
+source = "jing2026"
+date = "2026-11"
+
+[phys-utility-study]
+value = 5
+unit = "MW"
+basis = "spec"
+fmt = ",.0f"
+label = "load at which a US utility requires a system impact study"
+source = "mlgw2025"
+date = "2025-05"
+note = "MLGW and TVA under FERC rules; on-site generation behind the meter is outside it"
+
+[phys-ercot-queue]
+value = 410
+unit = "GW"
+basis = "measured"
+fmt = ",.0f"
+label = "large loads seeking interconnection in Texas, about 87% data centres"
+source = "ercot2026"
+date = "2026-03"
+
+[phys-dc-above-10mw]
+value = 500
+unit = "sites"
+basis = "modelled"
+fmt = ",.0f"
+label = "data centres above 10 MW worldwide, estimate"
+source = "pilz2023"
+date = "2023-11"
+note = "abstract: 'likely about 500'"
+
+[phys-water-new-carlisle]
+value = 21.0
+unit = "million gallons a day"
+basis = "measured"
+fmt = ".1f"
+label = "water use of the New Carlisle site at 1,244 MW facility power"
+source = "epoch-datacenters-2026"
+date = "2026-10"
+
+[phys-water-fairwater-wi]
+value = 0.0077
+unit = "million gallons a day"
+basis = "measured"
+fmt = ".4f"
+label = "water use of the closed-loop Fairwater Wisconsin site at 442 MW"
+source = "epoch-datacenters-2026"
+date = "2026-04"
+
+[phys-meter-detect]
+value = 0.96
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of undisguised training runs a facility power tracker detects at 1% false alarms (simulated power)"
+source = "kimpson2026dcpower"
+date = "2026-10"
+note = "meter at 2 Hz or faster; simulated facility power"
+
+[phys-meter-day-detect]
+value = 0.87
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "share of runs using the strongest disguise still caught over a day (simulated power)"
+source = "kimpson2026dcpower"
+date = "2026-10"
+
+[phys-meter-evasion-cost-low]
+value = 0.93
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "low end of the extra compute the strongest disguise costs in small-scale training"
+source = "kimpson2026dcpower"
+date = "2026-10"
+
+[phys-meter-evasion-cost-high]
+value = 2.67
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "high end of the extra compute the strongest disguise costs in small-scale training"
+source = "kimpson2026dcpower"
+date = "2026-10"
+
+[phys-beta-worst]
+value = 1.16
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "largest hidden computation a power trace cannot exclude, worst case, as a fraction of declared capacity (A100)"
+source = "kimpson2026b"
+date = "2026-11"
+note = "abstract only"
+
+[phys-beta-matched]
+value = 0.41
+unit = ""
+basis = "measured"
+fmt = ".2f"
+label = "hidden computation an adversarial matched-energy schedule keeps, fraction of declared capacity"
+source = "kimpson2026b"
+date = "2026-11"
+note = "'hides at least 0.41'"
+
+[phys-beta-restricted]
+value = 0.059
+unit = ""
+basis = "measured"
+fmt = ".3f"
+label = "hidden fraction with re-execution of declared work, maximally restricted case"
+source = "kimpson2026b"
+date = "2026-11"
+
+[phys-supply-current-detect]
+value = 0.999
+unit = ""
+basis = "measured"
+fmt = ".1%"
+label = "share of prohibited-training windows flagged from GPU supply current against a declared baseline"
+source = "kimpson2026supply"
+date = "2026-11"
+note = "fails silently if the baseline recording is corrupt"
+
+[phys-sidechannel-accuracy]
+value = 0.97
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "accuracy separating training, inference and non-AI work from an H200's power draw"
+source = "gargiulo2026sidechannel"
+date = "2026"
+
+[phys-shavit-inspectors]
+value = 232
+unit = "inspectors"
+basis = "modelled"
+fmt = ",.0f"
+label = "inspectors to catch a 1e25 FLOP run within 30 days with probability 0.9 by chip sampling"
+source = "shavit2023chinchilla"
+date = "2023"
+note = "footnote 5: 10^7 chips at 3x H100 throughput, 1,000 chips per inspector-year; assumes every chip has the firmware"
+
+[phys-shavit-run]
+value = 1e25
+unit = "FLOP"
+basis = "modelled"
+fmt = ".0e"
+label = "training run size in Shavit's worldwide chip-sampling estimate"
+source = "shavit2023chinchilla"
+date = "2023"
+
+[phys-shavit-days]
+value = 30
+unit = "days"
+basis = "modelled"
+fmt = ",.0f"
+label = "time after a run's completion within which Shavit's sampling estimate catches it"
+source = "shavit2023chinchilla"
+date = "2023"
+
+[phys-shavit-prob]
+value = 0.9
+unit = ""
+basis = "modelled"
+fmt = ".1f"
+label = "probability of catching the run in Shavit's sampling estimate"
+source = "shavit2023chinchilla"
+date = "2023"
+
+[phys-meter-false-alarm]
+value = 0.01
+unit = ""
+basis = "measured"
+fmt = "%"
+label = "false-alarm rate at which the facility power tracker's detection rate is quoted"
+source = "kimpson2026dcpower"
+date = "2026-10"
+
+[phys-china-solar-2025]
+value = 315.07
+unit = "GW"
+basis = "measured"
+fmt = ",.0f"
+label = "solar capacity China added in 2025 (AC)"
+source = "shaw2026chinasolar"
+date = "2025"
+
+[phys-china-wind-2025]
+value = 119.33
+unit = "GW"
+basis = "measured"
+fmt = ",.0f"
+label = "wind capacity China added in 2025"
+source = "shaw2026chinasolar"
+date = "2025"
+
+[phys-us-interconnect-months]
+value = 61
+unit = "months"
+basis = "measured"
+fmt = ",.0f"
+label = "median time from interconnection request to operation, US power projects built in 2025"
+source = "rand2026queued"
+date = "2025"
+
+[phys-horinger-relative]
+value = 0.40
+unit = ""
+basis = "modelled"
+fmt = "%"
+label = "compute per unit of power at Huawei's Horinger site relative to leading US sites"
+source = "cottier2026horinger"
+date = "2026-11"
+
+[phys-halstead-10mw-3y]
+value = 0.20
+unit = ""
+basis = "assumption"
+fmt = "%"
+label = "chance a single covert 10 MW site is detected by year 3 (intuition-based)"
+source = "halstead-ai2040"
+
+[phys-halstead-1gw-3y]
+value = 0.40
+unit = ""
+basis = "assumption"
+fmt = "%"
+label = "chance a single covert 1,000 MW site is detected by year 3 (intuition-based)"
+source = "halstead-ai2040"

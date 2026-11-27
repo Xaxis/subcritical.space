@@ -1,0 +1,1606 @@
+# Part I, 4: the cognitive and functional perspective (research/014-cognitive.md).
+# Every input is prefixed cog-. Derived numbers are in model/parts/014_cognitive.py.
+# basis: measured | vendor | spec | design | assumption | modelled (see model/ledger.py).
+# Parameters fixed by someone else's published definition or threshold are "spec"; estimates in
+# essays and forecasts are "modelled"; a lab's report about its own system is "vendor".
+
+# ---------------------------------------------------------------------------------------------
+# F1. Speed, copies and quality
+
+[cog-rebench-attempts-human]
+value = 3.4
+unit = "/h"
+basis = "measured"
+fmt = ".1f"
+label = "scored attempts an hour by human experts on RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "Sec. 5.1"
+
+[cog-rebench-attempts-agent]
+value = 36.8
+unit = "/h"
+basis = "measured"
+fmt = ".1f"
+label = "scored attempts an hour by the AIDE agent on RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "Sec. 5.1 (the Modular scaffold made 25.3)"
+
+[cog-rebench-agent-cost]
+value = 123
+unit = "USD"
+basis = "measured"
+fmt = ",.0f"
+label = "approximate cost of one 8-hour agent run on RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "Sec. 6.2, API cost"
+
+[cog-rebench-human-cost]
+value = 1855
+unit = "USD"
+basis = "measured"
+fmt = ",.0f"
+label = "approximate pay to a human expert for one 8-hour RE-Bench run"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "Sec. 6.2"
+
+[cog-rebench-run-hours]
+value = 8
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "length of one RE-Bench human attempt"
+source = "wijk2024rebench"
+date = "2024-11"
+
+[cog-rebench-human-attempts]
+value = 71
+basis = "measured"
+fmt = ",.0f"
+label = "8-hour attempts by human experts in the RE-Bench baseline"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "abstract; 61 distinct experts"
+
+[cog-rebench-ai-over-human-2h]
+value = 4
+basis = "measured"
+fmt = ",.0f"
+label = "best agent's score over human experts' score at a 2-hour budget, RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "abstract; equal GPU hours for both sides"
+
+[cog-rebench-human-over-ai-32h]
+value = 2
+basis = "measured"
+fmt = ",.0f"
+label = "human experts' score over the top agent's score at a 32-hour budget, RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "abstract; best of four 8-hour runs"
+
+[cog-rebench-budget-short]
+value = 2
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "shortest time budget compared in RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+
+[cog-rebench-budget-mid]
+value = 8
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "time budget at which humans narrowly exceeded agents in RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+
+[cog-rebench-budget-long]
+value = 32
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "longest time budget compared in RE-Bench"
+source = "wijk2024rebench"
+date = "2024-11"
+
+[cog-gdpval-naive-speedup]
+value = 90
+basis = "measured"
+fmt = ",.0f"
+label = "GPT-5's naive speed gain over experts on GDPval tasks, review not counted"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "Table 2"
+
+[cog-gdpval-review-speedup]
+value = 1.39
+basis = "measured"
+fmt = ".2f"
+label = "GPT-5's speed gain on GDPval under 'try n times, then fix', review counted"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "Table 2 ('try 1x, then fix' gives 1.12)"
+
+[cog-gdpval-naive-cost-gain]
+value = 474
+basis = "measured"
+fmt = ",.0f"
+label = "GPT-5's naive cost gain over experts on GDPval tasks"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "Table 2"
+
+[cog-gdpval-review-cost-gain]
+value = 1.63
+basis = "measured"
+fmt = ".2f"
+label = "GPT-5's cost gain on GDPval under 'try n times, then fix'"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "Table 2"
+
+[cog-gdpval-expert-minutes]
+value = 404
+unit = "min"
+basis = "measured"
+fmt = ",.0f"
+label = "expert time per GDPval gold task"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "App. A.2.1; review adds 109 minutes"
+
+[cog-gdpval-expert-cost]
+value = 361
+unit = "USD"
+basis = "measured"
+fmt = ",.0f"
+label = "expert cost per GDPval gold task"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "App. A.2.1, from median wages; review adds 86 USD"
+
+[cog-horizon-human-rate]
+value = 143.61
+unit = "USD/h"
+basis = "assumption"
+fmt = ",.2f"
+label = "hourly human cost METR assumed for its cost comparison (an L4 engineer's salary over 2,000 hours)"
+source = "kwa2025horizon"
+date = "2025-03"
+note = "Sec. 8.2; METR's assumption, not a measurement"
+
+[cog-horizon-cheap-share]
+value = 0.8
+basis = "measured"
+fmt = "%"
+label = "share of successful agent runs costing under a tenth of the human cost (lower bound)"
+source = "kwa2025horizon"
+date = "2025-03"
+note = "Sec. 8.2, 'more than 80%'; rests on the assumed human rate"
+
+[cog-ctf-runtime-share]
+value = 0.2
+basis = "measured"
+fmt = "%"
+label = "best autonomous agent's cumulative runtime as a share of the human teams'"
+source = "tang2026ctfcollab"
+date = "2026-02"
+note = "introduction, 'only about 1/5'; university-level onsite CTF"
+
+[cog-ctf-cost-low]
+value = 95.32
+unit = "USD"
+basis = "measured"
+fmt = ",.2f"
+label = "API cost of the best autonomous CTF agent, lower of the two figures the paper gives"
+source = "tang2026ctfcollab"
+date = "2026-02"
+note = "Sec. 7.2"
+
+[cog-ctf-cost-high]
+value = 96.32
+unit = "USD"
+basis = "measured"
+fmt = ",.2f"
+label = "API cost of the best autonomous CTF agent, higher of the two figures the paper gives"
+source = "tang2026ctfcollab"
+date = "2026-02"
+note = "introduction"
+
+[cog-ctf-points]
+value = 4900
+unit = "points"
+basis = "measured"
+fmt = ",.0f"
+label = "best autonomous agent's score, which would have placed second among the human teams"
+source = "tang2026ctfcollab"
+date = "2026-02"
+note = "Sec. 7.2; agent-only scoreboard run in parallel, not entered against the teams; the date is the paper's (submitted 2026-02-24), the event itself is undated"
+
+[cog-ctf-duration]
+value = 24
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "length of the onsite CTF"
+source = "tang2026ctfcollab"
+date = "2026-02"
+note = "Sec. 4.2"
+
+[cog-ctf-undergrad-share]
+value = 0.829
+basis = "measured"
+fmt = ".1%"
+label = "share of the CTF study's participants who were undergraduates"
+source = "tang2026ctfcollab"
+date = "2026-02"
+note = "per the independent spot-check (research/notes/11-spot-check.md); 14.6% were graduate students"
+
+[cog-ctf-challenges]
+value = 17
+unit = "challenges"
+basis = "spec"
+fmt = ",.0f"
+label = "new challenges in the onsite CTF"
+source = "tang2026ctfcollab"
+date = "2026-02"
+note = "per the independent spot-check (research/notes/11-spot-check.md)"
+
+[cog-sc-copies]
+value = 30
+basis = "spec"
+fmt = ",.0f"
+label = "agents per human research engineer in AI 2027's superhuman-coder milestone"
+source = "lifland2025timelines"
+date = "2025-04"
+note = "SC definition"
+
+[cog-sc-speed]
+value = 30
+basis = "spec"
+fmt = ",.0f"
+label = "speed of each agent relative to a human engineer in the superhuman-coder milestone"
+source = "lifland2025timelines"
+date = "2025-04"
+note = "SC definition"
+
+[cog-sc-compute-share]
+value = 0.05
+basis = "spec"
+fmt = "%"
+label = "share of the company's compute that runs the superhuman-coder agents"
+source = "lifland2025timelines"
+date = "2025-04"
+note = "SC definition"
+
+[cog-asi-speed-factor]
+value = 10
+basis = "spec"
+fmt = ",.0f"
+label = "speed factor (lower bound) by which Genewein et al.'s ASI beats the expert collective"
+source = "genewein2026agiasi"
+date = "2026-11"
+note = "Sec. 3 remark, 'a factor of 10 or more'"
+
+[cog-asi-collective-years]
+value = 10
+unit = "yr"
+basis = "spec"
+fmt = ",.0f"
+label = "working time of Genewein et al.'s reference expert collective"
+source = "genewein2026agiasi"
+date = "2026-11"
+note = "Sec. 3 remark; tens of thousands of experts with 2010 technology"
+
+[cog-rsp-cost-factor]
+value = 5
+basis = "spec"
+fmt = ",.0f"
+label = "factor within which AI must match the cost of Anthropic's whole research staff (RSP v3.4)"
+source = "anthropic2026rsp"
+date = "2026-07"
+note = "automated AI R&D threshold, 'within a factor of 5'"
+
+[cog-pf-wallclock-fraction]
+value = 0.2
+basis = "spec"
+fmt = "%"
+label = "share of 2024 wall-clock time for a generational improvement, OpenAI's Critical self-improvement level"
+source = "openai2025preparedness"
+date = "2025-04"
+note = "Table 1, lagging indicator, sustained for several months"
+
+[cog-hendrycks-pace]
+value = 100
+basis = "modelled"
+fmt = ",.0f"
+label = "pace relative to a human in Hendrycks et al.'s illustration of an intelligence recursion"
+source = "hendrycks2025superintelligence"
+date = "2025-04"
+note = "an illustration, not a measurement"
+
+[cog-hendrycks-copies]
+value = 10000
+basis = "modelled"
+fmt = ",.0f"
+label = "copies in Hendrycks et al.'s illustration of an intelligence recursion"
+source = "hendrycks2025superintelligence"
+date = "2025-04"
+note = "an illustration, not a measurement"
+
+[cog-aschenbrenner-equivalents]
+value = 1e8
+basis = "modelled"
+fmt = "sig2"
+label = "automated researchers ('human-equivalents') in Aschenbrenner's essay"
+source = "aschenbrenner2024sa"
+date = "2024-06"
+note = "'perhaps 100 million'; an essay's estimate"
+
+[cog-amodei-speed-low]
+value = 10
+basis = "modelled"
+fmt = ",.0f"
+label = "low end of the speed relative to humans assumed in 'Machines of Loving Grace'"
+source = "amodei2024grace"
+date = "2024-10"
+note = "an essay's assumption"
+
+[cog-amodei-speed-high]
+value = 100
+basis = "modelled"
+fmt = ",.0f"
+label = "high end of the speed relative to humans assumed in 'Machines of Loving Grace'"
+source = "amodei2024grace"
+date = "2024-10"
+note = "an essay's assumption"
+
+[cog-baseliner-slowdown-low]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "low end of how much longer METR's contract baseliners took than repository maintainers"
+source = "kwa2025horizon"
+date = "2025-03"
+note = "Sec. 6.4"
+
+[cog-baseliner-slowdown-high]
+value = 18
+basis = "measured"
+fmt = ",.0f"
+label = "high end of how much longer METR's contract baseliners took than repository maintainers"
+source = "kwa2025horizon"
+date = "2025-03"
+note = "Sec. 6.4"
+
+[cog-hcast-short-success-low]
+value = 0.7
+basis = "measured"
+fmt = "%"
+label = "low end of agent success on HCAST tasks humans finish in under an hour"
+source = "rein2025hcast"
+date = "2025-03"
+note = "abstract"
+
+[cog-hcast-short-success-high]
+value = 0.8
+basis = "measured"
+fmt = "%"
+label = "high end of agent success on HCAST tasks humans finish in under an hour"
+source = "rein2025hcast"
+date = "2025-03"
+note = "abstract"
+
+[cog-hcast-long-success-max]
+value = 0.2
+basis = "measured"
+fmt = "%"
+label = "upper bound on agent success on HCAST tasks taking humans over four hours"
+source = "rein2025hcast"
+date = "2025-03"
+note = "abstract, 'less than 20%'"
+
+[cog-horizon-best]
+value = 1044.8
+unit = "min"
+basis = "measured"
+fmt = ",.0f"
+label = "best published 50% time horizon (Claude Mythos Preview, early)"
+source = "metr2026horizons"
+date = "2026-04"
+note = "benchmark_results_1_1.yaml"
+
+[cog-horizon-best-ci-low]
+value = 508.9
+unit = "min"
+basis = "measured"
+fmt = ",.0f"
+label = "lower end of the confidence interval on the best 50% time horizon"
+source = "metr2026horizons"
+date = "2026-04"
+
+[cog-horizon-best-ci-high]
+value = 3304.3
+unit = "min"
+basis = "measured"
+fmt = ",.0f"
+label = "upper end of the confidence interval on the best 50% time horizon"
+source = "metr2026horizons"
+date = "2026-04"
+
+[cog-horizon-reliable-limit]
+value = 16
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "horizon above which METR says its task suite gives unreliable measurements"
+source = "metr2026horizons"
+date = "2026-09"
+note = "the page is no longer updated after 2026-09-08"
+
+[cog-th11-long-tasks]
+value = 31
+unit = "tasks"
+basis = "measured"
+fmt = ",.0f"
+label = "tasks over 8 hours in METR's Time Horizon 1.1 suite"
+source = "metr2026th11"
+date = "2026-01"
+
+[cog-th11-long-baselined]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "tasks over 8 hours with a measured human baseline time in Time Horizon 1.1"
+source = "metr2026th11"
+date = "2026-01"
+
+# ---------------------------------------------------------------------------------------------
+# F2. The decisive functions
+
+[cog-paperbench-best]
+value = 0.21
+basis = "measured"
+fmt = "%"
+label = "best agent's average replication score on PaperBench"
+source = "starace2025paperbench"
+date = "2025-04"
+note = "Claude 3.5 Sonnet (New); ML PhDs not yet outperformed"
+
+[cog-mlebench-pass1]
+value = 0.169
+basis = "measured"
+fmt = ".1%"
+label = "share of MLE-bench competitions with a medal at one attempt (o1-preview with AIDE)"
+source = "chan2024mlebench"
+date = "2024-10"
+note = "abstract; 24 hours on one A10 GPU"
+
+[cog-mlebench-pass8]
+value = 0.341
+basis = "measured"
+fmt = ".1%"
+label = "share of MLE-bench competitions with a medal at best of eight attempts"
+source = "chan2024mlebench"
+date = "2024-10"
+note = "Sec. 3.2"
+
+[cog-nanogpt-records]
+value = 77
+unit = "records"
+basis = "measured"
+fmt = ",.0f"
+label = "NanoGPT speedrun records set from May 2024 to March 2026"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+
+[cog-nanogpt-ai-records]
+value = 4
+basis = "measured"
+fmt = ",.0f"
+label = "NanoGPT speedrun records credited to AI agents, each co-credited with a human"
+source = "shetty2026metrnanogpt"
+date = "2026-03"
+note = "all shallow to moderate; none at the deep or breakthrough end"
+
+[cog-anthropic-ai-led-share]
+value = 0.26
+basis = "vendor"
+fmt = "%"
+label = "share of Anthropic's AI R&D work that Claude 'leads', by its own index"
+source = "anthropic2026pace"
+date = "2026-08"
+note = "up from under 1% in February 2026; 'not operating fully autonomously for any measured subset'"
+
+[cog-anthropic-agents]
+value = 30000
+unit = "agents"
+basis = "vendor"
+fmt = ",.0f"
+label = "agents running at once on Anthropic's internal platform (about)"
+source = "anthropic2026pace"
+date = "2026-08"
+note = "on one internal platform"
+
+[cog-metr-acceleration]
+value = 1.9
+basis = "measured"
+fmt = ".1f"
+label = "METR's estimate of the acceleration of Anthropic's capability index since October 2025"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+note = "ratio of growth rates; inputs not held fixed"
+
+[cog-metr-acceleration-ci-low]
+value = 1.5
+basis = "measured"
+fmt = ".1f"
+label = "lower end of the 95% interval on METR's acceleration estimate"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[cog-metr-acceleration-ci-high]
+value = 2.8
+basis = "measured"
+fmt = ".1f"
+label = "upper end of the 95% interval on METR's acceleration estimate"
+source = "metr-anthropic-acceleration-2026"
+date = "2026-10"
+
+[cog-cybench-tasks]
+value = 40
+unit = "tasks"
+basis = "spec"
+fmt = ",.0f"
+label = "professional-level CTF tasks in Cybench"
+source = "zhang2024cybench"
+date = "2024-08"
+
+[cog-cybench-hardest-hours]
+value = 24.9
+unit = "h"
+basis = "measured"
+fmt = ".1f"
+label = "first-solve time of the hardest Cybench task by the fastest human team"
+source = "zhang2024cybench"
+date = "2024-08"
+note = "24 hours 54 minutes"
+
+[cog-cybench-unguided-best]
+value = 0.93
+basis = "vendor"
+fmt = "%"
+label = "best unguided Cybench score, from a developer's system card"
+source = "epoch2026hub"
+date = "2026-02"
+note = "cybench_external.csv, Claude Opus 4.6 system card"
+
+[cog-cybench-pass30]
+value = 1.0
+basis = "vendor"
+fmt = "%"
+label = "Cybench score at best of 30 attempts, as the same system card reports it (about)"
+source = "epoch2026hub"
+date = "2026-02"
+note = "'~100% for pass@30'"
+
+[cog-vct-virologist]
+value = 0.221
+basis = "measured"
+fmt = ".1%"
+label = "expert virologists' average on VCT questions in their own sub-areas"
+source = "gotting2025vct"
+date = "2025-04"
+
+[cog-vct-o3]
+value = 0.438
+basis = "measured"
+fmt = ".1%"
+label = "o3's accuracy on the Virology Capabilities Test"
+source = "gotting2025vct"
+date = "2025-04"
+
+[cog-vct-percentile]
+value = 94
+basis = "measured"
+fmt = ",.0f"
+label = "share of expert virologists (percent) o3 outperforms within their own sub-areas"
+source = "gotting2025vct"
+date = "2025-04"
+
+[cog-gpqa-expert]
+value = 0.65
+basis = "measured"
+fmt = "%"
+label = "PhD experts' accuracy on GPQA"
+source = "rein2023gpqa"
+date = "2023-11"
+
+[cog-gpqa-expert-adjusted]
+value = 0.74
+basis = "measured"
+fmt = "%"
+label = "PhD experts' accuracy on GPQA after discounting mistakes they spotted afterwards"
+source = "rein2023gpqa"
+date = "2023-11"
+
+[cog-gpqa-nonexpert]
+value = 0.34
+basis = "measured"
+fmt = "%"
+label = "skilled non-experts' accuracy on GPQA with over 30 minutes and full web access"
+source = "rein2023gpqa"
+date = "2023-11"
+
+[cog-gpqa-diamond-expert]
+value = 0.697
+basis = "vendor"
+fmt = ".1%"
+label = "OpenAI-recruited PhD experts' score on GPQA Diamond"
+source = "epoch2026hub"
+date = "2026-11"
+note = "GPQA Diamond page; a developer's figure"
+
+[cog-gpqa-diamond-best]
+value = 0.9684
+basis = "measured"
+fmt = ".1%"
+label = "best GPQA Diamond score in Epoch's data"
+source = "epoch2026hub"
+date = "2026-11"
+note = "gpqa_diamond.csv, gpt-6.2-astra (max), stderr 1.2 points"
+
+[cog-persuasion-win-share]
+value = 0.644
+basis = "measured"
+fmt = ".1%"
+label = "share of unequal debates in which personalised GPT-4 was more persuasive than a human"
+source = "salvi2025persuasion"
+date = "2025-05"
+note = "journal abstract; human opponents were participants, not professional persuaders"
+
+[cog-persuasion-n]
+value = 900
+unit = "participants"
+basis = "measured"
+fmt = ",.0f"
+label = "participants in the preregistered persuasion debate study"
+source = "salvi2025persuasion"
+date = "2025-05"
+
+[cog-persuasion-odds]
+value = 0.812
+basis = "measured"
+fmt = ".1%"
+label = "relative increase in the odds of agreement with personalised GPT-4"
+source = "salvi2025persuasion"
+date = "2025-05"
+note = "95% CI +26.0% to +160.7%; without personalisation not significant (p = 0.31)"
+
+[cog-persuasion-odds-ci-low]
+value = 0.26
+basis = "measured"
+fmt = ".1%"
+label = "lower end of the 95% interval on the persuasion odds increase"
+source = "salvi2025persuasion"
+date = "2025-05"
+
+[cog-persuasion-odds-ci-high]
+value = 1.607
+basis = "measured"
+fmt = ".1%"
+label = "upper end of the 95% interval on the persuasion odds increase"
+source = "salvi2025persuasion"
+date = "2025-05"
+
+[cog-persuasion-posttrain-boost]
+value = 0.51
+basis = "measured"
+fmt = "%"
+label = "largest gain in persuasiveness from post-training"
+source = "hackenburg2025levers"
+date = "2025-12"
+note = "abstract; scale and personalisation had smaller effects"
+
+[cog-persuasion-prompt-boost]
+value = 0.27
+basis = "measured"
+fmt = "%"
+label = "largest gain in persuasiveness from prompting"
+source = "hackenburg2025levers"
+date = "2025-12"
+
+[cog-persuasion-participants]
+value = 76977
+unit = "participants"
+basis = "measured"
+fmt = ",.0f"
+label = "participants in the levers-of-persuasion study"
+source = "hackenburg2025levers"
+date = "2025-12"
+
+[cog-forecast-super-brier]
+value = 0.096
+basis = "measured"
+fmt = ".3f"
+label = "superforecasters' mean Brier score on ForecastBench (lower is better)"
+source = "karger2025forecastbench"
+date = "2025-02"
+note = "Table 2"
+
+[cog-forecast-llm-brier]
+value = 0.122
+basis = "measured"
+fmt = ".3f"
+label = "best LLM's Brier score on ForecastBench at the time (Claude 3.5 Sonnet)"
+source = "karger2025forecastbench"
+date = "2025-02"
+note = "Table 2, 200-question subset; significantly worse than superforecasters"
+
+[cog-forecast-super-index]
+value = 68.1
+basis = "measured"
+fmt = ".1f"
+label = "superforecaster median on the ForecastBench Brier Index (100 is perfect, 50 uninformed)"
+source = "forecastbench2026board"
+date = "2026-11"
+
+[cog-forecast-top-index]
+value = 69.5
+basis = "measured"
+fmt = ".1f"
+label = "top ForecastBench entry on the Brier Index (an anonymous team's model)"
+source = "forecastbench2026board"
+date = "2026-11"
+
+[cog-forecast-llm-index]
+value = 66.6
+basis = "measured"
+fmt = ".1f"
+label = "best single LLM on the ForecastBench Brier Index (with web search)"
+source = "epoch2026hub"
+date = "2026-04"
+note = "forecastbench_external.csv; superforecaster comparison p = 0.04"
+
+[cog-metaculus-pro-lead]
+value = 1.25
+unit = "points per question"
+basis = "measured"
+fmt = ".2f"
+label = "Metaculus Pro team's head-to-head lead over the top bot team, spring 2026"
+source = "metaculus2026futureeval"
+date = "2026-09"
+note = "99 shared questions; not significant"
+
+[cog-metaculus-p]
+value = 0.247
+basis = "measured"
+fmt = ".3f"
+label = "one-sided p-value of the Pro team's lead over the bot team"
+source = "metaculus2026futureeval"
+date = "2026-09"
+
+[cog-cicero-top-share]
+value = 0.1
+basis = "measured"
+fmt = "%"
+label = "top share of repeat human players in which Cicero ranked in online Diplomacy"
+source = "fair2022cicero"
+date = "2022-11"
+note = "40 games; more than double the average human score"
+
+[cog-gdpval-tasks]
+value = 1320
+unit = "tasks"
+basis = "spec"
+fmt = ",.0f"
+label = "tasks in GDPval"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "44 occupations in the 9 sectors contributing most to US GDP"
+
+[cog-gdpval-opus41]
+value = 0.476
+basis = "measured"
+fmt = ".1%"
+label = "share of Claude Opus 4.1's GDPval deliverables graded as good as or better than the expert's"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+note = "blinded expert pairwise comparison, one-shot tasks"
+
+[cog-gdpval-best]
+value = 0.7086
+basis = "measured"
+fmt = ".1%"
+label = "best GDPval win-or-tie rate in Epoch's data (GPT-5.2)"
+source = "epoch2026hub"
+date = "2025-12"
+note = "gdpval_external.csv; win rate alone 49.7%"
+
+[cog-gdpval-grader-agree]
+value = 0.66
+basis = "measured"
+fmt = "%"
+label = "agreement of GDPval's automated grader with expert graders"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+
+[cog-gdpval-human-agree]
+value = 0.71
+basis = "measured"
+fmt = "%"
+label = "agreement between human expert graders on GDPval"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+
+[cog-rli-best-2025]
+value = 0.025
+basis = "measured"
+fmt = ".1%"
+label = "best automation rate on the Remote Labor Index at release (Manus)"
+source = "mazeika2025rli"
+date = "2025-10"
+note = "Table 1"
+
+[cog-rli-best-2026]
+value = 0.4125
+basis = "measured"
+fmt = ".1%"
+label = "best automation rate on the Remote Labor Index in Epoch's data (Fable 5.2)"
+source = "epoch2026hub"
+date = "2026-11"
+note = "rli_external.csv"
+
+[cog-rli-projects]
+value = 240
+unit = "projects"
+basis = "spec"
+fmt = ",.0f"
+label = "freelance projects in the Remote Labor Index"
+source = "mazeika2025rli"
+date = "2025-10"
+note = "work needing client interaction or teamwork excluded"
+
+[cog-rli-value]
+value = 143991
+unit = "USD"
+basis = "measured"
+fmt = ",.0f"
+label = "market value of the human work in the Remote Labor Index"
+source = "mazeika2025rli"
+date = "2025-10"
+note = "Table 4"
+
+[cog-exposure-10pct]
+value = 0.8
+basis = "measured"
+fmt = "%"
+label = "share of US workers with at least a tenth of their tasks exposed to LLMs"
+source = "eloundou2024gpts"
+date = "2024-06"
+note = "exposure is an upper bound, not a measured capability"
+
+[cog-exposure-50pct]
+value = 0.19
+basis = "measured"
+fmt = "%"
+label = "share of US workers with at least half of their tasks exposed to LLMs"
+source = "eloundou2024gpts"
+date = "2024-06"
+
+[cog-barres-share-max]
+value = 0.25
+basis = "measured"
+fmt = "%"
+label = "upper bound on the share of prominent benchmarks claiming any organisational condition of work"
+source = "barres2026harder"
+date = "2026-11"
+note = "abstract only, 'fewer than one quarter'"
+
+# ---------------------------------------------------------------------------------------------
+# F3. Narrow versus general
+
+[cog-pluribus-cost]
+value = 150
+unit = "USD"
+basis = "vendor"
+fmt = ",.0f"
+label = "upper bound on the cost to train Pluribus's blueprint strategy"
+source = "meta2019pluribus"
+date = "2019-07"
+note = "eight days on a 64-core server"
+
+[cog-pluribus-cpus]
+value = 2
+unit = "CPUs"
+basis = "vendor"
+fmt = ",.0f"
+label = "CPUs Pluribus needs to play"
+source = "meta2019pluribus"
+date = "2019-07"
+
+[cog-adversarial-go-winrate]
+value = 0.97
+basis = "measured"
+fmt = "%"
+label = "lower bound on an adversarial policy's win rate against superhuman KataGo"
+source = "wang2023adversarialgo"
+date = "2023-07"
+note = "humans can carry out the attack without algorithmic help"
+
+[cog-alphafold-rmsd]
+value = 0.96
+unit = "angstrom"
+basis = "measured"
+fmt = ".2f"
+label = "AlphaFold's median backbone error at CASP14"
+source = "jumper2021alphafold"
+date = "2021-07"
+
+[cog-casp14-next-rmsd]
+value = 2.8
+unit = "angstrom"
+basis = "measured"
+fmt = ".1f"
+label = "median backbone error of the next best CASP14 method"
+source = "jumper2021alphafold"
+date = "2021-07"
+
+[cog-alphazero-hours]
+value = 24
+unit = "h"
+basis = "measured"
+fmt = ",.0f"
+label = "time AlphaZero took from random play to superhuman play"
+source = "silver2018alphazero"
+date = "2018"
+note = "preprint abstract"
+
+[cog-alphaevolve-mults]
+value = 48
+unit = "multiplications"
+basis = "measured"
+fmt = ",.0f"
+label = "scalar multiplications in AlphaEvolve's 4x4 complex matrix product"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+
+[cog-strassen-years]
+value = 56
+unit = "yr"
+basis = "measured"
+fmt = ",.0f"
+label = "years since Strassen's algorithm before AlphaEvolve's improvement in that setting"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+
+[cog-alphaevolve-training-cut]
+value = 0.01
+basis = "vendor"
+fmt = "%"
+label = "reduction in Gemini's overall training time from AlphaEvolve's kernel work"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+note = "Sec. 3.3.2"
+
+[cog-alphaevolve-kernel-speedup]
+value = 0.23
+basis = "vendor"
+fmt = "%"
+label = "average kernel speedup AlphaEvolve found"
+source = "novikov2025alphaevolve"
+date = "2025-06"
+note = "Sec. 3.3.2"
+
+[cog-imo-score]
+value = 35
+basis = "vendor"
+fmt = ",.0f"
+label = "Gemini Deep Think's IMO 2025 score, graded by IMO coordinators"
+source = "deepmind2025imo"
+date = "2025-07"
+note = "within the 4.5-hour limit, out of 42"
+
+[cog-agidef-gpt4]
+value = 0.27
+basis = "measured"
+fmt = "%"
+label = "GPT-4's score on Hendrycks et al.'s AGI definition"
+source = "hendrycks2025agidef"
+date = "2025-10"
+
+[cog-agidef-gpt5]
+value = 0.57
+basis = "measured"
+fmt = "%"
+label = "GPT-5's score on Hendrycks et al.'s AGI definition"
+source = "hendrycks2025agidef"
+date = "2025-10"
+note = "0% on long-term memory storage"
+
+[cog-levels-expert]
+value = 90
+basis = "spec"
+fmt = ",.0f"
+label = "percentile of skilled adults for Morris et al.'s Expert level"
+source = "morris2023levels"
+date = "2024-07"
+
+[cog-levels-exceptional]
+value = 99
+basis = "spec"
+fmt = ",.0f"
+label = "percentile of skilled adults for Morris et al.'s Exceptional level"
+source = "morris2023levels"
+date = "2024-07"
+
+[cog-spiral-transfer-max]
+value = 0.1
+basis = "measured"
+fmt = "%"
+label = "largest transfer gain from self-play on games to reasoning benchmarks (SPIRAL)"
+source = "liu2025spiral"
+date = "2025-06"
+note = "abstract, 'by up to 10%' across 8 benchmarks"
+
+# ---------------------------------------------------------------------------------------------
+# F4. Measuring capability so a protocol can trigger on it
+
+[cog-fm-release-best]
+value = 0.02
+basis = "measured"
+fmt = "%"
+label = "upper bound on the best FrontierMath score at release"
+source = "glazer2024frontiermath"
+date = "2024-11"
+note = "abstract, 'under 2%'"
+
+[cog-fm-release-year]
+value = 2024.85
+unit = "yr"
+basis = "measured"
+fmt = ".2f"
+label = "date of FrontierMath's release as a decimal year (November 2024)"
+source = "glazer2024frontiermath"
+date = "2024-11"
+
+[cog-fm-best]
+value = 0.9509
+basis = "measured"
+fmt = ".1%"
+label = "best FrontierMath Tiers 1-3 (v2) score in Epoch's data"
+source = "epoch2026hub"
+date = "2026-11"
+note = "frontiermath_tiers_1_3_v2.csv, claude-fable-5-2 (max); v2 corrected 42% of problems"
+
+[cog-fm-best-year]
+value = 2026.86
+unit = "yr"
+basis = "measured"
+fmt = ".2f"
+label = "date of the best FrontierMath Tiers 1-3 score as a decimal year (2026-11-09)"
+source = "epoch2026hub"
+date = "2026-11"
+
+[cog-fm-tier4-best]
+value = 1.0
+basis = "measured"
+fmt = "%"
+label = "best FrontierMath Tier 4 (v2) score, reached by three models"
+source = "epoch2026hub"
+date = "2026-11"
+note = "frontiermath_tier_4_v2.csv, September to November 2026"
+
+[cog-fm-v2-corrected]
+value = 0.42
+basis = "measured"
+fmt = "%"
+label = "share of FrontierMath problems corrected in version 2"
+source = "epoch2026hub"
+date = "2026-06"
+note = "FrontierMath page"
+
+[cog-hle-release-best]
+value = 0.094
+basis = "measured"
+fmt = ".1%"
+label = "best Humanity's Last Exam score at release (DeepSeek-R1, text only)"
+source = "phan2025hle"
+date = "2025-01"
+note = "Table 1"
+
+[cog-hle-release-year]
+value = 2025.06
+unit = "yr"
+basis = "measured"
+fmt = ".2f"
+label = "date of HLE's release as a decimal year (January 2025)"
+source = "phan2025hle"
+date = "2025-01"
+
+[cog-hle-best]
+value = 0.548
+basis = "measured"
+fmt = ".1%"
+label = "best HLE score on Scale's leaderboard"
+source = "scale2026hleboard"
+date = "2026-09"
+note = "GPT 6 Astra, plus or minus 1.94 points; tool use not stated"
+
+[cog-hle-best-year]
+value = 2026.71
+unit = "yr"
+basis = "measured"
+fmt = ".2f"
+label = "date of the leaderboard update as a decimal year (2026-09-17)"
+source = "scale2026hleboard"
+date = "2026-09"
+
+[cog-hle-calibration-best]
+value = 0.39
+basis = "measured"
+fmt = "%"
+label = "calibration error of the top HLE model"
+source = "scale2026hleboard"
+date = "2026-09"
+
+[cog-hle-defective]
+value = 22
+unit = "questions"
+basis = "measured"
+fmt = ",.0f"
+label = "defective questions in Epoch's sample of HLE"
+source = "epoch2026hlereview"
+date = "2026-08"
+note = "12 impossible as written; original set only"
+
+[cog-hle-sampled]
+value = 48
+unit = "questions"
+basis = "measured"
+fmt = ",.0f"
+label = "HLE questions Epoch sampled for review"
+source = "epoch2026hlereview"
+date = "2026-08"
+
+[cog-hle-biochem-wrong]
+value = 0.293
+basis = "measured"
+fmt = ".1%"
+label = "share of HLE's text-only biology and chemistry answers directly conflicted by research"
+source = "white2025hleaudit"
+date = "2025-09"
+note = "plus or minus 3.7 points (95% CI); the HLE team's own follow-up found about 18%"
+
+[cog-swebench-2023]
+value = 0.044
+basis = "measured"
+fmt = ".1%"
+label = "share of SWE-bench problems solved in 2023"
+source = "hai2025aiindex"
+date = "2023"
+
+[cog-swebench-2024]
+value = 0.717
+basis = "measured"
+fmt = ".1%"
+label = "share of SWE-bench problems solved in 2024"
+source = "hai2025aiindex"
+date = "2024"
+
+[cog-swebv-filtered]
+value = 0.683
+basis = "measured"
+fmt = ".1%"
+label = "share of sampled SWE-bench tasks filtered out when building SWE-bench Verified"
+source = "chowdhury2024swebv"
+date = "2024-08"
+note = "underspecified issues or unit tests that may reject valid fixes"
+
+[cog-swebv-golden-merge]
+value = 0.68
+basis = "measured"
+fmt = "%"
+label = "share of SWE-bench Verified golden patches maintainers would merge"
+source = "whitfill2026merge"
+date = "2026-03"
+
+[cog-swebv-maintainer-gap]
+value = 24
+unit = "points"
+basis = "measured"
+fmt = ",.0f"
+label = "how far maintainer merge rates sit below SWE-bench scores, after normalising"
+source = "whitfill2026merge"
+date = "2026-03"
+note = "34.9 points before normalising; one attempt, no feedback"
+
+[cog-holistic-testpass]
+value = 0.38
+basis = "measured"
+fmt = "%"
+label = "average test-pass rate of agent PRs in METR's holistic review"
+source = "rein2025holistic"
+date = "2025-08"
+note = "plus or minus 19 points"
+
+[cog-holistic-reviewed]
+value = 15
+unit = "PRs"
+basis = "measured"
+fmt = ",.0f"
+label = "agent PRs METR reviewed by hand, none mergeable as-is"
+source = "rein2025holistic"
+date = "2025-08"
+
+[cog-holistic-fix-minutes]
+value = 26
+unit = "min"
+basis = "measured"
+fmt = ",.0f"
+label = "average minutes of fixes a test-passing agent PR needed"
+source = "rein2025holistic"
+date = "2025-08"
+
+[cog-rct-slowdown]
+value = 0.19
+basis = "measured"
+fmt = "%"
+label = "increase in task time for experienced developers allowed AI tools (early 2025 RCT)"
+source = "becker2025rct"
+date = "2025-07"
+note = "CI +2% to +39%; 16 developers, 246 tasks"
+
+[cog-rct-forecast]
+value = 0.24
+basis = "measured"
+fmt = "%"
+label = "time reduction the same developers forecast beforehand"
+source = "becker2025rct"
+date = "2025-07"
+
+[cog-rct2026-returning]
+value = -0.18
+basis = "measured"
+fmt = "%"
+label = "change in task time with AI for returning developers in METR's 2026 follow-up (negative is faster)"
+source = "metr2026uplift"
+date = "2026-02"
+note = "CI -38% to +9%; METR calls the data only very weak evidence because of selection"
+
+[cog-messiness-drop]
+value = 0.081
+basis = "measured"
+fmt = ".1%"
+label = "drop in mean agent success per point of task messiness"
+source = "kwa2025horizon"
+date = "2025-03"
+note = "Sec. 6.2"
+
+[cog-gsm1k-drop]
+value = 0.08
+basis = "measured"
+fmt = "%"
+label = "largest accuracy drop from GSM8K to the fresh GSM1k"
+source = "zhang2024gsm1k"
+date = "2024-11"
+note = "frontier models showed minimal overfitting"
+
+[cog-filepath-verified]
+value = 0.76
+basis = "measured"
+fmt = "%"
+label = "best accuracy naming the buggy file from the issue text alone, SWE-bench Verified"
+source = "liang2025illusion"
+date = "2025-12"
+
+[cog-filepath-other]
+value = 0.53
+basis = "measured"
+fmt = "%"
+label = "best accuracy naming the buggy file from the issue text alone, other repositories"
+source = "liang2025illusion"
+date = "2025-12"
+
+[cog-arc-cost-drop]
+value = 390
+basis = "measured"
+fmt = ",.0f"
+label = "fall in cost per ARC-AGI task over one year"
+source = "vahdati2026arc"
+date = "2026-03"
+note = "abstract; 4,500 USD to 12 USD, 'largely reflects reduced test-time parallelism'"
+
+[cog-leaderboard-variants]
+value = 27
+unit = "variants"
+basis = "measured"
+fmt = ",.0f"
+label = "private model variants one developer tested on Chatbot Arena before a release"
+source = "singh2025leaderboard"
+date = "2025-05"
+
+[cog-sandbag-recovered]
+value = 0.956
+basis = "measured"
+fmt = ".1%"
+label = "share of a sandbagged model's original score recovered by anti-refusal training"
+source = "benton2024sabotage"
+date = "2024-10"
+note = "Sec. 6.4"
+
+[cog-robust-recall-locked]
+value = 0.078
+basis = "measured"
+fmt = ".1%"
+label = "hard-task recall of a tamper-resistant locked organism after weak-to-strong fine-tuning"
+source = "finke2026robustorganisms"
+date = "2026-10"
+note = "Table 4"
+
+[cog-robust-recall-base]
+value = 0.712
+basis = "measured"
+fmt = ".1%"
+label = "hard-task recall of the same base model without the lock"
+source = "finke2026robustorganisms"
+date = "2026-10"
+note = "Table 4"
+
+[cog-xh-rl-steps]
+value = 500
+unit = "steps"
+basis = "measured"
+fmt = ",.0f"
+label = "GRPO steps (lower bound) through which an RL-locked model stayed suppressed"
+source = "jang2026explorationhacking"
+date = "2026-04"
+note = "Sec. 3, KernelBench, 'more than 500'"
+
+[cog-benign-uplift]
+value = 10
+unit = "points"
+basis = "measured"
+fmt = ",.0f"
+label = "points benign models gained from the same elicitation used on sandbaggers (about)"
+source = "taylor2025auditinggames"
+date = "2025-12"
+note = "Sec. 6.4.1"
+
+[cog-evalaware-model-auc]
+value = 0.83
+basis = "measured"
+fmt = ".2f"
+label = "AUC of Gemini 2.5 Pro at telling evaluations from deployment"
+source = "needham2025evalaware"
+date = "2025-07"
+
+[cog-evalaware-human-auc]
+value = 0.92
+basis = "measured"
+fmt = ".2f"
+label = "AUC of the human baseline at the same task"
+source = "needham2025evalaware"
+date = "2025-07"
+
+[cog-adaptive-auc-before]
+value = 0.978
+basis = "measured"
+fmt = ".3f"
+label = "AUC of a text audit for sandbagging before adaptive retraining"
+source = "soopal2026adaptive"
+date = "2026-11"
+
+[cog-adaptive-auc-after]
+value = 0.56
+basis = "measured"
+fmt = ".3f"
+label = "AUC of the same audit after two rounds of adaptive retraining"
+source = "soopal2026adaptive"
+date = "2026-11"
+
+[cog-seq-test-saving]
+value = 0.4
+basis = "measured"
+fmt = "%"
+label = "fewer trials (up to, on average) a sequential test needs when a capability is truly absent"
+source = "bukkapatnam2026absent"
+date = "2026"
+note = "abstract page only"
+
+[cog-rsp-v1-elicit-budget]
+value = 0.01
+basis = "spec"
+fmt = "%"
+label = "elicitation budget as a share of training cost in Anthropic's RSP v1.0, later removed"
+source = "anthropic2023rsp"
+date = "2023-09"
+
+[cog-rsp-v1-buffer]
+value = 6
+basis = "spec"
+fmt = ",.0f"
+label = "safety buffer in effective compute in Anthropic's RSP v1.0, later removed"
+source = "anthropic2023rsp"
+date = "2023-09"
+
+[cog-enhancement-ceg]
+value = 5
+basis = "measured"
+fmt = ",.0f"
+label = "compute-equivalent gain (lower bound) of most post-training enhancements"
+source = "davidson2023enhancements"
+date = "2023-12"
+note = "abstract; some above 20x, at usually under 1% of training cost"
+
+[cog-wilson-z]
+value = 1.96
+basis = "design"
+fmt = ".2f"
+label = "normal quantile for a 95% interval"
+
+[cog-life-low]
+value = 0.1
+basis = "design"
+fmt = "%"
+label = "score at which a battery starts to discriminate, for its useful life"
+
+[cog-life-high]
+value = 0.9
+basis = "design"
+fmt = "%"
+label = "score at which a battery stops discriminating, for its useful life"
+
+# ---------------------------------------------------------------------------------------------
+# Added for figures the chapter states in passing
+
+[cog-rebench-real-scale-oom]
+value = 2
+unit = "orders of magnitude"
+basis = "measured"
+fmt = ",.0f"
+label = "how much larger real AI R&D is than RE-Bench on several axes, by the authors' estimate (at least)"
+source = "wijk2024rebench"
+date = "2024-11"
+note = "Table 7; the authors' judgement that RE-Bench likely overestimates real-world AI R&D performance"
+
+[cog-agidef-domains]
+value = 10
+unit = "domains"
+basis = "spec"
+fmt = ",.0f"
+label = "cognitive domains, weighted equally, in Hendrycks et al.'s AGI definition"
+source = "hendrycks2025agidef"
+date = "2025-10"
+
+[cog-swebv-error-low]
+value = 0.05
+basis = "measured"
+fmt = "%"
+label = "low end of Epoch's estimate of SWE-bench Verified's error rate"
+source = "epoch2026hub"
+date = "2026-11"
+note = "SWE-bench Verified page"
+
+[cog-swebv-error-high]
+value = 0.1
+basis = "measured"
+fmt = "%"
+label = "high end of Epoch's estimate of SWE-bench Verified's error rate"
+source = "epoch2026hub"
+date = "2026-11"
+note = "SWE-bench Verified page"
+
+[cog-ctf-pair-points]
+value = 5700
+unit = "points"
+basis = "measured"
+fmt = ",.0f"
+label = "score of the agent paired with human hackers, first on both CTF scoreboards"
+source = "tang2026ctfcollab"
+date = "2026-02"
+
+[cog-imo-max]
+value = 42
+unit = "points"
+basis = "spec"
+fmt = ",.0f"
+label = "maximum IMO score"
+source = "deepmind2025imo"
+date = "2025-07"
+
+[cog-metaculus-questions]
+value = 99
+unit = "questions"
+basis = "measured"
+fmt = ",.0f"
+label = "questions shared by the Metaculus Pro team and the top bot team in spring 2026"
+source = "metaculus2026futureeval"
+date = "2026-09"
+
+[cog-gdpval-occupations]
+value = 44
+unit = "occupations"
+basis = "spec"
+fmt = ",.0f"
+label = "occupations covered by GDPval"
+source = "patwardhan2025gdpval"
+date = "2025-10"
+
+[cog-obs-models]
+value = 100
+unit = "models"
+basis = "measured"
+fmt = ",.0f"
+label = "public models (about) whose scores observational scaling fits in a low-dimensional capability space"
+source = "ruan2024observational"
+date = "2024-05"
+note = "abstract"
+
+[cog-mlebench-competitions]
+value = 75
+unit = "competitions"
+basis = "spec"
+fmt = ",.0f"
+label = "Kaggle competitions in MLE-bench"
+source = "chan2024mlebench"
+date = "2024-10"
+
+[cog-th11-long-threshold]
+value = 8
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "task length above which METR counts a task as long in Time Horizon 1.1"
+source = "metr2026th11"
+date = "2026-01"
+
+[cog-horizon-cheap-threshold]
+value = 0.1
+basis = "spec"
+fmt = "%"
+label = "cost share of a human's cost below which METR counted an agent run as cheap"
+source = "kwa2025horizon"
+date = "2025-03"
+note = "Sec. 8.2"
+
+[cog-hcast-short-hours]
+value = 1
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "human task length below which HCAST reports its high agent success rate"
+source = "rein2025hcast"
+date = "2025-03"
+
+[cog-hcast-long-hours]
+value = 4
+unit = "h"
+basis = "spec"
+fmt = ",.0f"
+label = "human task length above which HCAST reports its low agent success rate"
+source = "rein2025hcast"
+date = "2025-03"
+
+[cog-exposure-low-threshold]
+value = 0.1
+basis = "spec"
+fmt = "%"
+label = "share of a worker's tasks exposed, lower threshold in the exposure study"
+source = "eloundou2024gpts"
+date = "2024-06"
+
+[cog-exposure-high-threshold]
+value = 0.5
+basis = "spec"
+fmt = "%"
+label = "share of a worker's tasks exposed, higher threshold in the exposure study"
+source = "eloundou2024gpts"
+date = "2024-06"
