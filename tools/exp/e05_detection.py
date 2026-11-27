@@ -12,19 +12,28 @@ constant hazard (discoveries over programme-years, with an exact Poisson interva
 bootstrap), a Weibull with censoring (is discovery likelier early or late?) and the Kaplan-Meier
 median. A sensitivity analysis reruns the fit over which cases are included and how the disputed
 ones are coded, and leaves out each case in turn. The record is a convenience sample of programmes
-that were eventually found or disclosed; programmes never found are missing by construction.
+that were eventually found or disclosed; programmes never found are missing by construction, and a
+disclosure under investigation is informative censoring. So the fitted rate is an upper bound on a
+careful evader's rate, by an unknown amount, and every detection time built on it a lower bound.
 
 Part 2, C3's Monte Carlo. Paths open to a party (the declared fleet, one undeclared site, sites
 spread below the satellite line, the untraced chip pool, cloud rental, distillation) and the
 channels that watch each, with rates from the ledger: chip sampling [Shavit], facility power
 metering [Kimpson], detection of diversion [Epoch's smuggling model], satellite imagery
 [Koopmanschap], and the historical rate from part 1 for intelligence, insiders and the media.
-Channels sharing a trust anchor or a tip source merge into one with the larger rate: sampling
-with metering (both need the host's access to a declared site), imagery with intelligence (imagery
-historically confirmed tips). The evader's miss is the maximum over paths; the memo's is the
-product of every channel's miss. Each path's detection time T_d is the window it needs to bring
-its miss chance to the prevention beta. No path's breakout time is assumed: misses are reported
-at the memo's placeholder breakout time and the hardwired-pause horizon, from the ledger.
+Metering's figure (at least 87% of disguised runs caught over a day) is one check: the source
+gives no longer window, so it is not compounded into a daily rate. Channels sharing a trust anchor
+or a tip source merge into one with the larger rate: sampling with metering (both need the host's
+access to a declared site); diversion detection, imagery and intelligence (all rest on
+intelligence and law-enforcement tips). Cloud rental and distillation have no channel with a
+sourced rate, so they get no detection time and miss with certainty. The historical rate runs on
+its own clock, from a programme's start, not from a breakout's; the Weibull fit says how much less
+it finds in a short window from the start. The evader's miss is the maximum over paths; the memo's
+is the product of every channel's miss, which Theorem 3.1(b) puts below every path's miss, so the
+script asserts that as a check of its bookkeeping and reports it as no evidence. Each path's
+detection time T_d is the window it needs to bring its miss chance to the prevention beta. No
+path's breakout time is assumed: misses are reported at the memo's placeholder breakout time and
+the hardwired-pause horizon, from the ledger.
 
 All randomness comes from one numpy generator seeded with SEED. No data are fetched: the inputs
 are the hand-compiled case table and ledger values read from data/numbers.json.
@@ -176,6 +185,12 @@ def q(x: np.ndarray, p: float) -> float:
     return float(np.quantile(x, p))
 
 
+def q_or_none(x: np.ndarray, p: float) -> float | None:
+    """A quantile that may be infinite (a path no channel watches), as None in the JSON."""
+    v = float(np.quantile(x, p, method="inverted_cdf"))
+    return v if math.isfinite(v) else None
+
+
 def main() -> int:
     numbers = json.loads((ROOT / "data" / "numbers.json").read_text())
     led = {i: numbers[i]["value"] for i in LEDGER_IDS}
@@ -275,7 +290,10 @@ def main() -> int:
     sat_line = led["phys-sat-reliable"]
     power = {"site-now": led["phys-floor-power-1e26-now"], "site-pause": led["phys-floor-power-1e26-pause"]}
     p_sat = {k: (u_sat if v >= sat_line else np.zeros(DRAWS)) for k, v in power.items()}
-    lam_meter = -math.log(1 - led["phys-meter-day-detect"]) * YEAR  # per year, strongest disguise
+    # Metering: the source reports that at least 87% of disguised runs are caught over a day and gives
+    # no longer window, so the day figure is one catch, not a daily rate that compounds.
+    m_meter = 1 - led["phys-meter-day-detect"]
+    # Chip sampling: Shavit's design (232 inspectors) catches a run within 30 days with probability 0.9.
     lam_samp = -math.log(1 - led["phys-shavit-prob"]) / (led["phys-shavit-days"] / YEAR)
 
     def td_hist(m_oneshot: np.ndarray, lam: np.ndarray) -> np.ndarray:
@@ -285,43 +303,66 @@ def main() -> int:
         w = np.where(m_oneshot <= beta, 0.0, w)
         return np.where((m_oneshot > beta) & (lam <= 0), np.inf, w)
 
+    def td_tips(oneshot_misses: list[np.ndarray]) -> np.ndarray:
+        """T_d of one merged tip group: min(one-shot misses..., exp(-lam_h w)) reaching beta."""
+        best = np.minimum.reduce(oneshot_misses)
+        return np.where(best <= beta, 0.0, td_hist(np.ones(DRAWS), lam_h))
+
     one = np.ones(DRAWS)
+    never = np.full(DRAWS, np.inf)
+    td_decl_merged = 0.0 if m_meter <= beta else math.log(1 / beta) / lam_samp
+    td_decl_indep = max(0.0, math.log(m_meter / beta) / lam_samp)
     td = {
-        "declared, merged": np.full(DRAWS, math.log(1 / beta) / max(lam_meter, lam_samp)),
-        "declared, independent": np.full(DRAWS, math.log(1 / beta) / (lam_meter + lam_samp)),
-        # Merged {imagery, intelligence}: min(1 - p_sat, exp(-lam w)); the one-shot diversion check apart.
-        "site-now, merged": np.where((1 - p_div) * (1 - p_sat["site-now"]) <= beta, 0.0,
-                                     td_hist(1 - p_div, lam_h)),
+        # {sampling, metering}: both need the host's access to the declared site.
+        "declared, merged": np.full(DRAWS, td_decl_merged),
+        "declared, independent": np.full(DRAWS, td_decl_indep),
+        # {diversion, imagery, intelligence}: all rest on intelligence and law-enforcement tips.
+        "site-now, merged": td_tips([1 - p_div, 1 - p_sat["site-now"]]),
         "site-now, independent": td_hist((1 - p_div) * (1 - p_sat["site-now"]), lam_h),
-        "site-pause": td_hist((1 - p_div) * (1 - p_sat["site-pause"]), lam_h),
-        "distributed": td_hist(1 - p_div, lam_h),
+        "site-now, diversion apart": np.where((1 - p_div) * (1 - p_sat["site-now"]) <= beta, 0.0,
+                                              td_hist(1 - p_div, lam_h)),
+        "site-pause": td_tips([1 - p_div, 1 - p_sat["site-pause"]]),
+        "distributed": td_tips([1 - p_div]),
         "pool": td_hist(one, lam_h),
-        "cloud": td_hist(one, lam_h),
-        "distillation": td_hist(one, lam_h),
+        # No channel with a sourced rate or a link to the historical record watches these two.
+        "cloud": never,
+        "distillation": never,
     }
-    sat_opt = np.where(power["site-now"] >= sat_line, 1.0, 0.0)
-    td_site_sat_opt = np.where((1 - p_div) * (1 - sat_opt) <= beta, 0.0, td_hist(1 - p_div, lam_h))
+    unwatched = ["cloud", "distillation"]
+    sat_opt = np.full(DRAWS, 1.0 if power["site-now"] >= sat_line else 0.0)
+    td_site_sat_opt = td_tips([1 - p_div, 1 - sat_opt])
 
     def misses(w: float) -> dict:
         h = np.exp(-lam_h * w)
         m = {
-            "declared": np.full(DRAWS, math.exp(-max(lam_meter, lam_samp) * w)),
-            "site-now": (1 - p_div) * np.minimum(1 - p_sat["site-now"], h),
-            "site-pause": (1 - p_div) * np.minimum(1 - p_sat["site-pause"], h),
-            "distributed": (1 - p_div) * h,
-            "pool": h, "cloud": h, "distillation": h,
+            "declared": np.full(DRAWS, min(m_meter, math.exp(-lam_samp * w))),
+            "site-now": np.minimum.reduce([1 - p_div, 1 - p_sat["site-now"], h]),
+            "site-pause": np.minimum.reduce([1 - p_div, 1 - p_sat["site-pause"], h]),
+            "distributed": np.minimum(1 - p_div, h),
+            "pool": h,
+            "cloud": one,
+            "distillation": one,
         }
-        evader = np.max(np.stack(list(m.values())), axis=0)
+        watched = np.max(np.stack([v for k, v in m.items() if k not in unwatched]), axis=0)
         # The memo's form: every channel watches the programme, independently.
-        log10_memo = (np.log10(1 - p_div) + np.log10(np.maximum(1 - p_sat["site-now"], 1e-300))
-                      - (lam_meter + lam_samp + lam_h) * w / math.log(10))
+        log10_memo = (math.log10(m_meter) + np.log10(1 - p_div)
+                      + np.log10(np.maximum(1 - p_sat["site-now"], 1e-300))
+                      - (lam_samp + lam_h) * w / math.log(10))
         site_indep = (1 - p_div) * (1 - p_sat["site-now"]) * h
-        return {"paths": m, "evader": evader, "log10_memo": log10_memo, "site_indep": site_indep}
+        return {"paths": m, "watched": watched, "log10_memo": log10_memo, "site_indep": site_indep}
 
     w1, w2 = led["breakout-years"], led["org-hwp-tb"]
     m1, m2 = misses(w1), misses(w2)
-    prop_b = float(np.mean(m1["log10_memo"] <= np.log10(m1["evader"]) + 1e-12))
-    ratio = td["pool"] / td["declared, merged"]
+    # Theorem 3.1(b) makes the memo's product at most every path's miss, so this holds by construction.
+    # It checks the code; it is not evidence for the theorem.
+    if not np.all(m1["log10_memo"] <= np.log10(m1["watched"]) + 1e-12):
+        raise SystemExit("the memo's product exceeds a path's miss: the channel bookkeeping is wrong")
+    ratio = td["pool"] / td_decl_merged
+
+    # The clock: the historical fit runs from a programme's start. Under the Weibull, discovery is
+    # likelier late, so over short windows from the start it detects less than the constant rate.
+    weib_miss = lambda w: math.exp(-((w / scale_hat) ** k_hat))  # noqa: E731
+    cross = (lam_hat * scale_hat**k_hat) ** (1 / (k_hat - 1)) if k_hat > 1 else float("inf")
 
     # ---- Numbers ---------------------------------------------------------------------------
     pct = f"{plo * 100:.0f}th"
@@ -333,7 +374,7 @@ def main() -> int:
     res.number("e5-exposure-years", fit["exposure_years"], unit="programme-years", fmt=",.0f",
                label="programme-years from start to discovery or disclosure, summed over the cases")
     res.number("e5-hazard", lam_hat, unit="/yr", fmt=".3f",
-               label="historical discovery rate of covert programmes, discoveries over programme-years (main coding)")
+               label="historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; an upper bound on a careful evader's rate")
     res.number("e5-hazard-lo", fit["lo"], unit="/yr", fmt=".3f",
                label=f"discovery rate, {pct} percentile of the exact Poisson interval")
     res.number("e5-hazard-hi", fit["hi"], unit="/yr", fmt=".3f",
@@ -372,23 +413,23 @@ def main() -> int:
                label="the memo's placeholder rate over the highest rate any sensitivity variant gives")
     td_h = math.log(1 / beta) / lam_hat
     res.number("e5-td-hist-years", td_h, unit="years", fmt=",.0f",
-               label="detection time at the prevention miss chance for a path only the historical channels see")
+               label="detection time at the prevention miss chance for a path only the historical channels see, from the programme's start; a lower bound, as the rate is an upper bound")
     res.number("e5-td-weibull-years", scale_hat * math.log(1 / beta) ** (1 / k_hat), unit="years", fmt=",.0f",
-               label="the same detection time under the Weibull fit")
+               label="the same detection time under the Weibull fit, from the programme's start (in short windows the Weibull finds less than the constant rate)")
 
     def tdq(key: str, p: float) -> float:
         return q(td[key], p)
 
     res.number("e5-td-declared-days", tdq("declared, merged", 0.5) * YEAR, unit="days", fmt=".1f",
-               label="detection time on the declared path (sampling and metering merged), at the prevention miss chance")
+               label="detection time on the declared path at the prevention miss chance: chip sampling, with metering's one-day catch as one check, merged")
     res.number("e5-td-site-now-years", tdq("site-now, merged", 0.5), unit="years", fmt=",.0f",
-               label="detection time, one undeclared site above the satellite line, median of the Monte Carlo")
+               label="detection time, one undeclared site above the satellite line, diversion detection, imagery and intelligence merged, median of the Monte Carlo")
     res.number("e5-td-site-now-years-lo", tdq("site-now, merged", plo), unit="years", fmt=",.0f",
                label=f"detection time, one undeclared site above the satellite line, {pct} percentile")
     res.number("e5-td-site-now-years-hi", tdq("site-now, merged", phi), unit="years", fmt=",.0f",
                label=f"detection time, one undeclared site above the satellite line, {pct_hi} percentile")
     res.number("e5-td-site-indep-years", tdq("site-now, independent", 0.5), unit="years", fmt=",.0f",
-               label="detection time for the same site if imagery and intelligence were independent, median")
+               label="detection time for the same site if diversion detection, imagery and intelligence were independent, median")
     res.number("e5-td-site-satopt-years", float(np.median(td_site_sat_opt)), unit="years", fmt=",.1f",
                label="detection time for the same site if satellites found every site above their line, median")
     res.number("e5-td-site-pause-years", tdq("site-pause", 0.5), unit="years", fmt=",.0f",
@@ -396,29 +437,33 @@ def main() -> int:
     res.number("e5-td-distributed-years", tdq("distributed", 0.5), unit="years", fmt=",.0f",
                label="detection time, smuggled chips spread over sites below the satellite line, median")
     res.number("e5-td-pool-years", tdq("pool", 0.5), unit="years", fmt=",.0f",
-               label="detection time, the untraced chip pool (no acquisition to catch), median")
+               label="detection time, the untraced chip pool (no acquisition to catch), median; a lower bound, as the historical rate is an upper bound")
     res.number("e5-td-pool-years-lo", tdq("pool", plo), unit="years", fmt=",.0f",
                label=f"detection time, the untraced chip pool, {pct} percentile")
     res.number("e5-td-pool-years-hi", tdq("pool", phi), unit="years", fmt=",.0f",
                label=f"detection time, the untraced chip pool, {pct_hi} percentile")
     res.number("e5-td-ratio", float(np.median(ratio)), fmt=",.0f",
-               label="detection time of the evader's best undeclared path over the declared path's, median")
-    res.number("e5-pmiss-max-1y", float(np.median(m1["evader"])), fmt="%",
-               label="chance a breakout is missed on the evader's best path over the memo's placeholder breakout time, with no response time")
-    res.number("e5-pmiss-max-1y-lo", q(m1["evader"], plo), fmt="%",
+               label="detection time of the untraced chip pool over the declared path's, median; cloud and distillation have no measured channel and no ratio")
+    res.number("e5-pmiss-max-1y", float(np.median(m1["watched"])), fmt="%",
+               label="chance a breakout is missed on the evader's best watched path (the chip pool) over the memo's placeholder breakout time, with no response time; cloud and distillation, unwatched, miss with certainty")
+    res.number("e5-pmiss-max-1y-lo", q(m1["watched"], plo), fmt="%",
                label=f"the same miss chance, {pct} percentile")
-    res.number("e5-pmiss-max-1y-hi", q(m1["evader"], phi), fmt="%",
+    res.number("e5-pmiss-max-1y-hi", q(m1["watched"], phi), fmt="%",
                label=f"the same miss chance, {pct_hi} percentile")
-    res.number("e5-pmiss-max-2y", float(np.median(m2["evader"])), fmt="%",
-               label="chance a breakout is missed on the evader's best path over the hardwired-pause horizon, with no response time")
+    res.number("e5-pmiss-max-2y", float(np.median(m2["watched"])), fmt="%",
+               label="chance a breakout is missed on the evader's best watched path over the hardwired-pause horizon, with no response time")
     res.number("e5-memo-log10-miss-1y", float(np.median(m1["log10_memo"])), fmt=",.0f",
-               label="log10 of the memo-style miss chance over the same time: the product over every channel, as if each watched the programme")
+               label="log10 of the memo-style miss chance over the same time, the product over every channel as if each watched the programme: an illustration of the memo's form, not evidence")
     res.number("e5-pmiss-site-merged-1y", float(np.median(m1["paths"]["site-now"])), fmt="%",
-               label="miss chance for one undeclared site above the satellite line, imagery and intelligence merged, median")
+               label="miss chance for one undeclared site above the satellite line, diversion detection, imagery and intelligence merged, median")
     res.number("e5-pmiss-site-indep-1y", float(np.median(m1["site_indep"])), fmt="%",
-               label="the same miss chance with imagery and intelligence independent; also the memo-style product over the channels that watch undeclared work")
-    res.number("e5-product-le-max-share", prop_b, fmt="%",
-               label="share of Monte Carlo draws in which the memo's product is at most the evader's miss (the proposition says all)")
+               label="the same miss chance with diversion detection, imagery and intelligence independent, the memo-style product over the channels that watch undeclared work")
+    res.number("e5-weibull-detect-1y", 1 - weib_miss(w1), fmt=".1%",
+               label="chance of discovery within the memo's placeholder breakout time of a programme's start, under the Weibull fit")
+    res.number("e5-hazard-detect-1y", 1 - math.exp(-lam_hat * w1), fmt=".1%",
+               label="the same chance at the constant historical rate")
+    res.number("e5-weibull-cross-years", cross, unit="years", fmt=".1f",
+               label="window from a programme's start below which the Weibull fit finds less than the constant rate")
 
     res.detail("date_rules", DATE_RULES)
     res.detail("cases", [
@@ -440,11 +485,15 @@ def main() -> int:
                                for k, v in variants.items()})
     res.detail("leave_one_out", {k: round(float(v), 6) for k, v in loo.items()})
     res.detail("channels", {
-        "chip sampling, per year": lam_samp, "power metering under the strongest disguise, per year": lam_meter,
+        "chip sampling, per year": lam_samp,
+        "power metering under the strongest disguise, miss of one check": m_meter,
+        "metering coding": "the source reports at least 87% of disguised runs caught over a day and no longer window, so the day figure is one check that does not compound",
         "diversion detection": "two-piece normal in log-odds through Epoch's median and 90% interval",
         "satellite": f"uniform [0, 1] above {sat_line} MW, zero below",
         "historical": "the case bootstrap of part 1, redrawn in every Monte Carlo draw",
-        "merged groups": ["sampling with metering (the host's access)", "imagery with intelligence (tips)"],
+        "merged groups": ["sampling with metering (the host's access)",
+                          "diversion detection, imagery and intelligence (intelligence and law-enforcement tips)"],
+        "clock": "the historical rate runs from a programme's start (the decision or construction), not a breakout's",
         "facility power, MW": power,
     })
     res.detail("paths", {
@@ -453,13 +502,21 @@ def main() -> int:
         "site-pause": "the same over a pause's longest run, below the satellite line: diversion, intelligence",
         "distributed": "smuggled chips spread over sites below the satellite line: diversion, intelligence",
         "pool": "untraced chips already held: intelligence",
-        "cloud": "rented across providers; no sourced rate for customer checks: intelligence",
-        "distillation": "queries to others' models; no sourced channel: intelligence",
+        "cloud": "rented across providers; no channel with a sourced rate, so no detection time",
+        "distillation": "queries to others' models; no channel with a sourced rate, so no detection time",
     })
-    res.detail("detection_time_years", {k: {"median": q(v, 0.5), "lo": q(v, plo), "hi": q(v, phi),
+    res.detail("detection_time_years", {k: {"median": q_or_none(v, 0.5), "lo": q_or_none(v, plo),
+                                            "hi": q_or_none(v, phi),
                                             "share_infinite": float(np.mean(np.isinf(v)))}
                                         for k, v in td.items()})
     res.detail("miss_by_path_1y", {k: q(v, 0.5) for k, v in m1["paths"].items()})
+    res.detail("checks", {
+        "memo product at most every watched path's miss": "asserted in every draw; holds by Theorem 3.1(b), so it checks the code and is not evidence",
+        "declared path, metering compounded daily (not used)": {
+            "td_days": math.log(1 / beta) / -math.log(m_meter),
+            "note": "the reading the source does not support",
+        },
+    })
     res.detail("windows_years", {"memo_placeholder": w1, "hardwired_pause": w2})
     res.detail("monte_carlo", {"draws": DRAWS})
     res.write()

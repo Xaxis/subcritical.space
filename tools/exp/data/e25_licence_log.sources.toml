@@ -1,0 +1,44 @@
+# Sources E25 (tools/exp/e25_licence_log.py) reads or implements that no note or chapter had
+# listed, each opened by the experiment's builder on 2026-11-27. tools/sources_from_notes.py merges
+# them into research/sources.toml.
+
+[source.blockdn2026headers]
+type = "dataset"
+title = "block-dn: Bitcoin block data over REST, block headers in files of 100,000 (mainnet instance)"
+authors = "guggero on GitHub (block-dn software, MIT licence, github.com/guggero/block-dn); bdn.bitcoin.lu.ke instance"
+year = 2026
+url = "https://bdn.bitcoin.lu.ke/"
+opened = "2026-11-27"
+
+[source.blockstream2026esplora]
+type = "dataset"
+title = "Esplora HTTP API (block hash by height), blockstream.info"
+authors = "Blockstream"
+year = 2026
+url = "https://github.com/Blockstream/esplora/blob/master/API.md"
+opened = "2026-11-27"
+
+[source.mempool2026difficulty]
+type = "dataset"
+title = "mempool.space REST API: difficulty adjustments"
+authors = "The Mempool Open Source Project"
+year = 2026
+url = "https://mempool.space/docs/api/rest"
+opened = "2026-11-27"
+
+[source.bitcoincore2026consensus]
+type = "code"
+title = "Bitcoin Core: mainnet chain parameters (src/kernel/chainparams.cpp) and the retarget rule (src/pow.cpp)"
+authors = "Bitcoin Core contributors"
+year = 2026
+url = "https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp"
+opened = "2026-11-27"
+
+[source.laurie2021rfc9162]
+type = "spec"
+title = "Certificate Transparency Version 2.0 (RFC 9162)"
+authors = "Ben Laurie, Eran Messeri, Rob Stradling"
+year = 2021
+doi = "10.17487/RFC9162"
+url = "https://www.rfc-editor.org/rfc/rfc9162"
+opened = "2026-11-27"

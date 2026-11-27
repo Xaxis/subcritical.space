@@ -215,14 +215,15 @@ The memo listed power among the physical chokepoints ("chips, fabs, power", in t
 the pathway table). **That was wrong.** Power is a rate limit in the US and a strong detection
 channel (the physical chapter's footprint), but no small set of suppliers controls it worldwide, and
 the party the protocol most needs to bind has power to spare. The memo's per-input table (who
-supplies each input, how concentrated, how fast it grows, how visible) **extends prior work** at
-most. The pieces exist in Sevilla et al. on the constraints to 2030 [@sevilla2024scaling2030], Pilz
-et al. on AI supercomputers [@pilz2025supercomputers], Khan and Mann and Khan et al. on concentration
-and value shares [@khan2020aichips; @khan2021supplychain], Varadarajan et al. on regional
-concentration [@varadarajan2024resilience], and Epoch's chip sales, chip owner and data centre
-datasets [@epoch2026chipsales; @you2026chipowners; @epoch2025datacentershub]. The survey found no
-single source that puts every input in one table with growth and visibility side by side; compiling
-it is a contribution of assembly, not substance, and "not found" is a claim about our search.
+supplies each input, how concentrated, how fast it grows, how visible) is **prior work**. The pieces
+exist in Sevilla et al. on the constraints to 2030 [@sevilla2024scaling2030], Pilz et al. on AI
+supercomputers [@pilz2025supercomputers], Khan and Mann and Khan et al. on concentration and value
+shares [@khan2020aichips; @khan2021supplychain], Varadarajan et al. on regional concentration
+[@varadarajan2024resilience], and Epoch's chip sales, chip owner and data centre datasets
+[@epoch2026chipsales; @you2026chipowners; @epoch2025datacentershub]. The survey found no single
+source that puts every input in one table with growth and visibility side by side, but compiling one
+is synthesis, not a claim, and "not found" is a claim about our search. Nothing of substance in O1 is
+ours ([novelty file](03-novelty.md#o1-the-supply-of-inputs)).
 
 ### What it means for the protocol
 
@@ -238,15 +239,21 @@ made the controlling state relent.
 
 ### What would test it
 
-E1 (compute against capability, and how fast a fixed cap leaks) should take the hardware side of
-the leak from these growth rates: AI compute sold grew [2.67](numbers.md#org-sold-growth) times in a
-year, and EUV capacity doubles in about [2.6 years](numbers.md#org-euv-doubling-years) at plan. A new
-test, **the supply envelope backtest**, would check the envelope itself: from sourced capacities (EUV
-tools, CoWoS wafers, HBM stacks, good dies per wafer), compute the most H100e that each of three
-parties (a member with full access, a denied party with a stockpile, a denied party without one)
-could add in 2024 and 2025, and compare with Epoch's sales estimates and the estimates of Huawei's
-output. The envelope passes if every observed output falls inside it, and is revised if any observed
-output exceeds what it allowed. It runs from `tools/exp/` on public data.
+E1 has run, on the algorithmic side of breakout time rather than this chapter's hardware side, and
+found the drift rate not identified on public data: across six samples of the same models it runs
+from [2.6](numbers.md#e1-algo-annual-subset-min) to [1,512](numbers.md#e1-algo-annual-subset-max) a
+year ([C2](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case)).
+The claims file therefore rests the declared path's line on the compute a chip count sees, not on the
+drift term, which makes the supply this chapter measures carry more weight. The hardware side is
+E22, **the supply envelope backtest**, which has not run. It would take
+the growth rates above (AI compute sold grew [2.67](numbers.md#org-sold-growth) times in a year, and
+EUV capacity doubles in about [2.6 years](numbers.md#org-euv-doubling-years) at plan) and check the
+envelope itself: from sourced capacities (EUV tools, CoWoS wafers, HBM stacks, good dies per wafer),
+compute the most H100e that each of three parties (a member with full access, a denied party with a
+stockpile, a denied party without one) could add in 2024 and 2025, and compare with Epoch's sales
+estimates and the estimates of Huawei's output. The envelope passes if every observed output falls
+inside it, and is revised if any observed output exceeds what it allowed. It runs from `tools/exp/`
+on public data.
 
 ## O2. Race dynamics
 
@@ -367,14 +374,18 @@ resources may backfire. Coe and Vaynman show that states refuse monitoring that 
 security. On this reading, a regime that tells every party exactly where every other party stands
 could make the race it watches more dangerous. The memo had no answer to this.
 
-**The reply, still a candidate.** The protocol need not reveal what those models reveal. Their
+**The reply, in part cut by E6.** The protocol need not reveal what those models reveal. Their
 information is about capability ranks: who is ahead and by how much. A declaration can instead
 reveal compliance: that each party's holdings are below the line. And the protocol changes the
 prize, not only the information. If no party can reach a decisive advantage within the regime's
 detection and response time (D4), decisiveness falls, and low decisiveness is exactly the condition
-under which Emery-Xu et al. find public information safer than private. Fudenberg and Koh's result
-and Barrett and Dannenberg's experiment both favour a known, verified line. None of this is proved
-here.
+under which Emery-Xu et al. find public information safer than private. That comparison rests on
+their Proposition 2, which our reimplementation in E6 does not find to be an equilibrium (a
+deviation gains up to [0.017](numbers.md#e6-ex-prop2-br-gain-max)); that is our reimplementation's
+finding, pending an independent check, and nothing here rests on it either way. Fudenberg and Koh's
+result and Barrett and Dannenberg's experiment both favour a known, verified line. The compliance
+half of the reply failed its test: in E6, revealing only that each party is below the line raised
+risk (below). None of this is proved here.
 
 ### What the survey changed
 
@@ -384,8 +395,9 @@ The memo implicitly assumed that transparency stabilises a race. **Prior work do
 and two well-known models say the opposite under some conditions.** The survey found no race model
 that includes a verification regime with a stated detection time and asks how that time changes
 equilibrium safety. Gan's bilateral model with a response window is the closest [@gan2026clock]; it
-has no coalitions and no choice of what to disclose. Building that combination would extend prior
-work. That it is missing is a claim about our search.
+has no coalitions and no choice of what to disclose. That it is missing is a claim about our search.
+E6 builds that combination as a tool, not a claim; the claims file defers it, so nothing about it is
+claimed, and the one candidate it tested, compliance-only disclosure, is cut (below).
 
 ### What it means for the protocol
 
@@ -398,17 +410,21 @@ Candidates for how the protocol changes the payoffs:
 3. **Publish the line.** A known threshold makes compliance a coordination equilibrium; a disputed
    breakout estimate behaves like an uncertain threshold and restores the dilemma
    [@barrett2012climate].
-4. **Disclose compliance, not rank.** Declarations should show that holdings are below the line, and
-   reveal capability only to the evaluators who need it.
+4. **Disclose compliance, not rank: cut by E6.** Declarations that show rivals only that holdings
+   are below the line gave a higher disaster risk than no information in every calibrated cell and
+   than private information alone in every cell; they were safer than public capability in most. In
+   these models, on our reading, a public verdict of compliance still tells rivals enough about rank
+   to sharpen the race. What Part II discloses, and to whom, has to be weighed against that;
+   capability goes only to the evaluators who need it.
 5. **Penalise staying out.** Denial of chips and cloud to non-members is the club penalty Nordhaus
    finds necessary for a large coalition [@nordhaus2015climate]; the chokepoints of O3 are what make
    that penalty available.
 6. **Watch transfers.** Cross-party transfer of AI research advances couples otherwise subcritical
    parties [@burtsev2026criticality].
 
-The cost to useful AI of the first four is low: they bind only the approach to the line. The fifth
-costs outsiders, which is its purpose, and risks the counter-pressure noted under O1. The sixth would
-cost open science and needs a narrow definition to be acceptable.
+The cost to useful AI of the first three is low: they bind only the approach to the line. The fifth
+costs outsiders, which is its purpose, and risks the counter-pressure noted under O1. The sixth
+would cost open science and needs a narrow definition to be acceptable.
 
 ### What would test it
 
@@ -416,11 +432,21 @@ E6 (defection and coalition games) should implement Armstrong et al.'s model, Em
 logistic contest and Fudenberg and Koh's pacing game with a verification regime added: a detection
 rate, a response time, and four information regimes (none, private, public capability, public
 compliance only). The test reports equilibrium safety across decisiveness and enmity. The candidate
-"compliance-only declarations do not raise risk" survives only if risk under compliance-only
-disclosure is no higher than under no information in every calibrated regime; if any regime reverses
-the sign, the claim is cut back to the regimes where it holds. A second E6 run should find the
-smallest penalty on non-members (denied chips, as a share of their compute) that makes a coalition
-holding the chokepoints stable in Nordhaus's sense, for a stated payoff calibration.
+"compliance-only declarations do not raise risk" was to survive only if risk under compliance-only
+disclosure was no higher than under no information in every calibrated regime.
+
+E6 has run, and the candidate is cut. Over [72 cells](numbers.md#e6-o2-cells) of capability range,
+enmity, decisiveness and line position, compliance-only disclosure gave a higher disaster risk than
+no information in [100%](numbers.md#e6-o2-compliance-over-none) of cells and than private
+information alone in [100%](numbers.md#e6-o2-compliance-over-private); it was riskier than public
+capability in [12%](numbers.md#e6-o2-compliance-over-public), and public capability was riskier than
+private information in [96%](numbers.md#e6-o2-public-over-private). The models and the calibrations
+are the published ones, so this is a finding inside those models, not about real parties. E6 also
+reproduces Nordhaus's analytic case: with no sanction the stable coalitions of identical countries hold
+[2 countries](numbers.md#e6-nordhaus-stable-min) to
+[3 countries](numbers.md#e6-nordhaus-stable-max), as he gives, and a penalty on non-members of
+[0.63](numbers.md#e6-nordhaus-penalty-n10) of a member's abatement cost makes the grand coalition
+stable. Measured payoffs for AI, and the penalty in denied chips, remain untested.
 
 ## O3. Chokepoints
 
@@ -599,11 +625,14 @@ is a time-based breakout test (D3, D4) that lets useful AI keep improving above 
 [@khan2020aichips], CNAS [@grunewald2025smuggling], the export rules themselves and Epoch's satellite
 work [@epoch2025datacentershub] are also prior work.
 
-Two pieces may extend prior work: ranking stages by durability using measured growth and erosion
-evidence, and treating the footprint growth that denial forces (the
+Two pieces were not found done quantitatively: ranking stages by durability using measured growth and
+erosion evidence, and treating the footprint growth that denial forces (the
 [2.5](numbers.md#org-denial-power-multiplier) times power per unit of compute) as a detection gain to set
-against the physical chapter's footprint floor. The survey did not find either done quantitatively; that
-is a claim about our search only.
+against the physical chapter's footprint floor. That is a claim about our search only, and neither is
+claimed. The ranking is too small: with so few stages no test could discriminate one order from
+another. The detection gain is merged into the footprint floor
+([C8](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool)),
+where E8 measures it. O3 is prior work ([novelty file](03-novelty.md#o3-chokepoints)).
 
 ### What it means for the protocol
 
@@ -627,25 +656,43 @@ A candidate, not a finding.
    breakout fleet of [180 million H100e](numbers.md#org-hwp-fb) is [13 years](numbers.md#org-fb-years-of-sales)
    of them, and more than the paper's own projected global fleet of
    [47 million H100e](numbers.md#org-hwp-global-2026). Their thresholds are assumptions and their horizon of [2 years](numbers.md#org-hwp-tb) is
-   chosen by judgement; the comparison shows only that the leak rate, not the core, sets the margin for
-   covert work.
+   chosen by judgement. Both thresholds are also proportional to that paper's assumed breakout budget
+   of [2e+29 FLOP](numbers.md#def-hwp-breakout-budget): at its frozen frontier of
+   [2e+27 FLOP](numbers.md#claim-hwp-frozen-frontier) the whole projected fleet would need only
+   [28 days](numbers.md#claim-whole-fleet-days-frozen), and both thresholds would shrink in proportion.
+   So the comparison holds at one assumed number and does not show whether the leak or the core sets
+   the margin for covert work; the claims file downgraded the coalition result built on it for the
+   same reason ([C7](04-claims.md#c7-the-coalition-share-derived-from-the-response-time)). What
+   survives is narrower: the smuggled stock is the share of the covert threshold given above even at
+   that paper's large budget, and a smaller budget only raises that share.
 4. **Use denial as a detection gain.** A denied party's programme needs more power and bigger sites;
    the protocol should count that as a gain in the power and imagery channels, not only as a cost to
-   the denied party.
+   the denied party. The gain belongs to the footprint floor (C8), and E8 finds it delays a power
+   channel's crossing by years, not decades (below).
 
 ### What would test it
 
-E5 (multi-channel verification Monte Carlo) should model the chip-accounting channel with a leak
-fraction and miss rate taken from the smuggling model ([25%](numbers.md#org-diversion-detect) detected,
-90% CI [10%](numbers.md#org-diversion-detect-low) to [80%](numbers.md#org-diversion-detect-high)) and the
-factor of [4.1](numbers.md#org-huawei-spread) in outside estimates as the counting error. E8 (the footprint
-floor against detection limits) should apply the denial multiplier of
-[2.5](numbers.md#org-denial-power-multiplier) to a denied party's sites and ask how much it raises
-detection. A new test, **the durability backtest**, would rank the stages using only data public at the
-end of 2022 (supplier count, capacity growth, technical complexity) and score the ranking against the
-erosion observed from 2022 to 2026 (CXMT's share, the die bank, SMIC's N+3, the EUV prototype). A
-ranking that fails to order the observed erosion is cut. With so few stages it is a sanity check, not a
-proof.
+E5 (multi-channel verification Monte Carlo) has run with the smuggling model's diversion detection
+([25%](numbers.md#org-diversion-detect) detected, 90% CI [10%](numbers.md#org-diversion-detect-low) to
+[80%](numbers.md#org-diversion-detect-high)) as a channel, merged with imagery and intelligence because
+they share sources of tips. For smuggled chips spread over sites below the satellite line its detection
+time at the prevention miss chance is a median of [32 years](numbers.md#e5-td-distributed-years), and for
+the untraced pool, where no acquisition is left to catch, [32 years](numbers.md#e5-td-pool-years), against
+[39.0 days](numbers.md#e5-td-declared-days) on the declared path. Both are lower bounds, since the
+historical rate inside them is an upper bound. The factor of [4.1](numbers.md#org-huawei-spread) in
+outside estimates is not yet in E5 as a counting error. E8 (the footprint floor against detection
+limits) has applied the denial multiplier of [2.5](numbers.md#org-denial-power-multiplier): for a fixed
+compute it delays a power channel's crossing by [3.1 years](numbers.md#e8-denial-delay-years), and a
+[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run on one site over a pause's run length draws at least
+the satellite line in [60%](numbers.md#e8-concentrated-1e26-pause-seen-denied) of draws for a denied
+party against [19%](numbers.md#e8-concentrated-1e26-pause-seen) otherwise. The gain is partial: it
+postpones the year a single site falls below the satellite line, but chips spread over sites below that
+line are still found only on E5's timescale of decades (above). A new test, **the durability
+backtest**, would rank the stages using only data
+public at the end of 2022 (supplier count, capacity growth, technical complexity) and score the ranking
+against the erosion observed from 2022 to 2026 (CXMT's share, the die bank, SMIC's N+3, the EUV
+prototype). A ranking that fails to order the observed erosion is cut. With so few stages it is a sanity
+check, not a proof, which is why the ranking is not claimed.
 
 ## O4. Covert supply: how secret programmes were run and found
 
@@ -723,14 +770,29 @@ channels are those of other domains (nuclear and biological weapons), not of AI.
 Across the seven undeclared programmes, the shortest time undetected is
 [3 years](numbers.md#org-covert-years-min) and the median [15 years](numbers.md#org-covert-years-median).
 Taking Fordow at its short end, they add up to [87 years](numbers.md#org-covert-years-sum) undetected,
-a discovery rate of about [0.08/yr](numbers.md#org-covert-hazard). At that rate, a covert programme has
-about an [8%](numbers.md#org-covert-detect-1y) chance of being found within the memo's placeholder
-breakout time, and [33%](numbers.md#org-covert-detect-5y) within South Africa's decision-to-device time.
-The memo's placeholder inspection channel implies a detection rate of
-[1.2/yr](numbers.md#org-memo-detect-rate), about [15](numbers.md#org-memo-to-history) times the historical
-rate, and a miss chance of [30%](numbers.md#miss-prob-one-channel) over its placeholder breakout time. The historical figure is
-crude, for the sampling reasons above, and it measures old channels, not new ones. It still says the
-memo's placeholder is far from any record.
+a discovery rate of about [0.08/yr](numbers.md#org-covert-hazard). E5 reproduces that figure,
+[0.080/yr](numbers.md#e5-o4-hazard), and with South Africa's self-disclosure censored, as a survival fit
+requires, it falls to [0.069/yr](numbers.md#e5-o4-hazard-censored). E5 then fits a wider, sourced set of
+[16 cases](numbers.md#e5-cases), [14 discoveries](numbers.md#e5-events) over
+[149 programme-years](numbers.md#e5-exposure-years), and finds [0.094/yr](numbers.md#e5-hazard) (90%
+interval [0.057/yr](numbers.md#e5-hazard-lo) to [0.147/yr](numbers.md#e5-hazard-hi)); across choices of
+cases and codings it runs from [0.067/yr](numbers.md#e5-sens-min) to [0.101/yr](numbers.md#e5-sens-max),
+and the Kaplan-Meier median time to discovery is [9.6 years](numbers.md#e5-km-median-years). Two things
+limit what that rate means. It comes from programmes that were all found or disclosed in the end, so it
+is an upper bound on a careful evader's rate, and every detection time computed from it is a lower bound;
+the size of that bias cannot be measured from this record. And it runs from a programme's start (the
+decision or construction), not from a breakout, so it says nothing directly about a window that opens
+when a breakout begins. Even counted from the start, discovery is likelier later: the Weibull shape is
+[1.49](numbers.md#e5-weibull-shape) ([1.25](numbers.md#e5-weibull-shape-lo) to
+[2.12](numbers.md#e5-weibull-shape-hi); a likelihood-ratio test against a constant rate gives p of
+[0.09](numbers.md#e5-weibull-lr-p)), and within a year of a programme's start the Weibull fit gives a
+discovery chance of [2.6%](numbers.md#e5-weibull-detect-1y), not the constant rate's
+[9.0%](numbers.md#e5-hazard-detect-1y). The memo's placeholder inspection channel implies a detection
+rate of [1.2/yr](numbers.md#org-memo-detect-rate), [12.8](numbers.md#e5-memo-over-hazard) times the
+fitted rate and [11.8](numbers.md#e5-memo-over-sens-max) times the highest any sensitivity variant
+gives, and a miss chance of [30%](numbers.md#miss-prob-one-channel) over its placeholder breakout time.
+The historical figure measures old channels in other domains, not new ones, and it applies only to
+paths those channels could see. It still says the memo's placeholder is far from any record.
 
 The inspectorate's own channels did not find these programmes. "The IAEA identifies suspect locations
 mainly through voluntary tips from national intelligence agencies", and these tips "appear to be
@@ -764,7 +826,8 @@ territory, larger and more visible than a leading-edge one, and the record sugge
 likely be found by rival intelligence and imagery, as Iran and Syria were. A state without a chip chain
 depends on the leaks at the edges and needs volume, which is what the smuggling cases expose. A firm
 inside a member state holds its compute with a few owners and its secret with hundreds of employees,
-where cloud oversight and rewarded insiders work best. A decentralised network is, for now, about
+where cloud oversight and rewarded insiders should work best, though neither has a measured rate for AI:
+in E5 cloud has no channel at all. A decentralised network is, for now, about
 [1,000](numbers.md#org-decentral-gap) times below the frontier [@sevilla2025decentralized]. The longest-lived programmes in the
 record were state programmes with a domestic industry (Biopreparat, South Africa, Iran) or an illicit
 supply network (Libya, Iraq): the AI analogues are a large state with its own chain, and a state
@@ -780,16 +843,25 @@ by inspectors. **For undeclared work, the realistic detection time is years, not
 history itself is prior work (the arms control sources above), and the IAEA's dependence on
 intelligence is documented [@baker2023nuclear]. Turning the record into a discovery rate for an AI regime
 is this chapter's arithmetic; the survey did not search for prior estimates of it, so no novelty is
-claimed and the figure is unverified.
+claimed. The claims file treats the rate as an input, not a contribution: E5 has refitted it as a
+survival model, and it enters C3 through E5
+([C3](04-claims.md#c3-detection-as-the-evader-sees-it-the-per-path-evader-minimised-miss)). It is an
+upper bound on a careful evader's rate, on a clock that starts with the programme, and it belongs only
+to paths that intelligence, defectors and imagery could see.
 
 ### What it means for the protocol
 
 A candidate, not a finding.
 
-1. **Do not rely on finding covert work after it starts.** At the historical rate, a covert
-   programme would usually outlast a breakout time of a few years. The protocol must instead keep the covert supply
-   route small: the unaccounted compute any party could command must stay below what it would need to
-   break out within the discovery time the record supports, which is years.
+1. **Do not rely on finding covert work after it starts.** Even at the historical rate, itself an upper
+   bound, the median time to discovery was [9.6 years](numbers.md#e5-km-median-years) from a
+   programme's start, and a path only those channels see needs [32 years](numbers.md#e5-td-hist-years) from a
+   programme's start to reach the prevention miss chance, a lower bound. Compute rented through cloud
+   providers or distilled from others' outputs has no measured channel at all, so a breakout on those
+   paths is missed with certainty. The protocol must instead keep the covert supply route small: the
+   unaccounted compute any party could command must stay below what it would need to break out within
+   the discovery time the record supports, which is decades on the watched paths and unbounded on the
+   unwatched ones.
 2. **Weight the channels that worked.** Supply-side accounting (chips counted at birth, O3);
    intelligence shared among rival blocs, each of which wants to expose the other; and rewarded
    insiders, with rewards rather than protections alone.
@@ -803,17 +875,26 @@ A candidate, not a finding.
 
 ### What would test it
 
-E5 should fit the discovery rate properly: a survival model over a wider and documented set of
+E5 has fitted the discovery rate properly: a survival model over a wider and documented set of
 programmes, with programmes ended by self-disclosure treated as censored, and a sensitivity analysis
-over which cases are included. Its output becomes the rate for the intelligence and insider channels
-in the multi-channel Monte Carlo, replacing the placeholder. The result that would overturn this
-section is a fitted rate close to the memo's placeholder. E6 should test withdrawal: a party that
-learns it has been detected chooses between exit and compliance, with the notice period and the
-assets frozen during it as parameters.
+over which cases are included (above). Its output, redrawn from the cases in every draw, is now the
+rate for the historical channels (intelligence, defectors, the media) in the multi-channel Monte Carlo,
+replacing the placeholder. The result that would have
+overturned this section was a fitted rate close to the memo's placeholder; the placeholder is instead
+[12.8](numbers.md#e5-memo-over-hazard) times the fitted rate, and leaving out any one case moves the
+rate only between [0.088/yr](numbers.md#e5-loo-min) and [0.102/yr](numbers.md#e5-loo-max). What E5
+cannot do is measure how far a careful evader's rate sits below it: programmes never found are missing
+from any record. E6 has not tested withdrawal as a choice. It states the condition instead: with assets
+frozen during a notice and the response starting at notice, an exit breakout fails only if breakout
+time plus the notice reaches the response time; without the freeze the party can start during the
+notice and its length adds nothing. And on E24's record [25%](numbers.md#e24-halt-share-never) of
+findings made inside a treaty were never followed by a halt; if that share carries over, an exit
+breakout succeeds at least that often whatever the notice. A game in which a party that learns it has
+been detected chooses between exit and compliance remains to be built.
 
 ## What this perspective contributes to the line
 
-Four quantities from this chapter should enter the protocol, each as a trigger or a limit.
+Four quantities from this chapter should enter the protocol, as limits or as inputs to the line.
 
 1. **Registered compute.** New AI chips counted at birth at the narrow stages (EUV tools,
    leading-edge wafers, HBM stacks, packaging) and holdings counted at their owners, in H100e.
@@ -828,7 +909,10 @@ Four quantities from this chapter should enter the protocol, each as a trigger o
    it is estimated, never counted, with a wide interval
    ([290,000 H100e](numbers.md#org-smuggled-cum-low) to [1,600,000 H100e](numbers.md#org-smuggled-cum-high)),
    on an assumed detection rate, and outside estimates of a single maker's output differ by a factor of
-   [4.1](numbers.md#org-huawei-spread).
+   [4.1](numbers.md#org-huawei-spread). In E8 the compute smuggled into one country is already a median
+   of [230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50) times the chip floor of a
+   [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run under a pause, at BF16, so while that stock is
+   open its path fails the line for every party (C8).
 3. **Supply growth and erosion horizon.** How fast new compute can be made (AI compute sold
    [2.67](numbers.md#org-sold-growth) times in a year; EUV capacity doubling in about
    [2.6 years](numbers.md#org-euv-doubling-years); packaging in
@@ -838,11 +922,19 @@ Four quantities from this chapter should enter the protocol, each as a trigger o
    shrinks and how long the chokepoint holds. *Weakest point:* the growth figures are vendor guidance
    and the horizon rests on unnamed-source reporting.
 4. **Discovery time for undeclared programmes.** The realistic detection time for covert work, from the
-   historical record: a median of [15 years](numbers.md#org-covert-years-median) undetected and a
-   discovery rate of about [0.08/yr](numbers.md#org-covert-hazard). It belongs in the line's detection
-   time for any compute outside the registry. *Weakest point:* a small convenience sample from other
-   domains, with the programmes never found missing.
+   historical record: E5's fitted discovery rate of [0.094/yr](numbers.md#e5-hazard), counted from a
+   programme's start, and the [32 years](numbers.md#e5-td-hist-years) a path only the historical
+   channels see needs to reach the prevention miss chance. It belongs in the line's detection time only
+   for compute outside the registry that those channels could see: an undeclared site, smuggled chips,
+   the untraced pool. Cloud and distillation have no measured channel and so no detection time; on those
+   paths a breakout is missed with certainty until some channel for them is measured.
+   *Weakest point:* a small convenience sample from other domains, with the programmes never found
+   missing, so the rate is an upper bound on a careful evader's and every detection time from it a lower
+   bound.
 
-Race pressure (O2) is not a trigger. It is a design constraint: the protocol must cap the prize, publish
-the line and disclose compliance rather than rank, or the transparency it needs may make the race more
-dangerous.
+Race pressure (O2) is not a trigger. It is a design constraint: on the published models the protocol
+should cap the prize and publish the line. The memo's answer to the transparency problem, disclosing
+compliance rather than rank, failed its test: in E6 compliance-only disclosure gave a higher disaster
+risk than no information in [100%](numbers.md#e6-o2-compliance-over-none) of
+[72 cells](numbers.md#e6-o2-cells). So what the protocol discloses, and to whom, must be weighed against
+the race it may sharpen.

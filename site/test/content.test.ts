@@ -74,6 +74,14 @@ test("ledger links, cross-links and anchors resolve as the repository's tools re
   assert.equal(docHref("01-anatomy.md#p4"), "/research/anatomy#p4");
   assert.equal(docHref("../research/06-protocol.md"), "/research/protocol");
   assert.equal(docHref("numbers.md#x"), null);
+  // From research/verification/, one level down: the ledger and documents are one level up.
+  assert.equal(ledgerId("../numbers.md#e5-hazard"), "e5-hazard");
+  assert.equal(docHref("../04-claims.md#c4-x"), "/research/claims#c4-x");
+  assert.equal(docHref("verification/l4-red-team.md#c1"), "/verification/l4-red-team#c1");
+  assert.equal(
+    docHref("../verification/l1-prior-art-c1-c6.md"),
+    "/verification/l1-prior-art-c1-c6",
+  );
   assert.equal(docSlug("research/00-memo.md"), "memo");
   assert.equal(slugify("The protocol's shape"), "the-protocols-shape");
   assert.equal(slugify("D4 [line](numbers.md#x) *now*"), "d4-line-now");
@@ -239,4 +247,33 @@ test("every source gets a citation label naming a person or an organisation", as
   assert.equal(at("Memphis Light, Gas and Water"), "Memphis Light, Gas and Water 2026");
   assert.equal(at("METR (Tom Cunningham, Nate Rush)"), "METR 2026");
   assert.equal(at("David Reber Jr. (NVIDIA)"), "Reber 2026");
+});
+
+test("the verification record parses, and a status outside the vocabulary fails", async () => {
+  const { parseRecord } = await import("../lib/verification.ts");
+  const table = (row: string) =>
+    `# V\n\n## The record\n\n| Claim | L1 prior art | L2 proof | Standing |\n|---|---|---|---|\n${row}\n\n## Next\n`;
+  const r = parseRecord(
+    table(
+      "| [C1, the line](04-claims.md#c1) | **prior work**: EASI | **proved under assumptions** | **application** |",
+    ),
+  );
+  assert.deepEqual(r.levels, ["L1 prior art", "L2 proof"]);
+  assert.equal(r.rows[0]?.code, "C1");
+  assert.deepEqual(
+    r.rows[0]?.levels.map((c) => [c.status, c.tone, c.detail]),
+    [
+      ["prior work", "fail", "EASI"],
+      ["proved under assumptions", "partial", ""],
+    ],
+  );
+  assert.equal(r.rows[0]?.standing.tone, "partial");
+  assert.throws(
+    () => parseRecord(table("| C2 | **fine** | **proved** | **application** |")),
+    /not a status/,
+  );
+  assert.throws(
+    () => parseRecord(table("| C2 | proved | **proved** | **application** |")),
+    /bold status/,
+  );
 });

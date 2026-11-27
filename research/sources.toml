@@ -25,6 +25,15 @@ arxiv = "2506.15100"
 opened = "2026-11-27"
 found_in = "research/notes/07-compute-governance.md"
 
+[source.abubaker2026fuzzing]
+type = "preprint"
+title = "Fuzzing Large Language Models to Elicit Hidden Behaviours"
+authors = "Mohammed Abu Baker, Lakshmi Babu-Saheer"
+year = 2026
+arxiv = "2606.29646"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.aca-2026-newstart]
 type = "news"
 title = "New START Expires As U.S. Urges 'Modernized' Treaty"
@@ -291,6 +300,15 @@ opened = "2026-11-27"
 found_in = "research/notes/04-dynamics.md, research/notes/01-definitions.md"
 aliases = ["anthropic-rsp-v3-4"]
 
+[source.apple2024pcc]
+type = "vendor"
+title = "Private Cloud Compute: A new frontier for AI privacy in the cloud"
+authors = "Apple Security Engineering and Architecture"
+year = 2024
+url = "https://security.apple.com/blog/private-cloud-compute/"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
 [source.armstrong2016racing]
 type = "peer-reviewed"
 title = "Racing to the precipice: a model of artificial intelligence development"
@@ -310,6 +328,15 @@ year = 2024
 url = "https://situational-awareness.ai/from-agi-to-superintelligence/"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
+
+[source.ashenfelter1992twins]
+type = "report"
+title = "Estimates of the Economic Return to Schooling from a New Sample of Twins"
+authors = "Orley Ashenfelter, Alan Krueger"
+year = 1992
+doi = "10.3386/w4143"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.askell2019cooperation]
 type = "preprint"
@@ -337,6 +364,16 @@ year = 2026
 url = "https://www.fool.com/earnings/call-transcripts/2026/07/15/asml-asml-q2-2026-earnings-call-transcript/"
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
+
+[source.aubert2006leniency]
+type = "peer-reviewed"
+title = "The impact of leniency and whistle-blowing programs on cartels"
+authors = "Cécile Aubert, Patrick Rey, William E. Kovacic"
+year = 2006
+doi = "10.1016/j.ijindorg.2006.04.002"
+url = "https://publications.ut-capitole.fr/1898/1/leniency.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.austin2021mbpp]
 type = "preprint"
@@ -395,6 +432,15 @@ arxiv = "2507.15916"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md, research/notes/08-arms-control.md, research/notes/07-compute-governance.md"
 aliases = ["baker-2025-six-layers", "baker2025sixlayers"]
+
+[source.bardoscia2017pathways]
+type = "peer-reviewed"
+title = "Pathways towards instability in financial networks"
+authors = "Marco Bardoscia, Stefano Battiston, Fabio Caccioli, Guido Caldarelli"
+year = 2017
+doi = "10.1038/ncomms14416"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.barletta1999sa]
 type = "report"
@@ -470,6 +516,16 @@ doi = "10.1073/pnas.1208417109"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md"
 
+[source.barrett2016asipath]
+type = "peer-reviewed"
+title = "A model of pathways to artificial superintelligence catastrophe for risk and decision analysis"
+authors = "Anthony M. Barrett, Seth D. Baum"
+year = 2016
+doi = "10.1080/0952813X.2016.1186228"
+arxiv = "1607.07730"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
 [source.becker2025rct]
 type = "preprint"
 title = "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
@@ -496,6 +552,25 @@ year = 2024
 arxiv = "2410.21514"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.bentov2016beacon]
+type = "preprint"
+title = "Bitcoin Beacon"
+authors = "Iddo Bentov, Ariel Gabizon, David Zuckerman"
+year = 2016
+arxiv = "1605.04559"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
+[source.bentov2019tesseract]
+type = "peer-reviewed"
+title = "Tesseract: Real-Time Cryptocurrency Exchange Using Trusted Hardware"
+authors = "Iddo Bentov, Yan Ji, Fan Zhang, Lorenz Breidenbach, Philip Daian, Ari Juels"
+year = 2019
+doi = "10.1145/3319535.3363221"
+url = "https://par.nsf.gov/servlets/purl/10153194"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.bernheim1987coalition]
 type = "peer-reviewed"
@@ -597,6 +672,15 @@ url = "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
 
+[source.bitcoincore2026consensus]
+type = "code"
+title = "Bitcoin Core: mainnet chain parameters (src/kernel/chainparams.cpp) and the retarget rule (src/pow.cpp)"
+authors = "Bitcoin Core contributors"
+year = 2026
+url = "https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e25_licence_log.sources.toml"
+
 [source.blablova2025china]
 type = "essay"
 title = "Why China isn't about to leap ahead of the West on compute"
@@ -615,6 +699,24 @@ arxiv = "2504.18565"
 opened = "2026-11-27"
 found_in = "research/notes/04-dynamics.md"
 
+[source.blockdn2026headers]
+type = "dataset"
+title = "block-dn: Bitcoin block data over REST, block headers in files of 100,000 (mainnet instance)"
+authors = "guggero on GitHub (block-dn software, MIT licence, github.com/guggero/block-dn); bdn.bitcoin.lu.ke instance"
+year = 2026
+url = "https://bdn.bitcoin.lu.ke/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e25_licence_log.sources.toml"
+
+[source.blockstream2026esplora]
+type = "dataset"
+title = "Esplora HTTP API (block hash by height), blockstream.info"
+authors = "Blockstream"
+year = 2026
+url = "https://github.com/Blockstream/esplora/blob/master/API.md"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e25_licence_log.sources.toml"
+
 [source.bloom2020ideas]
 type = "peer-reviewed"
 title = "Are Ideas Getting Harder to Find?"
@@ -632,6 +734,24 @@ year = 2025
 url = "https://www.alignmentforum.org/posts/pPEeMdgjpjHZWCDFw/white-box-control-at-uk-aisi-update-on-sandbagging"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.blumberg2013stuttering]
+type = "peer-reviewed"
+title = "Inference of R0 and Transmission Heterogeneity from the Size Distribution of Stuttering Chains"
+authors = "Seth Blumberg, James O. Lloyd-Smith"
+year = 2013
+doi = "10.1371/journal.pcbi.1002993"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
+[source.blumberg2020supercritical]
+type = "preprint"
+title = "Assessing the plausibility of supercritical transmission for an emerging or re-emerging pathogen"
+authors = "Seth Blumberg, Phoebe Lu, Thomas M. Lietman, Travis C. Porco"
+year = 2020
+doi = "10.1101/2020.02.08.20021311"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.bostrom1998howlong]
 type = "peer-reviewed"
@@ -715,6 +835,33 @@ url = "https://www.armscontrol.org/node/1801"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md"
 
+[source.burford2020trustmachine]
+type = "report"
+title = "The trust machine: Blockchain in nuclear disarmament and arms control verification"
+authors = "Lyndon Burford (Centre for Science and Security Studies, King's College London)"
+year = 2020
+url = "https://www.kcl.ac.uk/csss/assets/the-trust-machine-report.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
+[source.burns2023weak]
+type = "preprint"
+title = "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision"
+authors = "Collin Burns, Pavel Izmailov, Jan Hendrik Kirchner, Bowen Baker, Leo Gao, Leopold Aschenbrenner, Yining Chen, Adrien Ecoffet, Manas Joglekar, Jan Leike, Ilya Sutskever, Jeff Wu"
+year = 2023
+arxiv = "2312.09390"
+opened = "2026-11-27"
+found_in = "research/verification/l4-red-team.md"
+
+[source.burr2012safeguards]
+type = "report"
+title = "Strengthened Nuclear Safeguards: A Statistical View in the Context of Combining Process Monitoring and Nuclear Material Accounting Data (LA-UR-12-00374)"
+authors = "T. Burr, K. Budlong-Sylvester, S. Demuth, M. Hamada, J. Howell, C. Longo, M. Suzuki"
+year = 2012
+url = "https://www.osti.gov/servlets/purl/1143979"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.burtsev2026criticality]
 type = "preprint"
 title = "Recursive Criticality of AI Self-Improvement"
@@ -751,6 +898,15 @@ year = 2001
 doi = "10.1016/S0377-2217(00)00082-5"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md"
+
+[source.carlini2019evaluating]
+type = "preprint"
+title = "On Evaluating Adversarial Robustness"
+authors = "Nicholas Carlini, Anish Athalye, Nicolas Papernot, Wieland Brendel, Jonas Rauber, Dimitris Tsipras, et al."
+year = 2019
+arxiv = "1902.06705"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.carlsmith2020]
 type = "report"
@@ -850,6 +1006,15 @@ year = 2002
 url = "https://nuke.fas.org/guide/dprk/nuke/cia111902.html"
 opened = "2026-11-27"
 found_in = "tools/exp/data/e05_detection.sources.toml"
+
+[source.clarke2022mtair]
+type = "preprint"
+title = "Modeling Transformative AI Risks (MTAIR) Project: Summary Report"
+authors = "Sam Clarke, Ben Cottier, Aryeh Englander, Daniel Eth, David Manheim, Samuel Dylan Martin, Issa Rice"
+year = 2022
+arxiv = "2206.09360"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.clymer2024poser]
 type = "preprint"
@@ -968,6 +1133,15 @@ url = "https://counterpointresearch.com/insights/global-dram-and-hbm-market-shar
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
 
+[source.crowdstrike2018breakout]
+type = "vendor"
+title = "CrowdStrike on Dark Reading: Why 'Breakout Time' Is Critical to Your Security Strategy"
+authors = "CrowdStrike (Michael Busselen; article by Scott Taschler)"
+year = 2018
+url = "https://www.crowdstrike.com/en-us/blog/crowdstrike-discusses-breakout-time-in-an-article-on-dark-reading/"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.crs-2004-libya]
 type = "report"
 title = "Disarming Libya: Weapons of Mass Destruction (RS21823)"
@@ -1012,6 +1186,16 @@ year = 2012
 url = "https://www.cnas.org/publications/reports/aum-shinrikyo-second-edition-english"
 opened = "2026-11-27"
 found_in = "tools/exp/data/e05_detection.sources.toml"
+
+[source.dashkovskiy2007smallgain]
+type = "peer-reviewed"
+title = "An ISS small gain theorem for general networks"
+authors = "Sergey Dashkovskiy, Björn S. Rüffer, Fabian R. Wirth"
+year = 2007
+doi = "10.1007/s00498-007-0014-8"
+arxiv = "math/0506434"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.davidson2023compute]
 type = "essay"
@@ -1068,6 +1252,15 @@ url = "https://www.datacenterknowledge.com/hyperscalers/big-tech-to-spend-650b-t
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
 
+[source.dearden2022sif]
+type = "report"
+title = "Specifying SIF Response Time (FS-SIG Briefing Note)"
+authors = "Harvey T. Dearden (Institute of Measurement and Control, Functional Safety Special Interest Group)"
+year = 2022
+url = "https://www.instmc.org/_userfiles/pages/groupfiles/functional_safety/fssig_bn_sif_response_time.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.deepmind2025imo]
 type = "vendor"
 title = "Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad"
@@ -1076,6 +1269,15 @@ year = 2025
 url = "https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
+
+[source.deepseek2024v3]
+type = "preprint"
+title = "DeepSeek-V3 Technical Report"
+authors = "DeepSeek-AI"
+year = 2024
+arxiv = "2412.19437"
+opened = "2026-11-27"
+found_in = "research/verification/l4-red-team.md"
 
 [source.deepseek2025r1]
 type = "peer-reviewed"
@@ -1086,6 +1288,15 @@ doi = "10.1038/s41586-025-09422-z"
 arxiv = "2501.12948"
 opened = "2026-11-27"
 found_in = "research/notes/03-algorithms.md"
+
+[source.delaney2026strategicvisions]
+type = "report"
+title = "Strategic Visions in AI Governance: Mapping Pathways to Victory"
+authors = "Oscar Delaney, Maria Kostylew, Oliver Guest, Peter Wildeford (IAPS)"
+year = 2026
+url = "https://www.iaps.ai/research/strategic-visions-in-ai-governance"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.doj2026supermicro]
 type = "official-docs"
@@ -1104,6 +1315,15 @@ year = 2025
 arxiv = "2407.07890"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.dorner2021sample]
+type = "preprint"
+title = "Measuring Progress in Deep Reinforcement Learning Sample Efficiency"
+authors = "Florian E. Dorner"
+year = 2021
+arxiv = "2102.04881"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e09_returns.sources.toml"
 
 [source.douillard2023diloco]
 type = "preprint"
@@ -1142,6 +1362,15 @@ year = 1962
 url = "https://www.rand.org/pubs/research_memoranda/RM2972.html"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md"
+
+[source.duddu2026deceptive]
+type = "preprint"
+title = "Designing Deceptive Model Organisms that Successfully Evade Auditing"
+authors = "Vasisht Duddu, Mark Wang, Lipeng He, Tim G. J. Rudner"
+year = 2026
+arxiv = "2611.20459"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.dyck2007whistle]
 type = "preprint"
@@ -1205,6 +1434,15 @@ year = 2026
 url = "https://finance.yahoo.com/sectors/technology/articles/hyperscalers-hit-700-billion-2026-111243744.html"
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
+
+[source.einhorn2022jcpoa]
+type = "report"
+title = "Reviving the JCPOA Is the Better Alternative, But Can It Be Made Sustainable?"
+authors = "Robert Einhorn (Brookings)"
+year = 2022
+url = "https://www.brookings.edu/wp-content/uploads/2022/05/FP_20220525_jcpoa_revival.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.eloundou2024gpts]
 type = "peer-reviewed"
@@ -1453,6 +1691,15 @@ arxiv = "2208.03567"
 opened = "2026-11-27"
 found_in = "research/notes/07-compute-governance.md"
 
+[source.farhang2017tbs]
+type = "preprint"
+title = "When to Invest in Security? Empirical Evidence and a Game-Theoretic Approach for Time-Based Security"
+authors = "Sadegh Farhang, Jens Grossklags"
+year = 2017
+arxiv = "1706.00302"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.fas-2026-newstart]
 type = "report"
 title = "The Aftermath: The Expiration of New START and What It Means For Us All"
@@ -1470,6 +1717,15 @@ year = 1998
 url = "https://nuke.fas.org/guide/russia/agency/bw.htm"
 opened = "2026-11-27"
 found_in = "research/notes/08-arms-control.md"
+
+[source.fda2007diagnostic]
+type = "official-docs"
+title = "Statistical Guidance on Reporting Results from Studies Evaluating Diagnostic Tests: Guidance for Industry and FDA Staff"
+authors = "U.S. Food and Drug Administration, Center for Devices and Radiological Health"
+year = 2007
+url = "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/statistical-guidance-reporting-results-studies-evaluating-diagnostic-tests-guidance-industry-and-fda"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.feldgoise2026tracking]
 type = "report"
@@ -1498,6 +1754,15 @@ url = "https://hardwired-pause.ai/paper"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md, research/notes/01-definitions.md"
 aliases = ["hwp-2026"]
+
+[source.flexrsi2026]
+type = "preprint"
+title = "Flex-RSI: Benchmarking Recursive Self-Improvement of Frontier Agents"
+authors = "Flex-RSI Team"
+year = 2026
+arxiv = "2611.08946"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.fli-superintelligence-statement]
 type = "essay"
@@ -1535,6 +1800,24 @@ url = "https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explaine
 opened = "2026-11-27"
 found_in = "research/notes/01-definitions.md"
 
+[source.freckleton2006census]
+type = "peer-reviewed"
+title = "Census error and the detection of density dependence"
+authors = "Robert P. Freckleton, Andrew R. Watkinson, Rhys E. Green, William J. Sutherland"
+year = 2006
+doi = "10.1111/j.1365-2656.2006.01121.x"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
+[source.frieden2021seven]
+type = "peer-reviewed"
+title = "7-1-7: an organising principle, target, and accountability metric to make the world safer from pandemics"
+authors = "Thomas R. Frieden, Christopher T. Lee, Aaron F. Bochner, Marine Buissonnière, Amanda McClelland"
+year = 2021
+doi = "10.1016/S0140-6736(21)01250-2"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.fudenberg2026cooperating]
 type = "preprint"
 title = "Cooperating Against Catastrophe"
@@ -1543,6 +1826,15 @@ year = 2026
 url = "https://economics.mit.edu/sites/default/files/inline-files/Pacing.pdf"
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
+
+[source.furlanello2018born]
+type = "peer-reviewed"
+title = "Born Again Neural Networks"
+authors = "Tommaso Furlanello, Zachary C. Lipton, Michael Tschannen, Laurent Itti, Anima Anandkumar"
+year = 2018
+arxiv = "1805.04770"
+opened = "2026-11-27"
+found_in = "research/verification/l4-red-team.md"
 
 [source.gan2026clock]
 type = "preprint"
@@ -1616,6 +1908,15 @@ year = 2024
 arxiv = "2403.14123"
 opened = "2026-11-27"
 found_in = "research/notes/02-physics.md"
+
+[source.gif2011prppem]
+type = "report"
+title = "Evaluation Methodology for Proliferation Resistance and Physical Protection of Generation IV Nuclear Energy Systems, Revision 6 (GIF/PRPPWG/2011/003)"
+authors = "Generation IV International Forum, Proliferation Resistance and Physical Protection Working Group"
+year = 2011
+url = "https://gif.jaea.go.jp/methodology/prppwg/gif_prppem_rev6_final.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.gipp2015timestamping]
 type = "preprint"
@@ -1762,6 +2063,15 @@ doi = "10.1126/science.aea3884"
 arxiv = "2507.13919"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
+
+[source.hafemeister2008ctbt]
+type = "essay"
+title = "The Comprehensive Test Ban Treaty: Effectively Verifiable"
+authors = "David Hafemeister"
+year = 2008
+url = "https://www.armscontrol.org/act/2008-10/features/comprehensive-test-ban-treaty-effectively-verifiable"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.hai2025aiindex]
 type = "report"
@@ -2148,6 +2458,15 @@ opened = "2026-11-27"
 found_in = "research/notes/06-economics.md, research/notes/02-physics.md"
 aliases = ["iea2025"]
 
+[source.imas2026explosion]
+type = "essay"
+title = "Are we approaching an intelligence explosion?"
+authors = "Alex Imas, Luis Garicano"
+year = 2026
+url = "https://aleximas.substack.com/p/are-we-approaching-an-intelligence"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.infcirc-540]
 type = "legislation"
 title = "Model Protocol Additional to the Agreement(s) between State(s) and the International Atomic Energy Agency for the Application of Safeguards, INFCIRC/540 (Corrected)"
@@ -2255,6 +2574,15 @@ year = 2020
 arxiv = "2001.08361"
 opened = "2026-11-27"
 found_in = "research/notes/03-algorithms.md"
+
+[source.kapoor2024agents]
+type = "preprint"
+title = "AI Agents That Matter"
+authors = "Sayash Kapoor, Benedikt Stroebl, Zachary S. Siegel, Nitya Nadgir, Arvind Narayanan"
+year = 2024
+arxiv = "2407.01502"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.karger2025forecastbench]
 type = "preprint"
@@ -2489,6 +2817,16 @@ url = "https://www.rfc-editor.org/rfc/rfc6962"
 opened = "2026-11-27"
 found_in = "research/notes/07-compute-governance.md"
 
+[source.laurie2021rfc9162]
+type = "spec"
+title = "Certificate Transparency Version 2.0 (RFC 9162)"
+authors = "Ben Laurie, Eran Messeri, Rob Stradling"
+year = 2021
+doi = "10.17487/RFC9162"
+url = "https://www.rfc-editor.org/rfc/rfc9162"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e25_licence_log.sources.toml"
+
 [source.le2026grafting]
 type = "preprint"
 title = "Reference-Grafting Matches Fine-Tuning at Eliciting Sandbagged Capabilities"
@@ -2551,6 +2889,15 @@ year = 2025
 url = "https://ai-2027.com/research/timelines-forecast"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
+
+[source.lightning-bolt2]
+type = "spec"
+title = "BOLT #2: Peer Protocol for Channel Management"
+authors = "Lightning Network specification authors"
+undated = true
+url = "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.littlewood-lentzos-2024]
 type = "essay"
@@ -2687,6 +3034,15 @@ arxiv = "2512.02654"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
 
+[source.mayoral2026cybersi]
+type = "preprint"
+title = "Towards Cybersecurity Superintelligence: from AI-guided humans to human-guided AI"
+authors = "Víctor Mayoral-Vilches, Stefan Rass, Martin Pinzger, et al."
+year = 2026
+arxiv = "2601.14614"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
 [source.mazeika2025rli]
 type = "preprint"
 title = "Remote Labor Index: Measuring AI Automation of Remote Work"
@@ -2704,6 +3060,15 @@ year = 2024
 arxiv = "2412.04984"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.mempool2026difficulty]
+type = "dataset"
+title = "mempool.space REST API: difficulty adjustments"
+authors = "The Mempool Open Source Project"
+year = 2026
+url = "https://mempool.space/docs/api/rest"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e25_licence_log.sources.toml"
 
 [source.mertens2026secretsauce]
 type = "preprint"
@@ -2867,6 +3232,15 @@ doi = "10.48550/arXiv.2311.02462"
 arxiv = "2311.02462"
 opened = "2026-11-27"
 found_in = "research/notes/01-definitions.md"
+
+[source.mouallem2026alerting]
+type = "preprint"
+title = "Resilient Alerting Protocols for Blockchains"
+authors = "Marwa Mouallem, Lorenz Breidenbach, Ittay Eyal, Ari Juels"
+year = 2026
+arxiv = "2602.10892"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.muennighoff2023dataconstrained]
 type = "preprint"
@@ -3159,6 +3533,15 @@ arxiv = "2401.04757"
 opened = "2026-11-27"
 found_in = "research/notes/03-algorithms.md"
 
+[source.ozkutuk2023multipath]
+type = "report"
+title = "Vulnerability Assessment of a Physical Protection System Design Using a Multi Path Analysis and Moving Critical Detection Points"
+authors = "Melih Ozkutuk, Sunil S. Chirayath"
+year = 2023
+url = "https://resources.inmm.org/sites/default/files/2023-07/finalpaper_121_0509105108.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.pan2024selfrep]
 type = "preprint"
 title = "Frontier AI systems have surpassed the self-replicating red line"
@@ -3203,6 +3586,15 @@ year = 2025
 arxiv = "2510.04374"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
+
+[source.pellis2021doubling]
+type = "peer-reviewed"
+title = "Challenges in control of COVID-19: short doubling time and long delay to effect of interventions"
+authors = "Lorenzo Pellis, Francesca Scarabel, Helena B. Stage, Christopher E. Overton, Lauren H. K. Chappell, et al."
+year = 2021
+doi = "10.1098/rstb.2020.0264"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.peng2024demo]
 type = "preprint"
@@ -3279,6 +3671,15 @@ opened = "2026-11-27"
 found_in = "research/notes/06-economics.md, research/notes/02-physics.md"
 aliases = ["pilz2025"]
 
+[source.pistillo2025loopholes]
+type = "preprint"
+title = "Defending Compute Thresholds Against Legal Loopholes"
+authors = "Matteo Pistillo, Pablo Villalobos"
+year = 2025
+arxiv = "2502.00003"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.pope2022]
 type = "preprint"
 title = "Efficiently Scaling Transformer Inference"
@@ -3351,6 +3752,15 @@ url = "https://huggingface.co/redwoodresearch/math_pwd_lock_deepseek_math7b_on_w
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
 
+[source.regnath2020blockchaintime]
+type = "peer-reviewed"
+title = "Blockchain, what time is it? Trustless Datetime Synchronization for IoT"
+authors = "Emanuel Regnath, Nitin Shivaraman, Shanker Shreejith, Arvind Easwaran, Sebastian Steinhorst"
+year = 2020
+doi = "10.1109/COINS49042.2020.9191420"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
 [source.rein2023gpqa]
 type = "preprint"
 title = "GPQA: A Graduate-Level Google-Proof Q&A Benchmark"
@@ -3404,6 +3814,24 @@ year = 2025
 url = "https://www.thestar.com.my/business/business-news/2025/12/11/nvidia-builds-location-verification-tech-that-could-help-fight-chip-smuggling"
 opened = "2026-11-27"
 found_in = "research/notes/07-compute-governance.md"
+
+[source.roberts2003typer]
+type = "peer-reviewed"
+title = "A new method for estimating the effort required to control an infectious disease"
+authors = "M. G. Roberts, J. A. P. Heesterbeek"
+year = 2003
+doi = "10.1098/rspb.2003.2339"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
+[source.robinson2026horizons]
+type = "essay"
+title = "Is METR Underestimating LLM Time Horizons?"
+authors = "Andreas Robinson"
+year = 2026
+url = "https://www.lesswrong.com/posts/kNHxuusznCR3rhqkf/is-metr-underestimating-llm-time-horizons"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
 
 [source.roger2024sandbaggingrepo]
 type = "code"
@@ -3668,6 +4096,24 @@ url = "https://www.tomshardware.com/tech-industry/semiconductors/asml-projects-u
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
 
+[source.shinohara2025coalitionproof]
+type = "peer-reviewed"
+title = "Coalition-proof stability of international environmental agreements"
+authors = "Ryusuke Shinohara"
+year = 2025
+doi = "10.1007/s10018-024-00426-z"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
+[source.shuai2013targetr]
+type = "peer-reviewed"
+title = "Extending the type reproduction number to infectious disease control targeting contacts between types"
+authors = "Zhisheng Shuai, J. A. P. Heesterbeek, P. van den Driessche"
+year = 2013
+doi = "10.1007/s00285-012-0579-9"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.shumailov2024collapse]
 type = "peer-reviewed"
 title = "AI models collapse when trained on recursively generated data"
@@ -3714,6 +4160,15 @@ doi = "10.71468/P1RP4F"
 url = "https://escholarship.org/uc/item/33m6w3x0"
 opened = "2026-11-27"
 found_in = "research/notes/02-physics.md"
+
+[source.snell2007itc20]
+type = "report"
+title = "ITC-20 Evaluation Section (The Twentieth International Training Course, chapters 16 to 18), SAND2007-5502P"
+authors = "Mark K. Snell, Craig R. Tewell (Sandia National Laboratories)"
+year = 2007
+url = "https://www.osti.gov/servlets/purl/1721450"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.snell2024emergence]
 type = "preprint"
@@ -3769,6 +4224,15 @@ arxiv = "2611.14950"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
 
+[source.srikanth2026aide2]
+type = "preprint"
+title = "Recursive self-improvement of AI research agents"
+authors = "Dhruv Srikanth, Bingchen Zhao, Dixing Xu, Yuxiang Wu, Zhengyao Jiang"
+year = 2026
+arxiv = "2609.26457"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.stafford2022safety]
 type = "preprint"
 title = "Safety Not Guaranteed: International Races for Risky Technologies"
@@ -3795,6 +4259,15 @@ year = 2026
 url = "https://neurips.cc/virtual/2026/169826"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.tadepalli2026efficiency]
+type = "preprint"
+title = "Efficiency vs Capability in the Intelligence Explosion"
+authors = "Karthik Tadepalli"
+year = 2026
+arxiv = "2610.33447"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.tang2026ctfcollab]
 type = "preprint"
@@ -3887,6 +4360,25 @@ url = "https://petertodd.org/2016/opentimestamps-announcement"
 opened = "2026-11-27"
 found_in = "research/notes/07-compute-governance.md"
 
+[source.tomescu2017catena]
+type = "peer-reviewed"
+title = "Catena: Efficient Non-equivocation via Bitcoin"
+authors = "Alin Tomescu, Srinivas Devadas"
+year = 2017
+doi = "10.1109/SP.2017.19"
+url = "https://people.csail.mit.edu/devadas/pubs/catena.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
+[source.tramer2020adaptive]
+type = "preprint"
+title = "On Adaptive Attacks to Adversarial Example Defenses"
+authors = "Florian Tramer, Nicholas Carlini, Wieland Brendel, Aleksander Madry"
+year = 2020
+arxiv = "2002.08347"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.trammell2023growth]
 type = "report"
 title = "Economic Growth under Transformative AI"
@@ -3978,6 +4470,15 @@ url = "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5e5753b0a0e440a6
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
 
+[source.vanmieghem2011spectral]
+type = "peer-reviewed"
+title = "Decreasing the spectral radius of a graph by link removals"
+authors = "Piet Van Mieghem, Dragan Stevanović, Fernando Kuipers, Cong Li, Ruud van de Bovenkamp, Daijie Liu, Huijuan Wang"
+year = 2011
+doi = "10.1103/PhysRevE.84.016101"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.varadarajan2024resilience]
 type = "report"
 title = "Emerging Resilience in the Semiconductor Supply Chain"
@@ -4053,6 +4554,24 @@ opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md, research/notes/03-algorithms.md"
 aliases = ["wang2023katago"]
 
+[source.ward2016safeguards]
+type = "peer-reviewed"
+title = "A Game Theoretic Approach to Nuclear Safeguards Selection and Optimization"
+authors = "Rebecca M. Ward, Erich A. Schneider"
+year = 2016
+doi = "10.1080/08929882.2016.1127031"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
+[source.washburn1995interdiction]
+type = "peer-reviewed"
+title = "Two-Person Zero-Sum Games for Network Interdiction"
+authors = "Alan Washburn, Kevin Wood"
+year = 1995
+doi = "10.1287/opre.43.2.243"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
+
 [source.washenko2025euv]
 type = "news"
 title = "China reportedly has a prototype EUV machine built by ex-ASML employees"
@@ -4108,6 +4627,15 @@ url = "https://obamawhitehouse.archives.gov/video/Obama-Sarkozy-and-Brown-on-Ira
 opened = "2026-11-27"
 found_in = "research/notes/08-arms-control.md"
 
+[source.whitehouse2015jcpoaparameters]
+type = "official-docs"
+title = "Parameters for a Joint Comprehensive Plan of Action Regarding the Islamic Republic of Iran's Nuclear Program"
+authors = "The White House"
+year = 2015
+url = "https://obamawhitehouse.archives.gov/realitycheck/node/329396"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c7-c12.md"
+
 [source.whitfill2025bottlenecks]
 type = "preprint"
 title = "Will Compute Bottlenecks Prevent an Intelligence Explosion?"
@@ -4152,6 +4680,15 @@ year = 2024
 arxiv = "2411.15114"
 opened = "2026-11-27"
 found_in = "research/notes/01-definitions.md"
+
+[source.williams2026breakout]
+type = "essay"
+title = "AI breakout time: a mechanism for an enforceable AI pause"
+authors = "Connor Williams"
+year = 2026
+url = "https://connorsscratchpad.substack.com/p/ai-breakout-times-a-mechanism-for"
+opened = "2026-11-27"
+found_in = "research/verification/l1-prior-art-c1-c6.md"
 
 [source.woodmac2025connection]
 type = "report"

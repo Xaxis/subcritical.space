@@ -1,0 +1,1346 @@
+{
+  "data": [
+    {
+      "sha256": "5d4764742d674b599072fa80513940ea2c370098688c2377c6170ea273caddff",
+      "url": "https://epoch.ai/data/benchmark_data.zip",
+      "what": "Epoch AI, benchmark data with the Epoch Capabilities Index"
+    }
+  ],
+  "details": {
+    "c6c": {
+      "e4_speedrun": {
+        "collinearity": 0.9791131427402431,
+        "reading": "E4 withdrew the speedrun's r as not identified (its stock and research input move together, and placebo inputs give an r of their own), so E4 gives the software diagonal no value",
+        "share_unbounded": 0.29925
+      },
+      "eps_k_flip": 0.6886674968866751,
+      "eps_k_ledger": 0.6667,
+      "fully_closed_gain_at_95th": {
+        "computer vision": 0.6979302000000001,
+        "language models": 1.0705596000000002,
+        "reinforcement learning": 0.9025764000000002
+      },
+      "reading": "Corollary 6.3 holds on the ledger: with the software loop fully closed, rho(U) >= 1.07 whatever the cross-feeds. It rests on one domain of three and on an assumed compute share within 0.022 of the value at which the diagonal falls to 1."
+    },
+    "cross_party_tolerance": {
+      "by_closure": {
+        "fully closed": null,
+        "gated": 0.8391881014640227,
+        "vendor-reported": 0.4370367630174337
+      },
+      "note": "largest bound on the entry into China's software loop that issues the certificate, with the entry into the United States loop at its 95th percentile steady-path bound, compute capped and the experiential loops held open",
+      "x_cn_bound": 0.9994727933653186,
+      "x_us_bound": 1.1916279559438818
+    },
+    "cuts_grid": {
+      "greedy_worse": 0,
+      "greedy_worse_cases": [],
+      "max_exhaustive": 2,
+      "needing_a_cut": 444,
+      "note": "a sweep, not a distribution: eta and K_X below 1 (above 1 no off-diagonal cut helps, Corollary 6.3), a_H over its domain, sink in-edges at 0.5 (they cannot matter)",
+      "scenarios": 480
+    },
+    "eci": {
+      "cn_growth_steady": true,
+      "draws": 2000,
+      "intervals": {
+        "accel_cn": {
+          "p2.5": -10.506969760631279,
+          "p5": -7.232882253876372,
+          "p50": -1.8418974277253988,
+          "p95": -0.0007581678320911359,
+          "p97.5": 0.41112984615002274
+        },
+        "accel_us": {
+          "p2.5": -1.7169696591434573,
+          "p5": -1.2363666664072006,
+          "p50": 0.6453860904848523,
+          "p95": 2.6237231977008126,
+          "p97.5": 3.1560109143601136
+        },
+        "g_cn": {
+          "p2.5": 14.284725995469582,
+          "p5": 14.533034947789512,
+          "p50": 15.366024399654302,
+          "p95": 16.95954811728486,
+          "p97.5": 18.226951697339654
+        },
+        "g_us": {
+          "p2.5": 16.352901438911147,
+          "p5": 16.46989058499776,
+          "p50": 17.025260969462636,
+          "p95": 17.834445172810604,
+          "p97.5": 18.07720419397516
+        },
+        "lag_median": {
+          "p2.5": 3.7453798767967146,
+          "p5": 3.9088295687885015,
+          "p50": 4.895277207392198,
+          "p95": 5.798767967145791,
+          "p97.5": 5.913757700205339
+        },
+        "lag_trend": {
+          "p2.5": -0.38786237667098755,
+          "p5": -0.08721200214323983,
+          "p50": 1.0755516964874574,
+          "p95": 2.2797598524413285,
+          "p97.5": 2.5949207048860563
+        },
+        "ratio": {
+          "p2.5": 0.8249452490943885,
+          "p5": 0.8391880997856462,
+          "p50": 0.9016800591139944,
+          "p95": 0.9994727933653186,
+          "p97.5": 1.0783055030159399
+        }
+      },
+      "kept_draws": 2000,
+      "point": {
+        "accel_cn": -1.9502897904703675,
+        "accel_us": -0.18410874281176406,
+        "ahead": 0,
+        "g_cn": 15.461108679953048,
+        "g_us": 17.10972168477542,
+        "lag_median": 5.322381930184805,
+        "lag_trend": 0.781302170283806,
+        "lags": [
+          [
+            2024.348,
+            13.8
+          ],
+          [
+            2024.433,
+            4.4
+          ],
+          [
+            2024.717,
+            4.24
+          ],
+          [
+            2024.986,
+            3.45
+          ],
+          [
+            2025.054,
+            1.12
+          ],
+          [
+            2025.405,
+            5.32
+          ],
+          [
+            2025.528,
+            3.38
+          ],
+          [
+            2025.563,
+            3.81
+          ],
+          [
+            2025.744,
+            5.45
+          ],
+          [
+            2025.848,
+            6.7
+          ],
+          [
+            2025.916,
+            7.52
+          ],
+          [
+            2026.073,
+            5.68
+          ],
+          [
+            2026.245,
+            7.75
+          ],
+          [
+            2026.264,
+            5.98
+          ],
+          [
+            2026.3,
+            5.03
+          ],
+          [
+            2026.379,
+            5.22
+          ],
+          [
+            2026.538,
+            4.37
+          ],
+          [
+            2026.793,
+            7.43
+          ],
+          [
+            2026.809,
+            6.01
+          ]
+        ],
+        "n_cn": 19,
+        "n_us": 21,
+        "ratio": 0.9036446626546041
+      },
+      "reading": "each cross-party entry is bounded by a ratio of growth rates, and the two ratios are reciprocal, so the two bounds multiply to 1 (to the square of their interval at the 95th percentiles): bounds of this kind alone can never certify the two-party cycle; one direction must be gated or measured below its bound",
+      "selection": "only public models Epoch has scored; internal frontier models are unseen, so the true lag behind the leader's best is longer than measured; growth rates are unaffected if that internal lead is constant",
+      "subsets": {
+        "countries since 2023-01-01": {
+          "accel_cn": -7.578126052997477,
+          "g_cn": 18.76991936330095,
+          "g_us": 16.65871626259219,
+          "n_cn": 21,
+          "n_us": 23,
+          "ratio": 1.12673264058465
+        },
+        "countries since 2025-01-01": {
+          "accel_cn": 8.441851974385589,
+          "g_cn": 13.426978415156817,
+          "g_us": 16.922646304187577,
+          "n_cn": 15,
+          "n_us": 14,
+          "ratio": 0.793432550311842
+        },
+        "open over closed weights since 2023-01-01": {
+          "accel_open": -1.3578666223113254,
+          "g_closed": 15.844458335634677,
+          "g_open": 16.14320552514122,
+          "n_closed": 22,
+          "n_open": 24,
+          "ratio": 1.0188549954298312
+        },
+        "open over closed weights since 2024-01-01": {
+          "accel_open": -1.888653123267482,
+          "g_closed": 17.10972168477542,
+          "g_open": 15.505787892358779,
+          "n_closed": 21,
+          "n_open": 20,
+          "ratio": 0.9062559974985535
+        },
+        "open over closed weights since 2025-01-01": {
+          "accel_open": 8.047712826156982,
+          "g_closed": 16.922646304187577,
+          "g_open": 13.326936133355153,
+          "n_closed": 14,
+          "n_open": 14,
+          "ratio": 0.7875208105045219
+        }
+      },
+      "two_party_cycle_at_bounds": 1.0913293369920174
+    },
+    "gates": {
+      "gates": {
+        "cap": "compute held capped under licence: the compute stock no longer grows from revenue or hardware",
+        "closure": "software closure gate (Part II L3): e_S held at 0",
+        "cross": "cross-party transfer gated (teacher-keyed distillation, release control, closed pool)",
+        "money": "money to compute (licensed chips, cloud identity checks): revenue no longer buys compute",
+        "research_compute": "research compute metered and capped: compute no longer feeds software",
+        "update": "update compute metered (Part II L6): experience no longer turns into weight updates (X's input)"
+      },
+      "honest_bounds": "a_H at 1, eta, K_X and sink in-edges unbounded, cross-party entries at their 95th percentile steady-path bounds",
+      "reading": "rho(U) issues once the compute stock is capped and the experiential loop held open (plus the cross-party gate for two parties); the row-sum test never does, because the hardware row (AI's share of chip-design research times hardware r, from two stocks) has no gate in Part I or II, although after the cap hardware feeds no loop",
+      "row_sum_test_largest_a_h": 0.10000000010000001,
+      "row_sum_test_under_every_gate_set": {
+        "one party": {
+          "gates": [
+            "cap",
+            "update"
+          ],
+          "smallest_max_row_sum": 10.0
+        },
+        "two parties": {
+          "gates": [
+            "cap",
+            "update"
+          ],
+          "smallest_max_row_sum": 20.0
+        }
+      },
+      "smallest_sets": {
+        "one party, closure fully closed": {
+          "margin_for_m_rho_dot_T_r": 1.0,
+          "rho_after": 0.0,
+          "sets": [
+            [
+              "cap",
+              "closure",
+              "update"
+            ]
+          ],
+          "smallest": 3
+        },
+        "one party, closure gated": {
+          "margin_for_m_rho_dot_T_r": 1.0,
+          "rho_after": 0.0,
+          "sets": [
+            [
+              "cap",
+              "update"
+            ]
+          ],
+          "smallest": 2
+        },
+        "one party, closure vendor-reported": {
+          "margin_for_m_rho_dot_T_r": 0.721654504,
+          "rho_after": 0.278345496,
+          "sets": [
+            [
+              "cap",
+              "update"
+            ]
+          ],
+          "smallest": 2
+        },
+        "two parties, closure fully closed": {
+          "margin_for_m_rho_dot_T_r": 1.0,
+          "rho_after": 0.0,
+          "sets": [
+            [
+              "cap",
+              "closure",
+              "cross",
+              "update"
+            ]
+          ],
+          "smallest": 4
+        },
+        "two parties, closure gated": {
+          "margin_for_m_rho_dot_T_r": 1.0,
+          "rho_after": 0.0,
+          "sets": [
+            [
+              "cap",
+              "cross",
+              "update"
+            ]
+          ],
+          "smallest": 3
+        },
+        "two parties, closure vendor-reported": {
+          "margin_for_m_rho_dot_T_r": 0.721654504,
+          "rho_after": 0.278345496,
+          "sets": [
+            [
+              "cap",
+              "cross",
+              "update"
+            ]
+          ],
+          "smallest": 3
+        }
+      }
+    },
+    "graph_one_party": [
+      {
+        "basis": "ledger r times (1 - eps_K) times the closure e_S",
+        "edge": "S to S",
+        "gate": "software closure gate (Part II L3): e_S held at 0",
+        "kind": "measured",
+        "name": "the software loop's own gain"
+      },
+      {
+        "basis": "ledger r times compute's elasticity in Y1a's input",
+        "edge": "C to S",
+        "gate": "research compute metered and capped: compute no longer feeds software",
+        "kind": "measured",
+        "name": "compute to software (experiment compute and research inference)"
+      },
+      {
+        "basis": "ledger hardware r times AI's share of hardware research, unmeasured in [0, 1]",
+        "edge": "S to H",
+        "gate": "none in Part I or II",
+        "kind": "domain",
+        "name": "software to hardware (AI in chip design)"
+      },
+      {
+        "basis": "the same share a_H",
+        "edge": "C to H",
+        "gate": "none in Part I or II",
+        "kind": "domain",
+        "name": "compute to hardware (AI chip-design labour runs on compute)"
+      },
+      {
+        "basis": "accounting: compute capital in H100e grows one for one with compute per dollar",
+        "edge": "H to C",
+        "gate": "compute held capped under licence: the compute stock no longer grows from revenue or hardware",
+        "kind": "accounting",
+        "name": "hardware to compute (compute per dollar)"
+      },
+      {
+        "basis": "unmeasured, no bound",
+        "edge": "S to C",
+        "gate": "money to compute (licensed chips, cloud identity checks): revenue no longer buys compute",
+        "kind": "unbounded",
+        "name": "software to economic (revenue's elasticity to capability)"
+      },
+      {
+        "basis": "unmeasured, no bound (Y1c's eps)",
+        "edge": "C to C",
+        "gate": "money to compute (licensed chips, cloud identity checks): revenue no longer buys compute",
+        "kind": "unbounded",
+        "name": "the economic loop's own gain (revenue reinvested in compute)"
+      },
+      {
+        "basis": "unmeasured, no bound",
+        "edge": "X to X",
+        "gate": "update compute metered (Part II L6): experience no longer turns into weight updates (X's input)",
+        "kind": "unbounded",
+        "name": "the experiential loop's own gain"
+      },
+      {
+        "basis": "unmeasured; X feeds no other loop, so it cannot move rho",
+        "edge": "S to X",
+        "gate": "update compute metered (Part II L6): experience no longer turns into weight updates (X's input)",
+        "kind": "unbounded",
+        "name": "software to experiential"
+      },
+      {
+        "basis": "unmeasured; as above",
+        "edge": "C to X",
+        "gate": "update compute metered (Part II L6): experience no longer turns into weight updates (X's input)",
+        "kind": "unbounded",
+        "name": "compute to experiential (copies run on compute)"
+      }
+    ],
+    "ledger_inputs": {
+      "dyn-anthropic-ai-led": 0.26,
+      "dyn-burtsev-network-rho": 1.15,
+      "dyn-open-closed-lag": 4.0,
+      "dyn-r-cv-hi": 2.094,
+      "dyn-r-hardware-hist": 7.0,
+      "dyn-r-lm": 1.892,
+      "dyn-r-lm-hi": 3.212,
+      "dyn-r-lm-hi-corrected": 1.0705596000000002,
+      "dyn-r-lm-lo": 1.069,
+      "dyn-r-moore": 5.0,
+      "dyn-r-rl-hi": 2.708,
+      "dyn-research-compute-share": 0.6667,
+      "dyn-software-headroom-upper": -0.07055960000000017,
+      "e4-sr-collinearity": 0.9791131427402431,
+      "e4-sr-p-unbounded": 0.29925,
+      "formal-software-closure-max": 0.9340909184318181
+    },
+    "pathways_alone_fully_closed": {
+      "entries without a data bound at zero, one party": {
+        "continual learning": {
+          "issues": false,
+          "rho_after": 1.0705596000000002
+        },
+        "distillation from a stronger model": {
+          "issues": false,
+          "rho_after": 1.0705596000000002
+        },
+        "long-horizon autonomy": {
+          "issues": false,
+          "rho_after": 1.0705596000000002
+        },
+        "recursive self-improvement": {
+          "issues": true,
+          "rho_after": 0.0
+        },
+        "self-replication and acquisition": {
+          "issues": false,
+          "rho_after": 1.0705596000000002
+        },
+        "undeclared and declared compute": {
+          "issues": false,
+          "rho_after": 1.0705596000000002
+        }
+      },
+      "entries without a data bound at zero, two parties": {
+        "continual learning": {
+          "issues": false,
+          "rho_after": 2.1618889369920176
+        },
+        "distillation from a stronger model": {
+          "issues": false,
+          "rho_after": 1.0705596000000002
+        },
+        "long-horizon autonomy": {
+          "issues": false,
+          "rho_after": 2.1618889369920176
+        },
+        "recursive self-improvement": {
+          "issues": false,
+          "rho_after": 1.0913293369920174
+        },
+        "self-replication and acquisition": {
+          "issues": false,
+          "rho_after": 2.1618889369920176
+        },
+        "undeclared and declared compute": {
+          "issues": false,
+          "rho_after": 2.1618889369920176
+        }
+      },
+      "honest bounds, one party": {
+        "continual learning": {
+          "issues": false,
+          "rho_after": 1000003.2119981217
+        },
+        "distillation from a stronger model": {
+          "issues": false,
+          "rho_after": 1000003.2119981212
+        },
+        "long-horizon autonomy": {
+          "issues": false,
+          "rho_after": 1000003.2119981212
+        },
+        "recursive self-improvement": {
+          "issues": false,
+          "rho_after": 1000002.1414408138
+        },
+        "self-replication and acquisition": {
+          "issues": false,
+          "rho_after": 1000003.2119981212
+        },
+        "undeclared and declared compute": {
+          "issues": false,
+          "rho_after": 1000000.0
+        }
+      },
+      "honest bounds, two parties": {
+        "continual learning": {
+          "issues": false,
+          "rho_after": 1000003.2120066356
+        },
+        "distillation from a stronger model": {
+          "issues": false,
+          "rho_after": 1000003.2120031224
+        },
+        "long-horizon autonomy": {
+          "issues": false,
+          "rho_after": 1000003.212006635
+        },
+        "recursive self-improvement": {
+          "issues": false,
+          "rho_after": 1000002.1414481582
+        },
+        "self-replication and acquisition": {
+          "issues": false,
+          "rho_after": 1000003.212006635
+        },
+        "undeclared and declared compute": {
+          "issues": false,
+          "rho_after": 1000000.0
+        }
+      }
+    },
+    "scenarios_one_party": {
+      "r at 95th percentile, closure fully closed": {
+        "boundary_on_eta": null,
+        "e_s": 1.0,
+        "eta_frontier_over_a_h": [
+          [
+            0.0,
+            null
+          ],
+          [
+            0.02,
+            null
+          ],
+          [
+            0.04,
+            null
+          ],
+          [
+            0.06,
+            null
+          ],
+          [
+            0.08,
+            null
+          ],
+          [
+            0.1,
+            null
+          ],
+          [
+            0.12,
+            null
+          ],
+          [
+            0.14,
+            null
+          ],
+          [
+            0.16,
+            null
+          ],
+          [
+            0.18,
+            null
+          ],
+          [
+            0.2,
+            null
+          ]
+        ],
+        "measured_only": {
+          "rho": 1.0705596000000002,
+          "rowsum": 4.282559600000001,
+          "weighted_perron": 1.0705596058060651
+        },
+        "tolerances": {
+          "K_X (the experiential loop's own gain)": null,
+          "a_H (AI's share of hardware research)": null,
+          "a_H with the economic gain at zero and compute-to-software cut": null,
+          "eta (software to economic, and the economic loop's own gain)": null,
+          "r (the upper bound on software research returns; other unmeasured entries at zero)": 3.0003000330033003
+        }
+      },
+      "r at 95th percentile, closure gated": {
+        "boundary_on_eta": {
+          "elasticities": [
+            {
+              "edge": "C to S",
+              "elasticity": 0.4054,
+              "name": "compute to software (experiment compute and research inference)"
+            },
+            {
+              "edge": "S to C",
+              "elasticity": 0.4054,
+              "name": "software to economic (revenue's elasticity to capability)"
+            },
+            {
+              "edge": "C to C",
+              "elasticity": 0.1893,
+              "name": "the economic loop's own gain (revenue reinvested in compute)"
+            },
+            {
+              "edge": "H to C",
+              "elasticity": 0.0,
+              "name": "hardware to compute (compute per dollar)"
+            }
+          ],
+          "eta": 0.3183253139807061,
+          "rho": 1.000000001,
+          "rowsum": 2.1414404,
+          "rowsum_over_rho": 2.1414403978585597,
+          "weighted_perron": 1.0000000038650152
+        },
+        "e_s": 0.0,
+        "eta_frontier_over_a_h": [
+          [
+            0.0,
+            0.3183
+          ],
+          [
+            0.02,
+            0.2183
+          ],
+          [
+            0.04,
+            0.1183
+          ],
+          [
+            0.06,
+            0.0183
+          ],
+          [
+            0.08,
+            null
+          ],
+          [
+            0.1,
+            null
+          ],
+          [
+            0.12,
+            null
+          ],
+          [
+            0.14,
+            null
+          ],
+          [
+            0.16,
+            null
+          ],
+          [
+            0.18,
+            null
+          ],
+          [
+            0.2,
+            null
+          ]
+        ],
+        "measured_only": {
+          "rho": 0.0,
+          "rowsum": 2.1414404,
+          "weighted_perron": 0.0012897605428914584
+        },
+        "tolerances": {
+          "K_X (the experiential loop's own gain)": "no flip up to 1",
+          "a_H (AI's share of hardware research)": 0.0636650628598063,
+          "a_H with the economic gain at zero and compute-to-software cut": 0.20000000040000004,
+          "eta (software to economic, and the economic loop's own gain)": 0.3183253139807061,
+          "r (the upper bound on software research returns; other unmeasured entries at zero)": "no flip up to 100"
+        }
+      },
+      "r at 95th percentile, closure vendor-reported": {
+        "boundary_on_eta": {
+          "elasticities": [
+            {
+              "edge": "C to S",
+              "elasticity": 0.3726,
+              "name": "compute to software (experiment compute and research inference)"
+            },
+            {
+              "edge": "S to C",
+              "elasticity": 0.3726,
+              "name": "software to economic (revenue's elasticity to capability)"
+            },
+            {
+              "edge": "S to S",
+              "elasticity": 0.1437,
+              "name": "the software loop's own gain"
+            },
+            {
+              "edge": "C to C",
+              "elasticity": 0.1111,
+              "name": "the economic loop's own gain (revenue reinvested in compute)"
+            },
+            {
+              "edge": "H to C",
+              "elasticity": 0.0,
+              "name": "hardware to compute (compute per dollar)"
+            }
+          ],
+          "eta": 0.22972089665999518,
+          "rho": 1.000000001,
+          "rowsum": 2.698131392,
+          "rowsum_over_rho": 2.6981313893018686,
+          "weighted_perron": 1.0000000045850463
+        },
+        "e_s": 0.26,
+        "eta_frontier_over_a_h": [
+          [
+            0.0,
+            0.2297
+          ],
+          [
+            0.02,
+            0.1297
+          ],
+          [
+            0.04,
+            0.0297
+          ],
+          [
+            0.06,
+            null
+          ],
+          [
+            0.08,
+            null
+          ],
+          [
+            0.1,
+            null
+          ],
+          [
+            0.12,
+            null
+          ],
+          [
+            0.14,
+            null
+          ],
+          [
+            0.16,
+            null
+          ],
+          [
+            0.18,
+            null
+          ],
+          [
+            0.2,
+            null
+          ]
+        ],
+        "measured_only": {
+          "rho": 0.278345496,
+          "rowsum": 2.698131392,
+          "weighted_perron": 0.2783455359285011
+        },
+        "tolerances": {
+          "K_X (the experiential loop's own gain)": "no flip up to 1",
+          "a_H (AI's share of hardware research)": 0.04594417937794321,
+          "a_H with the economic gain at zero and compute-to-software cut": 0.20000000040000004,
+          "eta (software to economic, and the economic loop's own gain)": 0.22972089665999518,
+          "r (the upper bound on software research returns; other unmeasured entries at zero)": 11.539615511551155
+        }
+      },
+      "r at median, closure fully closed": {
+        "boundary_on_eta": {
+          "elasticities": [
+            {
+              "edge": "S to S",
+              "elasticity": 0.4375,
+              "name": "the software loop's own gain"
+            },
+            {
+              "edge": "C to S",
+              "elasticity": 0.2563,
+              "name": "compute to software (experiment compute and research inference)"
+            },
+            {
+              "edge": "S to C",
+              "elasticity": 0.2563,
+              "name": "software to economic (revenue's elasticity to capability)"
+            },
+            {
+              "edge": "C to C",
+              "elasticity": 0.05,
+              "name": "the economic loop's own gain (revenue reinvested in compute)"
+            },
+            {
+              "edge": "H to C",
+              "elasticity": 0.0,
+              "name": "hardware to compute (compute per dollar)"
+            }
+          ],
+          "eta": 0.1633488057228922,
+          "rho": 1.000000001,
+          "rowsum": 2.5226036,
+          "rowsum_over_rho": 2.522603597477396,
+          "weighted_perron": 1.0000000043855597
+        },
+        "e_s": 1.0,
+        "eta_frontier_over_a_h": [
+          [
+            0.0,
+            0.1633
+          ],
+          [
+            0.02,
+            0.0633
+          ],
+          [
+            0.04,
+            null
+          ],
+          [
+            0.06,
+            null
+          ],
+          [
+            0.08,
+            null
+          ],
+          [
+            0.1,
+            null
+          ],
+          [
+            0.12,
+            null
+          ],
+          [
+            0.14,
+            null
+          ],
+          [
+            0.16,
+            null
+          ],
+          [
+            0.18,
+            null
+          ],
+          [
+            0.2,
+            null
+          ]
+        ],
+        "measured_only": {
+          "rho": 0.6306036,
+          "rowsum": 2.5226036,
+          "weighted_perron": 0.6306036077600146
+        },
+        "tolerances": {
+          "K_X (the experiential loop's own gain)": "no flip up to 1",
+          "a_H (AI's share of hardware research)": 0.0326697611772484,
+          "a_H with the economic gain at zero and compute-to-software cut": 0.20000000040000004,
+          "eta (software to economic, and the economic loop's own gain)": 0.1633488057228922,
+          "r (the upper bound on software research returns; other unmeasured entries at zero)": 3.0003000330033003
+        }
+      },
+      "r at median, closure gated": {
+        "boundary_on_eta": {
+          "elasticities": [
+            {
+              "edge": "C to S",
+              "elasticity": 0.3581,
+              "name": "compute to software (experiment compute and research inference)"
+            },
+            {
+              "edge": "S to C",
+              "elasticity": 0.3581,
+              "name": "software to economic (revenue's elasticity to capability)"
+            },
+            {
+              "edge": "C to C",
+              "elasticity": 0.2839,
+              "name": "the economic loop's own gain (revenue reinvested in compute)"
+            },
+            {
+              "edge": "H to C",
+              "elasticity": 0.0,
+              "name": "hardware to compute (compute per dollar)"
+            }
+          ],
+          "eta": 0.44220464910875235,
+          "rho": 1.000000001,
+          "rowsum": 1.8844092982175047,
+          "rowsum_over_rho": 1.8844092963330952,
+          "weighted_perron": 1.0000000027528235
+        },
+        "e_s": 0.0,
+        "eta_frontier_over_a_h": [
+          [
+            0.0,
+            0.4422
+          ],
+          [
+            0.02,
+            0.3422
+          ],
+          [
+            0.04,
+            0.2422
+          ],
+          [
+            0.06,
+            0.1422
+          ],
+          [
+            0.08,
+            0.0422
+          ],
+          [
+            0.1,
+            null
+          ],
+          [
+            0.12,
+            null
+          ],
+          [
+            0.14,
+            null
+          ],
+          [
+            0.16,
+            null
+          ],
+          [
+            0.18,
+            null
+          ],
+          [
+            0.2,
+            null
+          ]
+        ],
+        "measured_only": {
+          "rho": 0.0,
+          "rowsum": 1.2613963999999998,
+          "weighted_perron": 0.001081179138318391
+        },
+        "tolerances": {
+          "K_X (the experiential loop's own gain)": "no flip up to 1",
+          "a_H (AI's share of hardware research)": 0.08844092991019144,
+          "a_H with the economic gain at zero and compute-to-software cut": 0.20000000040000004,
+          "eta (software to economic, and the economic loop's own gain)": 0.44220464910875235,
+          "r (the upper bound on software research returns; other unmeasured entries at zero)": "no flip up to 100"
+        }
+      },
+      "r at median, closure vendor-reported": {
+        "boundary_on_eta": {
+          "elasticities": [
+            {
+              "edge": "C to S",
+              "elasticity": 0.3594,
+              "name": "compute to software (experiment compute and research inference)"
+            },
+            {
+              "edge": "S to C",
+              "elasticity": 0.3594,
+              "name": "software to economic (revenue's elasticity to capability)"
+            },
+            {
+              "edge": "C to C",
+              "elasticity": 0.2108,
+              "name": "the economic loop's own gain (revenue reinvested in compute)"
+            },
+            {
+              "edge": "S to S",
+              "elasticity": 0.0705,
+              "name": "the software loop's own gain"
+            },
+            {
+              "edge": "H to C",
+              "elasticity": 0.0,
+              "name": "hardware to compute (compute per dollar)"
+            }
+          ],
+          "eta": 0.36970212982842865,
+          "rho": 1.000000001,
+          "rowsum": 1.7394042596568573,
+          "rowsum_over_rho": 1.739404257917453,
+          "weighted_perron": 1.0000000031805087
+        },
+        "e_s": 0.26,
+        "eta_frontier_over_a_h": [
+          [
+            0.0,
+            0.3697
+          ],
+          [
+            0.02,
+            0.2697
+          ],
+          [
+            0.04,
+            0.1697
+          ],
+          [
+            0.06,
+            0.0697
+          ],
+          [
+            0.08,
+            null
+          ],
+          [
+            0.1,
+            null
+          ],
+          [
+            0.12,
+            null
+          ],
+          [
+            0.14,
+            null
+          ],
+          [
+            0.16,
+            null
+          ],
+          [
+            0.18,
+            null
+          ],
+          [
+            0.2,
+            null
+          ]
+        ],
+        "measured_only": {
+          "rho": 0.16395693600000003,
+          "rowsum": 1.5893102719999999,
+          "weighted_perron": 0.1639569977176821
+        },
+        "tolerances": {
+          "K_X (the experiential loop's own gain)": "no flip up to 1",
+          "a_H (AI's share of hardware research)": 0.07394042603962613,
+          "a_H with the economic gain at zero and compute-to-software cut": 0.20000000040000004,
+          "eta (software to economic, and the economic loop's own gain)": 0.36970212982842865,
+          "r (the upper bound on software research returns; other unmeasured entries at zero)": 11.539615511551155
+        }
+      }
+    },
+    "signed_case": {
+      "abs_blowup_bound": 1.4868008000167414,
+      "abs_blowup_time": 1.47533770633669,
+      "comparison_bound_at_1e4": 87.23102197051264,
+      "eta": 0.7334877029498463,
+      "k_sc": 2.1414404,
+      "reading": "rho(K) > 1 with no runaway: for signed K, rho(K) is not the runaway condition. Theorem 6.4(ii)'s proof goes through for signed K with M~ >= K+ (z >= 0 gives K z <= K+ z), so rho(K+) < 1 rules runaway out; and K+ <= |K| <= U, so the certificate rho(U) < 1 still certifies, through K+ rather than through rho(K).",
+      "rho_K": 1.2532837667503716,
+      "rho_Kplus": 0.7334877029498463,
+      "rho_absK": 1.6725850564438356,
+      "signed_max_u_at_1e4": 14.245693963772055
+    }
+  },
+  "experiment": "E11",
+  "name": "e11_coupled_loops",
+  "numbers": {
+    "e11-ah-max-gated": {
+      "fmt": ".3f",
+      "label": "largest AI share of hardware research at which rho(U) <= 1: closure gated, r at the 95th percentile, economic gain at zero",
+      "note": "one over hardware r would allow 0.2; the cycle through compute and software lowers it",
+      "unit": "",
+      "value": 0.0636650628598063
+    },
+    "e11-ah-max-rowsum": {
+      "fmt": ".2f",
+      "label": "largest AI share of hardware research at which the row-sum test could issue with every gate on (one party, vendor-reported closure); rho(U) after the compute cap needs no bound on it",
+      "note": "with that share at its bound of 1 no set of gates brings the largest row sum below 10: the hardware row has no gate in Part I or II",
+      "unit": "",
+      "value": 0.10000000010000001
+    },
+    "e11-cn-accel": {
+      "fmt": ".1f",
+      "label": "change a year in China's frontier ECI growth (positive means accelerating, which voids the steady-path bound)",
+      "note": "",
+      "unit": "ECI points a year per year",
+      "value": -1.9502897904703675
+    },
+    "e11-cn-accel-2025": {
+      "fmt": ".1f",
+      "label": "the same change for China's models released 2025 on, point estimate (the window with the lowest ratio, in which the steady-path bound does not hold)",
+      "note": "",
+      "unit": "ECI points a year per year",
+      "value": 8.441851974385589
+    },
+    "e11-cn-accel-hi": {
+      "fmt": ".1f",
+      "label": "that change, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points a year per year",
+      "value": 0.41112984615002274
+    },
+    "e11-cn-accel-lo": {
+      "fmt": ".1f",
+      "label": "that change, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points a year per year",
+      "value": -10.506969760631279
+    },
+    "e11-domains-closed-above-1": {
+      "fmt": ",.0f",
+      "label": "of the ledger's three domains (language models, vision, RL), those whose fully closed, corrected gain at the 95th percentile exceeds 1",
+      "note": "",
+      "unit": "domains",
+      "value": 1.0
+    },
+    "e11-entries": {
+      "fmt": ",.0f",
+      "label": "nonzero entries in Part I's one-party loop graph (software, hardware, compute, experiential)",
+      "note": "",
+      "unit": "entries",
+      "value": 10.0
+    },
+    "e11-entries-domain": {
+      "fmt": ",.0f",
+      "label": "entries bounded only by the natural range of an unmeasured share (AI's share of hardware research)",
+      "note": "",
+      "unit": "entries",
+      "value": 2.0
+    },
+    "e11-entries-measured": {
+      "fmt": ",.0f",
+      "label": "of those, entries bounded by a measured percentile (each times an assumed compute share)",
+      "note": "",
+      "unit": "entries",
+      "value": 2.0
+    },
+    "e11-entries-unbounded": {
+      "fmt": ",.0f",
+      "label": "entries with no bound of any kind (economic gain, software to economic, experiential, and two edges into the experiential loop that cannot move rho)",
+      "note": "",
+      "unit": "entries",
+      "value": 5.0
+    },
+    "e11-epsk-flip": {
+      "fmt": ".3f",
+      "label": "compute share of research input at which the fully closed software loop's gain, at r's 95th percentile, falls to 1 (C6(c)'s negative result holds only below it)",
+      "note": "the ledger's share is an assumption of Ho and Whitfill, not a measurement",
+      "unit": "",
+      "value": 0.6886674968866751
+    },
+    "e11-epsk-gap": {
+      "fmt": ".3f",
+      "label": "how far the assumed compute share sits below that flip point",
+      "note": "",
+      "unit": "",
+      "value": 0.021967496886675097
+    },
+    "e11-eta-max-gated": {
+      "fmt": ".2f",
+      "label": "largest economic gain (revenue's elasticity to effective compute) at which rho(U) <= 1: closure gated, r at the 95th percentile, other unmeasured entries at zero (an upper bound on what any certificate allows)",
+      "note": "",
+      "unit": "",
+      "value": 0.3183253139807061
+    },
+    "e11-eta-max-gated-median": {
+      "fmt": ".2f",
+      "label": "the same largest economic gain with r at its median",
+      "note": "",
+      "unit": "",
+      "value": 0.44220464910875235
+    },
+    "e11-eta-max-vendor": {
+      "fmt": ".2f",
+      "label": "the same at the vendor-reported AI-led share of research as the closure, r at the 95th percentile",
+      "note": "",
+      "unit": "",
+      "value": 0.22972089665999518
+    },
+    "e11-g-cn": {
+      "fmt": ".1f",
+      "label": "frontier ECI growth of Chinese models, released 2024 on",
+      "note": "",
+      "unit": "ECI points a year",
+      "value": 15.461108679953048
+    },
+    "e11-g-ratio": {
+      "fmt": ".2f",
+      "label": "China's frontier growth over the United States': the steady-path bound on the cross-party entry into China's software loop (under three assumptions)",
+      "note": "",
+      "unit": "",
+      "value": 0.9036446626546041
+    },
+    "e11-g-ratio-hi": {
+      "fmt": ".2f",
+      "label": "that ratio, 95th percentile of resampling models (the bound used in U)",
+      "note": "",
+      "unit": "",
+      "value": 0.9994727933653186
+    },
+    "e11-g-ratio-lo": {
+      "fmt": ".2f",
+      "label": "that ratio, 5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 0.8391880997856462
+    },
+    "e11-g-ratio-subset-max": {
+      "fmt": ".2f",
+      "label": "highest follower-over-leader growth ratio across the other windows and the open-over-closed split",
+      "note": "",
+      "unit": "",
+      "value": 1.12673264058465
+    },
+    "e11-g-ratio-subset-min": {
+      "fmt": ".2f",
+      "label": "lowest follower-over-leader growth ratio across the other windows and the open-over-closed split",
+      "note": "",
+      "unit": "",
+      "value": 0.7875208105045219
+    },
+    "e11-g-us": {
+      "fmt": ".1f",
+      "label": "frontier ECI growth of United States models, released 2024 on",
+      "note": "",
+      "unit": "ECI points a year",
+      "value": 17.10972168477542
+    },
+    "e11-gates-fully-closed": {
+      "fmt": ",.0f",
+      "label": "fewest gates that issue the certificate for one party with no stated range trusted, software loop fully closed (the closure gate is among them)",
+      "note": "",
+      "unit": "gates",
+      "value": 3.0
+    },
+    "e11-gates-vendor": {
+      "fmt": ",.0f",
+      "label": "fewest gates that issue it for one party at the vendor-reported closure, no stated range trusted: cap and update",
+      "note": "",
+      "unit": "gates",
+      "value": 2.0
+    },
+    "e11-gates-vendor-two": {
+      "fmt": ",.0f",
+      "label": "the same for two parties joined by cross-party software edges: cap and cross and update",
+      "note": "",
+      "unit": "gates",
+      "value": 3.0
+    },
+    "e11-greedy-worse": {
+      "fmt": ",.0f",
+      "label": "grid scenarios of the real graph (of 480) in which cutting greedily needs more cuts than the smallest set",
+      "note": "",
+      "unit": "scenarios",
+      "value": 0.0
+    },
+    "e11-lag-median": {
+      "fmt": ".1f",
+      "label": "median lag of China's frontier models behind the date the United States frontier first reached the same ECI",
+      "note": "",
+      "unit": "months",
+      "value": 5.322381930184805
+    },
+    "e11-lag-trend": {
+      "fmt": ".1f",
+      "label": "trend of that lag (Theil-Sen slope; positive means widening)",
+      "note": "",
+      "unit": "months a year",
+      "value": 0.781302170283806
+    },
+    "e11-lag-trend-hi": {
+      "fmt": ".1f",
+      "label": "lag trend, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "months a year",
+      "value": 2.5949207048860563
+    },
+    "e11-lag-trend-lo": {
+      "fmt": ".1f",
+      "label": "lag trend, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "months a year",
+      "value": -0.38786237667098755
+    },
+    "e11-margin-vendor": {
+      "fmt": ".2f",
+      "label": "1 - rho(U) after those gates at the vendor-reported closure: the largest m * rho_dot * T_r the certificate tolerates (rho_dot is unmeasured)",
+      "note": "",
+      "unit": "",
+      "value": 0.721654504
+    },
+    "e11-pathways-alone-honest": {
+      "fmt": ",.0f",
+      "label": "the same with honest bounds on every entry",
+      "note": "",
+      "unit": "pathways",
+      "value": 0.0
+    },
+    "e11-pathways-alone-zero": {
+      "fmt": ",.0f",
+      "label": "pathways whose loops, cut alone, issue the certificate for one party fully closed, with entries that have no data bound set to zero (recursive self-improvement only, if 1)",
+      "note": "",
+      "unit": "pathways",
+      "value": 1.0
+    },
+    "e11-rowsum-floor": {
+      "fmt": ".2f",
+      "label": "smallest largest-row-sum any U on Part I's graph can have while compute feeds software (r at the 95th percentile, closure gated): the row-sum certificate cannot issue",
+      "note": "",
+      "unit": "",
+      "value": 2.1414404
+    },
+    "e11-sens-cycle": {
+      "fmt": ".2f",
+      "label": "share of rho(U) carried by the cycle from compute to software and back through revenue, where rho(U) = 1 on the economic gain (closure gated, r at the 95th percentile; Perron elasticities)",
+      "note": "the largest row sum there is 2.14; the Perron-weighted bound is 1.000, rho itself",
+      "unit": "",
+      "value": 0.8108
+    },
+    "e11-signed-rho": {
+      "fmt": ".2f",
+      "label": "rho(K) of a signed variant of the real graph (software competing with revenue for compute) that does not run away: for signed K, rho(K) > 1 is not the runaway condition",
+      "note": "its positive part has rho 0.73; integrated to t = 10,000 it grows as a logarithm, inside the comparison bound",
+      "unit": "",
+      "value": 1.2532837667503716
+    },
+    "e11-xp-max-vendor": {
+      "fmt": ".2f",
+      "label": "largest bound on the cross-party entry into China's software loop that issues the certificate at the vendor-reported closure, with the reverse entry at its bound and compute capped",
+      "note": "against its own steady-path bound of 1.00: one direction must be gated or measured well below what growth rates allow",
+      "unit": "",
+      "value": 0.4370367630174337
+    }
+  },
+  "script": "tools/exp/e11_coupled_loops.py",
+  "seed": 20261127
+}

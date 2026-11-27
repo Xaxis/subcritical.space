@@ -1,0 +1,3325 @@
+{
+  "data": [
+    {
+      "sha256": "71c88ebc90fff8d95e9db2c46486de6b7ddb01089543e2acb422f5f5f1cf45e7",
+      "url": "https://epoch.ai/data/all_ai_models.csv",
+      "what": "Epoch AI, Data on AI models (all models)"
+    },
+    {
+      "sha256": "5d4764742d674b599072fa80513940ea2c370098688c2377c6170ea273caddff",
+      "url": "https://epoch.ai/data/benchmark_data.zip",
+      "what": "Epoch AI, benchmark data with the Epoch Capabilities Index"
+    },
+    {
+      "sha256": "2f52df0636cc7a707cf6ef82370bae556ba10b20a42b2443f518684adce218c7",
+      "url": "https://raw.githubusercontent.com/epoch-research/lm-algorithmic-progress/29c7d852b6cd19ae11bb6662e9c1e61c03b1e4a7/section3.ipynb",
+      "what": "Ho et al., section3.ipynb at a pinned commit (the code rerun here)"
+    },
+    {
+      "sha256": "1050de02aab1dc2eeb880411ab36074233cdaa035a365c05ead67fbceca5355d",
+      "url": "https://docs.google.com/spreadsheets/d/11m8O_mU0cUkOB_5wluPne4PNsuvsKNbbVAzbYNy-NXY/export?gid=2087221150&format=csv",
+      "what": "Ho et al.'s dataset, the sheet tab their code reads, as CSV"
+    }
+  ],
+  "details": {
+    "clusters": {
+      "drift": {
+        "abstract reasoning": {
+          "deviation_per_oom": -0.8354,
+          "deviation_per_year": 0.2763,
+          "mean_deviation": -1.1598,
+          "models": 64,
+          "p2_5": -2.3588,
+          "p97_5": 0.4897
+        },
+        "cyber": {
+          "models": 7
+        },
+        "economic production": {
+          "deviation_per_oom": -0.1578,
+          "deviation_per_year": 1.2875,
+          "mean_deviation": -1.2096,
+          "models": 22,
+          "p2_5": -2.2996,
+          "p97_5": 6.1944
+        },
+        "knowledge and language": {
+          "deviation_per_oom": 2.3205,
+          "deviation_per_year": -2.6927,
+          "mean_deviation": 0.3931,
+          "models": 58,
+          "p2_5": 0.6249,
+          "p97_5": 4.499
+        },
+        "mathematics": {
+          "deviation_per_oom": -1.9607,
+          "deviation_per_year": 3.5313,
+          "mean_deviation": 0.2734,
+          "models": 92,
+          "p2_5": -4.3618,
+          "p97_5": 0.0379
+        },
+        "science": {
+          "deviation_per_oom": 2.0051,
+          "deviation_per_year": 0.9986,
+          "mean_deviation": -0.8204,
+          "models": 61,
+          "p2_5": 0.6518,
+          "p97_5": 3.6074
+        },
+        "software and AI research": {
+          "deviation_per_oom": 1.7751,
+          "deviation_per_year": 0.4169,
+          "mean_deviation": -1.5995,
+          "models": 49,
+          "p2_5": 0.1444,
+          "p97_5": 4.3494
+        },
+        "strategy and games": {
+          "deviation_per_oom": 1.9669,
+          "deviation_per_year": -0.2704,
+          "mean_deviation": -0.391,
+          "models": 21,
+          "p2_5": -1.557,
+          "p97_5": 5.938
+        }
+      },
+      "map": {
+        "abstract reasoning": [
+          "ARC-AGI",
+          "ARC-AGI-2",
+          "SimpleBench",
+          "BBH",
+          "ANLI"
+        ],
+        "cyber": [
+          "Cybench",
+          "ExploitBench"
+        ],
+        "economic production": [
+          "GDPval",
+          "Remote Labor Index",
+          "APEX-Agents",
+          "The Agent Company",
+          "OSWorld",
+          "OSWorld 2.0",
+          "DeepResearch Bench"
+        ],
+        "knowledge and language": [
+          "MMLU",
+          "TriviaQA",
+          "SimpleQA Verified",
+          "LAMBADA",
+          "PIQA",
+          "HellaSwag",
+          "Winogrande",
+          "OpenBookQA",
+          "ARC AI2",
+          "Fiction.LiveBench",
+          "GeoBench"
+        ],
+        "mathematics": [
+          "MATH level 5",
+          "OTIS Mock AIME 2024-2025",
+          "FrontierMath-2025-02-28-Private",
+          "FrontierMath-Tier-4-2025-07-01-Private",
+          "FrontierMath-Tiers-1-3-v2-Private",
+          "FrontierMath-Tier-4-v2-Private",
+          "ProofBench",
+          "GSM8K"
+        ],
+        "science": [
+          "GPQA diamond"
+        ],
+        "software and AI research": [
+          "METR Time Horizons",
+          "WeirdML",
+          "WeirdML v3",
+          "PostTrainBench",
+          "GSO-Bench",
+          "Aider polyglot",
+          "Terminal Bench",
+          "FrontierCode",
+          "FrontierSWE"
+        ],
+        "strategy and games": [
+          "Chess Puzzles",
+          "Balrog",
+          "SpireClimb",
+          "ForecastBench"
+        ]
+      },
+      "method": "ability in a cluster minus ability on the model's other benchmarks, each fitted to Epoch's benchmark curves by least squares; drift is the slope of that difference on log10 compute with a date term",
+      "spread": {
+        "coef": [
+          5.563,
+          -1.457,
+          -0.6685
+        ],
+        "models": 64
+      },
+      "unmapped_benchmarks": [
+        "CL-bench",
+        "CL-bench Life",
+        "CadEval",
+        "DTBench",
+        "EBR-bench",
+        "Furniture Assembly",
+        "LMCA",
+        "MirrorCode",
+        "Mystery Game Puzzles",
+        "Surface Evolver Bench",
+        "VPCT"
+      ]
+    },
+    "clusters_won": {
+      "baselines": {
+        "forecast_superforecaster_median": 68.1,
+        "gdpval_parity_win_plus_half_tie": 0.5,
+        "gpqa_phd_experts": 0.697
+      },
+      "effective_compute_oom_per_year": 1.2312,
+      "gpqa_by_compute_decade": {
+        "1e22 to 1e23": {
+          "models": 3,
+          "won": 0
+        },
+        "1e23 to 1e24": {
+          "models": 17,
+          "won": 1
+        },
+        "1e24 to 1e25": {
+          "models": 38,
+          "won": 16
+        },
+        "1e25 to 1e26": {
+          "models": 13,
+          "won": 8
+        },
+        "1e26 to 1e27": {
+          "models": 4,
+          "won": 3
+        }
+      },
+      "gpqa_flip_models": [
+        "Claude 3.7 Sonnet"
+      ],
+      "gpqa_models_with_several_settings": 14,
+      "human_comparison_search": {
+        "clusters": [
+          "cyber",
+          "economic production",
+          "science",
+          "software and AI research",
+          "strategy and games"
+        ],
+        "pattern": "human|superforecaster|expert|professional|first.?solve|time horizon|minutes|win rate|win \\+ tie|better than",
+        "tables": [
+          {
+            "benchmark": "Cybench",
+            "cluster": "cyber",
+            "columns": [
+              "Unguided most difficult task solved (minutes)",
+              "Subtask-Guided most difficult task solved (minutes)"
+            ],
+            "file": "cybench_external.csv"
+          },
+          {
+            "benchmark": "ForecastBench",
+            "cluster": "strategy and games",
+            "columns": [
+              "Better than superforecaster median?",
+              "Better than public median?",
+              "Superforecaster p-value"
+            ],
+            "file": "forecastbench_external.csv"
+          },
+          {
+            "benchmark": "GDPval",
+            "cluster": "economic production",
+            "columns": [
+              "Win Rate (%)",
+              "Win + tie rate (%)"
+            ],
+            "file": "gdpval_external.csv"
+          },
+          {
+            "benchmark": "METR Time Horizons",
+            "cluster": "software and AI research",
+            "columns": [
+              "Time horizon",
+              "Time Horizon (80%)"
+            ],
+            "file": "metr_time_horizons_external.csv"
+          }
+        ]
+      },
+      "not_measurable": [
+        "AI research against an organisation",
+        "cyber operations against an organisation",
+        "persuasion",
+        "any cluster at matched time and budget"
+      ],
+      "per_cluster": {
+        "economic production (GDPval against industry experts)": {
+          "models": 2,
+          "won": 0
+        },
+        "science (GPQA Diamond against PhD experts)": {
+          "models": 76,
+          "won": 28
+        },
+        "strategy (ForecastBench against the superforecaster median)": {
+          "models": 26,
+          "won": 0
+        }
+      }
+    },
+    "eci_fit": {
+      "a": 117.2149,
+      "b": 12.3361,
+      "c": 15.1883,
+      "corr_log_compute_date": 0.6161,
+      "draws": 2000,
+      "form": "ECI = a + b (log10 FLOP - 25) + c (years since 2024-01-01), least squares",
+      "frontier_compute_oom_per_year": 0.699,
+      "interaction": {
+        "coef": [
+          120.8288,
+          14.3411,
+          12.745,
+          -3.9259
+        ],
+        "se": [
+          1.9082,
+          1.1344,
+          1.1428,
+          0.9018
+        ]
+      },
+      "interaction_implied": {
+        "drift_per_oom": -0.3403,
+        "median_date_years_since_2024": 0.7146,
+        "oom_a_year_at_1e24": 1.4452,
+        "oom_a_year_at_1e26": 0.7645,
+        "years_after_which_more_compute_is_later": 2.9384
+      },
+      "kept": 2000,
+      "n": 105,
+      "r2": 0.8893,
+      "rmse": 9.2477,
+      "se": [
+        1.8633,
+        1.1242,
+        1.0795
+      ]
+    },
+    "eci_out_of_sample": {
+      "benchmark_scores_scored": 869,
+      "confident_compute_only": {
+        "forecasts": 44,
+        "mae_eci": 10.0382
+      },
+      "forecasts": [
+        {
+          "cut": 23.0,
+          "eci": 138.32,
+          "forecast": 106.5757,
+          "log10_flop": 23.8116,
+          "model": "Qwen3-30B-A3B-Thinking (Jul 2025)",
+          "upper_95": 142.1285
+        },
+        {
+          "cut": 23.0,
+          "eci": 134.89,
+          "forecast": 106.3105,
+          "log10_flop": 23.7396,
+          "model": "gpt-oss-20b",
+          "upper_95": 141.5544
+        },
+        {
+          "cut": 23.0,
+          "eci": 134.87,
+          "forecast": 106.5422,
+          "log10_flop": 23.8116,
+          "model": "Qwen3-30B-A3B-Instruct (Jul 2025)",
+          "upper_95": 142.0784
+        },
+        {
+          "cut": 23.0,
+          "eci": 134.16,
+          "forecast": 103.4949,
+          "log10_flop": 23.8116,
+          "model": "Qwen3-30B-A3B",
+          "upper_95": 137.5994
+        },
+        {
+          "cut": 23.0,
+          "eci": 129.24,
+          "forecast": 99.8956,
+          "log10_flop": 23.9694,
+          "model": "Phi-4",
+          "upper_95": 133.2974
+        },
+        {
+          "cut": 23.0,
+          "eci": 116.3,
+          "forecast": 87.9446,
+          "log10_flop": 23.3286,
+          "model": "phi-3-small 7.4B",
+          "upper_95": 115.308
+        },
+        {
+          "cut": 23.0,
+          "eci": 114.07,
+          "forecast": 89.7372,
+          "log10_flop": 23.6055,
+          "model": "phi-3-medium 14B",
+          "upper_95": 118.661
+        },
+        {
+          "cut": 23.0,
+          "eci": 113.19,
+          "forecast": 87.0834,
+          "log10_flop": 23.8887,
+          "model": "Mixtral 8x7B",
+          "upper_95": 117.673
+        },
+        {
+          "cut": 23.0,
+          "eci": 112.42,
+          "forecast": 92.0073,
+          "log10_flop": 23.6355,
+          "model": "Gemma 2 9B",
+          "upper_95": 121.5147
+        },
+        {
+          "cut": 23.0,
+          "eci": 109.12,
+          "forecast": 91.1999,
+          "log10_flop": 23.8573,
+          "model": "Llama 3-8B",
+          "upper_95": 121.8746
+        },
+        {
+          "cut": 23.0,
+          "eci": 107.42,
+          "forecast": 93.3621,
+          "log10_flop": 23.3999,
+          "model": "Qwen2.5-Coder (7B)",
+          "upper_95": 122.3056
+        },
+        {
+          "cut": 23.0,
+          "eci": 105.73,
+          "forecast": 82.3221,
+          "log10_flop": 23.9085,
+          "model": "Llama 2-70B",
+          "upper_95": 113.3298
+        },
+        {
+          "cut": 23.0,
+          "eci": 103.15,
+          "forecast": 86.8946,
+          "log10_flop": 23.4871,
+          "model": "Gemma 7B",
+          "upper_95": 114.8104
+        },
+        {
+          "cut": 23.0,
+          "eci": 101.76,
+          "forecast": 81.294,
+          "log10_flop": 23.3979,
+          "model": "Qwen-14B",
+          "upper_95": 108.5353
+        },
+        {
+          "cut": 23.0,
+          "eci": 101.51,
+          "forecast": 76.4116,
+          "log10_flop": 23.7404,
+          "model": "LLaMA-65B",
+          "upper_95": 106.9962
+        },
+        {
+          "cut": 23.0,
+          "eci": 99.24,
+          "forecast": 89.9543,
+          "log10_flop": 23.5563,
+          "model": "Falcon 2 11B",
+          "upper_95": 118.6608
+        },
+        {
+          "cut": 23.0,
+          "eci": 99.14,
+          "forecast": 89.5736,
+          "log10_flop": 23.8751,
+          "model": "Nemotron-4 15B",
+          "upper_95": 120.1891
+        },
+        {
+          "cut": 23.0,
+          "eci": 96.51,
+          "forecast": 74.4422,
+          "log10_flop": 23.4362,
+          "model": "LLaMA-33B",
+          "upper_95": 102.9929
+        },
+        {
+          "cut": 23.0,
+          "eci": 96.48,
+          "forecast": 77.7621,
+          "log10_flop": 23.2041,
+          "model": "Llama 2-13B",
+          "upper_95": 104.2038
+        },
+        {
+          "cut": 23.0,
+          "eci": 96.09,
+          "forecast": 87.5122,
+          "log10_flop": 23.5877,
+          "model": "StarCoder 2 15B",
+          "upper_95": 116.0466
+        },
+        {
+          "cut": 23.0,
+          "eci": 94.27,
+          "forecast": 81.3433,
+          "log10_flop": 23.1004,
+          "model": "Yi 6B",
+          "upper_95": 107.1917
+        },
+        {
+          "cut": 23.0,
+          "eci": 93.89,
+          "forecast": 80.394,
+          "log10_flop": 23.6107,
+          "model": "Llama 2-34B",
+          "upper_95": 109.1515
+        },
+        {
+          "cut": 23.0,
+          "eci": 91.75,
+          "forecast": 80.1057,
+          "log10_flop": 23.3075,
+          "model": "Baichuan2-13B",
+          "upper_95": 106.8954
+        },
+        {
+          "cut": 23.0,
+          "eci": 90.67,
+          "forecast": 77.0938,
+          "log10_flop": 23.3802,
+          "model": "Falcon-40B",
+          "upper_95": 104.677
+        },
+        {
+          "cut": 23.0,
+          "eci": 89.14,
+          "forecast": 78.8797,
+          "log10_flop": 23.0043,
+          "model": "Qwen-7B",
+          "upper_95": 104.4079
+        },
+        {
+          "cut": 23.0,
+          "eci": 85.19,
+          "forecast": 77.3598,
+          "log10_flop": 23.2765,
+          "model": "MPT-30B",
+          "upper_95": 104.2511
+        },
+        {
+          "cut": 23.0,
+          "eci": 83.6,
+          "forecast": 78.8313,
+          "log10_flop": 23.0382,
+          "model": "Baichuan 2-7B",
+          "upper_95": 104.4733
+        },
+        {
+          "cut": 23.0,
+          "eci": 76.3,
+          "forecast": 83.8932,
+          "log10_flop": 23.5977,
+          "model": "DeepSeek Coder 33B",
+          "upper_95": 112.3298
+        },
+        {
+          "cut": 23.0,
+          "eci": 72.4,
+          "forecast": 84.9396,
+          "log10_flop": 23.1903,
+          "model": "StarCoder 2 7B",
+          "upper_95": 111.3671
+        },
+        {
+          "cut": 24.0,
+          "eci": 157.01,
+          "forecast": 164.6327,
+          "log10_flop": 24.6355,
+          "model": "DeepSeek V4.1 Flash",
+          "upper_95": 187.234
+        },
+        {
+          "cut": 24.0,
+          "eci": 155.96,
+          "forecast": 170.2639,
+          "log10_flop": 24.9869,
+          "model": "DeepSeek V4 Pro 0813",
+          "upper_95": 193.0859
+        },
+        {
+          "cut": 24.0,
+          "eci": 154.43,
+          "forecast": 158.2725,
+          "log10_flop": 24.3972,
+          "model": "DeepSeek V4 Flash 0731",
+          "upper_95": 180.5145
+        },
+        {
+          "cut": 24.0,
+          "eci": 153.77,
+          "forecast": 161.3398,
+          "log10_flop": 24.5105,
+          "model": "GLM-5.3-Flash",
+          "upper_95": 183.7504
+        },
+        {
+          "cut": 24.0,
+          "eci": 150.84,
+          "forecast": 163.46,
+          "log10_flop": 24.5165,
+          "model": "Beam 1.0",
+          "upper_95": 186.1228
+        },
+        {
+          "cut": 24.0,
+          "eci": 150.19,
+          "forecast": 165.4242,
+          "log10_flop": 24.9869,
+          "model": "DeepSeek-V4-Pro",
+          "upper_95": 187.7778
+        },
+        {
+          "cut": 24.0,
+          "eci": 148.79,
+          "forecast": 157.3016,
+          "log10_flop": 24.7634,
+          "model": "Kimi K2.5",
+          "upper_95": 179.0326
+        },
+        {
+          "cut": 24.0,
+          "eci": 147.02,
+          "forecast": 163.9698,
+          "log10_flop": 24.8195,
+          "model": "Nemotron 3 Ultra",
+          "upper_95": 186.2792
+        },
+        {
+          "cut": 24.0,
+          "eci": 146.91,
+          "forecast": 153.9996,
+          "log10_flop": 24.3972,
+          "model": "DeepSeek-V4-Flash",
+          "upper_95": 175.7504
+        },
+        {
+          "cut": 24.0,
+          "eci": 146.53,
+          "forecast": 159.3435,
+          "log10_flop": 24.8351,
+          "model": "GLM-5",
+          "upper_95": 181.2206
+        },
+        {
+          "cut": 24.0,
+          "eci": 146.26,
+          "forecast": 152.1002,
+          "log10_flop": 24.6232,
+          "model": "DeepSeek-V3.2",
+          "upper_95": 173.4632
+        },
+        {
+          "cut": 24.0,
+          "eci": 145.46,
+          "forecast": 151.0102,
+          "log10_flop": 24.6232,
+          "model": "Kimi K2 Thinking",
+          "upper_95": 172.2898
+        },
+        {
+          "cut": 24.0,
+          "eci": 144.39,
+          "forecast": 149.3132,
+          "log10_flop": 24.6212,
+          "model": "DeepSeek-V3.2-Exp",
+          "upper_95": 170.4718
+        },
+        {
+          "cut": 24.0,
+          "eci": 143.34,
+          "forecast": 153.4455,
+          "log10_flop": 24.6454,
+          "model": "GLM-4.7",
+          "upper_95": 174.9069
+        },
+        {
+          "cut": 24.0,
+          "eci": 143.23,
+          "forecast": 147.5148,
+          "log10_flop": 24.6769,
+          "model": "Qwen3-235B-A22B-Thinking (Jul 2025)",
+          "upper_95": 168.5682
+        },
+        {
+          "cut": 24.0,
+          "eci": 141.27,
+          "forecast": 143.0099,
+          "log10_flop": 24.4736,
+          "model": "Kimi K2 (Jul 2025)",
+          "upper_95": 163.7723
+        },
+        {
+          "cut": 24.0,
+          "eci": 140.88,
+          "forecast": 146.3419,
+          "log10_flop": 24.5556,
+          "model": "DeepSeek-V3.1",
+          "upper_95": 167.3083
+        },
+        {
+          "cut": 24.0,
+          "eci": 140.73,
+          "forecast": 141.9175,
+          "log10_flop": 24.5185,
+          "model": "DeepSeek-R1 (May 2025)",
+          "upper_95": 162.6249
+        },
+        {
+          "cut": 24.0,
+          "eci": 140.21,
+          "forecast": 148.3209,
+          "log10_flop": 24.6937,
+          "model": "gpt-oss-120b",
+          "upper_95": 169.425
+        },
+        {
+          "cut": 24.0,
+          "eci": 138.62,
+          "forecast": 136.3366,
+          "log10_flop": 24.5185,
+          "model": "DeepSeek-R1",
+          "upper_95": 156.8219
+        },
+        {
+          "cut": 24.0,
+          "eci": 138.4,
+          "forecast": 143.678,
+          "log10_flop": 24.6769,
+          "model": "Qwen3-235B-A22B",
+          "upper_95": 164.5468
+        },
+        {
+          "cut": 24.0,
+          "eci": 138.03,
+          "forecast": 147.5148,
+          "log10_flop": 24.6769,
+          "model": "Qwen3-235B-A22B-Instruct (Jul 2025)",
+          "upper_95": 168.5682
+        },
+        {
+          "cut": 24.0,
+          "eci": 136.85,
+          "forecast": 147.0824,
+          "log10_flop": 24.8503,
+          "model": "Qwen3-32B",
+          "upper_95": 168.2378
+        },
+        {
+          "cut": 24.0,
+          "eci": 136.44,
+          "forecast": 138.7742,
+          "log10_flop": 24.5453,
+          "model": "QwQ-32B",
+          "upper_95": 159.3593
+        },
+        {
+          "cut": 24.0,
+          "eci": 136.06,
+          "forecast": 140.3857,
+          "log10_flop": 24.5047,
+          "model": "Qwen3-14B",
+          "upper_95": 161.0139
+        },
+        {
+          "cut": 24.0,
+          "eci": 135.25,
+          "forecast": 139.0835,
+          "log10_flop": 24.5185,
+          "model": "DeepSeek-V3 (Mar 2025)",
+          "upper_95": 159.6624
+        },
+        {
+          "cut": 24.0,
+          "eci": 132.19,
+          "forecast": 136.4049,
+          "log10_flop": 24.351,
+          "model": "Llama 4 Maverick",
+          "upper_95": 156.802
+        },
+        {
+          "cut": 24.0,
+          "eci": 132.07,
+          "forecast": 135.3731,
+          "log10_flop": 24.2483,
+          "model": "Qwen3-8B",
+          "upper_95": 155.7151
+        },
+        {
+          "cut": 24.0,
+          "eci": 131.69,
+          "forecast": 135.2466,
+          "log10_flop": 24.5185,
+          "model": "DeepSeek-V3",
+          "upper_95": 155.7032
+        },
+        {
+          "cut": 24.0,
+          "eci": 127.75,
+          "forecast": 141.3921,
+          "log10_flop": 24.6107,
+          "model": "Llama 4 Scout",
+          "upper_95": 162.122
+        },
+        {
+          "cut": 24.0,
+          "eci": 127.56,
+          "forecast": 135.4044,
+          "log10_flop": 24.3556,
+          "model": "Gemma 3 27B",
+          "upper_95": 155.7575
+        },
+        {
+          "cut": 24.0,
+          "eci": 127.23,
+          "forecast": 138.2123,
+          "log10_flop": 24.8921,
+          "model": "Qwen2.5-72B",
+          "upper_95": 159.3015
+        },
+        {
+          "cut": 24.0,
+          "eci": 126.18,
+          "forecast": 140.5387,
+          "log10_flop": 24.8366,
+          "model": "Llama 3.3 70B",
+          "upper_95": 161.5254
+        },
+        {
+          "cut": 24.0,
+          "eci": 124.7,
+          "forecast": 135.8215,
+          "log10_flop": 24.8992,
+          "model": "Llama 3.1-70B",
+          "upper_95": 156.9511
+        },
+        {
+          "cut": 24.0,
+          "eci": 122.35,
+          "forecast": 125.6932,
+          "log10_flop": 24.48,
+          "model": "Qwen2-72B",
+          "upper_95": 146.0311
+        },
+        {
+          "cut": 24.0,
+          "eci": 121.33,
+          "forecast": 131.5634,
+          "log10_flop": 24.8955,
+          "model": "Llama 3-70B",
+          "upper_95": 152.7823
+        },
+        {
+          "cut": 24.0,
+          "eci": 120.82,
+          "forecast": 115.2074,
+          "log10_flop": 24.0086,
+          "model": "DeepSeek-V2 (MoE-236B, May 2024)",
+          "upper_95": 134.8975
+        },
+        {
+          "cut": 24.0,
+          "eci": 118.73,
+          "forecast": 121.4723,
+          "log10_flop": 24.0304,
+          "model": "Qwen2.5-Coder-32B",
+          "upper_95": 141.2409
+        },
+        {
+          "cut": 24.0,
+          "eci": 118.71,
+          "forecast": 121.3228,
+          "log10_flop": 24.3692,
+          "model": "Mixtral 8x22B",
+          "upper_95": 141.508
+        },
+        {
+          "cut": 24.0,
+          "eci": 118.64,
+          "forecast": 123.401,
+          "log10_flop": 24.3235,
+          "model": "Gemma 2 27B",
+          "upper_95": 143.4853
+        },
+        {
+          "cut": 24.0,
+          "eci": 117.17,
+          "forecast": 113.2959,
+          "log10_flop": 24.5873,
+          "model": "Claude 2",
+          "upper_95": 134.4528
+        },
+        {
+          "cut": 24.0,
+          "eci": 110.9,
+          "forecast": 120.0989,
+          "log10_flop": 24.0878,
+          "model": "Llama 3.1-8B",
+          "upper_95": 139.8861
+        },
+        {
+          "cut": 24.0,
+          "eci": 107.04,
+          "forecast": 115.5472,
+          "log10_flop": 24.5752,
+          "model": "Falcon-180B",
+          "upper_95": 136.5117
+        },
+        {
+          "cut": 25.0,
+          "eci": 161.2,
+          "forecast": 168.9987,
+          "log10_flop": 25.3011,
+          "model": "Kimi K3.1 Pro",
+          "upper_95": 183.8484
+        },
+        {
+          "cut": 25.0,
+          "eci": 158.61,
+          "forecast": 165.1049,
+          "log10_flop": 25.3011,
+          "model": "Kimi K3",
+          "upper_95": 179.8914
+        },
+        {
+          "cut": 25.0,
+          "eci": 154.57,
+          "forecast": 165.7733,
+          "log10_flop": 25.0934,
+          "model": "Mistral Large 4",
+          "upper_95": 180.6159
+        },
+        {
+          "cut": 25.0,
+          "eci": 152.74,
+          "forecast": 164.8687,
+          "log10_flop": 25.0934,
+          "model": "Mistral Large 4 Preview",
+          "upper_95": 179.6908
+        },
+        {
+          "cut": 25.0,
+          "eci": 150.0,
+          "forecast": 160.2581,
+          "log10_flop": 25.8195,
+          "model": "GPT-5",
+          "upper_95": 175.2881
+        },
+        {
+          "cut": 25.0,
+          "eci": 148.39,
+          "forecast": 160.7368,
+          "log10_flop": 25.0414,
+          "model": "Inkling",
+          "upper_95": 175.4912
+        },
+        {
+          "cut": 25.0,
+          "eci": 142.43,
+          "forecast": 151.4768,
+          "log10_flop": 25.1796,
+          "model": "Qwen3-Max",
+          "upper_95": 166.1638
+        },
+        {
+          "cut": 25.0,
+          "eci": 141.03,
+          "forecast": 148.8983,
+          "log10_flop": 25.525,
+          "model": "Claude 3.7 Sonnet",
+          "upper_95": 163.8514
+        },
+        {
+          "cut": 25.0,
+          "eci": 130.0,
+          "forecast": 137.5432,
+          "log10_flop": 25.4314,
+          "model": "Claude 3.5 Sonnet",
+          "upper_95": 152.69
+        },
+        {
+          "cut": 25.0,
+          "eci": 129.79,
+          "forecast": 145.0917,
+          "log10_flop": 25.4713,
+          "model": "Grok-2 (Dec 2024)",
+          "upper_95": 160.0732
+        },
+        {
+          "cut": 25.0,
+          "eci": 127.92,
+          "forecast": 141.3154,
+          "log10_flop": 25.5798,
+          "model": "Llama 3.1-405B",
+          "upper_95": 156.5381
+        },
+        {
+          "cut": 25.0,
+          "eci": 121.61,
+          "forecast": 117.4742,
+          "log10_flop": 25.3222,
+          "model": "GPT-4 (Mar 2023)",
+          "upper_95": 133.3271
+        },
+        {
+          "cut": 25.0,
+          "eci": 119.91,
+          "forecast": 121.0533,
+          "log10_flop": 25.3222,
+          "model": "GPT-4 (Jun 2023)",
+          "upper_95": 136.7176
+        },
+        {
+          "cut": 26.0,
+          "eci": 169.21,
+          "forecast": 188.8528,
+          "log10_flop": 26.9731,
+          "model": "GPT-6 Astra",
+          "upper_95": 203.9418
+        },
+        {
+          "cut": 26.0,
+          "eci": 146.91,
+          "forecast": 168.3878,
+          "log10_flop": 26.699,
+          "model": "Grok 4",
+          "upper_95": 183.4866
+        },
+        {
+          "cut": 26.0,
+          "eci": 137.55,
+          "forecast": 162.5204,
+          "log10_flop": 26.5441,
+          "model": "Grok 3",
+          "upper_95": 177.5875
+        },
+        {
+          "cut": 26.0,
+          "eci": 136.47,
+          "forecast": 161.4696,
+          "log10_flop": 26.5798,
+          "model": "GPT-4.5",
+          "upper_95": 176.5895
+        }
+      ],
+      "irt_form_check_mae_pp_all_scores": 5.3411,
+      "offset_mae_eci": 7.675,
+      "offset_schedule": [
+        {
+          "above_upper_95": 0,
+          "bias_eci": 5.4283,
+          "cut_log10_flop": 23.5,
+          "fit_eci_per_oom": 17.4027,
+          "fit_eci_per_year": 11.3261,
+          "fit_models": 29,
+          "mae_eci": 8.1352,
+          "test_models": 28
+        },
+        {
+          "above_upper_95": 0,
+          "bias_eci": -6.6717,
+          "cut_log10_flop": 24.5,
+          "fit_eci_per_oom": 18.3053,
+          "fit_eci_per_year": 15.1863,
+          "fit_models": 57,
+          "mae_eci": 7.3284,
+          "test_models": 41
+        },
+        {
+          "above_upper_95": 0,
+          "bias_eci": -8.1164,
+          "cut_log10_flop": 25.5,
+          "fit_eci_per_oom": 15.8041,
+          "fit_eci_per_year": 13.8375,
+          "fit_models": 98,
+          "mae_eci": 8.1164,
+          "test_models": 3
+        }
+      ],
+      "offset_unforecast_share": 0.0,
+      "per_benchmark_mae_pp": {
+        "ANLI": {
+          "mae_pp": 16.6584,
+          "n": 5
+        },
+        "APEX-Agents": {
+          "mae_pp": 22.4192,
+          "n": 12
+        },
+        "ARC AI2": {
+          "mae_pp": 15.2885,
+          "n": 28
+        },
+        "ARC-AGI": {
+          "mae_pp": 25.8852,
+          "n": 21
+        },
+        "ARC-AGI-2": {
+          "mae_pp": 34.7048,
+          "n": 21
+        },
+        "Aider polyglot": {
+          "mae_pp": 22.11,
+          "n": 19
+        },
+        "BBH": {
+          "mae_pp": 14.0245,
+          "n": 21
+        },
+        "Balrog": {
+          "mae_pp": 12.8416,
+          "n": 10
+        },
+        "CL-bench": {
+          "mae_pp": 4.4795,
+          "n": 7
+        },
+        "CL-bench Life": {
+          "mae_pp": 6.883,
+          "n": 5
+        },
+        "CadEval": {
+          "mae_pp": 18.4778,
+          "n": 1
+        },
+        "Chess Puzzles": {
+          "mae_pp": 23.4905,
+          "n": 13
+        },
+        "Cybench": {
+          "mae_pp": 29.5989,
+          "n": 7
+        },
+        "DTBench": {
+          "mae_pp": 8.6535,
+          "n": 47
+        },
+        "DeepResearch Bench": {
+          "mae_pp": 6.1801,
+          "n": 4
+        },
+        "EBR-bench": {
+          "mae_pp": 30.3753,
+          "n": 4
+        },
+        "Fiction.LiveBench": {
+          "mae_pp": 17.8063,
+          "n": 26
+        },
+        "FrontierCode": {
+          "mae_pp": 23.3285,
+          "n": 10
+        },
+        "FrontierMath-2025-02-28-Private": {
+          "mae_pp": 17.1673,
+          "n": 14
+        },
+        "FrontierMath-Tier-4-2025-07-01-Private": {
+          "mae_pp": 19.3009,
+          "n": 9
+        },
+        "FrontierMath-Tier-4-v2-Private": {
+          "mae_pp": 45.3327,
+          "n": 11
+        },
+        "FrontierMath-Tiers-1-3-v2-Private": {
+          "mae_pp": 23.8648,
+          "n": 12
+        },
+        "FrontierSWE": {
+          "mae_pp": 24.8225,
+          "n": 4
+        },
+        "Furniture Assembly": {
+          "mae_pp": 25.2208,
+          "n": 6
+        },
+        "GDPval": {
+          "mae_pp": 44.0544,
+          "n": 2
+        },
+        "GPQA diamond": {
+          "mae_pp": 10.7342,
+          "n": 61
+        },
+        "GSM8K": {
+          "mae_pp": 16.2409,
+          "n": 26
+        },
+        "GSO-Bench": {
+          "mae_pp": 18.4212,
+          "n": 4
+        },
+        "GeoBench": {
+          "mae_pp": 12.722,
+          "n": 6
+        },
+        "HellaSwag": {
+          "mae_pp": 6.6974,
+          "n": 22
+        },
+        "LAMBADA": {
+          "mae_pp": 5.8112,
+          "n": 10
+        },
+        "LMCA": {
+          "mae_pp": 11.8816,
+          "n": 37
+        },
+        "MATH level 5": {
+          "mae_pp": 18.4965,
+          "n": 32
+        },
+        "METR Time Horizons": {
+          "mae_pp": 9.1563,
+          "n": 13
+        },
+        "MMLU": {
+          "mae_pp": 12.1149,
+          "n": 42
+        },
+        "MirrorCode": {
+          "mae_pp": 31.1005,
+          "n": 7
+        },
+        "Mystery Game Puzzles": {
+          "mae_pp": 22.0803,
+          "n": 16
+        },
+        "OSWorld": {
+          "mae_pp": 19.6398,
+          "n": 3
+        },
+        "OTIS Mock AIME 2024-2025": {
+          "mae_pp": 19.53,
+          "n": 56
+        },
+        "OpenBookQA": {
+          "mae_pp": 16.2953,
+          "n": 13
+        },
+        "PIQA": {
+          "mae_pp": 2.771,
+          "n": 20
+        },
+        "PostTrainBench": {
+          "mae_pp": 12.9995,
+          "n": 3
+        },
+        "ProofBench": {
+          "mae_pp": 42.8088,
+          "n": 15
+        },
+        "Remote Labor Index": {
+          "mae_pp": 24.8271,
+          "n": 3
+        },
+        "SimpleBench": {
+          "mae_pp": 16.307,
+          "n": 29
+        },
+        "SimpleQA Verified": {
+          "mae_pp": 18.0111,
+          "n": 15
+        },
+        "SpireClimb": {
+          "mae_pp": 37.1659,
+          "n": 2
+        },
+        "Surface Evolver Bench": {
+          "mae_pp": 33.9004,
+          "n": 6
+        },
+        "Terminal Bench": {
+          "mae_pp": 27.6594,
+          "n": 10
+        },
+        "The Agent Company": {
+          "mae_pp": 17.9818,
+          "n": 6
+        },
+        "TriviaQA": {
+          "mae_pp": 10.078,
+          "n": 18
+        },
+        "VPCT": {
+          "mae_pp": 20.2001,
+          "n": 4
+        },
+        "WeirdML": {
+          "mae_pp": 18.0238,
+          "n": 38
+        },
+        "WeirdML v3": {
+          "mae_pp": 23.5743,
+          "n": 6
+        },
+        "Winogrande": {
+          "mae_pp": 7.0546,
+          "n": 27
+        }
+      },
+      "schedule": [
+        {
+          "above_upper_95": 1,
+          "bias_eci": 16.8158,
+          "cut_log10_flop": 23.0,
+          "fit_eci_per_oom": 6.4739,
+          "fit_eci_per_year": 12.2312,
+          "fit_models": 16,
+          "mae_eci": 18.2043,
+          "test_models": 29
+        },
+        {
+          "above_upper_95": 0,
+          "bias_eci": -6.6954,
+          "cut_log10_flop": 24.0,
+          "fit_eci_per_oom": 19.3763,
+          "fit_eci_per_year": 15.9252,
+          "fit_models": 45,
+          "mae_eci": 7.2429,
+          "test_models": 43
+        },
+        {
+          "above_upper_95": 0,
+          "bias_eci": -8.4918,
+          "cut_log10_flop": 25.0,
+          "fit_eci_per_oom": 16.6709,
+          "fit_eci_per_year": 14.3656,
+          "fit_models": 88,
+          "mae_eci": 9.1281,
+          "test_models": 13
+        },
+        {
+          "above_upper_95": 0,
+          "bias_eci": -22.7726,
+          "cut_log10_flop": 26.0,
+          "fit_eci_per_oom": 15.0963,
+          "fit_eci_per_year": 14.1643,
+          "fit_models": 101,
+          "mae_eci": 22.7726,
+          "test_models": 4
+        }
+      ],
+      "time_split": {
+        "bias_eci": 0.7272,
+        "fit_models": 74,
+        "mae_eci": 5.3855,
+        "split": "2025-07-01",
+        "test_models": 31
+      }
+    },
+    "eci_subsets": {
+      "note": "the rate is not identified: it moves across samples by far more than any one sample's resampling interval",
+      "table": {
+        "all joined models": {
+          "algo_annual": 17.0296,
+          "algo_annual_p2_5": 7.452,
+          "algo_annual_p97_5": 57.483,
+          "compute_share": 0.3621,
+          "compute_share_p2_5": 0.2843,
+          "compute_share_p97_5": 0.4449,
+          "eci_per_oom": 12.3361,
+          "eci_per_year": 15.1883,
+          "interaction": -3.9259,
+          "interaction_p2_5": -6.2824,
+          "interaction_p97_5": -2.2139,
+          "models": 105
+        },
+        "at or above 1e24 FLOP": {
+          "algo_annual": 392.5568,
+          "algo_annual_p2_5": 47.3543,
+          "algo_annual_p97_5": 27416.9806,
+          "compute_share": 0.2123,
+          "compute_share_p2_5": 0.1361,
+          "compute_share_p97_5": 0.2944,
+          "eci_per_oom": 5.1084,
+          "eci_per_year": 13.2507,
+          "interaction": -1.0313,
+          "interaction_p2_5": -6.6281,
+          "interaction_p97_5": 1.5097,
+          "models": 60
+        },
+        "at or above 1e24.5 FLOP": {
+          "algo_annual": 1512.4678,
+          "algo_annual_p2_5": 87.8688,
+          "algo_annual_p97_5": 150256282.2072,
+          "compute_share": 0.1802,
+          "compute_share_p2_5": 0.0787,
+          "compute_share_p97_5": 0.2643,
+          "eci_per_oom": 3.968,
+          "eci_per_year": 12.6169,
+          "interaction": 0.9828,
+          "interaction_p2_5": -5.579,
+          "interaction_p97_5": 3.6874,
+          "models": 48
+        },
+        "confident compute estimates only": {
+          "algo_annual": 7.568,
+          "algo_annual_p2_5": 3.2297,
+          "algo_annual_p97_5": 25.449,
+          "compute_share": 0.443,
+          "compute_share_p2_5": 0.3321,
+          "compute_share_p97_5": 0.5786,
+          "eci_per_oom": 15.8768,
+          "eci_per_year": 13.9554,
+          "interaction": -1.0279,
+          "interaction_p2_5": -5.6873,
+          "interaction_p97_5": 3.6516,
+          "models": 59
+        },
+        "not open weights": {
+          "algo_annual": 2.6092,
+          "algo_annual_p2_5": 1.3312,
+          "algo_annual_p97_5": 40.6983,
+          "compute_share": 0.6266,
+          "compute_share_p2_5": 0.3028,
+          "compute_share_p97_5": 0.8491,
+          "eci_per_oom": 16.3804,
+          "eci_per_year": 6.8227,
+          "interaction": -2.5949,
+          "interaction_p2_5": -10.402,
+          "interaction_p97_5": 2.9167,
+          "models": 16
+        },
+        "released 2024 on": {
+          "algo_annual": 45.6454,
+          "algo_annual_p2_5": 11.7041,
+          "algo_annual_p97_5": 351.518,
+          "compute_share": 0.2964,
+          "compute_share_p2_5": 0.2154,
+          "compute_share_p97_5": 0.3955,
+          "eci_per_oom": 10.0354,
+          "eci_per_year": 16.6527,
+          "interaction": -6.0608,
+          "interaction_p2_5": -11.9294,
+          "interaction_p97_5": -2.7397,
+          "models": 76
+        }
+      }
+    },
+    "ho_by_compute": {
+      "halves": {
+        "annual_multiplier": [
+          1.756,
+          1.7433
+        ],
+        "annual_multiplier_p2_5": [
+          1.4135,
+          0.8557
+        ],
+        "annual_multiplier_p50": [
+          2.0657,
+          1.9767
+        ],
+        "annual_multiplier_p97_5": [
+          4.3381,
+          6.8599
+        ],
+        "bin_log10_flop_range": [
+          [
+            13.0472,
+            16.3263
+          ],
+          [
+            16.393,
+            23.7694
+          ]
+        ],
+        "edges_log10_flop": [
+          16.393
+        ],
+        "halving_months": [
+          14.7726,
+          14.9662
+        ],
+        "models_per_bin": [
+          115,
+          116
+        ],
+        "objective": 0.0517,
+        "separate_fits": [
+          {
+            "alpha_param": 0.045,
+            "alpha_year": 0.0258,
+            "annual_multiplier": 1.7979,
+            "beta_data": 0.1547,
+            "beta_year": 0.0019
+          },
+          {
+            "alpha_param": 0.0756,
+            "alpha_year": -0.0747,
+            "annual_multiplier": 17.4702,
+            "beta_data": 0.0326,
+            "beta_year": 0.1256
+          }
+        ],
+        "separate_fits_note": "model 7 fitted on each bin alone; the scaling exponents are poorly identified on a narrow compute range",
+        "share_draws_top_faster": 0.438,
+        "top_minus_bottom_oom_per_year": -0.0032,
+        "top_minus_bottom_p2_5": -0.4195,
+        "top_minus_bottom_p97_5": 0.4353
+      },
+      "terciles": {
+        "annual_multiplier": [
+          1.7788,
+          2.7118,
+          2.4283
+        ],
+        "annual_multiplier_p2_5": [
+          1.3633,
+          1.0217,
+          0.9983
+        ],
+        "annual_multiplier_p50": [
+          2.6286,
+          2.3273,
+          2.6628
+        ],
+        "annual_multiplier_p97_5": [
+          8.5492,
+          11.3637,
+          22.4678
+        ],
+        "bin_log10_flop_range": [
+          [
+            13.0472,
+            14.4786
+          ],
+          [
+            14.5112,
+            17.0985
+          ],
+          [
+            17.1432,
+            23.7694
+          ]
+        ],
+        "edges_log10_flop": [
+          14.5003,
+          17.1134
+        ],
+        "halving_months": [
+          14.4416,
+          8.3376,
+          9.3755
+        ],
+        "models_per_bin": [
+          77,
+          77,
+          77
+        ],
+        "objective": 0.0506,
+        "separate_fits": [
+          {
+            "alpha_param": 0.0416,
+            "alpha_year": 0.0095,
+            "annual_multiplier": 1.486431327618792e+27,
+            "beta_data": 0.0008,
+            "beta_year": 0.0493
+          },
+          {
+            "alpha_param": 0.1175,
+            "alpha_year": -0.0928,
+            "annual_multiplier": 3.4647,
+            "beta_data": 0.0487,
+            "beta_year": 0.0989
+          },
+          {
+            "alpha_param": 0.0759,
+            "alpha_year": -0.072,
+            "annual_multiplier": 18.9513,
+            "beta_data": 0.0334,
+            "beta_year": 0.1299
+          }
+        ],
+        "separate_fits_note": "model 7 fitted on each bin alone; the scaling exponents are poorly identified on a narrow compute range",
+        "share_draws_top_faster": 0.523,
+        "top_minus_bottom_oom_per_year": 0.1352,
+        "top_minus_bottom_p2_5": -0.4612,
+        "top_minus_bottom_p97_5": 0.7369
+      }
+    },
+    "ho_rerun": {
+      "code": "section3.ipynb at commit 29c7d852b6cd19ae11bb6662e9c1e61c03b1e4a7, model 7, delta 0.0025, SLSQP from zeros",
+      "compute_range_log10_flop": [
+        13.0472,
+        23.7694
+      ],
+      "objective": 0.0518129265,
+      "our_bootstrap": {
+        "draws": 1000,
+        "share_negative_rate": 0.001
+      },
+      "params": {
+        "alpha_const": 0.9127,
+        "alpha_const_ptb": 0.0004,
+        "alpha_const_wt2": 0.0554,
+        "alpha_param": 0.068,
+        "alpha_year": 0.0039,
+        "beta_const": 0.7714,
+        "beta_const_ptb": 0.1764,
+        "beta_const_wt2": 0.0954,
+        "beta_data": 0.0396,
+        "beta_year": 0.0356
+      },
+      "published": {
+        "halving_months": 8.4,
+        "hi": 14.3,
+        "lo": 4.5
+      },
+      "rows_dropped_before_cluster": 20,
+      "rows_dropped_before_head": 50,
+      "their_bootstrap_rerun": {
+        "draws": 100,
+        "p2_5": 4.5377,
+        "p50": 8.4712,
+        "p97_5": 14.0503
+      }
+    },
+    "joined_models": [
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-09-03",
+        "eci": 169.21,
+        "eci_hi": 172.49,
+        "eci_lo": 166.41,
+        "log10_flop": 26.9731,
+        "model": "GPT-6 Astra"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2026-10-23",
+        "eci": 161.2,
+        "eci_hi": 163.74,
+        "eci_lo": 158.95,
+        "log10_flop": 25.3011,
+        "model": "Kimi K3.1 Pro"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2026-07-16",
+        "eci": 158.61,
+        "eci_hi": 160.8,
+        "eci_lo": 156.66,
+        "log10_flop": 25.3011,
+        "model": "Kimi K3"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-09-09",
+        "eci": 157.01,
+        "eci_hi": 159.2,
+        "eci_lo": 155.05,
+        "log10_flop": 24.6355,
+        "model": "DeepSeek V4.1 Flash"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2026-08-13",
+        "eci": 155.96,
+        "eci_hi": 158.06,
+        "eci_lo": 154.05,
+        "log10_flop": 24.9869,
+        "model": "DeepSeek V4 Pro 0813"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2026-10-29",
+        "eci": 154.57,
+        "eci_hi": 157.43,
+        "eci_lo": 151.81,
+        "log10_flop": 25.0934,
+        "model": "Mistral Large 4"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-07-31",
+        "eci": 154.43,
+        "eci_hi": 156.4,
+        "eci_lo": 152.61,
+        "log10_flop": 24.3972,
+        "model": "DeepSeek V4 Flash 0731"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-08-20",
+        "eci": 153.77,
+        "eci_hi": 155.78,
+        "eci_lo": 151.95,
+        "log10_flop": 24.5105,
+        "model": "GLM-5.3-Flash"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2026-10-06",
+        "eci": 152.74,
+        "eci_hi": 154.68,
+        "eci_lo": 150.84,
+        "log10_flop": 25.0934,
+        "model": "Mistral Large 4 Preview"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-10-05",
+        "eci": 150.84,
+        "eci_hi": 153.14,
+        "eci_lo": 148.56,
+        "log10_flop": 24.5165,
+        "model": "Beam 1.0"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-04-24",
+        "eci": 150.19,
+        "eci_hi": 151.99,
+        "eci_lo": 148.42,
+        "log10_flop": 24.9869,
+        "model": "DeepSeek-V4-Pro"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2025-08-07",
+        "eci": 150.0,
+        "eci_hi": null,
+        "eci_lo": null,
+        "log10_flop": 25.8195,
+        "model": "GPT-5"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-01-27",
+        "eci": 148.79,
+        "eci_hi": 150.33,
+        "eci_lo": 147.29,
+        "log10_flop": 24.7634,
+        "model": "Kimi K2.5"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-07-15",
+        "eci": 148.39,
+        "eci_hi": 150.08,
+        "eci_lo": 146.76,
+        "log10_flop": 25.0414,
+        "model": "Inkling"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-06-04",
+        "eci": 147.02,
+        "eci_hi": 149.16,
+        "eci_lo": 144.86,
+        "log10_flop": 24.8195,
+        "model": "Nemotron 3 Ultra"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2025-07-09",
+        "eci": 146.91,
+        "eci_hi": 148.37,
+        "eci_lo": 145.45,
+        "log10_flop": 26.699,
+        "model": "Grok 4"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-04-24",
+        "eci": 146.91,
+        "eci_hi": 150.18,
+        "eci_lo": 143.68,
+        "log10_flop": 24.3972,
+        "model": "DeepSeek-V4-Flash"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2026-02-11",
+        "eci": 146.53,
+        "eci_hi": 148.14,
+        "eci_lo": 144.88,
+        "log10_flop": 24.8351,
+        "model": "GLM-5"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-12-01",
+        "eci": 146.26,
+        "eci_hi": 147.77,
+        "eci_lo": 144.73,
+        "log10_flop": 24.6232,
+        "model": "DeepSeek-V3.2"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-11-06",
+        "eci": 145.46,
+        "eci_hi": 147.29,
+        "eci_lo": 143.65,
+        "log10_flop": 24.6232,
+        "model": "Kimi K2 Thinking"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-09-29",
+        "eci": 144.39,
+        "eci_hi": 146.7,
+        "eci_lo": 142.15,
+        "log10_flop": 24.6212,
+        "model": "DeepSeek-V3.2-Exp"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-12-22",
+        "eci": 143.34,
+        "eci_hi": 145.28,
+        "eci_lo": 141.39,
+        "log10_flop": 24.6454,
+        "model": "GLM-4.7"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-07-25",
+        "eci": 143.23,
+        "eci_hi": 145.11,
+        "eci_lo": 141.32,
+        "log10_flop": 24.6769,
+        "model": "Qwen3-235B-A22B-Thinking (Jul 2025)"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2025-09-24",
+        "eci": 142.43,
+        "eci_hi": 144.46,
+        "eci_lo": 140.38,
+        "log10_flop": 25.1796,
+        "model": "Qwen3-Max"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2025-07-12",
+        "eci": 141.27,
+        "eci_hi": 143.86,
+        "eci_lo": 138.45,
+        "log10_flop": 24.4736,
+        "model": "Kimi K2 (Jul 2025)"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-02-24",
+        "eci": 141.03,
+        "eci_hi": 142.59,
+        "eci_lo": 139.38,
+        "log10_flop": 25.525,
+        "model": "Claude 3.7 Sonnet"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-08-21",
+        "eci": 140.88,
+        "eci_hi": 144.01,
+        "eci_lo": 137.68,
+        "log10_flop": 24.5556,
+        "model": "DeepSeek-V3.1"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-05-28",
+        "eci": 140.73,
+        "eci_hi": 142.44,
+        "eci_lo": 138.93,
+        "log10_flop": 24.5185,
+        "model": "DeepSeek-R1 (May 2025)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-08-05",
+        "eci": 140.21,
+        "eci_hi": 142.03,
+        "eci_lo": 138.34,
+        "log10_flop": 24.6937,
+        "model": "gpt-oss-120b"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-01-20",
+        "eci": 138.62,
+        "eci_hi": 140.47,
+        "eci_lo": 136.64,
+        "log10_flop": 24.5185,
+        "model": "DeepSeek-R1"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-04-28",
+        "eci": 138.4,
+        "eci_hi": 140.72,
+        "eci_lo": 136.04,
+        "log10_flop": 24.6769,
+        "model": "Qwen3-235B-A22B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2025-07-30",
+        "eci": 138.32,
+        "eci_hi": 140.81,
+        "eci_lo": 135.75,
+        "log10_flop": 23.8116,
+        "model": "Qwen3-30B-A3B-Thinking (Jul 2025)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2025-07-25",
+        "eci": 138.03,
+        "eci_hi": 140.23,
+        "eci_lo": 135.7,
+        "log10_flop": 24.6769,
+        "model": "Qwen3-235B-A22B-Instruct (Jul 2025)"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-04-09",
+        "eci": 137.55,
+        "eci_hi": 139.38,
+        "eci_lo": 135.63,
+        "log10_flop": 26.5441,
+        "model": "Grok 3"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-04-29",
+        "eci": 136.85,
+        "eci_hi": 139.13,
+        "eci_lo": 134.39,
+        "log10_flop": 24.8503,
+        "model": "Qwen3-32B"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-02-27",
+        "eci": 136.47,
+        "eci_hi": 138.43,
+        "eci_lo": 134.39,
+        "log10_flop": 26.5798,
+        "model": "GPT-4.5"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2025-03-05",
+        "eci": 136.44,
+        "eci_hi": 139.1,
+        "eci_lo": 133.66,
+        "log10_flop": 24.5453,
+        "model": "QwQ-32B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-04-29",
+        "eci": 136.06,
+        "eci_hi": 138.65,
+        "eci_lo": 133.32,
+        "log10_flop": 24.5047,
+        "model": "Qwen3-14B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-03-24",
+        "eci": 135.25,
+        "eci_hi": 137.38,
+        "eci_lo": 133.03,
+        "log10_flop": 24.5185,
+        "model": "DeepSeek-V3 (Mar 2025)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-08-05",
+        "eci": 134.89,
+        "eci_hi": 137.28,
+        "eci_lo": 132.32,
+        "log10_flop": 23.7396,
+        "model": "gpt-oss-20b"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2025-07-29",
+        "eci": 134.87,
+        "eci_hi": 137.66,
+        "eci_lo": 131.91,
+        "log10_flop": 23.8116,
+        "model": "Qwen3-30B-A3B-Instruct (Jul 2025)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-04-29",
+        "eci": 134.16,
+        "eci_hi": 136.71,
+        "eci_lo": 131.29,
+        "log10_flop": 23.8116,
+        "model": "Qwen3-30B-A3B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-04-06",
+        "eci": 132.19,
+        "eci_hi": 134.31,
+        "eci_lo": 129.85,
+        "log10_flop": 24.351,
+        "model": "Llama 4 Maverick"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-04-28",
+        "eci": 132.07,
+        "eci_hi": 134.94,
+        "eci_lo": 128.93,
+        "log10_flop": 24.2483,
+        "model": "Qwen3-8B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-12-26",
+        "eci": 131.69,
+        "eci_hi": 134.04,
+        "eci_lo": 129.19,
+        "log10_flop": 24.5185,
+        "model": "DeepSeek-V3"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2024-06-20",
+        "eci": 130.0,
+        "eci_hi": null,
+        "eci_lo": null,
+        "log10_flop": 25.4314,
+        "model": "Claude 3.5 Sonnet"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2024-12-12",
+        "eci": 129.79,
+        "eci_hi": 132.35,
+        "eci_lo": 127.02,
+        "log10_flop": 25.4713,
+        "model": "Grok-2 (Dec 2024)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-12-12",
+        "eci": 129.24,
+        "eci_hi": 132.03,
+        "eci_lo": 126.07,
+        "log10_flop": 23.9694,
+        "model": "Phi-4"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-07-23",
+        "eci": 127.92,
+        "eci_hi": 130.53,
+        "eci_lo": 124.98,
+        "log10_flop": 25.5798,
+        "model": "Llama 3.1-405B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2025-04-05",
+        "eci": 127.75,
+        "eci_hi": 130.35,
+        "eci_lo": 124.86,
+        "log10_flop": 24.6107,
+        "model": "Llama 4 Scout"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2025-03-12",
+        "eci": 127.56,
+        "eci_hi": 130.41,
+        "eci_lo": 124.43,
+        "log10_flop": 24.3556,
+        "model": "Gemma 3 27B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-09-19",
+        "eci": 127.23,
+        "eci_hi": 129.84,
+        "eci_lo": 124.36,
+        "log10_flop": 24.8921,
+        "model": "Qwen2.5-72B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-12-06",
+        "eci": 126.18,
+        "eci_hi": 129.02,
+        "eci_lo": 122.99,
+        "log10_flop": 24.8366,
+        "model": "Llama 3.3 70B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-07-23",
+        "eci": 124.7,
+        "eci_hi": 127.66,
+        "eci_lo": 121.42,
+        "log10_flop": 24.8992,
+        "model": "Llama 3.1-70B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-06-07",
+        "eci": 122.35,
+        "eci_hi": 125.64,
+        "eci_lo": 118.62,
+        "log10_flop": 24.48,
+        "model": "Qwen2-72B"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2023-03-14",
+        "eci": 121.61,
+        "eci_hi": 125.17,
+        "eci_lo": 117.61,
+        "log10_flop": 25.3222,
+        "model": "GPT-4 (Mar 2023)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-04-18",
+        "eci": 121.33,
+        "eci_hi": 124.7,
+        "eci_lo": 117.54,
+        "log10_flop": 24.8955,
+        "model": "Llama 3-70B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2024-05-07",
+        "eci": 120.82,
+        "eci_hi": 127.59,
+        "eci_lo": 114.04,
+        "log10_flop": 24.0086,
+        "model": "DeepSeek-V2 (MoE-236B, May 2024)"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2023-06-13",
+        "eci": 119.91,
+        "eci_hi": 123.25,
+        "eci_lo": 116.2,
+        "log10_flop": 25.3222,
+        "model": "GPT-4 (Jun 2023)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "benchmark model metadata",
+        "confidence": "",
+        "date": "2024-09-18",
+        "eci": 118.73,
+        "eci_hi": 127.83,
+        "eci_lo": 109.52,
+        "log10_flop": 24.0304,
+        "model": "Qwen2.5-Coder-32B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2024-04-17",
+        "eci": 118.71,
+        "eci_hi": 122.52,
+        "eci_lo": 114.5,
+        "log10_flop": 24.3692,
+        "model": "Mixtral 8x22B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-06-24",
+        "eci": 118.64,
+        "eci_hi": 122.36,
+        "eci_lo": 114.2,
+        "log10_flop": 24.3235,
+        "model": "Gemma 2 27B"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2023-07-11",
+        "eci": 117.17,
+        "eci_hi": 121.19,
+        "eci_lo": 112.8,
+        "log10_flop": 24.5873,
+        "model": "Claude 2"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-04-23",
+        "eci": 116.3,
+        "eci_hi": 121.86,
+        "eci_lo": 110.5,
+        "log10_flop": 23.3286,
+        "model": "phi-3-small 7.4B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2024-04-23",
+        "eci": 114.07,
+        "eci_hi": 118.52,
+        "eci_lo": 109.18,
+        "log10_flop": 23.6055,
+        "model": "phi-3-medium 14B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Speculative",
+        "date": "2023-12-11",
+        "eci": 113.19,
+        "eci_hi": 117.55,
+        "eci_lo": 108.12,
+        "log10_flop": 23.8887,
+        "model": "Mixtral 8x7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-06-24",
+        "eci": 112.42,
+        "eci_hi": 117.34,
+        "eci_lo": 106.76,
+        "log10_flop": 23.6355,
+        "model": "Gemma 2 9B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2024-07-23",
+        "eci": 110.9,
+        "eci_hi": 115.88,
+        "eci_lo": 105.08,
+        "log10_flop": 24.0878,
+        "model": "Llama 3.1-8B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-04-23",
+        "eci": 110.45,
+        "eci_hi": 116.07,
+        "eci_lo": 104.04,
+        "log10_flop": 22.8764,
+        "model": "phi-3-mini 3.8B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-04-18",
+        "eci": 109.12,
+        "eci_hi": 113.98,
+        "eci_lo": 103.42,
+        "log10_flop": 23.8573,
+        "model": "Llama 3-8B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-09-18",
+        "eci": 107.42,
+        "eci_hi": 116.06,
+        "eci_lo": 97.72,
+        "log10_flop": 23.3999,
+        "model": "Qwen2.5-Coder (7B)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-09-06",
+        "eci": 107.04,
+        "eci_hi": 115.46,
+        "eci_lo": 98.16,
+        "log10_flop": 24.5752,
+        "model": "Falcon-180B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-07-18",
+        "eci": 105.73,
+        "eci_hi": 111.04,
+        "eci_lo": 99.7,
+        "log10_flop": 23.9085,
+        "model": "Llama 2-70B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-02-21",
+        "eci": 103.15,
+        "eci_hi": 109.71,
+        "eci_lo": 95.41,
+        "log10_flop": 23.4871,
+        "model": "Gemma 7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-09-24",
+        "eci": 101.76,
+        "eci_hi": 109.32,
+        "eci_lo": 93.15,
+        "log10_flop": 23.3979,
+        "model": "Qwen-14B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-02-24",
+        "eci": 101.51,
+        "eci_hi": 108.89,
+        "eci_lo": 93.23,
+        "log10_flop": 23.7404,
+        "model": "LLaMA-65B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-05-09",
+        "eci": 99.24,
+        "eci_hi": 108.96,
+        "eci_lo": 88.36,
+        "log10_flop": 23.5563,
+        "model": "Falcon 2 11B"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-02-26",
+        "eci": 99.14,
+        "eci_hi": 107.02,
+        "eci_lo": 89.97,
+        "log10_flop": 23.8751,
+        "model": "Nemotron-4 15B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-02-24",
+        "eci": 96.51,
+        "eci_hi": 104.47,
+        "eci_lo": 87.42,
+        "log10_flop": 23.4362,
+        "model": "LLaMA-33B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-07-18",
+        "eci": 96.48,
+        "eci_hi": 104.24,
+        "eci_lo": 87.39,
+        "log10_flop": 23.2041,
+        "model": "Llama 2-13B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-12-12",
+        "eci": 96.21,
+        "eci_hi": 104.25,
+        "eci_lo": 86.86,
+        "log10_flop": 22.356,
+        "model": "Phi-2"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-02-20",
+        "eci": 96.09,
+        "eci_hi": 105.97,
+        "eci_lo": 84.04,
+        "log10_flop": 23.5877,
+        "model": "StarCoder 2 15B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-11-22",
+        "eci": 94.27,
+        "eci_hi": 103.19,
+        "eci_lo": 84.08,
+        "log10_flop": 23.1004,
+        "model": "Yi 6B"
+      },
+      {
+        "access": "Closed weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-07-18",
+        "eci": 93.89,
+        "eci_hi": 102.57,
+        "eci_lo": 83.8,
+        "log10_flop": 23.6107,
+        "model": "Llama 2-34B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-09-06",
+        "eci": 91.75,
+        "eci_hi": 100.92,
+        "eci_lo": 80.78,
+        "log10_flop": 23.3075,
+        "model": "Baichuan2-13B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-05-25",
+        "eci": 90.67,
+        "eci_hi": 99.95,
+        "eci_lo": 79.95,
+        "log10_flop": 23.3802,
+        "model": "Falcon-40B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-09-28",
+        "eci": 89.14,
+        "eci_hi": 98.74,
+        "eci_lo": 77.89,
+        "log10_flop": 23.0043,
+        "model": "Qwen-7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-09-18",
+        "eci": 89.12,
+        "eci_hi": 100.07,
+        "eci_lo": 76.04,
+        "log10_flop": 22.706,
+        "model": "Qwen2.5-Coder (1.5B)"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-02-24",
+        "eci": 85.23,
+        "eci_hi": 95.44,
+        "eci_lo": 73.38,
+        "log10_flop": 22.8921,
+        "model": "LLaMA-13B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-06-22",
+        "eci": 85.19,
+        "eci_hi": 95.33,
+        "eci_lo": 73.29,
+        "log10_flop": 23.2765,
+        "model": "MPT-30B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-09-20",
+        "eci": 83.6,
+        "eci_hi": 94.45,
+        "eci_lo": 70.51,
+        "log10_flop": 23.0382,
+        "model": "Baichuan 2-7B"
+      },
+      {
+        "access": "Other",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-11-29",
+        "eci": 83.35,
+        "eci_hi": 94.04,
+        "eci_lo": 70.76,
+        "log10_flop": 22.7782,
+        "model": "INTELLECT-1"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-07-18",
+        "eci": 83.23,
+        "eci_hi": 93.8,
+        "eci_lo": 70.64,
+        "log10_flop": 22.9243,
+        "model": "Llama 2-7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-02-24",
+        "eci": 77.28,
+        "eci_hi": 88.9,
+        "eci_lo": 63.43,
+        "log10_flop": 22.6021,
+        "model": "LLaMA-7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2023-11-02",
+        "eci": 76.3,
+        "eci_hi": 89.54,
+        "eci_lo": 60.39,
+        "log10_flop": 23.5977,
+        "model": "DeepSeek Coder 33B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-02-21",
+        "eci": 75.71,
+        "eci_hi": 87.59,
+        "eci_lo": 61.05,
+        "log10_flop": 22.6543,
+        "model": "Gemma 2B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-05-05",
+        "eci": 73.39,
+        "eci_hi": 86.19,
+        "eci_lo": 58.17,
+        "log10_flop": 22.6232,
+        "model": "MPT-7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-04-24",
+        "eci": 73.09,
+        "eci_hi": 85.44,
+        "eci_lo": 58.18,
+        "log10_flop": 22.7993,
+        "model": "Falcon-7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-02-20",
+        "eci": 72.4,
+        "eci_hi": 86.59,
+        "eci_lo": 54.87,
+        "log10_flop": 23.1903,
+        "model": "StarCoder 2 7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-06-27",
+        "eci": 70.29,
+        "eci_hi": 84.19,
+        "eci_lo": 54.26,
+        "log10_flop": 22.9042,
+        "model": "XGen-7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-09-11",
+        "eci": 68.37,
+        "eci_hi": 82.89,
+        "eci_lo": 50.54,
+        "log10_flop": 21.0682,
+        "model": "Phi-1.5"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Likely",
+        "date": "2023-11-02",
+        "eci": 67.45,
+        "eci_hi": 82.16,
+        "eci_lo": 49.15,
+        "log10_flop": 22.9053,
+        "model": "DeepSeek Coder 6.7B"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2024-02-22",
+        "eci": 66.64,
+        "eci_hi": 81.65,
+        "eci_lo": 47.86,
+        "log10_flop": 22.7738,
+        "model": "StarCoder 2 3B"
+      },
+      {
+        "access": "Other",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-05-04",
+        "eci": 57.7,
+        "eci_hi": 74.36,
+        "eci_lo": 37.89,
+        "log10_flop": 22.6128,
+        "model": "RedPajama-INCITE-7B-Base"
+      },
+      {
+        "access": "Open weights",
+        "compute_from": "models",
+        "confidence": "Confident",
+        "date": "2023-03-20",
+        "eci": 48.88,
+        "eci_hi": 67.1,
+        "eci_lo": 26.25,
+        "log10_flop": 22.3617,
+        "model": "Cerebras-GPT-13B"
+      }
+    ],
+    "ledger_inputs": {
+      "cog-forecast-super-index": 68.1,
+      "cog-gpqa-diamond-expert": 0.697,
+      "comp-bbh-mae-1oom": 6.0,
+      "comp-frontier-compute-growth": 5.0,
+      "comp-ho-halving": 8.4,
+      "comp-ho-halving-hi": 14.3,
+      "comp-ho-halving-lo": 4.5,
+      "comp-task-mae-1oom": 18.0
+    }
+  },
+  "experiment": "E1",
+  "name": "e01_capability_compute",
+  "numbers": {
+    "e1-algo-annual": {
+      "fmt": ".0f",
+      "label": "compute-equivalent gain a year at fixed compute implied by the ECI fit on all joined models (multiplier)",
+      "note": "not identified: the joined sample is mostly open weights and lacks most frontier models, and the rate moves from e1-algo-annual-subset-min to e1-algo-annual-subset-max across samples; it also includes post-training, distillation and inference settings, not only pretraining algorithms",
+      "unit": "",
+      "value": 17.02964044209155
+    },
+    "e1-algo-annual-1e24": {
+      "fmt": ".0f",
+      "label": "compute-equivalent gain a year at fixed compute, at 1e24 FLOP, from the interaction fit at the sample's median date (multiplier)",
+      "note": "",
+      "unit": "",
+      "value": 27.871279089264796
+    },
+    "e1-algo-annual-1e24-hi": {
+      "fmt": ".0f",
+      "label": "gain a year at 1e24 FLOP, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 110.854390621245
+    },
+    "e1-algo-annual-1e24-lo": {
+      "fmt": ".0f",
+      "label": "gain a year at 1e24 FLOP, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 10.622773143839106
+    },
+    "e1-algo-annual-1e26": {
+      "fmt": ".1f",
+      "label": "compute-equivalent gain a year at fixed compute, at 1e26 FLOP, from the interaction fit at the sample's median date (multiplier)",
+      "note": "",
+      "unit": "",
+      "value": 5.814400436790822
+    },
+    "e1-algo-annual-1e26-hi": {
+      "fmt": ".1f",
+      "label": "gain a year at 1e26 FLOP, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 12.61084898295512
+    },
+    "e1-algo-annual-1e26-lo": {
+      "fmt": ".1f",
+      "label": "gain a year at 1e26 FLOP, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 2.6025763783266727
+    },
+    "e1-algo-annual-hi": {
+      "fmt": ".0f",
+      "label": "compute-equivalent gain a year from the ECI fit, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 54.36439195478479
+    },
+    "e1-algo-annual-lo": {
+      "fmt": ".0f",
+      "label": "compute-equivalent gain a year from the ECI fit, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 7.62899204195958
+    },
+    "e1-algo-annual-subset-max": {
+      "fmt": ",.0f",
+      "label": "highest compute-equivalent gain a year across six samples of the joined models (at or above 1e24.5 FLOP)",
+      "note": "",
+      "unit": "",
+      "value": 1512.4678
+    },
+    "e1-algo-annual-subset-min": {
+      "fmt": ".1f",
+      "label": "lowest compute-equivalent gain a year across six samples of the joined models (not open weights)",
+      "note": "",
+      "unit": "",
+      "value": 2.6092
+    },
+    "e1-cluster-dev-max": {
+      "fmt": ".1f",
+      "label": "largest drift per OOM of compute of one cluster's ability from the model's other benchmarks (knowledge and language)",
+      "note": "",
+      "unit": "ECI points",
+      "value": 2.3205
+    },
+    "e1-cluster-dev-max-hi": {
+      "fmt": ".1f",
+      "label": "that cluster's drift per OOM, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": 4.499
+    },
+    "e1-cluster-dev-max-lo": {
+      "fmt": ".1f",
+      "label": "that cluster's drift per OOM, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": 0.6249
+    },
+    "e1-clusters-baselined": {
+      "fmt": ",.0f",
+      "label": "clusters with any human comparison in the public data, by a search of the archive's columns plus the ledger's GPQA expert bar (none is an organisation at matched budget)",
+      "note": "persuasion has none; AI research and cyber have human time (METR horizons, Cybench first-solve times), not a won-or-lost bar",
+      "unit": "clusters",
+      "value": 5.0
+    },
+    "e1-clusters-drifting": {
+      "fmt": ",.0f",
+      "label": "of those, clusters whose drift per OOM has a 95% interval that excludes zero",
+      "note": "",
+      "unit": "clusters",
+      "value": 3.0
+    },
+    "e1-clusters-fitted": {
+      "fmt": ",.0f",
+      "label": "clusters with at least 10 compute-known models, so a drift on compute can be fitted",
+      "note": "",
+      "unit": "clusters",
+      "value": 7.0
+    },
+    "e1-clusters-verdict": {
+      "fmt": ",.0f",
+      "label": "of those, clusters whose comparison gives a won-or-lost bar scored here (GPQA experts, the superforecaster median, GDPval parity)",
+      "note": "",
+      "unit": "clusters",
+      "value": 3.0
+    },
+    "e1-clusters-with-winner": {
+      "fmt": ",.0f",
+      "label": "of the scored clusters, those in which any compute-known model beats the human comparison",
+      "note": "",
+      "unit": "clusters",
+      "value": 1.0
+    },
+    "e1-compute-share": {
+      "fmt": ".0%",
+      "label": "share of ECI growth explained by training compute on all joined models, at the ledger's frontier compute growth",
+      "note": "not identified: it moves from e1-compute-share-subset-min to e1-compute-share-subset-max across samples, and the joined sample lacks most frontier models",
+      "unit": "",
+      "value": 0.3621276979971675
+    },
+    "e1-compute-share-hi": {
+      "fmt": ".0%",
+      "label": "share of frontier ECI growth from compute, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 0.44198409453983656
+    },
+    "e1-compute-share-lo": {
+      "fmt": ".0%",
+      "label": "share of frontier ECI growth from compute, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "",
+      "value": 0.28713576292823045
+    },
+    "e1-compute-share-subset-max": {
+      "fmt": ".0%",
+      "label": "highest compute share of ECI growth across the six samples (not open weights)",
+      "note": "",
+      "unit": "",
+      "value": 0.6266
+    },
+    "e1-compute-share-subset-min": {
+      "fmt": ".0%",
+      "label": "lowest compute share of ECI growth across the six samples (at or above 1e24.5 FLOP)",
+      "note": "",
+      "unit": "",
+      "value": 0.1802
+    },
+    "e1-drift-per-oom": {
+      "fmt": ".2f",
+      "label": "change in the compute-equivalent gain a year per OOM of compute (negative: drift falls with scale, against A3)",
+      "note": "from the interaction fit at the sample's median date; with this value, log10 C + a(C) t falls with log10 C once t exceeds -1 / e1-drift-per-oom years",
+      "unit": "OOM a year per OOM",
+      "value": -0.3403259809398637
+    },
+    "e1-drift-per-oom-hi": {
+      "fmt": ".2f",
+      "label": "drift with scale, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "OOM a year per OOM",
+      "value": -0.16499860700439967
+    },
+    "e1-drift-per-oom-lo": {
+      "fmt": ".2f",
+      "label": "drift with scale, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "OOM a year per OOM",
+      "value": -0.6399241902257201
+    },
+    "e1-eci-models": {
+      "fmt": ",.0f",
+      "label": "models with an Epoch Capabilities Index score",
+      "note": "",
+      "unit": "models",
+      "value": 258.0
+    },
+    "e1-eci-per-oom": {
+      "fmt": ".1f",
+      "label": "ECI points gained per order of magnitude of training compute, date held fixed",
+      "note": "",
+      "unit": "ECI points",
+      "value": 12.336085753037828
+    },
+    "e1-eci-per-oom-hi": {
+      "fmt": ".1f",
+      "label": "ECI points per OOM of compute, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": 15.623639908699184
+    },
+    "e1-eci-per-oom-lo": {
+      "fmt": ".1f",
+      "label": "ECI points per OOM of compute, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": 9.69484243522626
+    },
+    "e1-eci-per-year": {
+      "fmt": ".1f",
+      "label": "ECI points gained per year at fixed training compute",
+      "note": "",
+      "unit": "ECI points",
+      "value": 15.188256362591732
+    },
+    "e1-eci-slope-change": {
+      "fmt": ".1f",
+      "label": "interaction of compute and date: change a year in ECI points per OOM, equally the change per OOM in ECI points gained a year",
+      "note": "negative: capability at fixed compute rose faster for smaller models; its sign is not stable across samples (see eci_subsets)",
+      "unit": "ECI points",
+      "value": -3.9258956109419922
+    },
+    "e1-eci-slope-change-hi": {
+      "fmt": ".1f",
+      "label": "change a year in ECI points per OOM, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": -2.1364630656094388
+    },
+    "e1-eci-slope-change-lo": {
+      "fmt": ".1f",
+      "label": "change a year in ECI points per OOM, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": -6.41620393206372
+    },
+    "e1-gpqa-acc-compute": {
+      "fmt": ".0%",
+      "label": "share of GPQA verdicts against PhD experts the best single training-compute threshold gets right",
+      "note": "",
+      "unit": "",
+      "value": 0.7894736842105263
+    },
+    "e1-gpqa-acc-date": {
+      "fmt": ".0%",
+      "label": "share of GPQA verdicts the best single release-date threshold gets right",
+      "note": "",
+      "unit": "",
+      "value": 0.9210526315789473
+    },
+    "e1-gpqa-acc-effective": {
+      "fmt": ".0%",
+      "label": "share of GPQA verdicts the best single effective-compute threshold gets right (compute plus the ECI date term)",
+      "note": "",
+      "unit": "",
+      "value": 0.9210526315789473
+    },
+    "e1-gpqa-flips": {
+      "fmt": ",.0f",
+      "label": "models whose GPQA verdict against PhD experts flips with the reasoning setting at the same training compute",
+      "note": "",
+      "unit": "models",
+      "value": 1.0
+    },
+    "e1-gpqa-models": {
+      "fmt": ",.0f",
+      "label": "compute-known models with a GPQA Diamond score in Epoch's data",
+      "note": "",
+      "unit": "models",
+      "value": 76.0
+    },
+    "e1-gpqa-overlap-oom": {
+      "fmt": ".1f",
+      "label": "training compute of the largest losing model over the smallest winning one on GPQA Diamond, in OOM",
+      "note": "",
+      "unit": "OOM",
+      "value": 2.768208590746216
+    },
+    "e1-gpqa-won": {
+      "fmt": ",.0f",
+      "label": "of those, models whose best setting beats PhD experts on GPQA Diamond",
+      "note": "",
+      "unit": "models",
+      "value": 28.0
+    },
+    "e1-ho-annual-high": {
+      "fmt": ".2f",
+      "label": "yearly effective-compute gain in the highest compute tercile of Ho et al.'s data (multiplier)",
+      "note": "",
+      "unit": "",
+      "value": 2.4282714691942053
+    },
+    "e1-ho-annual-high-hi": {
+      "fmt": ".2f",
+      "label": "yearly gain, highest compute tercile, 97.5th percentile of resampling",
+      "note": "",
+      "unit": "",
+      "value": 22.46776964699987
+    },
+    "e1-ho-annual-high-lo": {
+      "fmt": ".2f",
+      "label": "yearly gain, highest compute tercile, 2.5th percentile of resampling",
+      "note": "",
+      "unit": "",
+      "value": 0.9982674053874299
+    },
+    "e1-ho-annual-low": {
+      "fmt": ".2f",
+      "label": "yearly effective-compute gain in the lowest compute tercile of Ho et al.'s data (multiplier)",
+      "note": "",
+      "unit": "",
+      "value": 1.778835274448094
+    },
+    "e1-ho-annual-low-hi": {
+      "fmt": ".2f",
+      "label": "yearly gain, lowest compute tercile, 97.5th percentile of resampling",
+      "note": "",
+      "unit": "",
+      "value": 8.549172948850714
+    },
+    "e1-ho-annual-low-lo": {
+      "fmt": ".2f",
+      "label": "yearly gain, lowest compute tercile, 2.5th percentile of resampling",
+      "note": "",
+      "unit": "",
+      "value": 1.3633004566583207
+    },
+    "e1-ho-annual-mid": {
+      "fmt": ".2f",
+      "label": "yearly effective-compute gain in the middle compute tercile (multiplier)",
+      "note": "",
+      "unit": "",
+      "value": 2.7118142735501354
+    },
+    "e1-ho-bin-edge-hi": {
+      "fmt": ".1e",
+      "label": "training compute (6ND) at the edge between the middle and highest terciles",
+      "note": "",
+      "unit": "FLOP",
+      "value": 1.2983745676148181e+17
+    },
+    "e1-ho-bin-edge-lo": {
+      "fmt": ".1e",
+      "label": "training compute (6ND) at the edge between the lowest and middle terciles",
+      "note": "",
+      "unit": "FLOP",
+      "value": 316446283883551.94
+    },
+    "e1-ho-halving": {
+      "fmt": ".1f",
+      "label": "halving time of compute for fixed perplexity, median of our resampling (their headline is a median)",
+      "note": "",
+      "unit": "months",
+      "value": 8.702551922819879
+    },
+    "e1-ho-halving-fit": {
+      "fmt": ".1f",
+      "label": "halving time of compute for fixed perplexity, our rerun of Ho et al.'s model 7, point fit",
+      "note": "",
+      "unit": "months",
+      "value": 8.684812825268818
+    },
+    "e1-ho-halving-hi": {
+      "fmt": ".1f",
+      "label": "halving time, 97.5th percentile of our resampling",
+      "note": "",
+      "unit": "months",
+      "value": 16.351027188570274
+    },
+    "e1-ho-halving-lo": {
+      "fmt": ".1f",
+      "label": "halving time, 2.5th percentile of our resampling",
+      "note": "",
+      "unit": "months",
+      "value": 4.295237676124568
+    },
+    "e1-ho-orig-median": {
+      "fmt": ".2f",
+      "label": "halving time, median of their own bootstrap rerun as their notebook seeds it",
+      "note": "",
+      "unit": "months",
+      "value": 8.471175553839515
+    },
+    "e1-ho-refit-over-published": {
+      "fmt": ".3f",
+      "label": "their bootstrap rerun over their published halving time (1 means it reproduces)",
+      "note": "",
+      "unit": "",
+      "value": 1.00847328021899
+    },
+    "e1-ho-rows": {
+      "fmt": ",.0f",
+      "label": "results in Ho et al.'s preferred sample, rebuilt from their sheet with their code's filters",
+      "note": "",
+      "unit": "results",
+      "value": 231.0
+    },
+    "e1-ho-top-faster-share": {
+      "fmt": ".0%",
+      "label": "share of resamples in which the highest compute tercile progresses faster than the lowest",
+      "note": "",
+      "unit": "",
+      "value": 0.523
+    },
+    "e1-models": {
+      "fmt": ",.0f",
+      "label": "models with both an Epoch Capabilities Index score and a training-compute estimate",
+      "note": "",
+      "unit": "models",
+      "value": 105.0
+    },
+    "e1-oos-agg-mae-pp": {
+      "fmt": ".1f",
+      "label": "mean absolute error of a model's average benchmark score, from the one-OOM ECI forecast",
+      "note": "",
+      "unit": "pp",
+      "value": 15.466627513378894
+    },
+    "e1-oos-bench-floor-pp": {
+      "fmt": ".1f",
+      "label": "mean absolute error per benchmark score with the model's actual ECI (the index's own floor)",
+      "note": "",
+      "unit": "pp",
+      "value": 5.164952307860188
+    },
+    "e1-oos-bench-mae-pp": {
+      "fmt": ".1f",
+      "label": "mean absolute error per benchmark score, from the one-OOM ECI forecast",
+      "note": "",
+      "unit": "pp",
+      "value": 17.033707017686055
+    },
+    "e1-oos-bias": {
+      "fmt": ".1f",
+      "label": "mean signed error of the one-OOM forecasts (actual minus forecast; negative means overforecast)",
+      "note": "",
+      "unit": "ECI points",
+      "value": -0.019405617977528967
+    },
+    "e1-oos-bias-1e25": {
+      "fmt": ".1f",
+      "label": "mean signed error of the forecast from 1e25 FLOP (actual minus forecast; negative means overforecast)",
+      "note": "",
+      "unit": "ECI points",
+      "value": -8.4918
+    },
+    "e1-oos-mae": {
+      "fmt": ".1f",
+      "label": "mean absolute error of ECI forecast one OOM of compute beyond the fitting range",
+      "note": "",
+      "unit": "ECI points",
+      "value": 11.787904494382024
+    },
+    "e1-oos-mae-1e25": {
+      "fmt": ".1f",
+      "label": "mean absolute error of the ECI forecast from 1e25 FLOP to the decade above it",
+      "note": "",
+      "unit": "ECI points",
+      "value": 9.1281
+    },
+    "e1-oos-mae-oom": {
+      "fmt": ".2f",
+      "label": "the same error as compute-equivalent orders of magnitude (divided by the full fit's slope)",
+      "note": "",
+      "unit": "OOM",
+      "value": 0.9555627879353212
+    },
+    "e1-oos-n": {
+      "fmt": ",.0f",
+      "label": "out-of-sample forecasts one OOM beyond the fitting range (cuts at 1e23 to 1e26 FLOP)",
+      "note": "",
+      "unit": "forecasts",
+      "value": 89.0
+    },
+    "e1-oos-n-1e25": {
+      "fmt": ",.0f",
+      "label": "models between 1e25 and 1e26 FLOP forecast from a fit on models at or below 1e25 FLOP",
+      "note": "",
+      "unit": "models",
+      "value": 13.0
+    },
+    "e1-oos-unforecast-share": {
+      "fmt": ".1%",
+      "label": "share of one-OOM forecasts the actual ECI exceeds the one-sided 95% upper prediction bound (5% if calibrated)",
+      "note": "",
+      "unit": "",
+      "value": 0.011235955056179775
+    },
+    "e1-open-share": {
+      "fmt": ".0%",
+      "label": "share of the joined models with open weights",
+      "note": "",
+      "unit": "",
+      "value": 0.8476190476190476
+    },
+    "e1-spread-mean": {
+      "fmt": ".1f",
+      "label": "mean spread (standard deviation) of a model's cluster abilities around its other benchmarks",
+      "note": "",
+      "unit": "ECI points",
+      "value": 5.078271818807867
+    },
+    "e1-spread-per-oom": {
+      "fmt": ".2f",
+      "label": "change per OOM of compute in the spread of a model's cluster abilities (negative means more even)",
+      "note": "",
+      "unit": "ECI points",
+      "value": -1.4569760521803985
+    },
+    "e1-spread-per-oom-hi": {
+      "fmt": ".2f",
+      "label": "change per OOM in the spread of cluster abilities, 97.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": -0.7572627297648333
+    },
+    "e1-spread-per-oom-lo": {
+      "fmt": ".2f",
+      "label": "change per OOM in the spread of cluster abilities, 2.5th percentile of resampling models",
+      "note": "",
+      "unit": "ECI points",
+      "value": -2.2911802844200064
+    },
+    "e1-top25-dropped": {
+      "fmt": ",.0f",
+      "label": "of the 25 models with the highest ECI, those without a public training-compute estimate (left out of every fit)",
+      "note": "",
+      "unit": "models",
+      "value": 23.0
+    }
+  },
+  "script": "tools/exp/e01_capability_compute.py",
+  "seed": 20261127
+}

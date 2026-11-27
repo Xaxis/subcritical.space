@@ -9,8 +9,32 @@ Cor 1.3     a hazard overstated by at most c: true T_d(beta) <= estimated T_d(be
             shape k turns a factor c on the hazard into c^(1/k) on T_d.
 Prop 1.4    random response time with any dependence on detection: success <= beta1 + beta2 when
             T_b >= T_d(beta1) + the (1 - beta2) quantile of T_resp.
-Prop 1.5    the line is per path: max_p success_p <= beta iff every path meets its own condition;
-            the scalar test min_p T_b >= max_p T_r implies it, not conversely.
+Prop 1.5    for fixed paths, max_p success_p <= beta iff every path meets its own condition; the
+            scalar test min_p T_b >= max_p T_r implies it, not conversely.
+Adaptive evaders (red team C1.1). Constant rates lam_p of the first event the evader can observe,
+counted as the finding; a finding on p halts the party at D + tresp_p; one path at a time.
+Success is computed in the evader-favourable reading (only the first finding sets a deadline, and
+after it the evader does whatever finishes soonest), an upper bound on success when later findings
+also set deadlines, so a bound that holds here holds there.
+Prop 1.7    (adaptive) if progress does not carry over between paths and tresp_p <= tb_q for all
+            p, q, every strategy succeeds with at most max_p S(p): the per-path test is exact.
+Prop 1.8    if progress carries over, every strategy succeeds with at most
+            exp(-c_min * (1 - tresp_max / tb_min)), c_min = min_p lam_p tb_p, with equality for a
+            common tresp; the portable line implies the per-path line and is implied by the strict
+            scalar test tb_min >= max_p T_d(p) + tresp_max.
+Prop 1.9    repeated attempts: n attempts each meeting the line at beta / n succeed together with
+            probability at most beta, under any dependence.
+Cor 1.6a    in-run drift (E6): if a run's speed can rise by at most g(tau) in its first tau of
+            running and its launch-speed time T_b0 falls by at most phi0 between declarations, then
+            T_b0 >= phi0 G(m T_r) at each declaration keeps the true breakout time >= m T_r (and
+            success <= beta), with equality when the speed follows g. Envelopes e^(a tau) and
+            (1 + b tau)^k; speeds the envelope itself or step functions under it.
+Recorded    the red team's switching instance (an escapable precursor, outside the assumptions):
+            the per-path test admits it and it succeeds with more than beta; counted under the
+            assumptions, the portable line rejects it. And a chain of fresh attempts inside a slow
+            response window, outside Prop 1.7's hypothesis, beats max_p S(p). And a run on Prop
+            1.6's line computed at launch speed that absorbs drift as it runs succeeds with more
+            than beta, while Corollary 1.6a's line holds it.
 
 Standard library only; seeded; exits 1 on a counterexample, printing it.
 """
@@ -106,6 +130,120 @@ def success(hz: Hazard, t_b: float, t_resp: float) -> float:
 
 def t_d(hz: Hazard, beta: float) -> float:
     return hz.inverse(math.log(1 / beta))
+
+
+# -------------------------------------------------------------------------------------------------
+# Adaptive evaders. A path is (lam, tb, tresp). A plan is the evader's schedule before the first
+# finding: a list of (path index, duration). Before the first finding the evader learns nothing that
+# predicts findings, so every strategy is a randomised plan; after it the evader's best move is
+# computed exactly below.
+
+
+def portable_success(paths: list, plan: list) -> float:
+    """Progress carries over at rate 1 / tb on the path worked; a finding at progress x on path p
+    succeeds iff x + tresp_p / tb_min >= 1 (finish on the fastest path inside the response time)."""
+    tb_min = min(tb for _, tb, _ in paths)
+    h, x, total = 0.0, 0.0, 0.0
+    for p, dur in plan:
+        lam, tb, tr = paths[p]
+        d = min(dur, (1 - x) * tb)
+        e0 = max(0.0, (1 - tr / tb_min - x) * tb)
+        if e0 < d:
+            total += math.exp(-h) * (math.exp(-lam * e0) - math.exp(-lam * d))
+        h += lam * d
+        x += d / tb
+        if x >= 1 - 1e-12:
+            return total + math.exp(-h)
+    return total
+
+
+def fresh_success(paths: list, plan: list) -> float:
+    """Progress resets at each stretch; a stretch completes once it has run tb. After a finding at
+    elapsed e on a stretch of path p, the evader finishes that stretch if tb_p - e <= tresp_p, or
+    starts a fresh stretch on the fastest path if tb_min <= tresp_p."""
+    tb_min = min(tb for _, tb, _ in paths)
+    h, total = 0.0, 0.0
+    for p, dur in plan:
+        lam, tb, tr = paths[p]
+        d = min(dur, tb)
+        e0 = 0.0 if tb_min <= tr else max(0.0, tb - tr)
+        if e0 < d:
+            total += math.exp(-h) * (math.exp(-lam * e0) - math.exp(-lam * d))
+        h += lam * d
+        if dur >= tb:
+            return total + math.exp(-h)
+    return total
+
+
+def single_path(path: tuple) -> float:
+    lam, tb, tr = path
+    return 1.0 if tb <= tr else math.exp(-lam * (tb - tr))
+
+
+def portable_bound(paths: list) -> float:
+    tb_min = min(tb for _, tb, _ in paths)
+    tr_max = max(tr for _, _, tr in paths)
+    c_min = min(lam * tb for lam, tb, _ in paths)
+    return math.exp(-c_min * max(0.0, 1 - tr_max / tb_min))
+
+
+def random_plan(rng, n_paths: int, tb_ref: float, finish: bool = True) -> list:
+    plan = [(rng.randrange(n_paths), tb_ref * rng.uniform(0.01, 1.5)) for _ in range(rng.randint(0, 6))]
+    if finish:
+        plan.append((rng.randrange(n_paths), math.inf))
+    return plan
+
+
+# -------------------------------------------------------------------------------------------------
+# In-run drift (Corollary 1.6a). An envelope g bounds how far a run's speed can rise in its first tau
+# of running; G is its integral from 0. Speeds are in units of the speed at launch, so a run's work
+# is its launch-speed time T_b0.
+
+
+class Envelope:
+    def __init__(self, kind: str, params: tuple):
+        self.kind, self.params = kind, params
+
+    def g(self, t: float) -> float:
+        if self.kind == "exp":
+            (a,) = self.params
+            return math.exp(a * t)
+        b, k = self.params
+        return (1 + b * t) ** k
+
+    def G(self, x: float) -> float:
+        if self.kind == "exp":
+            (a,) = self.params
+            return x if a == 0 else math.expm1(a * x) / a
+        b, k = self.params
+        return ((1 + b * x) ** (k + 1) - 1) / (b * (k + 1))
+
+    def G_inv(self, y: float) -> float:
+        if self.kind == "exp":
+            (a,) = self.params
+            return y if a == 0 else math.log1p(a * y) / a
+        b, k = self.params
+        return ((1 + b * (k + 1) * y) ** (1 / (k + 1)) - 1) / b
+
+
+def random_envelope(rng, horizon: float) -> Envelope:
+    """Drift scaled to the horizon m T_r, so the speed rises by up to e^8 (or (1 + 8)^4) over it."""
+    if rng.random() < 0.5:
+        return Envelope("exp", (0.0 if rng.random() < 0.1 else rng.uniform(0.01, 8.0) / horizon,))
+    return Envelope("power", (rng.uniform(0.01, 8.0) / horizon, rng.uniform(0.0, 4.0)))
+
+
+def step_finish(env: Envelope, steps: list, work: float) -> float:
+    """Finish time of a run whose speed is u_i * g(tau_i) on [tau_i, tau_{i+1}) (the last step runs
+    on), with u_i in (0, 1]. As g is nondecreasing, each step's speed is at most g on its interval."""
+    done = 0.0
+    for i, (tau, u) in enumerate(steps):
+        c = u * env.g(tau)
+        end = steps[i + 1][0] if i + 1 < len(steps) else math.inf
+        if done + c * (end - tau) >= work:
+            return tau + (work - done) / c
+        done += c * (end - tau)
+    raise AssertionError("unreachable: the last step runs on")
 
 
 def main() -> None:
@@ -234,6 +372,175 @@ def main() -> None:
     covert = (100.0, 37.0)
     ck.ok("Prop 1.5 example: per path admits", declared[0] >= declared[1] and covert[0] >= covert[1])
     ck.ok("Prop 1.5 example: scalar rejects", not (min(declared[0], covert[0]) >= max(declared[1], covert[1])))
+
+    # Adaptive evaders: Props 1.5 (adaptive), 1.7 and 1.8, and the instances outside them.
+    gap_portable = 0
+    for _ in range(N):
+        n = rng.randint(2, 4)
+        common = rng.random() < 0.3
+        tb = [10 ** rng.uniform(-0.5, 1.5) for _ in range(n)]
+        tb_min = min(tb)
+        tr0 = tb_min * rng.uniform(0, 0.9)
+        tr = [tr0 if common else (tb_min * rng.uniform(0, 0.9) if rng.random() < 0.8 else rng.uniform(0, 2 * max(tb)))
+              for _ in range(n)]
+        lam = [10 ** rng.uniform(-1.5, 1) for _ in range(n)]
+        paths = list(zip(lam, tb, tr))
+        bound = portable_bound(paths)
+        for _ in range(4):
+            plan = random_plan(rng, n, max(tb))
+            s = portable_success(paths, plan)
+            ck.ok("Prop 1.8: every strategy succeeds with at most exp(-c_min (1 - tresp_max / tb_min))",
+                  s <= bound * (1 + 1e-9) + 1e-12, (paths, plan, s, bound))
+            f = fresh_success(paths, plan)
+            ck.ok("Prop 1.8: fresh-start progress succeeds no more often than portable progress", f <= s + 1e-12,
+                  (paths, plan, f, s))
+        if common and tr0 < tb_min:
+            c = min(range(n), key=lambda i: lam[i] * tb[i])
+            fast = min(range(n), key=lambda i: tb[i])
+            x_star = 1 - tr0 / tb_min
+            best = portable_success(paths, [(c, x_star * tb[c]), (fast, math.inf)])
+            ck.ok("Prop 1.8: with a common tresp the bound is attained (cheapest path, then the fastest)",
+                  abs(best - bound) <= 1e-9 * max(bound, 1e-300) + 1e-14, (paths, best, bound))
+            beta = 10 ** rng.uniform(-3, math.log10(0.3))
+            per_path = all(single_path(q) <= beta for q in paths)
+            if per_path and best > beta:
+                gap_portable += 1
+        beta = 10 ** rng.uniform(-3, math.log10(0.3))
+        portable_line = bound <= beta
+        per_path = all(single_path(q) <= beta for q in paths)
+        strict_scalar = tb_min >= max(math.log(1 / beta) / l for l in lam) + max(tr)
+        ck.ok("Prop 1.8: the portable line implies the per-path line", (not portable_line) or per_path,
+              (paths, beta))
+        ck.ok("Prop 1.8: the strict scalar test implies the portable line", (not strict_scalar) or portable_line,
+              (paths, beta))
+    ck.note(f"Prop 1.8: in {gap_portable} instances with a common tresp every path met the line but a "
+            f"strategy carrying progress across paths succeeded with more than beta")
+
+    for _ in range(N):
+        n = rng.randint(2, 4)
+        tb = [10 ** rng.uniform(-0.5, 1.5) for _ in range(n)]
+        tr = [min(tb) * rng.uniform(0, 1.0) for _ in range(n)]  # tresp_p <= tb_q for all p, q
+        lam = [10 ** rng.uniform(-1.5, 1) for _ in range(n)]
+        paths = list(zip(lam, tb, tr))
+        smax = max(single_path(q) for q in paths)
+        for _ in range(4):
+            plan = random_plan(rng, n, max(tb))
+            f = fresh_success(paths, plan)
+            ck.ok("Prop 1.7: fresh-start progress and tresp <= tb give success <= max_p S(p)",
+                  f <= smax * (1 + 1e-9) + 1e-12, (paths, plan, f, smax))
+        p = rng.randrange(n)
+        ck.ok("Prop 1.7: going straight to a path attains its S(p)",
+              abs(fresh_success(paths, [(p, math.inf)]) - single_path(paths[p])) <= 1e-12, (paths, p))
+
+    # Prop 1.9: repeated attempts
+    for _ in range(N):
+        n = rng.randint(1, 12)
+        beta = 10 ** rng.uniform(-3, math.log10(0.3))
+        s = []
+        for _ in range(n):
+            hz = random_hazard(rng, allow_zero_segments=False)
+            tresp = rng.uniform(0, 3)
+            tb = t_d(hz, beta / n) + tresp + rng.choice([0.0, rng.uniform(0, 3)])
+            s.append(success(hz, tb, tresp))
+        ck.ok("Prop 1.9: n attempts at beta / n each succeed together with at most beta (any dependence)",
+              min(1.0, sum(s)) <= beta * (1 + 1e-9), (n, beta, s))
+        ck.ok("Prop 1.9: and with independent attempts", 1 - math.prod(1 - x for x in s) <= beta * (1 + 1e-9),
+              (n, beta, s))
+
+    # Corollary 1.6a: in-run drift. The line is checked at a declaration on the launch-speed time;
+    # the run launches before the next declaration, after T_b0 has fallen by f <= phi0, and its
+    # speed then rises under the envelope.
+    old_line_over = 0
+    for _ in range(N):
+        hz = random_hazard(rng)
+        beta = 10 ** rng.uniform(-4, math.log10(0.5))
+        tresp = rng.choice([0.0, rng.uniform(0, 3)])
+        tr = t_d(hz, beta) + tresp
+        if not math.isfinite(tr) or tr <= 0:
+            continue
+        m = rng.choice([1.0, rng.uniform(1, 4)])
+        env = random_envelope(rng, m * tr)
+        phi0 = rng.choice([1.0, rng.uniform(1, 3)])
+        tight = rng.random() < 0.3
+        tb0_decl = phi0 * env.G(m * tr) * (1.0 if tight else rng.uniform(1, 1.5))
+        f = phi0 if tight or rng.random() < 0.5 else rng.uniform(1, phi0)
+        tb0 = tb0_decl / f
+        if rng.random() < 0.5:
+            t_true = env.G_inv(tb0)  # speed follows the envelope: the worst case
+        else:
+            n_steps = rng.randint(1, 6)
+            taus = sorted([0.0] + [rng.uniform(0, 2 * m * tr) for _ in range(n_steps - 1)])
+            steps = [(tau, 1.0 if rng.random() < 0.3 else rng.uniform(0.05, 1)) for tau in taus]
+            t_true = step_finish(env, steps, tb0)
+            tight = False
+        detail = (hz.kind, hz.params, beta, tresp, m, env.kind, env.params, phi0, f, tb0, t_true)
+        ck.ok("Cor 1.6a: T_b0 >= phi0 G(m T_r) at declarations keeps the true T_b >= m T_r",
+              t_true >= m * tr * (1 - 1e-9), detail)
+        ck.ok("Cor 1.6a: and so success <= beta", success(hz, t_true, tresp) <= beta * (1 + 1e-9), detail)
+        if tight:
+            ck.ok("Cor 1.6a: a run whose speed follows g, launched at the most T_b0 can fall, attains m T_r",
+                  abs(t_true - m * tr) <= 1e-9 * max(1.0, m * tr), detail)
+        # Proposition 1.6's line on the launch-speed time (phi0 m T_r at the declaration, launched
+        # after the full fall phi0), the same envelope.
+        t_old = env.G_inv(m * tr)
+        if success(hz, t_old, tresp) > beta * (1 + 1e-9):
+            old_line_over += 1
+    ck.note(f"Prop 1.6's line computed at launch speed, run following the envelope from the end of the "
+            f"interval: success above beta in {old_line_over} of {N} random instances")
+
+    # Recorded (E6): Proposition 1.6's line at launch speed fails against a run that absorbs drift;
+    # Corollary 1.6a's line holds it. Constant hazard; T_d 0.75 and T_resp 0.25 (T_r of 1), m = 2,
+    # drift a factor 6 a year, a quarter between declarations, launch at the end of the interval
+    # (T_b0 has then fallen by the full phi0, so T_b0 at launch is the declared line over phi0).
+    beta, td_rec, tresp_rec, m_rec = 0.05, 0.75, 0.25, 2.0
+    hz = Hazard("poisson", (math.log(1 / beta) / td_rec,))
+    tr = td_rec + tresp_rec
+    env = Envelope("exp", (math.log(6.0),))
+    phi0 = 6.0**0.25
+    t_old = env.G_inv(phi0 * m_rec * tr / phi0)
+    s_old = success(hz, t_old, tresp_rec)
+    t_new = env.G_inv(phi0 * env.G(m_rec * tr) / phi0)
+    s_new = success(hz, t_new, tresp_rec)
+    ck.ok("Recorded (E6): Prop 1.6's line at launch speed, with in-run drift, succeeds with more than beta",
+          s_old > beta and t_old < tr, (t_old, s_old))
+    ck.ok("Recorded (E6): Corollary 1.6a's line holds the same run to m T_r and success <= beta",
+          abs(t_new - m_rec * tr) <= 1e-9 and s_new <= beta, (t_new, s_new))
+    ck.note(f"E6-style instance (drift factor 6 a year, m = 2, T_r = 1): Prop 1.6's launch-speed line "
+            f"gives T_b {t_old:.3f} and success {s_old:.3f}; Cor 1.6a's line raises T_b0 by "
+            f"{env.G(m_rec * tr) / (m_rec * tr):.2f} and gives success {s_new:.2e}")
+
+    # Recorded instances outside the assumptions (each must behave as the text says).
+    beta, tr = 0.05, 0.25
+    lam_sig, tb_a, delay = 7.0, 1.0, 0.25  # declared path A: precursor at rate 7, confirmed 0.25 later
+    lam_b, tb_b = 0.31, 10.0  # covert path B from scratch
+    s_a = math.exp(-lam_sig * (tb_a - tr - delay))  # staying on A: success iff the precursor comes at or after 0.5
+    s_b = math.exp(-lam_b * (tb_b - tr))
+    td_a = delay + math.log(1 / beta) / lam_sig  # A's T_d counted from confirmations
+    cut = tb_a - tr - delay
+    k = lam_b * tb_b / tb_a
+    switch = s_a + lam_sig * math.exp(-lam_b * (tb_b - tr)) * (-math.expm1(-(lam_sig - k) * cut)) / (lam_sig - k)
+    ck.ok("Recorded (red team C1.1): with an escapable precursor the per-path test admits both paths",
+          tb_a >= td_a + tr and tb_b >= math.log(1 / beta) / lam_b + tr and s_a <= beta and s_b <= beta)
+    ck.ok("Recorded (red team C1.1): and switching on the precursor succeeds with more than beta",
+          switch > beta, switch)
+    ck.note(f"red team C1.1 instance: switching on an escapable precursor succeeds with {switch:.3f} "
+            f"(beta {beta}); per path {s_a:.3f} and {s_b:.3f}")
+    paths = [(lam_sig, tb_a, delay + tr), (lam_b, tb_b, tr)]  # the precursor counted as the finding
+    ck.ok("Recorded (red team C1.1): counted under the assumptions, the per-path test still admits it",
+          all(single_path(q) <= beta for q in paths))
+    best = portable_success(paths, [(1, (1 - (delay + tr) / tb_a) * tb_b), (0, math.inf)])
+    ck.ok("Recorded (red team C1.1): but the portable line rejects it, and its best strategy exceeds beta",
+          portable_bound(paths) > beta and best > beta and best <= portable_bound(paths) * (1 + 1e-12),
+          (portable_bound(paths), best))
+    ck.note(f"red team C1.1 instance under the assumptions: covert to the midpoint, then declared, "
+            f"succeeds with {best:.3f}; the portable bound is {portable_bound(paths):.3f}")
+    lam1 = 0.17
+    p1, p2 = (lam1, 20.0, 2.0), (4.0, 1.0, 0.25)  # slow response on path 1 exceeds path 2's T_b
+    chain = single_path(p1) + (1 - single_path(p1)) * single_path(p2)  # exact, later findings counted
+    ck.ok("Recorded: a fresh attempt inside a slow response window beats max_p S(p) (Prop 1.7 needs tresp <= tb)",
+          max(single_path(p1), single_path(p2)) <= beta < chain and p1[2] > p2[1], chain)
+    ck.note(f"chain of attempts inside a response window: {chain:.4f} against max_p S(p) "
+            f"{max(single_path(p1), single_path(p2)):.4f}")
     ck.done()
 
 

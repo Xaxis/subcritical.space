@@ -13,6 +13,15 @@ Gundlach et al.'s slow case to MIRI's threefold a year. For each detection chann
 margin (the channel's detection limit over the floor it sees; above one, the run is below what the
 channel can see) and the first year the floor falls below the limit.
 
+Estimate and bound. The central figures and the Monte Carlo count operations at the BF16 reference
+precision, as the ledger does. The bound is the lowest footprint any party could reach: the
+lowest precision the sources show training at scale (FP8, so the H100's dense FP8 peak) and full
+utilisation (model FLOPs utilisation cannot exceed 1), with the lowest power per H100e in the
+ledger. At FP8 every chip, energy and power floor is the BF16 one divided by phys-fp8-over-bf16;
+FP4 training would halve it again, but the ledger has no source for FP4 training at scale. The
+adversary also chooses T, so the result gives the floor in chip-time (H100e-years), which does
+not depend on T: the chip floor at any run length is the chip-time divided by that length.
+
 Channels. Satellite discovery of a site (its limit lies between the classifier's largest miss and
 the size above which it found every site), a utility's system impact study, anonymity among
 commercial loads, thermal infrared (it did not see a cluster of at least 126 MW, so its margin is a
@@ -23,6 +32,14 @@ on one site shows them the aggregate. Satellite sizing of a known site and power
 declared site cannot see a run hidden inside the site's own uncertainty, so for those two it
 reports the site size within which a floor-sized run hides.
 
+What E8 cannot test. A facility channel's margin against a run on one-node sites is above one by
+the definition of the per-site floor, whatever the inputs, so those margins (e8-distributed-*) are
+definitional and are not evidence for any claim. E8 models no channel that sees the sites of a
+distributed run together (the traffic between them, purchases of chips and power, construction,
+insiders), so it cannot show that only chip accounting sees the aggregate. It records the traffic
+of Rahman's distributed configurations without a margin, since the ledger has no detection limit
+for it.
+
 Data and method. No external data: every input is a sourced number in the ledger, read by id from
 data/numbers.json, and the ids and values used are recorded in the result. A seeded Monte Carlo
 varies utilisation, power per H100e, the efficiency trend, the algorithmic rate, the satellite
@@ -32,8 +49,9 @@ a range without one is drawn uniform or log-uniform between the ledger's low and
 details.distributions names each choice.
 
 Claims served: C8 (the aggregate floor with a time axis, a margin per channel, and the untraced pool
-as a covert reserve; its falsifier is a facility channel with a margin below one for a distributed
-1e25 FLOP run) and C3 (the facility limits on the undeclared path, which E5 uses).
+as a covert reserve; its falsifier (b), a facility channel with a margin below one for a distributed
+1e25 FLOP run, cannot fire, as said above) and C3 (the facility limits on the undeclared path,
+which E5 uses).
 
   .venv/bin/python tools/exp/e08_footprint_floor.py      (CPU, seconds; see tools/exp/README.md)
 """
@@ -62,6 +80,9 @@ C_STEPS_PER_DECADE = 2
 # order of magnitude as within a factor of the square root of ten either way. Our reading, not a
 # sourced range.
 ORDER_OF_MAGNITUDE = math.sqrt(10)
+FULL_UTILISATION = 1.0  # model FLOPs utilisation cannot exceed 1: the bound's utilisation
+REF_PRECISION = "phys-h100-bf16"  # the ledger's reference precision for the central figures
+BOUND_PRECISION = "phys-h100-fp8"  # the lowest precision the sources show training at scale
 Z90 = NormalDist().inv_cdf(0.95)  # half-width of a two-sided 90% interval, in standard deviations
 QS = (0.05, 0.5, 0.95)
 
@@ -129,7 +150,9 @@ def main() -> int:
     gen = np.random.default_rng(SEED)
 
     # Inputs, every one from the ledger.
-    r = q("phys-h100-bf16") * 1e12  # FLOP/s per H100e, dense BF16 peak, as the ledger's floors use
+    r = q(REF_PRECISION) * 1e12  # FLOP/s per H100e, dense BF16 peak, as the ledger's floors use
+    r_bound = q(BOUND_PRECISION) * 1e12  # dense FP8 peak, for the bound
+    fp8_factor = q("phys-fp8-over-bf16")
     u_ref, u_lo, u_hi = q("phys-util-ref"), q("phys-intellect1-mfu-low"), q("phys-pope-mfu-prefill")
     w_ref, w_lo = q("phys-facility-power-per-h100"), q("phys-epoch-dc-it-per-h100e")
     g_ref = q("phys-eff-growth-supercomputer")
@@ -161,6 +184,8 @@ def main() -> int:
     dist_eff = {"1e25": (c25, q("phys-rahman-1e25-eff")), "1e26": (c26, q("phys-rahman-1e26-eff"))}
     a100_h100e = q("phys-a100-bf16") * 1e12 / r
     miri_cap = q("phys-miri-cluster-cap")
+    wan_mbit = q("phys-rahman-bandwidth")
+    rahman_nodes = {"1e25": q("phys-rahman-1e25-nodes"), "1e26": q("phys-rahman-1e26-nodes")}
 
     # The Monte Carlo draws, in a fixed order.
     u = gen.uniform(u_lo, u_hi, DRAWS)
@@ -172,7 +197,8 @@ def main() -> int:
     smug = two_piece_lognormal(gen, smug_ref, smug_lo, smug_hi, DRAWS)
     mult = gen.uniform(1.0, denial, DRAWS)
     distributions = {
-        "utilisation": "uniform between phys-intellect1-mfu-low and phys-pope-mfu-prefill, the measured range; no sourced distribution",
+        "utilisation": "uniform between phys-intellect1-mfu-low and phys-pope-mfu-prefill, the measured range; no sourced distribution. The top end is an inference prefill figure, not training, so the Monte Carlo is an estimate; the bound uses full utilisation instead",
+        "precision": "not drawn: the precision is the adversary's choice, so it is a stated input. The estimate counts at BF16 (phys-h100-bf16); the bound at FP8 (phys-h100-fp8). An FP8 run's floors are the BF16 ones divided by phys-fp8-over-bf16, power per chip unchanged",
         "power_per_h100e_w": "log-uniform between phys-epoch-dc-it-per-h100e and phys-facility-power-per-h100, the ledger's spread; no sourced distribution. The low end is IT power without cooling, so it understates facility power",
         "efficiency_growth": "two-piece log-normal matched to phys-eff-growth-supercomputer and its published 90% interval (-low, -high)",
         "algorithmic_rate": "log-uniform between comp-gundlach-small-annual-max and phys-algo-miri, the range P4 names; no sourced distribution. Used only for a fixed capability",
@@ -182,12 +208,20 @@ def main() -> int:
         "denial_multiplier": "uniform between 1 (smuggled leading-edge chips) and org-denial-power-multiplier (domestic chips at a denied party's measured compute per unit of power); no sourced distribution. Applied only to a denied party",
     }
 
-    def chips(c, t_months, util):
-        return c / (r * util * t_months * MONTH_S)
+    def chips(c, t_months, util, peak=r):
+        return c / (peak * util * t_months * MONTH_S)
 
-    def joules(watts, util, m=1.0):
+    def chips_bound(c, t_months):
+        """The lowest chip floor any party could reach: FP8 at full utilisation."""
+        return chips(c, t_months, FULL_UTILISATION, r_bound)
+
+    def chip_years(c, util, peak=r):
+        """The floor in chip-time, which does not depend on the run length T."""
+        return c / (peak * util) / YEAR_S
+
+    def joules(watts, util, m=1.0, peak=r):
         """Facility energy per useful operation."""
-        return watts * m / (r * util)
+        return watts * m / (peak * util)
 
     def power_mw(c, t_months, e):
         return c * e / (t_months * MONTH_S) / 1e6
@@ -208,7 +242,8 @@ def main() -> int:
         return out
 
     e_ref = joules(w_ref, u_ref)
-    e_bound = joules(w_lo, u_hi)  # the lowest energy per operation the ledger's ranges allow
+    # The lowest energy per operation any party could reach: lowest power per H100e, FP8, full use.
+    e_bound = joules(w_lo, FULL_UTILISATION, peak=r_bound)
     e_mc = joules(w, u)
     e_mc_denied = joules(w, u, mult)
 
@@ -235,6 +270,7 @@ def main() -> int:
         "container": "a cluster at or below phys-container-cluster fits in a 12-metre container with no noticeable external cooling",
         "chip-accounting-pool": "the untraced pool (phys-chips-unaccounted), the stock chip accounting cannot see",
         "chip-accounting-smuggled": "compute smuggled into one country through 2025 (org-smuggled-cum)",
+        "not-modelled": "channels that see the sites of a distributed run together: traffic between sites, purchases of chips and power, construction, insiders. Each is an aggregate signature E8 does not test, so E8 cannot show that only chip accounting sees the aggregate",
     }
 
     # 1. Floors and margins in the base year, for every C and T.
@@ -246,7 +282,7 @@ def main() -> int:
             row = {
                 "c_flop": sig(c),
                 "t_months": t,
-                "chips_h100e": {"central": sig(n_c), "bound": sig(chips(c, t, u_hi)), **quantiles(n_mc)},
+                "chips_h100e": {"central": sig(n_c), "bound": sig(chips_bound(c, t)), **quantiles(n_mc)},
                 "energy_mwh": {"central": sig(c * e_ref / MWH_J), "bound": sig(c * e_bound / MWH_J),
                                **quantiles(c * e_mc / MWH_J)},
                 "power_mw": {"central": sig(p_c), "bound": sig(power_mw(c, t, e_bound)), **quantiles(p_mc),
@@ -284,6 +320,11 @@ def main() -> int:
     dist_min = min(
         float((lim_mc / (node_mw_mc if kind == "power" else node_gpus)).min()) for _, kind, _, lim_mc in facility
     )
+    wan_traffic = {
+        tag: {"nodes": sig(n), "aggregate_gbit_s": sig(n * wan_mbit / 1e3),
+              "note": "nodes times phys-rahman-bandwidth; the ledger has no detection limit for traffic between sites, so no margin"}
+        for tag, n in rahman_nodes.items()
+    }
     dist_tax = {}
     for tag, (c, eff) in dist_eff.items():
         dist_tax[tag] = {
@@ -360,21 +401,21 @@ def main() -> int:
 
     n26p = chips(c26, t_pause, u)
     num("e8-floor-1e26-pause-p50", float(np.median(n26p)), unit="H100e",
-        label="aggregate chip floor for 1e26 FLOP over a pause's longest sensible run, median over utilisation drawn uniform across the measured range (no sourced distribution)")
+        label="aggregate chip floor for 1e26 FLOP over a pause's longest sensible run, median over utilisation drawn uniform across the measured range (no sourced distribution; its top is an inference figure). An estimate at the BF16 reference precision: an FP8 run halves it")
     num("e8-floor-1e26-pause-p05", float(np.quantile(n26p, 0.05)), unit="H100e",
         label="the same floor, 5th percentile (high utilisation)")
     num("e8-floor-1e26-pause-p95", float(np.quantile(n26p, 0.95)), unit="H100e",
         label="the same floor, 95th percentile (low utilisation)")
-    num("e8-floor-1e26-pause-bound", chips(c26, t_pause, u_hi), unit="H100e",
-        label="the same floor at the highest measured utilisation, the bound an adversary could reach (L2's correction)")
-    num("e8-floor-1e24-pause-bound", chips(c24, t_pause, u_hi), unit="H100e",
-        label="aggregate chip floor for 1e24 FLOP over a pause's longest sensible run, at the highest measured utilisation")
+    num("e8-floor-1e26-pause-bound", chips_bound(c26, t_pause), unit="H100e",
+        label="the same floor as a bound: FP8, the lowest precision the sources show training at scale, at full utilisation. No party training at FP8 or above needs fewer H100e for this run in this time")
+    num("e8-floor-1e24-pause-bound", chips_bound(c24, t_pause), unit="H100e",
+        label="aggregate chip floor for 1e24 FLOP over a pause's longest sensible run as a bound: FP8 at full utilisation")
 
     for tag, t in (("now", t_now), ("pause", t_pause)):
         p26 = power_mw(c26, t, e_mc)
         span = "today's" if tag == "now" else "a pause's"
         num(f"e8-power-1e26-{tag}-p50", float(np.median(p26)), unit="MW", fmt="sig2",
-            label=f"average facility power of a 1e26 FLOP run over {span} longest sensible run, median of the Monte Carlo over utilisation and power per H100e")
+            label=f"average facility power of a 1e26 FLOP run over {span} longest sensible run, median of the Monte Carlo over utilisation and power per H100e (an estimate at the BF16 reference precision; an FP8 run halves it)")
         num(f"e8-power-1e26-{tag}-p05", float(np.quantile(p26, 0.05)), unit="MW", fmt="sig2",
             label="the same power, 5th percentile")
         num(f"e8-power-1e26-{tag}-p95", float(np.quantile(p26, 0.95)), unit="MW", fmt="sig2",
@@ -384,10 +425,11 @@ def main() -> int:
         label="average facility power of a 1e26 FLOP run over a pause's run length for a denied party, 95th percentile (denial multiplier drawn uniform from 1 to the ledger's value)")
 
     num("e8-distributed-1e25-margin-min", dist_min, fmt="sig2",
-        label=f"smallest margin over every facility channel and every draw for a distributed 1e25 FLOP run on one-node sites, a denied party's power included (above 1: no facility channel sees a site; the smallest is {dist_min_name})",
-        note="the per-site floor is one node whatever C is; thermal infrared's margin is a lower bound")
+        label=f"DEFINITIONAL, not evidence: smallest margin over every facility channel and every draw for a distributed 1e25 FLOP run on one-node sites, a denied party's power included (the smallest is {dist_min_name}). Above 1 by the definition of the per-site floor, so it cannot refute or support C8(b)",
+        note="the per-site floor is one node whatever C is, so no input E8 varies could bring this below 1; do not cite as support")
     num("e8-distributed-sat-margin", distributed["satellite"]["central"], fmt=",.0f",
-        label="satellite's reliable line over one node's facility power, central inputs")
+        label="DEFINITIONAL, not evidence: satellite's reliable line over one node's facility power, central inputs (a ratio of two inputs, the same for every run)",
+        note="do not cite as support for C8(b)")
 
     p25 = power_mw(c25, t_now, e_mc)
     p25d = power_mw(c25, t_now, e_mc_denied)
@@ -406,14 +448,15 @@ def main() -> int:
         num(f"e8-sat-max-c-{tag}", sat_hi * 1e6 * t * MONTH_S / e_ref, unit="FLOP", fmt=".1e",
             label=f"largest run one site below the satellite reliable line can finish within {span} longest sensible run, central inputs, base year")
     num("e8-sat-max-c-pause-bound", sat_hi * 1e6 * t_pause * MONTH_S / e_bound, unit="FLOP", fmt=".1e",
-        label="the same at a pause's run length with the lowest energy per operation the ledger's ranges allow")
+        label="the same at a pause's run length as a bound: the lowest power per H100e in the ledger, FP8, full utilisation")
     num("e8-sat-max-c-pause-denied", sat_hi * 1e6 * t_pause * MONTH_S / (e_ref * denial), unit="FLOP", fmt=".1e",
         label="the same at a pause's run length for a denied party at the full denial multiplier, central inputs")
 
+    pool_note = ". The pool is an assumed order of magnitude and its spread is our reading; the smuggled stock has a published interval"
     for tag, stock, what in (("pool", pool, "the untraced pool"), ("smuggled", smug, "compute smuggled into one country")):
         ratio = stock / n26p
         num(f"e8-{tag}-over-floor-1e26-pause-p50", float(np.median(ratio)), fmt="sig2",
-            label=f"{what} over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo")
+            label=f"{what} over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo (floor at the BF16 reference precision; an FP8 run doubles the ratio){pool_note if tag == 'pool' else ''}")
         num(f"e8-{tag}-over-floor-1e26-pause-p05", float(np.quantile(ratio, 0.05)), fmt="sig2",
             label="the same ratio, 5th percentile")
         num(f"e8-{tag}-over-floor-1e26-pause-p95", float(np.quantile(ratio, 0.95)), fmt="sig2",
@@ -425,11 +468,21 @@ def main() -> int:
         run = smug * r * u * t * MONTH_S
         num(f"e8-smuggled-run-{tag}-p05", float(np.quantile(run, 0.05)), unit="FLOP", fmt=".1e",
             label=f"training compute the smuggled stock could do within {span} longest sensible run, 5th percentile (smuggled stock and utilisation drawn)")
-    num("e8-pool-shrink-1e24-pause", pool_ref / chips(c24, t_pause, u_hi), fmt="sig2",
-        label="factor by which the untraced pool exceeds the bound chip floor of a 1e24 FLOP run at a pause's run length: how far it must shrink for chip accounting to resolve that run")
-    num("e8-pool-shrink-1e26-pause", pool_ref / chips(c26, t_pause, u_hi), fmt="sig2",
+    num("e8-pool-shrink-1e24-pause", pool_ref / chips_bound(c24, t_pause), fmt="sig2",
+        label="factor by which the untraced pool exceeds the bound chip floor (FP8, full utilisation) of a 1e24 FLOP run at a pause's run length: how far it must shrink for chip accounting to resolve that run",
+        note="the pool is an assumed order of magnitude (phys-chips-unaccounted); a longer run raises the factor in proportion")
+    num("e8-pool-shrink-1e26-pause", pool_ref / chips_bound(c26, t_pause), fmt="sig2",
         label="the same factor for a 1e26 FLOP run")
 
+    num("e8-chip-years-1e26-bound", chip_years(c26, FULL_UTILISATION, r_bound), unit="H100e-years", fmt="sig2",
+        label="chip-time floor of a 1e26 FLOP run as a bound (FP8, full utilisation): the chip floor at any run length T is this divided by T, so it holds whatever run length the adversary picks")
+    num("e8-chip-years-1e24-bound", chip_years(c24, FULL_UTILISATION, r_bound), unit="H100e-years", fmt="sig2",
+        label="chip-time floor of a 1e24 FLOP run as a bound (FP8, full utilisation)")
+    num("e8-cap-years-1e24-bound", chip_years(c24, FULL_UTILISATION, r_bound) / miri_cap, unit="years", fmt=".1f",
+        label="years one cluster at MIRI's unmonitored cap needs for 1e24 FLOP at the bound (FP8, full utilisation); below a pause's 24-month run length means the cap alone does not stop such a run")
+    for tag, e_used, how in (("", e_ref, "central inputs at BF16"), ("-bound", e_bound, "the bound (lowest power per H100e, FP8, full utilisation)")):
+        num(f"e8-sat-min-t-1e26{tag}", c26 * e_used / (sat_hi * 1e6) / MONTH_S, unit="months", fmt="sig2",
+            label=f"shortest run length at which a 1e26 FLOP run on one site draws less than the satellite reliable line, base year, {how}: any longer run the adversary picks is below it")
     base_note = f" (counted from {base_year}, the year the power per chip was measured; {base_year} means already below)"
     t_sat26 = float(crossing_years(power_mw(c26, t_now, e_ref) / sat_hi, g_ref, 1.0, cap))
     t_sat26_mc = crossing_years(power_mw(c26, t_now, e_mc) / sat, g, 1.0, cap)
@@ -477,11 +530,19 @@ def main() -> int:
         "energy_per_op_central_j": sig(e_ref),
         "energy_per_op_bound_j": sig(e_bound),
         "a100_h100e_per_chip": sig(a100_h100e),
+        "fp8_over_bf16": sig(fp8_factor),
+        "bound_utilisation": FULL_UTILISATION,
     })
     res.detail("channels", channel_notes)
     res.detail("base_year_floors_and_margins", base_rows)
+    res.detail("chip_time_floor", [
+        {"c_flop": sig(c), "h100e_years_central_bf16": sig(chip_years(c, u_ref)),
+         "h100e_years_bound_fp8": sig(chip_years(c, FULL_UTILISATION, r_bound))}
+        for c in cs
+    ])
     res.detail("distributed_per_site_margins", distributed)
     res.detail("distribution_tax", dist_tax)
+    res.detail("distributed_traffic", wan_traffic)
     res.detail("year_by_year", year_rows)
     res.detail("crossing_years", cross_rows)
     res.detail("conventions", {
@@ -489,7 +550,10 @@ def main() -> int:
         "seen_share": "share of draws with margin at or below 1",
         "crossing": "first calendar year at or below the limit; the base year if already below; null if not by last_year",
         "central": "phys-util-ref, phys-facility-power-per-h100, phys-sat-reliable, phys-eff-growth-supercomputer, phys-algo-growth, no denial",
-        "bound": "phys-pope-mfu-prefill and phys-epoch-dc-it-per-h100e: the lowest footprint the ledger's ranges allow",
+        "bound": "FP8 peak (phys-h100-fp8), full utilisation, and phys-epoch-dc-it-per-h100e: the lowest footprint any party training at FP8 or above could reach",
+        "precision": "central figures and the Monte Carlo count at BF16 (phys-h100-bf16); at FP8 divide every chip, energy and power floor by phys-fp8-over-bf16 and multiply every chip-accounting margin by it",
+        "run_length": "the adversary chooses T; chip floors scale as 1/T, and chip_time_floor gives the T-free form",
+        "definitional": "distributed_per_site_margins and e8-distributed-* are above 1 by the definition of the per-site floor; they are not evidence",
         "hidden_in_known_site_h100e": "site size within which a floor-sized run (central) hides: satellite sizing within phys-sat-it-accuracy at phys-sat-it-confidence, metering within each beta",
         "pool_growth": "the pool and the smuggled stock are held at their ledger values in every year; E22 supplies growth",
         "untraced_as_a100": f"if every untraced chip were A100-class the pool would be {sig(a100_h100e)} of its H100e value",

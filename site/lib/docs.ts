@@ -6,6 +6,7 @@ import { parseMemo } from "./memo";
 import { parseRanking, type Ranking } from "./pathways";
 import { markdownIn, readRepoFile, repoFileExists } from "./repo";
 import { docSlug, slugify } from "./text";
+import { parseRecord, type VerificationRecord } from "./verification";
 
 export interface Doc {
   file: string;
@@ -45,6 +46,17 @@ export function researchDocs(): Doc[] {
   return markdownIn("research")
     .filter((f) => !f.endsWith("/numbers.md"))
     .map(load);
+}
+
+/** Where each claim stands at each level, once research/07-verification.md exists. */
+export function verificationRecord(): VerificationRecord | null {
+  const file = "research/07-verification.md";
+  return repoFileExists(file) ? parseRecord(readRepoFile(file)) : null;
+}
+
+/** The verification reports, one per level and helper, as their helpers wrote them. */
+export function verificationReports(): Doc[] {
+  return markdownIn("research/verification").map(load);
 }
 
 /** The survey notes, raw, in track order. */

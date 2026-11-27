@@ -12,6 +12,10 @@ Cor 4.1a   first-order form: ln(Delta_(k+1)/Delta_k) = b (K - 1) Delta_k - [f(x_
 Lemma 4.2  ln(e^(b Delta_0(E)) - 1) is linear in ln E with slope lam (budgets 1, 2, 4).
 Prop 4.3   Delta_(k+1) > Delta_k iff K > 1; for K < 1, g_k < 1 always, the level is unbounded
            (u_k >= ln(y_0 + k * gamma * y_0^K) / b), and g_k approaches 1.
+Cor 4.5a   the rule on K's product bound fires on {U_e U_r > K*}: with U_e <= 1 this lies inside
+           the r-only rule's firing set at the tightened level alpha_r, which contains the r-only
+           rule's firing set at alpha; with U_e = 1 the K rule fires whenever the r-only rule at
+           alpha does. So a false-alarm rate quoted for r alone is not the K rule's (red team C4.7).
 Prop 4.6   (demonstration, reported not asserted) measurement noise on Delta biases the naive
            through-origin regression toward subcritical; a split-sample regression removes the
            correlated part.
@@ -22,6 +26,7 @@ Standard library only; seeded; exits 1 on a counterexample, printing it.
 from __future__ import annotations
 
 import math
+from statistics import NormalDist
 
 from _lib import Check
 
@@ -172,6 +177,27 @@ def main() -> None:
             reps += 1
     ck.note(f"Prop 4.6: mean bias in K-hat from 5% noise on each Delta, {reps} replications: naive "
             f"{naive_bias / reps:+.4f}, split-sample {split_bias / reps:+.4f}")
+
+    # Cor 4.5a: which firing sets nest, on random estimates and thresholds.
+    z = NormalDist().inv_cdf
+    for _ in range(20 * N):
+        alpha = rng.choice([0.1, 0.05, 0.01])
+        alpha_r = alpha * rng.uniform(0.2, 0.8)
+        alpha_e = alpha - alpha_r
+        r_hat, s_r = rng.uniform(0, 2), rng.uniform(0.01, 1)
+        e_hat, s_e = rng.uniform(0, 1.2), rng.uniform(0.01, 0.5)
+        k_star = rng.uniform(0.3, 1.0)
+        u_r_a = r_hat + z(1 - alpha) * s_r
+        u_r_t = r_hat + z(1 - alpha_r) * s_r
+        u_e = min(1.0, e_hat + z(1 - alpha_e) * s_e)
+        fires_k = u_e * max(u_r_t, 0.0) > k_star
+        ck.ok("Cor 4.5a: with U_e <= 1 the K rule fires only where the r rule at alpha_r does",
+              (not fires_k) or u_r_t > k_star, (u_e, u_r_t, k_star))
+        ck.ok("Cor 4.5a: the r rule at alpha_r fires wherever the r rule at alpha does",
+              (not u_r_a > k_star) or u_r_t > k_star, (u_r_a, u_r_t, k_star))
+        if u_e == 1.0:
+            ck.ok("Cor 4.5a: with U_e = 1 the K rule fires wherever the r rule at alpha does",
+                  (not u_r_a > k_star) or fires_k, (u_r_a, u_r_t, k_star))
     ck.done()
 
 

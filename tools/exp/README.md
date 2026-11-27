@@ -11,7 +11,12 @@ E2, ...), which is where the list and the claims each one serves are kept.
 - **Deterministic.** All randomness comes from `lib.rng(seed)` (or a numpy generator seeded from
   it). The same data and seed write the same result file, byte for byte.
 - **One result file.** `lib.Results(...).write()` writes `data/results/<name>.json`: the
-  experiment's code, the script, the seed, the data it read, its `numbers` and any `details`.
+  experiment's code, the script, the seed, the data it read, its `numbers` and any `details`. It
+  is strict JSON, which the site parses: no infinity or NaN anywhere (record an unbounded value as
+  null and say why), and `lib` refuses one at the line that adds it.
+- **Ledger inputs.** Read inputs from `data/numbers.json` by id and record each id with the value
+  used in `details.ledger_inputs`. `make check` fails when one of them no longer exists or has
+  changed, so a result is never cited on inputs it did not run with: rerun it.
 - **Into the ledger.** `make model` loads every result file's `numbers` with basis `experiment`, so
   documents cite them as ledger links like any other number. Ids start with the experiment's code
   in lower case (`e2-...`). A derived number built on a result goes in the model as usual.

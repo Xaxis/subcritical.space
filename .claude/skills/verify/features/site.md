@@ -3,7 +3,7 @@
 subcritical.space: the Next.js site in `site/`,
 rendered at build time from `research/` and `data/`, deployed by `tools/site/deploy.sh`.
 
-<!-- covers: page:/, page:/research, page:/research/[slug], page:/notes/[slug], page:/experiments, page:/numbers, page:/sources, api:GET /apple-icon, api:GET /manifest.webmanifest, api:GET /opengraph-image, api:GET /robots.txt, api:GET /sitemap.xml -->
+<!-- covers: page:/, page:/research, page:/research/[slug], page:/notes/[slug], page:/verification/[slug], page:/experiments, page:/numbers, page:/sources, api:GET /apple-icon, api:GET /manifest.webmanifest, api:GET /opengraph-image, api:GET /robots.txt, api:GET /sitemap.xml -->
 
 ## Sub-features
 
@@ -16,6 +16,12 @@ rendered at build time from `research/` and `data/`, deployed by `tools/site/dep
   exists is "written", which is not verified; Part I is written when all six of its files are). Under the
   memo's mechanisms and definitions, a note that the survey revised its labels, linking the
   novelty file once `research/03-novelty.md` exists.
+  Once `research/07-verification.md` exists, a "Verification" band shows its record as a grid
+  (`site/lib/verification.ts` parses "## The record": one row per claim, one column per level, each
+  cell opening with a bold status from a fixed vocabulary, an unknown status failing the build;
+  `site/components/VerificationGrid.tsx` shows each as a word and a mark, never colour alone), with
+  the count of claims per standing in the lead. The detection figure's caption gives E5's fitted
+  discovery rate with its interval, from a programme's start, as an upper bound.
 - 3D: `site/components/three/` (from corerope.space): `Stage.tsx` loads three.js only near the
   screen, releases it far away, pauses off screen, offers a pause button, holds a still frame under
   reduced motion and says in words what it shows without WebGL; `kit.ts` the renderer and bloom;
@@ -28,6 +34,11 @@ rendered at build time from `research/` and `data/`, deployed by `tools/site/dep
   citation's label is the first author's surname or the organisation's name and the year
   (`citeLabel` in `site/lib/text.ts`; affiliations in brackets dropped; a test runs it over every
   source).
+- `/verification/[slug]`: each report in `research/verification/` (the levels run by helpers who
+  wrote none of the work), listed on `/research`. Its links one level up (`../04-claims.md`,
+  `../numbers.md#id`) resolve like any document's, in the site (`docHref`, `ledgerId`) and in
+  `tools/check.py`. A report is a record: `make docs` leaves its numbers as written, and the page
+  shows them dotted (`Markdown asWritten`), each titled with what the ledger shows now.
 - `/experiments`: the plan in `research/04-claims.md` "## Experiments", parsed by
   `site/lib/experiments.ts` (code, title, what it does, CPU or GPU, its script, what it serves); an
   item whose `data/results/<script>.json` exists shows "has results" and its numbers through the
@@ -45,7 +56,7 @@ cd site && ~/.claude/claude-core/bin/heavy npx next build && (npx next start -p 
 ~/.claude/claude-core/bin/heavy node tools/site/interact.ts --url http://localhost:4527
 ```
 
-Expect: tests pass (10); the build lists every page as static; shots.ts prints `"ok":true` with
+Expect: tests pass (11, the last parsing the verification record); the build lists every page as static; shots.ts prints `"ok":true` with
 each sitemap page at 200 and `/no-such-page` at 404, and writes shots to `out/site-shots/` (look at
 the ones you changed, both themes, both widths); interact.ts prints its `ok` lines and exits 0 (among them the 3D stage
 drawing, turning supercritical together at c = 0.1, the reduced-motion still frame and the words

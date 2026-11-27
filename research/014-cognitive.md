@@ -19,9 +19,10 @@ The survey changed three things the memo believed (research/00-memo.md, candidat
 D1).
 
 1. What D1 adds is narrower than the memo said. Comparing AI with organisations rather than
-   individuals, and counting copies and speed, are prior work. What our search did not find is a
-   definition that matches both time and budget, runs on a refreshed held-out battery with
-   institutional baselines, and counts clusters won with an alpha fraction.
+   individuals, counting copies and speed, and tracking where AI and human performance cross are
+   prior work. What our search did not find is a definition that matches both time and budget, runs
+   on a refreshed held-out battery with institutional baselines, and counts clusters won with an
+   alpha fraction.
 2. A capability verdict is a function of the time and money each side is given. RE-Bench's agents
    beat human experts at short budgets and lose at long ones. A definition that does not fix the
    budget is not yet a definition.
@@ -31,15 +32,22 @@ D1).
    instruments are weakest of all.
 
 The consequence for the protocol is that the cognitive perspective supplies the definition the
-protocol protects (D1) and a lagging check on it, but not the main early trigger. The one exception
-is capability at AI research, measured against an institution at matched budget, which ties
-directly to the self-improvement loop (D2).
+protocol protects (D1) and a lagging check on it, but no trigger. Not even capability at AI
+research, measured against an institution at matched budget, can serve as one, though it is the
+cluster that ties to the self-improvement loop (D2): it holds only once a system already beats the
+institution, so it cannot warn, and the protocol must act on the line before it.
+
+Verification since the survey narrowed this further. The claims file keeps D1 as a definition only
+([C10](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget)).
+Its crossover budget t\* is prior work as a quantity [@wijk2024rebench; @robinson2026horizons].
+Public data hold no organisation baseline at matched budget for any cluster (E1).
 
 The chapter takes the memo's three mechanisms in turn (F1 kinds of advantage, F2 the decisive
 functions, F3 narrow versus general), then adds a fourth section, F4, on measurement itself: how
 capability can be measured so that a protocol can trigger on it. It closes with the quantities the
-protocol should use. Bostrom's 2014 book could not be opened by the survey, so its typology is
-cited only through a source that summarises it with page references [@grace2014forms].
+protocol can measure, and says why none of them is a trigger. Bostrom's 2014 book could not be
+opened by the survey, so its typology is cited only through a source that summarises it with page
+references [@grace2014forms].
 
 ## F1. Kinds of advantage: speed, copies and quality
 
@@ -184,7 +192,9 @@ AI 2027 counts copies, speed and compute share [@lifland2025timelines].
 
 What survives, as a claim about our search: measuring copies from held compute and per-instance
 throughput, instead of assuming them, was not found as a published measurement. Label: **extends
-prior work**.
+prior work**. The claims file does not keep it as a contribution: the formula follows from a known
+bound [@pope2022], forecasts already compute copies from compute [@lifland2025timelines], and
+nothing triggers on it ([Cut, and why](04-claims.md#cut-and-why)). E12 and E20 still measure it.
 
 ### What it means for the protocol
 
@@ -195,20 +205,31 @@ serving many users is most of what makes AI useful. The weak point is that a chi
 much compute runs, not what it is directed at; telling a fleet of research agents from a fleet of
 customer-service agents needs workload declarations and inspection. The cost to useful AI is low if
 the limit binds only on directed AI-research workloads above a stated size, and high if it binds on
-serving. Quality cannot be limited directly; it can only be measured (F4).
+serving. Quality cannot be limited directly; it can only be measured (F4). Part II took the
+low-cost side: it leaves serving capacity unlimited
+([Part II](06-protocol.md#what-the-protocol-must-do)), and directed research workloads fall under its
+closed-loop rule, which meters research compute, not under a limit on n times s.
 
 ### What would test it
 
 - **E10** (the training-to-inference exchange rate) gives the inference cost per instance at a
-  capability level, which is the denominator of n.
-- **E2** (autonomy from time horizons) gives the speed side as task length grows.
-- **New: the F1 decomposition run.** On a fixed set of RE-Bench-style tasks with human baselines,
+  capability level, which is the denominator of n. It has not run.
+- **E2** (time horizons) has run, and gives the length side, not the speed side. Refitting METR's
+  results, the frontier 50% time horizon doubles every [129 days](numbers.md#e2-doubling-p50)
+  ([96 days](numbers.md#e2-doubling-p50-lo) to [162 days](numbers.md#e2-doubling-p50-hi)) and the 80%
+  horizon every [133 days](numbers.md#e2-doubling-p80). A model's 50% horizon is a median
+  [5.3](numbers.md#e2-p50-over-p80) times its 80% horizon, and that ratio is stable: it changes by a
+  factor of [1.07](numbers.md#e2-ratio-trend) a year, an interval
+  ([0.88](numbers.md#e2-ratio-trend-lo) to [1.26](numbers.md#e2-ratio-trend-hi)) that spans 1. A
+  horizon is a task length in human time, so it says how long a task an agent completes, not how fast
+  it completes it. Speed s still needs E20.
+- **E20, the F1 decomposition run.** On a fixed set of RE-Bench-style tasks with human baselines,
   run one open model at several serving operating points on a fixed accelerator budget. Measure s
   (time to match the human reference score), n (instances sustained) and quality at matched t and b.
   Then test whether n times s predicts the output of a group: do k copies working in parallel for
   time t beat k human experts given t? The expected failure is saturation with k, as in human groups
   [@aiimpacts2016coordinated], and the run measures where it sets in. It is deterministic given its
-  seeds and runs on small models in `tools/exp/`.
+  seeds and runs on small models in `tools/exp/`. It has not run.
 
 ## F2. The decisive functions
 
@@ -382,7 +403,8 @@ DeepMind's research teams, with no published measurement. Persuasion, biology an
 production have individual baselines only.
 The list of functions is prior work (it overlaps the categories of the frontier frameworks).
 Benchmarking any of them against a measured institution, rather than an individual or a contest
-team, was not found, as a claim about our search.
+team, was not found, as a claim about our search. Label: **prior work**. The institutional
+benchmark is D1's, and the claims file merged it into C10, a definition.
 
 ### What it means for the protocol
 
@@ -398,14 +420,25 @@ Candidate: split the functions into two tiers.
 - **Economic production** is not limited. It is measured as an input, with the organisational
   chapter.
 
+Tier A measures D1's clusters, the endpoint, so it cannot warn: a Tier A win means a system already
+beats the institution
+([C10](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget)).
+The protocol's trigger is the line on breakout time
+([D4](01-anatomy.md#d4-weapons-grade-the-line-tb-m-tr)), which must act before any Tier A win.
+
 The cost to useful AI depends on what is limited. Measuring Tier A is cheap where competitions
 already supply team baselines. Limiting AI-research capability itself would be costly, because
 software work is close to half of observed AI use [@handa2025aei]; the limit should attach to
-closure (D6) and to concentrated scale (F1), not to the capability.
+closure (D6), where Part II puts it, not to the capability.
 
 ### What would test it
 
-- **New: the matched-budget team battery**. For each Tier A cluster and
+- **E1** has searched the public data. By a search of the archive's columns,
+  [5 clusters](numbers.md#e1-clusters-baselined) have some human comparison and
+  [3 clusters](numbers.md#e1-clusters-verdict) a bar that a model wins or loses (GPQA's PhD experts,
+  the superforecaster median, GDPval parity). None is an organisation at matched budget, so no
+  cluster's institutional verdict can be read from public data.
+- **E21, the matched-budget team battery**. For each Tier A cluster and
   for forecasting, enter agents into existing contests under the human rules and clock, scored on
   the same board, with both sides' compute, money and copies recorded: MLE-bench subsets against
   Kaggle team leaderboards; RE-Bench with matched GPU hours at the
@@ -413,8 +446,9 @@ closure (D6) and to concentrated scale (F1), not to the capability.
   [32 h](numbers.md#cog-rebench-budget-long) budgets; fresh CTF events with team size and AI use
   recorded; ForecastBench rounds and Metaculus tournaments. Output: a win or loss for each cluster
   at each budget, and the crossover budget defined in F4. Where leaderboards are public it reruns
-  from public data.
-- **E2** for the time-horizon trend behind the AI-research cluster.
+  from public data. Its public part has not run; its live part needs organisers' consent.
+- **E2** has run, for the time-horizon trend behind the AI-research cluster: the frontier 50%
+  horizon doubles every [129 days](numbers.md#e2-doubling-p50), with the trend reported under F1.
 - Persuasion against a professional organisation would need a new design with human-subjects
   approval. This project cannot run it, and says so.
 
@@ -488,8 +522,10 @@ verifiers is a general property that grows with scale. "Narrow" describes a task
 size of the AlphaEvolve effect is small, so it shows the loop exists, not that its gain is high.
 
 A second steelman: generality may not be needed at all. A system superhuman only at AI research
-could build generality later through the loop. Then G is a lagging indicator, and the AI-research
-cluster alone carries the trigger, which is the design this chapter recommends.
+could build generality later through the loop. Then G is a lagging indicator, and what matters is
+the loop around AI research. A score on the AI-research cluster cannot carry a trigger either, since
+it too holds only once the system is ahead; the protocol governs that loop through closure and the
+line (D6, D4), not through a capability score.
 
 ### What the survey changed from the memo
 
@@ -502,7 +538,10 @@ Burtsev's "operational closure", the fraction of potential gain transmitted thro
 pipeline [@burtsev2026criticality], and A Narrow Path's ban on using "found systems to build new found
 systems" [@miotti2025narrowpath]. The memo's line ("generality across the decisive functions together
 with a closed loop") therefore **extends prior work**. The survey's main correction is AlphaEvolve:
-the memo treated narrow systems as safe by kind, and the right unit is the loop they sit in.
+the memo treated narrow systems as safe by kind, and the right unit is the loop they sit in. The
+claims file does not keep the line itself as a contribution. Only the narrow-optimiser rule survives,
+inside C11(b), as A Narrow Path's ban recast as a count; it is untested, since E4(e) has not run
+([C11](04-claims.md#c11-closure-judged-input-by-input-with-narrow-optimisers-inside-the-loop)).
 
 ### What it means for the protocol
 
@@ -516,14 +555,22 @@ research. G itself is reported as a lagging quantity, cheap once the battery exi
 
 ### What would test it
 
-- **E1** (compute against capability), using observational scaling, estimates how G rises with
-  effective compute across public models.
-- **E4** (loop gain, staged) run twice, with and without a narrow optimiser inside the loop,
-  measures whether the narrow component raises the loop gain g.
-- **New: the transfer test.** Fine-tune a small open model narrowly (supervised and reinforcement
-  learning, on mathematics or code) and measure the change on every other cluster of the
-  regime-held battery. It tests whether narrow training raises G; the prior evidence says mostly not
-  [@huan2026mathtransfer].
+- **E1** (compute against capability) has run, and could not count G. Public data give
+  [3 clusters](numbers.md#e1-clusters-verdict) a bar a model wins or loses, and none is an
+  institution at matched budget, so G at the institutional bar is not measurable there. What E1 could
+  measure is how evenly a model's abilities spread across clusters. The spread changes by
+  [-1.46 ECI points](numbers.md#e1-spread-per-oom) per OOM of training compute
+  ([-2.29 ECI points](numbers.md#e1-spread-per-oom-lo) to
+  [-0.76 ECI points](numbers.md#e1-spread-per-oom-hi)): abilities grow more even with scale, as the
+  low-dimensional finding suggests. Yet [3 clusters](numbers.md#e1-clusters-drifting) of the
+  [7 clusters](numbers.md#e1-clusters-fitted) fitted drift with compute away from the model's other
+  benchmarks, the largest by [2.3 ECI points](numbers.md#e1-cluster-dev-max) per OOM.
+- **E4(e)**, the staged loop run with and without a narrow optimiser inside it, measures whether the
+  narrow component raises the loop gain g. It has not run.
+- **E17, the transfer test**, merged with the computational chapter's transfer ratio. Fine-tune a
+  small open model narrowly (supervised and reinforcement learning, on mathematics or code) and
+  measure the change on every other cluster of the regime-held battery. It tests whether narrow
+  training raises G; the prior evidence says mostly not [@huan2026mathtransfer]. It has not run.
 
 ## F4. Measuring capability so a protocol can trigger on it
 
@@ -631,16 +678,33 @@ Who wins depends on the budget. On RE-Bench the AI-to-human score ratio moves
 [32 h](numbers.md#cog-rebench-budget-long) budgets, about
 [1.68](numbers.md#cog-rebench-swing-per-doubling) times towards humans for each doubling of the time,
 with humans narrowly ahead already at [8 h](numbers.md#cog-rebench-budget-mid) [@wijk2024rebench].
-HCAST shows the same shape [@rein2025hcast]. So a verdict is a curve over budgets, not a point. This
-suggests a tracking quantity: the **crossover budget t\***, the time budget at which S's score
-equals the comparison's, given equal compute and money. For the 2024 RE-Bench agents it lay between
-[2 h](numbers.md#cog-rebench-budget-short) and [8 h](numbers.md#cog-rebench-budget-mid). Unlike a
-fixed benchmark, t\* does not saturate, because the budget axis is open; its limit is the supply of
-long-budget human baselines. It is a close relative of METR's time horizon, which measures the human
-task length at which an agent succeeds half the time [@kwa2025horizon]; t\* differs by giving both
-sides the same clock and the same resources, so it compares the system with a human comparison rather
-than calibrating task difficulty. Naming it as a trigger quantity extends RE-Bench's design rather
-than replacing it.
+HCAST shows the same shape [@rein2025hcast]. So a verdict is a curve over budgets, not a point.
+
+Tracking where the curves cross is prior work in two forms. RE-Bench reports the budget at which the
+advantage flips [@wijk2024rebench]. A 2026 essay defines the intersection of the AI and human curves
+as a quantity and tracks it across models [@robinson2026horizons]; its axis is task length, not the
+budget allowed, its baseline is individual engineers, and cost is not matched. METR's time horizon,
+the human task length at which an agent succeeds half the time, is a more distant relative
+[@kwa2025horizon]. D1 borrows the idea as the **crossover budget t\***: the largest tested time
+budget at which S's score on the AI-research cluster is at least the comparison's, given equal
+compute and money, on a grid of budgets fixed in advance. If S still wins at the largest budget
+tested, t\* is censored and reported as a lower bound, never extrapolated. For the 2024 RE-Bench
+agents it lay between [2 h](numbers.md#cog-rebench-budget-short) and
+[8 h](numbers.md#cog-rebench-budget-mid). Whether t\* escapes the saturation that ends fixed
+benchmarks is untested. The budget axis is open, so it might, but the claims file lists as
+unshown that t\* can be estimated with an interval and that it rises across model generations
+without saturating (C10(c)). E21 would test both, by estimating t\* with an interval on a
+matched-budget battery for successive models. Its limit is the supply of long-budget human
+baselines: only [5](numbers.md#cog-th11-long-baselined) of [31 tasks](numbers.md#cog-th11-long-tasks)
+over [8 h](numbers.md#cog-th11-long-threshold) have one, and if t\* cannot be estimated for lack of
+them, the claim shrinks to the definition. What may be ours is
+only that definition, at equal compute and money and censored, as part of D1. It is not a trigger:
+it describes a system already level with its comparison at some budget, so it cannot warn
+([C10](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget)).
+
+"Matched budget" is also two matches. Matched money gives the system as many parallel copies as the
+money buys; matched wall-clock time gives the organisation its headcount. The verdict, and with it
+t\*, depends on which, so it is stated under both.
 
 Cost needs as much care as time. Whose wage is used changes the ratio
 [4.3](numbers.md#cog-wage-spread)-fold (F1). Inference spending buys score: the cost per ARC-AGI task
@@ -713,20 +777,34 @@ superintelligent at level alpha on battery B if, in at least a fraction alpha of
 clusters, its elicited score (under a stated elicitation budget E) beats the score of the named
 organisation O_k for cluster k, with both sides given wall-clock time t_k and budget b_k (compute at
 a declared price plus money), on items drawn from B's regime-held pool, refreshed on a cycle shorter
-than the battery's useful life, and with O_k's tools frozen at a declared date. "Best available
+than the battery's useful life, and with O_k's tools frozen at a declared date. The verdict is stated
+under both matches, money and wall-clock time. "Best available
 organisation" has to be named, because human baselines vary with context (METR's baseliners took
 [5](numbers.md#cog-baseliner-slowdown-low) to [18](numbers.md#cog-baseliner-slowdown-high) times as long as maintainers) [@kwa2025horizon] and because larger human groups do not always beat smaller ones
 [@aiimpacts2016coordinated]. Genewein et al.'s reference collective of tens of thousands of experts
 working [10 yr](numbers.md#cog-asi-collective-years) is hypothetical and cannot be measured
 [@genewein2026agiasi]; contest winners and real research staffs can.
 
-What survives the search, as a claim about our search: matching both time and budget, a refreshed
-held-out battery with institutional baselines across clusters, the alpha fraction, and (from this
-chapter) the crossover budget t\* as the quantity to track. Label: **extends prior work**. The
-closest prior work is Genewein et al. [@genewein2026agiasi], Ngo's (t,n)-AGI, which beats "any group
-of n humans working together" for time t and treats superintelligence as a "(1 year, 8
-billion)-AGI" [@ngo2023tagi], Aguirre's "large collections of top human experts ... if combined"
-[@aguirre2025ktfh], and the RSP's whole-staff comparison at matched cost [@anthropic2026rsp].
+What survives the search and level 1, as a claim about those searches: time and money matched
+together against a named organisation, a refreshed, regime-held battery with institutional baselines
+across clusters, the alpha fraction, and t\* defined at equal compute and money as the largest tested
+crossing, censored and never extrapolated. Tracking a crossover between AI and human performance is
+not ours [@wijk2024rebench; @robinson2026horizons]. Label: **extends prior work**, and as a
+definition only
+([C10](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget)).
+The closest prior work is Robinson's crossover [@robinson2026horizons], Genewein et al.
+[@genewein2026agiasi], Ngo's (t,n)-AGI, which beats "any group of n humans working together" for
+time t and treats superintelligence as a "(1 year, 8 billion)-AGI" [@ngo2023tagi], Aguirre's "large
+collections of top human experts ... if combined" [@aguirre2025ktfh], and the RSP's whole-staff
+comparison at matched cost [@anthropic2026rsp].
+
+D1 holds only once a system already beats an institution, and near the line elicited scores are lower
+bounds, so D1 cannot warn; the protocol acts on the line before it. Nor can its pass condition be
+tested yet. That condition is a verdict stable when the organisation changes within its class, and a
+fraction won that rises smoothly enough with effective compute to extrapolate. E1 found
+[5 clusters](numbers.md#e1-clusters-baselined) with some human comparison in public data and
+[3 clusters](numbers.md#e1-clusters-verdict) with a bar a model wins or loses, none an organisation at
+matched budget. E21 must build the baselines, and has not run.
 
 Steelman against D1 itself: Scher et al. define ASI by harm ("sufficiently superhuman cognitive
 performance that it could plan and successfully execute the destruction of humanity") and add a
@@ -739,34 +817,43 @@ D1 in spirit but has no test.
 
 ## What this perspective contributes to the line
 
-Three quantities from this chapter are worth triggering on or limiting. Each is a candidate, not a
-finding; none has been tested against an adversary.
+Three quantities from this chapter are worth measuring. None is a trigger, and none has been tested
+against an adversary.
 
-1. **Matched-budget AI-research capability against an institution, tracked as the crossover budget
+1. **Matched-budget AI-research capability against an institution, with the crossover budget
    t\*.** The AI-research cluster of D1, on elicited capability, against a named team or research
-   staff with equal time, compute and money, at several budgets. Measurement: the matched-budget team battery, using
-   contests for the baseline and the regime's held-out items for the tasks. It ties directly to the
-   loop (D2) and is the only cognitive quantity that can lead rather than lag. Weakest point:
-   long-budget human baselines are scarce (only [5](numbers.md#cog-th11-long-baselined) of
-   METR's [31 tasks](numbers.md#cog-th11-long-tasks) over [8 h](numbers.md#cog-th11-long-threshold) have one), and near the line
+   staff with equal time, compute and money, at a grid of budgets fixed in advance. Measurement: the
+   matched-budget team battery (E21), using contests for the baseline and the regime's held-out
+   items for the tasks. It is a definition, not a warning: it holds only once a system already beats
+   the institution, so the protocol acts on the line before it
+   ([C10](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget)).
+   t\* is prior work as a quantity [@wijk2024rebench; @robinson2026horizons]; only its definition at
+   equal compute and money, censored at the largest budget tested, may be ours. Weakest point:
+   long-budget human baselines are scarce (only [5](numbers.md#cog-th11-long-baselined) of METR's
+   [31 tasks](numbers.md#cog-th11-long-tasks) over [8 h](numbers.md#cog-th11-long-threshold) have
+   one), no public cluster has an organisation baseline at matched budget (E1), and near the line
    elicitation has no demonstrations to work from.
 2. **Inference-held labour capacity, n times s.** Copies times speed, computed from accounted chips
    and inspector-measured per-instance throughput, not from demonstrations. It turns the copies and
-   speed kinds of advantage into a physical quantity the compute channel sees. Weakest point: it
+   speed kinds of advantage into a physical quantity the compute channel sees. The claims file does
+   not keep it as a contribution, and Part II leaves serving capacity unlimited. Weakest point: it
    overstates real capacity by an unmeasured parallelisation factor, and the per-instance cost falls
    with distillation and algorithmic progress, so the same chips hold more copies each year.
 3. **Generality with closure.** The number of decisive clusters at the institutional bar, together
    with whether any narrow optimiser feeds a covered system's training, code or compute. Measurement:
-   the regime-held cross-cluster battery and sealed provenance declarations. Weakest point: there is
-   no institutional baseline for persuasion or biology, and provenance declarations are only as good
-   as the inspection behind them.
+   the regime-held cross-cluster battery and sealed provenance declarations. G lags, and E1 could not
+   count it from public data; the closure half enters Part II as the rule that a narrow optimiser
+   inside a covered loop counts as part of it (C11(b), untested). Weakest point: there is no
+   institutional baseline for persuasion or biology, and provenance declarations are only as good as
+   the inspection behind them.
 
 A condition runs under all three: the regime holds its own test items, audits them for errors,
 refreshes them faster than the [1.3 yr](numbers.md#cog-fm-useful-life) the fastest-saturating
 battery lasted, and charges every score with the inference and elicitation that produced it.
 
 What the protocol must change because of this chapter. D1 stays the definition the protocol
-protects but is not a trigger, because it saturates and cannot be elicited robustly near the line.
+protects but is not a trigger: it holds only once a system is already ahead, so it cannot warn, and
+it saturates and cannot be elicited robustly near the line.
 Weapons-relevant science and persuasion leave the superintelligence line and become misuse
 reporting. Narrow systems are exempt by default, and lose the exemption when they sit inside a
 covered system's loop. Copies and speed are verified through compute accounting, not evaluation.

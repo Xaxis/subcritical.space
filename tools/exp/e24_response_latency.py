@@ -17,9 +17,16 @@ and every dated response the sources give, with its type:
 Findings with no halt by the end of what the sources cover are censored there. For each type the
 script takes the first response per finding and reports the empirical median with a case
 bootstrap; for halts, the Kaplan-Meier median and a log-normal fitted with censoring, the share of
-findings never halted, and the share of halts later reversed. A sensitivity analysis keeps only the
-first finding per programme, since one state's repeated tests dominate the table. The record is
-thin (thirteen findings from six programmes reach the halt analysis), and the script says what it
+findings never halted, and the share of halts later reversed.
+
+The halt analysis leads with findings made while the party was still in the treaty it was found
+violating. A finding after the party's withdrawal took effect (the date the source gives, in the
+exit_effective column) answers a breakout already completed and an exit already made, not a
+breakout in progress under the regime, which is what C1's T_resp is about: the DPRK's nuclear
+tests from 2006 on. They still breached the Security Council's demands, so they stay in the table
+and their figures are reported apart, with every finding pooled. A second sensitivity keeps only
+the first finding per programme, since one state's repeated findings dominate the table. The record
+is thin (eight findings from six programmes in the lead halt analysis), and the script says what it
 does and does not support rather than forcing a fit.
 
 All randomness comes from one numpy generator seeded with SEED. No data are fetched: the input is
@@ -196,7 +203,21 @@ def main() -> int:
         out["days"] = {c: [int(v[0]), int(v[1])] for c, v in items}
         return out
 
-    halt = halt_stats()
+    # Findings after the party's withdrawal from the treaty took effect, by programme.
+    exit_effective = {}
+    for r in rows:
+        if r["exit_effective"]:
+            if r["response_type"] != "exit":
+                raise SystemExit(f"{r['case']}: an effective withdrawal date belongs on an exit row")
+            d = to_date(r["exit_effective"])
+            p = r["programme"]
+            exit_effective[p] = min(d, exit_effective.get(p, d))
+    after_exit = {c for c, f in findings.items()
+                  if f["programme"] in exit_effective and to_date(f["date"]) >= exit_effective[f["programme"]]}
+    in_treaty = set(findings) - after_exit
+
+    halt = halt_stats(in_treaty)
+    halt_all = halt_stats(fit=False)
     first_finding = {}
     for c, f in sorted(findings.items(), key=lambda kv: to_date(kv[1]["date"])):
         first_finding.setdefault(f["programme"], c)
@@ -204,13 +225,15 @@ def main() -> int:
     halt_first = halt_stats(firsts, fit=False)
     statement_first = empirical("statement", firsts)
 
-    halted = [v for v in first["halt"].values() if v[1] == 1]
+    halted_all = [v for v in first["halt"].values() if v[1] == 1]
+    halted = [v for v in halted_all if v[2]["case"] in in_treaty]
     reversed_ = [v for v in halted if v[2]["reversed_date"]]
+    reversed_all = [v for v in halted_all if v[2]["reversed_date"]]
     durable = {v[2]["case"]: (days(v[2]["response_date"], v[2]["reversed_date"]) if v[2]["reversed_date"] else None)
-               for v in halted}
+               for v in halted_all}
 
     # ---- Numbers ---------------------------------------------------------------------------
-    if halt["km_median_days"] is None or halt_first["km_median_days"] is None:
+    if None in (halt["km_median_days"], halt_all["km_median_days"], halt_first["km_median_days"]):
         raise SystemExit("fewer than half the findings are ever halted: the Kaplan-Meier median does not exist")
     pct, pct_hi = f"{plo * 100:.0f}th", f"{phi * 100:.0f}th"
     yr = lambda d: d / YEAR  # noqa: E731
@@ -235,11 +258,11 @@ def main() -> int:
     res.number("e24-sanctions-median-days-hi", sanctions["hi"], unit="days", fmt=",.0f",
                label=f"the same median, {pct_hi} percentile of resampling the findings")
     res.number("e24-halt-findings", halt["n"], unit="findings", fmt=",.0f",
-               label="findings in the halt analysis (those whose sources say whether a halt followed)")
+               label="findings in the halt analysis: made while the party was in the treaty, with sources that say whether a halt followed")
     res.number("e24-halt-share-never", halt["share_never"], fmt="%",
                label="share of those findings followed by no halt by the end of what the sources cover")
     res.number("e24-halt-median-if-halted-years", yr(halt["median_if_halted_days"]), unit="years", fmt=".1f",
-               label="median years from a finding to the first halt, among findings that were halted")
+               label="median years from a finding to the first halt, among those findings that were halted (the unhalted left out)")
     res.number("e24-halt-km-median-years", yr(halt["km_median_days"]), unit="years", fmt=".1f",
                label="Kaplan-Meier median years from a finding to a halt, findings never halted censored")
     res.number("e24-halt-km-median-years-lo", yr(halt["km_lo_days"]), unit="years", fmt=".1f",
@@ -252,13 +275,21 @@ def main() -> int:
                label=f"the log-normal median, {pct} percentile of resampling the findings")
     res.number("e24-halt-lognormal-median-years-hi", yr(halt["lognormal"]["median_hi_days"]), unit="years", fmt=".1f",
                label=f"the log-normal median, {pct_hi} percentile of resampling the findings")
+    res.number("e24-halt-after-exit", len(after_exit & set(first["halt"])), unit="findings", fmt=",.0f",
+               label="findings made after the party's withdrawal from the treaty took effect, left out of the halt analysis")
+    res.number("e24-halt-findings-all", halt_all["n"], unit="findings", fmt=",.0f",
+               label="findings with a halt record, including those after the party's withdrawal")
+    res.number("e24-halt-share-never-all", halt_all["share_never"], fmt="%",
+               label="share never halted, every finding including those after the party's withdrawal")
+    res.number("e24-halt-km-median-years-all", yr(halt_all["km_median_days"]), unit="years", fmt=".1f",
+               label="Kaplan-Meier median years to a halt, every finding including those after the party's withdrawal")
     res.number("e24-halt-first-km-median-years", yr(halt_first["km_median_days"]), unit="years", fmt=".1f",
                label="Kaplan-Meier median years to a halt, first finding per programme only")
     res.number("e24-halt-first-share-never", halt_first["share_never"], fmt="%",
                label="share never halted, first finding per programme only")
     res.number("e24-halt-share-reversed", len(reversed_) / len(halted), fmt="%",
-               label="share of halts later reversed or shown incomplete in the same sources")
-    res.number("e24-halt-min-days", min(v[0] for v in halted), unit="days", fmt=",.0f",
+               label="share of halts in the halt analysis later reversed or shown incomplete in the same sources")
+    res.number("e24-halt-min-days", min(v[0] for v in halted_all), unit="days", fmt=",.0f",
                label="fastest halt after a finding in the table")
     res.number("e24-military-max-days", military["max"], unit="days", fmt=",.0f",
                label="slowest of the strikes in the table, days after the attack they answered")
@@ -281,7 +312,11 @@ def main() -> int:
     res.detail("responses", table)
     res.detail("first_response", {"statement": statement, "sanctions": sanctions, "military": military,
                                   "exit": exit_, "statement_first_finding_only": statement_first})
-    res.detail("halt", halt)
+    res.detail("halt", {**halt, "cases": sorted(in_treaty & set(first["halt"]))})
+    res.detail("halt_after_exit", {"exit_effective": {p: d.isoformat() for p, d in exit_effective.items()},
+                                   "findings": sorted(after_exit)})
+    res.detail("halt_all_findings", {**halt_all, "share_reversed": len(reversed_all) / len(halted_all),
+                                     "median_if_halted_years": yr(halt_all["median_if_halted_days"])})
     res.detail("halt_first_finding_only", {**halt_first, "cases": sorted(firsts)})
     res.detail("halt_days_until_reversed", durable)
     res.detail("bootstrap", {"draws": BOOT, "lognormal_draws": BOOT_FIT})

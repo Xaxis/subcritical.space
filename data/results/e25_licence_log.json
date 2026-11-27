@@ -1,0 +1,1477 @@
+{
+  "data": [
+    {
+      "sha256": "0cc5d81131cca61998461e72d3eaac2618faecc2f9522e0b13578464361b9d91",
+      "url": "https://bdn.bitcoin.lu.ke/headers/0",
+      "what": "Bitcoin block headers from height 0 (block-dn REST service)"
+    },
+    {
+      "sha256": "2080fc3bce149f2db68b5d1f5874d0afa7fdfbd78567c7615727a060f19283e4",
+      "url": "https://bdn.bitcoin.lu.ke/headers/100000",
+      "what": "Bitcoin block headers from height 100000 (block-dn REST service)"
+    },
+    {
+      "sha256": "c1b7d5fd9b8fbcb287b5124de1094788a96936772ea9603574c27a3bd9a18ac7",
+      "url": "https://bdn.bitcoin.lu.ke/headers/200000",
+      "what": "Bitcoin block headers from height 200000 (block-dn REST service)"
+    },
+    {
+      "sha256": "e69925cfae1ab36306eb2f65422882959680f367fac682b5c5dce44aa3992ec0",
+      "url": "https://bdn.bitcoin.lu.ke/headers/300000",
+      "what": "Bitcoin block headers from height 300000 (block-dn REST service)"
+    },
+    {
+      "sha256": "355c6bd12a0acda2f685882d95e76209cb6e03a83afe31fc04f1a78720fa1d32",
+      "url": "https://bdn.bitcoin.lu.ke/headers/400000",
+      "what": "Bitcoin block headers from height 400000 (block-dn REST service)"
+    },
+    {
+      "sha256": "db244aa4047567d0a11f5b10b3895a137652e350d850380c3b96c728b8716bc6",
+      "url": "https://bdn.bitcoin.lu.ke/headers/500000",
+      "what": "Bitcoin block headers from height 500000 (block-dn REST service)"
+    },
+    {
+      "sha256": "0c457aded57408bb41ef4e9bc3a54082cfcdf6f801706143f81502ec7e97372c",
+      "url": "https://bdn.bitcoin.lu.ke/headers/600000",
+      "what": "Bitcoin block headers from height 600000 (block-dn REST service)"
+    },
+    {
+      "sha256": "b4cda7b9c7cde790de351f3bdbc94ea2f68eba1da26b926008b43786772a7428",
+      "url": "https://bdn.bitcoin.lu.ke/headers/700000",
+      "what": "Bitcoin block headers from height 700000 (block-dn REST service)"
+    },
+    {
+      "sha256": "cd2ea23ba4e5819a22470f00f3a2475369f9b496065a592f0950233d4925d525",
+      "url": "https://bdn.bitcoin.lu.ke/headers/800000",
+      "what": "Bitcoin block headers from height 800000 (block-dn REST service)"
+    },
+    {
+      "sha256": "1fc33f9a0e53b0fa92bf2f3d38b1bd7298a102799a55f4ac12699e16c55dbd84",
+      "url": "https://bdn.bitcoin.lu.ke/headers/900000",
+      "what": "Bitcoin block headers from height 900000 (block-dn REST service)"
+    },
+    {
+      "sha256": "3d89b5613b4780cb4b304e9f1590fa1a6a5d599626d8092261ce06d29af198ae",
+      "url": "https://blockstream.info/api/block-height/100000",
+      "what": "block hash at height 100000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "b6387584cd72513d00e9373d9c2d8b07e18085988aee91d96d5eebeac656ec55",
+      "url": "https://blockstream.info/api/block-height/200000",
+      "what": "block hash at height 200000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "1ab25b45f6e50251a75a0baaf9d5c74906d78a5aa7300385d708075d3e291c4c",
+      "url": "https://blockstream.info/api/block-height/300000",
+      "what": "block hash at height 300000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "ec407a4cf08cc618d4722d6ad2db42834c6e9136c1dc248c091b96f2d98ff14f",
+      "url": "https://blockstream.info/api/block-height/400000",
+      "what": "block hash at height 400000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "18d710c3b6b2404b42606ff78c839d7332f5772f46450edc64fdc3a7f3718e08",
+      "url": "https://blockstream.info/api/block-height/500000",
+      "what": "block hash at height 500000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "975a64bed79b9a32f09d6e41107b5d1e0eb0694a5c6048b0f215f17d888bcd89",
+      "url": "https://blockstream.info/api/block-height/600000",
+      "what": "block hash at height 600000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "8771374000c2124b33fb17b14e614f634037d8c2a0650680eb2e8cd84f28ba81",
+      "url": "https://blockstream.info/api/block-height/700000",
+      "what": "block hash at height 700000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "6ae49c3e27772636ad677f9026a00f93cc1521887880ef2d1829d7081840ffc4",
+      "url": "https://blockstream.info/api/block-height/800000",
+      "what": "block hash at height 800000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "ae60099bf42c0a56feb35f34ab4496d864e21dcca90b4ec09dc7bba3b5ac4a28",
+      "url": "https://blockstream.info/api/block-height/900000",
+      "what": "block hash at height 900000 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "6c1ead426f0a1dad3a02ade14489087d5fe36531266872e901cf67f405d52564",
+      "url": "https://blockstream.info/api/block-height/976999",
+      "what": "block hash at height 976999 (Blockstream Esplora API)"
+    },
+    {
+      "sha256": "0fac2bd2c5cb87d684f522e39c4d04a604c75a148e7f5ef447723e948dbd5411",
+      "url": "https://mempool.space/api/v1/mining/difficulty-adjustments/all",
+      "what": "every difficulty change with its height and time (mempool.space API)"
+    }
+  ],
+  "details": {
+    "anchor_latency_decade": {
+      "1": {
+        "max_hours": 2.321,
+        "p50_hours": 0.114,
+        "p99_hours": 0.752
+      },
+      "12": {
+        "max_hours": 7.787,
+        "p50_hours": 1.896,
+        "p99_hours": 3.604
+      },
+      "3": {
+        "max_hours": 3.898,
+        "p50_hours": 0.435,
+        "p99_hours": 1.387
+      },
+      "6": {
+        "max_hours": 6.044,
+        "p50_hours": 0.922,
+        "p99_hours": 2.176
+      }
+    },
+    "cross_checks": {
+      "esplora_hashes_matched": 10,
+      "mempool_difficulty_changes_matched": 469
+    },
+    "eras": {
+      "all": {
+        "first_start": "2009-01-03",
+        "height": 0
+      },
+      "decade": {
+        "first_start": "2016-11-21",
+        "height": 439953
+      },
+      "mature": {
+        "first_start": "2009-12-30",
+        "height": 32256
+      }
+    },
+    "false_stop_share": {
+      "0.3": {
+        "all": {
+          "0": 0.97947,
+          "1008": 0.0,
+          "144": 0.00057,
+          "5": 0.00277
+        },
+        "decade": {
+          "0": 0.99425,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 1e-05
+        },
+        "mature": {
+          "0": 0.97927,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 2e-05
+        }
+      },
+      "0.35": {
+        "all": {
+          "0": 0.98001,
+          "1008": 0.0,
+          "144": 0.00171,
+          "5": 0.0043
+        },
+        "decade": {
+          "0": 0.99442,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 2e-05
+        },
+        "mature": {
+          "0": 0.97975,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 3e-05
+        }
+      },
+      "0.4": {
+        "all": {
+          "0": 0.98067,
+          "1008": 0.0,
+          "144": 0.00328,
+          "5": 0.00696
+        },
+        "decade": {
+          "0": 0.99462,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00015
+        },
+        "mature": {
+          "0": 0.98035,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00013
+        }
+      },
+      "0.45": {
+        "all": {
+          "0": 0.98144,
+          "1008": 0.0,
+          "144": 0.0059,
+          "5": 0.01114
+        },
+        "decade": {
+          "0": 0.99485,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00043
+        },
+        "mature": {
+          "0": 0.98104,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00036
+        }
+      },
+      "0.5": {
+        "all": {
+          "0": 0.98231,
+          "1008": 0.00481,
+          "144": 0.0132,
+          "5": 0.01638
+        },
+        "decade": {
+          "0": 0.99511,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00108
+        },
+        "mature": {
+          "0": 0.98184,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00086
+        }
+      },
+      "0.55": {
+        "all": {
+          "0": 0.98322,
+          "1008": 0.00923,
+          "144": 0.01652,
+          "5": 0.02149
+        },
+        "decade": {
+          "0": 0.99541,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00257
+        },
+        "mature": {
+          "0": 0.98274,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00204
+        }
+      },
+      "0.6": {
+        "all": {
+          "0": 0.98427,
+          "1008": 0.01433,
+          "144": 0.01973,
+          "5": 0.0265
+        },
+        "decade": {
+          "0": 0.99572,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00586
+        },
+        "mature": {
+          "0": 0.98377,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.00466
+        }
+      },
+      "0.65": {
+        "all": {
+          "0": 0.98538,
+          "1008": 0.01753,
+          "144": 0.02189,
+          "5": 0.03372
+        },
+        "decade": {
+          "0": 0.9961,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.01358
+        },
+        "mature": {
+          "0": 0.98491,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.01079
+        }
+      },
+      "0.7": {
+        "all": {
+          "0": 0.98657,
+          "1008": 0.0197,
+          "144": 0.02284,
+          "5": 0.04751
+        },
+        "decade": {
+          "0": 0.9965,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.02861
+        },
+        "mature": {
+          "0": 0.98612,
+          "1008": 0.0,
+          "144": 0.0,
+          "5": 0.02287
+        }
+      },
+      "0.75": {
+        "all": {
+          "0": 0.98789,
+          "1008": 0.02077,
+          "144": 0.02665,
+          "5": 0.07169
+        },
+        "decade": {
+          "0": 0.99696,
+          "1008": 0.0,
+          "144": 0.00228,
+          "5": 0.05497
+        },
+        "mature": {
+          "0": 0.98749,
+          "1008": 0.0,
+          "144": 0.00128,
+          "5": 0.04472
+        }
+      },
+      "0.8": {
+        "all": {
+          "0": 0.98938,
+          "1008": 0.02341,
+          "144": 0.02943,
+          "5": 0.11254
+        },
+        "decade": {
+          "0": 0.99748,
+          "1008": 0.0,
+          "144": 0.00462,
+          "5": 0.10296
+        },
+        "mature": {
+          "0": 0.98903,
+          "1008": 0.0,
+          "144": 0.0026,
+          "5": 0.08467
+        }
+      },
+      "0.85": {
+        "all": {
+          "0": 0.99095,
+          "1008": 0.02514,
+          "144": 0.03596,
+          "5": 0.18091
+        },
+        "decade": {
+          "0": 0.99799,
+          "1008": 0.0,
+          "144": 0.01098,
+          "5": 0.18693
+        },
+        "mature": {
+          "0": 0.99065,
+          "1008": 0.0,
+          "144": 0.00618,
+          "5": 0.15494
+        }
+      },
+      "0.9": {
+        "all": {
+          "0": 0.99262,
+          "1008": 0.02865,
+          "144": 0.04863,
+          "5": 0.28947
+        },
+        "decade": {
+          "0": 0.99854,
+          "1008": 0.0,
+          "144": 0.0242,
+          "5": 0.32059
+        },
+        "mature": {
+          "0": 0.99238,
+          "1008": 0.0,
+          "144": 0.019,
+          "5": 0.26713
+        }
+      },
+      "0.95": {
+        "all": {
+          "0": 0.99442,
+          "1008": 0.02904,
+          "144": 0.07896,
+          "5": 0.45651
+        },
+        "decade": {
+          "0": 0.99918,
+          "1008": 0.0,
+          "144": 0.061,
+          "5": 0.52688
+        },
+        "mature": {
+          "0": 0.99423,
+          "1008": 0.0,
+          "144": 0.05012,
+          "5": 0.43973
+        }
+      },
+      "1.0": {
+        "all": {
+          "0": 0.99638,
+          "1008": 0.04644,
+          "144": 0.19573,
+          "5": 0.68387
+        },
+        "decade": {
+          "0": 0.99975,
+          "1008": 0.02064,
+          "144": 0.23813,
+          "5": 0.80787
+        },
+        "mature": {
+          "0": 0.99625,
+          "1008": 0.01777,
+          "144": 0.17086,
+          "5": 0.67451
+        }
+      },
+      "1.05": {
+        "all": {
+          "0": 0.99773,
+          "1008": 0.07379,
+          "144": 0.65222,
+          "5": 0.84011
+        },
+        "decade": {
+          "0": 0.99997,
+          "1008": 0.05646,
+          "144": 0.83294,
+          "5": 0.97455
+        },
+        "mature": {
+          "0": 0.99766,
+          "1008": 0.04594,
+          "144": 0.64307,
+          "5": 0.83539
+        }
+      },
+      "1.1": {
+        "all": {
+          "0": 0.99847,
+          "1008": 0.40814,
+          "144": 0.79084,
+          "5": 0.89617
+        },
+        "decade": {
+          "0": 1.0,
+          "1008": 0.54319,
+          "144": 0.98435,
+          "5": 0.99722
+        },
+        "mature": {
+          "0": 0.99841,
+          "1008": 0.39175,
+          "144": 0.78472,
+          "5": 0.89257
+        }
+      },
+      "1.15": {
+        "all": {
+          "0": 0.99899,
+          "1008": 0.72616,
+          "144": 0.84513,
+          "5": 0.93345
+        },
+        "decade": {
+          "0": 1.0,
+          "1008": 0.94914,
+          "144": 1.0,
+          "5": 1.0
+        },
+        "mature": {
+          "0": 0.99895,
+          "1008": 0.72046,
+          "144": 0.83977,
+          "5": 0.93115
+        }
+      },
+      "1.2": {
+        "all": {
+          "0": 0.9993,
+          "1008": 0.79466,
+          "144": 0.8994,
+          "5": 0.96284
+        },
+        "decade": {
+          "0": 1.0,
+          "1008": 0.99355,
+          "144": 1.0,
+          "5": 1.0
+        },
+        "mature": {
+          "0": 0.99928,
+          "1008": 0.79084,
+          "144": 0.89592,
+          "5": 0.96155
+        }
+      },
+      "1.25": {
+        "all": {
+          "0": 0.99953,
+          "1008": 0.84174,
+          "144": 0.94505,
+          "5": 0.97912
+        },
+        "decade": {
+          "0": 1.0,
+          "1008": 1.0,
+          "144": 1.0,
+          "5": 1.0
+        },
+        "mature": {
+          "0": 0.99952,
+          "1008": 0.83902,
+          "144": 0.94315,
+          "5": 0.9784
+        }
+      },
+      "1.3": {
+        "all": {
+          "0": 0.99971,
+          "1008": 0.88701,
+          "144": 0.96482,
+          "5": 0.99033
+        },
+        "decade": {
+          "0": 1.0,
+          "1008": 1.0,
+          "144": 1.0,
+          "5": 1.0
+        },
+        "mature": {
+          "0": 0.9997,
+          "1008": 0.88348,
+          "144": 0.9636,
+          "5": 0.98999
+        }
+      }
+    },
+    "floor_frontier": [
+      {
+        "all": {
+          "budget_over_nominal": 3.4034,
+          "outage_hours_at_start": 153.63,
+          "slack_blocks": 276.5,
+          "worst_start": "2009-08-14"
+        },
+        "decade": {
+          "budget_over_nominal": 3.3348,
+          "outage_hours_at_start": 3.27,
+          "slack_blocks": 5.9,
+          "worst_start": "2021-06-27"
+        },
+        "floor": 0.3,
+        "mature": {
+          "budget_over_nominal": 3.3365,
+          "outage_hours_at_start": 6.85,
+          "slack_blocks": 12.3,
+          "worst_start": "2010-08-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.9372,
+          "outage_hours_at_start": 175.42,
+          "slack_blocks": 368.4,
+          "worst_start": "2009-08-14"
+        },
+        "decade": {
+          "budget_over_nominal": 2.8588,
+          "outage_hours_at_start": 3.66,
+          "slack_blocks": 7.7,
+          "worst_start": "2021-06-27"
+        },
+        "floor": 0.35,
+        "mature": {
+          "budget_over_nominal": 2.8603,
+          "outage_hours_at_start": 6.85,
+          "slack_blocks": 14.4,
+          "worst_start": "2010-08-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.5987,
+          "outage_hours_at_start": 216.22,
+          "slack_blocks": 518.9,
+          "worst_start": "2009-07-25"
+        },
+        "decade": {
+          "budget_over_nominal": 2.5018,
+          "outage_hours_at_start": 3.96,
+          "slack_blocks": 9.5,
+          "worst_start": "2021-06-27"
+        },
+        "floor": 0.4,
+        "mature": {
+          "budget_over_nominal": 2.5031,
+          "outage_hours_at_start": 6.85,
+          "slack_blocks": 16.5,
+          "worst_start": "2010-08-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.3588,
+          "outage_hours_at_start": 299.37,
+          "slack_blocks": 808.3,
+          "worst_start": "2009-07-15"
+        },
+        "decade": {
+          "budget_over_nominal": 2.2243,
+          "outage_hours_at_start": 4.61,
+          "slack_blocks": 12.4,
+          "worst_start": "2021-06-27"
+        },
+        "floor": 0.45,
+        "mature": {
+          "budget_over_nominal": 2.2253,
+          "outage_hours_at_start": 6.85,
+          "slack_blocks": 18.5,
+          "worst_start": "2010-08-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.2045,
+          "outage_hours_at_start": 448.25,
+          "slack_blocks": 1344.7,
+          "worst_start": "2009-07-14"
+        },
+        "decade": {
+          "budget_over_nominal": 2.0029,
+          "outage_hours_at_start": 6.36,
+          "slack_blocks": 19.1,
+          "worst_start": "2017-11-11"
+        },
+        "floor": 0.5,
+        "mature": {
+          "budget_over_nominal": 2.0031,
+          "outage_hours_at_start": 6.85,
+          "slack_blocks": 20.6,
+          "worst_start": "2010-08-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1484,
+          "outage_hours_at_start": 723.64,
+          "slack_blocks": 2388.0,
+          "worst_start": "2009-06-03"
+        },
+        "decade": {
+          "budget_over_nominal": 1.822,
+          "outage_hours_at_start": 8.41,
+          "slack_blocks": 27.7,
+          "worst_start": "2021-06-26"
+        },
+        "floor": 0.55,
+        "mature": {
+          "budget_over_nominal": 1.822,
+          "outage_hours_at_start": 8.41,
+          "slack_blocks": 27.7,
+          "worst_start": "2021-06-26"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1332,
+          "outage_hours_at_start": 1022.51,
+          "slack_blocks": 3681.0,
+          "worst_start": "2009-05-31"
+        },
+        "decade": {
+          "budget_over_nominal": 1.6719,
+          "outage_hours_at_start": 11.55,
+          "slack_blocks": 41.6,
+          "worst_start": "2021-06-26"
+        },
+        "floor": 0.6,
+        "mature": {
+          "budget_over_nominal": 1.6719,
+          "outage_hours_at_start": 11.55,
+          "slack_blocks": 41.6,
+          "worst_start": "2021-06-26"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1279,
+          "outage_hours_at_start": 1291.78,
+          "slack_blocks": 5038.0,
+          "worst_start": "2009-05-31"
+        },
+        "decade": {
+          "budget_over_nominal": 1.5462,
+          "outage_hours_at_start": 16.89,
+          "slack_blocks": 65.9,
+          "worst_start": "2021-06-26"
+        },
+        "floor": 0.65,
+        "mature": {
+          "budget_over_nominal": 1.5462,
+          "outage_hours_at_start": 16.89,
+          "slack_blocks": 65.9,
+          "worst_start": "2021-06-26"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1234,
+          "outage_hours_at_start": 1522.63,
+          "slack_blocks": 6395.0,
+          "worst_start": "2009-05-31"
+        },
+        "decade": {
+          "budget_over_nominal": 1.4409,
+          "outage_hours_at_start": 26.97,
+          "slack_blocks": 113.3,
+          "worst_start": "2021-06-25"
+        },
+        "floor": 0.7,
+        "mature": {
+          "budget_over_nominal": 1.4409,
+          "outage_hours_at_start": 26.97,
+          "slack_blocks": 113.3,
+          "worst_start": "2021-06-25"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1213,
+          "outage_hours_at_start": 1726.77,
+          "slack_blocks": 7770.4,
+          "worst_start": "2009-05-31"
+        },
+        "decade": {
+          "budget_over_nominal": 1.3537,
+          "outage_hours_at_start": 44.59,
+          "slack_blocks": 200.7,
+          "worst_start": "2021-06-18"
+        },
+        "floor": 0.75,
+        "mature": {
+          "budget_over_nominal": 1.3537,
+          "outage_hours_at_start": 44.59,
+          "slack_blocks": 200.7,
+          "worst_start": "2021-06-18"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.121,
+          "outage_hours_at_start": 1908.79,
+          "slack_blocks": 9162.2,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.279,
+          "outage_hours_at_start": 63.59,
+          "slack_blocks": 305.2,
+          "worst_start": "2021-06-18"
+        },
+        "floor": 0.8,
+        "mature": {
+          "budget_over_nominal": 1.279,
+          "outage_hours_at_start": 63.59,
+          "slack_blocks": 305.2,
+          "worst_start": "2021-06-18"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.121,
+          "outage_hours_at_start": 2069.88,
+          "slack_blocks": 10556.4,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.2132,
+          "outage_hours_at_start": 80.48,
+          "slack_blocks": 410.4,
+          "worst_start": "2021-06-18"
+        },
+        "floor": 0.85,
+        "mature": {
+          "budget_over_nominal": 1.2132,
+          "outage_hours_at_start": 80.48,
+          "slack_blocks": 410.4,
+          "worst_start": "2021-06-18"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.121,
+          "outage_hours_at_start": 2213.07,
+          "slack_blocks": 11950.6,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.161,
+          "outage_hours_at_start": 109.44,
+          "slack_blocks": 590.9,
+          "worst_start": "2021-05-15"
+        },
+        "floor": 0.9,
+        "mature": {
+          "budget_over_nominal": 1.161,
+          "outage_hours_at_start": 109.44,
+          "slack_blocks": 590.9,
+          "worst_start": "2021-05-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2341.19,
+          "slack_blocks": 13344.8,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.1308,
+          "outage_hours_at_start": 171.35,
+          "slack_blocks": 976.7,
+          "worst_start": "2021-05-14"
+        },
+        "floor": 0.95,
+        "mature": {
+          "budget_over_nominal": 1.1308,
+          "outage_hours_at_start": 171.35,
+          "slack_blocks": 976.7,
+          "worst_start": "2021-05-14"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2456.5,
+          "slack_blocks": 14739.0,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.1075,
+          "outage_hours_at_start": 235.54,
+          "slack_blocks": 1413.3,
+          "worst_start": "2021-05-13"
+        },
+        "floor": 1.0,
+        "mature": {
+          "budget_over_nominal": 1.1075,
+          "outage_hours_at_start": 235.54,
+          "slack_blocks": 1413.3,
+          "worst_start": "2021-05-13"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2560.83,
+          "slack_blocks": 16133.2,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.1002,
+          "outage_hours_at_start": 324.05,
+          "slack_blocks": 2041.5,
+          "worst_start": "2021-04-15"
+        },
+        "floor": 1.05,
+        "mature": {
+          "budget_over_nominal": 1.1002,
+          "outage_hours_at_start": 324.05,
+          "slack_blocks": 2041.5,
+          "worst_start": "2021-04-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2655.68,
+          "slack_blocks": 17527.5,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.0998,
+          "outage_hours_at_start": 417.9,
+          "slack_blocks": 2758.2,
+          "worst_start": "2021-04-15"
+        },
+        "floor": 1.1,
+        "mature": {
+          "budget_over_nominal": 1.0998,
+          "outage_hours_at_start": 417.9,
+          "slack_blocks": 2758.2,
+          "worst_start": "2021-04-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2742.28,
+          "slack_blocks": 18921.7,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.0997,
+          "outage_hours_at_start": 504.29,
+          "slack_blocks": 3479.6,
+          "worst_start": "2021-04-15"
+        },
+        "floor": 1.15,
+        "mature": {
+          "budget_over_nominal": 1.0997,
+          "outage_hours_at_start": 504.29,
+          "slack_blocks": 3479.6,
+          "worst_start": "2021-04-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2821.66,
+          "slack_blocks": 20316.0,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.0996,
+          "outage_hours_at_start": 583.48,
+          "slack_blocks": 4201.0,
+          "worst_start": "2021-04-15"
+        },
+        "floor": 1.2,
+        "mature": {
+          "budget_over_nominal": 1.0996,
+          "outage_hours_at_start": 583.48,
+          "slack_blocks": 4201.0,
+          "worst_start": "2021-04-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2894.7,
+          "slack_blocks": 21710.2,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.0995,
+          "outage_hours_at_start": 656.33,
+          "slack_blocks": 4922.5,
+          "worst_start": "2021-04-15"
+        },
+        "floor": 1.25,
+        "mature": {
+          "budget_over_nominal": 1.0995,
+          "outage_hours_at_start": 656.33,
+          "slack_blocks": 4922.5,
+          "worst_start": "2021-04-15"
+        }
+      },
+      {
+        "all": {
+          "budget_over_nominal": 2.1209,
+          "outage_hours_at_start": 2962.11,
+          "slack_blocks": 23104.5,
+          "worst_start": "2009-05-27"
+        },
+        "decade": {
+          "budget_over_nominal": 1.0994,
+          "outage_hours_at_start": 723.6,
+          "slack_blocks": 5644.1,
+          "worst_start": "2021-04-15"
+        },
+        "floor": 1.3,
+        "mature": {
+          "budget_over_nominal": 1.0994,
+          "outage_hours_at_start": 723.6,
+          "slack_blocks": 5644.1,
+          "worst_start": "2021-04-15"
+        }
+      }
+    ],
+    "harness": {
+      "assertions": "every check above is an assertion; the run stops on any failure",
+      "holder_stretch_at_longest_span": {
+        "0.5": {
+          "bound_days": 182.911,
+          "over_median_honest_span": 2.0421,
+          "ran_days": 182.897,
+          "slack": 20.6
+        },
+        "1.0": {
+          "bound_days": 101.127,
+          "over_median_honest_span": 1.129,
+          "ran_days": 101.12,
+          "slack": 1413.3
+        }
+      },
+      "log_proofs_checked": 215,
+      "real_header_chip_runs_agreeing": 48,
+      "replica_trials": 2000,
+      "rule_g_early_stops": 82,
+      "rule_g_only_early_stops": 62,
+      "rule_w_early_stops": 20,
+      "toy_fork_runs": 120
+    },
+    "headers_sha256": {
+      "heights": "0 to 976999",
+      "sha256": "606a0844473c121f86f271bf2ca32c465b3784d09a96efd0268ba2bc6a3be620"
+    },
+    "ledger_inputs": {
+      "def-days-per-year": 365.25,
+      "def-seconds-per-day": 86400.0,
+      "prot-licence-months": 3.0
+    },
+    "licence_spans": {
+      "all": {
+        "max_days": 193.649,
+        "max_days_raw_timestamps": 193.649,
+        "max_start": "2009-05-27",
+        "median_days": 88.695,
+        "min_days": 57.473,
+        "min_start": "2010-06-30",
+        "p01_days": 62.382,
+        "p99_days": 167.055,
+        "starts": 963851
+      },
+      "decade": {
+        "max_days": 100.384,
+        "max_days_raw_timestamps": 100.384,
+        "max_start": "2021-04-15",
+        "median_days": 89.565,
+        "min_days": 80.722,
+        "min_start": "2017-11-18",
+        "p01_days": 82.662,
+        "p99_days": 98.074,
+        "starts": 523898
+      },
+      "licence_blocks": 13149,
+      "mature": {
+        "max_days": 100.384,
+        "max_days_raw_timestamps": 100.384,
+        "max_start": "2021-04-15",
+        "median_days": 88.617,
+        "min_days": 57.473,
+        "min_start": "2010-06-30",
+        "p01_days": 62.218,
+        "p99_days": 98.068,
+        "starts": 931595
+      },
+      "nominal_days": 91.312
+    },
+    "longest_span_over_nominal_by_licence_length": {
+      "12_months": {
+        "blocks": 52596,
+        "decade": 1.0152,
+        "mature": 1.0152
+      },
+      "1_months": {
+        "blocks": 4383,
+        "decade": 1.2335,
+        "mature": 1.2335
+      },
+      "3_months": {
+        "blocks": 13149,
+        "decade": 1.0993,
+        "mature": 1.0993
+      },
+      "6_months": {
+        "blocks": 26298,
+        "decade": 1.0421,
+        "mature": 1.0421
+      }
+    },
+    "minimum_work": {
+      "chain_work_hashes": 1.0723664454059875e+29,
+      "fork_cost_honest_blocks": {
+        "one_day_minimum_work_only": 78.6,
+        "one_day_with_retargeting": 79.1,
+        "one_licence_minimum_work_only": 7177.9,
+        "one_licence_with_retargeting": 7178.3
+      },
+      "latest_bits": "0x17021673",
+      "lowest_at_licence_start": "2021-05-13",
+      "lowest_work_ratio_by_era": {
+        "all": 0.5459,
+        "decade": 0.5459,
+        "mature": 0.5459
+      },
+      "share_below": {
+        "0.6": 0.00546,
+        "0.7": 0.0271,
+        "0.8": 0.04018,
+        "0.9": 0.09325
+      }
+    },
+    "out_of_sample_by_year": [
+      {
+        "budget_days": 81.167,
+        "min_work_setting": 0.9219,
+        "rejected_share": 0.3381,
+        "starts": 59627,
+        "stopped_share": 0.49538,
+        "year": 2011,
+        "year_max_over_budget": 1.2227,
+        "year_min_over_setting": 0.6552
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 54526,
+        "stopped_share": 0.0,
+        "year": 2012,
+        "year_max_over_budget": 0.9358,
+        "year_min_over_setting": 1.4292
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 63433,
+        "stopped_share": 0.0,
+        "year": 2013,
+        "year_max_over_budget": 0.8287,
+        "year_min_over_setting": 1.5125
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 58865,
+        "stopped_share": 0.0,
+        "year": 2014,
+        "year_max_over_budget": 0.9113,
+        "year_min_over_setting": 1.6209
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 54321,
+        "stopped_share": 0.0,
+        "year": 2015,
+        "year_max_over_budget": 0.9214,
+        "year_min_over_setting": 1.5539
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 54851,
+        "stopped_share": 0.0,
+        "year": 2016,
+        "year_max_over_budget": 0.9104,
+        "year_min_over_setting": 1.5656
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 55928,
+        "stopped_share": 0.0,
+        "year": 2017,
+        "year_max_over_budget": 0.8913,
+        "year_min_over_setting": 1.5349
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 54498,
+        "stopped_share": 0.0,
+        "year": 2018,
+        "year_max_over_budget": 0.9716,
+        "year_min_over_setting": 1.134
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 54232,
+        "stopped_share": 0.0,
+        "year": 2019,
+        "year_max_over_budget": 0.9184,
+        "year_min_over_setting": 1.5381
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.0,
+        "starts": 53222,
+        "stopped_share": 0.0,
+        "year": 2020,
+        "year_max_over_budget": 0.9453,
+        "year_min_over_setting": 1.3734
+      },
+      {
+        "budget_days": 99.243,
+        "min_work_setting": 0.604,
+        "rejected_share": 0.09652,
+        "starts": 52686,
+        "stopped_share": 0.06309,
+        "year": 2021,
+        "year_max_over_budget": 1.0115,
+        "year_min_over_setting": 0.9037
+      },
+      {
+        "budget_days": 100.384,
+        "min_work_setting": 0.5459,
+        "rejected_share": 0.0,
+        "starts": 53188,
+        "stopped_share": 0.0,
+        "year": 2022,
+        "year_max_over_budget": 0.9244,
+        "year_min_over_setting": 1.6233
+      },
+      {
+        "budget_days": 100.384,
+        "min_work_setting": 0.5459,
+        "rejected_share": 0.0,
+        "starts": 53999,
+        "stopped_share": 0.0,
+        "year": 2023,
+        "year_max_over_budget": 0.9075,
+        "year_min_over_setting": 1.7661
+      },
+      {
+        "budget_days": 100.384,
+        "min_work_setting": 0.5459,
+        "rejected_share": 0.0,
+        "starts": 53473,
+        "stopped_share": 0.0,
+        "year": 2024,
+        "year_max_over_budget": 0.9218,
+        "year_min_over_setting": 1.6529
+      },
+      {
+        "budget_days": 100.384,
+        "min_work_setting": 0.5459,
+        "rejected_share": 0.0,
+        "starts": 53082,
+        "stopped_share": 0.0,
+        "year": 2025,
+        "year_max_over_budget": 0.9428,
+        "year_min_over_setting": 1.4783
+      },
+      {
+        "budget_days": 100.384,
+        "min_work_setting": 0.5459,
+        "rejected_share": 0.0,
+        "starts": 33510,
+        "stopped_share": 0.0,
+        "year": 2026,
+        "year_max_over_budget": 0.9307,
+        "year_min_over_setting": 1.5552
+      }
+    ],
+    "verifier": {
+      "fork_window_bytes_per_block": 64,
+      "header_bytes_per_nominal_day": 11520,
+      "note": "rule W must also keep, for any fork it will weigh, each ancestor's hash and chain work back to the fork point: 64 bytes a block",
+      "sha256_compressions_per_header": 3,
+      "state_bytes": 225,
+      "state_format": [
+        "<I32sII11I32s",
+        "<I32sIdd32sdd?"
+      ]
+    }
+  },
+  "experiment": "E25",
+  "name": "e25_licence_log",
+  "numbers": {
+    "e25-anchor6-p99": {
+      "fmt": ".1f",
+      "label": "99th percentile of the time for six blocks in the last ten years: the wait before a logged licence is anchored six deep (six is a design choice here)",
+      "note": "",
+      "unit": "hours",
+      "value": 2.176
+    },
+    "e25-block-hashes": {
+      "fmt": ".2e",
+      "label": "expected hash evaluations per block at the last difficulty in the record",
+      "note": "",
+      "unit": "hashes",
+      "value": 5.790728079745089e+23
+    },
+    "e25-budget-f100": {
+      "fmt": ".3f",
+      "label": "powered-time budget, over the nominal licence time, of a floor at 100% of the nominal block rate with the least slack that stopped no compliant chip on the record (1,413 blocks)",
+      "note": "",
+      "unit": "",
+      "value": 1.1075
+    },
+    "e25-budget-f50": {
+      "fmt": ".3f",
+      "label": "powered-time budget, over the nominal licence time, of a floor at 50% of the nominal block rate with the least slack that stopped no compliant chip on the record (21 blocks)",
+      "note": "",
+      "unit": "",
+      "value": 2.0031
+    },
+    "e25-budget-f90": {
+      "fmt": ".3f",
+      "label": "powered-time budget, over the nominal licence time, of a floor at 90% of the nominal block rate with the least slack that stopped no compliant chip on the record (591 blocks)",
+      "note": "",
+      "unit": "",
+      "value": 1.161
+    },
+    "e25-budget-least": {
+      "fmt": ".3f",
+      "label": "least powered-time budget, over the nominal licence time, of any floor and slack that stopped no compliant chip on the record: the longest honest span, approached as the floor rises, where the rule becomes a plain powered-time budget",
+      "note": "",
+      "unit": "",
+      "value": 1.0993456536618753
+    },
+    "e25-falsestop-check": {
+      "fmt": ".1%",
+      "label": "share of compliant chips stopped early at the formal check's random settings (licences of 5 to 60 blocks, floor 0.2 to 0.9 of the nominal rate, slack up to 5 blocks) on Bitcoin's real intervals",
+      "note": "the formal check's own share was 112 of 649 on simulated Poisson blocks",
+      "unit": "",
+      "value": 0.17075
+    },
+    "e25-falsestop-f100-s1008": {
+      "fmt": ".1%",
+      "label": "share stopped early with a floor at the nominal rate and a slack of a nominal week (1,008 blocks), same record",
+      "note": "",
+      "unit": "",
+      "value": 0.01777
+    },
+    "e25-falsestop-f90-s5": {
+      "fmt": ".1%",
+      "label": "share of compliant three-month licences stopped early with a floor at 90% of the nominal rate and a slack of 5 blocks, on the record since the minimum-difficulty era",
+      "note": "",
+      "unit": "",
+      "value": 0.26713
+    },
+    "e25-forge-day-hours": {
+      "fmt": ",.1f",
+      "label": "upper bound on the cost of ending licences one nominal day early under rule G, in hours of the whole honest network's hash rate",
+      "note": "",
+      "unit": "hours",
+      "value": 13.101328534283654
+    },
+    "e25-forge-licence-days": {
+      "fmt": ",.0f",
+      "label": "upper bound on what the minimum-work rule can make a forged fork of one licence period cost, in days of the whole honest network's hash rate at issuance; under rule G one such fork ends every reachable licence at once",
+      "note": "",
+      "unit": "days",
+      "value": 49.846460907782344
+    },
+    "e25-forge-licence-hashes": {
+      "fmt": ".2e",
+      "label": "upper bound on the hash evaluations of a forged fork of one licence period at the last difficulty, at the record's largest admissible minimum work",
+      "note": "",
+      "unit": "hashes",
+      "value": 4.1565211323063997e+27
+    },
+    "e25-headers": {
+      "fmt": ",.0f",
+      "label": "real Bitcoin block headers the verifier checked (linkage, proof of work, retargeting, median time); all passed",
+      "note": "",
+      "unit": "headers",
+      "value": 977000.0
+    },
+    "e25-licence-blocks": {
+      "fmt": ",.0f",
+      "label": "blocks in one licence period at Bitcoin's nominal ten-minute spacing",
+      "note": "",
+      "unit": "blocks",
+      "value": 13149.0
+    },
+    "e25-minwork-least": {
+      "fmt": ".3f",
+      "label": "lowest honest work per block within a licence, over the work at issuance, since the minimum-difficulty era (licence issued 2021-05-13): the most minimum work a chip could demand without stopping a compliant chip on the record",
+      "note": "",
+      "unit": "",
+      "value": 0.5458886889284856
+    },
+    "e25-net-hashrate": {
+      "fmt": ".2e",
+      "label": "honest network hash rate implied by the last difficulty at the nominal spacing; rule W stops an online chip early only with more than this, sustained",
+      "note": "",
+      "unit": "hashes/s",
+      "value": 9.651213466241815e+20
+    },
+    "e25-oos-2021": {
+      "fmt": ".1%",
+      "label": "share of licences issued in 2021 that a powered-time budget set at the longest honest span before 2021 would have stopped early (the 2021 fall in hash rate)",
+      "note": "",
+      "unit": "",
+      "value": 0.06309
+    },
+    "e25-oos-margin": {
+      "fmt": ".3f",
+      "label": "largest factor by which a year's longest honest span exceeded the longest before it, 2012 on (the margin a budget set on the past needed)",
+      "note": "",
+      "unit": "",
+      "value": 1.0115
+    },
+    "e25-oos-minwork-2021": {
+      "fmt": ".1%",
+      "label": "share of licences issued in 2021 in which a minimum work set on the record before 2021 would have refused an honest header",
+      "note": "",
+      "unit": "",
+      "value": 0.09652
+    },
+    "e25-oos-years": {
+      "fmt": ",.0f",
+      "label": "years from 2012 to 2026 (15 tested) in which a budget set on the earlier record stopped some compliant chip",
+      "note": "",
+      "unit": "years",
+      "value": 1.0
+    },
+    "e25-span-max": {
+      "fmt": ",.1f",
+      "label": "longest real span of a licence of that many blocks since the minimum-difficulty era, licence issued 2021-04-15",
+      "note": "",
+      "unit": "days",
+      "value": 100.384
+    },
+    "e25-span-median": {
+      "fmt": ",.1f",
+      "label": "median real span of such a licence, starts in the last ten years of the record",
+      "note": "",
+      "unit": "days",
+      "value": 89.565
+    },
+    "e25-span-min": {
+      "fmt": ",.1f",
+      "label": "shortest real span of such a licence in the last ten years, issued 2017-11-18",
+      "note": "",
+      "unit": "days",
+      "value": 80.722
+    },
+    "e25-state-bytes": {
+      "fmt": ",.0f",
+      "label": "fixed state a chip keeps for one chain and one licence in this verifier (an illustration of its size, not a hardware measurement)",
+      "note": "",
+      "unit": "bytes",
+      "value": 225.0
+    }
+  },
+  "script": "tools/exp/e25_licence_log.py",
+  "seed": 20261125
+}

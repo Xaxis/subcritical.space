@@ -17,17 +17,25 @@ The short version:
   self-improvement first as the route around a compute cap, which the evidence weakens. It stays
   first because it is the loop closest to closing, its gain interval spans 1, and its labour input is
   invisible to every physical channel. Undeclared compute ties with it because it lengthens the
-  regime's detection time, on the historical record to decades.
+  regime's detection time, on the historical record to decades. The tie is a judgement: it sets an
+  effect on the response side of the line against one on the breakout side, with no common scale.
 - **Scaling of declared compute falls to third as a risk and rises as the backbone.** It is the
   largest measured driver of capability and the pathway the regime sees best.
 - **The rest.** Distillation is fourth, self-replication fifth, continual learning sixth.
   Long-horizon autonomy is seventh, recast as the clock of closure: watched, and used to space the
   protocol's gates, not limited.
+- **Only part of the order is fixed by evidence.** Of the [21](numbers.md#claim-c12-pairs) pairs of
+  pathways, [12](numbers.md#claim-c12-pareto-two) have one pathway ahead on both criteria: every
+  pathway over long-horizon autonomy, and self-improvement, undeclared compute and distillation each
+  over continual learning and over self-replication. None orders the first three places. Every other
+  order, the tie included, is a stated judgement. The cost of a limit sets each pathway's response
+  (restrict, meter or watch), not its rank.
 
 Every judgement below rests on proxies. Nobody has reached D1, the effective compute that would
 reach it is a convention rather than a measurement ([D3 in the anatomy chapter](01-anatomy.md#d3-breakout-time)),
-and the experiments that would test these judgements have not run. The ranking is provisional until
-they do. Nothing here has been tested against an adversary.
+and of the experiments that would test these judgements, those that have run leave the order where
+it was and fix none of the first three places. The ranking is a judgement, and provisional. Nothing
+here has been tested against an adversary.
 
 ## What a pathway is, and what would decide necessary and sufficient
 
@@ -65,29 +73,44 @@ proxies it names.
 
 **The ranking criteria**, stated before the evidence:
 
-1. **How much the pathway shortens T_b at the margin**, today and in the tail the evidence cannot
-   exclude.
+1. **How much the pathway moves the line at the margin**: how much it shortens T_b, or, for a supply
+   route, how much it lengthens T_r, today and in the tail the evidence cannot exclude. The two
+   effects have no common unit, so comparing a pathway of one kind with one of the other is a
+   judgement.
 2. **How hard it is to see**: which of the five channels (chip accounting, power, declarations,
    evaluations, intelligence) see it, and how well.
-3. **How cheaply it can be limited without harming useful AI.**
 
-A pathway ranks higher the more it shortens T_b, the harder it is to see and the cheaper it is to
-limit: a cheap limit is one the protocol should impose, and an expensive one it can only watch. Cost
-also decides the kind of response (restrict, meter or watch). The criteria are not given numerical
-weights, because the evidence is too uneven for weights to mean anything. Where the evidence cannot
-separate two pathways, they share a rank.
+A pathway ranks higher the more it moves the line and the harder it is to see. **The cost of a limit
+to useful AI sets the response, not the rank**, together with the channel that sees the pathway: a
+cheap limit is one the protocol can impose (restrict), an expensive one it can only watch, and a
+pathway whose input the line already counts, compute, is metered against it. What changed: this
+chapter first ranked on cost as a third criterion, which raised a pathway because its limit was
+cheap. That made the rank answer "what should be restricted first", Part II's question, rather than
+"what leads to superintelligence", the brief's, and the red team cut that criterion
+([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). The criteria are not
+given numerical weights, because the evidence is too uneven for weights to mean anything. So the
+evidence fixes only the pairs in which one pathway is ahead on every criterion; every other order is
+a stated judgement. Where the evidence cannot separate two pathways, they share a rank.
 
 The method has a precedent. Acquisition path analysis, from the IAEA's State-level concept, was
 applied by Allen et al. to a hypothetical arms-cap treaty: each path carries a "Proliferation Time"
 and a detection probability, and the analysis "can be used to identify where specific verification
 measures might be of most benefit" [@allen-2015-llnl]. Ranking AI pathways by their effect on
-breakout time and by their visibility is that method carried over to AI.
+breakout time and by their visibility is that method carried over to AI: an application of prior
+work, not a new method. Within AI, comparing paths to advanced AI by arrival time [@clarke2022mtair]
+and modelling pathways to superintelligence with fault trees and interventions [@barrett2016asipath]
+are older still ([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)).
 
 The ranking would be tested by E1 (compute against capability), E2 (autonomy horizons), E4 (loop
 gain), E5 (multi-channel detection), E7 (continual learning's update compute), E8 (the footprint
 floor), E10 (the training-to-inference exchange rate, with its distillation arm), E11 (the coupled
 loops) and the replication reproduction-number test, all specified in the perspective chapters.
-None has run.
+E1, E2, E4's simulation and history, E5, E8, E9 and E11 have run; the claims file gives what they
+found for the ranking ([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). In
+short: E5 keeps undeclared compute's discovery rate far below the memo's placeholder; E1 leaves the
+share of capability that compute explains unidentified; E9 leaves self-improvement's gain at fixed
+compute undecided, since no data identifies compute's share of research; and in E11 no pathway's gate, cut alone, issues the coupled-gain certificate with honest
+bounds ([0 pathways](numbers.md#e11-pathways-alone-honest) do). None of them orders the top three.
 
 ## Which routes the memo missed
 
@@ -98,10 +121,13 @@ needs a different limit. Otherwise it is folded into the pathway it belongs to.
 **Added: undeclared compute.** Chips outside the registry (smuggled, stockpiled, untraced legacy
 stock, chips from a domestic chain outside any agreement), and work on registered chips that
 declarations and meters miss. The memo named "covert chip fabrication" and "training spread across
-many small clusters" among its failure modes, not as a pathway. Three things make it distinct.
-Its T_r is of another order: declared material has been watched on a timescale of months, while
-undeclared programmes in the record went undetected for a median of
-[15 years](numbers.md#org-covert-years-median) ([O4](015-organisational.md#o4-covert-supply-how-secret-programmes-were-run-and-found)).
+many small clusters" among its failure modes, not as a pathway. Treating it as a route into breakout
+is not ours: the hardwired-pause group already counts dark compute in every state's covert evasion
+and breakout ledgers [@fithian2026hardwired]. Three things make it distinct. Its T_r is of another
+order: declared material has been watched on a timescale of months, while in E5's
+[16 cases](numbers.md#e5-cases) the median time from a programme's start to its discovery was
+[9.6 years](numbers.md#e5-km-median-years), counting only programmes later found or disclosed
+([O4](015-organisational.md#o4-covert-supply-how-secret-programmes-were-run-and-found)).
 Only chip accounting at birth and intelligence see it; facility channels cannot police thresholds at
 or below [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) ([P4](011-physical.md#p4-the-footprint-and-its-floor)).
 And its limit is different: close the hole at the source rather than meter a declared stock. D3
@@ -123,9 +149,16 @@ supplies. And it moves capability across parties, the cross-party edge of coupli
 ([the dynamical chapter](013-dynamical.md#y3-coupling)). Remler and Hayum list it as one of three
 "axes" along which a party short of compute closes the gap, beside "smuggling chips, remotely
 accessing foreign hardware, and producing indigenous chips" and industrial espionage, and note that
-it "does not require access to the model's weights" [@remler2026distillation]. It is a ceiling
-transfer: it closes the gap to the best existing model and does not by itself exceed it. Repeated
-rounds of amplification and distillation form a loop, which Ord names as one path to recursive
+it "does not require access to the model's weights" [@remler2026distillation]. Naming it a route is
+theirs, not ours. It is not a ceiling transfer. Students distilled from teachers of the same
+architecture "outperform their teachers significantly" (abstract) [@furlanello2018born], and strong
+models trained on a weaker supervisor's labels "consistently perform better than their weak
+supervisors" (abstract) [@burns2023weak]. So a holder with its own base model and a teacher's
+outputs can end above the teacher, and distillation enters breakout time at the teacher's level plus
+an uplift that nobody has measured for frontier models and E10 is to measure
+([C2.5](verification/l4-red-team.md#c2)). What changed: this chapter first said distillation closes
+the gap to the best existing model and does not by itself exceed it; that is false as a rule.
+Repeated rounds of amplification and distillation form a loop, which Ord names as one path to recursive
 self-improvement (abstract) [@ord2025inferencegov]; that loop is counted under self-improvement.
 
 **Folded into scaling: inference-time search and sampling with a cheap verifier.** It is the largest
@@ -173,14 +206,18 @@ interval spans 1.** The historical return to software research in language model
 [3.21](numbers.md#dyn-r-lm-hi)); corrected for compute bottlenecks, the median falls to
 [0.63](numbers.md#dyn-r-lm-corrected) and the interval runs from
 [0.36](numbers.md#dyn-r-lm-lo-corrected) to [1.07](numbers.md#dyn-r-lm-hi-corrected)
-[@ho2025experiments]. Whitfill and Wu find research compute and labour complements in one
-specification ([-0.10](numbers.md#dyn-sigma-frontier-spec)), so effective research "is bounded", and
-substitutes in another ([2.58](numbers.md#dyn-sigma-compute-spec)), and call the results "divergent"
+[@ho2025experiments]. That correction leaves compute's own growth out; counting it, E9 puts the gain
+at fixed compute at [0.25](numbers.md#e9-lm-k-fixed) ([0.42](numbers.md#e9-lm-k-fixed-hi) at the
+95th percentile) at the same compute share, above 1 only for shares below about
+[0.26](numbers.md#e9-lm-share-crit), and no data identifies the share. Whitfill and Wu find research
+compute and labour complements in one specification ([-0.10](numbers.md#dyn-sigma-frontier-spec)),
+so effective research "is bounded", and substitutes in another
+([2.58](numbers.md#dyn-sigma-compute-spec)), and call the results "divergent"
 [@whitfill2025bottlenecks]. Cunningham et al.'s upper-end illustration puts the core condition at
 [0.58](numbers.md#dyn-loop-gain-illustration), an illustration and not their estimate
-[@cunningham2026rsi]. Room to grow is about [12](numbers.md#dyn-ie-software-oom) orders of
-magnitude [@davidson2025three]. If the gain held above 1 at fixed compute, the loop would be
-sufficient with room to spare. Whether it does is exactly what the interval leaves open.
+[@cunningham2026rsi]. Room to grow is about [12](numbers.md#dyn-ie-software-oom) orders of magnitude
+[@davidson2025three]. If the gain held above 1 at fixed compute, the loop would be sufficient with
+room to spare. Whether it does is exactly what the interval leaves open.
 
 **How it is measured, and by whom.** Three routes, each with a different owner
 ([Y1a](013-dynamical.md#y1a-the-software-loop)). Historical fits use public data but describe
@@ -207,22 +244,26 @@ elicited (D5). Intelligence and insiders reach the hundreds of employees a large
 
 **Cost of a limit to useful AI: low to moderate.** Software work is close to half of observed AI use
 [@handa2025aei], so a limit on AI research capability as such would be costly. A limit on
-closed-loop training research on frontier-scale systems, above a trigger, leaves AI-assisted coding
-and research in general allowed ([F2](014-cognitive.md#f2-the-decisive-functions)).
+closed-loop training research on frontier-scale systems leaves AI-assisted coding and research in
+general allowed ([F2](014-cognitive.md#f2-the-decisive-functions)).
 
-**Place in breakout time.** At fixed compute the loop multiplies research. On D2's round-on-round
-definition, if the gain held at the corrected median, the rounds would add up to
-[2.7](numbers.md#path-rsi-multiplier-median) times the first round's gain, and to
-[2.4](numbers.md#path-rsi-multiplier-illustration) times at Cunningham et al.'s illustration (our
-arithmetic). That is an illustration: in the dynamical chapter's growth-law form a gain below 1
-slows the rate without capping the level. At the corrected 95th percentile,
-[1.07](numbers.md#dyn-r-lm-hi-corrected), the series does not converge at all. In the tail the
-evidence cannot exclude, Davidson and Houlden's model gives [57%](numbers.md#dyn-sie-p-3yr) that full
-automation of AI research compresses three years of progress into one, and
-[18%](numbers.md#dyn-sie-p-10yr) that it compresses ten, modelled probabilities conditional on that
-automation existing [@davidson2025sie]. Barnett and Scher: "breakout times may be very short, even
-given limited compute" [@barnett2025governance]. So its expected effect on T_b today is moderate,
-its tail effect is the largest of any pathway, and today's interval cannot exclude the tail.
+**Place in breakout time.** At fixed compute the loop multiplies research, and a gain below 1 does
+not cap it: in the dynamical chapter's growth-law form each round of a subcritical loop gains less
+than the last, the ratio of successive gains tends to 1, and the level grows without bound, though
+ever more slowly ([the formal file, C4](05-formal.md#c4-the-loop-gain-estimator)). What changed:
+this passage first summed the rounds geometrically, to [2.7](numbers.md#path-rsi-multiplier-median)
+times the first round's gain at the corrected median and
+[2.4](numbers.md#path-rsi-multiplier-illustration) times at Cunningham et al.'s illustration; that
+sum needs a constant ratio between rounds, which the growth law does not give, so those totals are
+withdrawn. At the corrected 95th percentile, [1.07](numbers.md#dyn-r-lm-hi-corrected), the gain is
+above 1, the supercritical case, though only under a correction that leaves compute's growth out
+(E9, above). In the tail the evidence cannot exclude, Davidson and Houlden's model gives
+[57%](numbers.md#dyn-sie-p-3yr) that full automation of AI research compresses three years of
+progress into one, and [18%](numbers.md#dyn-sie-p-10yr) that it compresses ten, modelled
+probabilities conditional on that automation existing [@davidson2025sie]. Barnett and Scher:
+"breakout times may be very short, even given limited compute" [@barnett2025governance]. So its
+expected effect on T_b today is moderate, its tail effect is the largest of any pathway, and today's
+interval cannot exclude the tail.
 
 **What would change its rank.** E4 run at two scales with both bounds of the gain below 1 would drop
 it below scaling; both above 1 would put it first alone. Confirming that frontier experiments and
@@ -247,13 +288,20 @@ breakout fleet, [180 million H100e](numbers.md#def-hwp-fleet-threshold), is
 [3.9](numbers.md#def-hwp-fleet-over-global) times the global fleet it projects for the end of 2026
 [@fithian2026hardwired]. On those assumed figures, undeclared compute alone does not reach D1 within
 a two-year horizon. Against the thresholds a protocol would set, it is large. The untraced pool,
-on the order of [1,000,000 chips](numbers.md#phys-chips-unaccounted) [@koopmanschap2026gpu], is
-[47](numbers.md#phys-unaccounted-over-floor-now) times the aggregate chip floor of a
-[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run today and
-[250](numbers.md#phys-unaccounted-over-floor-pause) times it at a pause's rational run length. Read as
-H100e at the reference utilisation, it would run [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) in
-about [2.9 days](numbers.md#path-covert-days-1e26) (our arithmetic). Distillation and algorithmic
-progress lower the compute it needs further.
+on the order of [1,000,000 chips](numbers.md#phys-chips-unaccounted) [@koopmanschap2026gpu], is in E8
+a median [340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the aggregate chip floor of a
+[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run at a pause's run length (5th to 95th percentile
+[110](numbers.md#e8-pool-over-floor-1e26-pause-p05) to
+[1,000](numbers.md#e8-pool-over-floor-1e26-pause-p95)), with the floor at BF16; an FP8 run doubles
+the ratio. The pool's size is an assumed order of magnitude and that spread is our reading. Against
+the floor taken as a bound, at FP8 and full utilisation, the pool would have to shrink
+[1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold before chip accounting could resolve such a run
+([P4](011-physical.md#p4-the-footprint-and-its-floor)). The compute smuggled into one country alone,
+which has a published interval, is a median [230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50)
+times the BF16 floor and [824](numbers.md#formal-pool-over-floor-bound) times the floor taken as a
+bound. Read as H100e at the reference utilisation, the pool would run
+[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) in about [2.9 days](numbers.md#path-covert-days-1e26)
+(our arithmetic). Distillation and algorithmic progress lower the compute it needs further.
 
 **How it is measured, and by whom.** It is estimated, never counted. The smuggling estimate rests on
 an assumed detection rate of [25%](numbers.md#org-diversion-detect) of diversion cases
@@ -284,14 +332,22 @@ production of non-flexHEG chips" [@petrie2025flexheg1]. And a low cap on unmonit
 order of MIRI's [16 H100e](numbers.md#phys-miri-cluster-cap) [@scher2025agreement], reaches research
 labs and small firms.
 
-**Place in breakout time.** It acts mostly on T_r. At the historical discovery rate of
-[0.08/yr](numbers.md#org-covert-hazard), the mean wait for discovery is
-[12 years](numbers.md#path-covert-mean-years), and bringing the miss chance down to
-[5%](numbers.md#def-prevent-beta) takes [37 years](numbers.md#path-covert-td-prevent) (our
-arithmetic, on a crude rate from a convenience sample of old channels). The memo's placeholder
-channel needed [2.5 yr](numbers.md#def-placeholder-detect-time). On these crude figures, for
-compute that only the historical channels see, D4 is in effect unsatisfiable: any undeclared holding
-whose breakout time is shorter than decades is weapons-grade. That is why the protocol cannot rely on
+**Place in breakout time.** It acts mostly on T_r. E5 fits the historical discovery rate of covert
+programmes at [0.094/yr](numbers.md#e5-hazard) over [16 cases](numbers.md#e5-cases), counted from a
+programme's start. At that rate the mean wait for discovery is
+[10.7 years](numbers.md#e5-mean-years), and bringing the miss chance down to
+[5%](numbers.md#def-prevent-beta) takes [32 years](numbers.md#e5-td-hist-years) for compute only the
+historical channels see; for the untraced pool the median is
+[32 years](numbers.md#e5-td-pool-years) ([23 years](numbers.md#e5-td-pool-years-lo) to
+[43 years](numbers.md#e5-td-pool-years-hi)). The rate counts only programmes that were later found or
+disclosed, so it is an upper bound on a careful evader's rate, and these detection times are lower
+bounds. Nor is the rate even over a programme's life: within a year of the start a Weibull fit finds
+[2.6%](numbers.md#e5-weibull-detect-1y) discovered, against [9.0%](numbers.md#e5-hazard-detect-1y) at
+the constant rate. Cloud compute and distillation have no measured channel at all, so a breakout
+through them is missed with certainty. The memo's placeholder channel needed
+[2.5 yr](numbers.md#def-placeholder-detect-time). On these figures, for compute that only the
+historical channels see, D4 is in effect unsatisfiable: any undeclared holding whose breakout time
+is shorter than decades is weapons-grade. That is why the protocol cannot rely on
 finding covert work after it starts and must keep the covert reserve small
 ([O4](015-organisational.md#o4-covert-supply-how-secret-programmes-were-run-and-found)). On the T_b
 side, it adds a reserve to every party's holdings: D3 should count the untraced pool as held by the
@@ -299,15 +355,21 @@ worst-placed party.
 
 **Why it ties with self-improvement.** Self-improvement's effect on T_b is larger in the tail but
 uncertain; undeclared compute exists now, with a moderate effect on T_b and an extreme one on T_r.
-Both are hard to see, and both can be limited at little cost to useful AI. The evidence does not say
-which matters more.
+Both are hard to see. On T_b alone undeclared compute is weak: the smuggled stock at fixed
+algorithms needs [555 years](numbers.md#prot-pool-years-fixed) to reach the one published budget.
+The tie sets an effect on T_r against one on T_b, which share no scale, so it is a judgement, not a
+finding. That both can be limited at little cost to useful AI sets their response, restrict, not
+their rank.
 
 **What would change its rank.** Chip accounting with a resolution finer than the aggregate floor at
-the pause run length would drop it; so would E5 fitting a discovery rate near the memo's placeholder,
-[15](numbers.md#org-memo-to-history) times the historical one. Leading-edge chips made at volume
-outside any agreement (first chips targeted for [2028](numbers.md#org-china-euv-target), other
-experts say [2030](numbers.md#org-china-euv-expert), on unnamed-source reporting) would raise it, as
-would decentralised training, growing about [20](numbers.md#org-decentral-growth) times a year by one
+the pause run length would drop it; so would E5 fitting a discovery rate near the memo's
+placeholder. E5 has run and did not:
+the placeholder is [12.8](numbers.md#e5-memo-over-hazard) times its fitted rate, which is itself an
+upper bound on a careful evader's rate. A test that could fail only on an error that large is weak
+evidence when it passes. Leading-edge chips made at volume outside any agreement (first chips
+targeted for [2028](numbers.md#org-china-euv-target), other experts say
+[2030](numbers.md#org-china-euv-expert), on unnamed-source reporting) would raise it, as would
+decentralised training, growing about [20](numbers.md#org-decentral-growth) times a year by one
 author's estimate, closing its [1,000](numbers.md#org-decentral-gap)-fold gap to the frontier
 [@sevilla2025decentralized].
 
@@ -321,13 +383,17 @@ algorithms substitute". The evidence weakens that. Training compute explains
 [80%](numbers.md#comp-mertens-frontier-share-lo) to [90%](numbers.md#comp-mertens-frontier-share-hi)
 of performance differences at the frontier [@mertens2026secretsauce]. Of a claimed
 [22,000](numbers.md#dyn-algo-gain-claimed)-fold efficiency gain from 2012 to 2023, less than
-[100](numbers.md#dyn-algo-gain-small-max)-fold reproduces at small compute, because the largest gains
-show only at scale (abstract only) [@gundlach2025origin]. The steelman for the memo is real: the
-Rosetta decomposition attributes only [45%](numbers.md#comp-rosetta-compute-share) of frontier
+[100](numbers.md#dyn-algo-gain-small-max)-fold reproduces at small compute, because the largest
+gains show only at scale (abstract only) [@gundlach2025origin]. The steelman for the memo is real:
+the Rosetta decomposition attributes only [45%](numbers.md#comp-rosetta-compute-share) of frontier
 capability growth to compute, with a range of [9%](numbers.md#comp-rosetta-compute-share-lo) to
 [82%](numbers.md#comp-rosetta-compute-share-hi) across families [@ho2025rosetta], and about
-[50%](numbers.md#dyn-innovations-under-cap) of catalogued pretraining innovations were feasible under
-very stringent caps [@barnett2025innovation]. A cap does leak: a capped party closes the example
+[50%](numbers.md#dyn-innovations-under-cap) of catalogued pretraining innovations were feasible
+under very stringent caps [@barnett2025innovation]. E1 does not settle it: the share of capability
+that compute explains across Epoch's models runs from [18%](numbers.md#e1-compute-share-subset-min)
+to [63%](numbers.md#e1-compute-share-subset-max) across samples, and most of the top models have no
+compute estimate, so the share is not identified. Mertens et al.'s figure measures differences
+between models at one time, a different question. A cap does leak: a capped party closes the example
 headroom in [2.2 years](numbers.md#comp-leak-years-rosetta) to
 [9.3 years](numbers.md#comp-leak-years-small)
 ([the computational chapter](012-computational.md#the-combined-leak-of-a-training-cap)). Algorithms
@@ -383,8 +449,10 @@ a cap needs [1.5 OOM](numbers.md#comp-headroom-needed-small) to
 the line from it. As a risk the protocol might miss, it ranks below the two that are hard to see. As
 architecture it is first: the backbone the other limits stand on.
 
-**What would change its rank.** E1 finding that the Rosetta reading holds at the cap's own scale,
-with algorithms carrying most of the growth, would lower it and raise self-improvement. E10 finding
+**What would change its rank.** Evidence that the Rosetta reading holds at the cap's own scale, with
+algorithms carrying most of the growth, would lower it and raise self-improvement. E1 has run and
+does not decide this either way: its share runs over a wide range and its sample lacks most frontier
+models, so the test falls to E15. E10 finding
 that inference techniques stack would raise it. Frontier-relevant training on unregistered consumer
 hardware would move part of it into undeclared compute.
 
@@ -394,9 +462,11 @@ Training a model on the outputs of a stronger one, across firms or across partie
 
 **Necessary? No.** Every frontier model so far was trained without a stronger teacher.
 
-**Sufficient? Not for D1: it cannot exceed its teacher. Yes for moving a follower across the line
-when a teacher near the line is reachable.** It raises the follower's starting capability in D3 to
-roughly the teacher's. A 32B model distilled from DeepSeek-R1 scores
+**Sufficient? Unknown for D1. Yes for moving a follower across the line when a teacher near the line
+is reachable.** It raises the follower's starting capability in D3 to roughly the teacher's, and can
+carry it above: a student can exceed its teacher [@furlanello2018born; @burns2023weak], so the
+teacher bounds where distillation starts, not where it ends
+([C2.5](verification/l4-red-team.md#c2)). How far above, at frontier scale, is unmeasured. A 32B model distilled from DeepSeek-R1 scores
 [72.6%](numbers.md#comp-r1-distill-32b) on AIME 2024, against
 [47.0%](numbers.md#comp-r1-rl-32b) for large-scale RL on the same base, a gap of
 [25.6 pp](numbers.md#comp-r1-distill-gap); the distilled 7B model reaches
@@ -435,7 +505,8 @@ reach a network reproduction number of [1.15](numbers.md#dyn-burtsev-network-rho
 [@burtsev2026criticality].
 
 **What would change its rank.** E10's distillation arm finding a gain worth well over the
-[1 OOM](numbers.md#comp-heim-buffer-oom) post-training buffer would raise it; a workable gate on
+[1 OOM](numbers.md#comp-heim-buffer-oom) post-training buffer, or a large uplift above the teacher,
+would raise it; a workable gate on
 teacher outputs would lower it. Release of weights near the line would make it moot, since transfer
 would then be free and the release decision would govern instead.
 
@@ -535,13 +606,17 @@ have a human baseline.
 
 **Which channel sees it.** Evaluations, well, and in public. No other channel is needed.
 
-**Cost of a limit to useful AI: high.** Autonomy is much of what makes AI useful. Gates spaced to the
-80% horizon must move apart as horizons grow or they start to bind on useful work. If the 80% horizon
-grew at the 50% horizon's rate, it would reach about
-[22 hours](numbers.md#path-horizon-p80-next-year) in a year (our arithmetic).
+**Cost of a limit to useful AI: high.** Autonomy is much of what makes AI useful. Gates must move
+apart as horizons grow or they start to bind on useful work. But the horizon is measured in human
+time, the time humans take on tasks the model completes [@kwa2025horizon], and an agent that finishes
+such a task in minutes can chain several between gates a horizon apart on the clock. So gates count
+the agent's completed horizon-length tasks, not hours, until its own wall-clock time on such tasks
+is measured for each system ([C11.4](verification/l4-red-team.md#c11)). What changed: gates were first
+spaced by the 80% horizon read as wall-clock hours. If the 80% horizon grew at the 50% horizon's rate,
+it would reach about [22 hours](numbers.md#path-horizon-p80-next-year) in a year (our arithmetic).
 
-**Place in breakout time.** No direct effect. It sets the clock of closure: how long a loop can run
-between human-held gates. One model puts one-month 80% horizons
+**Place in breakout time.** No direct effect. It sets the clock of closure: how much work a loop can
+do between human-held gates. One model puts one-month 80% horizons
 [7 years](numbers.md#dyn-horizon-compute-delay) later than trend under a compute slowdown, but it
 assumes horizon growth proportional to compute growth, which rules out a software-only singularity
 by construction [@whitfill2025horizon].
@@ -552,16 +627,17 @@ itself.
 
 ## The ranking
 
-The table keeps the memo's columns and adds four. "Rank now" orders the pathways by the three
-criteria stated at the start; "the channel that sees it" names the channel the protocol relies on
-first.
+The table keeps the memo's columns and adds four. "Rank now" orders the pathways by the two
+criteria stated at the start, as a judgement where the evidence does not fix the order; "cost of a
+limit" sets the response in the next section; "the channel that sees it" names the channel the
+protocol relies on first.
 
 | Pathway | Necessary? | Sufficient? | How measured | Cost of a limit to useful AI | Rank now | Memo's rank | What moved it | The channel that sees it |
 |---|---|---|---|---|---|---|---|---|
 | Recursive self-improvement | No, on indirect evidence | Only if the gain at fixed compute exceeds 1; the interval spans 1 | D2: staged runs at fixed compute, lab declarations, matched-budget AI-research battery | Low to moderate if aimed at closed-loop frontier training research | 1 (tied) | 1 | Weakened as the route around a compute cap (compute complements research); kept as the loop closest to closing, with its labour invisible | Declarations and staged evaluations; chip accounting for research compute only |
 | Undeclared compute | Only for a covert breakout by a metered party | Not for D1 on the published budget; yes against any cap at or below 1e26 FLOP | Estimated: smuggling models, untraced pool, outside output estimates | Low; the costs are diplomatic, and a low cap on unmonitored clusters | 1 (tied) | not ranked (a failure mode) | The registry's hole exceeds the floor of any cap; covert work went undetected for years | Chip accounting at birth; intelligence and rewarded insiders |
 | Scaling of declared compute, training and inference | Not in principle; nearly in practice at the frontier | Unknown; assumed at the agreed C* | Chip registry, power metering, declarations | Low today at a line above the frontier; rises as breakout times shrink | 3 | 2 | Stronger as the backbone (compute explains most frontier differences); lower as a risk because it is best seen; inference folded in | Chip accounting and power |
-| Distillation from a stronger model | No | No for D1 (bounded by the teacher); yes for a follower near the line | Output-access logs; E10 distillation arm | Moderate to high if broad; lower if keyed to the teacher | 4 | not listed | Moves capability at nil compute and across parties | Provider declarations; evaluations at checkpoints |
+| Distillation from a stronger model | No | Unknown for D1 (starts at the teacher and can exceed it; the uplift is unmeasured); yes for a follower near the line | Output-access logs; E10 distillation arm | Moderate to high if broad; lower if keyed to the teacher | 4 | not listed | Moves capability at nil compute and across parties | Provider declarations; evaluations at checkpoints |
 | Self-replication and resource acquisition | No | No while identity gates hold | Replication evaluations; gate audits | Very low | 5 | 3 | Components rising fast, but failing at human-held gates; open weights escape them | Evaluations; identity checks on compute and payment |
 | Continual learning | No | No evidence | Update compute, attested weight differences, re-evaluation | Moderate | 6 | 4 | Not one capability; forgetting brakes it; context-based adaptation escapes weight accounting | Compute metering and re-evaluation |
 | Long-horizon autonomy | Long-horizon competence is part of D1; unattended operation only for closure | No | Time horizons at 50% and 80% | High | 7 | 5 | Recast as the clock of closure: watched and used to space gates, not limited | Evaluations, in public |
@@ -569,37 +645,61 @@ first.
 The reasons, briefly. The top two act on opposite sides of the line and are both hard to see:
 self-improvement's effect on T_b ranges, on the evidence, from a modest multiplier to a runaway;
 undeclared compute exists now and lengthens T_r to decades. Declared scaling moves T_b most of any
-measured pathway but is the best seen. Distillation is invisible to compute channels but bounded by
-its teacher. Self-replication is cheap to forbid and blocked today by human-held gates. Continual
-learning is unmeasured and damped by forgetting. Autonomy adds nothing by itself and is costly to
-limit.
+measured pathway but is the best seen. Distillation is invisible to compute channels but needs a
+teacher: it starts from the best model a party can query, with an unmeasured uplift above it.
+Self-replication is blocked today by human-held gates and seen by evaluations and
+identity checks; that it is cheap to forbid sets its response, not its rank. Continual learning is
+unmeasured and damped by forgetting. Autonomy adds nothing by itself and is seen in public.
 
-Three order judgements are weakest. Distillation against declared scaling: if a gate on teacher
+**What the evidence fixes.** Graded on the table's entries, with equal grades wherever the entries
+do not separate two pathways, [12](numbers.md#claim-c12-pareto-two) of the
+[21](numbers.md#claim-c12-pairs) pairs have one pathway ahead on both criteria: every pathway over
+long-horizon autonomy, and self-improvement, undeclared compute and distillation each over continual
+learning and over self-replication
+([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). The same grades with cost
+as a third criterion give the red team's [9](numbers.md#claim-c12-pareto-three)
+([C12.1](verification/l4-red-team.md#c12)); taking cost out of the rank adds self-improvement,
+undeclared compute and distillation over self-replication, whose cheap limit had kept those pairs
+open. The grades are inputs to the model, so a different reading reruns the count. None orders the
+first three places. The tie between self-improvement and undeclared compute, declared scaling's
+place below both, and every other order are judgements.
+
+Of the judgements, three are weakest. Distillation against declared scaling: if a gate on teacher
 outputs proves unworkable, distillation's invisibility may matter more than scaling's size.
-Self-replication against continual learning: both gains are unmeasured, and the order rests on the
-replication components being measured and rising. And the tie at the top could break either way on
-E4 and E5.
+Self-replication against continual learning: both gains are unmeasured; the order rested partly on
+self-replication's cheap limit, which no longer ranks, and now rests on the replication components
+being measured and rising, so it may reverse. And the tie at the top could break either way on E4's
+staged runs. E5 has run and left undeclared compute's side at decades of detection time, and in E11
+no pathway's gate, cut alone, issues the coupled-gain certificate with honest bounds: the gate sets
+that issue it join several pathways' gates, which fits a top the evidence does not order.
 
 ## What the ranking means for the protocol
 
-Part II derives the protocol from this ranking. In rank order, each pathway is restricted (a limit
-the protocol enforces), metered (counted against the line) or watched (measured, not limited).
+Part II derives the protocol from this ranking. In rank order, each pathway gets a response, set by
+the cost of a limit and the channel that sees it: restricted (a limit the protocol enforces),
+metered (counted against the line) or watched (measured, not limited).
 
-1. **Recursive self-improvement: restrict, narrowly.** No closed-loop AI research on frontier-scale
-   systems above a trigger on the loop gain; research compute metered as part of compute held;
-   mandatory declarations of the AI share of research and of efficiency at fixed compute, with
-   compute verification mandatory rather than optional; search loops whose evaluator scores AI
-   training efficiency registered and counted
-   ([A5](012-computational.md#a5-search-and-planning)); narrow optimisers inside a covered system's
-   loop treated as part of it ([F3](014-cognitive.md#f3-narrow-versus-general)). Part I states the
-   trigger two ways. The anatomy chapter binds on the lower confidence bound of the gain; the
-   dynamical chapter fires when the upper bound crosses a margin below 1. A lower-bound trigger fires
-   only once the evidence shows the gain above the threshold; an upper-bound trigger fires as soon as
-   the evidence cannot rule that out. If today's corrected historical estimates carried over to an
-   automated frontier loop, the first would not fire and the second already would
+1. **Recursive self-improvement: restrict, narrowly.** No closed-loop AI training research on
+   declared frontier-scale systems; research compute metered as part of compute held; mandatory
+   declarations of the AI share of research and of efficiency at fixed compute, with compute
+   verification mandatory rather than optional; search loops whose evaluator scores AI training
+   efficiency registered and counted ([A5](012-computational.md#a5-search-and-planning)); narrow
+   optimisers inside a covered system's loop treated as part of it
+   ([F3](014-cognitive.md#f3-narrow-versus-general)). Part I first stated the trigger two ways, the
+   anatomy chapter on the lower confidence bound of the gain and the dynamical chapter on the upper
+   bound crossing a margin below 1. A lower-bound trigger fires only once the evidence shows the
+   gain above the threshold; an upper-bound trigger fires as soon as the evidence cannot rule that
+   out. If today's corrected historical estimates carried over to an automated frontier loop, the
+   first would not fire and the second already would
    ([Y1a](013-dynamical.md#y1a-the-software-loop)). This ranking puts self-improvement first partly
-   because of that width, which
-   argues for the upper bound. Part II must choose, and say why.
+   because of that width, which argues for the upper bound. What changed: the formal level moved the
+   rule to the upper bound of the loop's gain K, not the round-on-round ratio g, which tends to 1 in
+   every subcritical loop; then E4's simulation found that at the only noise level calibrated to
+   data that rule fires about as often below 1 as above, so the trigger is cut on current evidence
+   ([C4](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound)).
+   The restriction is therefore the prior-work ban on the closed loop at frontier scale
+   [@miotti2025narrowpath], and D2's staged measurement decides whether a rule on K can later
+   replace it for loops shown to be subcritical.
 2. **Undeclared compute: restrict at the source.** Register chips at birth at the narrow stages;
    bind the states that host the chokepoints by the same k-of-n rules as everyone else; compute every
    party's breakout time as if the worst-placed party holds the untraced pool; bound hidden work on
@@ -622,18 +722,26 @@ the protocol enforces), metered (counted against the line) or watched (measured,
    weight differences; re-evaluate on drift; evaluate the deployed system with its memory and
    scaffolding.
 7. **Long-horizon autonomy: watch.** Measure the 50% and 80% horizons; space human-held gates by the
-   80% horizon; no limit.
+   agent's completed tasks at the 80% horizon, not by hours, until its own wall-clock time on such
+   tasks is measured, since the horizon itself is measured in human time; no limit.
 
 One thing a ranking cannot show is that the pathways feed each other. Distillation is the
 cross-party edge; undeclared compute feeds every loop; the economic loop is the edge from money to
-compute; autonomy sets how long any loop runs between gates. Loops each below 1 can be above 1
+compute; autonomy sets how much work any loop does between gates. Loops each below 1 can be above 1
 together [@davidson2026feedback; @burtsev2026criticality]. Part II must bound the combined gain as
-well, with a gate on each edge ([Y3](013-dynamical.md#y3-coupling)).
+well, with a gate on each edge ([Y3](013-dynamical.md#y3-coupling)). The bound it can use is the
+spectral radius of the matrix of edge bounds, rho(U), applied as prior work on small gains: in E11
+the simpler row-sum test can never issue on Part I's graph while compute feeds software, its largest
+row sum being at least [2.14](numbers.md#e11-rowsum-floor), and rho(U) issues only with the gates on
+or with unmeasured entries set to zero. Only [2 entries](numbers.md#e11-entries-measured) of
+[10 entries](numbers.md#e11-entries) have a measured bound
+([C6](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test)).
 
 Against the memo's protocol shape, six changes follow: undeclared compute joins the restricted set
 at the top, with breakout times counting the untraced pool; distillation gets a gate keyed to the
 teacher; the compute limit is on compute held, not training compute per run; the self-improvement
-trigger names its bound, and compute verification is mandatory; the ban on self-replication is paired
+limit is a ban on the closed loop at frontier scale until its gain can be measured tightly enough to
+decide on, and compute verification is mandatory; the ban on self-replication is paired
 with release control for open weights; and autonomy is measured and used as a clock, not limited.
 
 ## Prior work, and our search
@@ -661,8 +769,17 @@ comparison. What we found and opened, and what it covers:
   for a protocol.
 - **Lists of pathways.** Genewein et al. name four pathways from AGI to ASI: "scaling AGI", "AI
   paradigm shifts", "ASI emerging from large-scale multi-agent collectives" and "recursive
-  improvement" [@genewein2026agiasi]. In what we read (the abstract and the survey's note), they are
-  not ranked or tied to a measurement and a limit.
+  improvement" [@genewein2026agiasi]. Level 1 read the full text: the pathways "are not mutually
+  exclusive", they are tabulated against frictions, and they are not ranked or tied to a measurement
+  and a limit ([C12](verification/l1-prior-art-c7-c12.md#c12)).
+- **Models of paths, found by level 1.** MTAIR models separate approaches to high-level machine
+  intelligence and takes its arrival as the earliest date one of them succeeds, and compares
+  software-mediated and hardware-mediated intelligence explosions [@clarke2022mtair]: technical
+  paradigms compared by arrival time, not loops and supply routes compared by breakout time and
+  visibility, and no protocol. Barrett and Baum model pathways to catastrophe from superintelligence
+  created through recursive self-improvement, with fault trees, influence diagrams and intervention
+  options [@barrett2016asipath]: one loop, no supply routes, no ranking. Both are prior work for the
+  idea of modelling and comparing pathways.
 - **Which pathway to restrict first.** A Narrow Path's conditions include no AIs improving AIs and
   no AIs capable of breaking out of their environment [@miotti2025narrowpath]. The red-lines campaign
   names self-replication and self-improvement without authorisation as example lines
@@ -680,14 +797,21 @@ comparison. What we found and opened, and what it covers:
 - **Scenarios, not pathways.** Barnett and Scher organise their agenda around four geopolitical
   scenarios for the response to advanced AI, not around pathways [@barnett2025governance].
 
-The search turned up, without our opening them, a 2022 model of paths to high-level machine
-intelligence and takeoff, and a 2026 comparison of strategic visions for governing a transition to
-superintelligence. They are not cited, and they would be the first to open at level 1.
+Our search turned up, without our opening them, a 2022 model of paths to high-level machine
+intelligence and a 2026 comparison of strategic visions for governing a transition to
+superintelligence. Level 1, an independent search by a helper that did not write the ranking, opened
+both ([C12](verification/l1-prior-art-c7-c12.md#c12)). The first is MTAIR [@clarke2022mtair],
+above. The second compares governance strategies, not pathways [@delaney2026strategicvisions].
+Bostrom's 2014 chapter on paths to superintelligence was opened by neither search, and a reader
+should check it.
 
-**Label: extends prior work, provisionally.** The method, the candidate pathways and the loops'
-comparison are prior work. What we did not find: a ranking of these seven routes, loops and supply
-and transfer routes together, each judged necessary, sufficient or neither on stated proxies, tied
-to the terms of D4 (whether it shortens T_b or lengthens T_r), to the channel that sees it and to the
-cost of a limit, with ties where the evidence does not separate them. "Not found" is a claim about
-this short search, run by the helper that wrote the ranking. It needs the independent search at level
-1 of `07-verification.md` before it is claimed.
+**Label: prior work, applied.** The method is acquisition path analysis [@allen-2015-llnl], and the
+candidate pathways, their modelling and the loops' comparison are prior work; treating undeclared
+compute and distillation as routes is prior work in substance [@fithian2026hardwired;
+@remler2026distillation]. What remains ours is the ranking itself: these seven routes, loops and
+supply and transfer routes together, each judged on stated proxies and tied to the terms of D4, to
+the channel that sees it and to the cost of a limit. It is a judgement made with a known method, of
+which only [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) pairs are fixed
+by evidence, none among the first three places
+([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). "Not found" is a claim
+about our search and level 1's, not about the world, and the later levels may still lower it.

@@ -5,7 +5,8 @@ import { LoopGain } from "@/components/figures/LoopGain";
 import { TheLine } from "@/components/figures/TheLine";
 import { Header } from "@/components/Header";
 import { Markdown } from "@/components/Markdown";
-import { memo, ranking } from "@/lib/docs";
+import { VerificationGrid } from "@/components/VerificationGrid";
+import { memo, ranking, verificationRecord } from "@/lib/docs";
 import { entry } from "@/lib/ledger";
 import { progress } from "@/lib/progress";
 import { repoFileExists } from "@/lib/repo";
@@ -35,6 +36,10 @@ export default function Home() {
   const miss = entry("miss-prob-one-channel");
   const [lead, ...ideaRest] = m.idea.split("\n\n");
   const ranked = ranking();
+  const record = verificationRecord();
+  const standing = (status: string) =>
+    record?.rows.filter((r) => r.standing.status === status).length ?? 0;
+  const count = (n: number) => WORDS[n] ?? String(n);
   const byKey = sourceIndex();
   const cite = (key: string) => ({
     href: `/sources#${byKey.get(key)?.key ?? key}`,
@@ -106,9 +111,13 @@ export default function Home() {
                 </p>
               )}
               <p className="muted">
-                Breakout time (D3) comes from measured inputs: compute, algorithmic efficiency and
-                the loop gain (D2). The response time is the protocol&apos;s own detection
-                guarantee. So the line is tied to what the regime can actually see.
+                Breakout time (D3) is built from compute, algorithmic efficiency and the loop gain
+                (D2); the response time is how long a regime takes to detect a breakout and stop it.
+                Neither side is yet measured well enough to draw the line for a real party: the
+                frontier&apos;s rate of algorithmic progress is not identified from public data, and
+                the historical record shows responses that wait on political decisions. The{" "}
+                <a href="/research/claims">claims file</a> says what is left of the line after
+                verification.
               </p>
             </div>
             <TheLine />
@@ -130,7 +139,9 @@ export default function Home() {
               <p>
                 A subcritical reactor still makes useful power. The protocol asks the same of AI:
                 useful systems that keep improving, with the combined gain of every loop held below
-                1 and measured, not one loop at a time.
+                1, judged for all the loops together, not one at a time. No one can yet measure that
+                gain for a real system; the work sets out what measuring it would take, and what is
+                proved about it once it is measured.
               </p>
             </div>
             <CoupledLoops cite={[cite("davidson2026feedback"), cite("burtsev2026criticality")]} />
@@ -204,13 +215,14 @@ export default function Home() {
             <p className="eyebrow">Which systems cross the line</p>
             {ranked ? (
               <>
-                <h2>{`${capital(WORDS[ranked.rows.length] ?? String(ranked.rows.length))} pathways, ranked on the evidence`}</h2>
+                <h2>{`${capital(WORDS[ranked.rows.length] ?? String(ranked.rows.length))} pathways, ranked`}</h2>
                 <p className="section-lead">
                   Part I re-ranked the memo&apos;s pathways on the survey&apos;s evidence
-                  {ranked.added > 0 ? ` and added ${WORDS[ranked.added] ?? ranked.added}` : ""}.
-                  Pathways the evidence cannot separate share a rank. Provisional until the
-                  experiments run; the ranking decides what the protocol restricts, meters or
-                  watches.
+                  {ranked.added > 0 ? ` and added ${WORDS[ranked.added] ?? ranked.added}` : ""}. The
+                  evidence fixes only part of the order, and not its top: the rest is judgement, and
+                  pathways it cannot separate share a rank. The rank sets priority; the cost of a
+                  limit sets whether the protocol restricts, meters or watches each. Provisional
+                  until the experiments run.
                 </p>
                 {/* biome-ignore lint/a11y/noNoninteractiveTabindex: a wide table scrolls, and a keyboard must reach it */}
                 <div className="table-wrap" tabIndex={0}>
@@ -354,8 +366,9 @@ export default function Home() {
                     display: miss.display,
                   }}
                   record={{
-                    median: entry("org-covert-years-median").display,
-                    hazard: entry("org-covert-hazard").display,
+                    hazard: entry("e5-hazard").display,
+                    hazardLo: entry("e5-hazard-lo").display,
+                    hazardHi: entry("e5-hazard-hi").display,
                     placeholderRate: entry("org-memo-detect-rate").display,
                   }}
                 />
@@ -364,6 +377,35 @@ export default function Home() {
           </div>
         </section>
 
+        {record && (
+          <section className="band" id="verification">
+            <div className="wrap">
+              <p className="eyebrow">Verification</p>
+              <h2>Each claim, level by level</h2>
+              <p className="section-lead">
+                A claimed contribution must pass six levels or be cut: a prior-art search by a
+                helper who did not propose it, a proof, experiments on real data, a red team that
+                only tries to break it, Paperwright&apos;s desks, and a fresh reviewer. Of the{" "}
+                {count(record.rows.length)} claims so far, standing after the levels that have run:{" "}
+                {(
+                  [
+                    ["contribution", "a contribution, all six passed"],
+                    ["candidate", "still a candidate"],
+                    ["downgraded", "downgraded"],
+                    ["application", "an application of prior work"],
+                    ["cut", "cut"],
+                  ] as const
+                )
+                  .filter(([s]) => standing(s) > 0)
+                  .map(([s, words]) => `${words}, ${count(standing(s))}`)
+                  .join("; ")}
+                . The <a href="/research/verification">verification record</a> says why, level by
+                level.
+              </p>
+              <VerificationGrid record={record} />
+            </div>
+          </section>
+        )}
         <section className="band alt" id="progress">
           <div className="wrap">
             <p className="eyebrow">Where the work stands</p>

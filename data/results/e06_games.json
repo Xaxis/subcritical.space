@@ -1,0 +1,2969 @@
+{
+  "data": [
+    {
+      "sha256": "7107ba4d2245ed5c6522fb061ea118e7b5e0af64c3de1b10b57980b6f0a18e2e",
+      "url": "https://www.futureofhumanityinstitute.org/s/2013-1.pdf",
+      "what": "Armstrong, Bostrom and Shulman, FHI Technical Report 2013-1"
+    },
+    {
+      "sha256": "2bcf0396b9a13aaa8b77d773e89c901ecbf7be70f2ee6dcccb94eed1fbcaaf37",
+      "url": "https://ora.ox.ac.uk/objects/uuid:08871414-bf9a-42f5-ac13-4936e1d63dc8/files/r1z40kv21p",
+      "what": "Emery-Xu, Park and Trager, published version (Oxford repository)"
+    },
+    {
+      "sha256": "421ab66635dedf9deff56a5900e6d10e7d64f5726374a7dd2ffebc809759aa39",
+      "url": "https://economics.mit.edu/sites/default/files/inline-files/Pacing.pdf",
+      "what": "Fudenberg and Koh, working paper"
+    },
+    {
+      "sha256": "3ea231fc7b0dc5ba545385727453b5b0c994f366fa126460d6d0e7a8b3fd2c13",
+      "url": "https://arxiv.org/pdf/2611.04272",
+      "what": "Gan, arXiv 2611.04272v1"
+    },
+    {
+      "sha256": "1333e7d28fa64419207380efe3234ccb0763115cc738f27ab82f2b535a5a071f",
+      "url": "https://ycsg.yale.edu/sites/default/files/files/nordhaus-climate-clubs.pdf",
+      "what": "Nordhaus, AER 2015 (Yale copy)"
+    },
+    {
+      "sha256": "cf592599df150e97d45745cde0a49134a97ef99b5033c9a8090a57d8dee66ef8",
+      "url": "https://www.aeaweb.org/aer/app/10504/presidential2015_app.pdf",
+      "what": "Nordhaus, online appendix"
+    },
+    {
+      "sha256": "054367bbcd4e928b142757e196e1eb2830e836e44a12bc6026b2764d0270ffa0",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3491499/",
+      "what": "Barrett and Dannenberg, PNAS 2012 (PMC full text)"
+    },
+    {
+      "sha256": "d0043f810f2b09a21ba3b8ec93737d6212c6f987ad7c094df8fe95a5ca86c697",
+      "url": "https://hardwired-pause.ai/paper",
+      "what": "Hardwired-pause working paper v1.0.2"
+    }
+  ],
+  "details": {
+    "armstrong": {
+      "best_response_checks": [
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 2.7755575615628914e-17,
+          "gain_private_grid_5000": 2.7755575615628914e-17,
+          "mu": 0.5,
+          "n": 2
+        },
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 5.551115123125783e-17,
+          "gain_private_grid_5000": 4.664999999992592e-05,
+          "mu": 1.0,
+          "n": 2
+        },
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 1.1102230246251565e-16,
+          "gain_private_grid_5000": 9.329999999985183e-05,
+          "mu": 2.0,
+          "n": 2
+        },
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 2.3224999999960083e-05,
+          "gain_private_grid_5000": 7.619999999997074e-05,
+          "mu": 4.0,
+          "n": 2
+        },
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 7.329208120909758e-06,
+          "gain_private_grid_5000": 2.6012174928785603e-05,
+          "mu": 0.5,
+          "n": 5
+        },
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 1.4658416241819516e-05,
+          "gain_private_grid_5000": 6.840538249441863e-05,
+          "mu": 1.0,
+          "n": 5
+        },
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 2.9316832483639033e-05,
+          "gain_private_grid_5000": 0.00014249988532599733,
+          "mu": 2.0,
+          "n": 5
+        },
+        {
+          "e": 1.0,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 6.855922946713555e-05,
+          "gain_private_grid_5000": 0.00029977302009109863,
+          "mu": 4.0,
+          "n": 5
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 5.551115123125783e-17,
+          "gain_private_grid_5000": 1.3336666666613484e-05,
+          "mu": 0.5,
+          "n": 2
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 1.1102230246251565e-16,
+          "gain_private_grid_5000": 2.6673333333226967e-05,
+          "mu": 1.0,
+          "n": 2
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 1.1396666666607658e-05,
+          "gain_private_grid_5000": 4.5346666666556956e-05,
+          "mu": 2.0,
+          "n": 2
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 9.143333333239134e-06,
+          "gain_private_grid_5000": 4.1793333333428606e-05,
+          "mu": 4.0,
+          "n": 2
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 2.7755575615628914e-17,
+          "gain_private_grid_5000": 1.5637991465339285e-05,
+          "mu": 0.5,
+          "n": 5
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 1.6309561214400414e-05,
+          "gain_private_grid_5000": 4.759117299113491e-05,
+          "mu": 1.0,
+          "n": 5
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 3.261912242880083e-05,
+          "gain_private_grid_5000": 0.00011265838983254284,
+          "mu": 2.0,
+          "n": 5
+        },
+        {
+          "e": 0.5,
+          "gain_none_exact": 0.0,
+          "gain_private_grid_20000": 1.5398501993724167e-05,
+          "gain_private_grid_5000": 7.330141872552431e-05,
+          "mu": 4.0,
+          "n": 5
+        }
+      ],
+      "claims": [
+        {
+          "claim": "risk decreases (weakly) in mu in every scenario",
+          "detail": "",
+          "holds": true,
+          "where": "Sec. 3.1"
+        },
+        {
+          "claim": "lower enmity lowers risk in every scenario",
+          "detail": "",
+          "holds": true,
+          "where": "Sec. 3.2"
+        },
+        {
+          "claim": "no information is always safest",
+          "detail": "",
+          "holds": true,
+          "where": "Sec. 3.3"
+        },
+        {
+          "claim": "at enmity 1, private information is safer than public",
+          "detail": "",
+          "holds": true,
+          "where": "Sec. 3.3"
+        },
+        {
+          "claim": "at low enmity and low mu, public can be safer than private",
+          "detail": "",
+          "holds": true,
+          "where": "Sec. 3.3"
+        },
+        {
+          "claim": "asymptotically private risk is of order 1/mu^n and public of order 1/mu",
+          "detail": "log-log slopes at n = 5: private -5.000, public -0.952",
+          "holds": true,
+          "where": "Sec. 3.3"
+        },
+        {
+          "claim": "more teams raise risk with no and with public information",
+          "detail": "",
+          "holds": true,
+          "where": "Sec. 3.4"
+        },
+        {
+          "claim": "with private information, more teams are worse at low mu and better at high mu",
+          "detail": "",
+          "holds": true,
+          "where": "Sec. 3.4, Fig. 3"
+        }
+      ],
+      "note": "The public scenario's equilibrium is a limit (the laggard is indifferent); it is checked through Emery-Xu et al.'s logistic contest instead, which nests it as m grows.",
+      "public_closed_form_vs_integral_max_err": 2.220446049250313e-16
+    },
+    "barrett_dannenberg": {
+      "observed": {
+        "avoided_certainty": 8.0,
+        "avoided_impact": 10.0,
+        "below_certain_both": 3.0,
+        "below_certain_threshold": 1.0,
+        "mean_both": 79.9,
+        "mean_certainty": 150.9,
+        "mean_impact": 155.5,
+        "mean_threshold": 77.2
+      },
+      "symmetric_pure_equilibria_chips_each": {
+        "both": [
+          0
+        ],
+        "certainty": [
+          0,
+          15
+        ],
+        "impact": [
+          0,
+          15
+        ],
+        "threshold": [
+          0
+        ]
+      },
+      "verdict": "With a known threshold the game has two symmetric equilibria, nothing and 15 chips each (the threshold exactly), as the paper states; with a uniform threshold only nothing is an equilibrium. The groups matched the first (8 and 10 of 10 avoided catastrophe) and contributed about half the threshold under the second, not nothing."
+    },
+    "c7_payoffs": {
+      "region": {
+        "(i)": "R / V > beta, two or more members",
+        "(ii)": "V / P <= (1 - beta) / beta = 19.0",
+        "decisive_advantage": "V of a decisive advantage is unbounded relative to any stated penalty; where V / P > 19 and R / V <= beta, neither condition holds",
+        "share_of_real_parties_inside": "not identified: V, P, R and Q are measured for no party"
+      },
+      "repeated": {
+        "checked_instances": 2000,
+        "cumulative_success_readmitted_at_beta": {
+          "delta=0.5": 0.09523809523809523,
+          "delta=0.9": 0.3448275862068965,
+          "delta=0.99": 0.8403361344537816
+        },
+        "expelled_on_capture": "a deviation is unprofitable iff beta V - (1 - beta) P <= w / (1 - delta): repeated play adds the membership term w / (1 - delta) and widens (ii)",
+        "instances_where_ii_holds": 1948,
+        "readmitted_on_capture": "attempting forever is worth (pi V - (1 - pi) P) / (1 - delta (1 - pi)); it has the sign of the one-shot payoff, so (ii) survives, and where only (i) holds the reward a reporter needs rises by the factor below, up to 1 / beta",
+        "reward_multiplier_readmitted": {
+          "delta=0.5": 1.9047619047619047,
+          "delta=0.9": 6.896551724137931,
+          "delta=0.99": 16.80672268907563,
+          "delta=0.999": 19.627085377821373
+        },
+        "verdict": "Repeated play does not undo (ii). It can undo (i): if caught members are re-admitted and no membership value w is at stake, the reward condition grows from beta V towards V. Whether it does for real parties depends on w and delta, which are not measured."
+      },
+      "sourced_points": [
+        {
+          "V_over_P": 0.46666666666666673,
+          "inside_ii": true,
+          "source": "gan2026clock",
+          "what": "Gan's illustrative payoffs: V = T - C, P = C - R"
+        },
+        {
+          "V_over_P": 0.3020788495203984,
+          "inside_ii": true,
+          "source": "fudenberg2026cooperating",
+          "what": "constant-risk analogue of Fig. 4: V = B(inf) - P(0), P = P(0) - B(0) (per unit of initial flow)"
+        }
+      ],
+      "transfer_edge": {
+        "definition": "If party i can use a share e_ij of party j's compute or research output (shared weights, distillation, cloud), its breakout time is h_w / (s_i + e_ij s_j). Each party alone can pass the line while the pair fails it whenever s_i + e_ij s_j > s*. This is the edge E11 needs; no e_ij is measured, so the coupled share is not identified."
+      },
+      "withdrawal": {
+        "E24_floor": "On E24's record 25% of findings made inside a treaty were never followed by a halt; if that share carries over, an exit breakout succeeds at least that often whatever the notice, and no notice meets beta.",
+        "rule": "With assets frozen during a notice N and response starting at notice, an exit breakout fails if T_b + N >= T_resp; without the freeze the party can start during notice and N adds nothing, so the condition is T_b >= T_resp whatever N is."
+      }
+    },
+    "c7_share": {
+      "T_d_years": 0.75,
+      "budget_range": [
+        4.3e+28,
+        2e+29
+      ],
+      "caveat": "Every share here uses an illustrative T_r: the protocol's (DPRK detection plus one licence period, no decision time) or E24's median time to a halt. C1 has no bounded T_r on E24's record, so these show how the line moves with the budget and with staging; they are not shares a regime could adopt.",
+      "declaration_interval_years": 0.25,
+      "lambda_declared_per_year": 3.9943096980719877,
+      "line": {
+        "e24_median": {
+          "T_r_years": 1.9327515400410678,
+          "T_resp_years": 1.1827515400410678,
+          "budget_below_which_line_binds": 9.9229816665e+28,
+          "share_bullish_with_margin": 0.43333749315659886,
+          "share_ledger_budget_with_margin": 1.0,
+          "share_of_range_binding_loguniform": 0.5440303426363103,
+          "share_of_range_binding_uniform": 0.3581516985031847,
+          "uncertain_budget_no_margin": {
+            "largest_share_expected_loguniform": 1.0,
+            "largest_share_expected_uniform": 1.0,
+            "largest_share_worst_case": 0.8666749863131977
+          }
+        },
+        "illustrative": {
+          "T_r_years": 1.0,
+          "T_resp_years": 0.25,
+          "budget_below_which_line_binds": 5.1341217228e+28,
+          "share_bullish_with_margin": 0.8375337072559521,
+          "share_ledger_budget_with_margin": 1.0,
+          "share_of_range_binding_loguniform": 0.1153417337060482,
+          "share_of_range_binding_uniform": 0.05312877215286625,
+          "uncertain_budget_no_margin": {
+            "largest_share_expected_loguniform": 1.0,
+            "largest_share_expected_uniform": 1.0,
+            "largest_share_worst_case": 1.0
+          }
+        }
+      },
+      "margin": 2.0,
+      "over_budget": [
+        {
+          "budget": 1e+27,
+          "h_w_years": 0.03895505615143964,
+          "s_star_e24_median": 0.010077616119920906,
+          "s_star_illustrative": 0.01947752807571982
+        },
+        {
+          "budget": 1.2589254117941714e+27,
+          "h_w_years": 0.049041510106916215,
+          "s_star_e24_median": 0.012686967023675005,
+          "s_star_illustrative": 0.024520755053458108
+        },
+        {
+          "budget": 1.584893192461111e+27,
+          "h_w_years": 0.061739603306357,
+          "s_star_e24_median": 0.015971945184698997,
+          "s_star_illustrative": 0.0308698016531785
+        },
+        {
+          "budget": 1.9952623149688828e+27,
+          "h_w_years": 0.07772555551646426,
+          "s_star_e24_median": 0.020107487668801112,
+          "s_star_illustrative": 0.03886277775823213
+        },
+        {
+          "budget": 2.511886431509572e+27,
+          "h_w_years": 0.0978506769854947,
+          "s_star_e24_median": 0.025313827193591456,
+          "s_star_illustrative": 0.04892533849274735
+        },
+        {
+          "budget": 3.1622776601683794e+27,
+          "h_w_years": 0.12318670381830236,
+          "s_star_e24_median": 0.03186822032377862,
+          "s_star_illustrative": 0.06159335190915118
+        },
+        {
+          "budget": 3.9810717055349856e+27,
+          "h_w_years": 0.15508287183202293,
+          "s_star_e24_median": 0.04011971239426038,
+          "s_star_illustrative": 0.07754143591601147
+        },
+        {
+          "budget": 5.011872336272715e+27,
+          "h_w_years": 0.19523776828335057,
+          "s_star_e24_median": 0.05050772544700756,
+          "s_star_illustrative": 0.09761888414167529
+        },
+        {
+          "budget": 6.309573444801942e+27,
+          "h_w_years": 0.24578978783389208,
+          "s_star_e24_median": 0.06358545905716093,
+          "s_star_illustrative": 0.12289489391694604
+        },
+        {
+          "budget": 7.943282347242789e+27,
+          "h_w_years": 0.30943100986358213,
+          "s_star_e24_median": 0.0800493502276571,
+          "s_star_illustrative": 0.15471550493179106
+        },
+        {
+          "budget": 1e+28,
+          "h_w_years": 0.3895505615143963,
+          "s_star_e24_median": 0.10077616119920904,
+          "s_star_illustrative": 0.19477528075719816
+        },
+        {
+          "budget": 1.2589254117941714e+28,
+          "h_w_years": 0.4904151010691622,
+          "s_star_e24_median": 0.12686967023675005,
+          "s_star_illustrative": 0.2452075505345811
+        },
+        {
+          "budget": 1.5848931924611109e+28,
+          "h_w_years": 0.6173960330635699,
+          "s_star_e24_median": 0.15971945184698993,
+          "s_star_illustrative": 0.30869801653178497
+        },
+        {
+          "budget": 1.9952623149688827e+28,
+          "h_w_years": 0.7772555551646426,
+          "s_star_e24_median": 0.20107487668801113,
+          "s_star_illustrative": 0.3886277775823213
+        },
+        {
+          "budget": 2.511886431509572e+28,
+          "h_w_years": 0.978506769854947,
+          "s_star_e24_median": 0.2531382719359146,
+          "s_star_illustrative": 0.4892533849274735
+        },
+        {
+          "budget": 3.1622776601683795e+28,
+          "h_w_years": 1.2318670381830237,
+          "s_star_e24_median": 0.31868220323778623,
+          "s_star_illustrative": 0.6159335190915118
+        },
+        {
+          "budget": 3.981071705534986e+28,
+          "h_w_years": 1.5508287183202294,
+          "s_star_e24_median": 0.4011971239426038,
+          "s_star_illustrative": 0.7754143591601147
+        },
+        {
+          "budget": 5.0118723362727145e+28,
+          "h_w_years": 1.9523776828335053,
+          "s_star_e24_median": 0.5050772544700755,
+          "s_star_illustrative": 0.9761888414167527
+        },
+        {
+          "budget": 6.309573444801943e+28,
+          "h_w_years": 2.457897878338921,
+          "s_star_e24_median": 0.6358545905716093,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 7.943282347242789e+28,
+          "h_w_years": 3.0943100986358205,
+          "s_star_e24_median": 0.8004935022765708,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 1e+29,
+          "h_w_years": 3.8955056151439633,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 1.2589254117941714e+29,
+          "h_w_years": 4.9041510106916215,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 1.584893192461111e+29,
+          "h_w_years": 6.1739603306357,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 1.995262314968883e+29,
+          "h_w_years": 7.772555551646428,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 2.511886431509572e+29,
+          "h_w_years": 9.78506769854947,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 3.1622776601683795e+29,
+          "h_w_years": 12.318670381830238,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 3.9810717055349854e+29,
+          "h_w_years": 15.508287183202292,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 5.011872336272715e+29,
+          "h_w_years": 19.523776828335055,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 6.309573444801943e+29,
+          "h_w_years": 24.57897878338921,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 7.943282347242788e+29,
+          "h_w_years": 30.943100986358207,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        },
+        {
+          "budget": 1e+30,
+          "h_w_years": 38.955056151439635,
+          "s_star_e24_median": 1.0,
+          "s_star_illustrative": 1.0
+        }
+      ],
+      "sales_share_of_fleet_per_year": 0.2895744680851064,
+      "staged": {
+        "central": {
+          "annual_factor": 2.6918003852647123,
+          "frozen_at_launch": {
+            "largest_share_staged_no_margin": 1.0,
+            "pi_at_declaration_on_ledger_line": 0.0009210078746600971,
+            "pi_max_on_ledger_line": 0.00872106798245108,
+            "pi_max_on_prop16_line": 0.0009210078746600971,
+            "prop16_share": 0.5814766385983577
+          },
+          "in_run_drift": {
+            "largest_share_staged_no_margin": 0.6930265118672962,
+            "pi_at_declaration_on_ledger_line": 0.03315401413307928,
+            "pi_max_on_ledger_line": 0.07641585053676728,
+            "pi_max_on_prop16_line": 0.03315401413307928,
+            "prop16_share": 0.5814766385983577
+          },
+          "phi_algorithms_per_interval": 1.2808866897642726
+        },
+        "high (ledger interval)": {
+          "annual_factor": 6.3496042078727974,
+          "frozen_at_launch": {
+            "largest_share_staged_no_margin": 0.982832730560754,
+            "pi_at_declaration_on_ledger_line": 0.0009210078746600971,
+            "pi_max_on_ledger_line": 0.02642217466242687,
+            "pi_max_on_prop16_line": 0.0009210078746600971,
+            "prop16_share": 0.4552195568628557
+          },
+          "in_run_drift": {
+            "largest_share_staged_no_margin": 0.29220764548636285,
+            "pi_at_declaration_on_ledger_line": 0.09592671122687929,
+            "pi_max_on_ledger_line": 0.22843879897231573,
+            "pi_max_on_prop16_line": 0.09592671122687929,
+            "prop16_share": 0.4552195568628557
+          },
+          "phi_algorithms_per_interval": 1.5874010519681994
+        },
+        "low (ledger interval)": {
+          "annual_factor": 1.789009240520278,
+          "frozen_at_launch": {
+            "largest_share_staged_no_margin": 1.0,
+            "pi_at_declaration_on_ledger_line": 0.0009210078746600971,
+            "pi_max_on_ledger_line": 0.0047040586688815045,
+            "pi_max_on_prop16_line": 0.0009210078746600971,
+            "prop16_share": 0.6517907553476019
+          },
+          "in_run_drift": {
+            "largest_share_staged_no_margin": 0.9953518207400249,
+            "pi_at_declaration_on_ledger_line": 0.013563621087865732,
+            "pi_max_on_ledger_line": 0.030140329081080466,
+            "pi_max_on_prop16_line": 0.013563621087865732,
+            "prop16_share": 0.6517907553476019
+          },
+          "phi_algorithms_per_interval": 1.1565199957523205
+        }
+      }
+    },
+    "claims": {
+      "C1": "Lemma 1.1 is used as stated; repeated attempts compound to beta / (1 - delta (1 - beta)) when caught members are re-admitted. The response time is the protocol's illustration or E24's median, not a bound.",
+      "C6": "The transfer edge is defined (s_i + e_ij s_j against s*) and no e_ij is measured: not identified.",
+      "C7": "Repeated play does not undo condition (ii) (its sign survives expulsion and re-admission), but re-admitting caught members raises the reward condition (i) by up to 1 / beta. The sourced payoff calibrations (Gan, V / P = 0.47; Fudenberg and Koh's analogue, 0.30) both sit inside (ii); real parties' payoffs are not identified. C7.3: within the hardwired-pause paper's own budget range the overt line binds below 5.1e+28 FLOP (5% of the range, uniform) at the illustrative T_r and below 9.9e+28 FLOP (36%) at E24's median response; at the bullish end s* is 84% and 43%. Staged accumulation with algorithms fixed at launch stays below beta on the margin-2 line (best 0.009 central, 0.026 at high drift); if the run absorbs drift as it goes it reaches 0.076 (central) and 0.228 (high), so the line must fall to 69% or 29%. Prop 1.6's line does not cover in-run drift.",
+      "O2": "Compliance-only disclosure gave a higher disaster risk than no information in 100% of 72 cells, higher than private information alone in 100% and higher than public capability in 12%. It holds in no cell, so in these race models the candidate is cut: the information alone raises risk, and any protection in them comes from halting a breakout (risk times S, true by construction), not from disclosure."
+    },
+    "emery_xu": {
+      "by_m": [
+        {
+          "equilibrium_epsilon": [
+            1.741117050535479e-08,
+            2.8028457665918438e-08,
+            3.953422655911254e-08
+          ],
+          "m": 1,
+          "none_numeric": 5.960464477539063e-08,
+          "none_prop1": 0.0,
+          "private_cor21": 0.004798786525579968,
+          "private_numeric": 5.960464477539063e-08,
+          "prop2_br_gain": null,
+          "public_numeric": 5.960464477539063e-08
+        },
+        {
+          "equilibrium_epsilon": [
+            1.2693036954836145e-08,
+            2.8412157626611645e-08,
+            5.36029132192084e-09
+          ],
+          "m": 1.5,
+          "none_numeric": 5.960464477539063e-08,
+          "none_prop1": 0.0,
+          "private_cor21": 0.014261991235081761,
+          "private_numeric": 6.092630807861338e-08,
+          "prop2_br_gain": null,
+          "public_numeric": 0.0027249139527055466
+        },
+        {
+          "equilibrium_epsilon": [
+            9.406640022469048e-09,
+            7.015055203396514e-12,
+            2.6850600631789234e-09
+          ],
+          "m": 2,
+          "none_numeric": 6.183545453453121e-08,
+          "none_prop1": 0.0,
+          "private_cor21": 0.11201500338579773,
+          "private_numeric": 0.015753531391673566,
+          "prop2_br_gain": 0.01342361741974224,
+          "public_numeric": 0.03503217799032093
+        },
+        {
+          "equilibrium_epsilon": [
+            8.291413999828023e-09,
+            5.206945985491984e-14,
+            1.099120794378905e-14
+          ],
+          "m": 2.5,
+          "none_numeric": 7.800550216874313e-08,
+          "none_prop1": 0.0,
+          "private_cor21": 0.206595784037238,
+          "private_numeric": 0.06776835310141129,
+          "prop2_br_gain": null,
+          "public_numeric": 0.09383365846552284
+        },
+        {
+          "equilibrium_epsilon": [
+            4.0941761092483375e-09,
+            1.1879386363489175e-14,
+            1.5931700403370996e-14
+          ],
+          "m": 3,
+          "none_numeric": 5.709289874200607e-08,
+          "none_prop1": 0.0,
+          "private_cor21": 0.2780381342869499,
+          "private_numeric": 0.1288061253251913,
+          "prop2_br_gain": 0.016762159262665666,
+          "public_numeric": 0.18103226673670167
+        },
+        {
+          "equilibrium_epsilon": [
+            1.4599342845755814e-09,
+            2.052025216414677e-12,
+            2.148281552649678e-14
+          ],
+          "m": 4,
+          "none_numeric": 5.9109858563388684e-08,
+          "none_prop1": 0.0,
+          "private_cor21": 0.3611943287533935,
+          "private_numeric": 0.23158820788166948,
+          "prop2_br_gain": null,
+          "public_numeric": 0.3115472376014894
+        },
+        {
+          "equilibrium_epsilon": [
+            1.1435297153639112e-14,
+            2.8310687127941492e-14,
+            2.170486013142181e-14
+          ],
+          "m": 5,
+          "none_numeric": 0.009594255150189746,
+          "none_prop1": 0.009492067334358922,
+          "private_cor21": 0.40420176871272184,
+          "private_numeric": 0.30113194658467324,
+          "prop2_br_gain": null,
+          "public_numeric": 0.3897824883596844
+        },
+        {
+          "equilibrium_epsilon": [
+            2.0872192862952943e-14,
+            1.765254609153999e-14,
+            3.59989815734707e-14
+          ],
+          "m": 6,
+          "none_numeric": 0.04726812132391989,
+          "none_prop1": 0.04715420200121456,
+          "private_cor21": 0.42929654729439926,
+          "private_numeric": 0.3475613083386761,
+          "prop2_br_gain": 0.01090841069237758,
+          "public_numeric": 0.4384860902473234
+        },
+        {
+          "equilibrium_epsilon": [
+            4.773959005888173e-15,
+            3.375077994860476e-14,
+            3.58046925441613e-14
+          ],
+          "m": 7,
+          "none_numeric": 0.07256713858780661,
+          "none_prop1": 0.07244130527300818,
+          "private_cor21": 0.44515141411372827,
+          "private_numeric": 0.3791024980456732,
+          "prop2_br_gain": null,
+          "public_numeric": 0.4703394768574168
+        },
+        {
+          "equilibrium_epsilon": [
+            1.3433698597964394e-14,
+            3.497202527569243e-14,
+            4.118927421359331e-14
+          ],
+          "m": 8,
+          "none_numeric": 0.09069980194530756,
+          "none_prop1": 0.09056151145896507,
+          "private_cor21": 0.4558436319167407,
+          "private_numeric": 0.40124789518492215,
+          "prop2_br_gain": null,
+          "public_numeric": 0.49202207923730057
+        },
+        {
+          "equilibrium_epsilon": [
+            1.426636586643326e-14,
+            3.108624468950438e-14,
+            4.085620730620576e-14
+          ],
+          "m": 10,
+          "none_numeric": 0.11494330312234391,
+          "none_prop1": 0.1147794999484204,
+          "private_cor21": 0.4689052301328197,
+          "private_numeric": 0.42982241624912565,
+          "prop2_br_gain": 0.009424929338368693,
+          "public_numeric": 0.5181122388195396
+        },
+        {
+          "equilibrium_epsilon": [
+            9.159339953157541e-15,
+            1.9206858326015208e-14,
+            4.7600812180803587e-14
+          ],
+          "m": 12,
+          "none_numeric": 0.13041144587365178,
+          "none_prop1": 0.1302217204933015,
+          "private_cor21": 0.4762895391998395,
+          "private_numeric": 0.44701069413480155,
+          "prop2_br_gain": null,
+          "public_numeric": 0.5319386709200842
+        },
+        {
+          "equilibrium_epsilon": [
+            9.825473767932635e-15,
+            2.7200464103316335e-14,
+            7.006895064165519e-14
+          ],
+          "m": 15,
+          "none_numeric": 0.145363850742924,
+          "none_prop1": 0.14513447915006505,
+          "private_cor21": 0.4825492476168076,
+          "private_numeric": 0.46230023406150017,
+          "prop2_br_gain": null,
+          "public_numeric": 0.5420115130040102
+        },
+        {
+          "equilibrium_epsilon": [
+            1.3988810110276972e-14,
+            2.4313884239290928e-14,
+            8.24618151540335e-14
+          ],
+          "m": 20,
+          "none_numeric": 0.1598407958530242,
+          "none_prop1": 0.15954448831162493,
+          "private_cor21": 0.4876156111046642,
+          "private_numeric": 0.47525880021338784,
+          "prop2_br_gain": 0.008422838153288148,
+          "public_numeric": 0.5471574542178229
+        }
+      ],
+      "crossing_m_with_equilibrium_private": null,
+      "crossing_m_with_paper_private": 5.6107581121756445,
+      "equation_2": {
+        "limit_private_at_fig2": 0.49473684210526314,
+        "limit_public_at_fig2": 0.49479166666666663,
+        "mu_where_limits_cross": 1.4394384503811952,
+        "printed_threshold": 2.8403703703703695,
+        "regime_of_square_form": "mu >= eta + 1",
+        "verdict": "Equation (2) as printed, ((eta + 1)^3 + eta^2) / (3 eta), does not follow from the m -> infinity closed forms. Comparing them gives ((eta + 1)^2 + eta^2) / (3 eta) where mu >= eta + 1, and a cubic with root near 1.44 for eta = 0.9 where eta <= mu < eta + 1. At Fig. 2's mu = 1.44 the two limits agree to within 1e-4.",
+        "with_square": 1.6370370370370368
+      },
+      "parameters": {
+        "eta": 0.9,
+        "mu": 1.44
+      },
+      "resolution_check_m6_k120": {
+        "private": 0.34752270976963257,
+        "public": 0.4384699208805329
+      },
+      "verdict": "No information reproduces Proposition 1 and Fig. 2. Public information reproduces Fig. 2's curve. Private information reproduces Fig. 2 only from the paper's Proposition 2 formula (public overtakes it at m = 5.6), and that strategy is not a best response to itself in the stated model (gain up to 0.017). The equilibrium we solve is safer than Proposition 2's at every m tested. With it, public information is riskier than private at every decisiveness tested, so the paper's finding that public information is safer at low decisiveness does not reproduce at its own parameters."
+    },
+    "fudenberg_koh": {
+      "constant_risk_analogue": {
+        "B0": 0.3448274458198469,
+        "Binf": 0.4166664616918425,
+        "Lambda_star_halt": 0.3777729531285079,
+        "Lambda_star_rival_races": 0.7249895955000317,
+        "Lstar": 0.6087619117002243,
+        "P0": 0.4,
+        "cutoffs": [
+          0.5,
+          1.0
+        ],
+        "g": 0.5,
+        "lambda0": 0.9000011806555679,
+        "rL_star": 1.826285735100673,
+        "tau_halt": 1.1987943054566579
+      },
+      "four_regimes": {
+        "compliance only (detection at rate Lambda, then response T)": {
+          "Lambda_needed_at_T0": 0.7249895955000317,
+          "T_max_at_instant_detection": 0.6087619117002243,
+          "pacing_sustainable_iff": "Lambda / (Lambda + k1) * exp(-k1 T) >= (B(inf) - P0) / (B(inf) - B(0))"
+        },
+        "deployed only (fixed lag L, the paper's Sec. 3.5)": {
+          "pacing_sustainable_iff": "L <= L* = 0.6088"
+        },
+        "none (never observed)": {
+          "pacing_sustainable": false
+        },
+        "public capability (lag 0)": {
+          "pacing_sustainable": true
+        }
+      },
+      "note": "Linear risk has no hazard ceiling, so Proposition 4 is applied to the constant-risk analogue with lambda0 equal to Fig. 4's effective hazard; that substitution is ours.",
+      "reproduction": {
+        "leff_fig2": {
+          "agrees_to_printed_digits": true,
+          "ours": 0.20181570217492384,
+          "paper": 0.2018,
+          "where": "p. 15, text on Fig. 5"
+        },
+        "leff_fig4": {
+          "agrees_to_printed_digits": true,
+          "ours": 0.9000011806555679,
+          "paper": 0.9,
+          "where": "p. 15, footnote 11"
+        },
+        "race_fig4": {
+          "agrees_to_printed_digits": true,
+          "ours": 0.3448274458198469,
+          "paper": 0.3448,
+          "where": "p. 15, text on Fig. 4"
+        },
+        "slowdown_fig4": {
+          "agrees_to_printed_digits": true,
+          "ours": 0.3396414360125056,
+          "paper": 0.3396,
+          "where": "p. 15, text on Fig. 4"
+        },
+        "upper_fig2": {
+          "agrees_to_printed_digits": true,
+          "ours": 0.19999999999999996,
+          "paper": 0.2,
+          "where": "p. 15, text on Fig. 5"
+        }
+      },
+      "units": "The model's time unit is not calibrated to years (r = 3 per unit), so these lags cannot be compared with E5's detection or E24's response times: that comparison is not identified."
+    },
+    "gan": {
+      "not_reproduced": "The follower's catch-up path (Table 3's windows) comes from Gan's takeoff model, which this script takes as given. The last-review dates at half and double the cost need the path beyond month 24 or before month 0 and are not recomputed.",
+      "ours": {
+        "C": 2.5,
+        "R": 0.9999999999999998,
+        "S": 0.6000000000000001,
+        "T": 3.2,
+        "critical_window": 6.893860540609902,
+        "detect_12": 0.3181818181818181,
+        "gain": 1.5000000000000002,
+        "last_eta27_l0": 18.909438791426904,
+        "last_eta27_l1": 14.845587255854692,
+        "last_eta27_l2": 10.961485827036942,
+        "m_deter_12": 0.031916021021342146,
+        "m_max": 0.055555555555555566,
+        "mean_finding_12": 31.33222651192337,
+        "mmin_d0": 0.031916021021342146,
+        "mmin_d12": 0.04448225926319463,
+        "mmin_d18": 0.05394257074029658,
+        "mmin_d24": 0.06672338889479193,
+        "mmin_d6": 0.03736509778108348,
+        "needed_eta13.5_l0": 3.446930270304951,
+        "needed_eta27_l0": 6.893860540609902,
+        "needed_eta27_l1": 7.893860540609902,
+        "needed_eta27_l2": 8.893860540609902,
+        "needed_eta54_l0": 13.787721081219804,
+        "net_d0": 1.638267432423762,
+        "net_d12": 1.2989789998937449,
+        "net_d18": 1.0435505900119921,
+        "net_d24": 0.6984684998406177,
+        "net_d6": 1.4911423599107458,
+        "prop3_lhs": 1.2,
+        "prop3_rhs": 0.8,
+        "success_12": 0.6818181818181819,
+        "xi": 0.3829922522561057
+      },
+      "published_vs_ours": [
+        {
+          "key": "C",
+          "ours": 2.5,
+          "paper": 2.5,
+          "where": "p. 15, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "T",
+          "ours": 3.2,
+          "paper": 3.2,
+          "where": "p. 15, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "R",
+          "ours": 0.9999999999999998,
+          "paper": 1.0,
+          "where": "p. 15, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "S",
+          "ours": 0.6000000000000001,
+          "paper": 0.6,
+          "where": "p. 15, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "gain",
+          "ours": 1.5000000000000002,
+          "paper": 1.5,
+          "where": "p. 14, Sec. 4.3.2",
+          "within_rounding": true
+        },
+        {
+          "key": "xi",
+          "ours": 0.3829922522561057,
+          "paper": 0.382992,
+          "where": "p. 15, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "m_max",
+          "ours": 0.055555555555555566,
+          "paper": 0.05556,
+          "where": "p. 15, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "m_deter_12",
+          "ours": 0.031916021021342146,
+          "paper": 0.0319,
+          "where": "p. 15, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "detect_12",
+          "ours": 0.3181818181818181,
+          "paper": 0.32,
+          "where": "p. 16, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "success_12",
+          "ours": 0.6818181818181819,
+          "paper": 0.68,
+          "where": "p. 16, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "mean_finding_12",
+          "ours": 31.33222651192337,
+          "paper": 31.0,
+          "where": "p. 16, Sec. 4.3.4",
+          "within_rounding": true
+        },
+        {
+          "key": "prop3_lhs",
+          "ours": 1.2,
+          "paper": 1.2,
+          "where": "p. 15, Sec. 4.3.3",
+          "within_rounding": true
+        },
+        {
+          "key": "prop3_rhs",
+          "ours": 0.8,
+          "paper": 0.8,
+          "where": "p. 15, Sec. 4.3.3",
+          "within_rounding": true
+        },
+        {
+          "key": "critical_window",
+          "ours": 6.893860540609902,
+          "paper": 6.89,
+          "where": "p. 17, Sec. 4.4",
+          "within_rounding": true
+        },
+        {
+          "key": "mmin_d0",
+          "ours": 0.031916021021342146,
+          "paper": 0.0319,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "mmin_d6",
+          "ours": 0.03736509778108348,
+          "paper": 0.0374,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "mmin_d12",
+          "ours": 0.04448225926319463,
+          "paper": 0.0445,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "mmin_d18",
+          "ours": 0.05394257074029658,
+          "paper": 0.0539,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "mmin_d24",
+          "ours": 0.06672338889479193,
+          "paper": 0.0667,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "net_d0",
+          "ours": 1.638267432423762,
+          "paper": 1.638,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "net_d6",
+          "ours": 1.4911423599107458,
+          "paper": 1.491,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "net_d12",
+          "ours": 1.2989789998937449,
+          "paper": 1.299,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "net_d18",
+          "ours": 1.0435505900119921,
+          "paper": 1.044,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "net_d24",
+          "ours": 0.6984684998406177,
+          "paper": 0.699,
+          "where": "p. 19, Table 3",
+          "within_rounding": true
+        },
+        {
+          "key": "needed_eta13.5_l0",
+          "ours": 3.446930270304951,
+          "paper": 3.45,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        },
+        {
+          "key": "needed_eta27_l0",
+          "ours": 6.893860540609902,
+          "paper": 6.89,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        },
+        {
+          "key": "needed_eta27_l1",
+          "ours": 7.893860540609902,
+          "paper": 7.89,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        },
+        {
+          "key": "needed_eta27_l2",
+          "ours": 8.893860540609902,
+          "paper": 8.89,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        },
+        {
+          "key": "needed_eta54_l0",
+          "ours": 13.787721081219804,
+          "paper": 13.79,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        },
+        {
+          "key": "last_eta27_l0",
+          "ours": 18.909438791426904,
+          "paper": 18.9,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        },
+        {
+          "key": "last_eta27_l1",
+          "ours": 14.845587255854692,
+          "paper": 14.8,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        },
+        {
+          "key": "last_eta27_l2",
+          "ours": 10.961485827036942,
+          "paper": 10.9,
+          "where": "p. 19, Table 2",
+          "within_rounding": true
+        }
+      ],
+      "regime": {
+        "C7_reading": "Gan's breakout gain over cooperation is V = T - C and the loss when caught is P = C - R, so xi = ln(1 + V / P). C7's condition (ii) at pi = beta is ln(1/beta) >= ln(1 + V/P): prevention implies Gan's deterrence exactly when (ii) holds.",
+        "deterrence_window_declared_days": 35.02180118984391,
+        "deterrence_window_years": 4.082779048153433,
+        "historical_rate_per_year": 0.093806754599989,
+        "prevention_over_deterrence": 7.821913513672736,
+        "prevention_window_years": 31.935144610091246
+      }
+    },
+    "information_regimes": {
+      "cells": [
+        {
+          "compliance": 0.0033004611146898455,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 3,
+          "mu": 1.0,
+          "none": 7.993260875416297e-08,
+          "private": 0.00032517307833496747,
+          "public": 0.007194930250637282
+        },
+        {
+          "compliance": 0.005319877805093004,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 3,
+          "mu": 1.0,
+          "none": 7.993260875416297e-08,
+          "private": 0.00032517307833496747,
+          "public": 0.007194930250637282
+        },
+        {
+          "compliance": 0.004123140769656308,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 3,
+          "mu": 1.0,
+          "none": 7.993260875416297e-08,
+          "private": 0.00032517307833496747,
+          "public": 0.007194930250637282
+        },
+        {
+          "compliance": 0.16570112428662662,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 6,
+          "mu": 1.0,
+          "none": 7.971613424917479e-08,
+          "private": 0.13013798634906093,
+          "public": 0.1899603155090308
+        },
+        {
+          "compliance": 0.1719866401423433,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 6,
+          "mu": 1.0,
+          "none": 7.971613424917479e-08,
+          "private": 0.13013798634906093,
+          "public": 0.1899603155090308
+        },
+        {
+          "compliance": 0.14765782227539445,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 6,
+          "mu": 1.0,
+          "none": 7.971613424917479e-08,
+          "private": 0.13013798634906093,
+          "public": 0.1899603155090308
+        },
+        {
+          "compliance": 0.340061569703254,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 10,
+          "mu": 1.0,
+          "none": 8.45389895864912e-08,
+          "private": 0.30789386188910944,
+          "public": 0.35443046850556115
+        },
+        {
+          "compliance": 0.33675342420850574,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 10,
+          "mu": 1.0,
+          "none": 8.45389895864912e-08,
+          "private": 0.30789386188910944,
+          "public": 0.35443046850556115
+        },
+        {
+          "compliance": 0.3242538109443064,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 10,
+          "mu": 1.0,
+          "none": 8.45389895864912e-08,
+          "private": 0.30789386188910944,
+          "public": 0.35443046850556115
+        },
+        {
+          "compliance": 0.45967293719681485,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 20,
+          "mu": 1.0,
+          "none": 8.641588677971157e-08,
+          "private": 0.45247945236534004,
+          "public": 0.4456081541407879
+        },
+        {
+          "compliance": 0.4733464176605954,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 20,
+          "mu": 1.0,
+          "none": 8.641588677971157e-08,
+          "private": 0.45247945236534004,
+          "public": 0.4456081541407879
+        },
+        {
+          "compliance": 0.4828528549327201,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 20,
+          "mu": 1.0,
+          "none": 8.641588677971157e-08,
+          "private": 0.45247945236534004,
+          "public": 0.4456081541407879
+        },
+        {
+          "compliance": 0.19693410764261968,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 3,
+          "mu": 1.0,
+          "none": 0.025891723449083526,
+          "private": 0.1733514599332687,
+          "public": 0.20812631065111373
+        },
+        {
+          "compliance": 0.19993667396440912,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 3,
+          "mu": 1.0,
+          "none": 0.025891723449083526,
+          "private": 0.1733514599332687,
+          "public": 0.20812631065111373
+        },
+        {
+          "compliance": 0.18612611911798965,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 3,
+          "mu": 1.0,
+          "none": 0.025891723449083526,
+          "private": 0.1733514599332687,
+          "public": 0.20812631065111373
+        },
+        {
+          "compliance": 0.5015611133962781,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 6,
+          "mu": 1.0,
+          "none": 0.27835424237853834,
+          "private": 0.47082228461668907,
+          "public": 0.5218736525997216
+        },
+        {
+          "compliance": 0.5107813509413386,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 6,
+          "mu": 1.0,
+          "none": 0.27835424237853834,
+          "private": 0.47082228461668907,
+          "public": 0.5218736525997216
+        },
+        {
+          "compliance": 0.49938083668569505,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 6,
+          "mu": 1.0,
+          "none": 0.27835424237853834,
+          "private": 0.47082228461668907,
+          "public": 0.5218736525997216
+        },
+        {
+          "compliance": 0.6025840340110529,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 10,
+          "mu": 1.0,
+          "none": 0.355126840188861,
+          "private": 0.567805366749815,
+          "public": 0.6252672119225549
+        },
+        {
+          "compliance": 0.6177664906888516,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 10,
+          "mu": 1.0,
+          "none": 0.355126840188861,
+          "private": 0.567805366749815,
+          "public": 0.6252672119225549
+        },
+        {
+          "compliance": 0.6071934874309413,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 10,
+          "mu": 1.0,
+          "none": 0.355126840188861,
+          "private": 0.567805366749815,
+          "public": 0.6252672119225549
+        },
+        {
+          "compliance": 0.6576809165507534,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 20,
+          "mu": 1.0,
+          "none": 0.4032174797798024,
+          "private": 0.6233616738538573,
+          "public": 0.6733607479655742
+        },
+        {
+          "compliance": 0.6857228966563603,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 20,
+          "mu": 1.0,
+          "none": 0.4032174797798024,
+          "private": 0.6233616738538573,
+          "public": 0.6733607479655742
+        },
+        {
+          "compliance": 0.6803376682747241,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 20,
+          "mu": 1.0,
+          "none": 0.4032174797798024,
+          "private": 0.6233616738538573,
+          "public": 0.6733607479655742
+        },
+        {
+          "compliance": 0.0036242045129098793,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 3,
+          "mu": 1.44,
+          "none": 6.417278763937162e-08,
+          "private": 0.0003737242888309971,
+          "public": 0.0083943060052715
+        },
+        {
+          "compliance": 0.0054083394263342004,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 3,
+          "mu": 1.44,
+          "none": 6.417278763937162e-08,
+          "private": 0.0003737242888309971,
+          "public": 0.0083943060052715
+        },
+        {
+          "compliance": 0.004070636088823141,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 3,
+          "mu": 1.44,
+          "none": 6.417278763937162e-08,
+          "private": 0.0003737242888309971,
+          "public": 0.0083943060052715
+        },
+        {
+          "compliance": 0.1062418300901715,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 6,
+          "mu": 1.44,
+          "none": 8.427832143276248e-08,
+          "private": 0.07078602830451323,
+          "public": 0.14508146879873624
+        },
+        {
+          "compliance": 0.11708165651092786,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 6,
+          "mu": 1.44,
+          "none": 8.427832143276248e-08,
+          "private": 0.07078602830451323,
+          "public": 0.14508146879873624
+        },
+        {
+          "compliance": 0.09723505649650492,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 6,
+          "mu": 1.44,
+          "none": 8.427832143276248e-08,
+          "private": 0.07078602830451323,
+          "public": 0.14508146879873624
+        },
+        {
+          "compliance": 0.23175001062893175,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 10,
+          "mu": 1.44,
+          "none": 9.598712447100866e-08,
+          "private": 0.1677137344183696,
+          "public": 0.26815940461468907
+        },
+        {
+          "compliance": 0.2441349979004398,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 10,
+          "mu": 1.44,
+          "none": 9.598712447100866e-08,
+          "private": 0.1677137344183696,
+          "public": 0.26815940461468907
+        },
+        {
+          "compliance": 0.20696309558726364,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 10,
+          "mu": 1.44,
+          "none": 9.598712447100866e-08,
+          "private": 0.1677137344183696,
+          "public": 0.26815940461468907
+        },
+        {
+          "compliance": 0.3399905992348896,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 20,
+          "mu": 1.44,
+          "none": 5.019234528003125e-08,
+          "private": 0.27309203507016094,
+          "public": 0.3345233789663355
+        },
+        {
+          "compliance": 0.35357864097136155,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 20,
+          "mu": 1.44,
+          "none": 5.019234528003125e-08,
+          "private": 0.27309203507016094,
+          "public": 0.3345233789663355
+        },
+        {
+          "compliance": 0.3321054022514478,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 20,
+          "mu": 1.44,
+          "none": 5.019234528003125e-08,
+          "private": 0.27309203507016094,
+          "public": 0.3345233789663355
+        },
+        {
+          "compliance": 0.15924452296848488,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 3,
+          "mu": 1.44,
+          "none": 5.709289874200607e-08,
+          "private": 0.1288061253251913,
+          "public": 0.18103226673670167
+        },
+        {
+          "compliance": 0.16639868356821103,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 3,
+          "mu": 1.44,
+          "none": 5.709289874200607e-08,
+          "private": 0.1288061253251913,
+          "public": 0.18103226673670167
+        },
+        {
+          "compliance": 0.14848344757940315,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 3,
+          "mu": 1.44,
+          "none": 5.709289874200607e-08,
+          "private": 0.1288061253251913,
+          "public": 0.18103226673670167
+        },
+        {
+          "compliance": 0.4040671305195017,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 6,
+          "mu": 1.44,
+          "none": 0.04726812132391989,
+          "private": 0.3475613083386761,
+          "public": 0.4384860902473234
+        },
+        {
+          "compliance": 0.41755608034326575,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 6,
+          "mu": 1.44,
+          "none": 0.04726812132391989,
+          "private": 0.3475613083386761,
+          "public": 0.4384860902473234
+        },
+        {
+          "compliance": 0.399448833213817,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 6,
+          "mu": 1.44,
+          "none": 0.04726812132391989,
+          "private": 0.3475613083386761,
+          "public": 0.4384860902473234
+        },
+        {
+          "compliance": 0.4844232038284096,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 10,
+          "mu": 1.44,
+          "none": 0.11494330312234391,
+          "private": 0.42982241624912565,
+          "public": 0.5181122388195396
+        },
+        {
+          "compliance": 0.5109512634850645,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 10,
+          "mu": 1.44,
+          "none": 0.11494330312234391,
+          "private": 0.42982241624912565,
+          "public": 0.5181122388195396
+        },
+        {
+          "compliance": 0.49963499814571866,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 10,
+          "mu": 1.44,
+          "none": 0.11494330312234391,
+          "private": 0.42982241624912565,
+          "public": 0.5181122388195396
+        },
+        {
+          "compliance": 0.5287561628057573,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 20,
+          "mu": 1.44,
+          "none": 0.1598407958530242,
+          "private": 0.47525880021338784,
+          "public": 0.5471574542178229
+        },
+        {
+          "compliance": 0.5748317775386622,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 20,
+          "mu": 1.44,
+          "none": 0.1598407958530242,
+          "private": 0.47525880021338784,
+          "public": 0.5471574542178229
+        },
+        {
+          "compliance": 0.5676274115959088,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 20,
+          "mu": 1.44,
+          "none": 0.1598407958530242,
+          "private": 0.47525880021338784,
+          "public": 0.5471574542178229
+        },
+        {
+          "compliance": 0.0018964960540701406,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 3,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.00011241320449348429,
+          "public": 0.0066668923382279584
+        },
+        {
+          "compliance": 0.0024455326010310477,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 3,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.00011241320449348429,
+          "public": 0.0066668923382279584
+        },
+        {
+          "compliance": 0.001962152204783463,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 3,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.00011241320449348429,
+          "public": 0.0066668923382279584
+        },
+        {
+          "compliance": 0.03254459161500992,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 6,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.01655220718477899,
+          "public": 0.07714147986237939
+        },
+        {
+          "compliance": 0.03692623547903251,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 6,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.01655220718477899,
+          "public": 0.07714147986237939
+        },
+        {
+          "compliance": 0.032367816992066235,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 6,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.01655220718477899,
+          "public": 0.07714147986237939
+        },
+        {
+          "compliance": 0.07220105744636675,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 10,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.038900794174462155,
+          "public": 0.14121673800098183
+        },
+        {
+          "compliance": 0.08193179293256811,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 10,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.038900794174462155,
+          "public": 0.14121673800098183
+        },
+        {
+          "compliance": 0.0686228860630747,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 10,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.038900794174462155,
+          "public": 0.14121673800098183
+        },
+        {
+          "compliance": 0.11393845537888761,
+          "eta": 0.5,
+          "line_share": 0.25,
+          "m": 20,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.06318133464884042,
+          "public": 0.17493010547189325
+        },
+        {
+          "compliance": 0.13079918127855703,
+          "eta": 0.5,
+          "line_share": 0.5,
+          "m": 20,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.06318133464884042,
+          "public": 0.17493010547189325
+        },
+        {
+          "compliance": 0.10241877562896538,
+          "eta": 0.5,
+          "line_share": 0.75,
+          "m": 20,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.06318133464884042,
+          "public": 0.17493010547189325
+        },
+        {
+          "compliance": 0.07059709971573024,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 3,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.03934920039907132,
+          "public": 0.1148499738389199
+        },
+        {
+          "compliance": 0.08372909268294111,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 3,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.03934920039907132,
+          "public": 0.1148499738389199
+        },
+        {
+          "compliance": 0.06932069264351828,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 3,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.03934920039907132,
+          "public": 0.1148499738389199
+        },
+        {
+          "compliance": 0.16476271715418356,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 6,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.09450534759008877,
+          "public": 0.2562868096173414
+        },
+        {
+          "compliance": 0.19463411269905762,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 6,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.09450534759008877,
+          "public": 0.2562868096173414
+        },
+        {
+          "compliance": 0.1516137816074092,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 6,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.09450534759008877,
+          "public": 0.2562868096173414
+        },
+        {
+          "compliance": 0.20141553912755747,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 10,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.11602035391343062,
+          "public": 0.2970778836373984
+        },
+        {
+          "compliance": 0.24698169137384013,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 10,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.11602035391343062,
+          "public": 0.2970778836373984
+        },
+        {
+          "compliance": 0.1822552874182918,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 10,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.11602035391343062,
+          "public": 0.2970778836373984
+        },
+        {
+          "compliance": 0.2252254611006837,
+          "eta": 0.9,
+          "line_share": 0.25,
+          "m": 20,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.12838116137128594,
+          "public": 0.3078380996732882
+        },
+        {
+          "compliance": 0.2816469402720896,
+          "eta": 0.9,
+          "line_share": 0.5,
+          "m": 20,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.12838116137128594,
+          "public": 0.3078380996732882
+        },
+        {
+          "compliance": 0.19993321172288392,
+          "eta": 0.9,
+          "line_share": 0.75,
+          "m": 20,
+          "mu": 3.0,
+          "none": 5.960464477539063e-08,
+          "private": 0.12838116137128594,
+          "public": 0.3078380996732882
+        }
+      ],
+      "definition": "compliance-only: each party knows its own capability; a public bit says whether each party's capability is below the line L (line_share = L / mu). The O2 candidate survives only if compliance-only risk is no higher than no information in every cell.",
+      "halting": "With a breakout halted with chance 1 - S and a penalty P on a halted winner, the no-information safety rises by (1 - S) P / (S eta) (checked against the solver) and risk is multiplied by S. At the line S <= beta, so any penalty above a few thousandths of the prize gives full safety in this model; the multiplication by S is true by construction and is not evidence.",
+      "halting_at_the_line_fig2_m6": [
+        {
+          "S": 0.05,
+          "penalty_over_prize": 0.0,
+          "risk_with_regime": 0.0023634060661959946,
+          "risk_without_regime": 0.04726812132391989,
+          "safety": 0.9527318786760801
+        },
+        {
+          "S": 0.05,
+          "penalty_over_prize": 0.001,
+          "risk_with_regime": 0.00130784101334952,
+          "risk_without_regime": 0.04726812132391989,
+          "safety": 0.9738431797330096
+        },
+        {
+          "S": 0.05,
+          "penalty_over_prize": 0.0025,
+          "risk_with_regime": 3.078462595951237e-09,
+          "risk_without_regime": 0.04726812132391989,
+          "safety": 0.9999999384307481
+        },
+        {
+          "S": 0.05,
+          "penalty_over_prize": 0.01,
+          "risk_with_regime": 2.7142804448487824e-09,
+          "risk_without_regime": 0.04726812132391989,
+          "safety": 0.9999999457143911
+        }
+      ],
+      "summary": {
+        "cells": 72,
+        "cells_where_compliance_no_riskier_than_none": [],
+        "compliance_over_none": 1.0,
+        "compliance_over_private": 1.0,
+        "compliance_over_public": 0.125,
+        "largest_equilibrium_epsilon": 2.1397086324981274e-08,
+        "public_over_private": 0.9583333333333334
+      }
+    },
+    "ledger_inputs": {
+      "claim-whole-fleet-horizon": 7.791011230287927,
+      "comp-rosetta-algo": 6.0,
+      "def-hwp-breakout-budget": 2e+29,
+      "def-hwp-global-fleet": 47.0,
+      "def-prevent-beta": 0.05,
+      "e24-halt-km-median-years": 1.1827515400410678,
+      "e24-halt-share-never": 0.25,
+      "e5-hazard": 0.093806754599989,
+      "e5-hazard-hi": 0.14665001522034393,
+      "e5-hazard-lo": 0.056712465006836396,
+      "org-dprk-months": 9.0,
+      "org-fe-years-of-sales": 0.4702424687729611,
+      "org-hwp-fe": 6.4,
+      "phys-algo-growth": 2.6918003852647123,
+      "phys-algo-growth-high": 6.3496042078727974,
+      "phys-algo-growth-low": 1.789009240520278,
+      "prot-coalition-share-declared": 1.0,
+      "prot-lambda-declared": 3.9943096980719877,
+      "prot-licence-months": 3.0,
+      "prot-margin": 2.0,
+      "prot-prize-over-penalty": 18.999999999999996,
+      "prot-tr-declared": 1.0
+    },
+    "nordhaus": {
+      "ai_reading": "For C7 the club penalty is denial of chips, cloud and models to non-members. It must exceed an outsider's gain from staying out, and neither the gain nor the cost of denial to a party is measured in units that can be compared: the smallest stabilising denial is not identified.",
+      "grand_coalition_penalty_in_member_cost_units": {
+        "b=1.5,N=10": 0.5940000000000788,
+        "b=1.5,N=15": 0.7197037037036947,
+        "b=1.5,N=5": 0.2719999999999459,
+        "b=1.5,N=50": 0.9117919999999983,
+        "b=2,N=10": 0.6300000000000082,
+        "b=2,N=15": 0.7466666666666684,
+        "b=2,N=5": 0.3200000000000091,
+        "b=2,N=50": 0.9212000000000007,
+        "b=2.5,N=10": 0.629698461869336,
+        "b=2.5,N=15": 0.7448832492331751,
+        "b=2.5,N=5": 0.3261463088261025,
+        "b=2.5,N=50": 0.919433883997442
+      },
+      "stable_sizes": {
+        "b=1.5,N=10": [
+          3
+        ],
+        "b=1.5,N=15": [
+          3
+        ],
+        "b=1.5,N=50": [
+          3
+        ],
+        "b=2,N=10": [
+          2,
+          3
+        ],
+        "b=2,N=15": [
+          2,
+          3
+        ],
+        "b=2,N=50": [
+          2,
+          3
+        ],
+        "b=2.5,N=10": [
+          2
+        ],
+        "b=2.5,N=15": [
+          2
+        ],
+        "b=2.5,N=50": [
+          2
+        ],
+        "b=3,N=10": [
+          2
+        ],
+        "b=3,N=15": [
+          2
+        ],
+        "b=3,N=50": [
+          2
+        ]
+      },
+      "ten_in_pairs": {
+        "price_over_efficient": 0.2,
+        "price_over_noncooperative": 2.0
+      },
+      "verdict": "Reproduces the analytic case: with quadratic costs sizes 2 and 3 are stable (3 with internal stability holding as an equality), size 2 above exponent 2 and 3 below, independent of N and of scale. The C-DICE results with tariffs need Nordhaus's model and data and are not reproduced."
+    },
+    "table": {
+      "armstrong": {
+        "e_fig1": {
+          "kind": "parameter",
+          "source": "armstrong2016racing",
+          "unit": "",
+          "value": 1.0,
+          "where": "FHI Technical Report 2013-1, Fig. 1 caption"
+        },
+        "e_fig2": {
+          "kind": "parameter",
+          "source": "armstrong2016racing",
+          "unit": "",
+          "value": 0.5,
+          "where": "FHI Technical Report 2013-1, Fig. 2 caption"
+        },
+        "n_fig1a": {
+          "kind": "parameter",
+          "source": "armstrong2016racing",
+          "unit": "teams",
+          "value": 2.0,
+          "where": "FHI Technical Report 2013-1 (the version opened), Fig. 1a caption"
+        },
+        "n_fig1b": {
+          "kind": "parameter",
+          "source": "armstrong2016racing",
+          "unit": "teams",
+          "value": 5.0,
+          "where": "FHI Technical Report 2013-1, Fig. 1b caption"
+        }
+      },
+      "barrett": {
+        "N": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "players",
+          "value": 10.0,
+          "where": "Materials and Methods (PMC full text)"
+        },
+        "T": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 150.0,
+          "where": "Materials and Methods"
+        },
+        "T_hi": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 200.0,
+          "where": "Materials and Methods"
+        },
+        "T_lo": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 100.0,
+          "where": "Materials and Methods"
+        },
+        "X": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "EUR",
+          "value": 15.0,
+          "where": "Materials and Methods"
+        },
+        "X_hi": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "EUR",
+          "value": 20.0,
+          "where": "Materials and Methods"
+        },
+        "X_lo": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "EUR",
+          "value": 10.0,
+          "where": "Materials and Methods"
+        },
+        "avoided_certainty": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "groups of 10",
+          "value": 8.0,
+          "where": "Fig. 2 legend"
+        },
+        "avoided_impact": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "groups of 10",
+          "value": 10.0,
+          "where": "Fig. 2 legend"
+        },
+        "b": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "EUR",
+          "value": 0.05,
+          "where": "Materials and Methods"
+        },
+        "below_certain_both": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "groups of 10",
+          "value": 3.0,
+          "where": "Fig. 2 legend"
+        },
+        "below_certain_threshold": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "groups of 10",
+          "value": 1.0,
+          "where": "Fig. 2 legend"
+        },
+        "cA": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "EUR",
+          "value": 0.1,
+          "where": "Materials and Methods"
+        },
+        "cB": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "EUR",
+          "value": 1.0,
+          "where": "Materials and Methods"
+        },
+        "chipsA": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 10.0,
+          "where": "Materials and Methods"
+        },
+        "chipsB": {
+          "kind": "parameter",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 10.0,
+          "where": "Materials and Methods"
+        },
+        "mean_both": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 79.9,
+          "where": "Table 1"
+        },
+        "mean_certainty": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 150.9,
+          "where": "Table 1"
+        },
+        "mean_impact": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 155.5,
+          "where": "Table 1"
+        },
+        "mean_threshold": {
+          "kind": "observed",
+          "source": "barrett2012climate",
+          "unit": "chips",
+          "value": 77.2,
+          "where": "Table 1"
+        }
+      },
+      "emeryxu": {
+        "eta_fig2": {
+          "kind": "parameter",
+          "source": "emeryxu2024uncertainty",
+          "unit": "",
+          "value": 0.9,
+          "where": "p. 2029, Fig. 2 caption"
+        },
+        "mu_fig2": {
+          "kind": "parameter",
+          "source": "emeryxu2024uncertainty",
+          "unit": "",
+          "value": 1.44,
+          "where": "p. 2029, Fig. 2 caption"
+        },
+        "switch_m": {
+          "kind": "published",
+          "source": "emeryxu2024uncertainty",
+          "unit": "",
+          "value": 6.0,
+          "where": "p. 2030, text after Proposition 5"
+        }
+      },
+      "fithian": {
+        "budget_bullish": {
+          "kind": "parameter",
+          "source": "fithian2026hardwired",
+          "unit": "FLOP",
+          "value": 4.3e+28,
+          "where": "Sec. 6.2.3"
+        }
+      },
+      "fudenberg": {
+        "a1_fig4": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.2,
+          "where": "p. 15, text on Fig. 4"
+        },
+        "a2_fig4": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.1,
+          "where": "p. 15, text on Fig. 4"
+        },
+        "alpha": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 2.0,
+          "where": "p. 12, footnote 10"
+        },
+        "beta": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 1.0,
+          "where": "p. 12, footnote 10"
+        },
+        "g_fig2": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.9,
+          "where": "p. 12, footnote 10"
+        },
+        "g_fig4": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.5,
+          "where": "p. 15, footnote 11"
+        },
+        "kappa_fig2": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 4.8,
+          "where": "p. 12, footnote 10"
+        },
+        "kappa_fig4": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 6.4124,
+          "where": "p. 15, footnote 11"
+        },
+        "leff_fig2": {
+          "kind": "published",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.2018,
+          "where": "p. 15, text on Fig. 5"
+        },
+        "leff_fig4": {
+          "kind": "published",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.9,
+          "where": "p. 15, footnote 11"
+        },
+        "r": {
+          "kind": "parameter",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 3.0,
+          "where": "p. 12, footnote 10"
+        },
+        "race_fig4": {
+          "kind": "published",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.3448,
+          "where": "p. 15, text on Fig. 4"
+        },
+        "slowdown_fig4": {
+          "kind": "published",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.3396,
+          "where": "p. 15, text on Fig. 4"
+        },
+        "upper_fig2": {
+          "kind": "published",
+          "source": "fudenberg2026cooperating",
+          "unit": "",
+          "value": 0.2,
+          "where": "p. 15, text on Fig. 5"
+        }
+      },
+      "gan": {
+        "C": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 2.5,
+          "where": "p. 15, Sec. 4.3.4"
+        },
+        "R": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.0,
+          "where": "p. 15, Sec. 4.3.4"
+        },
+        "S": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.6,
+          "where": "p. 15, Sec. 4.3.4"
+        },
+        "T": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 3.2,
+          "where": "p. 15, Sec. 4.3.4"
+        },
+        "Y": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.0,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "Z": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 4.0,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "c": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.8,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "chi": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.5,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "critical_window": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 6.89,
+          "where": "p. 17, Sec. 4.4"
+        },
+        "d": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.2,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "detect_12": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.32,
+          "where": "p. 16, Sec. 4.3.4"
+        },
+        "eta": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 27.0,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "gain": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.5,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "last_eta27_l0": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 18.9,
+          "where": "p. 19, Table 2"
+        },
+        "last_eta27_l1": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 14.8,
+          "where": "p. 19, Table 2"
+        },
+        "last_eta27_l2": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 10.9,
+          "where": "p. 19, Table 2"
+        },
+        "m_deter_12": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "/month",
+          "value": 0.0319,
+          "where": "p. 15, Sec. 4.3.4"
+        },
+        "m_max": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "/month",
+          "value": 0.05556,
+          "where": "p. 15, Sec. 4.3.4"
+        },
+        "mean_finding_12": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 31.0,
+          "where": "p. 16, Sec. 4.3.4"
+        },
+        "mmin_d0": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "/month",
+          "value": 0.0319,
+          "where": "p. 19, Table 3"
+        },
+        "mmin_d12": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "/month",
+          "value": 0.0445,
+          "where": "p. 19, Table 3"
+        },
+        "mmin_d18": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "/month",
+          "value": 0.0539,
+          "where": "p. 19, Table 3"
+        },
+        "mmin_d24": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "/month",
+          "value": 0.0667,
+          "where": "p. 19, Table 3"
+        },
+        "mmin_d6": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "/month",
+          "value": 0.0374,
+          "where": "p. 19, Table 3"
+        },
+        "needed_eta13.5_l0": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 3.45,
+          "where": "p. 19, Table 2"
+        },
+        "needed_eta27_l0": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 6.89,
+          "where": "p. 19, Table 2"
+        },
+        "needed_eta27_l1": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 7.89,
+          "where": "p. 19, Table 2"
+        },
+        "needed_eta27_l2": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 8.89,
+          "where": "p. 19, Table 2"
+        },
+        "needed_eta54_l0": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 13.79,
+          "where": "p. 19, Table 2"
+        },
+        "net_d0": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.638,
+          "where": "p. 19, Table 3"
+        },
+        "net_d12": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.299,
+          "where": "p. 19, Table 3"
+        },
+        "net_d18": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.044,
+          "where": "p. 19, Table 3"
+        },
+        "net_d24": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.699,
+          "where": "p. 19, Table 3"
+        },
+        "net_d6": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.491,
+          "where": "p. 19, Table 3"
+        },
+        "p0": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.1,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "p1": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.2,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "p2": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.4,
+          "where": "p. 14, Sec. 4.3.2"
+        },
+        "prop3_lhs": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 1.2,
+          "where": "p. 15, Sec. 4.3.3"
+        },
+        "prop3_rhs": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.8,
+          "where": "p. 15, Sec. 4.3.3"
+        },
+        "success_12": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.68,
+          "where": "p. 16, Sec. 4.3.4"
+        },
+        "window_d0": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 12.0,
+          "where": "p. 19, Table 3"
+        },
+        "window_d12": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 8.61,
+          "where": "p. 19, Table 3"
+        },
+        "window_d18": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 7.1,
+          "where": "p. 19, Table 3"
+        },
+        "window_d24": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 5.74,
+          "where": "p. 19, Table 3"
+        },
+        "window_d6": {
+          "kind": "parameter",
+          "source": "gan2026clock",
+          "unit": "months",
+          "value": 10.25,
+          "where": "p. 19, Table 3"
+        },
+        "xi": {
+          "kind": "published",
+          "source": "gan2026clock",
+          "unit": "",
+          "value": 0.382992,
+          "where": "p. 15, Sec. 4.3.4"
+        }
+      },
+      "nordhaus": {
+        "price_over_eff_n10": {
+          "kind": "published",
+          "source": "nordhaus2015climate",
+          "unit": "",
+          "value": 0.2,
+          "where": "p. 1345, Sec. III.B"
+        },
+        "price_over_nc_n10": {
+          "kind": "published",
+          "source": "nordhaus2015climate",
+          "unit": "",
+          "value": 2.0,
+          "where": "p. 1345, Sec. III.B"
+        },
+        "size_b_above2": {
+          "kind": "published",
+          "source": "nordhaus2015climate",
+          "unit": "countries",
+          "value": 2.0,
+          "where": "online appendix, Sec. C, p. 28"
+        },
+        "size_b_below2": {
+          "kind": "published",
+          "source": "nordhaus2015climate",
+          "unit": "countries",
+          "value": 3.0,
+          "where": "online appendix, Sec. C, p. 28"
+        },
+        "stable_high": {
+          "kind": "published",
+          "source": "nordhaus2015climate",
+          "unit": "countries",
+          "value": 3.0,
+          "where": "p. 1345, Sec. III.B"
+        },
+        "stable_low": {
+          "kind": "published",
+          "source": "nordhaus2015climate",
+          "unit": "countries",
+          "value": 2.0,
+          "where": "p. 1345, Sec. III.B"
+        }
+      }
+    }
+  },
+  "experiment": "E6",
+  "name": "e06_games",
+  "numbers": {
+    "e6-armstrong-br-gain-max": {
+      "fmt": ".1e",
+      "label": "largest gain any team gets by deviating from Armstrong et al.'s no-information (exact) and private-information (grid of 20000 rival types) equilibria; it falls as the grid is refined (both grids in the detail), so it is grid error and the equilibria reproduce",
+      "note": "",
+      "unit": "",
+      "value": 6.855922946713555e-05
+    },
+    "e6-armstrong-claims-held": {
+      "fmt": ",.0f",
+      "label": "Armstrong et al.'s qualitative statements that hold on their own closed forms (of 8 tested)",
+      "note": "",
+      "unit": "",
+      "value": 8.0
+    },
+    "e6-ba-eq-certainty": {
+      "fmt": ",.0f",
+      "label": "symmetric pure equilibria of Barrett and Dannenberg's game with a known threshold (they give 2)",
+      "note": "",
+      "unit": "",
+      "value": 2.0
+    },
+    "e6-ba-eq-threshold": {
+      "fmt": ",.0f",
+      "label": "symmetric pure equilibria of the same game with the threshold uniform on 100 to 200 chips (they give 1, contributing nothing)",
+      "note": "",
+      "unit": "",
+      "value": 1.0
+    },
+    "e6-budget-binding-share": {
+      "fmt": "%",
+      "label": "share of the hardwired-pause paper's own budget range (4.3e28 to 2e29 FLOP, uniform) in which the overt line binds (s* < 1), illustrative T_r",
+      "note": "",
+      "unit": "",
+      "value": 0.05312877215286625
+    },
+    "e6-budget-binding-share-e24": {
+      "fmt": "%",
+      "label": "the same share of the budget range with the response time set to E24's median time to a halt",
+      "note": "",
+      "unit": "",
+      "value": 0.3581516985031847
+    },
+    "e6-ex-cross-m-paper": {
+      "fmt": ".1f",
+      "label": "decisiveness at which public risk overtakes private risk, with private risk from the paper's own Proposition 2 (the paper says 6)",
+      "note": "",
+      "unit": "",
+      "value": 5.6107581121756445
+    },
+    "e6-ex-inf-cross-mu": {
+      "fmt": ".3f",
+      "label": "capability range mu at which public and private risk are equal as m grows without bound, at enmity 0.9 (from Armstrong et al.'s closed forms)",
+      "note": "",
+      "unit": "",
+      "value": 1.4394384503811952
+    },
+    "e6-ex-none-max-diff": {
+      "fmt": ".1e",
+      "label": "largest difference between Emery-Xu et al.'s Proposition 1 no-information risk and our numerical equilibrium on 60 types, m from 1 to 20 (grid error: it reproduces)",
+      "note": "",
+      "unit": "",
+      "value": 0.0002963075413992544
+    },
+    "e6-ex-private-risk-eq-m6": {
+      "fmt": ".2f",
+      "label": "private-information disaster risk at m = 6 in the equilibrium we solve (Fig. 2 parameters)",
+      "note": "",
+      "unit": "",
+      "value": 0.3475613083386761
+    },
+    "e6-ex-private-risk-paper-m6": {
+      "fmt": ".2f",
+      "label": "private-information disaster risk at m = 6 from the paper's Corollary 2.1 (Fig. 2 parameters)",
+      "note": "",
+      "unit": "",
+      "value": 0.42929654729439926
+    },
+    "e6-ex-prop2-br-gain-max": {
+      "fmt": ".3f",
+      "label": "largest gain from deviating from Emery-Xu et al.'s Proposition 2 strategy in their own model (m of 2 to 20; 0 would mean it is an equilibrium)",
+      "note": "",
+      "unit": "",
+      "value": 0.016762159262665666
+    },
+    "e6-ex-public-minus-private-min": {
+      "fmt": ".3f",
+      "label": "smallest excess of public over private risk across m = 1 to 20 with our private equilibrium (positive: public is riskier at every m where either is risky)",
+      "note": "",
+      "unit": "",
+      "value": 0.002724853026397468
+    },
+    "e6-ex-public-risk-m6": {
+      "fmt": ".2f",
+      "label": "public-information disaster risk at m = 6 in the equilibrium we solve (Fig. 2 parameters)",
+      "note": "",
+      "unit": "",
+      "value": 0.4384860902473234
+    },
+    "e6-fk-halt-tau": {
+      "fmt": ".2f",
+      "label": "longest fixed time to a halt that removes the deviator's lead and still sustains pacing, same model (against L* when the answer is racing)",
+      "note": "",
+      "unit": "model time",
+      "value": 1.1987943054566579
+    },
+    "e6-fk-lambda-star": {
+      "fmt": ".2f",
+      "label": "detection rate that sustains pacing when a departure is found at a random time and answered at once by racing, same model",
+      "note": "",
+      "unit": "per model time",
+      "value": 0.7249895955000317
+    },
+    "e6-fk-leff-fig2": {
+      "fmt": ".4f",
+      "label": "Fudenberg and Koh's effective hazard at their Fig. 2 parameters, recomputed (they print 0.2018)",
+      "note": "",
+      "unit": "",
+      "value": 0.20181570217492384
+    },
+    "e6-fk-lstar": {
+      "fmt": ".2f",
+      "label": "longest lag before a rival sees a departure that still sustains pacing (Proposition 4's L*), constant-risk analogue of Fig. 4, in the model's time units",
+      "note": "",
+      "unit": "model time",
+      "value": 0.6087619117002243
+    },
+    "e6-fk-slowdown-fig4": {
+      "fmt": ".4f",
+      "label": "leader's payoff from pacing until catch-up then racing, Fig. 4, recomputed (they print 0.3396)",
+      "note": "",
+      "unit": "",
+      "value": 0.3396414360125056
+    },
+    "e6-gan-deter-window-hist": {
+      "fmt": ".1f",
+      "label": "response window Gan's deterrence needs at E5's historical discovery rate, at Gan's illustrative payoffs",
+      "note": "",
+      "unit": "years",
+      "value": 4.082779048153433
+    },
+    "e6-gan-deter-window-hist-hi": {
+      "fmt": ".1f",
+      "label": "the same window at the 5th percentile of E5's discovery rate (longest window)",
+      "note": "",
+      "unit": "years",
+      "value": 6.753228804460147
+    },
+    "e6-gan-deter-window-hist-lo": {
+      "fmt": ".1f",
+      "label": "the same window at the 95th percentile of E5's discovery rate (shortest window)",
+      "note": "",
+      "unit": "years",
+      "value": 2.6116073133756847
+    },
+    "e6-gan-last-review": {
+      "fmt": ".1f",
+      "label": "last supportable review date at Gan's baseline cost, from his Table 3 catch-up path read linearly (he gives 18.9)",
+      "note": "",
+      "unit": "months",
+      "value": 18.909438791426904
+    },
+    "e6-gan-prize-over-penalty": {
+      "fmt": ".2f",
+      "label": "Gan's illustrative payoffs read as C7's prize over penalty: (T - C) / (C - R)",
+      "note": "",
+      "unit": "",
+      "value": 0.46666666666666673
+    },
+    "e6-gan-reproduced": {
+      "fmt": ",.0f",
+      "label": "Gan's published values reproduced within their printed rounding from his stated primitives (of 32)",
+      "note": "",
+      "unit": "",
+      "value": 32.0
+    },
+    "e6-nordhaus-penalty-n10": {
+      "fmt": ".2f",
+      "label": "penalty on a non-member, in units of a member's abatement cost, that makes the grand coalition of ten identical countries stable (quadratic costs; our extension of Nordhaus's analytic case)",
+      "note": "",
+      "unit": "",
+      "value": 0.6300000000000082
+    },
+    "e6-nordhaus-stable-max": {
+      "fmt": ",.0f",
+      "label": "largest stable coalition of ten identical countries with quadratic costs and no sanction (Nordhaus gives 3)",
+      "note": "",
+      "unit": "countries",
+      "value": 3.0
+    },
+    "e6-nordhaus-stable-min": {
+      "fmt": ",.0f",
+      "label": "smallest stable coalition of ten identical countries with quadratic costs and no sanction (Nordhaus gives 2)",
+      "note": "",
+      "unit": "countries",
+      "value": 2.0
+    },
+    "e6-o2-cells": {
+      "fmt": ",.0f",
+      "label": "calibration cells in the information-regime test (mu, enmity, decisiveness, line position)",
+      "note": "",
+      "unit": "cells",
+      "value": 72.0
+    },
+    "e6-o2-compliance-over-none": {
+      "fmt": ".0%",
+      "label": "share of cells where compliance-only disclosure gives a higher disaster risk than no information",
+      "note": "",
+      "unit": "",
+      "value": 1.0
+    },
+    "e6-o2-compliance-over-private": {
+      "fmt": ".0%",
+      "label": "share of cells where compliance-only disclosure gives a higher disaster risk than private information alone",
+      "note": "",
+      "unit": "",
+      "value": 1.0
+    },
+    "e6-o2-compliance-over-public": {
+      "fmt": ".0%",
+      "label": "share of cells where compliance-only disclosure gives a higher disaster risk than public capability",
+      "note": "",
+      "unit": "",
+      "value": 0.125
+    },
+    "e6-o2-public-over-private": {
+      "fmt": ".0%",
+      "label": "share of (mu, enmity, decisiveness) cells where public capability is riskier than private information",
+      "note": "",
+      "unit": "",
+      "value": 0.9583333333333334
+    },
+    "e6-share-bullish": {
+      "fmt": "%",
+      "label": "largest coalition share (Prop 7.1, margin 2) at the hardwired-pause paper's more bullish budget, 4.3e28 FLOP, fixed algorithms, protocol's illustrative T_r of one year (an illustration: T_r is not bounded)",
+      "note": "",
+      "unit": "",
+      "value": 0.8375337072559521
+    },
+    "e6-share-bullish-e24": {
+      "fmt": "%",
+      "label": "the same share with the response time set to E24's median time from a treaty finding to a halt (an illustration; a quarter of findings were never followed by a halt)",
+      "note": "",
+      "unit": "",
+      "value": 0.43333749315659886
+    },
+    "e6-sourced-payoffs-inside": {
+      "fmt": ",.0f",
+      "label": "sourced payoff calibrations that fall inside C7's penalty condition (ii) (of 2; both are illustrative calibrations, not measurements)",
+      "note": "",
+      "unit": "",
+      "value": 2.0
+    },
+    "e6-staged-pi-line": {
+      "fmt": ".3f",
+      "label": "best per-attempt success of a coalition that passes the margin-2 line at the bullish budget, then grows until the next declaration (all world chip sales, central algorithmic drift) with algorithms fixed at launch; against beta = 0.05",
+      "note": "",
+      "unit": "",
+      "value": 0.00872106798245108
+    },
+    "e6-staged-pi-line-inrun": {
+      "fmt": ".3f",
+      "label": "the same success if the run also absorbs algorithmic progress while it runs (an upper bound on drift)",
+      "note": "",
+      "unit": "",
+      "value": 0.07641585053676728
+    },
+    "e6-staged-share": {
+      "fmt": "%",
+      "label": "largest share whose staged success stays at or below beta at every launch time between declarations, with in-run drift (bullish budget, central drift, no margin, illustrative T_r)",
+      "note": "",
+      "unit": "",
+      "value": 0.6930265118672962
+    },
+    "e6-staged-share-high": {
+      "fmt": "%",
+      "label": "the same share at the high end of the ledger's algorithmic drift interval",
+      "note": "",
+      "unit": "",
+      "value": 0.29220764548636285
+    }
+  },
+  "script": "tools/exp/e06_games.py",
+  "seed": 20261127
+}

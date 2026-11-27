@@ -28,11 +28,18 @@ training must sit in one place. P4 is what each verification channel can actuall
 The survey changed this perspective substantially. Three findings lead. First, a per-site
 footprint floor does not survive distributed training: a run can be split into nodes of a few tens
 of kilowatts, far below anything a satellite, a grid operator or a thermal camera sees, so the only
-floor that holds is an aggregate over chips and energy, and only chip accounting sees it. Second,
+floor that holds is an aggregate over chips and energy, and of the channels modelled here only chip
+accounting sees it. Second,
 the realistic efficiency headroom for today's kind of chip is about two orders of magnitude, not the
 eight that a comparison with Landauer's bound suggests. Third, power is a rate limit in some countries, not a chokepoint: no small set of suppliers
 controls it. The brain appears below only as a reference
 point, never as a target.
+
+Verification then corrected the floor itself. The floors this chapter first computed, at an assumed
+utilisation and the BF16 peak, are estimates. The bound, at full utilisation and the FP8 peak, is
+[5.0](numbers.md#formal-floor-ref-over-bound) times lower, so the untraced pool, already far above
+the estimates, is further above the bound (P4). The aggregate floor with a time axis, and the pool counted against it, are prior work
+[@fithian2026hardwired].
 
 Conventions. "FLOP" means dense 16-bit operations unless a sentence says otherwise. An
 H100-equivalent (H100e) is the unit MIRI's draft agreement defines,
@@ -40,7 +47,10 @@ H100-equivalent (H100e) is the unit MIRI's draft agreement defines,
 utilisation it uses [40%](numbers.md#phys-util-ref), an assumption that sits inside the
 [36.2%](numbers.md#phys-intellect1-mfu-low) to [41.4%](numbers.md#phys-intellect1-mfu-high) that
 INTELLECT-1 measured across continents [@jaghouar2024intellect1]. Every floor below scales as one
-over that utilisation.
+over that utilisation, so a floor computed at it, and at the dense BF16 peak, is an estimate, not a
+bound. No party can exceed full utilisation, and FP8 training at scale is in production
+[@deepseek2024v3], at [2](numbers.md#phys-fp8-over-bf16) times the BF16 peak. The bound uses both
+and sits [5.0](numbers.md#formal-floor-ref-over-bound) times below the estimates (P4).
 
 ## P1. The compute budget
 
@@ -109,7 +119,11 @@ attribute [60%](numbers.md#phys-compute-share-low) to [95%](numbers.md#phys-comp
 language-model gains from 2012 to 2023 to compute scaling [@ho2024algorithmic]. Across [809](numbers.md#phys-mertens-models) models,
 Mertens et al. find that [80%](numbers.md#phys-frontier-explained-low) to
 [90%](numbers.md#phys-frontier-explained-high) of performance differences at the frontier are
-explained by training compute [@mertens2026secretsauce].
+explained by training compute [@mertens2026secretsauce]. The share depends on the measure. On
+Epoch's capability index, E1 finds that training compute explains
+[36%](numbers.md#e1-compute-share) of growth across [105 models](numbers.md#e1-models), and from
+[18%](numbers.md#e1-compute-share-subset-min) to [63%](numbers.md#e1-compute-share-subset-max)
+across six samples of them [@epoch2026aimodels; @epoch2025eci].
 
 **Against: algorithms substitute.** This is the strongest case against leaning on P1, and it
 deserves its best statement. Compute needed for a fixed language-model loss halved every
@@ -130,8 +144,15 @@ by the algorithmic factor, which is why a fixed compute cap leaks.
 from their own ablations [@gundlach2025origin]. Whitfill estimates, as a first pass with other
 explanations possible, that selection bias may overstate observational estimates by a factor of
 about [9](numbers.md#phys-whitfill-bias) [@whitfill2025selection]. So algorithmic efficiency is not
-one multiplier on physical compute, as D3 assumed. How fast a cap leaks depends on where it sits:
-slowly well below the frontier, fast near it.
+one multiplier on physical compute, as D3 assumed. If Gundlach et al. are right, how fast a cap
+leaks depends on where it sits: slowly well below the frontier, fast near it. E1 could not confirm
+the direction on public data. On its full sample the gain a year falls with scale,
+[-0.34 OOM a year per OOM](numbers.md#e1-drift-per-oom), but the sign is not robust across samples,
+and in Ho et al.'s data the highest compute tercile progressed faster than the lowest in only
+[52%](numbers.md#e1-ho-top-faster-share) of resamples [@ho2024algorithmiccode]. The rate itself runs
+from [2.6](numbers.md#e1-algo-annual-subset-min) to [1,512](numbers.md#e1-algo-annual-subset-max)
+times a year in compute-equivalent across samples of the same models: on public data, how fast a
+fixed cap leaks is not identified.
 
 **Inference substitutes too.** Ord illustrates the leak this way: a model trained with
 [1e+24 FLOP](numbers.md#phys-ord-train-small) might, with [10,000](numbers.md#phys-ord-inference-mult)
@@ -163,9 +184,9 @@ Fairwater Atlanta site could do GPT-4-scale runs at a rate of
 utilisation, one year's chip sales could therefore run about
 [140,000,000](numbers.md#phys-flow-2025-copies) copies of a model that size at that speed. A model
 with more active parameters, or one that thinks longer per task, runs proportionally fewer. The
-point survives the caveats: copy counts were assumed in the essays that made them famous, never
-measured from held compute [@karnofsky2022defeat; @amodei2024grace; @aschenbrenner2024sa], and P1
-lets an inspector compute them from an inventory.
+point survives the caveats: copy counts were assumed in the essays that made them famous
+[@karnofsky2022defeat; @amodei2024grace; @aschenbrenner2024sa], forecasts already compute them from
+compute [@lifland2025timelines], and P1 lets an inspector do the same from an inventory.
 
 **The brain, as a reference point.** Carlsmith judges it more likely than not that
 [1e+15 FLOP/s](numbers.md#phys-brain-flops-central) is enough to match the brain, "given the right
@@ -196,19 +217,24 @@ compute as "detectable, excludable, and quantifiable" is Sastry et al.'s case [@
 training compute as an initial filter that triggers scrutiny is Heim and Koessler's
 [@heim2024thresholds]; verifying training runs by sampling chips is Shavit's
 [@shavit2023chinchilla]; FLOP thresholds verified through chip tracking are MIRI's
-[@scher2025agreement]. Computing copies at a speed from held compute and memory bandwidth was not
-found as a published measurement by the cognition track; since the arithmetic is Pope et al.'s
-applied to an inventory, it **extends prior work** at most. The survey also weakens the memo's
-pathway-table entry for unbounded scaling, which answers "Necessary?" with "No, algorithms
-substitute": compute still explains most of the measured gains.
+[@scher2025agreement]. Computing copies at a speed from held compute and memory bandwidth is not a
+contribution either: the arithmetic is Pope et al.'s bound applied to an inventory [@pope2022],
+forecasts already compute copies from compute [@lifland2025timelines], and nothing in the protocol
+triggers on it, so [the claims file](04-claims.md#cut-and-why) cuts it as too small. E12 and E20
+still measure it. The survey also weakens the memo's pathway-table entry for unbounded scaling,
+which answers "Necessary?" with "No, algorithms substitute": compute still explains a large share
+of the measured gains, most of them in Ho et al. and Mertens et al., and from
+[18%](numbers.md#e1-compute-share-subset-min) to [63%](numbers.md#e1-compute-share-subset-max) of
+capability-index growth in E1.
 
 ### What it means for the protocol (a candidate)
 
 - Count compute in chip-time at a reference precision (H100e-seconds), not in operations as
   reported, so a precision switch cannot game a threshold.
 - Use training compute as a filter that triggers declaration and evaluation, not as the line. The
-  line is D4, a time. Index the filter down with algorithmic progress, more slowly for thresholds
-  far below the frontier.
+  line is D4, a time. Index the filter down with algorithmic progress. Whether more slowly for
+  thresholds far below the frontier is open: Gundlach et al. say so, and E1 could not
+  confirm the direction or identify the rate on public data.
 - Draw C_train around the lineage: post-training, rollouts, teacher generation and synthetic data
   count, and continual-learning updates add to it.
 - Count inference capacity (copies times speed) but do not limit it. It is what makes AI useful,
@@ -217,19 +243,25 @@ substitute": compute still explains most of the measured gains.
 
 ### What would test it
 
-- **E1** (compute against capability; how fast a fixed cap leaks): fit capability on Epoch's model
-  data against log compute and release date, then report the yearly fall in compute needed for a
-  fixed capability separately below, at and above the frontier, to test Gundlach's scale
-  dependence directly.
+- **E1** (compute against capability; how fast a fixed cap leaks) has run. It fitted capability on
+  Epoch's model data against log compute and release date, and reran Ho et al.'s fit in compute
+  bins. The rate is not identified: beyond what compute explains, growth moves with date at about
+  [17](numbers.md#e1-algo-annual) times a year in compute-equivalent on all models, but from
+  [2.6](numbers.md#e1-algo-annual-subset-min) to [1,512](numbers.md#e1-algo-annual-subset-max)
+  across six samples, far beyond any one sample's interval. The scale dependence came out the other
+  way on the full sample and is not robust across samples, so it is neither confirmed nor refuted;
+  E15's ablations at three scales test it directly. On GPQA, training compute misplaces systems
+  against PhD experts by up to [2.8 OOM](numbers.md#e1-gpqa-overlap-oom): the largest model that
+  loses has that much more compute than the smallest that wins.
 - **E10** (the training-to-inference exchange rate): measure, on small open models, how much
   sampling and search buy in training-compute terms, and whether the span widens only with a cheap
-  verifier.
+  verifier. Not run.
 - **E7** (continual learning's update compute): measure how fast many small updates add up to a
-  C_train that crosses a declaration threshold.
-- **New, P-copies:** on the project's GPU (under `gpu`), measure generation speed at batch one and
-  aggregate throughput at the best batch for open models of several sizes, and check the predicted
-  n(v) curve, n = H / (v × 2N), against the measurements. It passes if measured throughput stays
-  within the factor of a few that Pope et al. found between the bound and practice.
+  C_train that crosses a declaration threshold. Not run.
+- **P-copies, now E12:** on the project's GPU (under `gpu`), measure generation speed at batch one
+  and aggregate throughput at the best batch for open models of several sizes, and check the
+  predicted n(v) curve, n = H / (v × 2N), against the measurements. It passes if measured throughput
+  stays within the factor of a few that Pope et al. found between the bound and practice. Not run.
 
 ## P2. Energy per useful operation, and the headroom to physics
 
@@ -380,13 +412,14 @@ al. do not draw. That is an application, not a contribution.
 
 ### What would test it
 
-- **E8** uses P2's decomposition to turn compute into energy and power; its Monte Carlo should draw
-  per-chip power over the measured spread, not a point value.
-- **New, P-energy:** on the project's GPU (under `gpu`), log wall power while running training and
-  inference at several batch sizes, and compute each term of e from the measurements. It passes if
-  the measured e at the wall exceeds the datasheet figure by a factor that the measured utilisation
-  and overhead account for, and it shows how much worse small-batch generation (memory-bound) is
-  per useful operation than large-batch work.
+- **E8** has run on P2's decomposition, turning compute into energy and power, with its Monte Carlo
+  drawing power per chip over the measured spread, not a point value. Its results are under P4.
+- **P-energy, now E13:** on the project's GPU (under `gpu`), log board power from the driver while
+  running training and inference at several batch sizes, and compute each chip-side term of e from
+  the measurements; with no wall meter, the facility overhead stays sourced. It passes if the
+  measured e exceeds the datasheet figure by a factor that the measured utilisation accounts for,
+  and it shows how much worse small-batch generation (memory-bound) is per useful operation than
+  large-batch work. Not run.
 
 ## P3. Memory and bandwidth
 
@@ -508,7 +541,8 @@ trends [@hobbhahn2023], data movement limits [@erdil2024datamovement], the low-c
 [@sevilla2025decentralized; @krys2025distributed]. What changes is what the memo's P4 relied on without saying so: that
 interconnect keeps training at scale on one site, where facilities can be watched. Below about [1e+25 FLOP](numbers.md#phys-rahman-1e25-target) that no longer holds, and the per-site footprint floor of P4
 collapses with it. The serial-speed bound is Pope et al.'s memory time; using it with P1 to bound a
-fleet's copies and speed from its inventory **extends prior work** at most.
+fleet's copies and speed from its inventory is that bound applied, and forecasts already compute
+copies from compute [@lifland2025timelines]. The claims file cuts it as too small (P1).
 
 ### What it means for the protocol (a candidate)
 
@@ -522,16 +556,16 @@ fleet's copies and speed from its inventory **extends prior work** at most.
 
 ### What would test it
 
-- **New, P-speed:** on the project's GPU (under `gpu`), run open models spanning more than an order of
-  magnitude in size, each at several weight precisions, measure batch-one generation speed, and
-  compare it with the bound
+- **P-speed, now part of E12:** on the project's GPU (under `gpu`), run open models spanning more
+  than an order of magnitude in size, each at several weight precisions, measure batch-one
+  generation speed, and compare it with the bound
   B / (N × b) from the GPU's measured memory bandwidth. Prediction: every measurement sits below the
-  bound and within a small factor of it, as Pope et al.'s did.
-- **New, P-diloco:** train a small model with a DiLoCo-style method across two processes whose link
+  bound and within a small factor of it, as Pope et al.'s did. Not run.
+- **P-diloco, now E14:** train a small model with a DiLoCo-style method across two processes whose link
   is throttled to [100 Mbit/s](numbers.md#phys-rahman-bandwidth) and to
   [1 Gbit/s](numbers.md#phys-streaming-bw-low), and measure loss against synchronous training at
   equal compute. This reproduces, at small scale, the tax curve that E8 needs for distributed
-  adversaries.
+  adversaries. Not run.
 
 ## P4. The footprint and its floor
 
@@ -548,10 +582,24 @@ be defined twice, because different channels see different floors.
 2. **The aggregate floor in chips**: N_min = C / (r × u × T), for a per-chip peak r, utilisation u
    and run time T, with T no longer than the longest run that makes sense (Rahman's
    T = 1/(gH + gS + gI), set by the growth rates of hardware, software and investment) [@rahman2026].
-3. **The aggregate floor in energy**: E_min = C × e (P2), with average power E_min / T.
+   It is a bound only when r is the peak at the lowest precision a run can use (FP8 in the sources;
+   a run held to BF16 needs twice the chips) and u the highest utilisation an adversary can reach,
+   full for the bound ([Theorem 8.1](05-formal.md#c8-the-footprint-floor-as-a-bound)). At a typical
+   utilisation or a higher precision it is an estimate. T is an assumption about the adversary, not
+   physics: a racing or patient party need not share it, and the floor halves when T doubles. The
+   chip-time C / (r × u) holds whatever T the adversary picks:
+   [1,600 H100e-years](numbers.md#e8-chip-years-1e26-bound) for a
+   [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run as a bound.
+3. **The aggregate floor in energy**: E_min = C × e (P2), with average power E_min / T. As a bound, e
+   is the lowest energy per operation of any chip the party can use.
 
 For each channel, the **detection margin** is its detection limit divided by the floor it sees. A
 channel can enforce a threshold only where its margin is below one.
+
+The aggregate floor in chips with a time axis, the untraced pool counted against it, and the
+conclusion that the pool must be shrunk rather than found are the hardwired-pause working group's
+[@fithian2026hardwired], whose threshold is an estimate at standard utilisation. What this chapter
+adds is narrower and listed under "What the survey changed from the memo" below.
 
 ### How it is measured
 
@@ -605,7 +653,8 @@ Each channel has its own limit.
   [1.16](numbers.md#phys-beta-worst) times the declared capacity, falling to
   [0.059](numbers.md#phys-beta-restricted) only with re-execution of declared work (abstract only)
   [@kimpson2026b].
-- **Chip accounting** is the only channel that sees the aggregate. Epoch traced most of the world's
+- **Chip accounting** is the only channel modelled here that sees the aggregate. A distributed run's
+  traffic and purchases are aggregate signatures too, which no experiment here models. Epoch traced most of the world's
   AI chips to owners, leaving "on the order of a million chips unaccounted for"
   ([1,000,000 chips](numbers.md#phys-chips-unaccounted)), which Koopmanschap and Barten take as an
   approximate bound on the largest hidden cluster [@koopmanschap2026gpu]. Smuggled compute adds
@@ -622,21 +671,34 @@ Each channel has its own limit.
 ### Evidence for and against
 
 **The floors, computed from measured inputs.** Take MIRI's prohibited threshold,
-[1e+24 FLOP](numbers.md#phys-miri-strict) [@scher2025agreement]. Over today's longest sensible run
-of [4.5 months](numbers.md#phys-rahman-run-now) it needs at least
-[210 H100e](numbers.md#phys-floor-chips-1e24-now); over the
-[24 months](numbers.md#phys-rahman-run-pause) that Rahman finds rational under a pause, only
-[40 H100e](numbers.md#phys-floor-chips-1e24-pause) [@rahman2026]. Its energy floor at Colossus 1's
-overheads is [1,300 MWh](numbers.md#phys-floor-energy-1e24), an average of
-[0.39 MW](numbers.md#phys-floor-power-1e24-now) over the shorter run and
+[1e+24 FLOP](numbers.md#phys-miri-strict) [@scher2025agreement]. At the reference utilisation and
+the BF16 peak, over today's longest sensible run of [4.5 months](numbers.md#phys-rahman-run-now) it
+needs an estimated [210 H100e](numbers.md#phys-floor-chips-1e24-now); over the
+[24 months](numbers.md#phys-rahman-run-pause) that Rahman finds rational under a pause, an estimated
+[40 H100e](numbers.md#phys-floor-chips-1e24-pause) [@rahman2026]. Its energy at Colossus 1's
+overheads and the reference utilisation is [1,300 MWh](numbers.md#phys-floor-energy-1e24), an
+average of [0.39 MW](numbers.md#phys-floor-power-1e24-now) over the shorter run and
 [0.072 MW](numbers.md#phys-floor-power-1e24-pause) over the longer. For
-[1e+26 FLOP](numbers.md#phys-rahman-1e26-local), the floor is
+[1e+26 FLOP](numbers.md#phys-rahman-1e26-local), the estimate is
 [21,000 H100e](numbers.md#phys-floor-chips-1e26-now) today and
 [4,000 H100e](numbers.md#phys-floor-chips-1e26-pause) under a pause, with
 [130,000 MWh](numbers.md#phys-floor-energy-1e26) of energy: an average of
 [39 MW](numbers.md#phys-floor-power-1e26-now) over the shorter run and
 [7.2 MW](numbers.md#phys-floor-power-1e26-pause) over two years. The second is below the satellite
 line even if it all sat on one site.
+
+These are estimates, not bounds. A party can train at FP8 and can run its chips harder than
+[40%](numbers.md#phys-util-ref); a floor computed at the reference utilisation was undercut in
+random runs that the formal part checked. The bound, at the FP8 peak and full utilisation, is
+[5.0](numbers.md#formal-floor-ref-over-bound) times lower: for the pause run,
+[8.0 H100e](numbers.md#e8-floor-1e24-pause-bound) for
+[1e+24 FLOP](numbers.md#phys-miri-strict) and [800 H100e](numbers.md#formal-floor-bound-1e26-pause)
+for [1e+26 FLOP](numbers.md#phys-rahman-1e26-local), or
+[1,600 H100e](numbers.md#formal-floor-bound-1e26-pause-bf16) for a run held to BF16
+([C8](05-formal.md#c8-the-footprint-floor-as-a-bound)). E8 reproduces the ledger's floor and gives the
+same bound, [800 H100e](numbers.md#e8-floor-1e26-pause-bound); with utilisation drawn across its
+measured range, its median estimate is [2,900 H100e](numbers.md#e8-floor-1e26-pause-p50). The bound
+is what the line may rely on; it holds only while FP8 is the lowest precision a run can train at.
 
 **The per-site floor is one node.** A [29 kW](numbers.md#phys-node-power) node sits
 [345](numbers.md#phys-sat-over-node) times below the satellite line and
@@ -651,16 +713,28 @@ the configurations directly: [1e+24 FLOP](numbers.md#phys-miri-strict) on
 monitoring threshold, it would be undetectable by thermal and electrical means" [@rahman2026]. Krys
 et al. call the same move compute structuring [@krys2025distributed].
 
-**The aggregate floor is below chip accounting's resolution.** The untraced pool is
-[47](numbers.md#phys-unaccounted-over-floor-now) times the
-[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) floor at today's run length and
-[250](numbers.md#phys-unaccounted-over-floor-pause) times it at a pause's. Even the low end of the
-smuggling estimate is [14](numbers.md#phys-smuggled-over-floor-now) times the floor today. On these
-inputs, today's chip accounting could not rule out a hidden
-[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run, let alone one at
-[1e+24 FLOP](numbers.md#phys-miri-strict).
-This is the most consequential number in the chapter, and its weakest input is the size of the
-untraced pool, which is an order of magnitude, not a measurement.
+**The aggregate floor is below chip accounting's resolution.** In E8, for a
+[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run at a pause's run length, with the floor at the
+BF16 peak and utilisation drawn over its measured range, the untraced pool is
+[340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the floor
+([110](numbers.md#e8-pool-over-floor-1e26-pause-p05) to
+[1,000](numbers.md#e8-pool-over-floor-1e26-pause-p95), 5th to 95th percentile), and the compute
+smuggled into one country, which has a published interval, is
+[230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50) times it
+([94](numbers.md#e8-smuggled-over-floor-1e26-pause-p05) to
+[590](numbers.md#e8-smuggled-over-floor-1e26-pause-p95)). An FP8 run doubles each ratio. Against the
+floor taken as a bound, the smuggled median is [824](numbers.md#formal-pool-over-floor-bound) times
+it. Even at today's run length, the smuggled stock over the floor has a 5th percentile of
+[18](numbers.md#e8-smuggled-over-floor-1e26-now-p05). For chip accounting to resolve
+the pause-length run at the bound, the pool would have to shrink
+[1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold, and
+[120,000](numbers.md#e8-pool-shrink-1e24-pause)-fold for one at
+[1e+24 FLOP](numbers.md#phys-miri-strict). On these inputs, today's chip accounting could not rule
+out a hidden [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run, let alone one at
+[1e+24 FLOP](numbers.md#phys-miri-strict). Every reading puts the pool far above the floor. This is
+the most consequential result in the chapter, and its weakest input is the size of the untraced
+pool, which is an assumed order of magnitude, not a measurement; the smuggled stock is the better
+measured of the two.
 
 **The floor has a time axis, and the protocol moves it.** Rahman's longest sensible run is set by
 how fast hardware, software and investment grow. A pause slows them, so a covert run can rationally
@@ -670,11 +744,15 @@ capability: at MIRI's assumed [3](numbers.md#phys-algo-miri) times a year, the c
 capability that takes [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) today, at a pause's run
 length, falls to MIRI's
 [16 H100e](numbers.md#phys-miri-cluster-cap) cap in about [5 years](numbers.md#phys-years-floor-to-cap)
-[@scher2025agreement]. Gundlach et al.'s scale dependence would make that slower at small scale
-[@gundlach2025origin]. MIRI's cap itself already sits low: one cluster at that cap
-([16 H100e](numbers.md#phys-miri-cluster-cap)) needs [5.0 years](numbers.md#phys-miri-cap-years-strict)
-for [1e+24 FLOP](numbers.md#phys-miri-strict) at the reference utilisation, and
-does [4.0e+23 FLOP](numbers.md#phys-miri-cap-pause-flop) over a pause's two-year run.
+on the estimated floor, and sooner on the bound [@scher2025agreement]. Gundlach et al.'s scale
+dependence would make that slower at small scale [@gundlach2025origin]: at their slow rate E8 finds
+[13.2 years](numbers.md#e8-years-to-cap-slow). E1 cannot say which rate holds. MIRI's cap is less
+tight than the estimate makes it look. At the reference utilisation and the BF16 peak, one cluster at
+that cap ([16 H100e](numbers.md#phys-miri-cluster-cap)) needs
+[5.0 years](numbers.md#phys-miri-cap-years-strict) for [1e+24 FLOP](numbers.md#phys-miri-strict)
+and does [4.0e+23 FLOP](numbers.md#phys-miri-cap-pause-flop) over a pause's two-year run. At the
+bound it needs [1.0 years](numbers.md#e8-cap-years-1e24-bound), inside a pause's run length, so the
+cap alone does not stop such a run.
 
 **Hardware lowers the energy floor on a known schedule.** At the estimated CMOS ceiling, before any
 overhead, the chips would spend [96 MWh](numbers.md#phys-floor-energy-1e26-cmos) on
@@ -709,7 +787,15 @@ facilities is strongest at the frontier.
 The conclusion the steelman supports is narrower than the memo's. Facility channels bound the
 largest, undistributed programme, which matters at and beyond the frontier. They do not police any
 threshold at or below about [1e+26 FLOP](numbers.md#phys-rahman-1e26-local), where the protocol's
-caps sit.
+caps sit. E8 narrows even the first part. A [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run on
+one site over today's run length falls below the satellite line by
+[2029](numbers.md#e8-cross-sat-1e26-now) ([2026](numbers.md#e8-cross-sat-1e26-now-p05) to
+[2032](numbers.md#e8-cross-sat-1e26-now-p95)) as chips gain efficiency, and full denial delays a
+power channel's crossing by only [3.1 years](numbers.md#e8-denial-delay-years). Over a pause's run
+length the same run on one site draws at least the satellite limit in
+[19%](numbers.md#e8-concentrated-1e26-pause-seen) of draws, and
+[60%](numbers.md#e8-concentrated-1e26-pause-seen-denied) for a denied party. Thermal infrared's
+margin over it is [3.3](numbers.md#e8-thermal-margin-1e26-now) already, a lower bound.
 
 **Power is not a chokepoint.** China added [434 GW](numbers.md#phys-china-additions) of solar and
 wind capacity in 2025 [@shaw2026chinasolar], [27](numbers.md#phys-china-over-2030-run) times the
@@ -723,7 +809,8 @@ in 2025 have a summed maximum power of [7.5 GW](numbers.md#phys-chip-tdp-2025), 
 fails when throughput is large relative to measurement accuracy: "if sigma_MUF is large ... then
 the probability of detection of diversion into MUF is low" [@iaea-glossary-2022]. Chip accounting
 over a flow of [13,600,000 H100e](numbers.md#phys-chips-sold-2025) a year, with outside estimates
-that disagree fourfold, is in that regime when the quantity to detect is a few thousand chips.
+that disagree fourfold, is in that regime when the quantity to detect is a few hundred to a few
+thousand chips.
 
 ### What the survey changed from the memo
 
@@ -731,8 +818,9 @@ The memo said detection "works while the floor sits above what satellites, grids
 accounting can see". That treats three channels as seeing one floor. They do not. Satellites and
 grids see sites, and distribution drives the per-site floor down to one node, two to three orders of
 magnitude below their limits. Thermal infrared did not see a [126 MW](numbers.md#phys-jing-cluster-power) cluster. Water is optional.
-Only chip accounting sees the aggregate, and on today's inputs its resolution is coarser than the
-aggregate floor for any threshold the protocol would set.
+Of the channels modelled, only chip accounting sees the aggregate, and on today's inputs its
+resolution is coarser than the aggregate floor for any threshold the protocol would set. A
+distributed run's traffic and purchases are aggregate signatures too, unmodelled here.
 
 The memo's belief that the floor "as a defined, computed quantity may be new" fails in substance.
 Koopmanschap and Barten define an "enforcement breaking point", the threshold at which a policy
@@ -742,51 +830,82 @@ Data Centers" [@scher2025]. MIRI's draft agreement caps unmonitored clusters at
 [16 H100e](numbers.md#phys-miri-cluster-cap) and enforces it through chips [@scher2025agreement]. Rahman computes the cheapest distributed
 configuration that evades registration thresholds [@rahman2026]. Halstead and Larsen give per-site
 detection chances by size [@halstead-ai2040]. Sastry et al. flagged the distributed-training caveat
-in 2024 [@sastry2024compute]. P4 is therefore at most **extends prior work**, and only for what this
-chapter adds and those works lack: a formula in measured inputs (datasheet peak, measured facility
-power per chip, utilisation, run length), the time axis (the floor falls with run length, and a
-pause lengthens the rational covert run), and the aggregate form with a detection margin per
-channel. Whether even that survives is for the independent prior-art search (level 1), not yet
-done. In our search, "not found" for the combined form is a statement about our search.
+in 2024 [@sastry2024compute]. The independent prior-art search (level 1) then found the floor
+itself: the formula as an aggregate floor in chips with a time axis, the untraced pool entered
+against it, and the conclusion that the pool must be shrunk rather than found are in the
+hardwired-pause working paper [@fithian2026hardwired]. That chip accounting must resolve less than
+the floor is the IAEA's lesson on material unaccounted for [@iaea-glossary-2022]. P4 is
+**extends prior work, narrowly**
+([C8](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool)).
+What remains ours is three computations others could easily have run: the floor as a bound, at the
+lowest precision and full utilisation, where the hardwired-pause threshold is an estimate; each
+facility channel's margin over the floor and the year it crosses one; and the pool's multiple of
+the floor, with E5's measured discovery rate behind the conclusion that it must be shrunk. The time
+axis and the aggregate form, which this chapter first counted as its own, are not. "Not found" for
+what remains is a statement about our search and level 1's.
 
 ### What it means for the protocol (a candidate)
 
 - **Facility channels** (satellites, grid paperwork) confirm and size declared sites and catch the
   construction of very large undeclared ones. They cannot enforce a compute threshold at or below
   about [1e+26 FLOP](numbers.md#phys-rahman-1e26-local), and the protocol should not claim they do.
+  On E8's crossing years they lose even a concentrated run of that size within a few years.
 - **On-site metering** at declared sites verifies the kind of work against a sealed declaration
   (training against inference). It cannot bound the amount; pair it with re-execution of declared
   work and with chip-hour accounting.
-- **Chip accounting** is the only aggregate channel, so the compute half of the protocol stands on
-  it. Its resolution must be finer than the floor for the threshold it protects, at the longest
-  rational run length under the regime, which under a pause is about
-  [24 months](numbers.md#phys-rahman-run-pause), not [4.5 months](numbers.md#phys-rahman-run-now). Today it is
-  coarser by a factor of tens to hundreds at [1e+26 FLOP](numbers.md#phys-rahman-1e26-local). Until the untraced pool is
-  closed, D3 must count it as a covert reserve in every party's breakout time.
+- **Chip accounting** is the only aggregate channel modelled, so the compute half of the protocol
+  stands on it. Its resolution must be finer than the floor for the threshold it protects, taken as
+  a bound, at the longest run length an adversary will accept, which under a pause is
+  [24 months](numbers.md#phys-rahman-run-pause) or more, not [4.5 months](numbers.md#phys-rahman-run-now).
+  Today the untraced pool would have to shrink [1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold
+  for it to resolve a [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run under a pause. Until the
+  pool is closed, D3 must count it as a covert reserve in every party's breakout time, as the
+  hardwired-pause working group does [@fithian2026hardwired]. At the historical discovery rate, which
+  E5 finds is an upper bound on a careful evader's, the pool's detection time is at least
+  [32 years](numbers.md#e5-td-pool-years): the protocol must shrink the pool, not hope to find what it
+  hides.
 - **Thresholds** must fall with algorithmic progress (the floor for a fixed capability falls
-  about threefold a year on MIRI's assumption) and with hardware efficiency, and be set for the
-  run lengths a pause makes rational.
+  about threefold a year on MIRI's assumption, a rate E1 cannot identify on public data) and with
+  hardware efficiency, and be set for the run lengths a pause makes rational, or in chip-time,
+  which holds whatever run length the adversary picks.
 - **Cost to useful AI.** Registering chips costs legitimate users little. A low cap on
   unmonitored clusters, of the order MIRI proposes, costs more: it reaches research labs and small
   firms. The floor says how low such a cap must go for chip accounting to matter.
 
 ### What would test it
 
-- **E8 (the footprint floor against detection limits), stated as a runnable test.** From the inputs
-  in this chapter, compute N_min, E_min and average power for C from
+- **E8 (the footprint floor against detection limits)** has run. From the inputs in this chapter it
+  computes N_min, E_min and average power for C from
   [1e+22 FLOP](numbers.md#phys-miri-monitored) to [1e+27 FLOP](numbers.md#phys-e8-c-high), T from one
   month to the pause run length, and each year ahead under the measured hardware rate and a range of
-  algorithmic rates (Gundlach's slow case to MIRI's threefold). Monte Carlo over the measured
-  spreads: utilisation, power per chip, satellite accuracy, the untraced pool and the smuggling
-  interval. Output, for each channel, the margin and the year it crosses one. The claim "only chip
-  accounting sees the aggregate floor" fails if any facility channel's margin is below one for a
-  distributed run at [1e+25 FLOP](numbers.md#phys-rahman-1e25-target).
-- **E5 (multi-channel verification and tamper tests).** Combine the channels as the evader sees
-  them, by subgoal and not as a product of independent misses: Baker et al. argue that a regime's
-  detection is roughly that of its weakest subgoal [@baker2025verifying]. Add a small tamper test on
-  the project's GPU: record power traces of training and inference with and without the disguises
-  Kimpson et al. describe, and measure a simple classifier's detection rate.
-- **P-diloco (from P3)** supplies E8's tax curve for distributed adversaries.
+  algorithmic rates (Gundlach's slow case to MIRI's threefold), with a Monte Carlo over utilisation,
+  power per chip, satellite accuracy, the untraced pool, the smuggling interval and the denial
+  multiplier. It supports C8's (a) and (c). Chip accounting must resolve less than the bound, which
+  needs the pool to shrink [1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold for a
+  [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run under a pause; and the pool, and the smuggled
+  stock alone, exceed the floor hundreds of times over (the figures are under "Evidence for and
+  against"). Its facility crossing years are given there too.
+- **The falsifier this chapter first proposed is cut.** It said "only chip accounting sees the
+  aggregate floor" fails if any facility channel's margin is below one for a distributed run at
+  [1e+25 FLOP](numbers.md#phys-rahman-1e25-target). That cannot fail: the per-site floor is one node
+  whatever the run's size, so every facility channel's margin exceeds one by definition, and E8's
+  distributed margins are definitional, not evidence. The red team cut it
+  ([C8](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool)).
+  What could refute the floor's role now: a published crossing-year analysis of satellite or grid
+  detection; E13 measuring energy per operation below the e_min the bound uses; or E22, or a count of
+  the pool, putting it far below the floor. A model of a distributed run's traffic or purchases
+  would test the word "only".
+- **E5 (multi-channel verification)** has run. It combines the channels as the evader sees them,
+  by subgoal and not as a product of independent misses, as Baker et al. argue a regime's detection
+  is roughly that of its weakest subgoal [@baker2025verifying]. Over a one-year breakout time the
+  evader's best watched path, the untraced pool, is missed with probability
+  [91%](numbers.md#e5-pmiss-max-1y); cloud and distillation, which no physical channel watches, are
+  missed with certainty. The fitted discovery rate of covert programmes,
+  [0.094/yr](numbers.md#e5-hazard), comes from programmes all found in the end, so it is an upper
+  bound on a careful evader's, counted from a programme's start; the detection times built on it are
+  lower bounds. The tamper test on power traces has moved to E13, which shares its harness, and has
+  not run.
+- **P-diloco (from P3), now E14,** supplies E8's tax curve for distributed adversaries. Not run.
 
 ## What this perspective contributes to the line
 
@@ -798,11 +917,14 @@ not among them: they corroborate, for the largest programmes, but they cannot en
    the holdings term of breakout time (D3), and the protocol triggers when a party's breakout time
    falls below the margin on its response time (D4). Weakest point: the registry starts with a hole
    ([1,000,000 chips](numbers.md#phys-chips-unaccounted) untraced, plus smuggled compute) larger
-   than the aggregate floor of a [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run ([21,000 H100e](numbers.md#phys-floor-chips-1e26-now) today, [4,000 H100e](numbers.md#phys-floor-chips-1e26-pause) under a pause).
+   than the aggregate floor of a [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run (estimated at
+   [21,000 H100e](numbers.md#phys-floor-chips-1e26-now) today and
+   [4,000 H100e](numbers.md#phys-floor-chips-1e26-pause) under a pause, with a bound of
+   [800 H100e](numbers.md#formal-floor-bound-1e26-pause) under a pause).
 2. **Training compute of each lineage** (C_train, including post-training, rollouts, teacher
    generation and synthetic data). Declared, sealed and sampled; it triggers evaluation at
    thresholds that fall with algorithmic progress. Weakest point: inference and algorithms
-   substitute for it, and a cap leaks at a rate that depends on where it sits.
+   substitute for it, and a cap leaks at a rate that E1 cannot identify on public data.
 3. **Workload type at declared sites**, from power traces. It verifies that declared capacity does
    what its declaration says. Weakest point: it needs a declared site and a trusted meter, and it
    bounds the amount of hidden work only weakly (up to [1.16](numbers.md#phys-beta-worst) times
@@ -815,5 +937,7 @@ not among them: they corroborate, for the largest programmes, but they cannot en
    [@somala2025consumergpu], so it is the next increment, not running, that the line can govern.
 
 None of this has been tested against a real adversary. The floors are arithmetic on measured and
-vendor inputs, with a utilisation that is an assumption; the detection limits come from small
+vendor inputs. The estimates assume a utilisation; the bound assumes none, but holds only while FP8
+is the lowest precision a run can train at, and its run length T is an assumption about the
+adversary. The untraced pool is an assumed order of magnitude. The detection limits come from small
 samples and, for power metering, from simulation. The protocol built on them is a design.

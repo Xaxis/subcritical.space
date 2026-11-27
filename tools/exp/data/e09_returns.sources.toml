@@ -1,0 +1,10 @@
+# Sources the E9 table cites that no note or chapter had listed, each opened by the experiment's
+# builder on 2026-11-27. tools/sources_from_notes.py merges them into research/sources.toml.
+
+[source.dorner2021sample]
+type = "preprint"
+title = "Measuring Progress in Deep Reinforcement Learning Sample Efficiency"
+authors = "Florian E. Dorner"
+year = 2021
+arxiv = "2102.04881"
+opened = "2026-11-27"

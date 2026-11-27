@@ -181,6 +181,7 @@
     ],
     "channels": {
       "chip sampling, per year": 28.03397350720251,
+      "clock": "the historical rate runs from a programme's start (the decision or construction), not a breakout's",
       "diversion detection": "two-piece normal in log-odds through Epoch's median and 90% interval",
       "facility power, MW": {
         "site-now": 38.642707726725554,
@@ -189,9 +190,10 @@
       "historical": "the case bootstrap of part 1, redrawn in every Monte Carlo draw",
       "merged groups": [
         "sampling with metering (the host's access)",
-        "imagery with intelligence (tips)"
+        "diversion detection, imagery and intelligence (intelligence and law-enforcement tips)"
       ],
-      "power metering under the strongest disguise, per year": 745.190657619324,
+      "metering coding": "the source reports at least 87% of disguised runs caught over a day and no longer window, so the day figure is one check that does not compound",
+      "power metering under the strongest disguise, miss of one check": 0.13,
       "satellite": "uniform [0, 1] above 10.0 MW, zero below"
     },
     "channels_by_discovery": {
@@ -202,6 +204,13 @@
       "media": 1,
       "police": 1,
       "self": 0
+    },
+    "checks": {
+      "declared path, metering compounded daily (not used)": {
+        "note": "the reading the source does not support",
+        "td_days": 1.4683372660779597
+      },
+      "memo product at most every watched path's miss": "asserted in every draw; holds by Theorem 3.1(b), so it checks the code and is not evidence"
     },
     "date_rules": {
       "YYYY": "2 July (mid-year)",
@@ -218,57 +227,63 @@
     },
     "detection_time_years": {
       "cloud": {
-        "hi": 43.00492789788488,
-        "lo": 22.65178712499427,
-        "median": 31.900579595103533,
-        "share_infinite": 0.0
+        "hi": null,
+        "lo": null,
+        "median": null,
+        "share_infinite": 1.0
       },
       "declared, independent": {
-        "hi": 0.0038743363221492933,
-        "lo": 0.0038743363221492933,
-        "median": 0.0038743363221492933,
+        "hi": 0.03408405322142241,
+        "lo": 0.03408405322142241,
+        "median": 0.03408405322142241,
         "share_infinite": 0.0
       },
       "declared, merged": {
-        "hi": 0.0040200883397069394,
-        "lo": 0.0040200883397069394,
-        "median": 0.0040200883397069394,
+        "hi": 0.10686077993133314,
+        "lo": 0.10686077993133314,
+        "median": 0.10686077993133314,
         "share_infinite": 0.0
       },
       "distillation": {
-        "hi": 43.00492789788488,
-        "lo": 22.65178712499427,
-        "median": 31.900579595103533,
-        "share_infinite": 0.0
+        "hi": null,
+        "lo": null,
+        "median": null,
+        "share_infinite": 1.0
       },
       "distributed": {
-        "hi": 38.45412981621975,
-        "lo": 13.580369396321572,
-        "median": 27.04553075384848,
+        "hi": 42.99302016760206,
+        "lo": 22.462729186378557,
+        "median": 31.86993525326305,
         "share_infinite": 0.0
       },
       "pool": {
-        "hi": 43.00492789788488,
-        "lo": 22.65178712499427,
+        "hi": 43.00491738266955,
+        "lo": 22.651508847331236,
         "median": 31.900579595103533,
         "share_infinite": 0.0
       },
-      "site-now, independent": {
-        "hi": 32.383421120962915,
+      "site-now, diversion apart": {
+        "hi": 38.228467596391035,
         "lo": 0.0,
-        "median": 18.009561606943006,
+        "median": 26.40420573318215,
+        "share_infinite": 0.0
+      },
+      "site-now, independent": {
+        "hi": 32.383402205922934,
+        "lo": 0.0,
+        "median": 18.00942612040239,
         "share_infinite": 0.0
       },
       "site-now, merged": {
-        "hi": 38.22848454985297,
+        "hi": 42.80428707403159,
         "lo": 0.0,
-        "median": 26.40424975367377,
+        "median": 31.453070056426416,
         "share_infinite": 0.0
       },
       "site-pause": {
-        "hi": 38.45412981621975,
-        "lo": 13.580369396321572,
-        "median": 27.04553075384848,
+        "hi": 42.99302016760206,
+        "lo": 22.462729186378557,
+        "median": 31.86993525326305,
         "share_infinite": 0.0
       }
     },
@@ -335,21 +350,21 @@
       "phys-shavit-prob": 0.9
     },
     "miss_by_path_1y": {
-      "cloud": 0.9103661512510343,
-      "declared": 0.0,
-      "distillation": 0.9103661512510343,
-      "distributed": 0.6758443204989366,
+      "cloud": 1.0,
+      "declared": 6.683439175686116e-13,
+      "distillation": 1.0,
+      "distributed": 0.7491270269539467,
       "pool": 0.9103661512510343,
-      "site-now": 0.2922848570489337,
-      "site-pause": 0.6758443204989366
+      "site-now": 0.40341499337334685,
+      "site-pause": 0.7491270269539467
     },
     "monte_carlo": {
       "draws": 200000
     },
     "paths": {
-      "cloud": "rented across providers; no sourced rate for customer checks: intelligence",
+      "cloud": "rented across providers; no channel with a sourced rate, so no detection time",
       "declared": "registered chips at a metered declared site: sampling, metering",
-      "distillation": "queries to others' models; no sourced channel: intelligence",
+      "distillation": "queries to others' models; no channel with a sourced rate, so no detection time",
       "distributed": "smuggled chips spread over sites below the satellite line: diversion, intelligence",
       "pool": "untraced chips already held: intelligence",
       "site-now": "one undeclared site of smuggled chips for 1e26 FLOP over today's longest run: diversion, imagery, intelligence",
@@ -508,7 +523,7 @@
     },
     "e5-hazard": {
       "fmt": ".3f",
-      "label": "historical discovery rate of covert programmes, discoveries over programme-years (main coding)",
+      "label": "historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; an upper bound on a careful evader's rate",
       "note": "",
       "unit": "/yr",
       "value": 0.093806754599989
@@ -526,6 +541,13 @@
       "note": "",
       "unit": "/yr",
       "value": 0.06938049278686723
+    },
+    "e5-hazard-detect-1y": {
+      "fmt": ".1%",
+      "label": "the same chance at the constant historical rate",
+      "note": "",
+      "unit": "",
+      "value": 0.08954131280492417
     },
     "e5-hazard-hi": {
       "fmt": ".3f",
@@ -571,10 +593,10 @@
     },
     "e5-memo-log10-miss-1y": {
       "fmt": ",.0f",
-      "label": "log10 of the memo-style miss chance over the same time: the product over every channel, as if each watched the programme",
+      "label": "log10 of the memo-style miss chance over the same time, the product over every channel as if each watched the programme: an illustration of the memo's form, not evidence",
       "note": "",
       "unit": "",
-      "value": -336.3826128711617
+      "value": -13.636478948927053
     },
     "e5-memo-over-hazard": {
       "fmt": ".1f",
@@ -606,7 +628,7 @@
     },
     "e5-pmiss-max-1y": {
       "fmt": "%",
-      "label": "chance a breakout is missed on the evader's best path over the memo's placeholder breakout time, with no response time",
+      "label": "chance a breakout is missed on the evader's best watched path (the chip pool) over the memo's placeholder breakout time, with no response time; cloud and distillation, unwatched, miss with certainty",
       "note": "",
       "unit": "",
       "value": 0.9103661512510343
@@ -627,31 +649,24 @@
     },
     "e5-pmiss-max-2y": {
       "fmt": "%",
-      "label": "chance a breakout is missed on the evader's best path over the hardwired-pause horizon, with no response time",
+      "label": "chance a breakout is missed on the evader's best watched path over the hardwired-pause horizon, with no response time",
       "note": "",
       "unit": "",
       "value": 0.8287665293436209
     },
     "e5-pmiss-site-indep-1y": {
       "fmt": "%",
-      "label": "the same miss chance with imagery and intelligence independent; also the memo-style product over the channels that watch undeclared work",
+      "label": "the same miss chance with diversion detection, imagery and intelligence independent, the memo-style product over the channels that watch undeclared work",
       "note": "",
       "unit": "",
       "value": 0.26581390694162466
     },
     "e5-pmiss-site-merged-1y": {
       "fmt": "%",
-      "label": "miss chance for one undeclared site above the satellite line, imagery and intelligence merged, median",
+      "label": "miss chance for one undeclared site above the satellite line, diversion detection, imagery and intelligence merged, median",
       "note": "",
       "unit": "",
-      "value": 0.2922848570489337
-    },
-    "e5-product-le-max-share": {
-      "fmt": "%",
-      "label": "share of Monte Carlo draws in which the memo's product is at most the evader's miss (the proposition says all)",
-      "note": "",
-      "unit": "",
-      "value": 1.0
+      "value": 0.40341499337334685
     },
     "e5-sens-max": {
       "fmt": ".3f",
@@ -669,28 +684,28 @@
     },
     "e5-td-declared-days": {
       "fmt": ".1f",
-      "label": "detection time on the declared path (sampling and metering merged), at the prevention miss chance",
+      "label": "detection time on the declared path at the prevention miss chance: chip sampling, with metering's one-day catch as one check, merged",
       "note": "",
       "unit": "days",
-      "value": 1.4683372660779597
+      "value": 39.03089986991943
     },
     "e5-td-distributed-years": {
       "fmt": ",.0f",
       "label": "detection time, smuggled chips spread over sites below the satellite line, median",
       "note": "",
       "unit": "years",
-      "value": 27.04553075384848
+      "value": 31.86993525326305
     },
     "e5-td-hist-years": {
       "fmt": ",.0f",
-      "label": "detection time at the prevention miss chance for a path only the historical channels see",
+      "label": "detection time at the prevention miss chance for a path only the historical channels see, from the programme's start; a lower bound, as the rate is an upper bound",
       "note": "",
       "unit": "years",
       "value": 31.935144610091246
     },
     "e5-td-pool-years": {
       "fmt": ",.0f",
-      "label": "detection time, the untraced chip pool (no acquisition to catch), median",
+      "label": "detection time, the untraced chip pool (no acquisition to catch), median; a lower bound, as the historical rate is an upper bound",
       "note": "",
       "unit": "years",
       "value": 31.900579595103533
@@ -711,31 +726,31 @@
     },
     "e5-td-ratio": {
       "fmt": ",.0f",
-      "label": "detection time of the evader's best undeclared path over the declared path's, median",
+      "label": "detection time of the untraced chip pool over the declared path's, median; cloud and distillation have no measured channel and no ratio",
       "note": "",
       "unit": "",
-      "value": 7935.293182494854
+      "value": 298.5246749612186
     },
     "e5-td-site-indep-years": {
       "fmt": ",.0f",
-      "label": "detection time for the same site if imagery and intelligence were independent, median",
+      "label": "detection time for the same site if diversion detection, imagery and intelligence were independent, median",
       "note": "",
       "unit": "years",
       "value": 18.009561606943006
     },
     "e5-td-site-now-years": {
       "fmt": ",.0f",
-      "label": "detection time, one undeclared site above the satellite line, median of the Monte Carlo",
+      "label": "detection time, one undeclared site above the satellite line, diversion detection, imagery and intelligence merged, median of the Monte Carlo",
       "note": "",
       "unit": "years",
-      "value": 26.40424975367377
+      "value": 31.453070056426416
     },
     "e5-td-site-now-years-hi": {
       "fmt": ",.0f",
       "label": "detection time, one undeclared site above the satellite line, 95th percentile",
       "note": "",
       "unit": "years",
-      "value": 38.22848454985297
+      "value": 42.80428707403159
     },
     "e5-td-site-now-years-lo": {
       "fmt": ",.0f",
@@ -749,7 +764,7 @@
       "label": "detection time, one undeclared site sized for a pause's longest run (below the satellite line), median",
       "note": "",
       "unit": "years",
-      "value": 27.04553075384848
+      "value": 31.86993525326305
     },
     "e5-td-site-satopt-years": {
       "fmt": ",.1f",
@@ -760,10 +775,24 @@
     },
     "e5-td-weibull-years": {
       "fmt": ",.0f",
-      "label": "the same detection time under the Weibull fit",
+      "label": "the same detection time under the Weibull fit, from the programme's start (in short windows the Weibull finds less than the constant rate)",
       "note": "",
       "unit": "years",
       "value": 23.625119762539192
+    },
+    "e5-weibull-cross-years": {
+      "fmt": ".1f",
+      "label": "window from a programme's start below which the Weibull fit finds less than the constant rate",
+      "note": "",
+      "unit": "years",
+      "value": 12.80770323612394
+    },
+    "e5-weibull-detect-1y": {
+      "fmt": ".1%",
+      "label": "chance of discovery within the memo's placeholder breakout time of a programme's start, under the Weibull fit",
+      "note": "",
+      "unit": "",
+      "value": 0.026379798532338516
     },
     "e5-weibull-lr-p": {
       "fmt": ".2f",

@@ -1,0 +1,95 @@
+paper,key,value,unit,kind,source,where,note
+armstrong,n_fig1a,2,teams,parameter,armstrong2016racing,"FHI Technical Report 2013-1 (the version opened), Fig. 1a caption",two teams
+armstrong,n_fig1b,5,teams,parameter,armstrong2016racing,"FHI Technical Report 2013-1, Fig. 1b caption",five teams
+armstrong,e_fig1,1,,parameter,armstrong2016racing,"FHI Technical Report 2013-1, Fig. 1 caption",enmity 1
+armstrong,e_fig2,0.5,,parameter,armstrong2016racing,"FHI Technical Report 2013-1, Fig. 2 caption",enmity 0.5
+emeryxu,mu_fig2,1.44,,parameter,emeryxu2024uncertainty,"p. 2029, Fig. 2 caption",capability range [0 mu]
+emeryxu,eta_fig2,0.9,,parameter,emeryxu2024uncertainty,"p. 2029, Fig. 2 caption",enmity
+emeryxu,switch_m,6,,published,emeryxu2024uncertainty,"p. 2030, text after Proposition 5","decisiveness at which the riskiest scenario changes from private to public"
+fudenberg,alpha,2,,parameter,fudenberg2026cooperating,"p. 12, footnote 10",return to own capability (Figs. 1 to 2 and 4)
+fudenberg,beta,1,,parameter,fudenberg2026cooperating,"p. 12, footnote 10",loss from rival capability
+fudenberg,r,3,,parameter,fudenberg2026cooperating,"p. 12, footnote 10",discount rate
+fudenberg,g_fig2,0.9,,parameter,fudenberg2026cooperating,"p. 12, footnote 10",safety speed in Figs. 1 and 2
+fudenberg,kappa_fig2,4.8,,parameter,fudenberg2026cooperating,"p. 12, footnote 10",linear risk slope in Figs. 1 and 2
+fudenberg,leff_fig2,0.2018,,published,fudenberg2026cooperating,"p. 15, text on Fig. 5",effective hazard at the Fig. 2 parameters
+fudenberg,upper_fig2,0.2,,published,fudenberg2026cooperating,"p. 15, text on Fig. 5",upper cutoff (1 - g) alpha
+fudenberg,g_fig4,0.5,,parameter,fudenberg2026cooperating,"p. 15, footnote 11",safety speed in Fig. 4
+fudenberg,kappa_fig4,6.4124,,parameter,fudenberg2026cooperating,"p. 15, footnote 11",linear risk slope in Fig. 4 (stated as approximately)
+fudenberg,leff_fig4,0.9,,published,fudenberg2026cooperating,"p. 15, footnote 11",effective hazard the slope is chosen to give
+fudenberg,a1_fig4,0.2,,parameter,fudenberg2026cooperating,"p. 15, text on Fig. 4",initial leader capability (on safety)
+fudenberg,a2_fig4,0.1,,parameter,fudenberg2026cooperating,"p. 15, text on Fig. 4",initial follower capability
+fudenberg,slowdown_fig4,0.3396,,published,fudenberg2026cooperating,"p. 15, text on Fig. 4","leader's payoff from pacing until catch-up then racing, per unit of initial flow"
+fudenberg,race_fig4,0.3448,,published,fudenberg2026cooperating,"p. 15, text on Fig. 4","leader's payoff from racing at once, per unit of initial flow"
+gan,Y,1,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",value of survival apart from control
+gan,Z,4,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",value of strategic control
+gan,chi,0.5,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",share of control in a contested race
+gan,p0,0.1,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",catastrophe probability when no country advances
+gan,p1,0.2,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",catastrophe probability when one advances
+gan,p2,0.4,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",catastrophe probability when both advance
+gan,c,0.8,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",cost of active development
+gan,d,0.2,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",cost of pausing to the end
+gan,eta,27,,parameter,gan2026clock,"p. 14, Sec. 4.3.2",monitoring cost per unit of intensity
+gan,C,2.5,,published,gan2026clock,"p. 15, Sec. 4.3.4",cooperative value
+gan,T,3.2,,published,gan2026clock,"p. 15, Sec. 4.3.4",breakout value
+gan,R,1.0,,published,gan2026clock,"p. 15, Sec. 4.3.4",contested race value
+gan,S,0.6,,published,gan2026clock,"p. 15, Sec. 4.3.4",waiting value while the rival advances
+gan,gain,1.5,,published,gan2026clock,"p. 14, Sec. 4.3.2",gain from cooperation before monitoring
+gan,xi,0.382992,,published,gan2026clock,"p. 15, Sec. 4.3.4",breakout temptation ln[(T - R)/(C - R)]
+gan,m_max,0.05556,/month,published,gan2026clock,"p. 15, Sec. 4.3.4",participation bound (C - R)/eta
+gan,m_deter_12,0.0319,/month,published,gan2026clock,"p. 15, Sec. 4.3.4",deterrence intensity at a 12-month window
+gan,detect_12,0.32,,published,gan2026clock,"p. 16, Sec. 4.3.4",chance of a finding within the window at that intensity
+gan,success_12,0.68,,published,gan2026clock,"p. 16, Sec. 4.3.4",chance a breakout still succeeds at that intensity
+gan,mean_finding_12,31,months,published,gan2026clock,"p. 16, Sec. 4.3.4",mean time to a finding at that intensity
+gan,prop3_lhs,1.2,,published,gan2026clock,"p. 15, Sec. 4.3.3",strategic value recovered by restarting
+gan,prop3_rhs,0.8,,published,gan2026clock,"p. 15, Sec. 4.3.3",extra cost plus extra risk on non-strategic value
+gan,critical_window,6.89,months,published,gan2026clock,"p. 17, Sec. 4.4",window at which deterrence and participation bounds meet
+gan,window_d0,12.00,months,parameter,gan2026clock,"p. 19, Table 3",follower's window at pause month 0 (from the paper's takeoff model)
+gan,window_d6,10.25,months,parameter,gan2026clock,"p. 19, Table 3",follower's window at pause month 6
+gan,window_d12,8.61,months,parameter,gan2026clock,"p. 19, Table 3",follower's window at pause month 12
+gan,window_d18,7.10,months,parameter,gan2026clock,"p. 19, Table 3",follower's window at pause month 18
+gan,window_d24,5.74,months,parameter,gan2026clock,"p. 19, Table 3",follower's window at pause month 24
+gan,mmin_d0,0.0319,/month,published,gan2026clock,"p. 19, Table 3",minimum monitoring intensity at month 0
+gan,mmin_d6,0.0374,/month,published,gan2026clock,"p. 19, Table 3",minimum monitoring intensity at month 6
+gan,mmin_d12,0.0445,/month,published,gan2026clock,"p. 19, Table 3",minimum monitoring intensity at month 12
+gan,mmin_d18,0.0539,/month,published,gan2026clock,"p. 19, Table 3",minimum monitoring intensity at month 18
+gan,mmin_d24,0.0667,/month,published,gan2026clock,"p. 19, Table 3",minimum monitoring intensity at month 24
+gan,net_d0,1.638,,published,gan2026clock,"p. 19, Table 3",net cooperation payoff at month 0
+gan,net_d6,1.491,,published,gan2026clock,"p. 19, Table 3",net cooperation payoff at month 6
+gan,net_d12,1.299,,published,gan2026clock,"p. 19, Table 3",net cooperation payoff at month 12
+gan,net_d18,1.044,,published,gan2026clock,"p. 19, Table 3",net cooperation payoff at month 18
+gan,net_d24,0.699,,published,gan2026clock,"p. 19, Table 3",net cooperation payoff at month 24
+gan,needed_eta13.5_l0,3.45,months,published,gan2026clock,"p. 19, Table 2",catch-up time needed at half the monitoring cost
+gan,needed_eta27_l0,6.89,months,published,gan2026clock,"p. 19, Table 2",catch-up time needed at the baseline cost
+gan,needed_eta27_l1,7.89,months,published,gan2026clock,"p. 19, Table 2",with one month of implementation delay
+gan,needed_eta27_l2,8.89,months,published,gan2026clock,"p. 19, Table 2",with two months of implementation delay
+gan,needed_eta54_l0,13.79,months,published,gan2026clock,"p. 19, Table 2",catch-up time needed at double the monitoring cost
+gan,last_eta27_l0,18.9,months,published,gan2026clock,"p. 19, Table 2",last supportable review date at the baseline cost
+gan,last_eta27_l1,14.8,months,published,gan2026clock,"p. 19, Table 2",with one month of implementation delay
+gan,last_eta27_l2,10.9,months,published,gan2026clock,"p. 19, Table 2",with two months of implementation delay
+nordhaus,stable_low,2,countries,published,nordhaus2015climate,"p. 1345, Sec. III.B",smallest stable coalition of identical countries without sanctions
+nordhaus,stable_high,3,countries,published,nordhaus2015climate,"p. 1345, Sec. III.B",largest stable coalition of identical countries without sanctions
+nordhaus,price_over_nc_n10,2,,published,nordhaus2015climate,"p. 1345, Sec. III.B","ten identical countries in pairs: global average carbon price over the noncooperative one"
+nordhaus,price_over_eff_n10,0.2,,published,nordhaus2015climate,"p. 1345, Sec. III.B","ten identical countries in pairs: global average carbon price over the efficient one (one-fifth)"
+nordhaus,size_b_above2,2,countries,published,nordhaus2015climate,"online appendix, Sec. C, p. 28",stable coalition size when the cost exponent exceeds 2
+nordhaus,size_b_below2,3,countries,published,nordhaus2015climate,"online appendix, Sec. C, p. 28",stable coalition size when the cost exponent is below 2
+barrett,N,10,players,parameter,barrett2012climate,"Materials and Methods (PMC full text)",players per group
+barrett,cA,0.1,EUR,parameter,barrett2012climate,"Materials and Methods",cost of a chip from Account A
+barrett,cB,1.0,EUR,parameter,barrett2012climate,"Materials and Methods",cost of a chip from Account B
+barrett,chipsA,10,chips,parameter,barrett2012climate,"Materials and Methods",chips available from Account A
+barrett,chipsB,10,chips,parameter,barrett2012climate,"Materials and Methods",chips available from Account B
+barrett,b,0.05,EUR,parameter,barrett2012climate,"Materials and Methods",payment to each player per chip contributed by the group
+barrett,X,15,EUR,parameter,barrett2012climate,"Materials and Methods",loss if the threshold is not met (Certainty)
+barrett,X_lo,10,EUR,parameter,barrett2012climate,"Materials and Methods",low end of the uniform loss (Impact Uncertainty)
+barrett,X_hi,20,EUR,parameter,barrett2012climate,"Materials and Methods",high end of the uniform loss (Impact Uncertainty)
+barrett,T,150,chips,parameter,barrett2012climate,"Materials and Methods",threshold (Certainty)
+barrett,T_lo,100,chips,parameter,barrett2012climate,"Materials and Methods",low end of the uniform threshold (Threshold Uncertainty)
+barrett,T_hi,200,chips,parameter,barrett2012climate,"Materials and Methods",high end of the uniform threshold (Threshold Uncertainty)
+barrett,avoided_certainty,8,groups of 10,observed,barrett2012climate,"Fig. 2 legend",groups that avoided catastrophe (Certainty)
+barrett,avoided_impact,10,groups of 10,observed,barrett2012climate,"Fig. 2 legend",groups that avoided catastrophe (Impact Uncertainty)
+barrett,below_certain_threshold,1,groups of 10,observed,barrett2012climate,"Fig. 2 legend",groups that brought catastrophe below certainty (Threshold Uncertainty)
+barrett,below_certain_both,3,groups of 10,observed,barrett2012climate,"Fig. 2 legend",groups that brought catastrophe below certainty (Impact-and-Threshold Uncertainty)
+barrett,mean_certainty,150.9,chips,observed,barrett2012climate,Table 1,mean group contribution (Certainty)
+barrett,mean_impact,155.5,chips,observed,barrett2012climate,Table 1,mean group contribution (Impact Uncertainty)
+barrett,mean_threshold,77.2,chips,observed,barrett2012climate,Table 1,mean group contribution (Threshold Uncertainty)
+barrett,mean_both,79.9,chips,observed,barrett2012climate,Table 1,mean group contribution (Impact-and-Threshold Uncertainty)
+fithian,budget_bullish,4.3e28,FLOP,parameter,fithian2026hardwired,Sec. 6.2.3,"overt breakout budget if a more bullish leader expects a decisive model by year-end 2028 (the ledger's 2e29 is the year-end 2029 case)"

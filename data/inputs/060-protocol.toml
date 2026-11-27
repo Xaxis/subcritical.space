@@ -1,0 +1,18 @@
+# Inputs for research/06-protocol.md: the design choices Part II states as choices.
+# Every id starts with prot-. Derived numbers are in model/parts/060_protocol.py.
+
+[prot-margin]
+value = 2
+basis = "design"
+fmt = ",.0f"
+label = "margin m on the response time in the line T_b >= m * T_r, an illustrative design choice"
+note = "C1(b): m must cover the product of the errors in T_b and T_r in the unsafe direction; a regime would set it by negotiation. 2 is used only to make the illustrations concrete"
+
+[prot-licence-months]
+value = 3
+unit = "months"
+basis = "design"
+source = "petrie2025flexheg2"
+fmt = ",.0f"
+label = "licence period of a registered chip: the longest it runs without a logged renewal"
+note = "flexHEG Part II's example, 'a new license every three months' (p. 38). Bitcoin time is accurate only to hours [todd2016opentimestamps], so a height-clocked period should be weeks or longer"

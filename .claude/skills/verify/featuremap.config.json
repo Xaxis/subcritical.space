@@ -1,84 +1,126 @@
 {
-  "manual": [
-    {
-      "kind": "cli",
-      "label": "model",
-      "entry": "model/subcritical.py",
-      "reach": "python3 model/subcritical.py [--only ID] [--set ID=VALUE] [--json] [--write]",
-      "area": "model"
-    },
-    {
-      "kind": "job",
-      "label": "make-model",
-      "entry": "model/subcritical.py",
-      "reach": "make model",
-      "area": "model"
-    },
-    {
-      "kind": "cli",
-      "label": "sync",
-      "entry": "tools/sync.py",
-      "reach": "make docs (python3 tools/sync.py [--check])",
-      "area": "docs"
-    },
-    {
-      "kind": "cli",
-      "label": "check",
-      "entry": "tools/check.py",
-      "reach": "make check",
-      "area": "docs"
-    },
-    {
-      "kind": "cli",
-      "label": "paper",
-      "entry": "tools/paper.py",
-      "reach": "make paper (python3 tools/paper.py [--ids] [--keys MAP.json] [--draft])",
-      "area": "paper"
-    },
-    {
-      "kind": "cli",
-      "label": "sources-from-notes",
-      "entry": "tools/sources_from_notes.py",
-      "reach": "python3 tools/sources_from_notes.py [--write]",
-      "area": "docs"
-    },
-    {
-      "kind": "cli",
-      "label": "e02-time-horizons",
-      "entry": "tools/exp/e02_time_horizons.py",
-      "reach": ".venv/bin/python tools/exp/e02_time_horizons.py (E2)",
-      "area": "experiments"
-    },
-    {
-      "kind": "cli",
-      "label": "e05-detection",
-      "entry": "tools/exp/e05_detection.py",
-      "reach": ".venv/bin/python tools/exp/e05_detection.py (E5)",
-      "area": "experiments"
-    },
-    {
-      "kind": "cli",
-      "label": "e08-footprint-floor",
-      "entry": "tools/exp/e08_footprint_floor.py",
-      "reach": ".venv/bin/python tools/exp/e08_footprint_floor.py (E8)",
-      "area": "experiments"
-    },
-    {
-      "kind": "cli",
-      "label": "e24-response-latency",
-      "entry": "tools/exp/e24_response_latency.py",
-      "reach": ".venv/bin/python tools/exp/e24_response_latency.py (E24)",
-      "area": "experiments"
-    },
-    {
-      "kind": "cli",
-      "label": "formal-checks",
-      "entry": "tools/formal/run_all.py",
-      "reach": "python3 tools/formal/run_all.py (every statement in research/05-formal.md on seeded random instances)",
-      "area": "formal"
-    }
-  ],
-  "tests": [
-    "tools/check.py"
-  ]
+ "manual": [
+  {
+   "kind": "cli",
+   "label": "model",
+   "entry": "model/subcritical.py",
+   "reach": "python3 model/subcritical.py [--only ID] [--set ID=VALUE] [--json] [--write]",
+   "area": "model"
+  },
+  {
+   "kind": "job",
+   "label": "make-model",
+   "entry": "model/subcritical.py",
+   "reach": "make model",
+   "area": "model"
+  },
+  {
+   "kind": "cli",
+   "label": "sync",
+   "entry": "tools/sync.py",
+   "reach": "make docs (python3 tools/sync.py [--check])",
+   "area": "docs"
+  },
+  {
+   "kind": "cli",
+   "label": "check",
+   "entry": "tools/check.py",
+   "reach": "make check",
+   "area": "docs"
+  },
+  {
+   "kind": "cli",
+   "label": "paper",
+   "entry": "tools/paper.py",
+   "reach": "make paper (python3 tools/paper.py [--ids] [--keys MAP.json] [--draft])",
+   "area": "paper"
+  },
+  {
+   "kind": "cli",
+   "label": "sources-from-notes",
+   "entry": "tools/sources_from_notes.py",
+   "reach": "python3 tools/sources_from_notes.py [--write]",
+   "area": "docs"
+  },
+  {
+   "kind": "cli",
+   "label": "formal-checks",
+   "entry": "tools/formal/run_all.py",
+   "reach": "python3 tools/formal/run_all.py (every statement in research/05-formal.md on seeded random instances)",
+   "area": "formal"
+  },
+  {
+   "kind": "cli",
+   "label": "e01-capability-compute",
+   "entry": "tools/exp/e01_capability_compute.py",
+   "reach": ".venv/bin/python tools/exp/e01_capability_compute.py (E1)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e02-time-horizons",
+   "entry": "tools/exp/e02_time_horizons.py",
+   "reach": ".venv/bin/python tools/exp/e02_time_horizons.py (E2)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e04-loop-gain",
+   "entry": "tools/exp/e04_loop_gain.py",
+   "reach": ".venv/bin/python tools/exp/e04_loop_gain.py (E4)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e05-detection",
+   "entry": "tools/exp/e05_detection.py",
+   "reach": ".venv/bin/python tools/exp/e05_detection.py (E5)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e06-games",
+   "entry": "tools/exp/e06_games.py",
+   "reach": ".venv/bin/python tools/exp/e06_games.py (E6)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e08-footprint-floor",
+   "entry": "tools/exp/e08_footprint_floor.py",
+   "reach": ".venv/bin/python tools/exp/e08_footprint_floor.py (E8)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e09-returns",
+   "entry": "tools/exp/e09_returns.py",
+   "reach": ".venv/bin/python tools/exp/e09_returns.py (E9)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e11-coupled-loops",
+   "entry": "tools/exp/e11_coupled_loops.py",
+   "reach": ".venv/bin/python tools/exp/e11_coupled_loops.py (E11)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e24-response-latency",
+   "entry": "tools/exp/e24_response_latency.py",
+   "reach": ".venv/bin/python tools/exp/e24_response_latency.py (E24)",
+   "area": "experiments"
+  },
+  {
+   "kind": "cli",
+   "label": "e25-licence-log",
+   "entry": "tools/exp/e25_licence_log.py",
+   "reach": ".venv/bin/python tools/exp/e25_licence_log.py (E25)",
+   "area": "experiments"
+  }
+ ],
+ "tests": [
+  "tools/check.py"
+ ]
 }

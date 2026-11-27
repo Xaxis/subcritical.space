@@ -9585,6 +9585,15 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - note: Part I, D2, 'What would test it': at least five rounds at fixed compute, data and time
 - defined in: `data/inputs/040-claims.toml#L11`
 
+<a id="claim-c4-budgets"></a>
+### claim-c4-budgets
+
+**3 budgets**: budgets on the loop-gain estimator's ladder, one, two and four times the agent budget, each round run at every one
+
+- basis: design
+- note: Part III, Lemma 4.2, and the claims file's C4; E4 runs each simulated round at all three
+- defined in: `data/inputs/040-claims.toml#L19`
+
 <a id="claim-d5-miss-target"></a>
 ### claim-d5-miss-target
 
@@ -9592,7 +9601,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 
 - basis: design
 - note: a placeholder a regime would set by negotiation; here it only makes C5's test pass or fail
-- defined in: `data/inputs/040-claims.toml#L19`
+- defined in: `data/inputs/040-claims.toml#L27`
 
 <a id="claim-d5-false-alarm-target"></a>
 ### claim-d5-false-alarm-target
@@ -9601,7 +9610,918 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 
 - basis: design
 - note: a placeholder a regime would set by negotiation; it is the cost to useful AI that C5 must state
-- defined in: `data/inputs/040-claims.toml#L26`
+- defined in: `data/inputs/040-claims.toml#L34`
+
+<a id="claim-hwp-frozen-frontier"></a>
+### claim-hwp-frozen-frontier
+
+**2e+27 FLOP**: hardwired-pause working paper: the frozen frontier, the training run its breakout budget is a multiple of
+
+- basis: assumption
+- source: [@fithian2026hardwired], 2026-10
+- note: the paper sets its breakout budget, def-hwp-breakout-budget, at 100 times this frontier; used here only as a second point at which to show the coalition share
+- defined in: `data/inputs/040-claims.toml#L43`
+
+<a id="claim-c12-effect-rsi"></a>
+### claim-c12-effect-rsi
+
+**3**: pathway grade, recursive self-improvement: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: its effect on T_b ranges from a modest multiplier to a runaway; the largest tail effect of any pathway
+- defined in: `data/inputs/040-claims.toml#L59`
+
+<a id="claim-c12-effect-uc"></a>
+### claim-c12-effect-uc
+
+**3**: pathway grade, undeclared compute: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: exists now: a moderate effect on T_b and an extreme one on T_r. The grade equals the top T_b effects because a T_r effect and a T_b effect share no scale (C12.3), so neither orders the other
+- defined in: `data/inputs/040-claims.toml#L66`
+
+<a id="claim-c12-effect-ds"></a>
+### claim-c12-effect-ds
+
+**3**: pathway grade, scaling of declared compute: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: moves T_b most of any measured pathway. Equal to self-improvement's grade because the order between them turns on whether the criterion means today or the tail
+- defined in: `data/inputs/040-claims.toml#L73`
+
+<a id="claim-c12-effect-dist"></a>
+### claim-c12-effect-dist
+
+**2**: pathway grade, distillation from a stronger model: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: moves capability at nil compute and across parties, bounded by its teacher plus an uplift; sufficient only for a follower near the line
+- defined in: `data/inputs/040-claims.toml#L80`
+
+<a id="claim-c12-effect-repl"></a>
+### claim-c12-effect-repl
+
+**1**: pathway grade, self-replication and resource acquisition: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: not sufficient while identity gates hold; its components are rising
+- defined in: `data/inputs/040-claims.toml#L87`
+
+<a id="claim-c12-effect-cl"></a>
+### claim-c12-effect-cl
+
+**1**: pathway grade, continual learning: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: no evidence that it is sufficient, and forgetting damps it. Equal to self-replication's grade because both gains are unmeasured
+- defined in: `data/inputs/040-claims.toml#L94`
+
+<a id="claim-c12-effect-lha"></a>
+### claim-c12-effect-lha
+
+**0**: pathway grade, long-horizon autonomy: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: adds nothing to the line by itself; it sets how long a loop runs between gates
+- defined in: `data/inputs/040-claims.toml#L101`
+
+<a id="claim-c12-hidden-rsi"></a>
+### claim-c12-hidden-rsi
+
+**3**: pathway grade, recursive self-improvement: how hard it is to see, 0 to 3
+
+- basis: assumption
+- note: the table and chapter: its research labour is invisible to every physical channel; declarations and staged evaluations see it, chip accounting only its research compute
+- defined in: `data/inputs/040-claims.toml#L108`
+
+<a id="claim-c12-hidden-uc"></a>
+### claim-c12-hidden-uc
+
+**3**: pathway grade, undeclared compute: how hard it is to see, 0 to 3
+
+- basis: assumption
+- note: the table and chapter: seen only by chip accounting at birth, intelligence and insiders
+- defined in: `data/inputs/040-claims.toml#L115`
+
+<a id="claim-c12-hidden-ds"></a>
+### claim-c12-hidden-ds
+
+**1**: pathway grade, scaling of declared compute: how hard it is to see, 0 to 3
+
+- basis: assumption
+- note: the table and chapter: the best seen of the routes that use compute: chip accounting and power
+- defined in: `data/inputs/040-claims.toml#L122`
+
+<a id="claim-c12-hidden-dist"></a>
+### claim-c12-hidden-dist
+
+**3**: pathway grade, distillation from a stronger model: how hard it is to see, 0 to 3
+
+- basis: assumption
+- note: the table and chapter: invisible to compute channels; seen by provider declarations and by evaluations at checkpoints. Equal to the top grade because the table does not say which of these is harder to see
+- defined in: `data/inputs/040-claims.toml#L129`
+
+<a id="claim-c12-hidden-repl"></a>
+### claim-c12-hidden-repl
+
+**2**: pathway grade, self-replication and resource acquisition: how hard it is to see, 0 to 3
+
+- basis: assumption
+- note: the table and chapter: seen by evaluations and by identity checks on compute and payment
+- defined in: `data/inputs/040-claims.toml#L136`
+
+<a id="claim-c12-hidden-cl"></a>
+### claim-c12-hidden-cl
+
+**2**: pathway grade, continual learning: how hard it is to see, 0 to 3
+
+- basis: assumption
+- note: the table and chapter: seen by compute metering and re-evaluation, while context-based adaptation escapes weight accounting
+- defined in: `data/inputs/040-claims.toml#L143`
+
+<a id="claim-c12-hidden-lha"></a>
+### claim-c12-hidden-lha
+
+**0**: pathway grade, long-horizon autonomy: how hard it is to see, 0 to 3
+
+- basis: assumption
+- note: the table and chapter: measured in public by time horizons
+- defined in: `data/inputs/040-claims.toml#L150`
+
+<a id="claim-c12-cheap-rsi"></a>
+### claim-c12-cheap-rsi
+
+**2**: pathway grade, recursive self-improvement: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: low to moderate if aimed at closed-loop frontier training research
+- defined in: `data/inputs/040-claims.toml#L157`
+
+<a id="claim-c12-cheap-uc"></a>
+### claim-c12-cheap-uc
+
+**2**: pathway grade, undeclared compute: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: low; the costs are diplomatic
+- defined in: `data/inputs/040-claims.toml#L164`
+
+<a id="claim-c12-cheap-ds"></a>
+### claim-c12-cheap-ds
+
+**2**: pathway grade, scaling of declared compute: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: low today at a line above the frontier
+- defined in: `data/inputs/040-claims.toml#L171`
+
+<a id="claim-c12-cheap-dist"></a>
+### claim-c12-cheap-dist
+
+**2**: pathway grade, distillation from a stronger model: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: moderate to high if broad, lower if keyed to the teacher, the form Part II uses
+- defined in: `data/inputs/040-claims.toml#L178`
+
+<a id="claim-c12-cheap-repl"></a>
+### claim-c12-cheap-repl
+
+**3**: pathway grade, self-replication and resource acquisition: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: very low
+- defined in: `data/inputs/040-claims.toml#L185`
+
+<a id="claim-c12-cheap-cl"></a>
+### claim-c12-cheap-cl
+
+**1**: pathway grade, continual learning: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: moderate
+- defined in: `data/inputs/040-claims.toml#L192`
+
+<a id="claim-c12-cheap-lha"></a>
+### claim-c12-cheap-lha
+
+**0**: pathway grade, long-horizon autonomy: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3
+
+- basis: assumption
+- note: the table and chapter: high
+- defined in: `data/inputs/040-claims.toml#L199`
+
+<a id="prot-margin"></a>
+### prot-margin
+
+**2**: margin m on the response time in the line T_b >= m * T_r, an illustrative design choice
+
+- basis: design
+- note: C1(b): m must cover the product of the errors in T_b and T_r in the unsafe direction; a regime would set it by negotiation. 2 is used only to make the illustrations concrete
+- defined in: `data/inputs/060-protocol.toml#L4`
+
+<a id="prot-licence-months"></a>
+### prot-licence-months
+
+**3 months**: licence period of a registered chip: the longest it runs without a logged renewal
+
+- basis: design
+- source: [@petrie2025flexheg2]
+- note: flexHEG Part II's example, 'a new license every three months' (p. 38). Bitcoin time is accurate only to hours [todd2016opentimestamps], so a height-clocked period should be weeks or longer
+- defined in: `data/inputs/060-protocol.toml#L11`
+
+<a id="e1-algo-annual"></a>
+### e1-algo-annual
+
+**17**: compute-equivalent gain a year at fixed compute implied by the ECI fit on all joined models (multiplier)
+
+- basis: experiment
+- note: not identified: the joined sample is mostly open weights and lacks most frontier models, and the rate moves from e1-algo-annual-subset-min to e1-algo-annual-subset-max across samples; it also includes post-training, distillation and inference settings, not only pretraining algorithms (rerun: python3 tools/exp/e01_capability_compute.py)
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-1e24"></a>
+### e1-algo-annual-1e24
+
+**28**: compute-equivalent gain a year at fixed compute, at 1e24 FLOP, from the interaction fit at the sample's median date (multiplier)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-1e24-hi"></a>
+### e1-algo-annual-1e24-hi
+
+**111**: gain a year at 1e24 FLOP, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-1e24-lo"></a>
+### e1-algo-annual-1e24-lo
+
+**11**: gain a year at 1e24 FLOP, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-1e26"></a>
+### e1-algo-annual-1e26
+
+**5.8**: compute-equivalent gain a year at fixed compute, at 1e26 FLOP, from the interaction fit at the sample's median date (multiplier)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-1e26-hi"></a>
+### e1-algo-annual-1e26-hi
+
+**12.6**: gain a year at 1e26 FLOP, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-1e26-lo"></a>
+### e1-algo-annual-1e26-lo
+
+**2.6**: gain a year at 1e26 FLOP, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-hi"></a>
+### e1-algo-annual-hi
+
+**54**: compute-equivalent gain a year from the ECI fit, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-lo"></a>
+### e1-algo-annual-lo
+
+**8**: compute-equivalent gain a year from the ECI fit, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-subset-max"></a>
+### e1-algo-annual-subset-max
+
+**1,512**: highest compute-equivalent gain a year across six samples of the joined models (at or above 1e24.5 FLOP)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-algo-annual-subset-min"></a>
+### e1-algo-annual-subset-min
+
+**2.6**: lowest compute-equivalent gain a year across six samples of the joined models (not open weights)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-cluster-dev-max"></a>
+### e1-cluster-dev-max
+
+**2.3 ECI points**: largest drift per OOM of compute of one cluster's ability from the model's other benchmarks (knowledge and language)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-cluster-dev-max-hi"></a>
+### e1-cluster-dev-max-hi
+
+**4.5 ECI points**: that cluster's drift per OOM, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-cluster-dev-max-lo"></a>
+### e1-cluster-dev-max-lo
+
+**0.6 ECI points**: that cluster's drift per OOM, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-clusters-baselined"></a>
+### e1-clusters-baselined
+
+**5 clusters**: clusters with any human comparison in the public data, by a search of the archive's columns plus the ledger's GPQA expert bar (none is an organisation at matched budget)
+
+- basis: experiment
+- note: persuasion has none; AI research and cyber have human time (METR horizons, Cybench first-solve times), not a won-or-lost bar (rerun: python3 tools/exp/e01_capability_compute.py)
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-clusters-drifting"></a>
+### e1-clusters-drifting
+
+**3 clusters**: of those, clusters whose drift per OOM has a 95% interval that excludes zero
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-clusters-fitted"></a>
+### e1-clusters-fitted
+
+**7 clusters**: clusters with at least 10 compute-known models, so a drift on compute can be fitted
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-clusters-verdict"></a>
+### e1-clusters-verdict
+
+**3 clusters**: of those, clusters whose comparison gives a won-or-lost bar scored here (GPQA experts, the superforecaster median, GDPval parity)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-clusters-with-winner"></a>
+### e1-clusters-with-winner
+
+**1 clusters**: of the scored clusters, those in which any compute-known model beats the human comparison
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-compute-share"></a>
+### e1-compute-share
+
+**36%**: share of ECI growth explained by training compute on all joined models, at the ledger's frontier compute growth
+
+- basis: experiment
+- note: not identified: it moves from e1-compute-share-subset-min to e1-compute-share-subset-max across samples, and the joined sample lacks most frontier models (rerun: python3 tools/exp/e01_capability_compute.py)
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-compute-share-hi"></a>
+### e1-compute-share-hi
+
+**44%**: share of frontier ECI growth from compute, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-compute-share-lo"></a>
+### e1-compute-share-lo
+
+**29%**: share of frontier ECI growth from compute, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-compute-share-subset-max"></a>
+### e1-compute-share-subset-max
+
+**63%**: highest compute share of ECI growth across the six samples (not open weights)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-compute-share-subset-min"></a>
+### e1-compute-share-subset-min
+
+**18%**: lowest compute share of ECI growth across the six samples (at or above 1e24.5 FLOP)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-drift-per-oom"></a>
+### e1-drift-per-oom
+
+**-0.34 OOM a year per OOM**: change in the compute-equivalent gain a year per OOM of compute (negative: drift falls with scale, against A3)
+
+- basis: experiment
+- note: from the interaction fit at the sample's median date; with this value, log10 C + a(C) t falls with log10 C once t exceeds -1 / e1-drift-per-oom years (rerun: python3 tools/exp/e01_capability_compute.py)
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-drift-per-oom-hi"></a>
+### e1-drift-per-oom-hi
+
+**-0.16 OOM a year per OOM**: drift with scale, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-drift-per-oom-lo"></a>
+### e1-drift-per-oom-lo
+
+**-0.64 OOM a year per OOM**: drift with scale, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-models"></a>
+### e1-eci-models
+
+**258 models**: models with an Epoch Capabilities Index score
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-per-oom"></a>
+### e1-eci-per-oom
+
+**12.3 ECI points**: ECI points gained per order of magnitude of training compute, date held fixed
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-per-oom-hi"></a>
+### e1-eci-per-oom-hi
+
+**15.6 ECI points**: ECI points per OOM of compute, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-per-oom-lo"></a>
+### e1-eci-per-oom-lo
+
+**9.7 ECI points**: ECI points per OOM of compute, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-per-year"></a>
+### e1-eci-per-year
+
+**15.2 ECI points**: ECI points gained per year at fixed training compute
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-slope-change"></a>
+### e1-eci-slope-change
+
+**-3.9 ECI points**: interaction of compute and date: change a year in ECI points per OOM, equally the change per OOM in ECI points gained a year
+
+- basis: experiment
+- note: negative: capability at fixed compute rose faster for smaller models; its sign is not stable across samples (see eci_subsets) (rerun: python3 tools/exp/e01_capability_compute.py)
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-slope-change-hi"></a>
+### e1-eci-slope-change-hi
+
+**-2.1 ECI points**: change a year in ECI points per OOM, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-eci-slope-change-lo"></a>
+### e1-eci-slope-change-lo
+
+**-6.4 ECI points**: change a year in ECI points per OOM, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-gpqa-acc-compute"></a>
+### e1-gpqa-acc-compute
+
+**79%**: share of GPQA verdicts against PhD experts the best single training-compute threshold gets right
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-gpqa-acc-date"></a>
+### e1-gpqa-acc-date
+
+**92%**: share of GPQA verdicts the best single release-date threshold gets right
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-gpqa-acc-effective"></a>
+### e1-gpqa-acc-effective
+
+**92%**: share of GPQA verdicts the best single effective-compute threshold gets right (compute plus the ECI date term)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-gpqa-flips"></a>
+### e1-gpqa-flips
+
+**1 models**: models whose GPQA verdict against PhD experts flips with the reasoning setting at the same training compute
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-gpqa-models"></a>
+### e1-gpqa-models
+
+**76 models**: compute-known models with a GPQA Diamond score in Epoch's data
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-gpqa-overlap-oom"></a>
+### e1-gpqa-overlap-oom
+
+**2.8 OOM**: training compute of the largest losing model over the smallest winning one on GPQA Diamond, in OOM
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-gpqa-won"></a>
+### e1-gpqa-won
+
+**28 models**: of those, models whose best setting beats PhD experts on GPQA Diamond
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-annual-high"></a>
+### e1-ho-annual-high
+
+**2.43**: yearly effective-compute gain in the highest compute tercile of Ho et al.'s data (multiplier)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-annual-high-hi"></a>
+### e1-ho-annual-high-hi
+
+**22.47**: yearly gain, highest compute tercile, 97.5th percentile of resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-annual-high-lo"></a>
+### e1-ho-annual-high-lo
+
+**1.00**: yearly gain, highest compute tercile, 2.5th percentile of resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-annual-low"></a>
+### e1-ho-annual-low
+
+**1.78**: yearly effective-compute gain in the lowest compute tercile of Ho et al.'s data (multiplier)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-annual-low-hi"></a>
+### e1-ho-annual-low-hi
+
+**8.55**: yearly gain, lowest compute tercile, 97.5th percentile of resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-annual-low-lo"></a>
+### e1-ho-annual-low-lo
+
+**1.36**: yearly gain, lowest compute tercile, 2.5th percentile of resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-annual-mid"></a>
+### e1-ho-annual-mid
+
+**2.71**: yearly effective-compute gain in the middle compute tercile (multiplier)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-bin-edge-hi"></a>
+### e1-ho-bin-edge-hi
+
+**1.3e+17 FLOP**: training compute (6ND) at the edge between the middle and highest terciles
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-bin-edge-lo"></a>
+### e1-ho-bin-edge-lo
+
+**3.2e+14 FLOP**: training compute (6ND) at the edge between the lowest and middle terciles
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-halving"></a>
+### e1-ho-halving
+
+**8.7 months**: halving time of compute for fixed perplexity, median of our resampling (their headline is a median)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-halving-fit"></a>
+### e1-ho-halving-fit
+
+**8.7 months**: halving time of compute for fixed perplexity, our rerun of Ho et al.'s model 7, point fit
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-halving-hi"></a>
+### e1-ho-halving-hi
+
+**16.4 months**: halving time, 97.5th percentile of our resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-halving-lo"></a>
+### e1-ho-halving-lo
+
+**4.3 months**: halving time, 2.5th percentile of our resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-orig-median"></a>
+### e1-ho-orig-median
+
+**8.47 months**: halving time, median of their own bootstrap rerun as their notebook seeds it
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-refit-over-published"></a>
+### e1-ho-refit-over-published
+
+**1.008**: their bootstrap rerun over their published halving time (1 means it reproduces)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-rows"></a>
+### e1-ho-rows
+
+**231 results**: results in Ho et al.'s preferred sample, rebuilt from their sheet with their code's filters
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-ho-top-faster-share"></a>
+### e1-ho-top-faster-share
+
+**52%**: share of resamples in which the highest compute tercile progresses faster than the lowest
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-models"></a>
+### e1-models
+
+**105 models**: models with both an Epoch Capabilities Index score and a training-compute estimate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-agg-mae-pp"></a>
+### e1-oos-agg-mae-pp
+
+**15.5 pp**: mean absolute error of a model's average benchmark score, from the one-OOM ECI forecast
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-bench-floor-pp"></a>
+### e1-oos-bench-floor-pp
+
+**5.2 pp**: mean absolute error per benchmark score with the model's actual ECI (the index's own floor)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-bench-mae-pp"></a>
+### e1-oos-bench-mae-pp
+
+**17.0 pp**: mean absolute error per benchmark score, from the one-OOM ECI forecast
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-bias"></a>
+### e1-oos-bias
+
+**-0.0 ECI points**: mean signed error of the one-OOM forecasts (actual minus forecast; negative means overforecast)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-bias-1e25"></a>
+### e1-oos-bias-1e25
+
+**-8.5 ECI points**: mean signed error of the forecast from 1e25 FLOP (actual minus forecast; negative means overforecast)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-mae"></a>
+### e1-oos-mae
+
+**11.8 ECI points**: mean absolute error of ECI forecast one OOM of compute beyond the fitting range
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-mae-1e25"></a>
+### e1-oos-mae-1e25
+
+**9.1 ECI points**: mean absolute error of the ECI forecast from 1e25 FLOP to the decade above it
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-mae-oom"></a>
+### e1-oos-mae-oom
+
+**0.96 OOM**: the same error as compute-equivalent orders of magnitude (divided by the full fit's slope)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-n"></a>
+### e1-oos-n
+
+**89 forecasts**: out-of-sample forecasts one OOM beyond the fitting range (cuts at 1e23 to 1e26 FLOP)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-n-1e25"></a>
+### e1-oos-n-1e25
+
+**13 models**: models between 1e25 and 1e26 FLOP forecast from a fit on models at or below 1e25 FLOP
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-oos-unforecast-share"></a>
+### e1-oos-unforecast-share
+
+**1.1%**: share of one-OOM forecasts the actual ECI exceeds the one-sided 95% upper prediction bound (5% if calibrated)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-open-share"></a>
+### e1-open-share
+
+**85%**: share of the joined models with open weights
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-spread-mean"></a>
+### e1-spread-mean
+
+**5.1 ECI points**: mean spread (standard deviation) of a model's cluster abilities around its other benchmarks
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-spread-per-oom"></a>
+### e1-spread-per-oom
+
+**-1.46 ECI points**: change per OOM of compute in the spread of a model's cluster abilities (negative means more even)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-spread-per-oom-hi"></a>
+### e1-spread-per-oom-hi
+
+**-0.76 ECI points**: change per OOM in the spread of cluster abilities, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-spread-per-oom-lo"></a>
+### e1-spread-per-oom-lo
+
+**-2.29 ECI points**: change per OOM in the spread of cluster abilities, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
+
+<a id="e1-top25-dropped"></a>
+### e1-top25-dropped
+
+**23 models**: of the 25 models with the highest ECI, those without a public training-compute estimate (left out of every fit)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e01_capability_compute.py
+- defined in: `data/results/e01_capability_compute.json`
 
 <a id="e2-doubling-p50"></a>
 ### e2-doubling-p50
@@ -9711,6 +10631,825 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - note: rerun: python3 tools/exp/e02_time_horizons.py
 - defined in: `data/results/e02_time_horizons.json`
 
+<a id="e4-ai-factor"></a>
+### e4-ai-factor
+
+**1.048**: combined speedup of the AI-credited records
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-ai-median-cut"></a>
+### e4-ai-median-cut
+
+**0.9%**: median cut in training time per AI-credited record
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-ai-period-share"></a>
+### e4-ai-period-share
+
+**6%**: AI-credited records' share of the log speedup over the dates on which AI-credited records were set
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-ai-records"></a>
+### e4-ai-records
+
+**5 records**: records credited to an AI system (each with a human), all 92 records
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-ai-share"></a>
+### e4-ai-share
+
+**1.1%**: AI-credited records' share of the speedrun's log speedup
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-algo-annual"></a>
+### e4-algo-annual
+
+**5.2**: yearly algorithmic speedup at fixed small-scale hardware, records 2 to 77 (multiplier)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-algo-factor"></a>
+### e4-algo-factor
+
+**18.8**: speedup from algorithmic records 2 to 77 (METR's categories other than systems)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-algo-share"></a>
+### e4-algo-share
+
+**84%**: algorithmic records' share of the log speedup, records 2 to 77
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-cal-d1"></a>
+### e4-cal-d1
+
+**0.063 e-folds**: first-round gain at the base budget in the speedrun-calibrated setting (the speedrun's median monthly gain)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-cal-sigma"></a>
+### e4-cal-sigma
+
+**1.54**: noise per round in the speedrun-calibrated setting (sd of ln gain; the speedrun's monthly spread about its fitted law)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-cov-n5"></a>
+### e4-cov-n5
+
+**82%**: coverage of the 90% interval for r after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), true r at the corrected median, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain), the first-order law fitted in its own level form
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-cov-n5-min"></a>
+### e4-cov-n5-min
+
+**77%**: lowest coverage of the 90% interval after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds) over the whole grid of true r, round size and noise
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-cov-n5-xml"></a>
+### e4-cov-n5-xml
+
+**77%**: coverage of the 90% interval in the same runs (true r at the corrected median)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-cov-nmax-min"></a>
+### e4-cov-nmax-min
+
+**84%**: lowest coverage of the 90% interval after 50 rounds at each of 3 budgets (1, 2 and 4 times the base; 150 staged rounds) over the same grid
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-diff-bias"></a>
+### e4-diff-bias
+
+**0.47**: median estimate of r over the true r, C4's first-order difference regression on its own law, 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), speedrun-calibrated rounds, true r at the corrected median, all noise real variation in gain
+
+- basis: experiment
+- note: all of the noise is real variation in the round's gain, which a second held-out set measures identically, so two sets cannot remove this bias (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-diff-bias-meas1"></a>
+### e4-diff-bias-meas1
+
+**0.57**: the same ratio when all of the noise is error in measuring each round's gain, one held-out set
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-diff-bias-meas2"></a>
+### e4-diff-bias-meas2
+
+**8.11**: the same with two held-out sets (regressor from one, response from the other)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-diff-cov-n5"></a>
+### e4-diff-cov-n5
+
+**60%**: coverage of the first-order difference form's 90% interval, 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), speedrun-calibrated rounds, true r at the corrected median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-diff-fav-bias"></a>
+### e4-diff-fav-bias
+
+**1.01**: the first-order difference form's median estimate over the true r with favourable rounds, 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), all noise real variation
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-efolds"></a>
+### e4-efolds
+
+**4.24 e-folds**: speedrun progress on a log compute-equivalent axis, natural log of the speedup
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-gstar-n5"></a>
+### e4-fa-gstar-n5
+
+**94%**: upper-bound trigger's firing rate with the true gain exactly at K*, after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), favourable rounds (a calibrated bound gives about 95%)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-n5"></a>
+### e4-fa-n5
+
+**84%**: false-alarm rate of the upper-bound trigger on r after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds): true r at the corrected median, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain), K* = 0.9
+
+- basis: experiment
+- note: for r alone: the trigger on K multiplies r's bound by the closure's at a share of the error (Part III, Corollary 4.5a), so the K rule fires at least as often; its own rates are the e4-k-* numbers; Monte Carlo standard error 1.8% (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-n5-best"></a>
+### e4-fa-n5-best
+
+**30%**: lowest false-alarm rate at the corrected median after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds) over every first-round gain from 0.1 to 5 e-folds, noise 0.25
+
+- basis: experiment
+- note: reached at a first-round gain of 0.5 e-folds (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-n5-emp"></a>
+### e4-fa-n5-emp
+
+**81%**: false-alarm rate after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds) at the corrected median with each round's real variation drawn from the speedrun's own monthly residuals rather than a normal
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-n5-fav"></a>
+### e4-fa-n5-fav
+
+**35%**: the same false-alarm rate with large, tightly measured rounds (first-round gain 1 e-fold, noise 0.25)
+
+- basis: experiment
+- note: for r alone: the trigger on K multiplies r's bound by the closure's at a share of the error (Part III, Corollary 4.5a), so the K rule fires at least as often; its own rates are the e4-k-* numbers (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-n5-level1"></a>
+### e4-fa-n5-level1
+
+**77%**: false-alarm rate after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds) at the corrected median, speedrun-calibrated rounds, when the first-order level form is fitted to data from Part III's exact round law
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-n5-xml"></a>
+### e4-fa-n5-xml
+
+**74%**: false-alarm rate after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds) at the corrected median, speedrun-calibrated rounds, exact-law data fitted by the exact identity's maximum likelihood
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-nmax"></a>
+### e4-fa-nmax
+
+**68%**: false-alarm rate after 50 rounds at each of 3 budgets (1, 2 and 4 times the base; 150 staged rounds), true r at the corrected median, speedrun-calibrated rounds
+
+- basis: experiment
+- note: for r alone: the trigger on K multiplies r's bound by the closure's at a share of the error (Part III, Corollary 4.5a), so the K rule fires at least as often; its own rates are the e4-k-* numbers (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fa-rounds-fav"></a>
+### e4-fa-rounds-fav
+
+**12 rounds per budget**: fewest rounds per budget bringing the false-alarm rate at the corrected median to 10% or less, favourable rounds (36 staged rounds in all)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fire-gap-n5"></a>
+### e4-fire-gap-n5
+
+**3%**: upper-bound trigger's firing rate at the corrected 95th percentile of r minus its rate at the corrected median, after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), speedrun-calibrated rounds: how well it tells the two apart
+
+- basis: experiment
+- note: each rate has a Monte Carlo standard error near 1.8% (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fire-gap-n5-emp"></a>
+### e4-fire-gap-n5-emp
+
+**3%**: firing rate at the corrected 95th percentile minus at the median, in the same resampled-residual runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fire-gap-n5-fav"></a>
+### e4-fire-gap-n5-fav
+
+**64%**: the same difference after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds) with favourable rounds
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fire-gap-n5-level1"></a>
+### e4-fire-gap-n5-level1
+
+**9%**: firing rate at the corrected 95th percentile minus at the median, in the same exact-law runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fire-gap-n5-xml"></a>
+### e4-fire-gap-n5-xml
+
+**7%**: firing rate at the corrected 95th percentile minus at the median, in the same runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-fire-gap-nmax"></a>
+### e4-fire-gap-nmax
+
+**28%**: the same difference after 50 rounds at each of 3 budgets (1, 2 and 4 times the base; 150 staged rounds)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-gstar"></a>
+### e4-gstar
+
+**0.90**: margin K* below 1 (g* in earlier drafts) that the simulated upper bound is compared with, a placeholder: the research sets none yet
+
+- basis: experiment
+- note: the result sweeps 0.7, 0.8, 0.9, 1 in details (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-hide-silence-cal"></a>
+### e4-hide-silence-cal
+
+**42%**: smallest share of its achievable gain an agent withheld, over every pattern and strength tried, while keeping the upper-bound trigger silent in at least half of the runs: true r at the corrected 95th percentile, 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), speedrun-calibrated rounds
+
+- basis: experiment
+- note: cell: cal targeted t=0.5. It is the shortfall an elicitation step measuring each round's achievable gain would have to catch (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-hide-silence-fav"></a>
+### e4-hide-silence-fav
+
+**16%**: smallest share of its achievable gain an agent withheld, over every pattern and strength tried, while keeping the upper-bound trigger silent in at least half of the runs: true r at the corrected 95th percentile, 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), favourable rounds
+
+- basis: experiment
+- note: cell: fav targeted t=0.25. It is the shortfall an elicitation step measuring each round's achievable gain would have to catch (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-alpha-r"></a>
+### e4-k-alpha-r
+
+**2%**: one-sided error left to r's upper bound in the K rule: 50% of the 5% r's bound has alone, the rest going to the closure's bound (an even split, a design choice)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fa-n5"></a>
+### e4-k-fa-n5
+
+**88%**: false-alarm rate of the K rule (closure's bound 1, r's bound at 50% of the one-sided error, K* = 0.9) after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds): true K at the corrected median of r, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain)
+
+- basis: experiment
+- note: the K rule: fires when the closure's upper bound (1, a loop that may be fully closed) times r's upper bound at 50% of the one-sided error exceeds K* = 0.9, true closure 1 so the true K is r; the rule on r alone fires in 84.0% of the same runs; Monte Carlo standard error 1.6% (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fa-n5-fav"></a>
+### e4-k-fa-n5-fav
+
+**46%**: false-alarm rate of the K rule (closure's bound 1, r's bound at 50% of the one-sided error, K* = 0.9) after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds): true K at the corrected median of r, favourable rounds (first-round gain 1 e-fold at the base budget, noise sd 0.25 in each round's ln gain)
+
+- basis: experiment
+- note: the K rule: fires when the closure's upper bound (1, a loop that may be fully closed) times r's upper bound at 50% of the one-sided error exceeds K* = 0.9, true closure 1 so the true K is r; the rule on r alone fires in 35.0% of the same runs; Monte Carlo standard error 2.5% (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fa-n5-xml"></a>
+### e4-k-fa-n5-xml
+
+**79%**: false-alarm rate of the K rule after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), true K at the corrected median of r, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain), exact-law data fitted by the exact identity's maximum likelihood
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fa-nmax"></a>
+### e4-k-fa-nmax
+
+**80%**: false-alarm rate of the K rule after 50 rounds at each of 3 budgets (1, 2 and 4 times the base; 150 staged rounds), true K at the corrected median of r, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain)
+
+- basis: experiment
+- note: the rule on r alone fires in 68.5% of the same runs (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fa-rounds-fav"></a>
+### e4-k-fa-rounds-fav
+
+**20 rounds per budget**: fewest rounds per budget, of 3, 5, 8, 12, 20, 50, bringing the K rule's false-alarm rate at the corrected median of r to 10% or less, favourable rounds (first-round gain 1 e-fold at the base budget, noise sd 0.25 in each round's ln gain), 3 staged rounds each (60 in all)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fire-gap-n5"></a>
+### e4-k-fire-gap-n5
+
+**2%**: the K rule's firing rate at the corrected 95th percentile of r minus its rate at the corrected median, after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain): how well it tells the two apart
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fire-gap-n5-fav"></a>
+### e4-k-fire-gap-n5-fav
+
+**54%**: the K rule's firing rate at the corrected 95th percentile of r minus its rate at the corrected median, after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), favourable rounds (first-round gain 1 e-fold at the base budget, noise sd 0.25 in each round's ln gain): how well it tells the two apart
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-fire-gap-n5-xml"></a>
+### e4-k-fire-gap-n5-xml
+
+**8%**: the K rule's firing rate at the corrected 95th percentile of r minus its rate at the median, in the same runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-late-cal"></a>
+### e4-k-late-cal
+
+**10%**: miss rate of the K rule after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds): true K at the corrected 95th percentile of r (closure 1), honest agent, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain)
+
+- basis: experiment
+- note: the rule on r alone misses 13.5% of the same runs (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-late-fav"></a>
+### e4-k-late-fav
+
+**1%**: miss rate of the K rule after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds): true K at the corrected 95th percentile of r (closure 1), honest agent, favourable rounds (first-round gain 1 e-fold at the base budget, noise sd 0.25 in each round's ln gain)
+
+- basis: experiment
+- note: the rule on r alone misses 1.0% of the same runs (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-late-hide25-cal"></a>
+### e4-k-late-hide25-cal
+
+**30%**: miss rate of the K rule after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), true K at the corrected 95th percentile of r, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain), an agent withholding on average 25% of each round's achievable gain in the pattern that most delays the rule
+
+- basis: experiment
+- note: pattern: targeted; it withheld 26% of the gain it could have delivered (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-k-late-hide25-fav"></a>
+### e4-k-late-hide25-fav
+
+**90%**: miss rate of the K rule after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), true K at the corrected 95th percentile of r, favourable rounds (first-round gain 1 e-fold at the base budget, noise sd 0.25 in each round's ln gain), an agent withholding on average 25% of each round's achievable gain in the pattern that most delays the rule
+
+- basis: experiment
+- note: pattern: budget; it withheld 31% of the gain it could have delivered (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-late-ub-hide25-cal"></a>
+### e4-late-ub-hide25-cal
+
+**40%**: late-firing rate of the upper-bound trigger after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), true r at the corrected 95th percentile, speedrun-calibrated rounds, an agent withholding on average 25% of each round's achievable gain in the pattern that most delays the trigger
+
+- basis: experiment
+- note: pattern: targeted; it withheld 26% of the gain it could have delivered (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-late-ub-hide25-fav"></a>
+### e4-late-ub-hide25-fav
+
+**96%**: late-firing rate of the upper-bound trigger after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), true r at the corrected 95th percentile, favourable rounds, an agent withholding on average 25% of each round's achievable gain in the pattern that most delays the trigger
+
+- basis: experiment
+- note: pattern: budget; it withheld 31% of the gain it could have delivered (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-late-ub-s0-cal"></a>
+### e4-late-ub-s0-cal
+
+**14%**: late-firing rate of the upper-bound trigger on r after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds): true r at the corrected 95th percentile, honest agent, speedrun-calibrated rounds (first-round gain 0.063 e-folds at the base budget, noise sd 1.54 in each round's ln gain)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-late-ub-s0-fav"></a>
+### e4-late-ub-s0-fav
+
+**1%**: late-firing rate of the upper-bound trigger on r after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds): true r at the corrected 95th percentile, honest agent, favourable rounds (first-round gain 1 e-fold at the base budget, noise sd 0.25 in each round's ln gain)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-late-ub-uniform25-cal"></a>
+### e4-late-ub-uniform25-cal
+
+**13%**: late-firing rate of the upper-bound trigger against an agent withholding 25% of every round alike, speedrun-calibrated rounds (a uniform shortfall moves only the intercept)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-late-ub-uniform25-fav"></a>
+### e4-late-ub-uniform25-fav
+
+**1%**: late-firing rate of the upper-bound trigger against an agent withholding 25% of every round alike, favourable rounds (a uniform shortfall moves only the intercept)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-level-bias"></a>
+### e4-level-bias
+
+**0.93**: median estimate of r over the true r from the first-order level form on its own law, 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), speedrun-calibrated rounds, all noise real variation
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-level-bias-half"></a>
+### e4-level-bias-half
+
+**1.35**: the same with half the noise variance measurement error, one held-out set (the stock then carries the errors)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-level1-bias"></a>
+### e4-level1-bias
+
+**0.82**: median estimate of r over the true r when the first-order level form is fitted to data from Part III's exact round law (misspecified), speedrun-calibrated rounds, all noise real variation
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-metr-shallow-moderate"></a>
+### e4-metr-shallow-moderate
+
+**20.5**: speedup from records METR rates shallow or moderate, recomputed from METR's classifications (METR states about 21)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-miss-lb-hide25-cal"></a>
+### e4-miss-lb-hide25-cal
+
+**98%**: miss rate of the lower-bound rule against the same agent, speedrun-calibrated rounds
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-miss-lb-hide25-fav"></a>
+### e4-miss-lb-hide25-fav
+
+**100%**: miss rate of the lower-bound rule against the same agent, favourable rounds
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-miss-lb-s0-cal"></a>
+### e4-miss-lb-s0-cal
+
+**95%**: miss rate of the lower-bound rule (fires when the lower bound reaches 1) in the same runs, speedrun-calibrated rounds
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-miss-lb-s0-fav"></a>
+### e4-miss-lb-s0-fav
+
+**89%**: miss rate of the lower-bound rule (fires when the lower bound reaches 1) in the same runs, favourable rounds
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-pace-2025"></a>
+### e4-pace-2025
+
+**1.59**: speedup from 2025-01-26 to 2026-01-01, with the re-timing of record 21 removed
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-pace-2026"></a>
+### e4-pace-2026
+
+**4.9**: annualised speedup from 2026-01-01 to 2026-08-30
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-pace-first8"></a>
+### e4-pace-first8
+
+**59**: annualised speedup in the first 8 months (2024-05-28 to 2025-01-28)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-pace-whole"></a>
+### e4-pace-whole
+
+**6.6**: annualised speedup over the whole record, re-timing removed
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-peer-median-cut"></a>
+### e4-peer-median-cut
+
+**1.0%**: median cut per human record over the same dates (2025-09-11 to 2026-06-11)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-records"></a>
+### e4-records
+
+**92 records**: NanoGPT speedrun records in Epoch's series, record 1 (the llm.c baseline) included
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-retime-factor"></a>
+### e4-retime-factor
+
+**1.028**: factor by which re-timings lengthened record 21 (the compile-flag ban, then a newer PyTorch), progress the raw first-to-last ratio misses
+
+- basis: experiment
+- note: record 21 went from 175.98 s to 180.84 s without a change of method (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-speedup"></a>
+### e4-speedup
+
+**70**: speedrun speedup on fixed 8xH100 hardware, the product of every record's gain over the previous record's time under the rules then in force
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-boot-corr"></a>
+### e4-sr-boot-corr
+
+**0.95**: correlation between beta and lambda across block-bootstrap draws of the speedrun's growth-law fit
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-collinearity"></a>
+### e4-sr-collinearity
+
+**0.98**: correlation across months between the speedrun's stock (log speedup) and the log of its research input (contributors over the previous 180 days)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-month-gain"></a>
+### e4-sr-month-gain
+
+**0.063 e-folds**: median monthly gain of the speedrun, months with a record, natural log of the speedup
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-p-below-1"></a>
+### e4-sr-p-below-1
+
+**33%**: share of block-bootstrap draws giving a diminishing-returns law with a positive return below 1 (beta and lambda above 0, r below 1)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-p-negative-lambda"></a>
+### e4-sr-p-negative-lambda
+
+**39%**: share of block-bootstrap draws in which more contributors predict smaller gains (lambda at or below 0)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-p-unbounded"></a>
+### e4-sr-p-unbounded
+
+**30%**: share of block-bootstrap draws in which monthly gains do not fall as the speedup grows (beta at or below 0)
+
+- basis: experiment
+- note: 0.5% with lambda above 0 (r unbounded) and 29.4% with both signs flipped (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-placebo-r-records"></a>
+### e4-sr-placebo-r-records
+
+**0.59**: the speedrun's r with the count of records over the previous 180 days put in place of contributors (a placebo input)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-placebo-r-time"></a>
+### e4-sr-placebo-r-time
+
+**1.03**: the speedrun's r with months since the start put in place of contributors (a placebo input)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-sr-sigma"></a>
+### e4-sr-sigma
+
+**1.54**: spread of the speedrun's monthly gains about the fitted law (sd of ln gain over fitted, months with a record): the noise part (c) is calibrated on
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-systems-annual"></a>
+### e4-systems-annual
+
+**1.4**: yearly systems speedup at fixed hardware, records 2 to 77 (multiplier)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-systems-factor"></a>
+### e4-systems-factor
+
+**1.7**: speedup from systems records 2 to 77 (parallelisation, kernels, framework upgrades, number formats)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-ub-unbounded-n5"></a>
+### e4-ub-unbounded-n5
+
+**44%**: share of speedrun-calibrated runs whose upper bound on r is unbounded after 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds) (true r at the corrected median)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-xdiff-bias-half1"></a>
+### e4-xdiff-bias-half1
+
+**0.44**: the same estimator with half the noise variance measurement error, one held-out set
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-xdiff-bias-half2"></a>
+### e4-xdiff-bias-half2
+
+**0.82**: the same with two held-out sets, the remedy Part II adopts
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-xdiff-bias-half2-mid"></a>
+### e4-xdiff-bias-half2-mid
+
+**1.00**: the exact difference form on two held-out sets with half the noise measurement error, at smaller noise (first-round gain 0.3 e-folds, noise 0.5)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-xdiff-bias-real"></a>
+### e4-xdiff-bias-real
+
+**0.37**: median estimate of r over the true r from the exact round identity in difference form (Part III, Lemma 4.1) on data from the exact law, 5 rounds at each of 3 budgets (1, 2 and 4 times the base; 15 staged rounds), speedrun-calibrated rounds, all noise real variation
+
+- basis: experiment
+- note: all of the noise is real variation in the round's gain, which a second held-out set measures identically, so two sets cannot remove this bias (rerun: python3 tools/exp/e04_loop_gain.py)
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-xml-bias"></a>
+### e4-xml-bias
+
+**0.77**: the same ratio for maximum likelihood on the exact identity in level form (Jacobian included), exact-law data
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
+<a id="e4-xnls-bias"></a>
+### e4-xnls-bias
+
+**2.50**: the same ratio for least squares on the exact identity in level form, exact-law data: the transform depends on b, and least squares ignores its Jacobian
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e04_loop_gain.py
+- defined in: `data/results/e04_loop_gain.json`
+
 <a id="e5-cases"></a>
 ### e5-cases
 
@@ -9741,7 +11480,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-hazard"></a>
 ### e5-hazard
 
-**0.094/yr**: historical discovery rate of covert programmes, discoveries over programme-years (main coding)
+**0.094/yr**: historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; an upper bound on a careful evader's rate
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9760,6 +11499,15 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 ### e5-hazard-boot-lo
 
 **0.069/yr**: discovery rate, 5th percentile of resampling the cases
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-hazard-detect-1y"></a>
+### e5-hazard-detect-1y
+
+**9.0%**: the same chance at the constant historical rate
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9822,7 +11570,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-memo-log10-miss-1y"></a>
 ### e5-memo-log10-miss-1y
 
-**-336**: log10 of the memo-style miss chance over the same time: the product over every channel, as if each watched the programme
+**-14**: log10 of the memo-style miss chance over the same time, the product over every channel as if each watched the programme: an illustration of the memo's form, not evidence
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9867,7 +11615,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-pmiss-max-1y"></a>
 ### e5-pmiss-max-1y
 
-**91%**: chance a breakout is missed on the evader's best path over the memo's placeholder breakout time, with no response time
+**91%**: chance a breakout is missed on the evader's best watched path (the chip pool) over the memo's placeholder breakout time, with no response time; cloud and distillation, unwatched, miss with certainty
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9894,7 +11642,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-pmiss-max-2y"></a>
 ### e5-pmiss-max-2y
 
-**83%**: chance a breakout is missed on the evader's best path over the hardwired-pause horizon, with no response time
+**83%**: chance a breakout is missed on the evader's best watched path over the hardwired-pause horizon, with no response time
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9903,7 +11651,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-pmiss-site-indep-1y"></a>
 ### e5-pmiss-site-indep-1y
 
-**27%**: the same miss chance with imagery and intelligence independent; also the memo-style product over the channels that watch undeclared work
+**27%**: the same miss chance with diversion detection, imagery and intelligence independent, the memo-style product over the channels that watch undeclared work
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9912,16 +11660,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-pmiss-site-merged-1y"></a>
 ### e5-pmiss-site-merged-1y
 
-**29%**: miss chance for one undeclared site above the satellite line, imagery and intelligence merged, median
-
-- basis: experiment
-- note: rerun: python3 tools/exp/e05_detection.py
-- defined in: `data/results/e05_detection.json`
-
-<a id="e5-product-le-max-share"></a>
-### e5-product-le-max-share
-
-**100%**: share of Monte Carlo draws in which the memo's product is at most the evader's miss (the proposition says all)
+**40%**: miss chance for one undeclared site above the satellite line, diversion detection, imagery and intelligence merged, median
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9948,7 +11687,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-declared-days"></a>
 ### e5-td-declared-days
 
-**1.5 days**: detection time on the declared path (sampling and metering merged), at the prevention miss chance
+**39.0 days**: detection time on the declared path at the prevention miss chance: chip sampling, with metering's one-day catch as one check, merged
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9957,7 +11696,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-distributed-years"></a>
 ### e5-td-distributed-years
 
-**27 years**: detection time, smuggled chips spread over sites below the satellite line, median
+**32 years**: detection time, smuggled chips spread over sites below the satellite line, median
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9966,7 +11705,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-hist-years"></a>
 ### e5-td-hist-years
 
-**32 years**: detection time at the prevention miss chance for a path only the historical channels see
+**32 years**: detection time at the prevention miss chance for a path only the historical channels see, from the programme's start; a lower bound, as the rate is an upper bound
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -9975,7 +11714,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-pool-years"></a>
 ### e5-td-pool-years
 
-**32 years**: detection time, the untraced chip pool (no acquisition to catch), median
+**32 years**: detection time, the untraced chip pool (no acquisition to catch), median; a lower bound, as the historical rate is an upper bound
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -10002,7 +11741,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-ratio"></a>
 ### e5-td-ratio
 
-**7,935**: detection time of the evader's best undeclared path over the declared path's, median
+**299**: detection time of the untraced chip pool over the declared path's, median; cloud and distillation have no measured channel and no ratio
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -10011,7 +11750,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-site-indep-years"></a>
 ### e5-td-site-indep-years
 
-**18 years**: detection time for the same site if imagery and intelligence were independent, median
+**18 years**: detection time for the same site if diversion detection, imagery and intelligence were independent, median
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -10020,7 +11759,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-site-now-years"></a>
 ### e5-td-site-now-years
 
-**26 years**: detection time, one undeclared site above the satellite line, median of the Monte Carlo
+**31 years**: detection time, one undeclared site above the satellite line, diversion detection, imagery and intelligence merged, median of the Monte Carlo
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -10029,7 +11768,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-site-now-years-hi"></a>
 ### e5-td-site-now-years-hi
 
-**38 years**: detection time, one undeclared site above the satellite line, 95th percentile
+**43 years**: detection time, one undeclared site above the satellite line, 95th percentile
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -10047,7 +11786,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-site-pause-years"></a>
 ### e5-td-site-pause-years
 
-**27 years**: detection time, one undeclared site sized for a pause's longest run (below the satellite line), median
+**32 years**: detection time, one undeclared site sized for a pause's longest run (below the satellite line), median
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -10065,7 +11804,25 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-weibull-years"></a>
 ### e5-td-weibull-years
 
-**24 years**: the same detection time under the Weibull fit
+**24 years**: the same detection time under the Weibull fit, from the programme's start (in short windows the Weibull finds less than the constant rate)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-weibull-cross-years"></a>
+### e5-weibull-cross-years
+
+**12.8 years**: window from a programme's start below which the Weibull fit finds less than the constant rate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-weibull-detect-1y"></a>
+### e5-weibull-detect-1y
+
+**2.6%**: chance of discovery within the memo's placeholder breakout time of a programme's start, under the Weibull fit
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -10106,6 +11863,393 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
 - defined in: `data/results/e05_detection.json`
+
+<a id="e6-armstrong-br-gain-max"></a>
+### e6-armstrong-br-gain-max
+
+**6.9e-05**: largest gain any team gets by deviating from Armstrong et al.'s no-information (exact) and private-information (grid of 20000 rival types) equilibria; it falls as the grid is refined (both grids in the detail), so it is grid error and the equilibria reproduce
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-armstrong-claims-held"></a>
+### e6-armstrong-claims-held
+
+**8**: Armstrong et al.'s qualitative statements that hold on their own closed forms (of 8 tested)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ba-eq-certainty"></a>
+### e6-ba-eq-certainty
+
+**2**: symmetric pure equilibria of Barrett and Dannenberg's game with a known threshold (they give 2)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ba-eq-threshold"></a>
+### e6-ba-eq-threshold
+
+**1**: symmetric pure equilibria of the same game with the threshold uniform on 100 to 200 chips (they give 1, contributing nothing)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-budget-binding-share"></a>
+### e6-budget-binding-share
+
+**5%**: share of the hardwired-pause paper's own budget range (4.3e28 to 2e29 FLOP, uniform) in which the overt line binds (s* < 1), illustrative T_r
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-budget-binding-share-e24"></a>
+### e6-budget-binding-share-e24
+
+**36%**: the same share of the budget range with the response time set to E24's median time to a halt
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-cross-m-paper"></a>
+### e6-ex-cross-m-paper
+
+**5.6**: decisiveness at which public risk overtakes private risk, with private risk from the paper's own Proposition 2 (the paper says 6)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-inf-cross-mu"></a>
+### e6-ex-inf-cross-mu
+
+**1.439**: capability range mu at which public and private risk are equal as m grows without bound, at enmity 0.9 (from Armstrong et al.'s closed forms)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-none-max-diff"></a>
+### e6-ex-none-max-diff
+
+**3.0e-04**: largest difference between Emery-Xu et al.'s Proposition 1 no-information risk and our numerical equilibrium on 60 types, m from 1 to 20 (grid error: it reproduces)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-private-risk-eq-m6"></a>
+### e6-ex-private-risk-eq-m6
+
+**0.35**: private-information disaster risk at m = 6 in the equilibrium we solve (Fig. 2 parameters)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-private-risk-paper-m6"></a>
+### e6-ex-private-risk-paper-m6
+
+**0.43**: private-information disaster risk at m = 6 from the paper's Corollary 2.1 (Fig. 2 parameters)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-prop2-br-gain-max"></a>
+### e6-ex-prop2-br-gain-max
+
+**0.017**: largest gain from deviating from Emery-Xu et al.'s Proposition 2 strategy in their own model (m of 2 to 20; 0 would mean it is an equilibrium)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-public-minus-private-min"></a>
+### e6-ex-public-minus-private-min
+
+**0.003**: smallest excess of public over private risk across m = 1 to 20 with our private equilibrium (positive: public is riskier at every m where either is risky)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-ex-public-risk-m6"></a>
+### e6-ex-public-risk-m6
+
+**0.44**: public-information disaster risk at m = 6 in the equilibrium we solve (Fig. 2 parameters)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-fk-halt-tau"></a>
+### e6-fk-halt-tau
+
+**1.20 model time**: longest fixed time to a halt that removes the deviator's lead and still sustains pacing, same model (against L* when the answer is racing)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-fk-lambda-star"></a>
+### e6-fk-lambda-star
+
+**0.72 per model time**: detection rate that sustains pacing when a departure is found at a random time and answered at once by racing, same model
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-fk-leff-fig2"></a>
+### e6-fk-leff-fig2
+
+**0.2018**: Fudenberg and Koh's effective hazard at their Fig. 2 parameters, recomputed (they print 0.2018)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-fk-lstar"></a>
+### e6-fk-lstar
+
+**0.61 model time**: longest lag before a rival sees a departure that still sustains pacing (Proposition 4's L*), constant-risk analogue of Fig. 4, in the model's time units
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-fk-slowdown-fig4"></a>
+### e6-fk-slowdown-fig4
+
+**0.3396**: leader's payoff from pacing until catch-up then racing, Fig. 4, recomputed (they print 0.3396)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-gan-deter-window-hist"></a>
+### e6-gan-deter-window-hist
+
+**4.1 years**: response window Gan's deterrence needs at E5's historical discovery rate, at Gan's illustrative payoffs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-gan-deter-window-hist-hi"></a>
+### e6-gan-deter-window-hist-hi
+
+**6.8 years**: the same window at the 5th percentile of E5's discovery rate (longest window)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-gan-deter-window-hist-lo"></a>
+### e6-gan-deter-window-hist-lo
+
+**2.6 years**: the same window at the 95th percentile of E5's discovery rate (shortest window)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-gan-last-review"></a>
+### e6-gan-last-review
+
+**18.9 months**: last supportable review date at Gan's baseline cost, from his Table 3 catch-up path read linearly (he gives 18.9)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-gan-prize-over-penalty"></a>
+### e6-gan-prize-over-penalty
+
+**0.47**: Gan's illustrative payoffs read as C7's prize over penalty: (T - C) / (C - R)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-gan-reproduced"></a>
+### e6-gan-reproduced
+
+**32**: Gan's published values reproduced within their printed rounding from his stated primitives (of 32)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-nordhaus-penalty-n10"></a>
+### e6-nordhaus-penalty-n10
+
+**0.63**: penalty on a non-member, in units of a member's abatement cost, that makes the grand coalition of ten identical countries stable (quadratic costs; our extension of Nordhaus's analytic case)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-nordhaus-stable-max"></a>
+### e6-nordhaus-stable-max
+
+**3 countries**: largest stable coalition of ten identical countries with quadratic costs and no sanction (Nordhaus gives 3)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-nordhaus-stable-min"></a>
+### e6-nordhaus-stable-min
+
+**2 countries**: smallest stable coalition of ten identical countries with quadratic costs and no sanction (Nordhaus gives 2)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-o2-cells"></a>
+### e6-o2-cells
+
+**72 cells**: calibration cells in the information-regime test (mu, enmity, decisiveness, line position)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-o2-compliance-over-none"></a>
+### e6-o2-compliance-over-none
+
+**100%**: share of cells where compliance-only disclosure gives a higher disaster risk than no information
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-o2-compliance-over-private"></a>
+### e6-o2-compliance-over-private
+
+**100%**: share of cells where compliance-only disclosure gives a higher disaster risk than private information alone
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-o2-compliance-over-public"></a>
+### e6-o2-compliance-over-public
+
+**12%**: share of cells where compliance-only disclosure gives a higher disaster risk than public capability
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-o2-public-over-private"></a>
+### e6-o2-public-over-private
+
+**96%**: share of (mu, enmity, decisiveness) cells where public capability is riskier than private information
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-share-bullish"></a>
+### e6-share-bullish
+
+**84%**: largest coalition share (Prop 7.1, margin 2) at the hardwired-pause paper's more bullish budget, 4.3e28 FLOP, fixed algorithms, protocol's illustrative T_r of one year (an illustration: T_r is not bounded)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-share-bullish-e24"></a>
+### e6-share-bullish-e24
+
+**43%**: the same share with the response time set to E24's median time from a treaty finding to a halt (an illustration; a quarter of findings were never followed by a halt)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-sourced-payoffs-inside"></a>
+### e6-sourced-payoffs-inside
+
+**2**: sourced payoff calibrations that fall inside C7's penalty condition (ii) (of 2; both are illustrative calibrations, not measurements)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-staged-pi-line"></a>
+### e6-staged-pi-line
+
+**0.009**: best per-attempt success of a coalition that passes the margin-2 line at the bullish budget, then grows until the next declaration (all world chip sales, central algorithmic drift) with algorithms fixed at launch; against beta = 0.05
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-staged-pi-line-inrun"></a>
+### e6-staged-pi-line-inrun
+
+**0.076**: the same success if the run also absorbs algorithmic progress while it runs (an upper bound on drift)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-staged-share"></a>
+### e6-staged-share
+
+**69%**: largest share whose staged success stays at or below beta at every launch time between declarations, with in-run drift (bullish budget, central drift, no margin, illustrative T_r)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e6-staged-share-high"></a>
+### e6-staged-share-high
+
+**29%**: the same share at the high end of the ledger's algorithmic drift interval
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e06_games.py
+- defined in: `data/results/e06_games.json`
+
+<a id="e8-cap-years-1e24-bound"></a>
+### e8-cap-years-1e24-bound
+
+**1.0 years**: years one cluster at MIRI's unmonitored cap needs for 1e24 FLOP at the bound (FP8, full utilisation); below a pause's 24-month run length means the cap alone does not stop such a run
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-chip-years-1e24-bound"></a>
+### e8-chip-years-1e24-bound
+
+**16 H100e-years**: chip-time floor of a 1e24 FLOP run as a bound (FP8, full utilisation)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-chip-years-1e26-bound"></a>
+### e8-chip-years-1e26-bound
+
+**1,600 H100e-years**: chip-time floor of a 1e26 FLOP run as a bound (FP8, full utilisation): the chip floor at any run length T is this divided by T, so it holds whatever run length the adversary picks
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
 
 <a id="e8-concentrated-1e25-now-seen"></a>
 ### e8-concentrated-1e25-now-seen
@@ -10227,25 +12371,25 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-distributed-1e25-margin-min"></a>
 ### e8-distributed-1e25-margin-min
 
-**1.4**: smallest margin over every facility channel and every draw for a distributed 1e25 FLOP run on one-node sites, a denied party's power included (above 1: no facility channel sees a site; the smallest is commercial-anonymity)
+**1.4**: DEFINITIONAL, not evidence: smallest margin over every facility channel and every draw for a distributed 1e25 FLOP run on one-node sites, a denied party's power included (the smallest is commercial-anonymity). Above 1 by the definition of the per-site floor, so it cannot refute or support C8(b)
 
 - basis: experiment
-- note: the per-site floor is one node whatever C is; thermal infrared's margin is a lower bound (rerun: python3 tools/exp/e08_footprint_floor.py)
+- note: the per-site floor is one node whatever C is, so no input E8 varies could bring this below 1; do not cite as support (rerun: python3 tools/exp/e08_footprint_floor.py)
 - defined in: `data/results/e08_footprint_floor.json`
 
 <a id="e8-distributed-sat-margin"></a>
 ### e8-distributed-sat-margin
 
-**345**: satellite's reliable line over one node's facility power, central inputs
+**345**: DEFINITIONAL, not evidence: satellite's reliable line over one node's facility power, central inputs (a ratio of two inputs, the same for every run)
 
 - basis: experiment
-- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- note: do not cite as support for C8(b) (rerun: python3 tools/exp/e08_footprint_floor.py)
 - defined in: `data/results/e08_footprint_floor.json`
 
 <a id="e8-floor-1e24-pause-bound"></a>
 ### e8-floor-1e24-pause-bound
 
-**21 H100e**: aggregate chip floor for 1e24 FLOP over a pause's longest sensible run, at the highest measured utilisation
+**8.0 H100e**: aggregate chip floor for 1e24 FLOP over a pause's longest sensible run as a bound: FP8 at full utilisation
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10254,7 +12398,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-floor-1e26-pause-bound"></a>
 ### e8-floor-1e26-pause-bound
 
-**2,100 H100e**: the same floor at the highest measured utilisation, the bound an adversary could reach (L2's correction)
+**800 H100e**: the same floor as a bound: FP8, the lowest precision the sources show training at scale, at full utilisation. No party training at FP8 or above needs fewer H100e for this run in this time
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10272,7 +12416,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-floor-1e26-pause-p50"></a>
 ### e8-floor-1e26-pause-p50
 
-**2,900 H100e**: aggregate chip floor for 1e26 FLOP over a pause's longest sensible run, median over utilisation drawn uniform across the measured range (no sourced distribution)
+**2,900 H100e**: aggregate chip floor for 1e26 FLOP over a pause's longest sensible run, median over utilisation drawn uniform across the measured range (no sourced distribution; its top is an inference figure). An estimate at the BF16 reference precision: an FP8 run halves it
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10308,7 +12452,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-pool-over-floor-1e26-pause-p50"></a>
 ### e8-pool-over-floor-1e26-pause-p50
 
-**340**: the untraced pool over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo
+**340**: the untraced pool over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo (floor at the BF16 reference precision; an FP8 run doubles the ratio). The pool is an assumed order of magnitude and its spread is our reading; the smuggled stock has a published interval
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10326,16 +12470,16 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-pool-shrink-1e24-pause"></a>
 ### e8-pool-shrink-1e24-pause
 
-**47,000**: factor by which the untraced pool exceeds the bound chip floor of a 1e24 FLOP run at a pause's run length: how far it must shrink for chip accounting to resolve that run
+**120,000**: factor by which the untraced pool exceeds the bound chip floor (FP8, full utilisation) of a 1e24 FLOP run at a pause's run length: how far it must shrink for chip accounting to resolve that run
 
 - basis: experiment
-- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- note: the pool is an assumed order of magnitude (phys-chips-unaccounted); a longer run raises the factor in proportion (rerun: python3 tools/exp/e08_footprint_floor.py)
 - defined in: `data/results/e08_footprint_floor.json`
 
 <a id="e8-pool-shrink-1e26-pause"></a>
 ### e8-pool-shrink-1e26-pause
 
-**470**: the same factor for a 1e26 FLOP run
+**1,200**: the same factor for a 1e26 FLOP run
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10353,7 +12497,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-power-1e26-now-p50"></a>
 ### e8-power-1e26-now-p50
 
-**20 MW**: average facility power of a 1e26 FLOP run over today's longest sensible run, median of the Monte Carlo over utilisation and power per H100e
+**20 MW**: average facility power of a 1e26 FLOP run over today's longest sensible run, median of the Monte Carlo over utilisation and power per H100e (an estimate at the BF16 reference precision; an FP8 run halves it)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10389,7 +12533,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-power-1e26-pause-p50"></a>
 ### e8-power-1e26-pause-p50
 
-**3.8 MW**: average facility power of a 1e26 FLOP run over a pause's longest sensible run, median of the Monte Carlo over utilisation and power per H100e
+**3.8 MW**: average facility power of a 1e26 FLOP run over a pause's longest sensible run, median of the Monte Carlo over utilisation and power per H100e (an estimate at the BF16 reference precision; an FP8 run halves it)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10425,7 +12569,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-sat-max-c-pause-bound"></a>
 ### e8-sat-max-c-pause-bound
 
-**5.0e+26 FLOP**: the same at a pause's run length with the lowest energy per operation the ledger's ranges allow
+**1.3e+27 FLOP**: the same at a pause's run length as a bound: the lowest power per H100e in the ledger, FP8, full utilisation
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10435,6 +12579,24 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 ### e8-sat-max-c-pause-denied
 
 **5.5e+25 FLOP**: the same at a pause's run length for a denied party at the full denial multiplier, central inputs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-sat-min-t-1e26"></a>
+### e8-sat-min-t-1e26
+
+**17 months**: shortest run length at which a 1e26 FLOP run on one site draws less than the satellite reliable line, base year, central inputs at BF16: any longer run the adversary picks is below it
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-sat-min-t-1e26-bound"></a>
+### e8-sat-min-t-1e26-bound
+
+**1.8 months**: shortest run length at which a 1e26 FLOP run on one site draws less than the satellite reliable line, base year, the bound (lowest power per H100e, FP8, full utilisation): any longer run the adversary picks is below it
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10461,7 +12623,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e8-smuggled-over-floor-1e26-pause-p50"></a>
 ### e8-smuggled-over-floor-1e26-pause-p50
 
-**230**: compute smuggled into one country over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo
+**230**: compute smuggled into one country over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo (floor at the BF16 reference precision; an FP8 run doubles the ratio)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
@@ -10512,6 +12674,1176 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - note: rerun: python3 tools/exp/e08_footprint_floor.py
 - defined in: `data/results/e08_footprint_floor.json`
 
+<a id="e9-chess-input-corr"></a>
+### e9-chess-input-corr
+
+**0.81**: correlation of Stockfish's monthly log test runs and log CPU-years
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-lr-p"></a>
+### e9-chess-lr-p
+
+**0.019**: p-value of the likelihood-ratio test of lambda against 0 for Stockfish
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-placebo-gain"></a>
+### e9-chess-placebo-gain
+
+**2.6**: log-likelihood the real test-run input gains over the smooth-trend placebo for Stockfish (1.92 would mark a 95% difference)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-placebo-r"></a>
+### e9-chess-placebo-r
+
+**0.79**: r for Stockfish when the input is replaced by a smooth trend growing at the input's own rate (a placebo)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-r"></a>
+### e9-chess-r
+
+**0.73**: r for Stockfish, test runs as the input, our one-step refit with Student-t noise (close to the authors' stable noise)
+
+- basis: experiment
+- note: a smooth placebo input with the same growth gives nearly the same r, so the value rests on the two trends (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-r-above1"></a>
+### e9-chess-r-above1
+
+**8**: share of the Stockfish bootstrap refits with r above 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-r-hi"></a>
+### e9-chess-r-hi
+
+**1.08**: r for Stockfish, 95th percentile of 200 bootstrap refits over steps
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-r-lo"></a>
+### e9-chess-r-lo
+
+**0.16**: r for Stockfish, 5th percentile of 200 bootstrap refits over steps
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-r-subset-max"></a>
+### e9-chess-r-subset-max
+
+**2.68**: r for Stockfish: highest across the same five subsets
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-r-subset-min"></a>
+### e9-chess-r-subset-min
+
+**0.55**: r for Stockfish: lowest across five subsets of steps (before and after NNUE, halves, largest steps removed)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-share"></a>
+### e9-chess-share
+
+**0.35**: CPU-years' share of Stockfish's research input that fits best (test runs the rest), on a grid of 0.05
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-share-hi"></a>
+### e9-chess-share-hi
+
+**1.00**: highest CPU-years share within the 95% likelihood-ratio region for Stockfish
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-share-lo"></a>
+### e9-chess-share-lo
+
+**0.00**: lowest CPU-years share within the 95% likelihood-ratio region for Stockfish
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-share-r-hi"></a>
+### e9-chess-share-r-hi
+
+**0.82**: r for Stockfish: highest across the CPU-years shares within the 95% region
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-share-r-lo"></a>
+### e9-chess-share-r-lo
+
+**0.57**: r for Stockfish: lowest across the CPU-years shares within the 95% region
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-share-span"></a>
+### e9-chess-share-span
+
+**1.3**: spread of the profile log-likelihood across CPU-years shares 0 to 1 for Stockfish (1.92 marks a 95% difference)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-chess-steps"></a>
+### e9-chess-steps
+
+**254 steps**: Stockfish steps between consecutive Elo measurements in the fit
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-gk"></a>
+### e9-cv-gk
+
+**1.38 per year**: growth of training compute in computer vision over the same window (notable models, natural log a year), the compute proxy
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-gk-se"></a>
+### e9-cv-gk-se
+
+**0.13 per year**: standard error of that compute growth for computer vision
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-k-fixed"></a>
+### e9-cv-k-fixed
+
+**0.28**: loop gain at fixed compute for computer vision, K = (1 - a) r, at compute's share a = 0.67, with compute's historical growth counted
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-k-fixed-above1"></a>
+### e9-cv-k-fixed-above1
+
+**0.1**: share of draws for computer vision with the fixed-compute loop gain above 1 at a = 0.67
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-k-fixed-hi"></a>
+### e9-cv-k-fixed-hi
+
+**0.56**: loop gain at fixed compute for computer vision at a = 0.67, 95th percentile of the draws
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-k-spec-max"></a>
+### e9-cv-k-spec-max
+
+**0.29**: loop gain at fixed compute for computer vision at a = 0.67: highest value across all specifications
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-r-labour"></a>
+### e9-cv-r-labour
+
+**1.63**: r for computer vision, our refit with research labour as the only input: steady-state ratio of output growth to input growth (today's OpenAlex counts, yearly flows, fitted slope)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-r-labour-above1"></a>
+### e9-cv-r-labour-above1
+
+**82**: share of the labour-only draws for computer vision with r above 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-r-labour-hi"></a>
+### e9-cv-r-labour-hi
+
+**3.30**: r for computer vision, labour only, 95th percentile of the same draws
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-r-labour-lo"></a>
+### e9-cv-r-labour-lo
+
+**0.69**: r for computer vision, labour only, 5th percentile of draws over the output trend's uncertainty and the input slope
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-r-repro"></a>
+### e9-cv-r-repro
+
+**1.26**: r for computer vision recomputed on Ho and Whitfill's own inputs (output over input growth)
+
+- basis: experiment
+- note: their published median is 1.262 (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-r-spec-max"></a>
+### e9-cv-r-spec-max
+
+**2.01**: r for computer vision, labour only: highest value across input specifications and output trends
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-r-spec-min"></a>
+### e9-cv-r-spec-min
+
+**1.26**: r for computer vision, labour only: lowest value across input specifications and output trends
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-share-crit"></a>
+### e9-cv-share-crit
+
+**0.21**: compute's share of research input above which the fixed-compute loop gain for computer vision is below 1 (central refit)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-share-crit-max"></a>
+### e9-cv-share-crit-max
+
+**0.25**: the same critical share for computer vision: highest value across all specifications
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-share-r1"></a>
+### e9-cv-share-r1
+
+**0.44**: compute's share above which r itself (on the composite input, compute's growth counted) is below 1 for computer vision
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-cv-share-safe"></a>
+### e9-cv-share-safe
+
+**0.49**: smallest compute share at which the 95th percentile of the fixed-compute loop gain for computer vision is below 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-gk"></a>
+### e9-lm-gk
+
+**1.82 per year**: growth of training compute in language models over the same window (notable models, natural log a year), the compute proxy
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-gk-crit"></a>
+### e9-lm-gk-crit
+
+**0.31 per year**: growth of research compute below which the language-model loop at fixed compute is above 1 at a = 0.67 (central refit, natural log a year)
+
+- basis: experiment
+- note: the published correction is the case where compute grew as fast as the labour proxy (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-gk-se"></a>
+### e9-lm-gk-se
+
+**0.09 per year**: standard error of that compute growth for language models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-k-fixed"></a>
+### e9-lm-k-fixed
+
+**0.25**: loop gain at fixed compute for language models, K = (1 - a) r, at compute's share a = 0.67, with compute's historical growth counted
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-k-fixed-above1"></a>
+### e9-lm-k-fixed-above1
+
+**0.0**: share of draws for language models with the fixed-compute loop gain above 1 at a = 0.67
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-k-fixed-hi"></a>
+### e9-lm-k-fixed-hi
+
+**0.42**: loop gain at fixed compute for language models at a = 0.67, 95th percentile of the draws
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-k-published-correction"></a>
+### e9-lm-k-published-correction
+
+**0.90**: the published compute correction applied to our labour-only refit for language models, r (1 - a) at a = 0.67, which leaves compute's growth out
+
+- basis: experiment
+- note: the ledger's corrected median from Ho and Whitfill's r is dyn-r-lm-corrected (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-k-spec-max"></a>
+### e9-lm-k-spec-max
+
+**0.26**: loop gain at fixed compute for language models at a = 0.67: highest value across all specifications
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-r-labour"></a>
+### e9-lm-r-labour
+
+**2.71**: r for language models, our refit with research labour as the only input: steady-state ratio of output growth to input growth (today's OpenAlex counts, yearly flows, fitted slope)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-r-labour-above1"></a>
+### e9-lm-r-labour-above1
+
+**100**: share of the labour-only draws for language models with r above 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-r-labour-hi"></a>
+### e9-lm-r-labour-hi
+
+**4.71**: r for language models, labour only, 95th percentile of the same draws
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-r-labour-lo"></a>
+### e9-lm-r-labour-lo
+
+**1.67**: r for language models, labour only, 5th percentile of draws over the output trend's uncertainty and the input slope
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-r-repro"></a>
+### e9-lm-r-repro
+
+**1.90**: r for language models recomputed on Ho and Whitfill's own inputs (output over input growth)
+
+- basis: experiment
+- note: their published median is 1.892 (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-r-spec-max"></a>
+### e9-lm-r-spec-max
+
+**3.58**: r for language models, labour only: highest value across input specifications and output trends
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-r-spec-min"></a>
+### e9-lm-r-spec-min
+
+**1.81**: r for language models, labour only: lowest value across input specifications and output trends
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-share-crit"></a>
+### e9-lm-share-crit
+
+**0.26**: compute's share of research input above which the fixed-compute loop gain for language models is below 1 (central refit)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-share-crit-max"></a>
+### e9-lm-share-crit-max
+
+**0.29**: the same critical share for language models: highest value across all specifications
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-share-r1"></a>
+### e9-lm-share-r1
+
+**0.43**: compute's share above which r itself (on the composite input, compute's growth counted) is below 1 for language models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lm-share-safe"></a>
+### e9-lm-share-safe
+
+**0.42**: smallest compute share at which the 95th percentile of the fixed-compute loop gain for language models is below 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lp-r-ours"></a>
+### e9-lp-r-ours
+
+**1.58**: r for linear programming with today's OpenAlex works counts instead of unique authors (labour only)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-lp-r-repro"></a>
+### e9-lp-r-repro
+
+**1.51**: r for linear programming recomputed on Erdil et al.'s inputs (naive), against their published naive 1.51
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-moore-beta"></a>
+### e9-moore-beta
+
+**0.20**: Bloom et al.'s beta for Moore's Law (broad R&D), recomputed from their files (lambda = 1)
+
+- basis: experiment
+- note: published 0.2 (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-moore-r"></a>
+### e9-moore-r
+
+**5.1**: r for Moore's Law research implied by that beta (broad R&D, lambda = 1, output assumed to double every two years)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-moore-r-max"></a>
+### e9-moore-r-max
+
+**7.3**: r for Moore's Law: highest across Bloom et al.'s six R&D series
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-moore-r-min"></a>
+### e9-moore-r-min
+
+**2.5**: r for Moore's Law: lowest across Bloom et al.'s six R&D series
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-gk"></a>
+### e9-openai-gk
+
+**1.43 per year**: growth of OpenAI's estimated compute, 2022 to 2025, refitted from Ho and Whitfill's files (natural log a year)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-gl"></a>
+### e9-openai-gl
+
+**0.84 per year**: growth of OpenAI's staff, 2022 to 2025, refitted from Ho and Whitfill's files (natural log a year)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-k-fixed"></a>
+### e9-openai-k-fixed
+
+**0.29**: loop gain at fixed compute at OpenAI, (1 - a) r at a = 0.67
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-k-fixed-above1"></a>
+### e9-openai-k-fixed-above1
+
+**0.0**: share of the OpenAI draws with the fixed-compute loop gain above 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-k-fixed-hi"></a>
+### e9-openai-k-fixed-hi
+
+**0.45**: loop gain at fixed compute at OpenAI, 95th percentile of the same draws
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-r"></a>
+### e9-openai-r
+
+**0.89**: r at OpenAI at Ho and Whitfill's central compute share 0.67
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-r-above1"></a>
+### e9-openai-r-above1
+
+**38**: share of the OpenAI draws with r above 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-r-compute"></a>
+### e9-openai-r-compute
+
+**0.77**: r at OpenAI with compute as the only input (a = 1)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-r-hi"></a>
+### e9-openai-r-hi
+
+**1.31**: r at OpenAI, 95th percentile over the efficiency range 2x to 5x a year, the slopes and a share of 0.59 to 0.75
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-r-labour"></a>
+### e9-openai-r-labour
+
+**1.31**: r at OpenAI with staff as the only input (a = 0), efficiency growing 3x a year
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-openai-share-crit"></a>
+### e9-openai-share-crit
+
+**0.15**: compute's share of research input above which OpenAI's fixed-compute loop gain is below 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-recomputed"></a>
+### e9-recomputed
+
+**12**: published estimates recomputed on their authors' own inputs and method
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-refits"></a>
+### e9-refits
+
+**4**: published estimates refitted on our inputs or with a different noise model
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-refits-inside"></a>
+### e9-refits-inside
+
+**4**: of those, refits whose central value lies inside the published interval
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-reproduced"></a>
+### e9-reproduced
+
+**11**: of those, reproduced within 5% (10% for a value published to one digit)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-gk"></a>
+### e9-rl-gk
+
+**-0.12 per year**: growth of training compute in reinforcement learning (Atari) over the same window (notable models, natural log a year), the compute proxy
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-gk-se"></a>
+### e9-rl-gk-se
+
+**0.68 per year**: standard error of that compute growth for reinforcement learning (Atari)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-r-labour"></a>
+### e9-rl-r-labour
+
+**1.81**: r for reinforcement learning (Atari), our refit with research labour as the only input: steady-state ratio of output growth to input growth (today's OpenAlex counts, yearly flows, fitted slope)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-r-labour-above1"></a>
+### e9-rl-r-labour-above1
+
+**99**: share of the labour-only draws for reinforcement learning (Atari) with r above 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-r-labour-hi"></a>
+### e9-rl-r-labour-hi
+
+**2.04**: r for reinforcement learning (Atari), labour only, 95th percentile of the same draws
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-r-labour-lo"></a>
+### e9-rl-r-labour-lo
+
+**1.09**: r for reinforcement learning (Atari), labour only, 5th percentile of draws over the output trend's uncertainty and the input slope
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-r-repro"></a>
+### e9-rl-r-repro
+
+**1.24**: r for reinforcement learning (Atari) recomputed on Ho and Whitfill's own inputs (output over input growth)
+
+- basis: experiment
+- note: their published median is 1.201 (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-r-spec-max"></a>
+### e9-rl-r-spec-max
+
+**5.22**: r for reinforcement learning (Atari), labour only: highest value across input specifications and output trends
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-rl-r-spec-min"></a>
+### e9-rl-r-spec-min
+
+**1.21**: r for reinforcement learning (Atari), labour only: lowest value across input specifications and output trends
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-sat-r-ours"></a>
+### e9-sat-r-ours
+
+**5.00**: r for SAT solvers with today's OpenAlex works counts instead of unique authors (labour only)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-sat-r-repro"></a>
+### e9-sat-r-repro
+
+**4.17**: r for SAT solvers recomputed on Erdil et al.'s inputs (naive), against their published naive 4.17
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-us-bloom-beta"></a>
+### e9-us-bloom-beta
+
+**3.1**: Bloom et al.'s beta for the US economy, recomputed from their files (lambda = 1)
+
+- basis: experiment
+- note: published 3.1 (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-us-bloom-r"></a>
+### e9-us-bloom-r
+
+**0.33**: r for the US economy implied by that beta with lambda = 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-us-lambda-not-positive"></a>
+### e9-us-lambda-not-positive
+
+**6**: share of bootstrap refits for the US economy with lambda at or below 0 (the input has no effect or a negative one)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-us-lr-p"></a>
+### e9-us-lr-p
+
+**0.13**: p-value of the likelihood-ratio test of lambda against 0 for the US economy
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-us-r"></a>
+### e9-us-r
+
+**0.244**: r for the US economy with lambda free, best fit of our one-step refit of Erdil et al.'s TFP series; not identified, since lambda cannot be told from 0
+
+- basis: experiment
+- note: reproduces their best fit; the bootstrap interval runs below 0 (rerun: python3 tools/exp/e09_returns.py)
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-us-r-hi"></a>
+### e9-us-r-hi
+
+**0.30**: r for the US economy, lambda free, 95th percentile of 200 bootstrap refits
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e9-us-r-lo"></a>
+### e9-us-r-lo
+
+**-0.17**: r for the US economy, lambda free, 5th percentile of 200 bootstrap refits
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e09_returns.py
+- defined in: `data/results/e09_returns.json`
+
+<a id="e11-ah-max-gated"></a>
+### e11-ah-max-gated
+
+**0.064**: largest AI share of hardware research at which rho(U) <= 1: closure gated, r at the 95th percentile, economic gain at zero
+
+- basis: experiment
+- note: one over hardware r would allow 0.2; the cycle through compute and software lowers it (rerun: python3 tools/exp/e11_coupled_loops.py)
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-ah-max-rowsum"></a>
+### e11-ah-max-rowsum
+
+**0.10**: largest AI share of hardware research at which the row-sum test could issue with every gate on (one party, vendor-reported closure); rho(U) after the compute cap needs no bound on it
+
+- basis: experiment
+- note: with that share at its bound of 1 no set of gates brings the largest row sum below 10: the hardware row has no gate in Part I or II (rerun: python3 tools/exp/e11_coupled_loops.py)
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-cn-accel"></a>
+### e11-cn-accel
+
+**-2.0 ECI points a year per year**: change a year in China's frontier ECI growth (positive means accelerating, which voids the steady-path bound)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-cn-accel-2025"></a>
+### e11-cn-accel-2025
+
+**8.4 ECI points a year per year**: the same change for China's models released 2025 on, point estimate (the window with the lowest ratio, in which the steady-path bound does not hold)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-cn-accel-hi"></a>
+### e11-cn-accel-hi
+
+**0.4 ECI points a year per year**: that change, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-cn-accel-lo"></a>
+### e11-cn-accel-lo
+
+**-10.5 ECI points a year per year**: that change, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-domains-closed-above-1"></a>
+### e11-domains-closed-above-1
+
+**1 domains**: of the ledger's three domains (language models, vision, RL), those whose fully closed, corrected gain at the 95th percentile exceeds 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-entries"></a>
+### e11-entries
+
+**10 entries**: nonzero entries in Part I's one-party loop graph (software, hardware, compute, experiential)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-entries-domain"></a>
+### e11-entries-domain
+
+**2 entries**: entries bounded only by the natural range of an unmeasured share (AI's share of hardware research)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-entries-measured"></a>
+### e11-entries-measured
+
+**2 entries**: of those, entries bounded by a measured percentile (each times an assumed compute share)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-entries-unbounded"></a>
+### e11-entries-unbounded
+
+**5 entries**: entries with no bound of any kind (economic gain, software to economic, experiential, and two edges into the experiential loop that cannot move rho)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-epsk-flip"></a>
+### e11-epsk-flip
+
+**0.689**: compute share of research input at which the fully closed software loop's gain, at r's 95th percentile, falls to 1 (C6(c)'s negative result holds only below it)
+
+- basis: experiment
+- note: the ledger's share is an assumption of Ho and Whitfill, not a measurement (rerun: python3 tools/exp/e11_coupled_loops.py)
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-epsk-gap"></a>
+### e11-epsk-gap
+
+**0.022**: how far the assumed compute share sits below that flip point
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-eta-max-gated"></a>
+### e11-eta-max-gated
+
+**0.32**: largest economic gain (revenue's elasticity to effective compute) at which rho(U) <= 1: closure gated, r at the 95th percentile, other unmeasured entries at zero (an upper bound on what any certificate allows)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-eta-max-gated-median"></a>
+### e11-eta-max-gated-median
+
+**0.44**: the same largest economic gain with r at its median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-eta-max-vendor"></a>
+### e11-eta-max-vendor
+
+**0.23**: the same at the vendor-reported AI-led share of research as the closure, r at the 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-g-cn"></a>
+### e11-g-cn
+
+**15.5 ECI points a year**: frontier ECI growth of Chinese models, released 2024 on
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-g-ratio"></a>
+### e11-g-ratio
+
+**0.90**: China's frontier growth over the United States': the steady-path bound on the cross-party entry into China's software loop (under three assumptions)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-g-ratio-hi"></a>
+### e11-g-ratio-hi
+
+**1.00**: that ratio, 95th percentile of resampling models (the bound used in U)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-g-ratio-lo"></a>
+### e11-g-ratio-lo
+
+**0.84**: that ratio, 5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-g-ratio-subset-max"></a>
+### e11-g-ratio-subset-max
+
+**1.13**: highest follower-over-leader growth ratio across the other windows and the open-over-closed split
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-g-ratio-subset-min"></a>
+### e11-g-ratio-subset-min
+
+**0.79**: lowest follower-over-leader growth ratio across the other windows and the open-over-closed split
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-g-us"></a>
+### e11-g-us
+
+**17.1 ECI points a year**: frontier ECI growth of United States models, released 2024 on
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-gates-fully-closed"></a>
+### e11-gates-fully-closed
+
+**3 gates**: fewest gates that issue the certificate for one party with no stated range trusted, software loop fully closed (the closure gate is among them)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-gates-vendor"></a>
+### e11-gates-vendor
+
+**2 gates**: fewest gates that issue it for one party at the vendor-reported closure, no stated range trusted: cap and update
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-gates-vendor-two"></a>
+### e11-gates-vendor-two
+
+**3 gates**: the same for two parties joined by cross-party software edges: cap and cross and update
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-greedy-worse"></a>
+### e11-greedy-worse
+
+**0 scenarios**: grid scenarios of the real graph (of 480) in which cutting greedily needs more cuts than the smallest set
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-lag-median"></a>
+### e11-lag-median
+
+**5.3 months**: median lag of China's frontier models behind the date the United States frontier first reached the same ECI
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-lag-trend"></a>
+### e11-lag-trend
+
+**0.8 months a year**: trend of that lag (Theil-Sen slope; positive means widening)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-lag-trend-hi"></a>
+### e11-lag-trend-hi
+
+**2.6 months a year**: lag trend, 97.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-lag-trend-lo"></a>
+### e11-lag-trend-lo
+
+**-0.4 months a year**: lag trend, 2.5th percentile of resampling models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-margin-vendor"></a>
+### e11-margin-vendor
+
+**0.72**: 1 - rho(U) after those gates at the vendor-reported closure: the largest m * rho_dot * T_r the certificate tolerates (rho_dot is unmeasured)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-pathways-alone-honest"></a>
+### e11-pathways-alone-honest
+
+**0 pathways**: the same with honest bounds on every entry
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-pathways-alone-zero"></a>
+### e11-pathways-alone-zero
+
+**1 pathways**: pathways whose loops, cut alone, issue the certificate for one party fully closed, with entries that have no data bound set to zero (recursive self-improvement only, if 1)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-rowsum-floor"></a>
+### e11-rowsum-floor
+
+**2.14**: smallest largest-row-sum any U on Part I's graph can have while compute feeds software (r at the 95th percentile, closure gated): the row-sum certificate cannot issue
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e11_coupled_loops.py
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-sens-cycle"></a>
+### e11-sens-cycle
+
+**0.81**: share of rho(U) carried by the cycle from compute to software and back through revenue, where rho(U) = 1 on the economic gain (closure gated, r at the 95th percentile; Perron elasticities)
+
+- basis: experiment
+- note: the largest row sum there is 2.14; the Perron-weighted bound is 1.000, rho itself (rerun: python3 tools/exp/e11_coupled_loops.py)
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-signed-rho"></a>
+### e11-signed-rho
+
+**1.25**: rho(K) of a signed variant of the real graph (software competing with revenue for compute) that does not run away: for signed K, rho(K) > 1 is not the runaway condition
+
+- basis: experiment
+- note: its positive part has rho 0.73; integrated to t = 10,000 it grows as a logarithm, inside the comparison bound (rerun: python3 tools/exp/e11_coupled_loops.py)
+- defined in: `data/results/e11_coupled_loops.json`
+
+<a id="e11-xp-max-vendor"></a>
+### e11-xp-max-vendor
+
+**0.44**: largest bound on the cross-party entry into China's software loop that issues the certificate at the vendor-reported closure, with the reverse entry at its bound and compute capped
+
+- basis: experiment
+- note: against its own steady-path bound of 1.00: one direction must be gated or measured well below what growth rates allow (rerun: python3 tools/exp/e11_coupled_loops.py)
+- defined in: `data/results/e11_coupled_loops.json`
+
 <a id="e24-exit-min-days"></a>
 ### e24-exit-min-days
 
@@ -10530,10 +13862,28 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - note: rerun: python3 tools/exp/e24_response_latency.py
 - defined in: `data/results/e24_response_latency.json`
 
+<a id="e24-halt-after-exit"></a>
+### e24-halt-after-exit
+
+**5 findings**: findings made after the party's withdrawal from the treaty took effect, left out of the halt analysis
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
 <a id="e24-halt-findings"></a>
 ### e24-halt-findings
 
-**13 findings**: findings in the halt analysis (those whose sources say whether a halt followed)
+**8 findings**: findings in the halt analysis: made while the party was in the treaty, with sources that say whether a halt followed
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-findings-all"></a>
+### e24-halt-findings-all
+
+**13 findings**: findings with a halt record, including those after the party's withdrawal
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10560,7 +13910,16 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-km-median-years"></a>
 ### e24-halt-km-median-years
 
-**6.3 years**: Kaplan-Meier median years from a finding to a halt, findings never halted censored
+**1.2 years**: Kaplan-Meier median years from a finding to a halt, findings never halted censored
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-km-median-years-all"></a>
+### e24-halt-km-median-years-all
+
+**6.3 years**: Kaplan-Meier median years to a halt, every finding including those after the party's withdrawal
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10569,7 +13928,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-km-median-years-lo"></a>
 ### e24-halt-km-median-years-lo
 
-**0.9 years**: the same median, 5th percentile of resampling the findings
+**0.3 years**: the same median, 5th percentile of resampling the findings
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10578,7 +13937,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-km-over-hwp"></a>
 ### e24-halt-km-over-hwp
 
-**3.2**: Kaplan-Meier median time to a halt over the reaction horizon the hardwired-pause paper chooses
+**0.6**: Kaplan-Meier median time to a halt over the reaction horizon the hardwired-pause paper chooses
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10587,7 +13946,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-km-share-unbounded"></a>
 ### e24-halt-km-share-unbounded
 
-**26%**: share of resampled tables in which fewer than half the findings are ever halted (no median)
+**2%**: share of resampled tables in which fewer than half the findings are ever halted (no median)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10596,7 +13955,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-lognormal-median-years"></a>
 ### e24-halt-lognormal-median-years
 
-**5.0 years**: median years to a halt of a log-normal fitted with censoring
+**1.9 years**: median years to a halt of a log-normal fitted with censoring
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10605,7 +13964,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-lognormal-median-years-hi"></a>
 ### e24-halt-lognormal-median-years-hi
 
-**31.1 years**: the log-normal median, 95th percentile of resampling the findings
+**8.1 years**: the log-normal median, 95th percentile of resampling the findings
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10614,7 +13973,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-lognormal-median-years-lo"></a>
 ### e24-halt-lognormal-median-years-lo
 
-**1.6 years**: the log-normal median, 5th percentile of resampling the findings
+**0.7 years**: the log-normal median, 5th percentile of resampling the findings
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10623,7 +13982,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-median-if-halted-years"></a>
 ### e24-halt-median-if-halted-years
 
-**0.9 years**: median years from a finding to the first halt, among findings that were halted
+**1.1 years**: median years from a finding to the first halt, among those findings that were halted (the unhalted left out)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10641,7 +14000,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-over-exit"></a>
 ### e24-halt-over-exit
 
-**11**: median time to a halt, among findings halted, over the violator's fastest exit
+**12**: median time to a halt, among findings halted, over the violator's fastest exit
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10650,7 +14009,16 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-share-never"></a>
 ### e24-halt-share-never
 
-**46%**: share of those findings followed by no halt by the end of what the sources cover
+**25%**: share of those findings followed by no halt by the end of what the sources cover
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-share-never-all"></a>
+### e24-halt-share-never-all
+
+**46%**: share never halted, every finding including those after the party's withdrawal
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10659,7 +14027,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-halt-share-reversed"></a>
 ### e24-halt-share-reversed
 
-**71%**: share of halts later reversed or shown incomplete in the same sources
+**67%**: share of halts in the halt analysis later reversed or shown incomplete in the same sources
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10677,7 +14045,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e24-miri-notice-over-halt"></a>
 ### e24-miri-notice-over-halt
 
-**1.1**: MIRI's draft withdrawal notice over the median time to a halt among findings halted
+**1.0**: MIRI's draft withdrawal notice over the median time to a halt among findings halted
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
@@ -10763,6 +14131,222 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: experiment
 - note: rerun: python3 tools/exp/e24_response_latency.py
 - defined in: `data/results/e24_response_latency.json`
+
+<a id="e25-anchor6-p99"></a>
+### e25-anchor6-p99
+
+**2.2 hours**: 99th percentile of the time for six blocks in the last ten years: the wait before a logged licence is anchored six deep (six is a design choice here)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-block-hashes"></a>
+### e25-block-hashes
+
+**5.79e+23 hashes**: expected hash evaluations per block at the last difficulty in the record
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-budget-f100"></a>
+### e25-budget-f100
+
+**1.107**: powered-time budget, over the nominal licence time, of a floor at 100% of the nominal block rate with the least slack that stopped no compliant chip on the record (1,413 blocks)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-budget-f50"></a>
+### e25-budget-f50
+
+**2.003**: powered-time budget, over the nominal licence time, of a floor at 50% of the nominal block rate with the least slack that stopped no compliant chip on the record (21 blocks)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-budget-f90"></a>
+### e25-budget-f90
+
+**1.161**: powered-time budget, over the nominal licence time, of a floor at 90% of the nominal block rate with the least slack that stopped no compliant chip on the record (591 blocks)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-budget-least"></a>
+### e25-budget-least
+
+**1.099**: least powered-time budget, over the nominal licence time, of any floor and slack that stopped no compliant chip on the record: the longest honest span, approached as the floor rises, where the rule becomes a plain powered-time budget
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-falsestop-check"></a>
+### e25-falsestop-check
+
+**17.1%**: share of compliant chips stopped early at the formal check's random settings (licences of 5 to 60 blocks, floor 0.2 to 0.9 of the nominal rate, slack up to 5 blocks) on Bitcoin's real intervals
+
+- basis: experiment
+- note: the formal check's own share was 112 of 649 on simulated Poisson blocks (rerun: python3 tools/exp/e25_licence_log.py)
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-falsestop-f100-s1008"></a>
+### e25-falsestop-f100-s1008
+
+**1.8%**: share stopped early with a floor at the nominal rate and a slack of a nominal week (1,008 blocks), same record
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-falsestop-f90-s5"></a>
+### e25-falsestop-f90-s5
+
+**26.7%**: share of compliant three-month licences stopped early with a floor at 90% of the nominal rate and a slack of 5 blocks, on the record since the minimum-difficulty era
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-forge-day-hours"></a>
+### e25-forge-day-hours
+
+**13.1 hours**: upper bound on the cost of ending licences one nominal day early under rule G, in hours of the whole honest network's hash rate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-forge-licence-days"></a>
+### e25-forge-licence-days
+
+**50 days**: upper bound on what the minimum-work rule can make a forged fork of one licence period cost, in days of the whole honest network's hash rate at issuance; under rule G one such fork ends every reachable licence at once
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-forge-licence-hashes"></a>
+### e25-forge-licence-hashes
+
+**4.16e+27 hashes**: upper bound on the hash evaluations of a forged fork of one licence period at the last difficulty, at the record's largest admissible minimum work
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-headers"></a>
+### e25-headers
+
+**977,000 headers**: real Bitcoin block headers the verifier checked (linkage, proof of work, retargeting, median time); all passed
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-licence-blocks"></a>
+### e25-licence-blocks
+
+**13,149 blocks**: blocks in one licence period at Bitcoin's nominal ten-minute spacing
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-minwork-least"></a>
+### e25-minwork-least
+
+**0.546**: lowest honest work per block within a licence, over the work at issuance, since the minimum-difficulty era (licence issued 2021-05-13): the most minimum work a chip could demand without stopping a compliant chip on the record
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-net-hashrate"></a>
+### e25-net-hashrate
+
+**9.65e+20 hashes/s**: honest network hash rate implied by the last difficulty at the nominal spacing; rule W stops an online chip early only with more than this, sustained
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-oos-2021"></a>
+### e25-oos-2021
+
+**6.3%**: share of licences issued in 2021 that a powered-time budget set at the longest honest span before 2021 would have stopped early (the 2021 fall in hash rate)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-oos-margin"></a>
+### e25-oos-margin
+
+**1.012**: largest factor by which a year's longest honest span exceeded the longest before it, 2012 on (the margin a budget set on the past needed)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-oos-minwork-2021"></a>
+### e25-oos-minwork-2021
+
+**9.7%**: share of licences issued in 2021 in which a minimum work set on the record before 2021 would have refused an honest header
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-oos-years"></a>
+### e25-oos-years
+
+**1 years**: years from 2012 to 2026 (15 tested) in which a budget set on the earlier record stopped some compliant chip
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-span-max"></a>
+### e25-span-max
+
+**100.4 days**: longest real span of a licence of that many blocks since the minimum-difficulty era, licence issued 2021-04-15
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-span-median"></a>
+### e25-span-median
+
+**89.6 days**: median real span of such a licence, starts in the last ten years of the record
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-span-min"></a>
+### e25-span-min
+
+**80.7 days**: shortest real span of such a licence in the last ten years, issued 2017-11-18
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
+
+<a id="e25-state-bytes"></a>
+### e25-state-bytes
+
+**225 bytes**: fixed state a chip keeps for one chain and one licence in this verifier (an illustration of its size, not a hardware measurement)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e25_licence_log.py
+- defined in: `data/results/e25_licence_log.json`
 
 <a id="miss-prob-one-channel"></a>
 ### miss-prob-one-channel
@@ -13656,7 +17240,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="org-covert-years-median"></a>
 ### org-covert-years-median
 
-**15 years**: median time undetected among the seven undeclared programmes
+**15 years**: median time undetected among the seven undeclared programmes, on the programme clock: from each programme's start to its discovery
 
 - basis: derived
 - formula: `median(org-iraq-years, org-libya-years, org-iran-years, org-fordow-years-low, org-syria-years, org-biopreparat-years, org-sa-years)`
@@ -13676,33 +17260,13 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="org-covert-hazard"></a>
 ### org-covert-hazard
 
-**0.08/yr**: discovery rate a year implied by the seven programmes (discoveries over programme-years)
+**0.08/yr**: discovery rate a year implied by the seven programmes (discoveries over programme-years), on the programme clock: time counted from each programme's start, not from the start of a breakout
 
 - basis: derived
 - formula: `7 / org-covert-years-sum`
 - inputs: [org-covert-years-sum](#org-covert-years-sum)
 - note: a convenience sample of programmes that were eventually found; programmes never found are missing
 - defined in: `model/parts/015_organisational.py#L267`
-
-<a id="org-covert-detect-1y"></a>
-### org-covert-detect-1y
-
-**8%**: chance a covert programme is found within the memo's placeholder breakout time, at the historical rate
-
-- basis: derived
-- formula: `1 - exp(-org-covert-hazard * breakout-years)`
-- inputs: [org-covert-hazard](#org-covert-hazard), [breakout-years](#breakout-years)
-- defined in: `model/parts/015_organisational.py#L275`
-
-<a id="org-covert-detect-5y"></a>
-### org-covert-detect-5y
-
-**33%**: chance a covert programme is found within South Africa's decision-to-device time, at the historical rate
-
-- basis: derived
-- formula: `1 - exp(-org-covert-hazard * org-sa-decision-device)`
-- inputs: [org-covert-hazard](#org-covert-hazard), [org-sa-decision-device](#org-sa-decision-device)
-- defined in: `model/parts/015_organisational.py#L283`
 
 <a id="org-memo-detect-rate"></a>
 ### org-memo-detect-rate
@@ -13712,17 +17276,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `inspections-per-year * detect-prob-per-inspection`
 - inputs: [inspections-per-year](#inspections-per-year), [detect-prob-per-inspection](#detect-prob-per-inspection)
-- defined in: `model/parts/015_organisational.py#L292`
-
-<a id="org-memo-to-history"></a>
-### org-memo-to-history
-
-**15**: the memo's placeholder detection rate over the historical discovery rate
-
-- basis: derived
-- formula: `org-memo-detect-rate / org-covert-hazard`
-- inputs: [org-memo-detect-rate](#org-memo-detect-rate), [org-covert-hazard](#org-covert-hazard)
-- defined in: `model/parts/015_organisational.py#L300`
+- defined in: `model/parts/015_organisational.py#L276`
 
 <a id="path-rsi-multiplier-median"></a>
 ### path-rsi-multiplier-median
@@ -13793,7 +17347,29 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `def-hwp-horizon * def-hwp-fleet-over-global`
 - inputs: [def-hwp-horizon](#def-hwp-horizon), [def-hwp-fleet-over-global](#def-hwp-fleet-over-global)
 - note: uses that paper's budget, research overhead and utilisation, all assumptions of the paper
-- defined in: `model/parts/040_claims.py#L31`
+- defined in: `model/parts/040_claims.py#L32`
+
+<a id="claim-whole-fleet-days-frozen"></a>
+### claim-whole-fleet-days-frozen
+
+**28 days**: time the whole projected end-2026 fleet would need to reach a breakout budget equal to the hardwired-pause paper's frozen frontier, at fixed algorithms
+
+- basis: derived
+- formula: `claim-whole-fleet-horizon * claim-hwp-frozen-frontier / def-hwp-breakout-budget * 365.25`
+- inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [claim-hwp-frozen-frontier](#claim-hwp-frozen-frontier), [def-hwp-breakout-budget](#def-hwp-breakout-budget)
+- note: h_w scales in proportion to the budget; same overhead and utilisation as claim-whole-fleet-horizon
+- defined in: `model/parts/040_claims.py#L46`
+
+<a id="claim-whole-fleet-days-1e26"></a>
+### claim-whole-fleet-days-1e26
+
+**1.4 days**: time the whole projected end-2026 fleet would need to reach a 1e26 FLOP breakout budget, at fixed algorithms
+
+- basis: derived
+- formula: `claim-whole-fleet-horizon * phys-rahman-1e26-local / def-hwp-breakout-budget * 365.25`
+- inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [phys-rahman-1e26-local](#phys-rahman-1e26-local), [def-hwp-breakout-budget](#def-hwp-breakout-budget)
+- note: h_w scales in proportion to the budget; same overhead and utilisation as claim-whole-fleet-horizon
+- defined in: `model/parts/040_claims.py#L56`
 
 <a id="claim-pool-over-floor-now"></a>
 ### claim-pool-over-floor-now
@@ -13803,7 +17379,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `org-smuggled-cum / phys-floor-chips-1e26-now`
 - inputs: [org-smuggled-cum](#org-smuggled-cum), [phys-floor-chips-1e26-now](#phys-floor-chips-1e26-now)
-- defined in: `model/parts/040_claims.py#L41`
+- defined in: `model/parts/040_claims.py#L66`
 
 <a id="claim-pool-over-floor-pause"></a>
 ### claim-pool-over-floor-pause
@@ -13813,7 +17389,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `org-smuggled-cum / phys-floor-chips-1e26-pause`
 - inputs: [org-smuggled-cum](#org-smuggled-cum), [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause)
-- defined in: `model/parts/040_claims.py#L49`
+- defined in: `model/parts/040_claims.py#L74`
 
 <a id="claim-d5-organisms"></a>
 ### claim-d5-organisms
@@ -13824,7 +17400,69 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `ceil(ln(1 - claim-confidence) / ln(1 - claim-d5-miss-target))`
 - inputs: [claim-confidence](#claim-confidence), [claim-d5-miss-target](#claim-d5-miss-target)
 - note: exact binomial bound with zero misses; any miss raises the number needed
-- defined in: `model/parts/040_claims.py#L62`
+- defined in: `model/parts/040_claims.py#L87`
+
+<a id="claim-c4-staged-runs"></a>
+### claim-c4-staged-runs
+
+**15 staged runs**: staged runs in the loop-gain test's fewest rounds, every round run at each budget on the ladder
+
+- basis: derived
+- formula: `claim-c4-budgets * claim-d2-rounds`
+- inputs: [claim-c4-budgets](#claim-c4-budgets), [claim-d2-rounds](#claim-d2-rounds)
+- defined in: `model/parts/040_claims.py#L100`
+
+<a id="claim-c4-staged-runs-fav"></a>
+### claim-c4-staged-runs-fav
+
+**36 staged runs**: staged runs E4 needs, with favourable rounds, to bring the upper-bound rule on r to 10% false alarms or fewer at the corrected median
+
+- basis: derived
+- formula: `claim-c4-budgets * e4-fa-rounds-fav`
+- inputs: [claim-c4-budgets](#claim-c4-budgets), [e4-fa-rounds-fav](#e4-fa-rounds-fav)
+- defined in: `model/parts/040_claims.py#L109`
+
+<a id="claim-c4-k-staged-runs-fav"></a>
+### claim-c4-k-staged-runs-fav
+
+**60 staged runs**: staged runs E4 needs, with favourable rounds, to bring the K rule to 10% false alarms or fewer at the corrected median of r
+
+- basis: derived
+- formula: `claim-c4-budgets * e4-k-fa-rounds-fav`
+- inputs: [claim-c4-budgets](#claim-c4-budgets), [e4-k-fa-rounds-fav](#e4-k-fa-rounds-fav)
+- defined in: `model/parts/040_claims.py#L118`
+
+<a id="claim-c12-pairs"></a>
+### claim-c12-pairs
+
+**21**: pairs of pathways in the pathways chapter's ranking
+
+- basis: derived
+- formula: `n * (n - 1) / 2 for the pathways chapter's n pathways`
+- inputs: 
+- defined in: `model/parts/040_claims.py#L147`
+
+<a id="claim-c12-pareto-two"></a>
+### claim-c12-pareto-two
+
+**12**: pairs of pathways fixed by the evidence on the ranking's two criteria, effect on the line and how hard it is to see: one pathway graded higher on both
+
+- basis: derived
+- formula: `pairs (a, b) with claim-c12-effect-a > claim-c12-effect-b and claim-c12-hidden-a > claim-c12-hidden-b`
+- inputs: [claim-c12-effect-rsi](#claim-c12-effect-rsi), [claim-c12-effect-uc](#claim-c12-effect-uc), [claim-c12-effect-ds](#claim-c12-effect-ds), [claim-c12-effect-dist](#claim-c12-effect-dist), [claim-c12-effect-repl](#claim-c12-effect-repl), [claim-c12-effect-cl](#claim-c12-effect-cl), [claim-c12-effect-lha](#claim-c12-effect-lha), [claim-c12-hidden-rsi](#claim-c12-hidden-rsi), [claim-c12-hidden-uc](#claim-c12-hidden-uc), [claim-c12-hidden-ds](#claim-c12-hidden-ds), [claim-c12-hidden-dist](#claim-c12-hidden-dist), [claim-c12-hidden-repl](#claim-c12-hidden-repl), [claim-c12-hidden-cl](#claim-c12-hidden-cl), [claim-c12-hidden-lha](#claim-c12-hidden-lha)
+- note: an ordinal reading of the pathways table; every other order is a judgement
+- defined in: `model/parts/040_claims.py#L156`
+
+<a id="claim-c12-pareto-three"></a>
+### claim-c12-pareto-three
+
+**9**: the same count on the three criteria the red team read, cost of a limit included
+
+- basis: derived
+- formula: `pairs (a, b) graded higher on effect, hidden and cheap alike`
+- inputs: [claim-c12-effect-rsi](#claim-c12-effect-rsi), [claim-c12-effect-uc](#claim-c12-effect-uc), [claim-c12-effect-ds](#claim-c12-effect-ds), [claim-c12-effect-dist](#claim-c12-effect-dist), [claim-c12-effect-repl](#claim-c12-effect-repl), [claim-c12-effect-cl](#claim-c12-effect-cl), [claim-c12-effect-lha](#claim-c12-effect-lha), [claim-c12-hidden-rsi](#claim-c12-hidden-rsi), [claim-c12-hidden-uc](#claim-c12-hidden-uc), [claim-c12-hidden-ds](#claim-c12-hidden-ds), [claim-c12-hidden-dist](#claim-c12-hidden-dist), [claim-c12-hidden-repl](#claim-c12-hidden-repl), [claim-c12-hidden-cl](#claim-c12-hidden-cl), [claim-c12-hidden-lha](#claim-c12-hidden-lha), [claim-c12-cheap-rsi](#claim-c12-cheap-rsi), [claim-c12-cheap-uc](#claim-c12-cheap-uc), [claim-c12-cheap-ds](#claim-c12-cheap-ds), [claim-c12-cheap-dist](#claim-c12-cheap-dist), [claim-c12-cheap-repl](#claim-c12-cheap-repl), [claim-c12-cheap-cl](#claim-c12-cheap-cl), [claim-c12-cheap-lha](#claim-c12-cheap-lha)
+- note: checks the grades against the red team's independent reading (L4, C12.1)
+- defined in: `model/parts/040_claims.py#L165`
 
 <a id="formal-d5-organisms-one-miss"></a>
 ### formal-d5-organisms-one-miss
@@ -13834,7 +17472,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `smallest n with P(Bin(n, claim-d5-miss-target) <= 1) <= 1 - claim-confidence`
 - inputs: [claim-d5-miss-target](#claim-d5-miss-target), [claim-confidence](#claim-confidence)
-- defined in: `model/parts/050_formal.py#L36`
+- defined in: `model/parts/050_formal.py#L39`
 
 <a id="formal-d5-organisms-two-miss"></a>
 ### formal-d5-organisms-two-miss
@@ -13844,44 +17482,274 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `smallest n with P(Bin(n, claim-d5-miss-target) <= 2) <= 1 - claim-confidence`
 - inputs: [claim-d5-miss-target](#claim-d5-miss-target), [claim-confidence](#claim-confidence)
-- defined in: `model/parts/050_formal.py#L45`
+- defined in: `model/parts/050_formal.py#L48`
 
 <a id="formal-floor-bound-1e26-pause"></a>
 ### formal-floor-bound-1e26-pause
 
-**1,600 H100e**: aggregate chip floor for 1e26 FLOP over a pause's longest sensible run at full utilisation: a bound in H100e-equivalents for any mix of chips
+**800 H100e**: aggregate chip floor for 1e26 FLOP over a pause's longest sensible run at full utilisation and the dense FP8 peak: a bound in H100e-equivalents for any mix of chips, down to FP8
 
 - basis: derived
-- formula: `phys-floor-chips-1e26-pause * phys-util-ref / 1 (full utilisation)`
+- formula: `phys-floor-chips-1e26-pause * phys-util-ref / phys-fp8-over-bf16 (full utilisation, FP8 peak)`
+- inputs: [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause), [phys-util-ref](#phys-util-ref), [phys-fp8-over-bf16](#phys-fp8-over-bf16)
+- defined in: `model/parts/050_formal.py#L63`
+
+<a id="formal-floor-bound-1e26-pause-bf16"></a>
+### formal-floor-bound-1e26-pause-bf16
+
+**1,600 H100e**: the same floor for a run held to BF16, at full utilisation
+
+- basis: derived
+- formula: `phys-floor-chips-1e26-pause * phys-util-ref (full utilisation, BF16 peak)`
 - inputs: [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause), [phys-util-ref](#phys-util-ref)
-- defined in: `model/parts/050_formal.py#L59`
-
-<a id="formal-floor-mfu-1e26-pause"></a>
-### formal-floor-mfu-1e26-pause
-
-**2,100 H100e**: the same floor at the highest utilisation in the ledger (a vendor figure for large-batch input processing)
-
-- basis: derived
-- formula: `phys-floor-chips-1e26-pause * phys-util-ref / phys-pope-mfu-prefill`
-- inputs: [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause), [phys-util-ref](#phys-util-ref), [phys-pope-mfu-prefill](#phys-pope-mfu-prefill)
-- defined in: `model/parts/050_formal.py#L68`
+- defined in: `model/parts/050_formal.py#L72`
 
 <a id="formal-floor-ref-over-bound"></a>
 ### formal-floor-ref-over-bound
 
-**2.5**: factor by which a floor at the reference utilisation exceeds the bound at full utilisation
+**5.0**: factor by which the physical chapter's floor (reference utilisation, BF16 peak) exceeds the bound
 
 - basis: derived
-- formula: `1 / phys-util-ref`
-- inputs: [phys-util-ref](#phys-util-ref)
-- defined in: `model/parts/050_formal.py#L76`
+- formula: `phys-fp8-over-bf16 / phys-util-ref`
+- inputs: [phys-fp8-over-bf16](#phys-fp8-over-bf16), [phys-util-ref](#phys-util-ref)
+- defined in: `model/parts/050_formal.py#L80`
 
 <a id="formal-pool-over-floor-bound"></a>
 ### formal-pool-over-floor-bound
 
-**412**: median compute smuggled into one country through 2025, as a multiple of the 1e26 FLOP pause floor taken as a bound (full utilisation)
+**824**: median compute smuggled into one country through 2025, as a multiple of the 1e26 FLOP pause floor taken as a bound (full utilisation, FP8)
 
 - basis: derived
 - formula: `org-smuggled-cum / formal-floor-bound-1e26-pause`
 - inputs: [org-smuggled-cum](#org-smuggled-cum), [formal-floor-bound-1e26-pause](#formal-floor-bound-1e26-pause)
-- defined in: `model/parts/050_formal.py#L84`
+- defined in: `model/parts/050_formal.py#L88`
+
+<a id="formal-inrun-line-factor"></a>
+### formal-inrun-line-factor
+
+**3.2**: factor by which a line computed at launch speed must rise to keep T_b >= m T_r when the run absorbs algorithmic drift at the central rate while it runs (an upper bound on drift)
+
+- basis: derived
+- formula: `(e^(a x) - 1) / (a x), a = ln(phys-algo-growth), x = prot-margin * (org-dprk-months + prot-licence-months) / 12`
+- inputs: [phys-algo-growth](#phys-algo-growth), [prot-margin](#prot-margin), [org-dprk-months](#org-dprk-months), [prot-licence-months](#prot-licence-months)
+- defined in: `model/parts/050_formal.py#L107`
+
+<a id="formal-inrun-line-factor-high"></a>
+### formal-inrun-line-factor-high
+
+**10.6**: the same factor at the high end of the ledger's algorithmic drift interval
+
+- basis: derived
+- formula: `(e^(a x) - 1) / (a x), a = ln(phys-algo-growth-high), x = prot-margin * (org-dprk-months + prot-licence-months) / 12`
+- inputs: [phys-algo-growth-high](#phys-algo-growth-high), [prot-margin](#prot-margin), [org-dprk-months](#org-dprk-months), [prot-licence-months](#prot-licence-months)
+- defined in: `model/parts/050_formal.py#L115`
+
+<a id="formal-software-closure-max"></a>
+### formal-software-closure-max
+
+**0.93**: largest closure of the software loop at which its own gain, at the corrected 95th percentile of r, stays below 1
+
+- basis: derived
+- formula: `1 / dyn-r-lm-hi-corrected`
+- inputs: [dyn-r-lm-hi-corrected](#dyn-r-lm-hi-corrected)
+- defined in: `model/parts/050_formal.py#L127`
+
+<a id="prot-tr-declared"></a>
+### prot-tr-declared
+
+**1.0 years**: illustrative response time T_r for licensed, declared compute: the DPRK detection time plus one licence period, for a violation the renewal rule checks mechanically (no decision time)
+
+- basis: derived
+- formula: `(org-dprk-months + prot-licence-months) / 12`
+- inputs: [org-dprk-months](#org-dprk-months), [prot-licence-months](#prot-licence-months)
+- defined in: `model/parts/060_protocol.py#L37`
+
+<a id="prot-line-declared"></a>
+### prot-line-declared
+
+**2.0 years**: breakout time below which a declared holding is weapons-grade, at the illustrative margin and response time
+
+- basis: derived
+- formula: `prot-margin * prot-tr-declared`
+- inputs: [prot-margin](#prot-margin), [prot-tr-declared](#prot-tr-declared)
+- defined in: `model/parts/060_protocol.py#L46`
+
+<a id="prot-lambda-declared"></a>
+### prot-lambda-declared
+
+**4.0/yr**: detection rate the declared channels need to reach the tolerated miss chance within the DPRK detection time
+
+- basis: derived
+- formula: `ln(1 / def-prevent-beta) / (org-dprk-months / 12)`
+- inputs: [def-prevent-beta](#def-prevent-beta), [org-dprk-months](#org-dprk-months)
+- defined in: `model/parts/060_protocol.py#L59`
+
+<a id="prot-lambda-over-history"></a>
+### prot-lambda-over-history
+
+**43**: that rate as a multiple of E5's fitted historical discovery rate of covert programmes (a lower bound on the multiple, as E5's rate is an upper bound for a careful evader)
+
+- basis: derived
+- formula: `prot-lambda-declared / e5-hazard`
+- inputs: [prot-lambda-declared](#prot-lambda-declared), [e5-hazard](#e5-hazard)
+- defined in: `model/parts/060_protocol.py#L67`
+
+<a id="prot-coalition-share-declared"></a>
+### prot-coalition-share-declared
+
+**100%**: largest share of the projected fleet a coalition may hold on declared, licensed compute, at fixed algorithms and the hardwired-pause breakout budget (it scales with that assumed budget until it reaches 1)
+
+- basis: derived
+- formula: `min(1, claim-whole-fleet-horizon / prot-line-declared)`
+- inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [prot-line-declared](#prot-line-declared)
+- defined in: `model/parts/060_protocol.py#L82`
+
+<a id="prot-coalition-budget-unity"></a>
+### prot-coalition-budget-unity
+
+**0.26**: assumed breakout budget, as a fraction of the hardwired-pause paper's, below which the declared coalition share s* falls below 1 (s* equals the budget over this fraction, capped at 1)
+
+- basis: derived
+- formula: `prot-line-declared / claim-whole-fleet-horizon`
+- inputs: [prot-line-declared](#prot-line-declared), [claim-whole-fleet-horizon](#claim-whole-fleet-horizon)
+- defined in: `model/parts/060_protocol.py#L90`
+
+<a id="prot-pool-share-of-fleet"></a>
+### prot-pool-share-of-fleet
+
+**1.4%**: median compute smuggled into one country through 2025, as a share of the projected end-2026 fleet
+
+- basis: derived
+- formula: `org-smuggled-cum / def-hwp-global-fleet`
+- inputs: [org-smuggled-cum](#org-smuggled-cum), [def-hwp-global-fleet](#def-hwp-global-fleet)
+- defined in: `model/parts/060_protocol.py#L98`
+
+<a id="prot-pool-years-fixed"></a>
+### prot-pool-years-fixed
+
+**555 years**: years for the median smuggled stock to reach the hardwired-pause breakout budget at fixed algorithms
+
+- basis: derived
+- formula: `def-hwp-overhead * def-hwp-breakout-budget / (org-smuggled-cum * def-hwp-h100e-rate * def-hwp-utilisation * 1 yr)`
+- inputs: [org-smuggled-cum](#org-smuggled-cum), [def-hwp-h100e-rate](#def-hwp-h100e-rate), [def-hwp-utilisation](#def-hwp-utilisation), [def-hwp-overhead](#def-hwp-overhead), [def-hwp-breakout-budget](#def-hwp-breakout-budget)
+- defined in: `model/parts/060_protocol.py#L120`
+
+<a id="prot-pool-years-small"></a>
+### prot-pool-years-small
+
+**13 years**: years for the same stock to reach the same budget with efficiency growing at the small-compute bound on algorithmic progress, applied to the whole budget
+
+- basis: derived
+- formula: `ln(1 + prot-pool-years-fixed * ln(comp-gundlach-small-annual-max)) / ln(comp-gundlach-small-annual-max)`
+- inputs: [comp-gundlach-small-annual-max](#comp-gundlach-small-annual-max), [prot-pool-years-fixed](#prot-pool-years-fixed)
+- defined in: `model/parts/060_protocol.py#L142`
+
+<a id="prot-pool-years-ho"></a>
+### prot-pool-years-ho
+
+**6.4 years**: years for the same stock to reach the same budget with efficiency growing at Ho et al.'s central rate of algorithmic progress, applied to the whole budget
+
+- basis: derived
+- formula: `ln(1 + prot-pool-years-fixed * ln(comp-ho-annual)) / ln(comp-ho-annual)`
+- inputs: [comp-ho-annual](#comp-ho-annual), [prot-pool-years-fixed](#prot-pool-years-fixed)
+- defined in: `model/parts/060_protocol.py#L142`
+
+<a id="prot-pool-years-rosetta"></a>
+### prot-pool-years-rosetta
+
+**3.9 years**: years for the same stock to reach the same budget with efficiency growing at the Rosetta fit's rate of algorithmic progress, applied to the whole budget
+
+- basis: derived
+- formula: `ln(1 + prot-pool-years-fixed * ln(comp-rosetta-algo)) / ln(comp-rosetta-algo)`
+- inputs: [comp-rosetta-algo](#comp-rosetta-algo), [prot-pool-years-fixed](#prot-pool-years-fixed)
+- defined in: `model/parts/060_protocol.py#L142`
+
+<a id="prot-fast-path-factor"></a>
+### prot-fast-path-factor
+
+**1.8**: factor by which tabulating on the fast (Rosetta) efficiency path shortens a computed leak time against the central path
+
+- basis: derived
+- formula: `comp-leak-years-ho / comp-leak-years-rosetta`
+- inputs: [comp-leak-years-ho](#comp-leak-years-ho), [comp-leak-years-rosetta](#comp-leak-years-rosetta)
+- defined in: `model/parts/060_protocol.py#L155`
+
+<a id="prot-line-declared-inrun"></a>
+### prot-line-declared-inrun
+
+**6.3 years**: breakout time at launch speed a declared holding must exceed to meet the illustrative line when runs absorb drift at the central drift rate (an upper bound on the needed rise)
+
+- basis: derived
+- formula: `prot-line-declared * formal-inrun-line-factor`
+- inputs: [prot-line-declared](#prot-line-declared), [formal-inrun-line-factor](#formal-inrun-line-factor)
+- defined in: `model/parts/060_protocol.py#L174`
+
+<a id="prot-coalition-share-inrun"></a>
+### prot-coalition-share-inrun
+
+**100%**: largest coalition share on declared, licensed compute at the hardwired-pause budget when runs absorb drift at the central drift rate (Proposition 7.1 with Corollary 1.6a; a lower bound on the share, as the factor is an upper bound)
+
+- basis: derived
+- formula: `min(1, claim-whole-fleet-horizon / (prot-line-declared * formal-inrun-line-factor))`
+- inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [prot-line-declared](#prot-line-declared), [formal-inrun-line-factor](#formal-inrun-line-factor)
+- defined in: `model/parts/060_protocol.py#L182`
+
+<a id="prot-line-declared-inrun-high"></a>
+### prot-line-declared-inrun-high
+
+**21.3 years**: breakout time at launch speed a declared holding must exceed to meet the illustrative line when runs absorb drift at the high end of the ledger's drift interval (an upper bound on the needed rise)
+
+- basis: derived
+- formula: `prot-line-declared * formal-inrun-line-factor-high`
+- inputs: [prot-line-declared](#prot-line-declared), [formal-inrun-line-factor-high](#formal-inrun-line-factor-high)
+- defined in: `model/parts/060_protocol.py#L174`
+
+<a id="prot-coalition-share-inrun-high"></a>
+### prot-coalition-share-inrun-high
+
+**37%**: largest coalition share on declared, licensed compute at the hardwired-pause budget when runs absorb drift at the high end of the ledger's drift interval (Proposition 7.1 with Corollary 1.6a; a lower bound on the share, as the factor is an upper bound)
+
+- basis: derived
+- formula: `min(1, claim-whole-fleet-horizon / (prot-line-declared * formal-inrun-line-factor-high))`
+- inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [prot-line-declared](#prot-line-declared), [formal-inrun-line-factor-high](#formal-inrun-line-factor-high)
+- defined in: `model/parts/060_protocol.py#L182`
+
+<a id="prot-coalition-inrun-headroom"></a>
+### prot-coalition-inrun-headroom
+
+**1.24**: whole-fleet horizon over the declared line at launch speed with central in-run drift: above 1, the cap at s* = 1 binds and the whole fleet sits outside the line by this factor
+
+- basis: derived
+- formula: `claim-whole-fleet-horizon / prot-line-declared-inrun`
+- inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [prot-line-declared-inrun](#prot-line-declared-inrun)
+- defined in: `model/parts/060_protocol.py#L191`
+
+<a id="prot-eval-interval-months"></a>
+### prot-eval-interval-months
+
+**6 months**: months between evaluations at every 4x of effective compute, at frontier compute growth and Ho et al.'s central algorithmic rate (E1 cannot identify the frontier's rate, so this is an illustration)
+
+- basis: derived
+- formula: `12 * ln(comp-rsp-cadence) / ln(comp-frontier-compute-growth * comp-ho-annual)`
+- inputs: [comp-rsp-cadence](#comp-rsp-cadence), [comp-frontier-compute-growth](#comp-frontier-compute-growth), [comp-ho-annual](#comp-ho-annual)
+- defined in: `model/parts/060_protocol.py#L204`
+
+<a id="prot-notice-months"></a>
+### prot-notice-months
+
+**12 months**: withdrawal notice the line asks of a member whose holding has fallen to the response time, at the illustrative margin
+
+- basis: derived
+- formula: `(prot-margin - 1) * prot-tr-declared * 12`
+- inputs: [prot-margin](#prot-margin), [prot-tr-declared](#prot-tr-declared)
+- defined in: `model/parts/060_protocol.py#L217`
+
+<a id="prot-prize-over-penalty"></a>
+### prot-prize-over-penalty
+
+**19**: prize-to-penalty ratio above which a breakout at the prevention miss chance profits a party, so C7's penalty condition fails
+
+- basis: derived
+- formula: `(1 - def-prevent-beta) / def-prevent-beta`
+- inputs: [def-prevent-beta](#def-prevent-beta)
+- defined in: `model/parts/060_protocol.py#L230`

@@ -77,13 +77,22 @@ class Results:
         self.out["numbers"][id] = {"value": value, "unit": unit, "fmt": fmt, "label": label, "note": note}
 
     def detail(self, key: str, value) -> None:
-        """Anything else worth keeping (fits, tables, per-item results), not read by the ledger."""
+        """Anything else worth keeping (fits, tables, per-item results), not read by the ledger.
+
+        Checked here, not only at write(): a value the sorted dump refuses (a dict mixing int and str
+        keys, a numpy array, an infinity or NaN, which JSON cannot carry and the site cannot parse)
+        should stop the run at the line that adds it, not after hours of work.
+        """
+        try:
+            json.dumps(value, sort_keys=True, allow_nan=False)
+        except (TypeError, ValueError) as e:
+            raise TypeError(f"detail {key!r} cannot be written as sorted JSON: {e}") from None
         self.out["details"][key] = value
 
     def write(self) -> Path:
         RESULTS.mkdir(parents=True, exist_ok=True)
         path = RESULTS / f"{self.out['name']}.json"
-        path.write_text(json.dumps(self.out, indent=2, sort_keys=True) + "\n")
+        path.write_text(json.dumps(self.out, indent=2, sort_keys=True, allow_nan=False) + "\n")
         print(f"wrote {path.relative_to(ROOT)} ({len(self.out['numbers'])} numbers)")
         return path
 

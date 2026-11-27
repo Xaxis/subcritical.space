@@ -1,0 +1,3177 @@
+{
+  "data": [
+    {
+      "sha256": "2a790cc2d07e6a7cd0a4e4a4abb17b28e9d778c3db92e646594533901075bb0b",
+      "url": "https://raw.githubusercontent.com/parkerwhitfill/epoch_RRD/86f8cc092316640b3a01530aa58784575ef10e2a/code/bayesian.ipynb",
+      "what": "Ho and Whitfill's notebook: the OpenAlex counts and doubling times they used"
+    },
+    {
+      "sha256": "8ddaf9c7680d97cd1fa014ef360c1eb12dfaad09b8a2db332b484a997f6ec2a5",
+      "url": "https://raw.githubusercontent.com/ege-erdil/estimating-returns-to-rnd/cbd19e55919587c55aea1ba38a503153f95b38fd/returns_to_software_rnd_bayesian_update.ipynb",
+      "what": "Erdil, Besiroglu and Ho's notebook: their unique-author counts and output trends"
+    },
+    {
+      "sha256": "71c88ebc90fff8d95e9db2c46486de6b7ddb01089543e2acb422f5f5f1cf45e7",
+      "url": "https://epoch.ai/data/all_ai_models.csv",
+      "what": "Epoch AI, Data on AI models (all models)"
+    },
+    {
+      "sha256": "7abb1c80f8cf8dd62ac40d6f4a648b82e8d5aea09c4affacac177e7d04244075",
+      "url": "https://api.openalex.org/works?filter=concepts.id:C108583219,concepts.id:C31972630&group_by=publication_year",
+      "what": "OpenAlex works per publication year, concepts.id:C108583219,concepts.id:C31972630"
+    },
+    {
+      "sha256": "b4763f50c29890a1d008209fac677f1bdc2ba0f6787230ff82a9c63c0539018b",
+      "url": "https://api.openalex.org/works?filter=concepts.id:C97541855&group_by=publication_year",
+      "what": "OpenAlex works per publication year, concepts.id:C97541855"
+    },
+    {
+      "sha256": "37b62937ebf6b35212e1e1ea1ace496283739f59b0beaf65c8ad70726f09ae48",
+      "url": "https://api.openalex.org/works?filter=concepts.id:C108583219,concepts.id:C204321447&group_by=publication_year",
+      "what": "OpenAlex works per publication year, concepts.id:C108583219,concepts.id:C204321447"
+    },
+    {
+      "sha256": "1541653ba125b6efc11c9d055adc979223d1bf408ecc0dca0555513036f9c247",
+      "url": "https://api.openalex.org/works?filter=concepts.id:C6943359&group_by=publication_year",
+      "what": "OpenAlex works per publication year, concepts.id:C6943359"
+    },
+    {
+      "sha256": "cbe6304ececc9d5aff2140aeb344a98ca2dc246e62285a31b6a3531cfe4a0e1a",
+      "url": "https://api.openalex.org/works?filter=concepts.id:C41045048&group_by=publication_year",
+      "what": "OpenAlex works per publication year, concepts.id:C41045048"
+    },
+    {
+      "sha256": "15da5af38ea09935f455d97134757bf49ce7de04e3d3111bf66759829437332f",
+      "url": "https://raw.githubusercontent.com/parkerwhitfill/epoch_RRD/86f8cc092316640b3a01530aa58784575ef10e2a/data/ai_companies/ai_companies_staff_reports.csv",
+      "what": "Ho and Whitfill's copy of Epoch's AI-company staff reports"
+    },
+    {
+      "sha256": "797673b71fb00333fc9cc6761cdb231e313fe528df4d91d832869e5623f63c63",
+      "url": "https://raw.githubusercontent.com/parkerwhitfill/epoch_RRD/86f8cc092316640b3a01530aa58784575ef10e2a/data/openai_rd_spend_flops.csv",
+      "what": "Ho and Whitfill's estimates of OpenAI's research compute"
+    },
+    {
+      "sha256": "a6207c3b69ed8476b533dc8ed3f5fd8b1f6a94d60a9a10f440ac43bc9af01b79",
+      "url": "https://raw.githubusercontent.com/parkerwhitfill/epoch_RRD/86f8cc092316640b3a01530aa58784575ef10e2a/code/steady_state.py",
+      "what": "Ho and Whitfill's steady-state code (its constants are read, not run)"
+    },
+    {
+      "sha256": "4a879a9f316d908d00ff73d05fe570300a6b87fd992fd899d62b5a0cd60c754a",
+      "url": "https://web.stanford.edu/~chadj/IdeaPFPrograms.zip",
+      "what": "Bloom, Jones, Van Reenen and Webb, replication files (licence not stated)"
+    },
+    {
+      "sha256": "74b0b8d4d44898a9142a9c8cac8ab3a6812ec3a30c97991ec0b79f5097285f32",
+      "url": "https://docs.google.com/spreadsheets/d/1_PTiZ1_faoUW4BjRaGA2rx39tGIK2ODa18FJyTHrZh0/export?format=csv&gid=0",
+      "what": "Erdil et al.'s Stockfish sheet: regression-test Elo by version"
+    },
+    {
+      "sha256": "d6ec154faff836bee2da317ba249ec136ed71e862eb08db1cb4e0b8013ea1967",
+      "url": "https://docs.google.com/spreadsheets/d/1_PTiZ1_faoUW4BjRaGA2rx39tGIK2ODa18FJyTHrZh0/export?format=csv&gid=1718304314",
+      "what": "Erdil et al.'s Stockfish sheet: Fishtest CPU-years, cumulative"
+    },
+    {
+      "sha256": "fd80a739b11d18b8666b8b1529cde509130410a4759c320c0ac12aa1d1b4a4e5",
+      "url": "https://docs.google.com/spreadsheets/d/1_PTiZ1_faoUW4BjRaGA2rx39tGIK2ODa18FJyTHrZh0/export?format=csv&gid=1742775451",
+      "what": "Erdil et al.'s Stockfish sheet: Fishtest test runs, cumulative"
+    },
+    {
+      "sha256": "d02a15609e5cd54d06f80afacbd6e7ff85ce63c85a1fb121331adb86317d206c",
+      "url": "https://docs.google.com/spreadsheets/d/1BLTbmVfB-tACJULIw4EW6c4dHA48C7SX6T6W9GB5ZSg/export?format=csv&gid=0",
+      "what": "Erdil et al.'s US TFP sheet (Bloom et al.'s aggregate series)"
+    }
+  ],
+  "details": {
+    "ai_domains": {
+      "cv": {
+        "compute": {
+          "models": 95,
+          "total": 1.4581137116827034,
+          "total_se": 0.14555095032041682,
+          "trend": 1.3830226471226652,
+          "trend_se": 0.1345501566379127,
+          "years": [
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022
+          ]
+        },
+        "compute_informative": true,
+        "critical_share": 0.20500000000000002,
+        "g_A": 0.9241962407465937,
+        "g_A_note": "Erdil and Besiroglu's halving time with its 95% interval",
+        "g_K": 1.3830226471226652,
+        "g_K_se": 0.1345501566379127,
+        "g_L": 0.5675675959471315,
+        "g_L_se": 0.057648208960334214,
+        "gk_critical_at_share": 0.17828757658866173,
+        "grid": [
+          {
+            "k": 1.6283456760852182,
+            "k_p05": 0.6912316726555491,
+            "k_p95": 3.299380041612313,
+            "p_k_above_1": 0.8212,
+            "p_r_above_1": 0.8212,
+            "r": 1.6283456760852182,
+            "r_p05": 0.6912316726555491,
+            "r_p50": 1.6120682255523244,
+            "r_p95": 3.299380041612313,
+            "share": 0.0
+          },
+          {
+            "k": 1.2814047587510438,
+            "k_p05": 0.5463441630570554,
+            "k_p95": 2.576072364532782,
+            "p_k_above_1": 0.6807,
+            "p_r_above_1": 0.749,
+            "r": 1.4237830652789374,
+            "r_p05": 0.6070490700633948,
+            "r_p50": 1.412369499658895,
+            "r_p95": 2.862302627258647,
+            "share": 0.1
+          },
+          {
+            "k": 1.0119048572636222,
+            "k_p05": 0.4319303459560837,
+            "k_p95": 2.021836351524295,
+            "p_k_above_1": 0.504,
+            "p_r_above_1": 0.6729,
+            "r": 1.2648810715795278,
+            "r_p05": 0.5399129324451046,
+            "r_p50": 1.2556253891518534,
+            "r_p95": 2.5272954394053686,
+            "share": 0.2
+          },
+          {
+            "k": 0.7965206769112566,
+            "k_p05": 0.3393456149254564,
+            "k_p95": 1.5911659164671286,
+            "p_k_above_1": 0.28825,
+            "p_r_above_1": 0.5923,
+            "r": 1.1378866813017952,
+            "r_p05": 0.48477944989350913,
+            "r_p50": 1.128119639465403,
+            "r_p95": 2.2730941663816124,
+            "share": 0.3
+          },
+          {
+            "k": 0.6204397006297776,
+            "k_p05": 0.26418211055975754,
+            "k_p95": 1.2388942488123833,
+            "p_k_above_1": 0.1277,
+            "p_r_above_1": 0.52055,
+            "r": 1.0340661677162961,
+            "r_p05": 0.44030351759959596,
+            "r_p50": 1.0254439222825127,
+            "r_p95": 2.064823748020639,
+            "share": 0.4
+          },
+          {
+            "k": 0.47380337517330834,
+            "k_p05": 0.201297842837221,
+            "k_p95": 0.9466962625115357,
+            "p_k_above_1": 0.03865,
+            "p_r_above_1": 0.44805,
+            "r": 0.9476067503466167,
+            "r_p05": 0.402595685674442,
+            "r_p50": 0.9408347951573703,
+            "r_p95": 1.8933925250230714,
+            "share": 0.5
+          },
+          {
+            "k": 0.34979587931777006,
+            "k_p05": 0.14855438214985342,
+            "k_p95": 0.7007690452875656,
+            "p_k_above_1": 0.00645,
+            "p_r_above_1": 0.37325,
+            "r": 0.8744896982944251,
+            "r_p05": 0.37138595537463354,
+            "r_p50": 0.8693355176383559,
+            "r_p95": 1.7519226132189138,
+            "share": 0.6
+          },
+          {
+            "k": 0.24355433054414125,
+            "k_p05": 0.1034217732499169,
+            "k_p95": 0.4888082776642865,
+            "p_k_above_1": 0.00025,
+            "p_r_above_1": 0.30575,
+            "r": 0.8118477684804707,
+            "r_p05": 0.3447392441663896,
+            "r_p50": 0.8072680469455692,
+            "r_p95": 1.6293609255476214,
+            "share": 0.7
+          },
+          {
+            "k": 0.15151607070450568,
+            "k_p05": 0.06424339004557642,
+            "k_p95": 0.30458148868684565,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.254,
+            "r": 0.7575803535225286,
+            "r_p05": 0.32121695022788216,
+            "r_p50": 0.7527816814703318,
+            "r_p95": 1.5229074434342287,
+            "share": 0.8
+          },
+          {
+            "k": 0.0710113309652705,
+            "k_p05": 0.0301064109832384,
+            "k_p95": 0.14302264473503587,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.20675,
+            "r": 0.7101133096527051,
+            "r_p05": 0.3010641098323841,
+            "r_p50": 0.7054410559185036,
+            "r_p95": 1.430226447350359,
+            "share": 0.9
+          },
+          {
+            "k": 0.0,
+            "k_p05": 0.0,
+            "k_p95": 0.0,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.16875,
+            "r": 0.6682437505049933,
+            "r_p05": 0.2834411220817394,
+            "r_p50": 0.6645870904275283,
+            "r_p95": 1.3505201629483166,
+            "share": 1.0
+          }
+        ],
+        "k_published_correction": 0.5427276138392033,
+        "k_share": 0.2772011169431458,
+        "k_share_p05": 0.11772978731046056,
+        "k_share_p95": 0.5559990590967394,
+        "name": "computer vision",
+        "openalex_counts": {
+          "2005": 12,
+          "2006": 15,
+          "2007": 14,
+          "2008": 10,
+          "2009": 18,
+          "2010": 36,
+          "2011": 35,
+          "2012": 38,
+          "2013": 77,
+          "2014": 168,
+          "2015": 427,
+          "2016": 1035,
+          "2017": 2397,
+          "2018": 4299,
+          "2019": 6814,
+          "2020": 8010,
+          "2021": 9689,
+          "2022": 10654,
+          "2023": 11647,
+          "2024": 9251,
+          "2025": 28642
+        },
+        "p_k_share_above_1": 0.0013,
+        "p_k_share_unbounded": 0.0,
+        "p_r_labour_above_1": 0.8212,
+        "r_labour": 1.6283456760852182,
+        "r_labour_p05": 0.6912316726555491,
+        "r_labour_p95": 3.299380041612313,
+        "r_share": 0.8316865194813855,
+        "repro": 1.2638208244051794,
+        "repro_inputs": {
+          "g_A": 0.9241962407465937,
+          "g_L": 0.7312715718081074
+        },
+        "safe_share_95": 0.49,
+        "share_where_r_is_1": 0.43733697434991403,
+        "spec_crit_max": 0.25121000000000004,
+        "spec_crit_min": 0.11685000000000001,
+        "spec_k_max": 0.28642617073470633,
+        "spec_k_min": 0.25334767959315174,
+        "spec_r_max": 2.008305434846446,
+        "spec_r_min": 1.2638208244051794,
+        "specs": [
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.13720000000000002,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.7042576330286449,
+            "k_at_share": 0.26628388531772884,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.7989315491080973,
+            "r_labour_only": 1.312298507539219
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.13106,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.7042576330286449,
+            "k_at_share": 0.25523778319015006,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.7657899285633064,
+            "r_labour_only": 1.312298507539219
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.13675,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.7051016695260809,
+            "k_at_share": 0.26621914405037417,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "9 months",
+            "r_at_share": 0.7987373058817105,
+            "r_labour_only": 1.3107276307653228
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.13063000000000002,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.7051016695260809,
+            "k_at_share": 0.25517830116657714,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "9 months",
+            "r_at_share": 0.7656114646461959,
+            "r_labour_only": 1.3107276307653228
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.22295,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.5273641992621035,
+            "k_at_share": 0.28058454756093554,
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.841837826465453,
+            "r_labour_only": 1.7524819508790015
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.21393,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.5273641992621035,
+            "k_at_share": 0.2683473959657964,
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.8051227001674057,
+            "r_labour_only": 1.7524819508790015
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.21394000000000002,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.5477650295136957,
+            "k_at_share": 0.2788573995078784,
+            "labour proxy": "flows, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.8366558641100461,
+            "r_labour_only": 1.6872129306375996
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.20519,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.5477650295136957,
+            "k_at_share": 0.26676719091532647,
+            "labour proxy": "flows, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.80038161090707,
+            "r_labour_only": 1.6872129306375996
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.20500000000000002,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.5675675959471315,
+            "k_at_share": 0.2772011169431458,
+            "labour proxy": "flows, slope",
+            "output trend": "9 months",
+            "r_at_share": 0.8316865194813855,
+            "r_labour_only": 1.6283456760852182
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.19651000000000002,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.5675675959471315,
+            "k_at_share": 0.26525102486594637,
+            "labour proxy": "flows, slope",
+            "output trend": "9 months",
+            "r_at_share": 0.7958326578636253,
+            "r_labour_only": 1.6283456760852182
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.16111,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.6585736856122106,
+            "k_at_share": 0.26983564546665156,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "9 months",
+            "r_at_share": 0.8095878951894736,
+            "r_labour_only": 1.4033300463371234
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.15409,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.6585736856122106,
+            "k_at_share": 0.25849917936909866,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "9 months",
+            "r_at_share": 0.7755750956168576,
+            "r_labour_only": 1.4033300463371234
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.25121000000000004,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.46018709341254027,
+            "k_at_share": 0.28642617073470633,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "9 months",
+            "r_at_share": 0.8593644486489838,
+            "r_labour_only": 2.008305434846446
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.24140000000000003,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.46018709341254027,
+            "k_at_share": 0.2736857411025884,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "9 months",
+            "r_at_share": 0.8211393372414892,
+            "r_labour_only": 2.008305434846446
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.12241,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.7312715718081074,
+            "k_at_share": 0.26422730209244155,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.792761182395564,
+            "r_labour_only": 1.2638208244051794
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.11685000000000001,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.7312715718081074,
+            "k_at_share": 0.25334767959315174,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.7601190506845236,
+            "r_labour_only": 1.2638208244051794
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.17154000000000003,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.3830226471226652,
+            "g_L": 0.6378255558262141,
+            "k_at_share": 0.27148021508408104,
+            "labour proxy": "Erdil et al.'s unique authors, flows, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.8145220974619892,
+            "r_labour_only": 1.4489796344855235
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.16415000000000002,
+            "g_A": 0.9241962407465937,
+            "g_K": 1.4581137116827034,
+            "g_L": 0.6378255558262141,
+            "k_at_share": 0.260008080458559,
+            "labour proxy": "Erdil et al.'s unique authors, flows, endpoints",
+            "output trend": "9 months",
+            "r_at_share": 0.780102251600837,
+            "r_labour_only": 1.4489796344855235
+          }
+        ],
+        "window": [
+          2013,
+          2022
+        ]
+      },
+      "lm": {
+        "compute": {
+          "models": 506,
+          "total": 1.9530824690971569,
+          "total_se": 0.35831330367323055,
+          "trend": 1.8182523454335886,
+          "trend_se": 0.08630579011183383,
+          "years": [
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ]
+        },
+        "compute_informative": true,
+        "critical_share": 0.25586000000000003,
+        "g_A": 0.9902102579427788,
+        "g_A_note": "Ho et al.'s halving time with its 95% interval (ledger)",
+        "g_K": 1.8182523454335886,
+        "g_K_se": 0.08630579011183383,
+        "g_L": 0.3650217451481707,
+        "g_L_se": 0.04114715876235013,
+        "gk_critical_at_share": 0.31254736960318424,
+        "grid": [
+          {
+            "k": 2.7127432025750404,
+            "k_p05": 1.6742881821675388,
+            "k_p95": 4.711851472648338,
+            "p_k_above_1": 0.9999,
+            "p_r_above_1": 0.9999,
+            "r": 2.7127432025750404,
+            "r_p05": 1.6742881821675388,
+            "r_p50": 2.7392836760134194,
+            "r_p95": 4.711851472648338,
+            "share": 0.0
+          },
+          {
+            "k": 1.7462492477804625,
+            "k_p05": 1.098544018283883,
+            "k_p95": 2.9682697107313816,
+            "p_k_above_1": 0.9759,
+            "p_r_above_1": 0.9904,
+            "r": 1.9402769419782917,
+            "r_p05": 1.22060446475987,
+            "r_p50": 1.9510866928605555,
+            "r_p95": 3.2980774563682016,
+            "share": 0.1
+          },
+          {
+            "k": 1.2081851931331693,
+            "k_p05": 0.7640083692240487,
+            "k_p95": 2.032935982705782,
+            "p_k_above_1": 0.75255,
+            "p_r_above_1": 0.93085,
+            "r": 1.5102314914164616,
+            "r_p05": 0.9550104615300609,
+            "r_p50": 1.5158058090772288,
+            "r_p95": 2.5411699783822272,
+            "share": 0.2
+          },
+          {
+            "k": 0.8653620892866256,
+            "k_p05": 0.549064259681726,
+            "k_p95": 1.4548387859082226,
+            "p_k_above_1": 0.3252,
+            "p_r_above_1": 0.77825,
+            "r": 1.236231556123751,
+            "r_p05": 0.7843775138310372,
+            "r_p50": 1.2391186233336102,
+            "r_p95": 2.0783411227260324,
+            "share": 0.3
+          },
+          {
+            "k": 0.6278319500910293,
+            "k_p05": 0.39860177025265137,
+            "k_p95": 1.0558267084633757,
+            "p_k_above_1": 0.0702,
+            "p_r_above_1": 0.5669,
+            "r": 1.046386583485049,
+            "r_p05": 0.664336283754419,
+            "r_p50": 1.0486346266368816,
+            "r_p95": 1.759711180772293,
+            "share": 0.4
+          },
+          {
+            "k": 0.45354372234542734,
+            "k_p05": 0.2879452831448766,
+            "k_p95": 0.7616971590079726,
+            "p_k_above_1": 0.0064,
+            "p_r_above_1": 0.3791,
+            "r": 0.9070874446908547,
+            "r_p05": 0.5758905662897532,
+            "r_p50": 0.9094351219514535,
+            "r_p95": 1.5233943180159453,
+            "share": 0.5
+          },
+          {
+            "k": 0.3202076618912704,
+            "k_p05": 0.2033814306093481,
+            "k_p95": 0.5377856706084332,
+            "p_k_above_1": 0.00015,
+            "p_r_above_1": 0.24175,
+            "r": 0.800519154728176,
+            "r_p05": 0.5084535765233702,
+            "r_p50": 0.8025849197244772,
+            "r_p95": 1.344464176521083,
+            "share": 0.6
+          },
+          {
+            "k": 0.2149075419782413,
+            "k_p05": 0.13645812683207081,
+            "k_p95": 0.3611231495738139,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.14355,
+            "r": 0.7163584732608043,
+            "r_p05": 0.4548604227735693,
+            "r_p50": 0.7183089360205189,
+            "r_p95": 1.203743831912713,
+            "share": 0.7
+          },
+          {
+            "k": 0.12964208203573196,
+            "k_p05": 0.0822229212452959,
+            "k_p95": 0.21784113822135306,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.0849,
+            "r": 0.64821041017866,
+            "r_p05": 0.4111146062264796,
+            "r_p50": 0.6499395362340202,
+            "r_p95": 1.0892056911067656,
+            "share": 0.8
+          },
+          {
+            "k": 0.05919020406789224,
+            "k_p05": 0.03755048109273593,
+            "k_p95": 0.09957136682180814,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.04845,
+            "r": 0.5919020406789225,
+            "r_p05": 0.3755048109273594,
+            "r_p50": 0.5934404281239425,
+            "r_p95": 0.9957136682180817,
+            "share": 0.9
+          },
+          {
+            "k": 0.0,
+            "k_p05": 0.0,
+            "k_p95": 0.0,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.02785,
+            "r": 0.544594517053489,
+            "r_p05": 0.34577720592672806,
+            "r_p50": 0.5461785099290366,
+            "r_p95": 0.9159871179761724,
+            "share": 1.0
+          }
+        ],
+        "k_published_correction": 0.9041573094182611,
+        "k_share": 0.24742440073239766,
+        "k_share_p05": 0.15716175515017872,
+        "k_share_p95": 0.4155313373780076,
+        "name": "language models",
+        "openalex_counts": {
+          "2005": 6,
+          "2006": 8,
+          "2007": 14,
+          "2008": 16,
+          "2009": 12,
+          "2010": 29,
+          "2011": 28,
+          "2012": 48,
+          "2013": 51,
+          "2014": 108,
+          "2015": 171,
+          "2016": 346,
+          "2017": 719,
+          "2018": 1150,
+          "2019": 1517,
+          "2020": 1831,
+          "2021": 2173,
+          "2022": 2462,
+          "2023": 2798,
+          "2024": 2769,
+          "2025": 8887
+        },
+        "p_k_share_above_1": 0.0,
+        "p_k_share_unbounded": 0.0,
+        "p_r_labour_above_1": 0.9999,
+        "r_labour": 2.7127432025750404,
+        "r_labour_p05": 1.6742881821675388,
+        "r_labour_p95": 4.711851472648338,
+        "r_share": 0.742347436940887,
+        "repro": 1.8963782531575428,
+        "repro_inputs": {
+          "g_A": 1.0397207708399179,
+          "g_L": 0.5482665544749539
+        },
+        "safe_share_95": 0.42,
+        "share_where_r_is_1": 0.4302059925464133,
+        "spec_crit_max": 0.29179000000000005,
+        "spec_crit_min": 0.18452000000000002,
+        "spec_k_max": 0.2647202064035241,
+        "spec_k_min": 0.22226854625719708,
+        "spec_r_max": 3.578195407576875,
+        "spec_r_min": 1.8060745268167073,
+        "specs": [
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.20036,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.5346118465539911,
+            "k_at_share": 0.23736588483879384,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.7121688714035218,
+            "r_labour_only": 1.8522041071956985
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.18914,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.5346118465539911,
+            "k_at_share": 0.22295189779537058,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.6689225856446761,
+            "r_labour_only": 1.8522041071956985
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.2174,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.5346118465539911,
+            "k_at_share": 0.24923417908073356,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7477773149736979,
+            "r_labour_only": 1.9448143125554838
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.20547,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.5346118465539911,
+            "k_at_share": 0.23409949268513913,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.70236871492691,
+            "r_labour_only": 1.9448143125554838
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.20436,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.5231736630379067,
+            "k_at_share": 0.2380185022523855,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "8.4 months",
+            "r_at_share": 0.7141269194491013,
+            "r_labour_only": 1.8926989791361744
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.19298,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.5231736630379067,
+            "k_at_share": 0.22352756554626743,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "8.4 months",
+            "r_at_share": 0.6706497616149637,
+            "r_labour_only": 1.8926989791361744
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.22123,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.5231736630379067,
+            "k_at_share": 0.2499194273650048,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7498332654215565,
+            "r_labour_only": 1.9873339280929831
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.20915000000000003,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.5231736630379067,
+            "k_at_share": 0.23470394382358084,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.704182249695712,
+            "r_labour_only": 1.9873339280929831
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.24423000000000003,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.4026265480272817,
+            "k_at_share": 0.2451211605602937,
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.7354370253834194,
+            "r_labour_only": 2.459376468825605
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.23127000000000003,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.4026265480272817,
+            "k_at_share": 0.22978034877128808,
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.6894099873125954,
+            "r_labour_only": 2.459376468825605
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.25947000000000003,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.4026265480272817,
+            "k_at_share": 0.2573772185883084,
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7722088766525904,
+            "r_labour_only": 2.582345292266885
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.24596,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.4026265480272817,
+            "k_at_share": 0.2412693662098525,
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7238804866782252,
+            "r_labour_only": 2.582345292266885
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.2569,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.3616143253445785,
+            "k_at_share": 0.24763524082492105,
+            "labour proxy": "flows, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.7429800204768108,
+            "r_labour_only": 2.738304841765375
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.24348000000000003,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.3616143253445785,
+            "k_at_share": 0.23198817361449006,
+            "labour proxy": "flows, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.6960341242558957,
+            "r_labour_only": 2.738304841765375
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.27163000000000004,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.3616143253445785,
+            "k_at_share": 0.26001700286616714,
+            "labour proxy": "flows, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7801290215006514,
+            "r_labour_only": 2.875220083853644
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.25771,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.3616143253445785,
+            "k_at_share": 0.2435875822952146,
+            "labour proxy": "flows, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7308358304686906,
+            "r_labour_only": 2.875220083853644
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.25586000000000003,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.3650217451481707,
+            "k_at_share": 0.24742440073239766,
+            "labour proxy": "flows, slope",
+            "output trend": "8.4 months",
+            "r_at_share": 0.742347436940887,
+            "r_labour_only": 2.7127432025750404
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.24248000000000003,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.3650217451481707,
+            "k_at_share": 0.23180312605726902,
+            "labour proxy": "flows, slope",
+            "output trend": "8.4 months",
+            "r_at_share": 0.6954789260644134,
+            "r_labour_only": 2.7127432025750404
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.27064000000000005,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.3650217451481707,
+            "k_at_share": 0.2597956207690176,
+            "labour proxy": "flows, slope",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7794648087879315,
+            "r_labour_only": 2.848380362703793
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.25675000000000003,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.3650217451481707,
+            "k_at_share": 0.2433932823601325,
+            "labour proxy": "flows, slope",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7302528723676341,
+            "r_labour_only": 2.848380362703793
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.23218000000000003,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.44038085912408514,
+            "k_at_share": 0.24285150097069738,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "8.4 months",
+            "r_at_share": 0.7286273656486569,
+            "r_labour_only": 2.248531554964267
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.21967,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.44038085912408514,
+            "k_at_share": 0.22778473437329733,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "8.4 months",
+            "r_at_share": 0.6834225453744294,
+            "r_labour_only": 2.248531554964267
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.2479,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.44038085912408514,
+            "k_at_share": 0.2549940760192323,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7650587339310899,
+            "r_labour_only": 2.3609581327124802
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.23481000000000002,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.44038085912408514,
+            "k_at_share": 0.23917397109196223,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7175936726431509,
+            "r_labour_only": 2.3609581327124802
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.27786,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.2905712663535076,
+            "k_at_share": 0.2521144822890706,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "8.4 months",
+            "r_at_share": 0.7564190887760892,
+            "r_labour_only": 3.407805150073214
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.26374000000000003,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.2905712663535076,
+            "k_at_share": 0.23591476032038755,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "8.4 months",
+            "r_at_share": 0.7078150624674093,
+            "r_labour_only": 3.407805150073214
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.29179000000000005,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.2905712663535076,
+            "k_at_share": 0.2647202064035241,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7942400432148937,
+            "r_labour_only": 3.578195407576875
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.27723000000000003,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.2905712663535076,
+            "k_at_share": 0.24771049833640693,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7432058155907798,
+            "r_labour_only": 3.578195407576875
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.19553,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.5482665544749539,
+            "k_at_share": 0.23659147229091426,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.709845401412884,
+            "r_labour_only": 1.8060745268167073
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.18452000000000002,
+            "g_A": 0.9902102579427788,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.5482665544749539,
+            "k_at_share": 0.22226854625719708,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "8.4 months",
+            "r_at_share": 0.6668723260041916,
+            "r_labour_only": 1.8060745268167073
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.21277000000000001,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.8182523454335886,
+            "g_L": 0.5482665544749539,
+            "k_at_share": 0.24842104590546,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7453376714835283,
+            "r_labour_only": 1.8963782531575428
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.20104000000000002,
+            "g_A": 1.0397207708399179,
+            "g_K": 1.9530824690971569,
+            "g_L": 0.5482665544749539,
+            "k_at_share": 0.23338197357005694,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "8 months (Ho and Whitfill's value)",
+            "r_at_share": 0.7002159423044012,
+            "r_labour_only": 1.8963782531575428
+          }
+        ],
+        "window": [
+          2014,
+          2023
+        ]
+      },
+      "rl": {
+        "compute": {
+          "models": 18,
+          "total": 1.0169141386005414,
+          "total_se": 0.7791945955347588,
+          "trend": -0.11815354489105641,
+          "trend_se": 0.68357435996495,
+          "years": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ]
+        },
+        "compute_informative": false,
+        "critical_share": 0.99999,
+        "g_A": 0.7561605606108494,
+        "g_A_note": "Dorner's range across Atari tasks, drawn uniformly in log; not a confidence interval",
+        "g_K": -0.11815354489105641,
+        "g_K_se": 0.68357435996495,
+        "g_L": 0.4169585510751454,
+        "g_L_se": 0.039880595542616304,
+        "gk_critical_at_share": 0.16957556588908076,
+        "grid": [
+          {
+            "k": 1.8135149373026578,
+            "k_p05": 1.0925185180342885,
+            "k_p95": 2.0379901352244074,
+            "p_k_above_1": 0.9908,
+            "p_r_above_1": 0.9908,
+            "r": 1.8135149373026578,
+            "r_p05": 1.0925185180342885,
+            "r_p50": 1.4928810839105426,
+            "r_p95": 2.0379901352244074,
+            "share": 0.0
+          },
+          {
+            "k": 1.8724707182649056,
+            "k_p05": 1.0166005798668503,
+            "k_p95": 2.5440403817509654,
+            "p_k_above_1": 0.95735,
+            "p_r_above_1": 0.9871,
+            "r": 2.0805230202943394,
+            "r_p05": 1.1295561998520558,
+            "r_p50": 1.7231114891959354,
+            "r_p95": 2.8267115352788506,
+            "share": 0.1
+          },
+          {
+            "k": 1.9517842105585013,
+            "k_p05": 0.8494505948801033,
+            "k_p95": 6.320240885562221,
+            "p_k_above_1": 0.87855,
+            "p_r_above_1": 0.9668,
+            "r": 2.4397302631981264,
+            "r_p05": 1.061813243600129,
+            "r_p50": 2.0289732778554113,
+            "r_p95": 7.900301106952776,
+            "share": 0.2
+          },
+          {
+            "k": 2.0642002645854736,
+            "k_p05": 0.6851364086612973,
+            "k_p95": "unbounded",
+            "p_k_above_1": 0.7973,
+            "p_r_above_1": 0.94455,
+            "r": 2.948857520836391,
+            "r_p05": 0.9787662980875677,
+            "r_p50": 2.460953425296517,
+            "r_p95": "unbounded",
+            "share": 0.3
+          },
+          {
+            "k": 2.2359077183838565,
+            "k_p05": 0.5419315023871704,
+            "k_p95": "unbounded",
+            "p_k_above_1": 0.7315,
+            "p_r_above_1": 0.9241,
+            "r": 3.7265128639730944,
+            "r_p05": 0.903219170645284,
+            "r_p50": 3.1063176910355828,
+            "r_p95": "unbounded",
+            "share": 0.4
+          },
+          {
+            "k": 2.530615434685826,
+            "k_p05": 0.41818958267975526,
+            "k_p95": "unbounded",
+            "p_k_above_1": 0.6833,
+            "p_r_above_1": 0.90805,
+            "r": 5.061230869371652,
+            "r_p05": 0.8363791653595105,
+            "r_p50": 4.234165426222312,
+            "r_p95": "unbounded",
+            "share": 0.5
+          },
+          {
+            "k": 3.1542407367648297,
+            "k_p05": 0.3105655666382614,
+            "k_p95": "unbounded",
+            "p_k_above_1": 0.64665,
+            "p_r_above_1": 0.894,
+            "r": 7.885601841912074,
+            "r_p05": 0.7764139165956535,
+            "r_p50": 6.686858295811424,
+            "r_p95": "unbounded",
+            "share": 0.6
+          },
+          {
+            "k": 5.352706915940199,
+            "k_p05": 0.21693511753887543,
+            "k_p95": "unbounded",
+            "p_k_above_1": 0.6201,
+            "p_r_above_1": 0.88255,
+            "r": 17.842356386467326,
+            "r_p05": 0.723117058462918,
+            "r_p50": 15.796917483174973,
+            "r_p95": "unbounded",
+            "share": 0.7
+          },
+          {
+            "k": "unbounded",
+            "k_p05": 0.13545647580307998,
+            "k_p95": "unbounded",
+            "p_k_above_1": 0.59835,
+            "p_r_above_1": 0.87315,
+            "r": "unbounded",
+            "r_p05": 0.6772823790154001,
+            "r_p50": "unbounded",
+            "r_p95": "unbounded",
+            "share": 0.8
+          },
+          {
+            "k": "unbounded",
+            "k_p05": 0.06354896150466398,
+            "k_p95": "unbounded",
+            "p_k_above_1": 0.58315,
+            "p_r_above_1": 0.8648,
+            "r": "unbounded",
+            "r_p05": 0.6354896150466399,
+            "r_p50": "unbounded",
+            "r_p95": "unbounded",
+            "share": 0.9
+          },
+          {
+            "k": 0.0,
+            "k_p05": 0.0,
+            "k_p95": 0.0,
+            "p_k_above_1": 0.0,
+            "p_r_above_1": 0.8576,
+            "r": "unbounded",
+            "r_p05": 0.5993090853091034,
+            "r_p50": "unbounded",
+            "r_p95": "unbounded",
+            "share": 1.0
+          }
+        ],
+        "k_published_correction": 0.6044445286029759,
+        "k_share": 4.18656437797593,
+        "k_share_p05": 0.24660138220466385,
+        "k_share_p95": "unbounded",
+        "name": "reinforcement learning (Atari)",
+        "openalex_counts": {
+          "2005": 884,
+          "2006": 1010,
+          "2007": 1041,
+          "2008": 1177,
+          "2009": 1273,
+          "2010": 1309,
+          "2011": 1375,
+          "2012": 1390,
+          "2013": 1311,
+          "2014": 1396,
+          "2015": 1328,
+          "2016": 1566,
+          "2017": 2405,
+          "2018": 4149,
+          "2019": 6562,
+          "2020": 8863,
+          "2021": 11280,
+          "2022": 13231,
+          "2023": 16694,
+          "2024": 16227,
+          "2025": 32570
+        },
+        "p_k_share_above_1": 0.62825,
+        "p_k_share_unbounded": 0.4465,
+        "p_r_labour_above_1": 0.9908,
+        "r_labour": 1.8135149373026578,
+        "r_labour_p05": 1.0925185180342885,
+        "r_labour_p95": 2.0379901352244074,
+        "r_share": 12.560949228850674,
+        "repro": 1.2357190361558827,
+        "repro_inputs": {
+          "g_A": 0.7561605606108494,
+          "g_L": 0.6119194885620113
+        },
+        "safe_share_95": 1.0,
+        "share_where_r_is_1": null,
+        "spec_crit_max": 0.99999,
+        "spec_crit_min": 0.11625,
+        "spec_k_max": "unbounded",
+        "spec_k_min": 0.2846434653113304,
+        "spec_r_max": 5.215435117485152,
+        "spec_r_min": 1.2149404625463434,
+        "specs": [
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.6223848689885954,
+            "k_at_share": 1.9587503821100665,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 5.87683883021322,
+            "r_labour_only": 1.2149404625463434
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.11625,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.6223848689885954,
+            "k_at_share": 0.2846434653113304,
+            "labour proxy": "cumulative from window start, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 0.8540157975137425,
+            "r_labour_only": 1.2149404625463434
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.6162242402594532,
+            "k_at_share": 1.990515886606977,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "11 months",
+            "r_at_share": 5.972144874308361,
+            "r_labour_only": 1.227086685672212
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.12096000000000001,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.6162242402594532,
+            "k_at_share": 0.2853051053463441,
+            "labour proxy": "cumulative from window start, slope",
+            "output trend": "11 months",
+            "r_at_share": 0.8560009161306453,
+            "r_labour_only": 1.227086685672212
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.1449851342365975,
+            "k_at_share": "unbounded",
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "11 months",
+            "r_at_share": "unbounded",
+            "r_labour_only": 5.215435117485152
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.37539000000000006,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.1449851342365975,
+            "k_at_share": 0.34700295325516417,
+            "labour proxy": "cumulative over the whole record, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 1.0411129710625986,
+            "r_labour_only": 5.215435117485152
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.39940534587116694,
+            "k_at_share": 4.637235044158834,
+            "labour proxy": "flows, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 13.913096442120715,
+            "r_labour_only": 1.8932159231908683
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.25970000000000004,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.39940534587116694,
+            "k_at_share": 0.31072468745417975,
+            "labour proxy": "flows, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 0.9322672890914483,
+            "r_labour_only": 1.8932159231908683
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.4169585510751454,
+            "k_at_share": 4.18656437797593,
+            "labour proxy": "flows, slope",
+            "output trend": "11 months",
+            "r_at_share": 12.560949228850674,
+            "r_labour_only": 1.8135149373026578
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.25012,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.4169585510751454,
+            "k_at_share": 0.3084994693269728,
+            "labour proxy": "flows, slope",
+            "output trend": "11 months",
+            "r_at_share": 0.9255909670776261,
+            "r_labour_only": 1.8135149373026578
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.27723885265245823,
+            "k_at_share": 18.489699933783196,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "11 months",
+            "r_at_share": 55.47464726607619,
+            "r_labour_only": 2.727469665151006
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.32016,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.27723885265245823,
+            "k_at_share": 0.32714789478289197,
+            "labour proxy": "flows, slope, window a year earlier",
+            "output trend": "11 months",
+            "r_at_share": 0.981541838532529,
+            "r_labour_only": 2.727469665151006
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.4470466951356483,
+            "k_at_share": 3.588731118932416,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "11 months",
+            "r_at_share": 10.767270083805627,
+            "r_labour_only": 1.6914576683793758
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.23311,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.4470466951356483,
+            "k_at_share": 0.3047584363558434,
+            "labour proxy": "flows, slope, window a year later",
+            "output trend": "11 months",
+            "r_at_share": 0.9143667457421042,
+            "r_labour_only": 1.6914576683793758
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.6119194885620113,
+            "k_at_share": 2.0133305898536995,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 6.040595829144013,
+            "r_labour_only": 1.2357190361558827
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.12422000000000001,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.6119194885620113,
+            "k_at_share": 0.2857692561765161,
+            "labour proxy": "their counts (vintage 2025-11-12), cumulative from window start, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 0.8573935078803362,
+            "r_labour_only": 1.2357190361558827
+          },
+          {
+            "compute proxy": "trend of notable models' training compute",
+            "critical_share": 0.99999,
+            "g_A": 0.7561605606108494,
+            "g_K": -0.11815354489105641,
+            "g_L": 0.4560924191069988,
+            "k_at_share": 3.4410055722738933,
+            "labour proxy": "Erdil et al.'s unique authors, flows, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 10.324049121733852,
+            "r_labour_only": 1.6579108288871929
+          },
+          {
+            "compute proxy": "trend of the domain's yearly total training compute",
+            "critical_share": 0.22784000000000001,
+            "g_A": 0.7561605606108494,
+            "g_K": 1.0169141386005414,
+            "g_L": 0.4560924191069988,
+            "k_at_share": 0.30365140393651746,
+            "labour proxy": "Erdil et al.'s unique authors, flows, endpoints",
+            "output trend": "11 months",
+            "r_at_share": 0.9110453163411865,
+            "r_labour_only": 1.6579108288871929
+          }
+        ],
+        "window": [
+          2015,
+          2019
+        ]
+      }
+    },
+    "bloom": {
+      "aggregate": {
+        "beta": 3.073878705401819,
+        "corr_log_tfp_log_scientists": 0.9951879377063635,
+        "idea_tfp_growth_pct": -5.134793664788294,
+        "r": 0.3253218802168967,
+        "scientists_index_by_decade": [
+          1.0,
+          1.992635080541528,
+          3.127543037699835,
+          5.899728339851755,
+          7.494213724264844,
+          12.207551715667316,
+          16.091959345501007,
+          22.978103101179364
+        ],
+        "tfp_growth_pct_by_decade": [
+          1.8155,
+          3.3888,
+          1.6948377530466983,
+          2.0593843263554934,
+          0.9852143323181562,
+          0.9049233536258505,
+          1.5068153179690835,
+          1.0082107531226165
+        ]
+      },
+      "moore": {
+        "Broad": {
+          "beta": 0.19510581187755965,
+          "g_scientists": 0.06761852170689478,
+          "r": 5.12542394496971
+        },
+        "Broad (half)": {
+          "beta": 0.2197744312387036,
+          "g_scientists": 0.07616801368613649,
+          "r": 4.5501198404370795
+        },
+        "Intel only": {
+          "beta": 0.3924494181646874,
+          "g_scientists": 0.13601260385662203,
+          "r": 2.5480990765040707
+        },
+        "Intel+AMD": {
+          "beta": 0.39346076520975237,
+          "g_scientists": 0.13636311003304924,
+          "r": 2.5415494718181213
+        },
+        "Narrow": {
+          "beta": 0.13775525697922206,
+          "g_scientists": 0.04774233399122924,
+          "r": 7.259251094503293
+        },
+        "Narrow (half)": {
+          "beta": 0.16285629197016338,
+          "g_scientists": 0.056441689807783,
+          "r": 6.140382959125756
+        }
+      },
+      "moore_output_doubling_years": 2.0
+    },
+    "chess": {
+      "beta": 0.47981749900238946,
+      "beta_hi": 0.6233468168300711,
+      "beta_lo": 0.318612363334992,
+      "corr_beta_lambda_boot": 0.8130057505218719,
+      "elo_per_efold": 142.987,
+      "gaussian": {
+        "beta": 0.005000000000198573,
+        "beta_at_search_floor": true,
+        "lambda": 0.39831389969086467,
+        "loglik": -380.3216775838761,
+        "note": "beta runs to the floor of the search, so lambda / beta is unbounded"
+      },
+      "lambda": 0.3501006361457577,
+      "lambda_hi": 0.5890303084263597,
+      "lambda_lo": 0.04984995443472911,
+      "loglik": -217.1568760247733,
+      "loglik_lambda0": -219.8934114861767,
+      "lr_p": 0.01931166337757167,
+      "noise": "Student-t",
+      "nu": 1.9131095923174946,
+      "p_r_above_1": 0.085,
+      "placebo": {
+        "beta": 0.4863368452943228,
+        "lambda": 0.3820483017546474,
+        "loglik": -219.7496525678349,
+        "loglik_gain_of_real_input": 2.592776543061575,
+        "r": 0.7855631450737364
+      },
+      "r": 0.729653747255296,
+      "r_hi": 1.0785295285420122,
+      "r_lo": 0.16226311675867816,
+      "r_median": 0.6896446141407709,
+      "share": {
+        "best": {
+          "beta": 0.5238624260365422,
+          "lambda": 0.42592609768835676,
+          "loglik": -227.91863619177485,
+          "nu": 1.9322176922966108,
+          "r": 0.8130495269737977,
+          "share": 0.35
+        },
+        "corr_monthly_log_inputs": 0.8115706196576488,
+        "loglik_span": 1.2822415543947159,
+        "profile": [
+          {
+            "beta": 0.46284670985112863,
+            "lambda": 0.36454494855133546,
+            "loglik": -228.40749514192797,
+            "nu": 1.8908653441131218,
+            "r": 0.7876148642573019,
+            "share": 0.0
+          },
+          {
+            "beta": 0.47407518080911437,
+            "lambda": 0.3797930498190583,
+            "loglik": -228.2863921436747,
+            "nu": 1.8954101788147206,
+            "r": 0.8011240942224761,
+            "share": 0.05
+          },
+          {
+            "beta": 0.4848362282027706,
+            "lambda": 0.39340109770443304,
+            "loglik": -228.1774314487586,
+            "nu": 1.9006088162890926,
+            "r": 0.8114102759249725,
+            "share": 0.1
+          },
+          {
+            "beta": 0.4948832597208187,
+            "lambda": 0.4049777939467662,
+            "loglik": -228.0841120217605,
+            "nu": 1.9063944491068714,
+            "r": 0.8183299515429732,
+            "share": 0.15
+          },
+          {
+            "beta": 0.5039876084318049,
+            "lambda": 0.4142019651340326,
+            "loglik": -228.00953270411196,
+            "nu": 1.9126411944015764,
+            "r": 0.8218495022583054,
+            "share": 0.2
+          },
+          {
+            "beta": 0.511950553016976,
+            "lambda": 0.42084143186709266,
+            "loglik": -227.95615005424617,
+            "nu": 1.919171365339958,
+            "r": 0.8220353106116047,
+            "share": 0.25
+          },
+          {
+            "beta": 0.5186138006879562,
+            "lambda": 0.4247622293616816,
+            "loglik": -227.92560474846908,
+            "nu": 1.9257722197015497,
+            "r": 0.819033795086483,
+            "share": 0.3
+          },
+          {
+            "beta": 0.5238624260365422,
+            "lambda": 0.42592609768835676,
+            "loglik": -227.91863619177485,
+            "nu": 1.9322176922966108,
+            "r": 0.8130495269737977,
+            "share": 0.35
+          },
+          {
+            "beta": 0.5276256587106677,
+            "lambda": 0.42438067795231904,
+            "loglik": -227.93508455691958,
+            "nu": 1.9382944832942979,
+            "r": 0.8043215316505964,
+            "share": 0.4
+          },
+          {
+            "beta": 0.529874419813468,
+            "lambda": 0.42024584272875953,
+            "loglik": -227.97396461331897,
+            "nu": 1.9438209861957225,
+            "r": 0.7931046055718239,
+            "share": 0.45
+          },
+          {
+            "beta": 0.5306190340835517,
+            "lambda": 0.41370086872583817,
+            "loglik": -228.03358945122955,
+            "nu": 1.9486613192238664,
+            "r": 0.7796570461147394,
+            "share": 0.5
+          },
+          {
+            "beta": 0.5299045124189732,
+            "lambda": 0.4049695522868958,
+            "loglik": -228.11172281767975,
+            "nu": 1.9527298630082663,
+            "r": 0.7642311827809147,
+            "share": 0.55
+          },
+          {
+            "beta": 0.5278084776092167,
+            "lambda": 0.3943109401637115,
+            "loglik": -228.20574267145554,
+            "nu": 1.9559963329175332,
+            "r": 0.7470720098127237,
+            "share": 0.6
+          },
+          {
+            "beta": 0.5244367168018585,
+            "lambda": 0.3820075377378911,
+            "loglik": -228.31280288080177,
+            "nu": 1.9584718651615836,
+            "r": 0.7284149364435524,
+            "share": 0.65
+          },
+          {
+            "beta": 0.5199178216399538,
+            "lambda": 0.3683549857347731,
+            "loglik": -228.4299834804728,
+            "nu": 1.9602036964368774,
+            "r": 0.708486938518259,
+            "share": 0.7
+          },
+          {
+            "beta": 0.5143984056195917,
+            "lambda": 0.35365167982277923,
+            "loglik": -228.55442252279926,
+            "nu": 1.9612651290880365,
+            "r": 0.6875053965161626,
+            "share": 0.75
+          },
+          {
+            "beta": 0.5080366712657349,
+            "lambda": 0.3381910989058423,
+            "loglik": -228.68342470412102,
+            "nu": 1.9617411775573956,
+            "r": 0.6656824556842812,
+            "share": 0.8
+          },
+          {
+            "beta": 0.5009958068441344,
+            "lambda": 0.32225170617141047,
+            "loglik": -228.81454397156628,
+            "nu": 1.9617226414861855,
+            "r": 0.6432223618822956,
+            "share": 0.85
+          },
+          {
+            "beta": 0.4934378823374218,
+            "lambda": 0.3060892582077052,
+            "loglik": -228.9456393314318,
+            "nu": 1.9612949227015029,
+            "r": 0.62031973864219,
+            "share": 0.9
+          },
+          {
+            "beta": 0.4855188620743398,
+            "lambda": 0.28993397289037837,
+            "loglik": -229.07490500611976,
+            "nu": 1.960539113510021,
+            "r": 0.5971631496491384,
+            "share": 0.95
+          },
+          {
+            "beta": 0.4773829280178308,
+            "lambda": 0.27398367710858124,
+            "loglik": -229.20087774616957,
+            "nu": 1.9595242828197788,
+            "r": 0.5739285194931555,
+            "share": 1.0
+          }
+        ],
+        "r_within_95": [
+          0.5739285194931555,
+          0.8220353106116047
+        ],
+        "shares_within_95": [
+          0.0,
+          1.0
+        ],
+        "steps": 231
+      },
+      "steps": 254,
+      "subsets": {
+        "first half of steps": {
+          "beta": 0.6947640990602726,
+          "lambda": 0.4701299690007283,
+          "nu": 23.49703731577078,
+          "r": 0.6766756797546375,
+          "steps": 127
+        },
+        "second half of steps": {
+          "beta": 0.3215080249636386,
+          "lambda": 0.8612150158712776,
+          "nu": 1.455628823265594,
+          "r": 2.678673466917903,
+          "steps": 127
+        },
+        "steps before August 2020 (before NNUE)": {
+          "beta": 0.6209269116615967,
+          "lambda": 0.40241057856444873,
+          "nu": 3.182773614389015,
+          "r": 0.648080427835863,
+          "steps": 191
+        },
+        "steps from August 2020 (NNUE on)": {
+          "beta": 3.3281082875441683,
+          "lambda": 1.8411965018364895,
+          "nu": 2.025003112072009,
+          "r": 0.553226140125122,
+          "steps": 63
+        },
+        "without the three largest steps": {
+          "beta": 0.47116243903285754,
+          "lambda": 0.36063066759053714,
+          "nu": 2.5427463164188677,
+          "r": 0.765406232998526,
+          "steps": 251
+        }
+      }
+    },
+    "comparison": [
+      {
+        "estimate": "r, computer vision (Ho and Whitfill, posterior median)",
+        "gap": 0.001442808561948894,
+        "how": "their counts and doubling time, output over input growth (their posterior sits on it)",
+        "kind": "recomputation",
+        "ours": 1.2638208244051794,
+        "published": 1.262,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "r, computer vision (Ho and Whitfill)",
+        "how": "today's OpenAlex flows, fitted slope, labour only",
+        "kind": "refit",
+        "ours": 1.6283456760852182,
+        "ours_interval": [
+          0.6912316726555491,
+          3.299380041612313
+        ],
+        "published": 1.262,
+        "published_interval": [
+          0.727,
+          2.094
+        ],
+        "verdict": "inside the published interval"
+      },
+      {
+        "estimate": "r, reinforcement learning (Atari) (Ho and Whitfill, posterior median)",
+        "gap": 0.028908439763432714,
+        "how": "their counts and doubling time, output over input growth (their posterior sits on it)",
+        "kind": "recomputation",
+        "ours": 1.2357190361558827,
+        "published": 1.201,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "r, reinforcement learning (Atari) (Ho and Whitfill)",
+        "how": "today's OpenAlex flows, fitted slope, labour only",
+        "kind": "refit",
+        "ours": 1.8135149373026578,
+        "ours_interval": [
+          1.0925185180342885,
+          2.0379901352244074
+        ],
+        "published": 1.201,
+        "published_interval": [
+          0.38,
+          2.708
+        ],
+        "verdict": "inside the published interval"
+      },
+      {
+        "estimate": "r, language models (Ho and Whitfill, posterior median)",
+        "gap": 0.0023140872925702105,
+        "how": "their counts and doubling time, output over input growth (their posterior sits on it)",
+        "kind": "recomputation",
+        "ours": 1.8963782531575428,
+        "published": 1.892,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "r, language models (Ho and Whitfill)",
+        "how": "today's OpenAlex flows, fitted slope, labour only",
+        "kind": "refit",
+        "ours": 2.7127432025750404,
+        "ours_interval": [
+          1.6742881821675388,
+          4.711851472648338
+        ],
+        "published": 1.892,
+        "published_interval": [
+          1.069,
+          3.212
+        ],
+        "verdict": "inside the published interval"
+      },
+      {
+        "estimate": "r, cv (Erdil et al. 2024, naive)",
+        "gap": -0.0007037003548112652,
+        "how": "their counts and output trend",
+        "kind": "recomputation",
+        "ours": 1.4489796344855237,
+        "published": 1.45,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "r, rl (Erdil et al. 2024, naive)",
+        "gap": -0.0012585368149439224,
+        "how": "their counts and output trend",
+        "kind": "recomputation",
+        "ours": 1.657910828887193,
+        "published": 1.66,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "r, sat (Erdil et al. 2024, naive)",
+        "gap": -0.0008994776069162214,
+        "how": "their counts and output trend",
+        "kind": "recomputation",
+        "ours": 4.166249178379159,
+        "published": 4.17,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "r, lp (Erdil et al. 2024, naive)",
+        "gap": 0.00029679583456609926,
+        "how": "their counts and output trend",
+        "kind": "recomputation",
+        "ours": 1.5104481617101948,
+        "published": 1.51,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "r, computer chess (Besiroglu et al.)",
+        "how": "their data and likelihood with Student-t rather than stable noise; published interval is r +- 1.645 SE",
+        "kind": "refit",
+        "ours": 0.729653747255296,
+        "ours_interval": [
+          0.16226311675867816,
+          1.0785295285420122
+        ],
+        "published": 0.83,
+        "published_interval": [
+          0.5832719559572792,
+          1.0767280440427207
+        ],
+        "verdict": "inside the published interval"
+      },
+      {
+        "estimate": "r, US economy, lambda free (Erdil et al.)",
+        "gap": -0.02368824136156955,
+        "how": "their data and likelihood (Gaussian)",
+        "kind": "recomputation",
+        "ours": 0.2440779396596076,
+        "published": 0.25,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "beta, US economy (Bloom et al.)",
+        "gap": -0.008426224063929455,
+        "how": "their files and method, lambda = 1",
+        "kind": "recomputation",
+        "ours": 3.073878705401819,
+        "published": 3.1,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "beta, Moore's Law (Bloom et al.)",
+        "gap": -0.024470940612201786,
+        "how": "their files and method, broad R&D, lambda = 1",
+        "kind": "recomputation",
+        "ours": 0.19510581187755965,
+        "published": 0.2,
+        "verdict": "reproduced"
+      },
+      {
+        "estimate": "growth of OpenAI's compute (Ho and Whitfill, Appendix C)",
+        "gap": 0.09974306515467934,
+        "how": "their files, least-squares slope",
+        "kind": "recomputation",
+        "ours": 1.4296659847010833,
+        "published": 1.3,
+        "verdict": "not reproduced"
+      },
+      {
+        "estimate": "growth of OpenAI's staff (Ho and Whitfill, Appendix C)",
+        "gap": -0.010515268405243638,
+        "how": "their files, least-squares slope",
+        "kind": "recomputation",
+        "ours": 0.8410620218555429,
+        "published": 0.85,
+        "verdict": "reproduced"
+      }
+    ],
+    "draws": {
+      "bootstrap_refits": 200,
+      "steady_state": 20000
+    },
+    "erdil_posterior_against_naive": {
+      "cv": {
+        "naive": 1.4489796344855237,
+        "posterior_median": 1.437,
+        "posterior_over_naive": 0.9917323651758728
+      },
+      "lp": {
+        "naive": 1.5104481617101948,
+        "posterior_median": 1.077,
+        "posterior_over_naive": 0.713033407767251
+      },
+      "rl": {
+        "naive": 1.657910828887193,
+        "posterior_median": 1.583,
+        "posterior_over_naive": 0.9548161290812763
+      },
+      "sat": {
+        "naive": 4.166249178379159,
+        "posterior_median": 3.542,
+        "posterior_over_naive": 0.8501651841616402
+      }
+    },
+    "frontier_firm_openai": {
+      "compute_years": [
+        2022,
+        2024,
+        2025
+      ],
+      "critical_share": 0.15264000000000003,
+      "g_A": 1.0986122886681098,
+      "g_K": 1.4296659847010833,
+      "g_K_se": 0.029399242073592336,
+      "g_L": 0.8410620218555429,
+      "g_L_se": 0.03310028094524535,
+      "grid": [
+        {
+          "k": 1.3062203025697938,
+          "k_p95": 1.9327757926743776,
+          "p_k_above_1": 0.86455,
+          "r": 1.3062203025697938,
+          "share": 0.0
+        },
+        {
+          "k": 1.098706999482008,
+          "k_p95": 1.6217775874362246,
+          "p_k_above_1": 0.7092,
+          "r": 1.2207855549800088,
+          "share": 0.1
+        },
+        {
+          "k": 0.9166724911124886,
+          "k_p95": 1.3501624820261369,
+          "p_k_above_1": 0.43535,
+          "r": 1.1458406138906108,
+          "share": 0.2
+        },
+        {
+          "k": 0.755695703538113,
+          "k_p95": 1.1113250407213775,
+          "p_k_above_1": 0.13955,
+          "r": 1.079565290768733,
+          "share": 0.3
+        },
+        {
+          "k": 0.6123224937830489,
+          "k_p95": 0.9004876030598705,
+          "p_k_above_1": 0.0105,
+          "r": 1.020537489638415,
+          "share": 0.4
+        },
+        {
+          "k": 0.48381500800444416,
+          "k_p95": 0.7109675008342675,
+          "p_k_above_1": 5e-05,
+          "r": 0.9676300160088883,
+          "share": 0.5
+        },
+        {
+          "k": 0.3679751608057062,
+          "k_p95": 0.5406501343409793,
+          "p_k_above_1": 0.0,
+          "r": 0.9199379020142654,
+          "share": 0.6
+        },
+        {
+          "k": 0.26301786414824874,
+          "k_p95": 0.3862524995363346,
+          "p_k_above_1": 0.0,
+          "r": 0.8767262138274956,
+          "share": 0.7
+        },
+        {
+          "k": 0.1674783817581298,
+          "k_p95": 0.2457924190023601,
+          "p_k_above_1": 0.0,
+          "r": 0.8373919087906492,
+          "share": 0.8
+        },
+        {
+          "k": 0.08014355193409732,
+          "k_p95": 0.11764235999825146,
+          "p_k_above_1": 0.0,
+          "r": 0.8014355193409733,
+          "share": 0.9
+        },
+        {
+          "k": 0.0,
+          "k_p95": 0.0,
+          "p_k_above_1": 0.0,
+          "r": 0.7684398316980376,
+          "share": 1.0
+        }
+      ],
+      "k_p05": 0.1769358028017756,
+      "k_p95": 0.4515043454222545,
+      "k_share": 0.293454935060959,
+      "p_k_above_1": 0.0,
+      "p_r_above_1": 0.3832,
+      "published_inputs": {
+        "ga": 1.1,
+        "gk": 1.3,
+        "gl": 0.85
+      },
+      "r_compute": 0.7684398316980376,
+      "r_labour": 1.3062203025697938,
+      "r_p05": 0.5564489642259387,
+      "r_p95": 1.307703166685235,
+      "r_share": 0.889257378972603,
+      "staff_points": 5,
+      "their_constants": {
+        "NUMERATOR_CI_LEVEL": 0.9,
+        "NUMERATOR_MULTIPLIER_LOWER": 2.0,
+        "NUMERATOR_MULTIPLIER_POINT": 3.0,
+        "NUMERATOR_MULTIPLIER_UPPER": 5.0,
+        "SHARE_MAX": 0.75,
+        "SHARE_MIN": 0.59,
+        "SHARE_MODE": 0.67,
+        "SIMULATION_SAMPLES": 2000.0,
+        "START_YEAR": 2022.0
+      }
+    },
+    "ledger_inputs": {
+      "dyn-algo-efficiency-growth": 3.0,
+      "dyn-algo-halving-months": 8.4,
+      "dyn-bloom-beta-aggregate": 3.1,
+      "dyn-bloom-beta-moore": 0.2,
+      "dyn-r-chess": 0.83,
+      "dyn-r-chess-se": 0.15,
+      "dyn-r-cv": 1.262,
+      "dyn-r-cv-hi": 2.094,
+      "dyn-r-cv-lo": 0.727,
+      "dyn-r-lm": 1.892,
+      "dyn-r-lm-corrected": 0.6306036,
+      "dyn-r-lm-hi": 3.212,
+      "dyn-r-lm-hi-corrected": 1.0705596000000002,
+      "dyn-r-lm-lo": 1.069,
+      "dyn-r-rl": 1.201,
+      "dyn-r-rl-hi": 2.708,
+      "dyn-r-rl-lo": 0.38,
+      "dyn-r-us-economy": 0.25,
+      "dyn-research-compute-share": 0.6667,
+      "phys-algo-halving-high": 14.3,
+      "phys-algo-halving-low": 4.5
+    },
+    "other_software": {
+      "lp": {
+        "g_A": 0.10986122886681098,
+        "g_L_ours": 0.06936607933738709,
+        "g_L_ours_se": 0.005708000835695754,
+        "g_L_their_authors": 0.07273419350083576,
+        "name": "linear programming",
+        "published": 1.077,
+        "published_naive": 1.51,
+        "r_ours": 1.5837889342492752,
+        "repro": 1.5104481617101948,
+        "window": [
+          1998,
+          2018
+        ]
+      },
+      "sat": {
+        "g_A": 0.34657359027997264,
+        "g_L_ours": 0.0692571410647697,
+        "g_L_ours_se": 0.011225801979390495,
+        "g_L_their_authors": 0.08318599667022411,
+        "name": "SAT solvers",
+        "published": 3.542,
+        "published_naive": 4.17,
+        "r_ours": 5.004156754837092,
+        "repro": 4.166249178379159,
+        "window": [
+          1997,
+          2018
+        ]
+      }
+    },
+    "table_rows": {
+      "chess-beta-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 0.476,
+        "where": "Table 4"
+      },
+      "chess-elo-per-efold": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 142.987,
+        "where": "Section 5.2.1"
+      },
+      "chess-lambda-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 0.392,
+        "where": "Table 4"
+      },
+      "chess-lr-p-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 0.004,
+        "where": "Section 5.2.2"
+      },
+      "cv-doubling": {
+        "hi": 25.0,
+        "lo": 4.0,
+        "source": "erdil2022vision",
+        "value": 9.0,
+        "where": "abstract"
+      },
+      "cv-naive-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 1.45,
+        "where": "Table 8"
+      },
+      "cv-r-2024": {
+        "hi": 2.42,
+        "lo": 0.821,
+        "source": "erdil2024idea",
+        "value": 1.437,
+        "where": "Table 8"
+      },
+      "lp-naive-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 1.51,
+        "where": "Table 8"
+      },
+      "lp-period": {
+        "hi": 2018.0,
+        "lo": 1998.0,
+        "source": "erdil2024idea",
+        "value": null,
+        "where": "Table 5"
+      },
+      "lp-r-2024": {
+        "hi": 3.095,
+        "lo": 0.245,
+        "source": "erdil2024idea",
+        "value": 1.077,
+        "where": "Table 8"
+      },
+      "openai-ga-2025": {
+        "hi": null,
+        "lo": null,
+        "source": "ho2025experiments",
+        "value": 1.1,
+        "where": "Appendix C"
+      },
+      "openai-gk-2025": {
+        "hi": null,
+        "lo": null,
+        "source": "ho2025experiments",
+        "value": 1.3,
+        "where": "Appendix C"
+      },
+      "openai-gl-2025": {
+        "hi": null,
+        "lo": null,
+        "source": "ho2025experiments",
+        "value": 0.85,
+        "where": "Appendix C"
+      },
+      "openai-share-2025": {
+        "hi": 0.75,
+        "lo": 0.59,
+        "source": "ho2025experiments",
+        "value": 0.67,
+        "where": "Appendix C"
+      },
+      "rl-doubling": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 11.0,
+        "where": "Section 5.3.1, Table 5"
+      },
+      "rl-doubling-range": {
+        "hi": 18.0,
+        "lo": 10.0,
+        "source": "dorner2021sample",
+        "value": null,
+        "where": "abstract"
+      },
+      "rl-naive-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 1.66,
+        "where": "Table 8"
+      },
+      "rl-r-2024": {
+        "hi": 3.673,
+        "lo": 0.459,
+        "source": "erdil2024idea",
+        "value": 1.583,
+        "where": "Table 8"
+      },
+      "sat-naive-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 4.17,
+        "where": "Table 8"
+      },
+      "sat-period": {
+        "hi": 2018.0,
+        "lo": 1997.0,
+        "source": "erdil2024idea",
+        "value": null,
+        "where": "Table 5"
+      },
+      "sat-r-2024": {
+        "hi": 6.897,
+        "lo": 1.279,
+        "source": "erdil2024idea",
+        "value": 3.542,
+        "where": "Table 8"
+      },
+      "us-beta-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 5.42,
+        "where": "Table 3"
+      },
+      "us-lambda-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 1.33,
+        "where": "Table 3"
+      },
+      "us-lr-p-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 0.13,
+        "where": "Section 5.1"
+      },
+      "us-r-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 0.245,
+        "where": "Table 3"
+      },
+      "us-r-pos-2024": {
+        "hi": null,
+        "lo": null,
+        "source": "erdil2024idea",
+        "value": 0.251,
+        "where": "Table 3"
+      }
+    },
+    "their_inputs_ho_whitfill": {
+      "cv": {
+        "doubling_months": 9,
+        "flows": [
+          62,
+          147,
+          390,
+          924,
+          2252,
+          4027,
+          6425,
+          7554,
+          9091,
+          13866
+        ],
+        "years": [
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022
+        ]
+      },
+      "lm": {
+        "doubling_months": 8,
+        "flows": [
+          96,
+          154,
+          320,
+          636,
+          1058,
+          1381,
+          1654,
+          1982,
+          3408,
+          2654
+        ],
+        "years": [
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "rl": {
+        "doubling_months": 11,
+        "flows": [
+          1334,
+          1511,
+          2269,
+          3986,
+          6323
+        ],
+        "years": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ]
+      }
+    },
+    "unbounded_not_written": {},
+    "us_tfp": {
+      "beta": 5.373708858724248,
+      "beta_hi": 9.079723652306981,
+      "beta_lambda1": 4.477523452058202,
+      "beta_lo": 0.6935145563373841,
+      "corr_log_tfp_log_scientists": 0.9853191432298665,
+      "lambda": 1.311603786567996,
+      "lambda_hi": 2.4835934452675756,
+      "lambda_lo": -0.09637124761188925,
+      "lr_p": 0.1332464161598795,
+      "r": 0.2440779396596076,
+      "r_given_lambda_pos_median": 0.24670156043323957,
+      "r_hi": 0.30149268154905273,
+      "r_lambda1": 0.2233377470173441,
+      "r_lo": -0.1734860386787631,
+      "share_lambda_not_positive": 0.06,
+      "steps": 66
+    }
+  },
+  "experiment": "E9",
+  "name": "e09_returns",
+  "numbers": {
+    "e9-chess-input-corr": {
+      "fmt": ".2f",
+      "label": "correlation of Stockfish's monthly log test runs and log CPU-years",
+      "note": "",
+      "unit": "",
+      "value": 0.8115706196576488
+    },
+    "e9-chess-lr-p": {
+      "fmt": ".2g",
+      "label": "p-value of the likelihood-ratio test of lambda against 0 for Stockfish",
+      "note": "",
+      "unit": "",
+      "value": 0.01931166337757167
+    },
+    "e9-chess-placebo-gain": {
+      "fmt": ".1f",
+      "label": "log-likelihood the real test-run input gains over the smooth-trend placebo for Stockfish (1.92 would mark a 95% difference)",
+      "note": "",
+      "unit": "",
+      "value": 2.592776543061575
+    },
+    "e9-chess-placebo-r": {
+      "fmt": ".2f",
+      "label": "r for Stockfish when the input is replaced by a smooth trend growing at the input's own rate (a placebo)",
+      "note": "",
+      "unit": "",
+      "value": 0.7855631450737364
+    },
+    "e9-chess-r": {
+      "fmt": ".2f",
+      "label": "r for Stockfish, test runs as the input, our one-step refit with Student-t noise (close to the authors' stable noise)",
+      "note": "a smooth placebo input with the same growth gives nearly the same r, so the value rests on the two trends",
+      "unit": "",
+      "value": 0.729653747255296
+    },
+    "e9-chess-r-above1": {
+      "fmt": ".0f",
+      "label": "share of the Stockfish bootstrap refits with r above 1",
+      "note": "",
+      "unit": "%",
+      "value": 8.5
+    },
+    "e9-chess-r-hi": {
+      "fmt": ".2f",
+      "label": "r for Stockfish, 95th percentile of 200 bootstrap refits over steps",
+      "note": "",
+      "unit": "",
+      "value": 1.0785295285420122
+    },
+    "e9-chess-r-lo": {
+      "fmt": ".2f",
+      "label": "r for Stockfish, 5th percentile of 200 bootstrap refits over steps",
+      "note": "",
+      "unit": "",
+      "value": 0.16226311675867816
+    },
+    "e9-chess-r-subset-max": {
+      "fmt": ".2f",
+      "label": "r for Stockfish: highest across the same five subsets",
+      "note": "",
+      "unit": "",
+      "value": 2.678673466917903
+    },
+    "e9-chess-r-subset-min": {
+      "fmt": ".2f",
+      "label": "r for Stockfish: lowest across five subsets of steps (before and after NNUE, halves, largest steps removed)",
+      "note": "",
+      "unit": "",
+      "value": 0.553226140125122
+    },
+    "e9-chess-share": {
+      "fmt": ".2f",
+      "label": "CPU-years' share of Stockfish's research input that fits best (test runs the rest), on a grid of 0.05",
+      "note": "",
+      "unit": "",
+      "value": 0.35
+    },
+    "e9-chess-share-hi": {
+      "fmt": ".2f",
+      "label": "highest CPU-years share within the 95% likelihood-ratio region for Stockfish",
+      "note": "",
+      "unit": "",
+      "value": 1.0
+    },
+    "e9-chess-share-lo": {
+      "fmt": ".2f",
+      "label": "lowest CPU-years share within the 95% likelihood-ratio region for Stockfish",
+      "note": "",
+      "unit": "",
+      "value": 0.0
+    },
+    "e9-chess-share-r-hi": {
+      "fmt": ".2f",
+      "label": "r for Stockfish: highest across the CPU-years shares within the 95% region",
+      "note": "",
+      "unit": "",
+      "value": 0.8220353106116047
+    },
+    "e9-chess-share-r-lo": {
+      "fmt": ".2f",
+      "label": "r for Stockfish: lowest across the CPU-years shares within the 95% region",
+      "note": "",
+      "unit": "",
+      "value": 0.5739285194931555
+    },
+    "e9-chess-share-span": {
+      "fmt": ".1f",
+      "label": "spread of the profile log-likelihood across CPU-years shares 0 to 1 for Stockfish (1.92 marks a 95% difference)",
+      "note": "",
+      "unit": "",
+      "value": 1.2822415543947159
+    },
+    "e9-chess-steps": {
+      "fmt": ",.0f",
+      "label": "Stockfish steps between consecutive Elo measurements in the fit",
+      "note": "",
+      "unit": "steps",
+      "value": 254.0
+    },
+    "e9-cv-gk": {
+      "fmt": ".2f",
+      "label": "growth of training compute in computer vision over the same window (notable models, natural log a year), the compute proxy",
+      "note": "",
+      "unit": "per year",
+      "value": 1.3830226471226652
+    },
+    "e9-cv-gk-se": {
+      "fmt": ".2f",
+      "label": "standard error of that compute growth for computer vision",
+      "note": "",
+      "unit": "per year",
+      "value": 0.1345501566379127
+    },
+    "e9-cv-k-fixed": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute for computer vision, K = (1 - a) r, at compute's share a = 0.67, with compute's historical growth counted",
+      "note": "",
+      "unit": "",
+      "value": 0.2772011169431458
+    },
+    "e9-cv-k-fixed-above1": {
+      "fmt": ".1f",
+      "label": "share of draws for computer vision with the fixed-compute loop gain above 1 at a = 0.67",
+      "note": "",
+      "unit": "%",
+      "value": 0.13
+    },
+    "e9-cv-k-fixed-hi": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute for computer vision at a = 0.67, 95th percentile of the draws",
+      "note": "",
+      "unit": "",
+      "value": 0.5559990590967394
+    },
+    "e9-cv-k-spec-max": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute for computer vision at a = 0.67: highest value across all specifications",
+      "note": "",
+      "unit": "",
+      "value": 0.28642617073470633
+    },
+    "e9-cv-r-labour": {
+      "fmt": ".2f",
+      "label": "r for computer vision, our refit with research labour as the only input: steady-state ratio of output growth to input growth (today's OpenAlex counts, yearly flows, fitted slope)",
+      "note": "",
+      "unit": "",
+      "value": 1.6283456760852182
+    },
+    "e9-cv-r-labour-above1": {
+      "fmt": ".0f",
+      "label": "share of the labour-only draws for computer vision with r above 1",
+      "note": "",
+      "unit": "%",
+      "value": 82.12
+    },
+    "e9-cv-r-labour-hi": {
+      "fmt": ".2f",
+      "label": "r for computer vision, labour only, 95th percentile of the same draws",
+      "note": "",
+      "unit": "",
+      "value": 3.299380041612313
+    },
+    "e9-cv-r-labour-lo": {
+      "fmt": ".2f",
+      "label": "r for computer vision, labour only, 5th percentile of draws over the output trend's uncertainty and the input slope",
+      "note": "",
+      "unit": "",
+      "value": 0.6912316726555491
+    },
+    "e9-cv-r-repro": {
+      "fmt": ".2f",
+      "label": "r for computer vision recomputed on Ho and Whitfill's own inputs (output over input growth)",
+      "note": "their published median is 1.262",
+      "unit": "",
+      "value": 1.2638208244051794
+    },
+    "e9-cv-r-spec-max": {
+      "fmt": ".2f",
+      "label": "r for computer vision, labour only: highest value across input specifications and output trends",
+      "note": "",
+      "unit": "",
+      "value": 2.008305434846446
+    },
+    "e9-cv-r-spec-min": {
+      "fmt": ".2f",
+      "label": "r for computer vision, labour only: lowest value across input specifications and output trends",
+      "note": "",
+      "unit": "",
+      "value": 1.2638208244051794
+    },
+    "e9-cv-share-crit": {
+      "fmt": ".2f",
+      "label": "compute's share of research input above which the fixed-compute loop gain for computer vision is below 1 (central refit)",
+      "note": "",
+      "unit": "",
+      "value": 0.20500000000000002
+    },
+    "e9-cv-share-crit-max": {
+      "fmt": ".2f",
+      "label": "the same critical share for computer vision: highest value across all specifications",
+      "note": "",
+      "unit": "",
+      "value": 0.25121000000000004
+    },
+    "e9-cv-share-r1": {
+      "fmt": ".2f",
+      "label": "compute's share above which r itself (on the composite input, compute's growth counted) is below 1 for computer vision",
+      "note": "",
+      "unit": "",
+      "value": 0.43733697434991403
+    },
+    "e9-cv-share-safe": {
+      "fmt": ".2f",
+      "label": "smallest compute share at which the 95th percentile of the fixed-compute loop gain for computer vision is below 1",
+      "note": "",
+      "unit": "",
+      "value": 0.49
+    },
+    "e9-lm-gk": {
+      "fmt": ".2f",
+      "label": "growth of training compute in language models over the same window (notable models, natural log a year), the compute proxy",
+      "note": "",
+      "unit": "per year",
+      "value": 1.8182523454335886
+    },
+    "e9-lm-gk-crit": {
+      "fmt": ".2f",
+      "label": "growth of research compute below which the language-model loop at fixed compute is above 1 at a = 0.67 (central refit, natural log a year)",
+      "note": "the published correction is the case where compute grew as fast as the labour proxy",
+      "unit": "per year",
+      "value": 0.31254736960318424
+    },
+    "e9-lm-gk-se": {
+      "fmt": ".2f",
+      "label": "standard error of that compute growth for language models",
+      "note": "",
+      "unit": "per year",
+      "value": 0.08630579011183383
+    },
+    "e9-lm-k-fixed": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute for language models, K = (1 - a) r, at compute's share a = 0.67, with compute's historical growth counted",
+      "note": "",
+      "unit": "",
+      "value": 0.24742440073239766
+    },
+    "e9-lm-k-fixed-above1": {
+      "fmt": ".1f",
+      "label": "share of draws for language models with the fixed-compute loop gain above 1 at a = 0.67",
+      "note": "",
+      "unit": "%",
+      "value": 0.0
+    },
+    "e9-lm-k-fixed-hi": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute for language models at a = 0.67, 95th percentile of the draws",
+      "note": "",
+      "unit": "",
+      "value": 0.4155313373780076
+    },
+    "e9-lm-k-published-correction": {
+      "fmt": ".2f",
+      "label": "the published compute correction applied to our labour-only refit for language models, r (1 - a) at a = 0.67, which leaves compute's growth out",
+      "note": "the ledger's corrected median from Ho and Whitfill's r is dyn-r-lm-corrected",
+      "unit": "",
+      "value": 0.9041573094182611
+    },
+    "e9-lm-k-spec-max": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute for language models at a = 0.67: highest value across all specifications",
+      "note": "",
+      "unit": "",
+      "value": 0.2647202064035241
+    },
+    "e9-lm-r-labour": {
+      "fmt": ".2f",
+      "label": "r for language models, our refit with research labour as the only input: steady-state ratio of output growth to input growth (today's OpenAlex counts, yearly flows, fitted slope)",
+      "note": "",
+      "unit": "",
+      "value": 2.7127432025750404
+    },
+    "e9-lm-r-labour-above1": {
+      "fmt": ".0f",
+      "label": "share of the labour-only draws for language models with r above 1",
+      "note": "",
+      "unit": "%",
+      "value": 99.99
+    },
+    "e9-lm-r-labour-hi": {
+      "fmt": ".2f",
+      "label": "r for language models, labour only, 95th percentile of the same draws",
+      "note": "",
+      "unit": "",
+      "value": 4.711851472648338
+    },
+    "e9-lm-r-labour-lo": {
+      "fmt": ".2f",
+      "label": "r for language models, labour only, 5th percentile of draws over the output trend's uncertainty and the input slope",
+      "note": "",
+      "unit": "",
+      "value": 1.6742881821675388
+    },
+    "e9-lm-r-repro": {
+      "fmt": ".2f",
+      "label": "r for language models recomputed on Ho and Whitfill's own inputs (output over input growth)",
+      "note": "their published median is 1.892",
+      "unit": "",
+      "value": 1.8963782531575428
+    },
+    "e9-lm-r-spec-max": {
+      "fmt": ".2f",
+      "label": "r for language models, labour only: highest value across input specifications and output trends",
+      "note": "",
+      "unit": "",
+      "value": 3.578195407576875
+    },
+    "e9-lm-r-spec-min": {
+      "fmt": ".2f",
+      "label": "r for language models, labour only: lowest value across input specifications and output trends",
+      "note": "",
+      "unit": "",
+      "value": 1.8060745268167073
+    },
+    "e9-lm-share-crit": {
+      "fmt": ".2f",
+      "label": "compute's share of research input above which the fixed-compute loop gain for language models is below 1 (central refit)",
+      "note": "",
+      "unit": "",
+      "value": 0.25586000000000003
+    },
+    "e9-lm-share-crit-max": {
+      "fmt": ".2f",
+      "label": "the same critical share for language models: highest value across all specifications",
+      "note": "",
+      "unit": "",
+      "value": 0.29179000000000005
+    },
+    "e9-lm-share-r1": {
+      "fmt": ".2f",
+      "label": "compute's share above which r itself (on the composite input, compute's growth counted) is below 1 for language models",
+      "note": "",
+      "unit": "",
+      "value": 0.4302059925464133
+    },
+    "e9-lm-share-safe": {
+      "fmt": ".2f",
+      "label": "smallest compute share at which the 95th percentile of the fixed-compute loop gain for language models is below 1",
+      "note": "",
+      "unit": "",
+      "value": 0.42
+    },
+    "e9-lp-r-ours": {
+      "fmt": ".2f",
+      "label": "r for linear programming with today's OpenAlex works counts instead of unique authors (labour only)",
+      "note": "",
+      "unit": "",
+      "value": 1.5837889342492752
+    },
+    "e9-lp-r-repro": {
+      "fmt": ".2f",
+      "label": "r for linear programming recomputed on Erdil et al.'s inputs (naive), against their published naive 1.51",
+      "note": "",
+      "unit": "",
+      "value": 1.5104481617101948
+    },
+    "e9-moore-beta": {
+      "fmt": ".2f",
+      "label": "Bloom et al.'s beta for Moore's Law (broad R&D), recomputed from their files (lambda = 1)",
+      "note": "published 0.2",
+      "unit": "",
+      "value": 0.19510581187755965
+    },
+    "e9-moore-r": {
+      "fmt": ".1f",
+      "label": "r for Moore's Law research implied by that beta (broad R&D, lambda = 1, output assumed to double every two years)",
+      "note": "",
+      "unit": "",
+      "value": 5.12542394496971
+    },
+    "e9-moore-r-max": {
+      "fmt": ".1f",
+      "label": "r for Moore's Law: highest across Bloom et al.'s six R&D series",
+      "note": "",
+      "unit": "",
+      "value": 7.259251094503293
+    },
+    "e9-moore-r-min": {
+      "fmt": ".1f",
+      "label": "r for Moore's Law: lowest across Bloom et al.'s six R&D series",
+      "note": "",
+      "unit": "",
+      "value": 2.5415494718181213
+    },
+    "e9-openai-gk": {
+      "fmt": ".2f",
+      "label": "growth of OpenAI's estimated compute, 2022 to 2025, refitted from Ho and Whitfill's files (natural log a year)",
+      "note": "",
+      "unit": "per year",
+      "value": 1.4296659847010833
+    },
+    "e9-openai-gl": {
+      "fmt": ".2f",
+      "label": "growth of OpenAI's staff, 2022 to 2025, refitted from Ho and Whitfill's files (natural log a year)",
+      "note": "",
+      "unit": "per year",
+      "value": 0.8410620218555429
+    },
+    "e9-openai-k-fixed": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute at OpenAI, (1 - a) r at a = 0.67",
+      "note": "",
+      "unit": "",
+      "value": 0.293454935060959
+    },
+    "e9-openai-k-fixed-above1": {
+      "fmt": ".1f",
+      "label": "share of the OpenAI draws with the fixed-compute loop gain above 1",
+      "note": "",
+      "unit": "%",
+      "value": 0.0
+    },
+    "e9-openai-k-fixed-hi": {
+      "fmt": ".2f",
+      "label": "loop gain at fixed compute at OpenAI, 95th percentile of the same draws",
+      "note": "",
+      "unit": "",
+      "value": 0.4515043454222545
+    },
+    "e9-openai-r": {
+      "fmt": ".2f",
+      "label": "r at OpenAI at Ho and Whitfill's central compute share 0.67",
+      "note": "",
+      "unit": "",
+      "value": 0.889257378972603
+    },
+    "e9-openai-r-above1": {
+      "fmt": ".0f",
+      "label": "share of the OpenAI draws with r above 1",
+      "note": "",
+      "unit": "%",
+      "value": 38.32
+    },
+    "e9-openai-r-compute": {
+      "fmt": ".2f",
+      "label": "r at OpenAI with compute as the only input (a = 1)",
+      "note": "",
+      "unit": "",
+      "value": 0.7684398316980376
+    },
+    "e9-openai-r-hi": {
+      "fmt": ".2f",
+      "label": "r at OpenAI, 95th percentile over the efficiency range 2x to 5x a year, the slopes and a share of 0.59 to 0.75",
+      "note": "",
+      "unit": "",
+      "value": 1.307703166685235
+    },
+    "e9-openai-r-labour": {
+      "fmt": ".2f",
+      "label": "r at OpenAI with staff as the only input (a = 0), efficiency growing 3x a year",
+      "note": "",
+      "unit": "",
+      "value": 1.3062203025697938
+    },
+    "e9-openai-share-crit": {
+      "fmt": ".2f",
+      "label": "compute's share of research input above which OpenAI's fixed-compute loop gain is below 1",
+      "note": "",
+      "unit": "",
+      "value": 0.15264000000000003
+    },
+    "e9-recomputed": {
+      "fmt": ".0f",
+      "label": "published estimates recomputed on their authors' own inputs and method",
+      "note": "",
+      "unit": "",
+      "value": 12.0
+    },
+    "e9-refits": {
+      "fmt": ".0f",
+      "label": "published estimates refitted on our inputs or with a different noise model",
+      "note": "",
+      "unit": "",
+      "value": 4.0
+    },
+    "e9-refits-inside": {
+      "fmt": ".0f",
+      "label": "of those, refits whose central value lies inside the published interval",
+      "note": "",
+      "unit": "",
+      "value": 4.0
+    },
+    "e9-reproduced": {
+      "fmt": ".0f",
+      "label": "of those, reproduced within 5% (10% for a value published to one digit)",
+      "note": "",
+      "unit": "",
+      "value": 11.0
+    },
+    "e9-rl-gk": {
+      "fmt": ".2f",
+      "label": "growth of training compute in reinforcement learning (Atari) over the same window (notable models, natural log a year), the compute proxy",
+      "note": "",
+      "unit": "per year",
+      "value": -0.11815354489105641
+    },
+    "e9-rl-gk-se": {
+      "fmt": ".2f",
+      "label": "standard error of that compute growth for reinforcement learning (Atari)",
+      "note": "",
+      "unit": "per year",
+      "value": 0.68357435996495
+    },
+    "e9-rl-r-labour": {
+      "fmt": ".2f",
+      "label": "r for reinforcement learning (Atari), our refit with research labour as the only input: steady-state ratio of output growth to input growth (today's OpenAlex counts, yearly flows, fitted slope)",
+      "note": "",
+      "unit": "",
+      "value": 1.8135149373026578
+    },
+    "e9-rl-r-labour-above1": {
+      "fmt": ".0f",
+      "label": "share of the labour-only draws for reinforcement learning (Atari) with r above 1",
+      "note": "",
+      "unit": "%",
+      "value": 99.08
+    },
+    "e9-rl-r-labour-hi": {
+      "fmt": ".2f",
+      "label": "r for reinforcement learning (Atari), labour only, 95th percentile of the same draws",
+      "note": "",
+      "unit": "",
+      "value": 2.0379901352244074
+    },
+    "e9-rl-r-labour-lo": {
+      "fmt": ".2f",
+      "label": "r for reinforcement learning (Atari), labour only, 5th percentile of draws over the output trend's uncertainty and the input slope",
+      "note": "",
+      "unit": "",
+      "value": 1.0925185180342885
+    },
+    "e9-rl-r-repro": {
+      "fmt": ".2f",
+      "label": "r for reinforcement learning (Atari) recomputed on Ho and Whitfill's own inputs (output over input growth)",
+      "note": "their published median is 1.201",
+      "unit": "",
+      "value": 1.2357190361558827
+    },
+    "e9-rl-r-spec-max": {
+      "fmt": ".2f",
+      "label": "r for reinforcement learning (Atari), labour only: highest value across input specifications and output trends",
+      "note": "",
+      "unit": "",
+      "value": 5.215435117485152
+    },
+    "e9-rl-r-spec-min": {
+      "fmt": ".2f",
+      "label": "r for reinforcement learning (Atari), labour only: lowest value across input specifications and output trends",
+      "note": "",
+      "unit": "",
+      "value": 1.2149404625463434
+    },
+    "e9-sat-r-ours": {
+      "fmt": ".2f",
+      "label": "r for SAT solvers with today's OpenAlex works counts instead of unique authors (labour only)",
+      "note": "",
+      "unit": "",
+      "value": 5.004156754837092
+    },
+    "e9-sat-r-repro": {
+      "fmt": ".2f",
+      "label": "r for SAT solvers recomputed on Erdil et al.'s inputs (naive), against their published naive 4.17",
+      "note": "",
+      "unit": "",
+      "value": 4.166249178379159
+    },
+    "e9-us-bloom-beta": {
+      "fmt": ".1f",
+      "label": "Bloom et al.'s beta for the US economy, recomputed from their files (lambda = 1)",
+      "note": "published 3.1",
+      "unit": "",
+      "value": 3.073878705401819
+    },
+    "e9-us-bloom-r": {
+      "fmt": ".2f",
+      "label": "r for the US economy implied by that beta with lambda = 1",
+      "note": "",
+      "unit": "",
+      "value": 0.3253218802168967
+    },
+    "e9-us-lambda-not-positive": {
+      "fmt": ".0f",
+      "label": "share of bootstrap refits for the US economy with lambda at or below 0 (the input has no effect or a negative one)",
+      "note": "",
+      "unit": "%",
+      "value": 6.0
+    },
+    "e9-us-lr-p": {
+      "fmt": ".2f",
+      "label": "p-value of the likelihood-ratio test of lambda against 0 for the US economy",
+      "note": "",
+      "unit": "",
+      "value": 0.1332464161598795
+    },
+    "e9-us-r": {
+      "fmt": ".3f",
+      "label": "r for the US economy with lambda free, best fit of our one-step refit of Erdil et al.'s TFP series; not identified, since lambda cannot be told from 0",
+      "note": "reproduces their best fit; the bootstrap interval runs below 0",
+      "unit": "",
+      "value": 0.2440779396596076
+    },
+    "e9-us-r-hi": {
+      "fmt": ".2f",
+      "label": "r for the US economy, lambda free, 95th percentile of 200 bootstrap refits",
+      "note": "",
+      "unit": "",
+      "value": 0.30149268154905273
+    },
+    "e9-us-r-lo": {
+      "fmt": ".2f",
+      "label": "r for the US economy, lambda free, 5th percentile of 200 bootstrap refits",
+      "note": "",
+      "unit": "",
+      "value": -0.1734860386787631
+    }
+  },
+  "script": "tools/exp/e09_returns.py",
+  "seed": 20261127
+}

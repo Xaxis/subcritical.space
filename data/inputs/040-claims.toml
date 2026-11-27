@@ -16,6 +16,14 @@ fmt = ",.0f"
 label = "fewest staged rounds in the loop-gain estimator's test"
 note = "Part I, D2, 'What would test it': at least five rounds at fixed compute, data and time"
 
+[claim-c4-budgets]
+value = 3
+unit = "budgets"
+basis = "design"
+fmt = ",.0f"
+label = "budgets on the loop-gain estimator's ladder, one, two and four times the agent budget, each round run at every one"
+note = "Part III, Lemma 4.2, and the claims file's C4; E4 runs each simulated round at all three"
+
 [claim-d5-miss-target]
 value = 0.1
 basis = "design"
@@ -29,3 +37,168 @@ basis = "design"
 fmt = "%"
 label = "target for the one-sided upper confidence bound on an elicitation protocol's false-alarm rate"
 note = "a placeholder a regime would set by negotiation; it is the cost to useful AI that C5 must state"
+
+# C7: the paper's frozen frontier, so that the coalition share can be shown over the breakout budget.
+
+[claim-hwp-frozen-frontier]
+value = 2e27
+unit = "FLOP"
+basis = "assumption"
+fmt = ".0e"
+label = "hardwired-pause working paper: the frozen frontier, the training run its breakout budget is a multiple of"
+source = "fithian2026hardwired"
+date = "2026-10"
+note = "the paper sets its breakout budget, def-hwp-breakout-budget, at 100 times this frontier; used here only as a second point at which to show the coalition share"
+
+# C12: an ordinal reading of the pathways table (research/02-pathways.md, "The ranking") on each
+# criterion, 0 the least and 3 the most. Equal grades mean the table's entries do not separate the
+# two pathways on that criterion. A pair is fixed by the evidence when one pathway's grade is higher
+# on every criterion; model/parts/040_claims.py counts those pairs. Change a grade with --set to
+# see how the count moves. The cost grades only reproduce the red team's three-criterion count.
+
+[claim-c12-effect-rsi]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, recursive self-improvement: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3"
+note = "the table and chapter: its effect on T_b ranges from a modest multiplier to a runaway; the largest tail effect of any pathway"
+
+[claim-c12-effect-uc]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, undeclared compute: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3"
+note = "the table and chapter: exists now: a moderate effect on T_b and an extreme one on T_r. The grade equals the top T_b effects because a T_r effect and a T_b effect share no scale (C12.3), so neither orders the other"
+
+[claim-c12-effect-ds]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, scaling of declared compute: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3"
+note = "the table and chapter: moves T_b most of any measured pathway. Equal to self-improvement's grade because the order between them turns on whether the criterion means today or the tail"
+
+[claim-c12-effect-dist]
+value = 2
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, distillation from a stronger model: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3"
+note = "the table and chapter: moves capability at nil compute and across parties, bounded by its teacher plus an uplift; sufficient only for a follower near the line"
+
+[claim-c12-effect-repl]
+value = 1
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, self-replication and resource acquisition: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3"
+note = "the table and chapter: not sufficient while identity gates hold; its components are rising"
+
+[claim-c12-effect-cl]
+value = 1
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, continual learning: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3"
+note = "the table and chapter: no evidence that it is sufficient, and forgetting damps it. Equal to self-replication's grade because both gains are unmeasured"
+
+[claim-c12-effect-lha]
+value = 0
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, long-horizon autonomy: how much it moves the line (shortens T_b or lengthens T_r), 0 to 3"
+note = "the table and chapter: adds nothing to the line by itself; it sets how long a loop runs between gates"
+
+[claim-c12-hidden-rsi]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, recursive self-improvement: how hard it is to see, 0 to 3"
+note = "the table and chapter: its research labour is invisible to every physical channel; declarations and staged evaluations see it, chip accounting only its research compute"
+
+[claim-c12-hidden-uc]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, undeclared compute: how hard it is to see, 0 to 3"
+note = "the table and chapter: seen only by chip accounting at birth, intelligence and insiders"
+
+[claim-c12-hidden-ds]
+value = 1
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, scaling of declared compute: how hard it is to see, 0 to 3"
+note = "the table and chapter: the best seen of the routes that use compute: chip accounting and power"
+
+[claim-c12-hidden-dist]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, distillation from a stronger model: how hard it is to see, 0 to 3"
+note = "the table and chapter: invisible to compute channels; seen by provider declarations and by evaluations at checkpoints. Equal to the top grade because the table does not say which of these is harder to see"
+
+[claim-c12-hidden-repl]
+value = 2
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, self-replication and resource acquisition: how hard it is to see, 0 to 3"
+note = "the table and chapter: seen by evaluations and by identity checks on compute and payment"
+
+[claim-c12-hidden-cl]
+value = 2
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, continual learning: how hard it is to see, 0 to 3"
+note = "the table and chapter: seen by compute metering and re-evaluation, while context-based adaptation escapes weight accounting"
+
+[claim-c12-hidden-lha]
+value = 0
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, long-horizon autonomy: how hard it is to see, 0 to 3"
+note = "the table and chapter: measured in public by time horizons"
+
+[claim-c12-cheap-rsi]
+value = 2
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, recursive self-improvement: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3"
+note = "the table and chapter: low to moderate if aimed at closed-loop frontier training research"
+
+[claim-c12-cheap-uc]
+value = 2
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, undeclared compute: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3"
+note = "the table and chapter: low; the costs are diplomatic"
+
+[claim-c12-cheap-ds]
+value = 2
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, scaling of declared compute: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3"
+note = "the table and chapter: low today at a line above the frontier"
+
+[claim-c12-cheap-dist]
+value = 2
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, distillation from a stronger model: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3"
+note = "the table and chapter: moderate to high if broad, lower if keyed to the teacher, the form Part II uses"
+
+[claim-c12-cheap-repl]
+value = 3
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, self-replication and resource acquisition: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3"
+note = "the table and chapter: very low"
+
+[claim-c12-cheap-cl]
+value = 1
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, continual learning: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3"
+note = "the table and chapter: moderate"
+
+[claim-c12-cheap-lha]
+value = 0
+basis = "assumption"
+fmt = ",.0f"
+label = "pathway grade, long-horizon autonomy: how cheaply it can be limited (L4's third criterion, no longer a ranking criterion), 0 to 3"
+note = "the table and chapter: high"

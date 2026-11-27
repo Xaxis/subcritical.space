@@ -15,11 +15,17 @@ once, and which of those leaks a chip count can see.
 
 The survey changed the memo in four places. Each is argued below, with its sources.
 
-1. Algorithmic progress is not one multiplier on physical compute. Most of it is scale-dependent,
-   so the leak rate of a cap depends on where the cap sits (A3).
+1. Algorithmic progress is not one settled multiplier on physical compute. Ablations find most of it
+   scale-dependent, which would make a cap's leak rate depend on where the cap sits. E1 did not find
+   the predicted rise with scale, and could not identify the rate at all: across six samples of the
+   same models it ran from [2.6](numbers.md#e1-algo-annual-subset-min)x to
+   [1,512](numbers.md#e1-algo-annual-subset-max)x a year (A3).
 2. Compute explains most of the difference between frontier models. "Unbounded scaling is not
    necessary, algorithms substitute" is weaker than the memo assumed; algorithms complement compute
-   more than they replace it at the frontier (A1, A3).
+   more than they replace it at the frontier (A1, A3). Compute's share of growth over time is another
+   matter: in E1 it explains [36%](numbers.md#e1-compute-share) of growth on Epoch's index, and from
+   [18%](numbers.md#e1-compute-share-subset-min) to [63%](numbers.md#e1-compute-share-subset-max)
+   across six samples, so that share is not identified on public data.
 3. Inference leaks a training cap by roughly one order of magnitude per technique, at a price in
    inference compute, and by more only where a cheap verifier exists (A2). The ability to improve
    from one's own outputs also grows with pretraining compute, so a compute cap partly caps
@@ -29,15 +35,20 @@ The survey changed the memo in four places. Each is argued below, with its sourc
    the protocol has to control (A2).
 
 The framing of A2, that a training cap leaks through inference, is prior work, and so is a leak
-tied to a breakout horizon. What may still extend prior work is narrower: one leak model that
-combines a scale-dependent algorithmic rate, the one-off post-training jump, inference spans
-conditioned on a verifier, and distillation, and that sorts each leak by whether the chip channel
-can see it. It is set out after A5.
+tied to a breakout horizon. So is each term of the leak model set out after A5: a scale-dependent
+algorithmic rate, the one-off post-training jump, inference spans conditioned on a verifier, and
+distillation. Joined in one expression, with each leak sorted by whether the chip channel can see it,
+they are a combination of prior work, C2 in
+[the claims file](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case),
+which adds something only if two untested predictions hold. Tabulating it in advance with an
+interval is cut, since E1 cannot identify the drift rate.
 
 Conventions. Every number is a ledger link. Multipliers are written with an x after the number. OOM
 means an order of magnitude, a factor of ten. Where the survey read only a source's abstract, the
-text says "(abstract)". Nothing in this chapter has been tested against an adversary; the protocol
-consequences are candidates, and the experiments named are planned, not run.
+text says "(abstract)". Nothing in this chapter has been tested against an adversary, and the
+protocol consequences are candidates. Of the experiments named, E1 and E9 have run, and their results
+are given under A1 and A3; E5 has run, and the combined leak's test draws on it. E10, E15, E16, E17
+and E18, numbered as in the claims file, are planned, not run.
 
 ## A1. Capability as a function of effective compute
 
@@ -146,6 +157,28 @@ while the share of growth over time due to algorithms runs from
 to about [55%](numbers.md#comp-rosetta-algo-share) for broad capability, depending on what capability
 means.
 
+*What E1 found.* E1 joins Epoch's model data to its capability index [@epoch2026aimodels;
+@epoch2025eci] for the [105 models](numbers.md#e1-models) that have both. Training compute explains
+[36%](numbers.md#e1-compute-share) of growth on the index, and the rest moves with date at about
+[17](numbers.md#e1-algo-annual)x a year in compute-equivalent. Across six samples of the same models
+the share runs from [18%](numbers.md#e1-compute-share-subset-min) to
+[63%](numbers.md#e1-compute-share-subset-max), far beyond any one sample's interval, so compute's
+share of growth is not identified on public data, which lacks a compute estimate for
+[23 models](numbers.md#e1-top25-dropped) of the 25 with the highest index. One OOM beyond the fitting
+range, forecasts missed by [11.8 ECI points](numbers.md#e1-oos-mae) on average, which is
+[0.96 OOM](numbers.md#e1-oos-mae-oom) of compute-equivalent (an understatement, L4 found, since it
+divides by a slope fitted on the forecast models too), and by [17.0 pp](numbers.md#e1-oos-bench-mae-pp)
+per benchmark score, against a floor of [5.2 pp](numbers.md#e1-oos-bench-floor-pp) with the model's
+actual index. The actual index exceeded the one-sided 95% upper bound in
+[1.1%](numbers.md#e1-oos-unforecast-share) of [89 forecasts](numbers.md#e1-oos-n), one model: the
+bound is wide, not shown to be calibrated. At the top of the range the fit overshoots: for the
+[13 models](numbers.md#e1-oos-n-1e25) in the highest decade forecast, the mean signed error is
+[-8.5 ECI points](numbers.md#e1-oos-bias-1e25). Compute also places systems badly. On GPQA Diamond the
+largest model that loses to PhD experts used [2.8 OOM](numbers.md#e1-gpqa-overlap-oom) more training
+compute than the smallest that wins, and the best single compute threshold gets
+[79%](numbers.md#e1-gpqa-acc-compute) of verdicts right, against
+[92%](numbers.md#e1-gpqa-acc-date) for the best release date.
+
 ### What the survey changed from the memo
 
 A1 is prior work in every part: scaling laws [@kaplan2020scaling; @hoffmann2022chinchilla;
@@ -160,9 +193,12 @@ by Ho et al. and Mertens et al.: at the frontier, scale is most of the story.
 
 A candidate, not a finding. Training compute stays the first filter, as Heim and Koessler argue for
 regulation generally [@heim2024thresholds]: it is quantifiable, measurable early and externally
-verifiable. Capability on a stitched scale is the second stage. Two rules follow from the forecast
+verifiable. E1 shows what it costs: compute misplaced systems by up to
+[2.8 OOM](numbers.md#e1-gpqa-overlap-oom) on one benchmark, so a filter on compute alone must sit far
+below the line, at a real cost to useful AI, and capability measured at checkpoints has to do the
+placing. Capability on a stitched scale is the second stage. Two rules follow from the forecast
 error. First, evaluations must come at intervals shorter than the distance over which forecasts hold,
-which is about one OOM with the errors above. One lab's policy evaluated every
+which is about one OOM with the errors above, and less with E1's. One lab's policy evaluated every
 [4](numbers.md#comp-rsp-cadence)x of effective compute [@anthropic2026rsp], the same distance at
 which emergence was sometimes predictable [@snell2024emergence]; that is a reasonable default for
 declared checkpoints. Second, thresholds should be stated on continuous metrics with the pass-fail
@@ -171,14 +207,18 @@ capability. The cost to useful AI is the cost of evaluation, which is small.
 
 ### What would test it
 
-E1, as a runnable test. Join Epoch's model data (training compute, dates) [@epoch2026aimodels] to
-the Epoch Capabilities Index scores [@epoch2025eci]. Fit capability against log compute with a date
-term, as in the Rosetta paper, on models released before a cut-off date, and forecast the models
-released after it. Report the out-of-sample error at one OOM ahead, overall and per benchmark,
-against Owen's [6 pp](numbers.md#comp-bbh-mae-1oom) and [18 pp](numbers.md#comp-task-mae-1oom).
-Recompute the decomposition above with bootstrap intervals. The hypothesis fails if one-OOM forecast
-error on the stitched scale is large enough that a threshold set one evaluation interval ahead is
-crossed unforecast more than a stated fraction of the time.
+E1 has run; its results are under the evidence above. It joined Epoch's model data (training
+compute, dates) [@epoch2026aimodels] to the Epoch Capabilities Index scores [@epoch2025eci], fitted
+capability against log compute with a date term, as in the Rosetta paper, on models below a compute
+cut, and forecast the models one OOM above it, overall and per benchmark, against Owen's
+[6 pp](numbers.md#comp-bbh-mae-1oom) and [18 pp](numbers.md#comp-task-mae-1oom), with the
+decomposition recomputed by resampling. The hypothesis was to fail if one-OOM forecast error on the
+stitched scale were large enough that a threshold set one evaluation interval ahead is crossed
+unforecast more than a stated fraction of the time. It did not fail on that count, but only because
+the bound is wide: one forecast in [89 forecasts](numbers.md#e1-oos-n) crossed it, and the fit
+overshoots at the top. A bound that wide cannot place a threshold one interval ahead with any
+precision. What is left to test needs data the public set lacks: compute estimates for the most
+capable models.
 
 ## A2. The exchange rate between training and inference compute
 
@@ -281,7 +321,11 @@ distillation beats supervised learning up to a compute level that grows with stu
 the teacher must also be trained, supervised learning is generally better (abstract)
 [@busbridge2025distillation]. Yue et al. add that distillation, unlike RL, can bring in reasoning
 patterns the student did not have [@yue2025rlvr]. An existing uncapped teacher is exactly the case
-where distillation pays.
+where distillation pays. Nor does the teacher cap the student. Students distilled with their
+teacher's architecture, "these Born-Again Networks (BANs), outperform their teachers significantly"
+(abstract) [@furlanello2018born], and strong models fine-tuned on a weaker supervisor's labels
+"consistently perform better than their weak supervisors" (abstract) [@burns2023weak]. A party with
+its own base model and a teacher's outputs can end above the teacher.
 
 *Post-training enhancement.* Most surveyed enhancements (tool use, prompting, scaffolding, solution
 selection, data generation) are worth more than [5](numbers.md#comp-davidson-ceg-typ)x training
@@ -322,7 +366,10 @@ in Ord's technical report (written at the Oxford Martin AI Governance Initiative
 GovAI) [@ord2025govaireport]. Heim and
 Koessler and Hooker made the threshold point earlier [@heim2024thresholds; @hooker2024thresholds]. The
 memo missed two things: distillation, which is a cheaper leak than inference or RL, and the role of
-the verifier, which decides how big the span is.
+the verifier, which decides how big the span is. Both are already in prior accounting of the leak:
+fine-tuning, extra inference and distillation are added up against a training threshold in
+[@pistillo2025loopholes], and the span set by cheap verification is Villalobos and Atkinson's
+[@villalobos2023tradeoff].
 
 ### What it means for the protocol
 
@@ -338,18 +385,23 @@ distillation needs an analogous rule keyed to the teacher, not the student's com
 domains with a cheap verifier more headroom below the line, because the span there is largest. The
 cost to useful AI: (1) and (2) cost little, since they only count; (3) costs something real, because
 training small models on large models' outputs is a large part of how useful AI is made cheap, so
-the gate has to sit high, at the teacher's capability, and not at all distillation.
+the gate has to sit high, keyed to the teacher's capability, and not at all distillation. Since a
+student can exceed its teacher, it must sit below the line by the uplift E10's distillation arm is to
+measure, not at the line.
 
 ### What would test it
 
-E10, the training-to-inference exchange rate, as a runnable test on open models under `gpu`. Take
+E10, the training-to-inference exchange rate, as a runnable test on open models under `gpu`; it has
+not run. Take
 one open model family with published training compute at four or more sizes. On a code task family
 with unit tests (a cheap verifier) and a free-form maths family scored by majority vote (no
 verifier), measure accuracy against samples per task from one to a few thousand. Fit iso-accuracy
 contours in (log training FLOP, log inference FLOP per task). Report the exchange rate, the span, and
 where the span ends, with and without the verifier, with bootstrap intervals. Add a distillation arm:
 fine-tune the smallest model on the largest model's verified outputs at a fixed token budget and
-convert its gain to compute-equivalent training on the family's own scaling curve. The memo's worry
+convert its gain to compute-equivalent training on the family's own scaling curve, reporting where the
+student ends against the teacher, since an uplift above the teacher is the term breakout time needs
+(C2). The memo's worry
 holds if the verifier arm's span exceeds the [1 OOM](numbers.md#comp-heim-buffer-oom) buffer by a
 wide margin; it fails if the spans match Villalobos and Atkinson's per-technique bound.
 
@@ -361,8 +413,10 @@ Algorithmic progress g(F, t) is the factor by which the physical compute needed 
 capability falls in a year, measured at a stated training-compute scale F and against a stated
 reference algorithm. Units: a multiplier a year, or the halving time. It is split by source:
 pretraining architecture and optimisation, data quality and mixture, and post-training. The scale
-argument is the point: one number for all scales is the memo's assumption, and the evidence below
-says it is wrong.
+argument is kept because one number for all scales, the memo's assumption, may be wrong: ablations
+reproduce only a small part of the claimed gain at low compute [@gundlach2025origin]. But the
+evidence below identifies neither one multiplier nor a scale-dependent rate on public data (E1), so
+the definition leaves the dependence on scale to be measured (E15), not assumed either way.
 
 ### How it is measured
 
@@ -421,6 +475,19 @@ difference" (abstract) [@gundlach2025origin]. In yearly terms, the claimed total
 [4.3 OOM](numbers.md#comp-gundlach-claimed-oom), at most
 [46%](numbers.md#comp-gundlach-small-oom-share) is accounted for at small compute.
 
+*What E1 found on scale.* E1 ran this chapter's test (a) below and did not find the predicted rise.
+Rerunning Ho et al.'s code and data [@ho2024algorithmiccode] reproduced their rate (their own
+bootstrap, rerun, gives [1.008](numbers.md#e1-ho-refit-over-published) times the published halving
+time), but split into compute terciles, the highest progressed faster than the lowest in only
+[52%](numbers.md#e1-ho-top-faster-share) of resamples. On Epoch's index drift fell with scale,
+[-0.34 OOM a year per OOM](numbers.md#e1-drift-per-oom) (from
+[-0.64 OOM a year per OOM](numbers.md#e1-drift-per-oom-lo) to
+[-0.16 OOM a year per OOM](numbers.md#e1-drift-per-oom-hi)), the opposite of what scale dependence
+predicts, but the sign is not robust across samples, and across six samples of the same models the
+rate itself ran from [2.6](numbers.md#e1-algo-annual-subset-min)x to
+[1,512](numbers.md#e1-algo-annual-subset-max)x a year. On public data neither one multiplier nor a
+scale-dependent rate is identified.
+
 *Selection bias.* If developers choose compute in response to algorithmic quality, the estimates are
 contaminated. In Whitfill's simulation with true progress of
 [45%](numbers.md#comp-whitfill-true) a year, a correlation of +[0.5](numbers.md#comp-whitfill-corr)
@@ -447,7 +514,8 @@ cited by METR put the FLOP-efficiency gain at about [1.6](numbers.md#comp-metr-f
 [1.7](numbers.md#comp-metr-flop-eff-hi)x a year [@shetty2026metrnanogpt], close to Gundlach et al.'s
 small-compute bound. The pace is also uneven: about [15](numbers.md#comp-speedrun-first8mo)x in the
 first [8 months](numbers.md#comp-speedrun-first-months), about [1.6](numbers.md#comp-speedrun-2025)x
-across 2025 (both computed in the survey from Epoch's series, to be recomputed in E10). The same
+across 2025 (both computed in the survey from Epoch's series, to be recomputed from the record
+logs). The same
 record gives three different rates depending on the metric, which is the reference-dependence
 problem in miniature.
 
@@ -475,7 +543,13 @@ labour substitute is unresolved: one specification puts the elasticity of substi
 [4 firms](numbers.md#comp-ww-firms) [@whitfill2025bottlenecks]. Returns to research in language
 models are estimated at [1.9](numbers.md#comp-r-lm), above the runaway threshold of 1, but a
 compute-bottleneck correction cuts every such estimate by about [3](numbers.md#comp-r-compute-cut)x,
-which puts them all below 1 [@ho2025experiments].
+which puts them all below 1 [@ho2025experiments]. E9 reproduced the language-model estimate,
+[1.90](numbers.md#e9-lm-r-repro), and found that the correction leaves compute's own growth out.
+Counting it, the language-model loop gain at fixed compute, at the correction's compute share of
+[0.67](numbers.md#dyn-research-compute-share), is [0.25](numbers.md#e9-lm-k-fixed)
+([0.42](numbers.md#e9-lm-k-fixed-hi) at the 95th percentile), and it is above 1 for compute shares
+below about [0.26](numbers.md#e9-lm-share-crit), which no data excludes: no data identifies compute's
+share of research input.
 
 *The steelman for the memo.* Algorithms have been roughly as important as compute in vision
 [@erdil2022vision]. The newest estimates run faster than the old ones [@ho2025rosetta]. Barnett's
@@ -485,11 +559,13 @@ most near and above a cap, are precisely what a party trying to break out would 
 ### What the survey changed from the memo
 
 The memo's D3 multiplies physical compute by one efficiency term whose growth is measured. That does
-not hold: measured efficiency depends on scale and on the reference algorithm [@gundlach2025origin],
-and its central value is uncertain by more than the published intervals [@whitfill2025selection].
-The consequence is that the leak rate of a cap depends on where the cap sits. A cap far below the
-frontier leaks more slowly than the headline rate, while exponent-changing innovations matter most
-near the cap. The memo listed "algorithmic progress at fixed compute" as a failure mode, which is
+not hold: measured efficiency depends on the reference algorithm and, in ablations, on scale
+[@gundlach2025origin], and its central value is uncertain by more than the published intervals
+[@whitfill2025selection]. If the ablations are right, the leak rate of a cap depends on where the cap
+sits: a cap far below the frontier leaks more slowly than the headline rate, while
+exponent-changing innovations matter most near the cap. E1 did not confirm the scale dependence in
+Ho et al.'s data or on Epoch's index, and could not identify the rate at all, so neither the memo's
+one efficiency term nor a scale-dependent one is settled. The memo listed "algorithmic progress at fixed compute" as a failure mode, which is
 right, but it is prior work as a failure mode: Pilz et al. separate the access effect, more actors
 reaching a given performance, from the performance effect [@pilz2023efficiency]; Heim and Koessler
 call moving thresholds down "a regulatory dilemma" [@heim2024thresholds]; the MIRI draft agreement
@@ -503,8 +579,10 @@ treated as settled.
 
 ### What it means for the protocol
 
-Candidates. Thresholds must fall over time, and the schedule must be set by the rate measured at the
-cap's own scale, not by the headline. One OOM of leak takes
+Candidates. Thresholds must fall over time, and the schedule should be set by the rate at the cap's
+own scale, not by the headline. E1 shows that rate cannot yet be measured on public data at any
+scale, so no schedule can be tabulated in advance with an interval; the times below are
+illustrations at published rates. One OOM of leak takes
 [2.3 years](numbers.md#comp-years-per-oom-ho) at Ho et al.'s central rate,
 [2.1 years](numbers.md#comp-years-per-oom-scher) at the treaty's assumed rate,
 [1.3 years](numbers.md#comp-years-per-oom-rosetta) at the Rosetta rate, and at least
@@ -521,15 +599,19 @@ the gate already sees. Whether that holds is an empirical question for the test 
 
 ### What would test it
 
-E1 and E10 together. (a) Rerun Ho et al.'s fit with their released code and data
+E1, E15 and E4. (a) Rerun Ho et al.'s fit with their released code and data
 [@ho2024algorithmiccode], then split the models into compute bins and fit the algorithmic rate
 separately in each. Scale dependence predicts a rate that rises with compute; a flat rate refutes it.
-(b) Ablate three innovations (an architecture change, an optimiser, a data-mixture change) at three
-training scales on one open codebase, and fit compute-equivalent gain against scale. (c) For the
+E1 has run (a): the terciles show no robust rise, as the evidence above reports. (b) Ablate three
+innovations (an architecture change, an optimiser, a data-mixture change) at three training scales on
+one open codebase, and fit compute-equivalent gain against scale; this is E15, not run. (c) For the
 speedrun, read the per-record logs for tokens, steps and model shape, compute FLOP per record, and fit
-FLOP efficiency separately from wall-clock. E9 then asks whether the returns to this research are
-above or below 1 once compute is counted. The memo's single multiplier survives only if (a) and (b)
-find no scale trend.
+FLOP efficiency separately from wall-clock; E4's history used wall-clock as a stand-in, since FLOP
+per record would need a parser per era. E9 asked whether the returns to this research are above or
+below 1 once compute is counted, and found the answer turns on compute's share of research input,
+which no data identifies (the evidence above). The memo's single multiplier survives only if (a) and
+(b) find no scale trend. (a) found none, so (b) decides: if E15 finds no trend at fixed algorithms,
+the scale term is cut.
 
 ## A4. Data
 
@@ -615,7 +697,8 @@ compute cap does part of this work. The cost to useful AI of not limiting data i
 
 ### What would test it
 
-A new experiment, the verifier substitution test, runnable under `heavy` on small models. Start
+A new experiment, the verifier substitution test (E16 in the claims file, not run), on small models.
+Start
 from a small open model and a task family with an exact checker (arithmetic or short programs with
 tests). Run five generations of self-training in four arms: replace real data with unfiltered
 outputs; accumulate unfiltered outputs with real data; replace with checker-filtered outputs;
@@ -705,7 +788,8 @@ AI is low if the rule keys on the evaluator's target and not on search in genera
 
 ### What would test it
 
-Two runnable tests on open models. (a) Transfer ratio: take an open base model and its released
+Two runnable tests on open models, neither run: (a) is E17 in the claims file, and (b) is merged into
+E10, since it reuses E10's samples. (a) Transfer ratio: take an open base model and its released
 mathematics-RL and mathematics-SFT variants, evaluate all three on held-out non-mathematics
 benchmarks, and report the change in each per point of mathematics gain, with intervals; this
 repeats Huan et al.'s design on models the experiment can name. (b) The generation-verification gap
@@ -718,8 +802,8 @@ whether g rises with scale.
 ## The combined leak of a training cap
 
 The mechanisms above can be combined into one statement of how fast and how far a cap on training
-compute leaks. This is the part of the chapter that may extend prior work. It is a model with
-placeholders, not a result.
+compute leaks. Each of its terms is prior work, and joined they are a combination of prior work, C2
+in the claims file, credited below. It is a model with placeholders, not a result.
 
 ### The model
 
@@ -742,18 +826,28 @@ span as Ord's example [@ord2025govaireport]. The cap leaks through four routes, 
    and the headline rates of [2.7](numbers.md#comp-ho-annual)x to [6](numbers.md#comp-rosetta-algo)x
    [@gundlach2025origin; @ho2024algorithmic; @ho2025rosetta]. The small-compute bound is half
    measured: of its two factors, only the first comes from Gundlach et al.'s own ablations, and the
-   second is their estimate from a survey of other innovations.
-4. **Distillation, a ceiling transfer**: a capped student approaches an existing teacher's capability
-   at the student's own compute [@deepseek2025r1; @busbridge2025distillation]. It has no
-   compute-equivalent figure in the survey, so the model does not give it one. It closes the gap to
-   the best existing model and does not by itself exceed it; repeated rounds of amplification and
-   distillation are a loop, which Ord names as one path to recursive self-improvement (abstract)
-   [@ord2025inferencegov], and whose fuel is inference compute.
+   second is their estimate from a survey of other innovations. E1 could not identify g on public
+   data, at the cap's scale or any other, so the bracket is the published range, not a measured
+   interval.
+4. **Distillation, a transfer from the teacher's level**: a capped student approaches an existing
+   teacher's capability at the student's own compute [@deepseek2025r1; @busbridge2025distillation],
+   and can end above it [@furlanello2018born; @burns2023weak]. So it enters at the teacher's level
+   plus an uplift term, which E10 is to measure. It has no compute-equivalent figure in the survey,
+   so the model does not give it one. Repeated rounds of amplification and distillation are a loop,
+   which Ord names as one path to recursive self-improvement (abstract) [@ord2025inferencegov], and
+   whose fuel is inference compute.
 
-The leak time is the time until the capped party closes H after the one-off jumps:
-t = (H - J) / log10(g), where J is the one-off leak in OOM. The headroom a cap needs to outlast the
-regime's response time T_r is J + T_r log10(g). With D4 this becomes the condition on the cap: the
-leak time must exceed m T_r.
+The leak time is the time until the capped party closes H after the one-off jumps. In the claims
+file's form
+([C2](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case)),
+t = max(0, (H - J - S_v) / log10(g)), where J is the post-training jump in OOM (route 1), S_v the
+inference span in OOM (route 2), larger where a cheap verifier exists and paid in compute a chip
+count sees, and g the yearly efficiency gain at the cap's scale (route 3); C2 writes the headroom h
+and the gain gamma. The max sets the time to zero once the jumps alone cover the headroom. The
+figures below take one jump at a time, since route 1 already includes solution selection: S_v = 0
+with the post-training jump, or J = 0 with a cheap verifier's span. The headroom a cap needs to
+outlast the regime's response time T_r is J + S_v + T_r log10(g). With D4 this becomes the condition
+on the cap: the leak time must exceed m T_r.
 
 ### What the numbers say
 
@@ -765,7 +859,9 @@ verifier, repeated sampling alone could cover the whole example headroom at once
 [0 OOM](numbers.md#comp-leak-left-verifier), at the price of up to
 [6 OOM](numbers.md#comp-span-cheapver-inf) more inference per task. These times assume that no
 inference technique stacks on top of the post-training jump. If one more OOM did stack, each time
-would shorten by the time one OOM of drift takes at that rate (A3).
+would shorten by the time one OOM of drift takes at that rate (A3). They are illustrations at
+published rates. E1 found the drift rate not identified, so none of them can be tabulated in advance
+with an interval; the claims file cuts that use, C2(a), for this reason.
 
 For a placeholder response time of [1 yr](numbers.md#comp-response-years), a cap needs about
 [1.5 OOM](numbers.md#comp-headroom-needed-small) of headroom at the small-compute rate,
@@ -789,7 +885,11 @@ The four routes divide by whether a count of chips and their use can see them.
 - **Invisible:** algorithmic progress, post-training enhancement and distillation. Their compute is
   small or nil. They can only be met by lowering thresholds on a schedule (algorithmic progress), by
   headroom (post-training), by controlling access to teacher outputs (distillation), and by
-  evaluating capability at declared checkpoints (all three).
+  evaluating capability at declared checkpoints (all three). No detection channel watches them: in
+  E5, which computes the chance each path is missed, distillation from others' outputs has no
+  measured channel and is missed with certainty. Efficiency gains a party holds and has not declared
+  are unsized, since no source measures them, so the line on the declared path rests on the compute
+  a chip count sees, not on the drift term.
 
 This split is what Part II needs from this chapter: it says which leaks the compute backbone absorbs
 and which need other channels.
@@ -803,7 +903,12 @@ The framing is prior work. Inference substituting for training [@villalobos2023t
 [20](numbers.md#comp-davidson-ceg-high)x [@davidson2023enhancements]; research that survives a cap
 [@barnett2025innovation]; a range of yearly rates with no failure calculation
 [@barnett2026closingwindow]; and a treaty with a fixed cap and a cited yearly rate
-[@scher2025agreement].
+[@scher2025agreement]. So are the terms of the model. Fleet accounting from holdings, with research
+overhead, utilisation, an inference multiple and an uncertainty allowance, is the hardwired-pause
+group's [@fithian2026hardwired]; a breakout-type time with a feedback term that falls as compute grows
+is Gan's [@gan2026clock]; additive accounting of fine-tuning, extra inference and distillation
+against a training threshold is [@pistillo2025loopholes]; the span set by cheap verification is
+[@villalobos2023tradeoff]; and scale dependence is [@gundlach2025origin].
 
 A leak tied to a breakout horizon is also prior work. A Narrow Path sizes cluster limits so that an
 illegal run on a licensed cluster would take [3.2 years](numbers.md#comp-narrowpath-breakout),
@@ -816,20 +921,33 @@ computes that [57%](numbers.md#comp-hwp-eff) yearly efficiency gains over
 gives [2.66](numbers.md#comp-hwp-check)x, which reproduces their [2.65](numbers.md#comp-hwp-ratio)x
 rise. Its efficiency rate is a fixed scenario input, and its horizon is chosen, not measured.
 
-What this chapter adds, if it survives the verification levels: the algorithmic rate as a function
-of the cap's scale rather than one number; the one-off post-training jump and the inference span,
-conditioned on a verifier, inside the same expression; distillation treated as a ceiling transfer
-gated by access rather than as a rate; and the visible-invisible split. That combination was not
-found in the survey's searches, which is a claim about those searches, not about the literature.
-Label: extends prior work.
+This chapter first claimed four additions: the algorithmic rate as a function of the cap's scale,
+the one-off jump and the verifier-conditioned span inside one expression, distillation as a ceiling
+transfer, and the visible-invisible split. Verification took most of them. The independent prior-art
+search (L1) found every term prior work and relabelled the whole a combination. The scale-dependent
+rate is Gundlach et al.'s, and E1 did not find it; the verifier-conditioned span and the accounting
+of distillation are rules others wrote; and the ceiling is false as a rule, since a student can
+exceed its teacher (L4). What may remain ours, as C2 states it: one expression evaluated per path
+from verified holdings, a measured rather than assumed loop-gain term (C4), and the split between
+leaks a chip count sees and leaks it does not. It adds something only if, for some holding class the
+protocol cares about, it differs from a single-multiplier breakout time by more than either's
+interval, or if, backtested, it predicts the open-closed lag; both are untested. Tabulating it in
+advance with an interval is cut, since E1 cannot identify the drift rate. The combination was not
+found in the searches, which is a claim about those searches, not about the literature. Label: a
+combination of prior work.
 
 ### What would test it
 
-E1 and E10 supply the parameters; the test is a Monte Carlo over them. Draw g from the scale-binned
-fit of A3 at the cap's scale, J from E10's post-training and distillation arms, and the inference span
-from E10's verifier and no-verifier arms. Compute the distribution of leak time for a grid of
-headrooms, and the headroom needed for the leak time to exceed m T_r, using T_r from E5 when it
-exists. Then backtest: set a hypothetical cap at a past date at the compute of a then-frontier model,
+E18 in the claims file, not run: a Monte Carlo over the parameters. E1 was to supply g from the
+scale-binned fit of A3 at the cap's scale and cannot, since the rate is not identified, so E18 runs
+first on this chapter's ranges, with J from E10's post-training and distillation arms and the
+inference span from E10's verifier and no-verifier arms. Compute the distribution of leak time for a
+grid of headrooms, and the headroom needed for the leak time to exceed m T_r, with T_r the detection
+time plus the response time. E5 has run and gives the declared path's detection time,
+[39.0 days](numbers.md#e5-td-declared-days), set by chip sampling; it gives distillation none. The
+response time has no measured bound: of findings made while the party was in its treaty,
+[25%](numbers.md#e24-halt-share-never) were never followed by a halt (E24). So the placeholder of
+[1 yr](numbers.md#comp-response-years) above stays a placeholder. Then backtest: set a hypothetical cap at a past date at the compute of a then-frontier model,
 and check whether the model predicts when open models trained under that cap matched the frontier,
 against the measured open-closed lag of [4 months](numbers.md#comp-open-closed-lag)
 [@edwards2026openclosed]. A model that cannot predict that lag should not set a treaty schedule.
@@ -845,21 +963,24 @@ Four quantities from this chapter are candidates for the protocol to trigger on 
    capability within [12 months](numbers.md#comp-consumer-lag-hi) and already hosts distributed RL
    rollouts.
 
-2. **The cap's leak rate at its own scale, in OOM a year, and its one-off leak, in OOM.** Measured
-   by E1 and E10. Together they set how fast thresholds must fall and how much headroom a cap needs:
-   for the placeholder response time of [1 yr](numbers.md#comp-response-years), about
+2. **The cap's leak rate at its own scale, in OOM a year, and its one-off leak, in OOM.** To be
+   measured by E1, E15 and E10. Together they set how fast thresholds must fall and how much headroom
+   a cap needs: for the placeholder response time of [1 yr](numbers.md#comp-response-years), about
    [1.5 OOM](numbers.md#comp-headroom-needed-small) to
-   [2.1 OOM](numbers.md#comp-headroom-needed-rosetta) (the one-off jump plus a year's drift), and
-   about [3.4 OOM](numbers.md#comp-headroom-needed-verifier) where a cheap verifier exists. Weakest
-   point: the scale dependence is measured at small scale and at the frontier, not at realistic cap
-   levels, and whether techniques stack is unmeasured.
+   [2.1 OOM](numbers.md#comp-headroom-needed-rosetta) (the one-off jump plus a year's drift) at
+   published rates, and about [3.4 OOM](numbers.md#comp-headroom-needed-verifier) where a cheap
+   verifier exists. Weakest point: E1 could not identify the rate on public data, which ran from
+   [2.6](numbers.md#e1-algo-annual-subset-min)x to [1,512](numbers.md#e1-algo-annual-subset-max)x a
+   year with the choice of models; the scale dependence is measured only in small-scale ablations,
+   which E1 did not confirm; and whether techniques stack is unmeasured.
 
 3. **Capability on a stitched scale at declared checkpoints, at intervals of about
    [4](numbers.md#comp-rsp-cadence)x effective compute.** Measured by refreshed batteries under a
    fixed elicitation budget (D5). It catches the invisible leaks (algorithms, post-training,
    distillation) by their result. Weakest point: forecast error of
-   [18 pp](numbers.md#comp-task-mae-1oom) on a single task one OOM ahead, and capability hidden from
-   the evaluator.
+   [18 pp](numbers.md#comp-task-mae-1oom) on a single task one OOM ahead, and in E1
+   [17.0 pp](numbers.md#e1-oos-bench-mae-pp) per benchmark score with a bound that overshoots at the
+   top; and capability hidden from the evaluator.
 
 4. **Access to an uncapped teacher's outputs, and to cheap verifiers on AI research tasks.** Measured
    by output-access logs at model providers, and by the generation-verification gap as a function of
@@ -867,7 +988,10 @@ Four quantities from this chapter are candidates for the protocol to trigger on 
    gate. Weakest point: outputs are information, and policing their use for training looks more like
    the Biological Weapons Convention than like nuclear safeguards.
 
-The protocol should change in three ways because of this chapter. D3 must use a scale-dependent
-efficiency term, not one multiplier. The compute limit should be on compute held, not training
-compute per run. And distillation from licensed models needs a gate of its own, set high enough that
-it does not stop the cheap small models useful AI depends on.
+The protocol should change in three ways because of this chapter. D3 cannot rest on one tabulated
+efficiency multiplier, nor yet on a scale-dependent one: E1 finds the drift rate not identified, and
+whether it depends on scale is open until E15, so the declared path's breakout time rests on the
+compute a chip count sees. The compute limit should be on compute held, not training compute per
+run. And distillation from licensed models needs a gate of its own, keyed to the teacher, set high
+enough that it does not stop the cheap small models useful AI depends on, and below the line by the
+uplift a student can gain over its teacher.

@@ -14,6 +14,10 @@
 6. Every link from one research document to another names a file that exists, and every anchor
    (#...) names a heading in it, by the site's rule (site/lib/text.ts slugify: ids on ## and ###
    headings). The site turns each into a page link, so a miss is a dead link there.
+7. Every experiment result in data/results/ is strict JSON (no Infinity or NaN, which the site's
+   JSON.parse refuses), and every ledger input it records (details.ledger_inputs) still exists with
+   the value it ran with. An input that changed or was removed upstream means the experiment must
+   be rerun before its numbers are cited.
 """
 
 from __future__ import annotations
@@ -142,6 +146,40 @@ def check_sync() -> None:
         print("ok   every ledger link shows the model's value")
 
 
+def check_results() -> None:
+    import math
+
+    def refuse(name: str) -> float:
+        raise ValueError(f"{name} is not JSON")
+
+    numbers = json.loads((ROOT / "data" / "numbers.json").read_text())
+    numbers = numbers.get("numbers", numbers)
+    paths = sorted((ROOT / "data" / "results").glob("*.json"))
+    bad = 0
+    for path in paths:
+        name = path.relative_to(ROOT)
+        try:
+            result = json.loads(path.read_text(), parse_constant=refuse)
+        except ValueError as e:
+            bad += 1
+            print(f"{name}: {e}", file=sys.stderr)
+            continue
+        for key, ran in (result.get("details", {}).get("ledger_inputs") or {}).items():
+            ran = ran.get("value") if isinstance(ran, dict) else ran
+            if key not in numbers:
+                bad += 1
+                print(f"{name}: ledger input {key} no longer exists", file=sys.stderr)
+            elif isinstance(ran, (int, float)) and not math.isclose(
+                ran, numbers[key]["value"], rel_tol=1e-9, abs_tol=1e-12
+            ):
+                bad += 1
+                print(f"{name}: ledger input {key} ran at {ran}, the ledger now has {numbers[key]['value']}", file=sys.stderr)
+    if bad:
+        fail(f"results: {bad} problem{'s' if bad != 1 else ''}; fix or rerun the experiment")
+    else:
+        print(f"ok   {len(paths)} results are strict JSON and ran on the ledger's current inputs")
+
+
 def load_sources() -> dict:
     path = ROOT / "research" / "sources.toml"
     data = tomllib.loads(path.read_text())
@@ -232,7 +270,11 @@ def check_inputs() -> None:
         print(f"ok   {len(raw)} inputs, every source exists")
 
 
-DOC_LINK = re.compile(r"\]\((?:\.\./research/)?([0-9][0-9a-z-]*\.md)(?:#([^)]*))?\)")
+# A research file, from research/, research/verification/ (one level down) or paper/; and the
+# verification reports themselves.
+DOC_LINK = re.compile(
+    r"\]\((?:\.\./)?(?:research/)?((?:verification/[a-z0-9-]+|[0-9][0-9a-z-]*)\.md)(?:#([^)]*))?\)"
+)
 SELF_LINK = re.compile(r"\]\(#([^)]+)\)")
 
 
@@ -264,7 +306,7 @@ def check_doc_links() -> None:
                 continue
             for i, line in enumerate(path.read_text().splitlines(), 1):
                 links = [(t, a) for t, a in DOC_LINK.findall(line)]
-                links += [(path.name if folder == "research" else "", a) for a in SELF_LINK.findall(line)]
+                links += [("", a) for a in SELF_LINK.findall(line)]
                 for target, anchor in links:
                     file = ROOT / "research" / target if target else path
                     if not file.exists():
@@ -285,6 +327,7 @@ def main() -> int:
     check_sources()
     check_inputs()
     check_doc_links()
+    check_results()
     if failures:
         print(f"check: {len(failures)} failure{'s' if len(failures) != 1 else ''}", file=sys.stderr)
         return 1

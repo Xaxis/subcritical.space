@@ -197,6 +197,82 @@
       }
     },
     "halt": {
+      "cases": [
+        "dprk-1993",
+        "dprk-2002",
+        "iran-2002",
+        "iran-fordow",
+        "iraq-1995",
+        "libya-2003",
+        "syria-cw-2013",
+        "ussr-1989"
+      ],
+      "days": {
+        "dprk-1993": [
+          657,
+          1
+        ],
+        "dprk-2002": [
+          7134,
+          0
+        ],
+        "iran-2002": [
+          432,
+          1
+        ],
+        "iran-fordow": [
+          2304,
+          1
+        ],
+        "iraq-1995": [
+          336,
+          1
+        ],
+        "libya-2003": [
+          103,
+          1
+        ],
+        "syria-cw-2013": [
+          64,
+          1
+        ],
+        "ussr-1989": [
+          447,
+          0
+        ]
+      },
+      "halted": 6,
+      "km_hi_days": 2304.0,
+      "km_lo_days": 103.0,
+      "km_median_days": 432.0,
+      "km_share_inf": 0.0192,
+      "lognormal": {
+        "bootstrap_draws": 1999,
+        "median_days": 686.8262762886422,
+        "median_hi_days": 2949.2493066991938,
+        "median_lo_days": 243.27352173418407,
+        "mu": 6.532081387302299,
+        "q05_days": 38.800890459136774,
+        "q95_days": 12157.719274441013,
+        "sigma": 1.7470479706358977
+      },
+      "median_if_halted_days": 384.0,
+      "n": 8,
+      "share_never": 0.25
+    },
+    "halt_after_exit": {
+      "exit_effective": {
+        "dprk-nuclear": "2003-01-11"
+      },
+      "findings": [
+        "dprk-2006",
+        "dprk-2009",
+        "dprk-2013",
+        "dprk-2016",
+        "dprk-2017"
+      ]
+    },
+    "halt_all_findings": {
       "days": {
         "dprk-1993": [
           657,
@@ -255,20 +331,12 @@
       "km_hi_days": null,
       "km_lo_days": 336.0,
       "km_median_days": 2304.0,
-      "km_share_inf": 0.2648,
-      "lognormal": {
-        "bootstrap_draws": 1999,
-        "median_days": 1831.6685374807435,
-        "median_hi_days": 11373.677412169058,
-        "median_lo_days": 580.846584339808,
-        "mu": 7.512982599541653,
-        "q05_days": 45.45197522540154,
-        "q95_days": 73814.38572380987,
-        "sigma": 2.247206839558362
-      },
+      "km_share_inf": 0.2557,
       "median_if_halted_days": 336.0,
+      "median_if_halted_years": 0.919917864476386,
       "n": 13,
-      "share_never": 0.46153846153846156
+      "share_never": 0.46153846153846156,
+      "share_reversed": 0.7142857142857143
     },
     "halt_days_until_reversed": {
       "dprk-1993": 2951,
@@ -320,7 +388,7 @@
       "km_hi_days": 657.0,
       "km_lo_days": 64.0,
       "km_median_days": 336.0,
-      "km_share_inf": 0.0058,
+      "km_share_inf": 0.0046,
       "median_if_halted_days": 336.0,
       "n": 6,
       "share_never": 0.16666666666666663
@@ -736,9 +804,23 @@
       "unit": "findings",
       "value": 17.0
     },
+    "e24-halt-after-exit": {
+      "fmt": ",.0f",
+      "label": "findings made after the party's withdrawal from the treaty took effect, left out of the halt analysis",
+      "note": "",
+      "unit": "findings",
+      "value": 5.0
+    },
     "e24-halt-findings": {
       "fmt": ",.0f",
-      "label": "findings in the halt analysis (those whose sources say whether a halt followed)",
+      "label": "findings in the halt analysis: made while the party was in the treaty, with sources that say whether a halt followed",
+      "note": "",
+      "unit": "findings",
+      "value": 8.0
+    },
+    "e24-halt-findings-all": {
+      "fmt": ",.0f",
+      "label": "findings with a halt record, including those after the party's withdrawal",
       "note": "",
       "unit": "findings",
       "value": 13.0
@@ -762,6 +844,13 @@
       "label": "Kaplan-Meier median years from a finding to a halt, findings never halted censored",
       "note": "",
       "unit": "years",
+      "value": 1.1827515400410678
+    },
+    "e24-halt-km-median-years-all": {
+      "fmt": ".1f",
+      "label": "Kaplan-Meier median years to a halt, every finding including those after the party's withdrawal",
+      "note": "",
+      "unit": "years",
       "value": 6.308008213552362
     },
     "e24-halt-km-median-years-lo": {
@@ -769,49 +858,49 @@
       "label": "the same median, 5th percentile of resampling the findings",
       "note": "",
       "unit": "years",
-      "value": 0.919917864476386
+      "value": 0.28199863107460643
     },
     "e24-halt-km-over-hwp": {
       "fmt": ".1f",
       "label": "Kaplan-Meier median time to a halt over the reaction horizon the hardwired-pause paper chooses",
       "note": "",
       "unit": "",
-      "value": 3.154004106776181
+      "value": 0.5913757700205339
     },
     "e24-halt-km-share-unbounded": {
       "fmt": "%",
       "label": "share of resampled tables in which fewer than half the findings are ever halted (no median)",
       "note": "",
       "unit": "",
-      "value": 0.2648
+      "value": 0.0192
     },
     "e24-halt-lognormal-median-years": {
       "fmt": ".1f",
       "label": "median years to a halt of a log-normal fitted with censoring",
       "note": "",
       "unit": "years",
-      "value": 5.0148351471067585
+      "value": 1.8804278611598693
     },
     "e24-halt-lognormal-median-years-hi": {
       "fmt": ".1f",
       "label": "the log-normal median, 95th percentile of resampling the findings",
       "note": "",
       "unit": "years",
-      "value": 31.139431655493656
+      "value": 8.074604535795192
     },
     "e24-halt-lognormal-median-years-lo": {
       "fmt": ".1f",
       "label": "the log-normal median, 5th percentile of resampling the findings",
       "note": "",
       "unit": "years",
-      "value": 1.590271278137736
+      "value": 0.6660466029683342
     },
     "e24-halt-median-if-halted-years": {
       "fmt": ".1f",
-      "label": "median years from a finding to the first halt, among findings that were halted",
+      "label": "median years from a finding to the first halt, among those findings that were halted (the unhalted left out)",
       "note": "",
       "unit": "years",
-      "value": 0.919917864476386
+      "value": 1.051334702258727
     },
     "e24-halt-min-days": {
       "fmt": ",.0f",
@@ -825,21 +914,28 @@
       "label": "median time to a halt, among findings halted, over the violator's fastest exit",
       "note": "",
       "unit": "",
-      "value": 10.838709677419354
+      "value": 12.387096774193548
     },
     "e24-halt-share-never": {
       "fmt": "%",
       "label": "share of those findings followed by no halt by the end of what the sources cover",
       "note": "",
       "unit": "",
+      "value": 0.25
+    },
+    "e24-halt-share-never-all": {
+      "fmt": "%",
+      "label": "share never halted, every finding including those after the party's withdrawal",
+      "note": "",
+      "unit": "",
       "value": 0.46153846153846156
     },
     "e24-halt-share-reversed": {
       "fmt": "%",
-      "label": "share of halts later reversed or shown incomplete in the same sources",
+      "label": "share of halts in the halt analysis later reversed or shown incomplete in the same sources",
       "note": "",
       "unit": "",
-      "value": 0.7142857142857143
+      "value": 0.6666666666666666
     },
     "e24-military-max-days": {
       "fmt": ",.0f",
@@ -853,7 +949,7 @@
       "label": "MIRI's draft withdrawal notice over the median time to a halt among findings halted",
       "note": "",
       "unit": "",
-      "value": 1.0870535714285714
+      "value": 0.951171875
     },
     "e24-programmes": {
       "fmt": ",.0f",

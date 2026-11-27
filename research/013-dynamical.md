@@ -20,13 +20,18 @@ even the name "loop gain" are prior work: Yudkowsky framed self-improvement as a
 multiplication factor in 2013 [@yudkowsky2013iem], Davidson, Halperin, Houlden and Korinek proved
 the coupled condition in 2026 [@davidson2026feedback], Cunningham et al. named and calibrated the
 loop gain [@cunningham2026rsi], and Burtsev defined a recursive reproduction number across
-development cycles and across actors [@burtsev2026criticality]. What may remain ours is narrower: an
-estimator with a stated confidence bound used as a binding trigger, and a treaty bound on the
-measured coupled gain in which each edge is cut and verified separately. Both are candidates, not
+development cycles and across actors [@burtsev2026criticality]. None of it is new. What may remain
+ours is narrower, and the independent prior-art search narrowed it again. An exact round identity
+used to estimate the loop gain in a staged run, with a budget ladder, extends prior work narrowly; it
+is a measurement whose power to decide anything is not yet shown, and as a trigger it is cut on
+current evidence. The coupled-gain certificate applied as a treaty test, each edge cut and verified
+separately, is an application of prior work: the certificate is control theory's small-gain theorem
+[@dashkovskiy2007smallgain], and on today's evidence it cannot issue. Both are candidates, not
 findings, and "not found" below is always a claim about our search.
 
 The chapter states one common form, then the five loops (Y1a to Y1e), then runaway against
-saturation (Y2) and coupling (Y3), and closes with the quantities the protocol should trigger on.
+saturation (Y2) and coupling (Y3), and closes with the quantities the protocol should measure or
+limit. None of them is yet a trigger.
 
 ## The common form: a growth law and its returns
 
@@ -142,12 +147,20 @@ There are three routes, each with a different owner and a different way to fail.
   [2,700 s](numbers.md#dyn-speedrun-baseline-s) to [39.9 s](numbers.md#dyn-speedrun-record-s) on
   fixed 8xH100 hardware over [824 days](numbers.md#dyn-speedrun-span-days), a factor of
   [67.7](numbers.md#dyn-speedrun-ratio) [@moddednanogpt; @epoch2026speedrundata], and a benchmark of
-  reimplementation tasks is built on its records [@zhao2025speedrun]. Error: small-scale returns may
+  reimplementation tasks is built on its records [@zhao2025speedrun]. E4's recount of Epoch's series
+  gives a speedup of [70](numbers.md#e4-speedup) over [92 records](numbers.md#e4-records), each
+  record's gain counted under the rules then in force; [84%](numbers.md#e4-algo-share) of the log speedup came from algorithmic records,
+  and [1.1%](numbers.md#e4-ai-share) from the [5 records](numbers.md#e4-ai-records) that credit an AI
+  system, each with a human. Error: small-scale returns may
   not transfer to the frontier [@gundlach2025origin], wall-clock time mixes systems engineering with
   algorithms, and an agent can depress its own result. Claude 3.7 Sonnet was "almost capable of
   zero-shot sabotage without using a scratchpad" on ML tasks, and zero-shot monitors showed an
   "underwhelming true positive rate" at low false-positive rates [@gasteiger2025subtlesandbag]. A
-  staged gain is a lower bound unless the agent is elicited by fine-tuning on the task.
+  staged gain is a lower bound unless the agent is elicited by fine-tuning on the task. In E4's
+  simulation an agent that withheld gain in a pattern kept the upper-bound rule silent in at least
+  half the runs on a loop at the corrected 95th percentile by withholding
+  [16%](numbers.md#e4-hide-silence-fav) of its achievable gain, even with large, tightly measured
+  rounds; that is the shortfall an elicitation step would have to catch.
 
 ### Evidence for and against
 
@@ -189,8 +202,14 @@ for computer vision, [0.40](numbers.md#dyn-r-rl-corrected) for reinforcement lea
 [0.63](numbers.md#dyn-r-lm-corrected) for language models. Even at the 95th percentile the corrected
 values for vision and reinforcement learning stay below 1 ([0.70](numbers.md#dyn-r-cv-hi-corrected)
 and [0.90](numbers.md#dyn-r-rl-hi-corrected)); the corrected language-model interval runs from
-[0.36](numbers.md#dyn-r-lm-lo-corrected) to [1.07](numbers.md#dyn-r-lm-hi-corrected). Whitfill and
-Wu estimate the elasticity of substitution between research compute and labour at the frontier at
+[0.36](numbers.md#dyn-r-lm-lo-corrected) to [1.07](numbers.md#dyn-r-lm-hi-corrected). These
+corrections divide r by the bottleneck factor, so they leave compute's own growth out: they are the
+special case in which research compute grew at the same rate as the labour proxy. Counting compute's
+historical growth, E9 puts the language-model gain at fixed compute at
+[0.25](numbers.md#e9-lm-k-fixed) at a compute share of [0.67](numbers.md#dyn-research-compute-share)
+([0.42](numbers.md#e9-lm-k-fixed-hi) at the 95th percentile), above 1 only for shares below about
+[0.26](numbers.md#e9-lm-share-crit); none of E9's data identifies the share. Whitfill and Wu
+estimate the elasticity of substitution between research compute and labour at the frontier at
 [-0.10](numbers.md#dyn-sigma-frontier-spec) (complements), in which case effective research effort
 "is bounded"; their other specification gives [2.58](numbers.md#dyn-sigma-compute-spec)
 (substitutes), from only four firm clusters, and they call the results "divergent"
@@ -275,11 +294,17 @@ The memo's own definition of D2 does not survive as written: "With the human-con
 (compute, data) held fixed and the AI doing the research, g is the ratio of the capability gained in
 round n+1 to the capability gained in round n." A staged experiment can hold compute fixed; real
 development does not, so field measurements must divide out input growth. And capability gained on a
-bounded scale shrinks whatever the feedback. The restatement above fixes both. Revised label:
-extends prior work. Not found in our search: an estimator that is run at fixed compute in a staged
-experiment, reported with a confidence bound, and used as a binding trigger. The memo's rank 1 for
-self-improvement survives as "the loop closest to closing in its labour input", and weakens as "the
-route around a compute cap".
+bounded scale shrinks whatever the feedback. The restatement above fixes both. Revised label: prior
+work for the loop and its condition; extends prior work, narrowly, for the estimator. The independent
+search found the binding rule in epidemic control, which acts on the upper bound of a reproduction
+number [@blumberg2020supercritical], and a staged, fixed-budget test of an AI research loop with
+held-out scoring [@srikanth2026aide2]. What remains is the exact round identity as the estimator and
+the budget ladder, a measurement design whose decision power is unshown. Its use as a binding trigger
+is cut: at the only noise level calibrated to data, E4's final simulation found the rule on K fires
+about as often below 1 as above
+([C4](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound)). The
+memo's rank 1 for self-improvement survives as "the loop closest to closing in its labour input",
+and weakens as "the route around a compute cap".
 
 ### What it means for the protocol
 
@@ -290,40 +315,85 @@ A candidate, not a finding:
   labour are complements, a cap on research compute bounds effective research however good the AI
   researchers become. If they are substitutes, the cap leaks. The protocol should measure which, not
   assume it.
-- **Trigger on the gain, with its bound.** K_S is estimated per development cycle from mandatory
-  declarations (algorithmic efficiency at fixed compute, spend by input, the AI share of advances)
-  and from staged runs. The trigger fires when the upper confidence bound crosses a margin below 1
-  (Y3 sets the margin). Today's numbers show why the bound decides: the corrected language-model
-  median is [0.63](numbers.md#dyn-r-lm-corrected), but the corrected 95th percentile is
-  [1.07](numbers.md#dyn-r-lm-hi-corrected). If those historical estimates carried over to an
-  automated frontier loop, an upper-bound trigger would already fire and a median trigger never
-  would. The width of the interval is the problem, and E4 and E9 exist to narrow it.
+- **Measure the gain, with its bound; restrict the closed loop by the prior-work rule.** K_S is a
+  measurement, not a trigger. It is estimated per development cycle from mandatory declarations
+  (algorithmic efficiency at fixed compute, spend by input, the AI share of advances) and from staged
+  runs. The trigger once proposed here, restricting while the upper confidence bound exceeds a margin
+  below 1, is cut on current evidence. The width of the interval is the problem. Under the published
+  compute correction the language-model median is [0.63](numbers.md#dyn-r-lm-corrected) and the 95th
+  percentile [1.07](numbers.md#dyn-r-lm-hi-corrected), so an upper-bound rule would fire on
+  historical estimates and a median rule never would; counting compute's growth, E9 gives
+  [0.25](numbers.md#e9-lm-k-fixed) and [0.42](numbers.md#e9-lm-k-fixed-hi) at the same share, and
+  neither would. At the only noise level calibrated to data, E4's final simulation ran the rule on K
+  with a placeholder margin of [0.90](numbers.md#e4-gstar). On a loop at the corrected median of r it
+  fired in [88%](numbers.md#e4-k-fa-n5) of runs after 5 rounds at each of three budgets and
+  [80%](numbers.md#e4-k-fa-nmax) after 50; on a loop at the corrected 95th percentile it missed
+  [10%](numbers.md#e4-k-late-cal). It fired only [2%](numbers.md#e4-k-fire-gap-n5) more often on the
+  higher loop, and the rule on r alone [3%](numbers.md#e4-fire-gap-n5) more, both within Monte Carlo
+  error, so it cannot decide
+  ([C4](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound)).
+  It returns only if staged runs at two scales (E4(b)) show real rounds tight enough to separate the
+  two. Until then closed-loop training research at frontier scale is restricted outright, the
+  prior-work rule [@miotti2025narrowpath], which binds only the loops a developer declares
+  ([C4.8](verification/l4-red-team.md#c4)), and E4(b) and E9 go on narrowing the interval.
 - **Make verification mandatory, compute included.** A developer withdrew compute verification
   midway through the one independent assessment of AI R&D acceleration we found.
 - **Cost to useful AI:** low to moderate. AI help with coding and research in general stays allowed.
-  The limit applies to frontier-scale research compute and to autonomous research above the trigger.
+  The limit applies to frontier-scale research compute and to closed-loop training research at
+  frontier scale.
 
 ### What would test it
 
 - **E4(a), historical.** Fit per-record gains on the speedrun series, separating systems from
   algorithmic changes and using contributor counts as the input, with bootstrap intervals. Test
-  whether the record's shape is consistent with K below 1 at fixed hardware: the annualised pace
-  fell from about [58](numbers.md#dyn-speedrun-first-annual) in the first months to
-  [1.6](numbers.md#dyn-speedrun-rate-2025) across 2025, a factor of
-  [36](numbers.md#dyn-speedrun-slowdown), then rose to [4.9](numbers.md#dyn-speedrun-2026-annual) in
-  2026, against [6.5](numbers.md#dyn-speedrun-annual) on average (the window figures are the
-  survey's arithmetic on Epoch's data, which E4 recomputes).
+  whether the record's shape is consistent with K below 1 at fixed hardware. Done. E4 recomputed the
+  pace with re-timings removed: an annualised [59](numbers.md#e4-pace-first8) in the first eight
+  months, [1.59](numbers.md#e4-pace-2025) across 2025 and [4.9](numbers.md#e4-pace-2026) in 2026,
+  against [6.6](numbers.md#e4-pace-whole) over the whole record. The history cannot place r. Across
+  months the stock and the log of the research input correlate at
+  [0.98](numbers.md#e4-sr-collinearity), and placebo inputs put in place of contributors return an r
+  of their own: [0.59](numbers.md#e4-sr-placebo-r-records) for the count of recent records and
+  [1.03](numbers.md#e4-sr-placebo-r-time) for time itself. An r fitted to the record reflects the
+  shared trends, not the input, so the speedrun's r is withdrawn as not identified
+  ([C4](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound)).
+- **E4(c), simulated, done.** The estimator's coverage and the trigger's error rates, in the common
+  form, at noise calibrated to the speedrun's monthly spread. The interval under-covers: after 5
+  rounds at each of three budgets the nominal 90% interval on r held the truth in
+  [82%](numbers.md#e4-cov-n5) of runs for the first-order level form and
+  [77%](numbers.md#e4-cov-n5-xml) for maximum likelihood on the exact identity. Every estimator leans
+  subcritical, the unsafe side: on data from the exact round law the median estimate was
+  [0.82](numbers.md#e4-level1-bias) times the true r for the level form,
+  [0.77](numbers.md#e4-xml-bias) for maximum likelihood and [0.47](numbers.md#e4-diff-bias) for the
+  first-order difference regression. Two held-out sets do not remedy it: where the noise is error in
+  measuring each round, they turn [0.57](numbers.md#e4-diff-bias-meas1) times the true r into
+  [8.11](numbers.md#e4-diff-bias-meas2) times it, and where it is real variation in the round's gain,
+  a second set measures that variation identically. A sandbagger that withholds gain in a pattern
+  silences the upper bound by withholding [16%](numbers.md#e4-hide-silence-fav) of its gain in
+  favourable rounds and [42%](numbers.md#e4-hide-silence-cal) at the calibrated noise. The trigger's
+  rates are above; together they cut it.
 - **E4(b), staged.** An agent fine-tuned on the task improves a small model's recipe over n rounds
   at fixed training compute C. The researcher is a fixed agent, so the loop is open, and the run
   measures r for AI research labour on that target, not closure. Round k's gain is Delta_k in log
   effective compute. In the common form with a fixed budget per round, ln(Delta_(k+1) / Delta_k) =
-  -beta * Delta_k, so the slope of that regression estimates beta; repeating at 1, 2 and 4 times the
+  -beta * Delta_k holds to first order only; exactly, ln[(e^(beta Delta_(k+1)) - 1) /
+  (e^(beta Delta_k) - 1)] = -beta * Delta_k ([Part III, Lemma 4.1](05-formal.md#c4-the-loop-gain-estimator)),
+  which costs nothing since beta is fitted anyway. The slope of that regression estimates beta; repeating at 1, 2 and 4 times the
   agent budget per round estimates lambda from how the gain scales. Report r = lambda / beta with a
   bootstrap 90% interval, and repeat at two model scales to test transfer. The test settles the side
   of 1 only if both bounds fall on the same side. Closure e (Burtsev's chi) has to come from
-  declarations of how much of the pipeline AI runs.
-- **E9.** Refit r across domains with compute's share as a free parameter and report how much of
-  each interval lies above 1 after the correction.
+  declarations of how much of the pipeline AI runs. Not yet run, it is also the only measurement of
+  a real round's noise, which decides whether a trigger on the gain can return.
+- **E9, done.** It refitted r across domains with compute's share of research input free. No data
+  identifies the share: for Stockfish, where both inputs are logged, every share from
+  [0.00](numbers.md#e9-chess-share-lo) to [1.00](numbers.md#e9-chess-share-hi) fits within the 95%
+  region. Counting compute's historical growth at a share of
+  [0.67](numbers.md#dyn-research-compute-share), the gain at fixed compute is
+  [0.25](numbers.md#e9-lm-k-fixed) for language models ([0.42](numbers.md#e9-lm-k-fixed-hi) at the
+  95th percentile) and [0.28](numbers.md#e9-cv-k-fixed) for computer vision, above 1 only for shares
+  below about [0.26](numbers.md#e9-lm-share-crit) and [0.21](numbers.md#e9-cv-share-crit). Stockfish's
+  r, [0.73](numbers.md#e9-chess-r), rests on its two trends: a smooth placebo input growing at the
+  same rate gives [0.79](numbers.md#e9-chess-placebo-r). So which side of 1 the software loop sits
+  on turns on a share no data yet measures.
 
 ## Y1b. The hardware loop
 
@@ -400,10 +470,16 @@ and must be declared there.
 
 ### What would test it
 
-E9 on Bloom et al.'s replication package (licence not yet confirmed) re-estimates beta for
-semiconductors with an interval and gives E11 its K_H. The closure e_H has no data source in our
-survey; a measurement of AI's share of chip design advances is an open item, not a planned
-experiment.
+E9 recomputed Bloom et al.'s beta for Moore's Law from their files, [0.20](numbers.md#e9-moore-beta),
+an r of [5.1](numbers.md#e9-moore-r) at lambda = 1, from [2.5](numbers.md#e9-moore-r-min) to
+[7.3](numbers.md#e9-moore-r-max) across their six R&D series. The closure e_H has no data source in
+our survey, and a measurement of AI's share of chip design advances is an open item, not a planned
+experiment. E11 shows what that gap costs. With research closure gated, the economic gain at zero
+and the software loop at its corrected 95th percentile, the coupled certificate's rho(U)
+([Y3](#y3-coupling)) stays at or below 1 only if AI's share of hardware research is below
+[0.064](numbers.md#e11-ah-max-gated); with the compute stock capped, it needs no bound on that
+share. Counting chips, not limiting chip technology, is what lets the certificate set this loop
+aside.
 
 ## Y1c. The economic loop
 
@@ -484,8 +560,12 @@ rules [@egan2023kyc; @heim2024cloud]. Cost to useful AI: low. Weak points: diver
 ### What would test it
 
 A new input for E11: eps, fitted by firm from public filings (AI revenue against compute capital and
-ECI over time, with an interval). The revenue data are not yet sourced; until they are, eps enters
-E11 as a stated range, and the test asks whether eps < 1 holds at 90% confidence.
+ECI over time, with an interval). The revenue data are not yet sourced, so E11 ran with eps as a
+stated range. With research closure gated, the software loop at its corrected 95th percentile and
+every other unmeasured entry at zero, rho(U) stays at or below 1 only if the economic gain is
+below [0.32](numbers.md#e11-eta-max-gated), and the cycle from compute to software and back through
+revenue carries [0.81](numbers.md#e11-sens-cycle) of rho(U) at that point. An unmeasured elasticity
+thus decides the certificate, and the test still asks whether eps < 1 holds at 90% confidence.
 
 ## Y1d. The experiential loop
 
@@ -646,7 +726,7 @@ author's model parameter, as marked in the sections above.
 
 | Loop | Own gain | Clock | Room to grow | Gate |
 |---|---|---|---|---|
-| Software | r [1.26](numbers.md#dyn-r-cv), [1.20](numbers.md#dyn-r-rl), [1.89](numbers.md#dyn-r-lm) historical; [0.42](numbers.md#dyn-r-cv-corrected), [0.40](numbers.md#dyn-r-rl-corrected), [0.63](numbers.md#dyn-r-lm-corrected) after the compute correction | about [3](numbers.md#dyn-ie-lag-model-months) months a model; tau [0.5 years](numbers.md#dyn-burtsev-delay) assumed | about [12](numbers.md#dyn-ie-software-oom) orders of magnitude ([11](numbers.md#dyn-sie-distance-oom) in Davidson and Houlden) | research compute |
+| Software | r [1.26](numbers.md#dyn-r-cv), [1.20](numbers.md#dyn-r-rl), [1.89](numbers.md#dyn-r-lm) historical; [0.42](numbers.md#dyn-r-cv-corrected), [0.40](numbers.md#dyn-r-rl-corrected), [0.63](numbers.md#dyn-r-lm-corrected) after the compute correction, which leaves compute's growth out ([0.25](numbers.md#e9-lm-k-fixed) for language models with it counted, E9) | about [3](numbers.md#dyn-ie-lag-model-months) months a model; tau [0.5 years](numbers.md#dyn-burtsev-delay) assumed | about [12](numbers.md#dyn-ie-software-oom) orders of magnitude ([11](numbers.md#dyn-sie-distance-oom) in Davidson and Houlden) | research compute |
 | Hardware | r about [5](numbers.md#dyn-r-gpu) to [7](numbers.md#dyn-r-hardware-hist); closure unmeasured | fabs [1.9 years](numbers.md#dyn-fab-build-years) | about [2](numbers.md#dyn-ie-chiptech-oom) orders (CMOS) | fabs, lithography |
 | Economic | eps unmeasured | 1 GW in [11.6 months](numbers.md#dyn-dc-1gw-months-fastest) at fastest | about [5](numbers.md#dyn-ie-chipprod-oom) orders (chip production) | chip licences, cloud rules |
 | Experiential | unmeasured; forgetting damps it | [30 s](numbers.md#dyn-seal-edit-s-lo) to [45 s](numbers.md#dyn-seal-edit-s-hi) a self-edit | unknown | update compute, attestation |
@@ -686,7 +766,9 @@ intuitive judgment" [@kokotajlo2025takeoff].
   checks.
 
 **Autonomy horizons: the clock of closure.** How long a loop can run between human gates depends on
-how long AI agents work reliably unattended. The 50% time horizon doubled every
+how long AI agents work reliably unattended. A horizon is measured in human time: the time humans
+take on the tasks a model completes [@kwa2025horizon], not the time the model takes. The 50% time
+horizon doubled every
 [129 days](numbers.md#dyn-horizon-doubling) from 2023 on (95% CI
 [104 days](numbers.md#dyn-horizon-doubling-lo) to [158 days](numbers.md#dyn-horizon-doubling-hi))
 [@metr2026thdata], against [207 days](numbers.md#dyn-horizon-doubling-2019) from 2019 to 2025
@@ -735,15 +817,25 @@ perturbation grows at [0.28/yr](numbers.md#dyn-burtsev-amp-rate), an e-folding t
 times a year (our arithmetic on his scenario, which he does not estimate). A regime that responds
 within months would have time in that scenario. A gain well above 1, or a clock of days, would not.
 The human-held gates that set the clocks (human review of research, fab construction, identity
-checks) are the protocol's delayed neutrons, and it should keep them. The cost to useful AI is the
-autonomy cost: gates spaced to the 80% horizon must move further apart as horizons double, or they
-start to bind on useful work.
+checks) are the protocol's delayed neutrons, and it should keep them. Gates count the agent's
+completed horizon-length tasks, not hours: an agent that finishes a horizon-length task in minutes
+can chain several between gates a horizon apart on the clock
+([C11.4](verification/l4-red-team.md#c11)), until its own wall-clock time on such tasks is measured
+for each system. The cost to useful AI is the autonomy cost: as horizons double, each counted task
+holds more work, and gates set closer than the work an agent does reliably start to bind on useful
+work.
 
 ### What would test it
 
-E9: fit returns across domains for runaway against saturation, with intervals and the compute share
-free. E2: refit the 50% and 80% doubling times with a bootstrap and test whether the ratio between
-them is stable, shrinking or growing, since that ratio sets how far apart gates can be.
+E9 has run (Y1a): it fitted returns across domains with the compute share free, and the share, not
+the fit, decides the side of 1. E2 has run too. Our refit reproduces METR's 50% doubling time,
+[129 days](numbers.md#e2-doubling-p50) ([96 days](numbers.md#e2-doubling-p50-lo) to
+[162 days](numbers.md#e2-doubling-p50-hi)), puts the 80% doubling time at
+[133 days](numbers.md#e2-doubling-p80) and the median ratio of the two horizons at
+[5.3](numbers.md#e2-p50-over-p80), and finds that ratio stable: it changes by a factor of
+[1.07](numbers.md#e2-ratio-trend) a year, with an interval from [0.88](numbers.md#e2-ratio-trend-lo)
+to [1.26](numbers.md#e2-ratio-trend-hi) that spans 1. What remains open is the agent's own wall-clock
+time on horizon-length tasks, which no experiment here measures.
 
 ## Y3. Coupling
 
@@ -772,10 +864,12 @@ this usable:
    only help.
 2. **Bounds.** max_i K_ii <= rho(K) <= max_i sum_j K_ij, and for any pair rho(K) >= sqrt(K_ij K_ji).
    For any positive weights w, rho(K) <= max_i (sum_j K_ij w_j) / w_i.
-3. **A certificate.** If upper bounds U_ij >= K_ij hold jointly with probability at least 1 - alpha
-   (for example by a Bonferroni split of alpha over the entries), then by facts 1 and 2, rho(K) <=
-   rho(U) <= max_i sum_j U_ij with that probability. Subcriticality can be certified from a bound on
-   each edge, each verified on its own, without knowing K exactly.
+3. **A certificate.** If upper bounds U_ij >= |K_ij| hold jointly with probability at least 1 -
+   alpha (for example by a Bonferroni split of alpha over the entries), then by facts 1 and 2, rho(K)
+   <= rho(U) <= max_i sum_j U_ij with that probability. Subcriticality can be certified from a bound
+   on each edge, each verified on its own, without knowing K exactly. The test is rho(U) itself. The
+   largest row sum bounds it from above but is looser, and on this chapter's graph it can never
+   issue while compute feeds software (E11, below).
 
 ### Measurement
 
@@ -809,15 +903,30 @@ about [1.15](numbers.md#dyn-burtsev-network-rho) through transfer [@burtsev2026c
 **Against, steelmanned.** With the off-diagonals unmeasured, rho(K) is a model output, not an
 observable, and a treaty bound on it rests on numbers no one can yet check. Some couplings may be
 negative (compute spent on experiments is not spent on training), so the nonnegative matrix is
-itself an assumption (our reasoning, not a sourced finding). Bounding absolute values keeps the
-certificate conservative, since rho(K) <= rho(|K|) for any real matrix, but we have not checked
-whether the explosion condition itself carries over to negative couplings.
+itself an assumption (our reasoning, not a sourced finding). Part III has since settled the signed
+case. With negative couplings, rho(K) > 1 is not the runaway condition: E11 built a signed variant of
+this chapter's graph, software competing with revenue for compute, with rho(K) of
+[1.25](numbers.md#e11-signed-rho), and it grows only logarithmically. What rules runaway out is
+rho(K+) < 1, with K+ the matrix with its negative entries set to zero, and the certificate rho(U) < 1
+gives that, since K+ <= U
+([Part III, Theorem 6.2](05-formal.md#c6-the-coupled-gain-certificate-and-the-runaway-condition)).
+So bounding absolute values keeps the certificate valid, but a signed rho(K) above 1 no longer shows
+runaway.
 
 **Our arithmetic on today's numbers.** The software loop's own corrected gain leaves
 [0.37](numbers.md#dyn-software-headroom) of headroom below 1 for every cross-feed into software at
-the median, and [-0.07](numbers.md#dyn-software-headroom-upper) at the 95th percentile. The row-sum
-certificate therefore cannot be issued at that confidence on today's data, before any cross-feed is
-counted. That says more about the width of the evidence than about the system.
+the median, and [-0.07](numbers.md#dyn-software-headroom-upper) at the 95th percentile. Since
+rho(U) is at least its largest diagonal entry, no certificate can be issued at that confidence with
+the software loop fully closed, whatever edges are cut and before any cross-feed is counted; only
+holding the loop's own closure below [0.93](numbers.md#formal-software-closure-max) can
+([C6](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test)). Both figures rest on the
+published correction, which leaves compute's growth out; counting it, E9's 95th percentile,
+[0.42](numbers.md#e9-lm-k-fixed-hi), would leave headroom, so the conclusion holds only under that
+correction or at a compute share below about [0.26](numbers.md#e9-lm-share-crit). E11 adds that even
+under the correction it rests on the assumed compute share: the result flips at a share of
+[0.689](numbers.md#e11-epsk-flip), only [0.022](numbers.md#e11-epsk-gap) above the ledger's assumed
+value, and of the three domains only language models exceed 1 when fully closed. That says more
+about the width of the evidence than about the system.
 
 ### What the survey changed
 
@@ -825,10 +934,16 @@ The memo wrote that loops that are each subcritical can be supercritical togethe
 must hold the combined gain below 1, and that this is where the project's name comes from. All of
 that is prior work: proved for loops [@davidson2026feedback], proved across actors
 [@burtsev2026criticality], written as a sum of channels [@cunningham2026rsi], stated qualitatively
-[@davidson2025three], and named as criticality in 2013 [@yudkowsky2013iem]. What may remain is
-narrower: holding the measured rho below a margin as a treaty bound, with named edges, each cut and
-verified separately, and certifying it from entrywise upper bounds. The matrix facts are textbook;
-any novelty lies in using them as a treaty test. We did not find that use in our search.
+[@davidson2025three], and named as criticality in 2013 [@yudkowsky2013iem]. The independent
+prior-art search took the rest. Certifying the spectral radius from entrywise upper bounds is the
+linear case of the network small-gain theorem [@dashkovskiy2007smallgain]; choosing which edges to
+cut is epidemic control's type and target reproduction numbers [@roberts2003typer; @shuai2013targetr]
+and spectral-radius reduction by link removal [@vanmieghem2011spectral]; and a regulator testing a
+spectral radius against one is in [@bardoscia2017pathways]. Label: prior work, used here as an
+application
+([C6](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test)). What remains ours is the use
+as a treaty test, with named edges, each gated and verified separately, and the result computed on
+this program's numbers above. Nothing of method.
 
 ### What it means for the protocol
 
@@ -841,8 +956,12 @@ A candidate design:
   the line, and control of smuggled compute.
 - **Bound the certificate.** Require rho(U) <= rho*, with U the matrix of upper confidence bounds
   and rho* = 1 - m * rho_dot * T_r: a margin set by how fast the gain drifts upward (rho_dot), the
-  response time T_r and a safety factor m. The drift rate is not measured; this is a design, stated
-  as one.
+  response time T_r and a safety factor m. The drift rate is not measured, so rho* is fixed by
+  agreement until it is; this is a design, stated as one. The certificate issues only when every
+  edge has a measured bound that holds jointly. While any edge is a stated range or a party's own
+  report, rho(U) is a calculation on judgements and carries no probability, and edges no gate
+  covers, such as weight theft, are listed or the certificate says it omits them
+  ([C6](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test)).
 - **Beware pooling.** Burtsev's result means that a regime which shares AI research advances widely
   among its members raises the off-diagonal terms and couples them.
 - **Cost to useful AI:** limits on cross-party transfer of frontier research are a real cost to open
@@ -851,35 +970,86 @@ A candidate design:
 
 ### What would test it
 
-E11: simulate the coupled loops with the measured diagonal and bounded off-diagonal terms, compute
-rho(U) and the row-sum certificate, find the smallest set of edge cuts that brings the certificate
-below rho*, and report how sensitive the answer is to each unmeasured edge. E6: add cross-party
-transfer as an edge in the coalition games and test when sharing advances lifts the network rho
-above 1 among parties that are each subcritical.
+E11 has run, on ledger values and stated ranges, so it computes and does not certify. It finds
+against issuing a certificate today. Of the [10 entries](numbers.md#e11-entries) in this chapter's
+one-party graph, [2 entries](numbers.md#e11-entries-measured) have a measured bound, each times an
+assumed compute share, [2 entries](numbers.md#e11-entries-domain) only the natural range of an
+unmeasured share, and [5 entries](numbers.md#e11-entries-unbounded) none. The row-sum test can never
+issue while compute feeds software: no U on the graph has a largest row sum below
+[2.14](numbers.md#e11-rowsum-floor). So the test is rho(U), and with only research closure gated it
+falls to 1 only if the unmeasured entries are set to zero and the economic gain or AI's share of
+hardware research is small (Y1b, Y1c). With the compute stock capped and update compute metered,
+[2 gates](numbers.md#e11-gates-vendor), rho(U) would issue for one party at the developer-reported
+closure, leaving [0.72](numbers.md#e11-margin-vendor) for m * rho_dot * T_r; but that closure is a
+party's own report, which the certificate does not accept. Fully closed, it takes
+[3 gates](numbers.md#e11-gates-fully-closed), and no single limit issues it on honest bounds
+([0 pathways](numbers.md#e11-pathways-alone-honest)). Between two parties, the steady-path bound on
+the entry into China's software loop is China's frontier growth over the United States',
+[0.90](numbers.md#e11-g-ratio) ([1.00](numbers.md#e11-g-ratio-hi) at the 95th percentile). The two
+directions' bounds are reciprocal and multiply to at least 1, so bounds of this kind can never
+certify the cycle: one direction must be gated or measured below
+[0.44](numbers.md#e11-xp-max-vendor). Greedy cutting needed more cuts than the smallest set in
+[0 scenarios](numbers.md#e11-greedy-worse) of the grid over the real graph. Still to come: E11 again
+with the diagonal from E9 and E4(b) and the compute edge from E10; E4's final rerun gives no
+diagonal entry, since the speedrun's r is not identified and its simulation measures the method,
+not the loop. E6 has defined cross-party
+transfer as an edge in its coalition games, a party using a share of another's compute or research
+output, but no such share is measured, so when sharing advances lifts the network rho above 1 among
+parties that are each subcritical is not identified.
 
 ## What this perspective contributes to the line
 
-Three quantities from this chapter are candidates for the protocol to trigger on or limit.
+Three quantities from this chapter are for the protocol to measure or limit. None of them is yet a
+trigger.
 
 1. **The software loop's gain per development cycle, K_S.** Measured on a log compute-equivalent
    axis with input growth divided out, from mandatory lab declarations (algorithmic efficiency at
    fixed compute, spend by input, the AI share of advances) and staged runs with elicited agents,
-   reported with an interval. The trigger fires when the upper bound crosses a margin below 1.
-   Weakest point: the data sit with developers, staged runs at small scale may not transfer, agents
-   can sandbag, and the current interval straddles 1 (corrected median
-   [0.63](numbers.md#dyn-r-lm-corrected), 95th percentile [1.07](numbers.md#dyn-r-lm-hi-corrected)).
-2. **The coupled-gain certificate, max_i sum_j U_ij.** The largest row sum of the matrix of upper
-   bounds on each loop's own gain and on each cross-feed, over loops and parties. The protocol cuts
-   edges until the certificate sits below rho*. Weakest point: most off-diagonal terms are
-   unmeasured, the economic elasticity is missing, and nonnegativity is assumed.
-3. **Gate closure, clocked by the 80% horizon.** For each loop's input, whether it crosses a
-   verifiable human-held gate (research compute, chip licences, identity checks, update compute),
-   with the 80% autonomy horizon (now about [3 hours](numbers.md#dyn-horizon-p80-hours)) setting how
-   far apart gates can sit before an agent can cross between them unattended. Weakest point: open
-   weights on local hardware bypass identity gates, the ratio of 50% to 80% horizons is larger than
-   a constant hazard predicts and its trend is unmeasured, and long-task baselines are thin.
+   reported with an interval. It is a measurement design. A trigger on its upper bound against a
+   margin below 1 is cut: at the only calibrated noise E4's final simulation found the rule on K
+   fires in [88%](numbers.md#e4-k-fa-n5) of runs on a loop well below 1 and barely more often on one
+   above it, while the interval under-covers and the estimates lean subcritical
+   ([C4](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound)).
+   It returns only if E4(b) shows real staged rounds tight enough. Meanwhile the protocol
+   restricts closed-loop training research at frontier scale outright, the prior-work ban, for the
+   loops a developer declares. Weakest point: the noise of a real staged round is unmeasured, the
+   data sit with developers, staged runs at small scale may not transfer, agents can sandbag, and the
+   current interval straddles 1 (corrected median [0.63](numbers.md#dyn-r-lm-corrected), 95th
+   percentile [1.07](numbers.md#dyn-r-lm-hi-corrected)), while those corrections leave compute's
+   growth out: counting it, E9 puts the gain at [0.25](numbers.md#e9-lm-k-fixed)
+   ([0.42](numbers.md#e9-lm-k-fixed-hi) at the 95th percentile) at a compute share no data
+   identifies.
+2. **The coupled-gain certificate, rho(U).** The spectral radius of the matrix of upper bounds on
+   each loop's own gain and on each cross-feed, over loops and parties. Its largest row sum bounds it
+   from above, but on this chapter's graph that bound can never fall below
+   [2.14](numbers.md#e11-rowsum-floor) while compute feeds software, so only rho(U) can issue (E11).
+   The protocol gates edges until rho(U) sits below rho*. Weakest point: it issues only when every
+   edge has a measured bound, and of the [10 entries](numbers.md#e11-entries) in the one-party graph
+   [5 entries](numbers.md#e11-entries-unbounded) have no bound at all, so today rho(U) falls below 1
+   only with the unmeasured entries set to zero, a calculation on judgements, not a certificate
+   ([C6](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test)). The economic elasticity is
+   missing, and with the software loop fully closed at its corrected 95th percentile no set of cuts
+   issues it at all.
+3. **Gate closure, counted in the agent's completed tasks.** For each loop's input, whether it
+   crosses a verifiable human-held gate (research compute, chip licences, identity checks, update
+   compute). The 80% autonomy horizon, now about [3 hours](numbers.md#dyn-horizon-p80-hours), is
+   measured in human time, so gates count the agent's completed horizon-length tasks, not hours,
+   until its own wall-clock time on such tasks is measured for each system
+   ([C11.4](verification/l4-red-team.md#c11)). Closure judged input by input is framing until an
+   experiment (E4(d)) shows that the gain under any set of gates follows from closures measured one
+   gate at a time; until then the safe rule is to gate every highly closed input together, which is
+   prior work
+   ([C11](04-claims.md#c11-closure-judged-input-by-input-with-narrow-optimisers-inside-the-loop)).
+   Weakest point: open weights on local hardware bypass identity gates, the ratio of 50% to 80%
+   horizons is larger than a constant hazard predicts (E2 finds it stable within a wide interval),
+   no experiment measures an agent's own time on horizon-length tasks, and long-task baselines are
+   thin.
 
-What changes for the protocol: the trigger is a gain with a bound, not a slope of capability; the
-compute backbone is reinforced, since the strongest evidence against a runaway is that compute may
-be a complement to research; and the novelty is narrower than the memo hoped. None of it has been
-tested against an adversary.
+What changes for the protocol: the quantity to measure is a gain with a bound, not a slope of
+capability, and until that bound can decide, the closed loop at frontier scale is restricted by the
+prior-work ban; the compute backbone is reinforced, since the strongest evidence against a runaway
+is that compute may be a complement to research, and E11 finds that capping the compute stock is
+what lets the coupled certificate set aside the hardware loop; and nothing here is new. The
+estimator extends prior work narrowly and its decision power is unshown; the certificate is an
+application of prior work that cannot issue on today's evidence. None of it has been tested against
+an adversary.

@@ -15,8 +15,9 @@ export interface Inputs {
 
 /** What history says, from the ledger: undeclared weapons programmes and how long they went unseen. */
 export interface Precedent {
-  median: string;
   hazard: string;
+  hazardLo: string;
+  hazardHi: string;
   placeholderRate: string;
 }
 
@@ -150,11 +151,14 @@ export function DetectionBound({ start, record }: { start: Inputs; record?: Prec
         </span>{" "}
         {record && (
           <span className="muted">
-            The record is worse. Seven undeclared weapons programmes went unseen for a median of{" "}
-            <a href="/numbers#org-covert-years-median">{record.median}</a>, a discovery rate of{" "}
-            <a href="/numbers#org-covert-hazard">{record.hazard}</a> against the{" "}
+            The record is worse. Covert weapons programmes were found at about{" "}
+            <a href="/numbers#e5-hazard">{record.hazard}</a> (
+            <a href="/numbers#e5-hazard-lo">{record.hazardLo}</a> to{" "}
+            <a href="/numbers#e5-hazard-hi">{record.hazardHi}</a>), counted from each
+            programme&apos;s start, against the{" "}
             <a href="/numbers#org-memo-detect-rate">{record.placeholderRate}</a> these placeholders
-            imply. That is a small sample of programmes that were found in the end.
+            imply. Even that is an upper bound for a careful evader: only programmes that were found
+            or disclosed are in the record.
           </span>
         )}
       </figcaption>

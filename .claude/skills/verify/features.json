@@ -95,6 +95,14 @@
       "tests": []
     },
     {
+      "id": "cli:e01-capability-compute",
+      "kind": "cli",
+      "entry": "tools/exp/e01_capability_compute.py",
+      "reach": ".venv/bin/python tools/exp/e01_capability_compute.py (E1)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
       "id": "cli:e02-time-horizons",
       "kind": "cli",
       "entry": "tools/exp/e02_time_horizons.py",
@@ -105,10 +113,26 @@
       ]
     },
     {
+      "id": "cli:e04-loop-gain",
+      "kind": "cli",
+      "entry": "tools/exp/e04_loop_gain.py",
+      "reach": ".venv/bin/python tools/exp/e04_loop_gain.py (E4)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
       "id": "cli:e05-detection",
       "kind": "cli",
       "entry": "tools/exp/e05_detection.py",
       "reach": ".venv/bin/python tools/exp/e05_detection.py (E5)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:e06-games",
+      "kind": "cli",
+      "entry": "tools/exp/e06_games.py",
+      "reach": ".venv/bin/python tools/exp/e06_games.py (E6)",
       "area": "experiments",
       "tests": []
     },
@@ -121,10 +145,36 @@
       "tests": []
     },
     {
+      "id": "cli:e09-returns",
+      "kind": "cli",
+      "entry": "tools/exp/e09_returns.py",
+      "reach": ".venv/bin/python tools/exp/e09_returns.py (E9)",
+      "area": "experiments",
+      "tests": [
+        "site/test/content.test.ts"
+      ]
+    },
+    {
+      "id": "cli:e11-coupled-loops",
+      "kind": "cli",
+      "entry": "tools/exp/e11_coupled_loops.py",
+      "reach": ".venv/bin/python tools/exp/e11_coupled_loops.py (E11)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
       "id": "cli:e24-response-latency",
       "kind": "cli",
       "entry": "tools/exp/e24_response_latency.py",
       "reach": ".venv/bin/python tools/exp/e24_response_latency.py (E24)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:e25-licence-log",
+      "kind": "cli",
+      "entry": "tools/exp/e25_licence_log.py",
+      "reach": ".venv/bin/python tools/exp/e25_licence_log.py (E25)",
       "area": "experiments",
       "tests": []
     },
@@ -235,6 +285,16 @@
       "reach": "http://localhost:$PORT/sources",
       "area": "sources",
       "tests": []
+    },
+    {
+      "id": "page:/verification/[slug]",
+      "kind": "page",
+      "entry": "site/app/verification/[slug]/page.tsx",
+      "reach": "http://localhost:$PORT/verification/[slug]",
+      "area": "verification",
+      "tests": [
+        "site/test/content.test.ts"
+      ]
     }
   ]
 }

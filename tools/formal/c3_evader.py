@@ -6,7 +6,10 @@ Thm 3.1   with channels independent given the path: the product of every channel
           the product equals the maximum iff every channel that can detect watches every path
           (or every path is certain to be caught); a mixed strategy never beats the best path.
 Thm 3.2   common cause: if, given a latent Z, channels are independent with miss chances all
-          nondecreasing in Z, then E[prod q_c(Z)] >= prod E[q_c(Z)], and max_z prod q_c(z) >= both.
+          nondecreasing in Z, then E[prod q_c(Z)] >= prod E[q_c(Z)], and max_z prod q_c(z) >= both,
+          when Z is real-valued or a vector of independent components (Harris), q_c nondecreasing in
+          each coordinate. Recorded: the red team's two-coordinate Z with Z2 = 1 - Z1 (C3.4) breaks
+          the inequality, so the condition on Z is needed.
 Thm 3.3   merging: for any joint law of detection times, P(min_i D_i > t) <= min_i P(D_i > t)
           (Frechet); under positive upper-orthant dependence it is >= prod_i P(D_i > t); for common
           shocks (Marshall-Olkin) the merged rate lies between the largest rate and the sum.
@@ -76,6 +79,36 @@ def main() -> None:
         ck.ok("Thm 3.2: E[prod q_c(Z)] >= prod E[q_c(Z)] for comonotone q_c",
               e_prod >= prod_e * (1 - 1e-12) - 1e-15, (pz, q))
         ck.ok("Thm 3.2: max_z prod q_c(z) >= E[prod q_c(Z)]", best >= e_prod * (1 - 1e-12), (pz, q))
+
+    # Thm 3.2 with a vector latent of independent components (Harris's inequality): each q_c is a
+    # general coordinatewise nondecreasing function on a product grid (the monotone envelope of
+    # random values).
+    for _ in range(N):
+        d = rng.randint(2, 3)
+        levels = [rng.randint(2, 4) for _ in range(d)]
+        probs = []
+        for k in levels:
+            w = [rng.random() + 1e-6 for _ in range(k)]
+            probs.append([x / sum(w) for x in w])
+        cells = list(itertools.product(*[range(k) for k in levels]))
+        pz = {z: math.prod(probs[j][z[j]] for j in range(d)) for z in cells}
+        nc = rng.randint(2, 5)
+        q = []
+        for _ in range(nc):
+            raw = {z: rng.random() for z in cells}
+            q.append({z: max(raw[y] for y in cells if all(y[j] <= z[j] for j in range(d))) for z in cells})
+        e_prod = sum(pz[z] * math.prod(qc[z] for qc in q) for z in cells)
+        prod_e = math.prod(sum(pz[z] * qc[z] for z in cells) for qc in q)
+        ck.ok("Thm 3.2: E[prod q_c(Z)] >= prod E[q_c(Z)] for Z with independent components (Harris)",
+              e_prod >= prod_e * (1 - 1e-12) - 1e-15, (levels, probs, q))
+        ck.ok("Thm 3.2: max_z prod q_c(z) >= E[prod q_c(Z)], any Z",
+              max(math.prod(qc[z] for qc in q) for z in cells) >= e_prod * (1 - 1e-12), (levels, q))
+    # Recorded (red team C3.4): dependent components, Z2 = 1 - Z1, q1 = Z1, q2 = Z2.
+    support = [((0, 1), 0.5), ((1, 0), 0.5)]
+    e_prod = sum(pr * z[0] * z[1] for z, pr in support)
+    prod_e = sum(pr * z[0] for z, pr in support) * sum(pr * z[1] for z, pr in support)
+    ck.ok("Recorded (red team C3.4): with dependent components the inequality fails, so Thm 3.2 needs them independent",
+          e_prod < prod_e, (e_prod, prod_e))
 
     # Thm 3.3 (Frechet), any joint law on a grid of detection times
     for _ in range(N):

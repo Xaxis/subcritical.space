@@ -23,13 +23,15 @@ export function docSlug(file: string): string {
 
 /** The ledger id a link points at, if it is a ledger link (numbers.md#id, from research/ or paper/). */
 export function ledgerId(href: string): string | null {
-  const m = /^(?:\.\.\/research\/)?numbers\.md#([a-z0-9-]+)$/.exec(href);
+  const m = /^(?:\.\.\/(?:research\/)?)?numbers\.md#([a-z0-9-]+)$/.exec(href);
   return m ? (m[1] as string) : null;
 }
 
 /** A link from one research file to another becomes a link to that file's page. */
 export function docHref(href: string): string | null {
-  const m = /^(?:\.\.\/research\/|\.\/)?(\d+-[a-z0-9-]+)\.md(#[\w-]+)?$/.exec(href);
+  const report = /^(?:\.\.\/)?(?:research\/)?verification\/([a-z0-9-]+)\.md(#[\w-]+)?$/.exec(href);
+  if (report) return `/verification/${report[1]}${report[2] ?? ""}`;
+  const m = /^(?:\.\.\/(?:research\/)?|\.\/)?(\d+-[a-z0-9-]+)\.md(#[\w-]+)?$/.exec(href);
   if (!m) return null;
   return `/research/${docSlug(`${m[1]}.md`)}${m[2] ?? ""}`;
 }

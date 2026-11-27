@@ -29,10 +29,31 @@ function text(children: ReactNode): string {
   return "";
 }
 
-function components(inline: boolean): Components {
+function components(inline: boolean, asWritten: boolean): Components {
   return {
     a({ href = "", children }) {
       const id = ledgerId(href);
+      if (id && asWritten) {
+        const now = ledger()[id];
+        if (!now)
+          return (
+            <span
+              className="num as-written"
+              title="As written; the ledger no longer has this number"
+            >
+              {children}
+            </span>
+          );
+        return (
+          <a
+            className="num as-written"
+            href={`/numbers#${id}`}
+            title={`As written when this level ran. The ledger now shows ${now.display}.`}
+          >
+            {children}
+          </a>
+        );
+      }
       if (id && ledger()[id]) return <Num id={id} />;
       const doc = docHref(href);
       if (doc) return <a href={doc}>{children}</a>;
@@ -66,7 +87,19 @@ function components(inline: boolean): Components {
   };
 }
 
-export function Markdown({ md, inline = false }: { md: string; inline?: boolean }) {
+/**
+ * Research Markdown. `asWritten` is for records (the verification reports): their ledger links keep
+ * the value written when the level ran, and say what the ledger shows now.
+ */
+export function Markdown({
+  md,
+  inline = false,
+  asWritten = false,
+}: {
+  md: string;
+  inline?: boolean;
+  asWritten?: boolean;
+}) {
   const byKey = sourceIndex();
   const withCites = linkCitations(
     md,
@@ -74,7 +107,7 @@ export function Markdown({ md, inline = false }: { md: string; inline?: boolean 
     (k) => byKey.get(k)?.key ?? k,
   );
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} components={components(inline)}>
+    <ReactMarkdown remarkPlugins={[remarkGfm]} components={components(inline, asWritten)}>
       {withCites}
     </ReactMarkdown>
   );

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Rewrite every ledger link's text to the model's value, so no document types a number by hand.
 
-A ledger link is [any text](numbers.md#id) in research/, or [any text](../research/numbers.md#id)
-in paper/. With --check, change nothing and exit 1 if any link is stale or names no number.
+A ledger link is [any text](numbers.md#id) in research/, [any text](../numbers.md#id) in
+research/verification/, or [any text](../research/numbers.md#id) in paper/. The verification
+reports are records of what a level found when it ran, so their links keep the value they were
+written with, as the survey notes do; the site shows that value and links to the current one. With --check, change nothing and exit 1 if any link is stale or names no number.
 """
 
 from __future__ import annotations
@@ -13,7 +15,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LINK = re.compile(r"\[([^\]]*)\]\(((?:\.\./research/)?numbers\.md)#([a-z0-9-]+)\)")
+LINK = re.compile(r"\[([^\]]*)\]\(((?:\.\./(?:research/)?)?numbers\.md)#([a-z0-9-]+)\)")
 DOCS = ["research", "paper"]
 
 
@@ -21,7 +23,8 @@ def documents() -> list[Path]:
     files = []
     for folder in DOCS:
         for path in sorted((ROOT / folder).rglob("*.md")):
-            if path.name == "numbers.md" or "notes" in path.parts or "sources" in path.parts:
+            skip = {"notes", "sources", "verification"}
+            if path.name == "numbers.md" or skip & set(path.parts):
                 continue
             files.append(path)
     return files

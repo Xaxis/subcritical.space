@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Markdown } from "@/components/Markdown";
 import { Page } from "@/components/Page";
-import { researchDocs, surveyNotes, TRACKS } from "@/lib/docs";
+import { researchDocs, surveyNotes, TRACKS, verificationReports } from "@/lib/docs";
 import { tracksReported } from "@/lib/progress";
 import { repoLink } from "@/lib/site";
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 export default function Research() {
   const docs = researchDocs();
   const notes = surveyNotes();
+  const reports = verificationReports();
   const spot = notes.find((x) => x.file.endsWith("/11-spot-check.md"));
   const reported = tracksReported();
   return (
@@ -48,6 +49,29 @@ export default function Research() {
           </li>
         ))}
       </ul>
+      {reports.length > 0 && (
+        <>
+          <h2 id="verification">Verification reports</h2>
+          <p>
+            Each claimed contribution must pass six levels or be cut. These reports are the levels
+            run by helpers who wrote none of the work: the prior-art search and the red team.
+          </p>
+          <ul className="doc-list">
+            {reports.map((d) => (
+              <li key={d.file} className="card">
+                <h3>
+                  <a href={`/verification/${d.slug}`}>{d.title}</a>
+                </h3>
+                <p className="file">
+                  <a href={repoLink(d.file)} rel="noopener">
+                    {d.file}
+                  </a>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       <h2 id="survey">The survey, ten tracks</h2>
       <p>
         Each track is a separate literature survey, written by a helper that opens every source

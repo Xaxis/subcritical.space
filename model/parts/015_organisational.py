@@ -244,7 +244,7 @@ def build(L, here) -> None:
         "median(" + ", ".join(COVERT) + ")",
         unit="years",
         fmt=",.0f",
-        label="median time undetected among the seven undeclared programmes",
+        label="median time undetected among the seven undeclared programmes, on the programme clock: from each programme's start to its discovery",
         defined_in=here(),
     )
     L.derive(
@@ -262,24 +262,8 @@ def build(L, here) -> None:
         "7 / org-covert-years-sum",
         unit="/yr",
         fmt=",.2f",
-        label="discovery rate a year implied by the seven programmes (discoveries over programme-years)",
+        label="discovery rate a year implied by the seven programmes (discoveries over programme-years), on the programme clock: time counted from each programme's start, not from the start of a breakout",
         note="a convenience sample of programmes that were eventually found; programmes never found are missing",
-        defined_in=here(),
-    )
-    L.derive(
-        "org-covert-detect-1y",
-        lambda q: 1 - math.exp(-q["org-covert-hazard"] * q["breakout-years"]),
-        "1 - exp(-org-covert-hazard * breakout-years)",
-        fmt="%",
-        label="chance a covert programme is found within the memo's placeholder breakout time, at the historical rate",
-        defined_in=here(),
-    )
-    L.derive(
-        "org-covert-detect-5y",
-        lambda q: 1 - math.exp(-q["org-covert-hazard"] * q["org-sa-decision-device"]),
-        "1 - exp(-org-covert-hazard * org-sa-decision-device)",
-        fmt="%",
-        label="chance a covert programme is found within South Africa's decision-to-device time, at the historical rate",
         defined_in=here(),
     )
     L.derive(
@@ -289,13 +273,5 @@ def build(L, here) -> None:
         unit="/yr",
         fmt=",.1f",
         label="detection rate a year implied by the memo's placeholder inspection channel",
-        defined_in=here(),
-    )
-    L.derive(
-        "org-memo-to-history",
-        lambda q: q["org-memo-detect-rate"] / q["org-covert-hazard"],
-        "org-memo-detect-rate / org-covert-hazard",
-        fmt=",.0f",
-        label="the memo's placeholder detection rate over the historical discovery rate",
         defined_in=here(),
     )
