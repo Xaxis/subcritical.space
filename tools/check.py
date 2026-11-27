@@ -11,8 +11,9 @@
    by hand and by tools/sources_from_notes.py, which folds a second key for a work into `aliases`.
 5. Every input in data/inputs.toml and data/inputs/*.toml that names a source names one that exists,
    by its own key.
-6. Every link from one research document to another names a file that exists (the site turns each
-   into a page link, so a missing file is a dead link there).
+6. Every link from one research document to another names a file that exists, and every anchor
+   (#...) names a heading in it, by the site's rule (site/lib/text.ts slugify: ids on ## and ###
+   headings). The site turns each into a page link, so a miss is a dead link there.
 """
 
 from __future__ import annotations
@@ -231,22 +232,50 @@ def check_inputs() -> None:
         print(f"ok   {len(raw)} inputs, every source exists")
 
 
-DOC_LINK = re.compile(r"\]\((?:\.\./research/)?([0-9][0-9a-z-]*\.md)(?:#[^)]*)?\)")
+DOC_LINK = re.compile(r"\]\((?:\.\./research/)?([0-9][0-9a-z-]*\.md)(?:#([^)]*))?\)")
+SELF_LINK = re.compile(r"\]\(#([^)]+)\)")
+
+
+def slugify(text: str) -> str:
+    """The site's heading id (site/lib/text.ts slugify), kept identical."""
+    text = text.lower()
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
+    text = re.sub(r"[*_`]", "", text)
+    text = re.sub(r"[^a-z0-9\s-]", "", text)
+    return re.sub(r"\s+", "-", text.strip())
+
+
+def anchors(path: Path) -> set[str]:
+    out, fenced = set(), False
+    for line in path.read_text().splitlines():
+        if line.startswith("```"):
+            fenced = not fenced
+        elif not fenced and re.match(r"#{2,3} ", line):
+            out.add(slugify(line.lstrip("#").strip()))
+    return out
 
 
 def check_doc_links() -> None:
     bad = 0
+    cache: dict[Path, set[str]] = {}
     for folder in ("research", "paper"):
         for path in sorted((ROOT / folder).rglob("*.md")):
-            if "notes" in path.parts:
+            if "notes" in path.parts or path.name == "numbers.md":
                 continue
             for i, line in enumerate(path.read_text().splitlines(), 1):
-                for target in DOC_LINK.findall(line):
-                    if not (ROOT / "research" / target).exists():
+                links = [(t, a) for t, a in DOC_LINK.findall(line)]
+                links += [(path.name if folder == "research" else "", a) for a in SELF_LINK.findall(line)]
+                for target, anchor in links:
+                    file = ROOT / "research" / target if target else path
+                    if not file.exists():
                         fail(f"{path.relative_to(ROOT)}:{i}: links to research/{target}, which does not exist")
                         bad += 1
+                        continue
+                    if anchor and anchor not in cache.setdefault(file, anchors(file)):
+                        fail(f"{path.relative_to(ROOT)}:{i}: research/{file.name} has no heading #{anchor}")
+                        bad += 1
     if not bad:
-        print("ok   every link between documents names a file that exists")
+        print("ok   every link between documents names a file and a heading that exist")
 
 
 def main() -> int:

@@ -228,8 +228,11 @@ g = dC(n+1) / dC(n),
 
 where the research in round n+1 is done by the system that round n produced. A value of g at or
 above 1 means each round gains at least as much as the last with the human-held inputs fixed: the
-compounding condition. The trigger is the lower bound of a stated confidence interval on g, not
-the point estimate.
+compounding condition. The trigger is the upper bound of a stated confidence interval on g, not
+the point estimate. This chapter first set it on the lower bound; the claims file adopts the
+upper bound and gives the reasons and the cost in false alarms (see
+[C4](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound)): crossing 1
+cannot be undone, the line is one of prevention, and an agent that holds back biases g low.
 
 Three choices separate this from what the survey found. The inputs are held fixed, so g measures
 the loop and not the growth of compute and staff. The axis is compute-equivalent, because on a
@@ -340,7 +343,7 @@ empirical estimates" [@burtsev2026criticality].
 ### What it means for the protocol
 
 D2 is the candidate trigger for the pathway the memo ranked first, recursive self-improvement. The
-limit it supports: no closed-loop AI research on frontier-scale systems whose lower bound on g
+limit it supports: no closed-loop AI research on frontier-scale systems whose upper bound on g
 exceeds a threshold set below 1. It would be verified by staged tests the regime runs on declared
 checkpoints, and by declarations of the share of research work AI leads. The cost to useful AI is
 low if the limit targets training-research loops on frontier systems, not AI-assisted software
@@ -826,7 +829,7 @@ protect. D1 is the endpoint, not a trigger.
    the effective compute that reaches D1 and the path of algorithmic efficiency are unknown, and a
    T_b the parties compute differently is an uncertain threshold, which in experiment destroyed
    cooperation. Second weakest: no regime has ever measured a response time.
-2. **The lower confidence bound on loop gain, g, at fixed inputs (D2).** Limit closed-loop research
+2. **The upper confidence bound on loop gain, g, at fixed inputs (D2).** Limit closed-loop research
    on frontier systems when it exceeds a threshold below 1. Measured in staged runs on declared
    checkpoints, combined with a capability ladder. Weakest point: transfer from small-scale runs to
    the frontier, and an agent that sandbags the test.
