@@ -25,5 +25,10 @@ E2, ...), which is where the list and the claims each one serves are kept.
   .venv/bin/python tools/exp/<name>.py
   ```
 
+- **Tables from the literature.** A table compiled by hand (cases, dates, latencies) is
+  `tools/exp/data/<name>.csv`, one row per case, each with its `source` (a key in
+  `research/sources.toml`) and `where` (page, section or table). Sources it cites that are not yet
+  listed go in `tools/exp/data/<name>.sources.toml`, which `tools/sources_from_notes.py --write`
+  merges into the list and keeps as the record of what the experiment opened.
 - **Honest output.** A result that refutes a claim is written and cited like one that supports it.
   A script that cannot reach its data fails; it never falls back to made-up numbers.

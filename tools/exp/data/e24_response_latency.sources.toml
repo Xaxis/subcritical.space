@@ -1,0 +1,27 @@
+# Sources the E24 case table cites that no note or chapter had listed (beyond those in
+# e05_detection.sources.toml), each opened by the experiment's builder on 2026-11-27.
+# tools/sources_from_notes.py merges them into research/sources.toml.
+
+[source.iaea-gov-2011-41]
+type = "official-docs"
+title = "Implementation of the NPT safeguards agreement in the Syrian Arab Republic: resolution adopted by the Board of Governors on 9 June 2011 (GOV/2011/41)"
+authors = "IAEA Board of Governors"
+year = 2011
+url = "https://www.iaea.org/sites/default/files/gov2011-41.pdf"
+opened = "2026-11-27"
+
+[source.aca2023iran]
+type = "report"
+title = "Timeline of Nuclear Diplomacy With Iran, 1967-2023"
+authors = "Arms Control Association"
+year = 2023
+url = "https://www.armscontrol.org/factsheets/timeline-nuclear-diplomacy-iran-1967-2023"
+opened = "2026-11-27"
+
+[source.aca2023syriacw]
+type = "report"
+title = "Timeline of Syrian Chemical Weapons Activity, 2012-2022"
+authors = "Arms Control Association (updated by Julia Masterson and Leanne Quinn)"
+year = 2023
+url = "https://www.armscontrol.org/factsheets/timeline-syrian-chemical-weapons-activity-2012-2022"
+opened = "2026-11-27"

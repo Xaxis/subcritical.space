@@ -1,0 +1,67 @@
+# Sources the E5 and E24 case tables cite that no note or chapter had listed, each opened by the
+# experiment's builder on 2026-11-27. tools/sources_from_notes.py merges them into
+# research/sources.toml.
+
+[source.iaea-gov-2004-84]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement in the Republic of Korea (GOV/2004/84)"
+authors = "IAEA, Report by the Director General"
+year = 2004
+url = "https://www.iaea.org/sites/default/files/gov2004-84.pdf"
+opened = "2026-11-27"
+
+[source.iaea-gov-2011-65]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement and relevant provisions of Security Council resolutions in the Islamic Republic of Iran (GOV/2011/65)"
+authors = "IAEA, Report by the Director General"
+year = 2011
+url = "https://www.iaea.org/sites/default/files/gov2011-65.pdf"
+opened = "2026-11-27"
+
+[source.unscom-1999-chronology]
+type = "official-docs"
+title = "UNSCOM: Chronology of Main Events (December 1999)"
+authors = "United Nations Special Commission"
+year = 1999
+url = "https://www.un.org/Depts/unscom/Chronology/chronology.htm"
+opened = "2026-11-27"
+
+[source.un-s-1995-864]
+type = "official-docs"
+title = "Note by the Secretary-General transmitting the eighth report of the Executive Chairman of the Special Commission under resolution 715 (S/1995/864)"
+authors = "United Nations Security Council"
+year = 1995
+url = "https://documents.un.org/api/symbol/access?s=S/1995/864&l=en&t=pdf"
+opened = "2026-11-27"
+
+[source.danzig2012aum]
+type = "report"
+title = "Aum Shinrikyo: Insights Into How Terrorists Develop Biological and Chemical Weapons (second edition)"
+authors = "Richard Danzig, Marc Sageman, Terrance Leighton, Lloyd Hough, Hidemi Yuki, Rui Kotani, Zachary M. Hosford (CNAS)"
+year = 2012
+url = "https://www.cnas.org/publications/reports/aum-shinrikyo-second-edition-english"
+opened = "2026-11-27"
+
+[source.barletta1999sa]
+type = "report"
+title = "South Africa's Nuclear Weapons Program: An Annotated Chronology, 1969-1994"
+authors = "Michael Barletta, Christina Ellington (James Martin Center for Nonproliferation Studies)"
+year = 1999
+url = "https://nonproliferation.org/south-africas-nuclear-weapons-program-an-annotated-chronology-1969-1994/"
+opened = "2026-11-27"
+
+[source.cia2002dprk]
+type = "official-docs"
+title = "North Korean Nuclear Weapons: CIA Estimate for Congress, November 19, 2002 (FAS copy)"
+authors = "Central Intelligence Agency"
+year = 2002
+url = "https://nuke.fas.org/guide/dprk/nuke/cia111902.html"
+opened = "2026-11-27"
+
+[source.cohen2015dimona]
+type = "report"
+title = "The Eisenhower Administration and the Discovery of Dimona: March 1958-January 1961 (National Security Archive Electronic Briefing Book No. 510)"
+authors = "Avner Cohen, William Burr (eds.)"
+year = 2015
+url = "https://nsarchive2.gwu.edu/nukevault/ebb510/"
+opened = "2026-11-27"

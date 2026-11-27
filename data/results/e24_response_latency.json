@@ -1,0 +1,924 @@
+{
+  "data": [],
+  "details": {
+    "bootstrap": {
+      "draws": 10000,
+      "lognormal_draws": 2000
+    },
+    "date_rules": {
+      "YYYY-MM": "the 15th of the month",
+      "YYYY-MM-DD": "that day",
+      "YYYY-MM-late": "the 25th of the month",
+      "YYYY-MM/MM": "the first day of the second month (the midpoint of the two)"
+    },
+    "findings": {
+      "dprk-1993": {
+        "date": "1993-02-09",
+        "finding": "special inspection requested after inconsistencies in the DPRK's declarations",
+        "programme": "dprk-nuclear",
+        "source": "iaea-gc37-1084"
+      },
+      "dprk-2002": {
+        "date": "2002-10-03",
+        "finding": "US confronts the DPRK with evidence of covert enrichment",
+        "programme": "dprk-nuclear",
+        "source": "aca2022dprkchron"
+      },
+      "dprk-2006": {
+        "date": "2006-10-09",
+        "finding": "first nuclear test detected",
+        "programme": "dprk-nuclear",
+        "source": "aca2022dprkchron"
+      },
+      "dprk-2009": {
+        "date": "2009-05-25",
+        "finding": "second nuclear test detected",
+        "programme": "dprk-nuclear",
+        "source": "aca2022dprkchron"
+      },
+      "dprk-2013": {
+        "date": "2013-02-12",
+        "finding": "third nuclear test detected by the CTBTO",
+        "programme": "dprk-nuclear",
+        "source": "aca2022dprkchron"
+      },
+      "dprk-2016": {
+        "date": "2016-01-06",
+        "finding": "fourth nuclear test detected",
+        "programme": "dprk-nuclear",
+        "source": "aca2022dprkchron"
+      },
+      "dprk-2017": {
+        "date": "2017-09-03",
+        "finding": "sixth nuclear test detected",
+        "programme": "dprk-nuclear",
+        "source": "aca2022dprkchron"
+      },
+      "iran-2002": {
+        "date": "2002-08",
+        "finding": "undeclared enrichment and heavy water plants reported",
+        "programme": "iran-nuclear",
+        "source": "aca2023iran"
+      },
+      "iran-fordow": {
+        "date": "2009-09-25",
+        "finding": "covert Fordow enrichment plant presented to the IAEA",
+        "programme": "iran-nuclear",
+        "source": "aca2023iran"
+      },
+      "iraq-1991": {
+        "date": "1991-06-23",
+        "finding": "inspectors find calutrons being moved",
+        "programme": "iraq-nuclear",
+        "source": "unscom-1999-chronology"
+      },
+      "iraq-1995": {
+        "date": "1995-07-01",
+        "finding": "Iraq admits an offensive biological weapons programme under UNSCOM's evidence",
+        "programme": "iraq-biological",
+        "source": "unscom-1999-chronology"
+      },
+      "libya-2003": {
+        "date": "2003-10",
+        "finding": "centrifuge parts bound for Libya interdicted at Taranto",
+        "programme": "libya-nuclear",
+        "source": "crs-2004-libya"
+      },
+      "syria-cw-2013": {
+        "date": "2013-08-28",
+        "finding": "US concludes the Syrian government carried out the Ghouta attack",
+        "programme": "syria-chemical",
+        "source": "aca2023syriacw"
+      },
+      "syria-cw-2017": {
+        "date": "2017-04-04",
+        "finding": "sarin attack in Idlib province",
+        "programme": "syria-chemical",
+        "source": "aca2023syriacw"
+      },
+      "syria-cw-2018": {
+        "date": "2018-04-07",
+        "finding": "chemical attack in Douma",
+        "programme": "syria-chemical",
+        "source": "aca2023syriacw"
+      },
+      "syria-reactor": {
+        "date": "2008-06-02",
+        "finding": "the IAEA receives information that the destroyed Dair Alzour building was a reactor",
+        "programme": "syria-nuclear",
+        "source": "iaea-gov-2011-30"
+      },
+      "ussr-1989": {
+        "date": "1989-10-late",
+        "finding": "defector reveals the Biopreparat programme",
+        "programme": "ussr-biological",
+        "source": "hoffman-2009"
+      }
+    },
+    "first_response": {
+      "exit": {
+        "days": {
+          "dprk-1993": 31,
+          "dprk-2002": 85
+        },
+        "hi": 85.0,
+        "lo": 31.0,
+        "max": 85.0,
+        "median": 58.0,
+        "min": 31.0,
+        "n": 2
+      },
+      "military": {
+        "days": {
+          "syria-cw-2017": 2,
+          "syria-cw-2018": 6
+        },
+        "hi": 6.0,
+        "lo": 2.0,
+        "max": 6.0,
+        "median": 4.0,
+        "min": 2.0,
+        "n": 2
+      },
+      "sanctions": {
+        "days": {
+          "dprk-2002": 42,
+          "dprk-2006": 5,
+          "dprk-2009": 18,
+          "dprk-2013": 23,
+          "dprk-2016": 56,
+          "dprk-2017": 8,
+          "iran-2002": 1591,
+          "iran-fordow": 257
+        },
+        "hi": 156.5,
+        "lo": 13.0,
+        "max": 1591.0,
+        "median": 32.5,
+        "min": 5.0,
+        "n": 8
+      },
+      "statement": {
+        "days": {
+          "dprk-1993": 51,
+          "dprk-2002": 57,
+          "dprk-2009": 0,
+          "iran-2002": 393,
+          "iran-fordow": 63,
+          "iraq-1991": 5,
+          "libya-2003": 65,
+          "syria-cw-2013": 17,
+          "syria-reactor": 1102,
+          "ussr-1989": 202
+        },
+        "hi": 202.0,
+        "lo": 28.0,
+        "max": 1102.0,
+        "median": 60.0,
+        "min": 0.0,
+        "n": 10
+      },
+      "statement_first_finding_only": {
+        "days": {
+          "dprk-1993": 51,
+          "iran-2002": 393,
+          "iraq-1991": 5,
+          "libya-2003": 65,
+          "syria-cw-2013": 17,
+          "syria-reactor": 1102,
+          "ussr-1989": 202
+        },
+        "hi": 393.0,
+        "lo": 17.0,
+        "max": 1102.0,
+        "median": 65.0,
+        "min": 5.0,
+        "n": 7
+      }
+    },
+    "halt": {
+      "days": {
+        "dprk-1993": [
+          657,
+          1
+        ],
+        "dprk-2002": [
+          7134,
+          0
+        ],
+        "dprk-2006": [
+          280,
+          1
+        ],
+        "dprk-2009": [
+          4708,
+          0
+        ],
+        "dprk-2013": [
+          3349,
+          0
+        ],
+        "dprk-2016": [
+          2291,
+          0
+        ],
+        "dprk-2017": [
+          1685,
+          0
+        ],
+        "iran-2002": [
+          432,
+          1
+        ],
+        "iran-fordow": [
+          2304,
+          1
+        ],
+        "iraq-1995": [
+          336,
+          1
+        ],
+        "libya-2003": [
+          103,
+          1
+        ],
+        "syria-cw-2013": [
+          64,
+          1
+        ],
+        "ussr-1989": [
+          447,
+          0
+        ]
+      },
+      "halted": 7,
+      "km_hi_days": null,
+      "km_lo_days": 336.0,
+      "km_median_days": 2304.0,
+      "km_share_inf": 0.2648,
+      "lognormal": {
+        "bootstrap_draws": 1999,
+        "median_days": 1831.6685374807435,
+        "median_hi_days": 11373.677412169058,
+        "median_lo_days": 580.846584339808,
+        "mu": 7.512982599541653,
+        "q05_days": 45.45197522540154,
+        "q95_days": 73814.38572380987,
+        "sigma": 2.247206839558362
+      },
+      "median_if_halted_days": 336.0,
+      "n": 13,
+      "share_never": 0.46153846153846156
+    },
+    "halt_days_until_reversed": {
+      "dprk-1993": 2951,
+      "dprk-2006": 638,
+      "iran-2002": 241,
+      "iran-fordow": 1390,
+      "iraq-1995": null,
+      "libya-2003": null,
+      "syria-cw-2013": 1251
+    },
+    "halt_first_finding_only": {
+      "cases": [
+        "dprk-1993",
+        "iran-2002",
+        "iraq-1991",
+        "iraq-1995",
+        "libya-2003",
+        "syria-cw-2013",
+        "syria-reactor",
+        "ussr-1989"
+      ],
+      "days": {
+        "dprk-1993": [
+          657,
+          1
+        ],
+        "iran-2002": [
+          432,
+          1
+        ],
+        "iraq-1995": [
+          336,
+          1
+        ],
+        "libya-2003": [
+          103,
+          1
+        ],
+        "syria-cw-2013": [
+          64,
+          1
+        ],
+        "ussr-1989": [
+          447,
+          0
+        ]
+      },
+      "halted": 5,
+      "km_hi_days": 657.0,
+      "km_lo_days": 64.0,
+      "km_median_days": 336.0,
+      "km_share_inf": 0.0058,
+      "median_if_halted_days": 336.0,
+      "n": 6,
+      "share_never": 0.16666666666666663
+    },
+    "ledger_inputs": {
+      "claim-confidence": 0.9,
+      "org-dprk-withdrawal-days": 31.0,
+      "org-hwp-tb": 2.0,
+      "org-miri-withdrawal": 12.0
+    },
+    "responses": [
+      {
+        "case": "dprk-1993",
+        "days": 31,
+        "event": 1,
+        "response": "DPRK declares its withdrawal from the NPT",
+        "source": "iaea-gc37-1084",
+        "type": "exit",
+        "where": "para. 6"
+      },
+      {
+        "case": "dprk-1993",
+        "days": 51,
+        "event": 1,
+        "response": "IAEA Board finds non-compliance and reports it to the Security Council",
+        "source": "iaea-gc37-1084",
+        "type": "statement",
+        "where": "para. 7"
+      },
+      {
+        "case": "dprk-1993",
+        "days": 91,
+        "event": 1,
+        "response": "Security Council Resolution 825 calls on the DPRK to comply",
+        "source": "iaea-gc37-1084",
+        "type": "statement",
+        "where": "para. 18"
+      },
+      {
+        "case": "dprk-1993",
+        "days": 657,
+        "event": 1,
+        "response": "IAEA confirms construction halted and facilities not operating under the Agreed Framework",
+        "source": "aca2022dprkchron",
+        "type": "halt",
+        "where": "entry November 28, 1994 (Agreed Framework adopted October 21, 1994)"
+      },
+      {
+        "case": "dprk-2002",
+        "days": 42,
+        "event": 1,
+        "response": "KEDO suspends heavy-fuel oil deliveries",
+        "source": "aca2022dprkchron",
+        "type": "sanctions",
+        "where": "entry November 14, 2002"
+      },
+      {
+        "case": "dprk-2002",
+        "days": 57,
+        "event": 1,
+        "response": "IAEA Board resolution calls on the DPRK to clarify its enrichment programme",
+        "source": "aca2022dprkchron",
+        "type": "statement",
+        "where": "entry November 29, 2002"
+      },
+      {
+        "case": "dprk-2002",
+        "days": 85,
+        "event": 1,
+        "response": "DPRK orders IAEA inspectors out",
+        "source": "aca2022dprkchron",
+        "type": "exit",
+        "where": "entry December 27, 2002"
+      },
+      {
+        "case": "dprk-2002",
+        "days": 99,
+        "event": 1,
+        "response": "DPRK announces withdrawal from the NPT effective the next day",
+        "source": "aca2022dprkchron",
+        "type": "exit",
+        "where": "entry January 10, 2003"
+      },
+      {
+        "case": "dprk-2002",
+        "days": 7134,
+        "event": 0,
+        "response": "no halt of the enrichment programme in the record",
+        "source": "aca2022dprkchron",
+        "type": "halt",
+        "where": "page last reviewed April 2022; enrichment revealed in operation November 12, 2010"
+      },
+      {
+        "case": "dprk-2006",
+        "days": 5,
+        "event": 1,
+        "response": "Security Council Resolution 1718 imposes sanctions",
+        "source": "aca2022dprkchron",
+        "type": "sanctions",
+        "where": "entry October 14, 2006"
+      },
+      {
+        "case": "dprk-2006",
+        "days": 280,
+        "event": 1,
+        "response": "IAEA confirms the shutdown of the Yongbyon facilities",
+        "source": "aca2022dprkchron",
+        "type": "halt",
+        "where": "entry July 16, 2007"
+      },
+      {
+        "case": "dprk-2009",
+        "days": 0,
+        "event": 1,
+        "response": "Security Council presidential statement condemns the test",
+        "source": "aca2022dprkchron",
+        "type": "statement",
+        "where": "entry May 25, 2009"
+      },
+      {
+        "case": "dprk-2009",
+        "days": 18,
+        "event": 1,
+        "response": "Security Council Resolution 1874 expands sanctions",
+        "source": "aca2022dprkchron",
+        "type": "sanctions",
+        "where": "entry June 12, 2009"
+      },
+      {
+        "case": "dprk-2009",
+        "days": 4708,
+        "event": 0,
+        "response": "no halt in the record",
+        "source": "aca2022dprkchron",
+        "type": "halt",
+        "where": "page last reviewed April 2022"
+      },
+      {
+        "case": "dprk-2013",
+        "days": 23,
+        "event": 1,
+        "response": "Security Council Resolution 2094 strengthens sanctions",
+        "source": "aca2022dprkchron",
+        "type": "sanctions",
+        "where": "entry March 7, 2013"
+      },
+      {
+        "case": "dprk-2013",
+        "days": 3349,
+        "event": 0,
+        "response": "no halt in the record",
+        "source": "aca2022dprkchron",
+        "type": "halt",
+        "where": "page last reviewed April 2022"
+      },
+      {
+        "case": "dprk-2016",
+        "days": 56,
+        "event": 1,
+        "response": "Security Council Resolution 2270 expands sanctions",
+        "source": "aca2022dprkchron",
+        "type": "sanctions",
+        "where": "entry March 2, 2016"
+      },
+      {
+        "case": "dprk-2016",
+        "days": 2291,
+        "event": 0,
+        "response": "no halt in the record",
+        "source": "aca2022dprkchron",
+        "type": "halt",
+        "where": "page last reviewed April 2022"
+      },
+      {
+        "case": "dprk-2017",
+        "days": 8,
+        "event": 1,
+        "response": "Security Council Resolution 2375 imposes additional sanctions",
+        "source": "aca2022dprkchron",
+        "type": "sanctions",
+        "where": "entry September 11, 2017"
+      },
+      {
+        "case": "dprk-2017",
+        "days": 1685,
+        "event": 0,
+        "response": "no verified halt in the record",
+        "source": "aca2022dprkchron",
+        "type": "halt",
+        "where": "page last reviewed April 2022"
+      },
+      {
+        "case": "iran-2002",
+        "days": 393,
+        "event": 1,
+        "response": "IAEA Board resolution calls on Iran to suspend enrichment",
+        "source": "aca2023iran",
+        "type": "statement",
+        "where": "entry September 12, 2003"
+      },
+      {
+        "case": "iran-2002",
+        "days": 432,
+        "event": 1,
+        "response": "Iran agrees with three European states to suspend enrichment",
+        "source": "aca2023iran",
+        "type": "halt",
+        "where": "entry October 21, 2003"
+      },
+      {
+        "case": "iran-2002",
+        "days": 1269,
+        "event": 1,
+        "response": "IAEA Board refers Iran to the Security Council",
+        "source": "aca2023iran",
+        "type": "statement",
+        "where": "entry February 4, 2006"
+      },
+      {
+        "case": "iran-2002",
+        "days": 1446,
+        "event": 1,
+        "response": "Security Council Resolution 1696 makes suspension legally binding",
+        "source": "aca2023iran",
+        "type": "statement",
+        "where": "entry July 31, 2006"
+      },
+      {
+        "case": "iran-2002",
+        "days": 1591,
+        "event": 1,
+        "response": "Security Council Resolution 1737 imposes sanctions",
+        "source": "aca2023iran",
+        "type": "sanctions",
+        "where": "entry December 23, 2006"
+      },
+      {
+        "case": "iran-fordow",
+        "days": 63,
+        "event": 1,
+        "response": "IAEA Board resolution GOV/2009/82",
+        "source": "iaea-gov-2011-65",
+        "type": "statement",
+        "where": "para. 1, footnote listing Board resolutions"
+      },
+      {
+        "case": "iran-fordow",
+        "days": 257,
+        "event": 1,
+        "response": "Security Council Resolution 1929 expands sanctions",
+        "source": "aca2023iran",
+        "type": "sanctions",
+        "where": "entry June 9, 2010"
+      },
+      {
+        "case": "iran-fordow",
+        "days": 2304,
+        "event": 1,
+        "response": "IAEA verifies Iran met its nuclear commitments (JCPOA implementation day), including at Fordow",
+        "source": "aca2023iran",
+        "type": "halt",
+        "where": "entry January 16, 2016"
+      },
+      {
+        "case": "libya-2003",
+        "days": 65,
+        "event": 1,
+        "response": "Libya announces it will eliminate its weapons programmes",
+        "source": "iaea-gov-2004-12",
+        "type": "statement",
+        "where": "para. 4"
+      },
+      {
+        "case": "libya-2003",
+        "days": 103,
+        "event": 1,
+        "response": "US officials airlift documents and components out of Libya",
+        "source": "crs-2004-libya",
+        "type": "halt",
+        "where": "Eliminating Libyan WMD"
+      },
+      {
+        "case": "syria-reactor",
+        "days": 1102,
+        "event": 1,
+        "response": "IAEA Board finds non-compliance and reports Syria to the Security Council",
+        "source": "iaea-gov-2011-41",
+        "type": "statement",
+        "where": "resolution adopted 9 June 2011"
+      },
+      {
+        "case": "iraq-1991",
+        "days": 5,
+        "event": 1,
+        "response": "Security Council presidential statement deplores Iraq's denial of access",
+        "source": "unscom-1999-chronology",
+        "type": "statement",
+        "where": "entry 28 Jun 1991"
+      },
+      {
+        "case": "iraq-1991",
+        "days": 53,
+        "event": 1,
+        "response": "Security Council Resolution 707 demands full disclosure",
+        "source": "unscom-1999-chronology",
+        "type": "statement",
+        "where": "entry 15 Aug 1991"
+      },
+      {
+        "case": "iraq-1995",
+        "days": 336,
+        "event": 1,
+        "response": "UNSCOM supervises the destruction of Al-Hakam",
+        "source": "unscom-1999-chronology",
+        "type": "halt",
+        "where": "entry May-Jun 1996"
+      },
+      {
+        "case": "ussr-1989",
+        "days": 202,
+        "event": 1,
+        "response": "British and US formal demarches to the Kremlin",
+        "source": "hoffman-2009",
+        "type": "statement",
+        "where": "by the following May"
+      },
+      {
+        "case": "ussr-1989",
+        "days": 447,
+        "event": 1,
+        "response": "first US and British specialists visit Soviet facilities",
+        "source": "hoffman-2009",
+        "type": "statement",
+        "where": "January 1991 visit"
+      },
+      {
+        "case": "ussr-1989",
+        "days": 447,
+        "event": 0,
+        "response": "no halt by the response in the record",
+        "source": "hoffman-2009",
+        "type": "halt",
+        "where": "the Soviet Union collapsed without ever admitting its treaty violations"
+      },
+      {
+        "case": "syria-cw-2013",
+        "days": 17,
+        "event": 1,
+        "response": "US and Russia agree a plan to account for and eliminate Syria's chemical weapons",
+        "source": "aca2023syriacw",
+        "type": "statement",
+        "where": "entry September 14, 2013"
+      },
+      {
+        "case": "syria-cw-2013",
+        "days": 30,
+        "event": 1,
+        "response": "OPCW timeline and Security Council resolution endorsing it",
+        "source": "aca2023syriacw",
+        "type": "statement",
+        "where": "entry September 27, 2013"
+      },
+      {
+        "case": "syria-cw-2013",
+        "days": 64,
+        "event": 1,
+        "response": "OPCW confirms all declared production and mixing facilities destroyed or rendered inoperable",
+        "source": "aca2023syriacw",
+        "type": "halt",
+        "where": "entry October 31, 2013"
+      },
+      {
+        "case": "syria-cw-2017",
+        "days": 2,
+        "event": 1,
+        "response": "US cruise missile strike on the air base believed used",
+        "source": "aca2023syriacw",
+        "type": "military",
+        "where": "entry April 6, 2017"
+      },
+      {
+        "case": "syria-cw-2018",
+        "days": 6,
+        "event": 1,
+        "response": "France, the UK and the US strike three chemical weapons facilities",
+        "source": "aca2023syriacw",
+        "type": "military",
+        "where": "entry April 13, 2018"
+      }
+    ],
+    "types": {
+      "exit": "the violator leaves the regime",
+      "halt": "first physical halt",
+      "military": "a strike",
+      "sanctions": "a measure imposing costs",
+      "statement": "formal finding, demand, referral or demarche, no enforcement"
+    }
+  },
+  "experiment": "E24",
+  "name": "e24_response_latency",
+  "numbers": {
+    "e24-exit-min-days": {
+      "fmt": ",.0f",
+      "label": "fastest exit by the violator after a finding (its withdrawal notice)",
+      "note": "",
+      "unit": "days",
+      "value": 31.0
+    },
+    "e24-findings": {
+      "fmt": ",.0f",
+      "label": "confirmed findings in the response table",
+      "note": "",
+      "unit": "findings",
+      "value": 17.0
+    },
+    "e24-halt-findings": {
+      "fmt": ",.0f",
+      "label": "findings in the halt analysis (those whose sources say whether a halt followed)",
+      "note": "",
+      "unit": "findings",
+      "value": 13.0
+    },
+    "e24-halt-first-km-median-years": {
+      "fmt": ".1f",
+      "label": "Kaplan-Meier median years to a halt, first finding per programme only",
+      "note": "",
+      "unit": "years",
+      "value": 0.919917864476386
+    },
+    "e24-halt-first-share-never": {
+      "fmt": "%",
+      "label": "share never halted, first finding per programme only",
+      "note": "",
+      "unit": "",
+      "value": 0.16666666666666663
+    },
+    "e24-halt-km-median-years": {
+      "fmt": ".1f",
+      "label": "Kaplan-Meier median years from a finding to a halt, findings never halted censored",
+      "note": "",
+      "unit": "years",
+      "value": 6.308008213552362
+    },
+    "e24-halt-km-median-years-lo": {
+      "fmt": ".1f",
+      "label": "the same median, 5th percentile of resampling the findings",
+      "note": "",
+      "unit": "years",
+      "value": 0.919917864476386
+    },
+    "e24-halt-km-over-hwp": {
+      "fmt": ".1f",
+      "label": "Kaplan-Meier median time to a halt over the reaction horizon the hardwired-pause paper chooses",
+      "note": "",
+      "unit": "",
+      "value": 3.154004106776181
+    },
+    "e24-halt-km-share-unbounded": {
+      "fmt": "%",
+      "label": "share of resampled tables in which fewer than half the findings are ever halted (no median)",
+      "note": "",
+      "unit": "",
+      "value": 0.2648
+    },
+    "e24-halt-lognormal-median-years": {
+      "fmt": ".1f",
+      "label": "median years to a halt of a log-normal fitted with censoring",
+      "note": "",
+      "unit": "years",
+      "value": 5.0148351471067585
+    },
+    "e24-halt-lognormal-median-years-hi": {
+      "fmt": ".1f",
+      "label": "the log-normal median, 95th percentile of resampling the findings",
+      "note": "",
+      "unit": "years",
+      "value": 31.139431655493656
+    },
+    "e24-halt-lognormal-median-years-lo": {
+      "fmt": ".1f",
+      "label": "the log-normal median, 5th percentile of resampling the findings",
+      "note": "",
+      "unit": "years",
+      "value": 1.590271278137736
+    },
+    "e24-halt-median-if-halted-years": {
+      "fmt": ".1f",
+      "label": "median years from a finding to the first halt, among findings that were halted",
+      "note": "",
+      "unit": "years",
+      "value": 0.919917864476386
+    },
+    "e24-halt-min-days": {
+      "fmt": ",.0f",
+      "label": "fastest halt after a finding in the table",
+      "note": "",
+      "unit": "days",
+      "value": 64.0
+    },
+    "e24-halt-over-exit": {
+      "fmt": ",.0f",
+      "label": "median time to a halt, among findings halted, over the violator's fastest exit",
+      "note": "",
+      "unit": "",
+      "value": 10.838709677419354
+    },
+    "e24-halt-share-never": {
+      "fmt": "%",
+      "label": "share of those findings followed by no halt by the end of what the sources cover",
+      "note": "",
+      "unit": "",
+      "value": 0.46153846153846156
+    },
+    "e24-halt-share-reversed": {
+      "fmt": "%",
+      "label": "share of halts later reversed or shown incomplete in the same sources",
+      "note": "",
+      "unit": "",
+      "value": 0.7142857142857143
+    },
+    "e24-military-max-days": {
+      "fmt": ",.0f",
+      "label": "slowest of the strikes in the table, days after the attack they answered",
+      "note": "",
+      "unit": "days",
+      "value": 6.0
+    },
+    "e24-miri-notice-over-halt": {
+      "fmt": ".1f",
+      "label": "MIRI's draft withdrawal notice over the median time to a halt among findings halted",
+      "note": "",
+      "unit": "",
+      "value": 1.0870535714285714
+    },
+    "e24-programmes": {
+      "fmt": ",.0f",
+      "label": "distinct programmes those findings concern",
+      "note": "",
+      "unit": "programmes",
+      "value": 8.0
+    },
+    "e24-responses": {
+      "fmt": ",.0f",
+      "label": "dated responses in the table",
+      "note": "",
+      "unit": "responses",
+      "value": 36.0
+    },
+    "e24-sanctions-median-days": {
+      "fmt": ",.0f",
+      "label": "median days from a finding to its first sanctions",
+      "note": "",
+      "unit": "days",
+      "value": 32.5
+    },
+    "e24-sanctions-median-days-hi": {
+      "fmt": ",.0f",
+      "label": "the same median, 95th percentile of resampling the findings",
+      "note": "",
+      "unit": "days",
+      "value": 156.5
+    },
+    "e24-sanctions-median-days-lo": {
+      "fmt": ",.0f",
+      "label": "the same median, 5th percentile of resampling the findings",
+      "note": "",
+      "unit": "days",
+      "value": 13.0
+    },
+    "e24-statement-max-days": {
+      "fmt": ",.0f",
+      "label": "longest wait from a finding to its first formal statement in the table",
+      "note": "",
+      "unit": "days",
+      "value": 1102.0
+    },
+    "e24-statement-median-days": {
+      "fmt": ",.0f",
+      "label": "median days from a finding to its first formal statement, demand or referral",
+      "note": "",
+      "unit": "days",
+      "value": 60.0
+    },
+    "e24-statement-median-days-hi": {
+      "fmt": ",.0f",
+      "label": "the same median, 95th percentile of resampling the findings",
+      "note": "",
+      "unit": "days",
+      "value": 202.0
+    },
+    "e24-statement-median-days-lo": {
+      "fmt": ",.0f",
+      "label": "the same median, 5th percentile of resampling the findings",
+      "note": "",
+      "unit": "days",
+      "value": 28.0
+    }
+  },
+  "script": "tools/exp/e24_response_latency.py",
+  "seed": 20261127
+}

@@ -43,6 +43,24 @@ url = "https://www.armscontrol.org/factsheets/dprkchron"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md"
 
+[source.aca2023iran]
+type = "report"
+title = "Timeline of Nuclear Diplomacy With Iran, 1967-2023"
+authors = "Arms Control Association"
+year = 2023
+url = "https://www.armscontrol.org/factsheets/timeline-nuclear-diplomacy-iran-1967-2023"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e24_response_latency.sources.toml"
+
+[source.aca2023syriacw]
+type = "report"
+title = "Timeline of Syrian Chemical Weapons Activity, 2012-2022"
+authors = "Arms Control Association (updated by Julia Masterson and Leanne Quinn)"
+year = 2023
+url = "https://www.armscontrol.org/factsheets/timeline-syrian-chemical-weapons-activity-2012-2022"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e24_response_latency.sources.toml"
+
 [source.aghion2017ai]
 type = "report"
 title = "Artificial Intelligence and Economic Growth"
@@ -377,6 +395,15 @@ arxiv = "2507.15916"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md, research/notes/08-arms-control.md, research/notes/07-compute-governance.md"
 aliases = ["baker-2025-six-layers", "baker2025sixlayers"]
+
+[source.barletta1999sa]
+type = "report"
+title = "South Africa's Nuclear Weapons Program: An Annotated Chronology, 1969-1994"
+authors = "Michael Barletta, Christina Ellington (James Martin Center for Nonproliferation Studies)"
+year = 1999
+url = "https://nonproliferation.org/south-africas-nuclear-weapons-program-an-annotated-chronology-1969-1994/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
 
 [source.barnett2024evaluations]
 type = "preprint"
@@ -815,6 +842,15 @@ url = "https://tee.fail/"
 opened = "2026-11-27"
 found_in = "research/notes/07-compute-governance.md"
 
+[source.cia2002dprk]
+type = "official-docs"
+title = "North Korean Nuclear Weapons: CIA Estimate for Congress, November 19, 2002 (FAS copy)"
+authors = "Central Intelligence Agency"
+year = 2002
+url = "https://nuke.fas.org/guide/dprk/nuke/cia111902.html"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
+
 [source.clymer2024poser]
 type = "preprint"
 title = "Poser: Unmasking Alignment Faking LLMs by Manipulating Their Internals"
@@ -887,6 +923,15 @@ doi = "10.1017/S000305541900073X"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md"
 
+[source.cohen2015dimona]
+type = "report"
+title = "The Eisenhower Administration and the Discovery of Dimona: March 1958-January 1961 (National Security Archive Electronic Briefing Book No. 510)"
+authors = "Avner Cohen, William Burr (eds.)"
+year = 2015
+url = "https://nsarchive2.gwu.edu/nukevault/ebb510/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
+
 [source.cottier2024rising]
 type = "preprint"
 title = "The rising costs of training frontier AI models"
@@ -958,6 +1003,15 @@ year = 1993
 url = "https://www.opcw.org/fileadmin/OPCW/CWC/CWC_en.pdf"
 opened = "2026-11-27"
 found_in = "research/notes/08-arms-control.md"
+
+[source.danzig2012aum]
+type = "report"
+title = "Aum Shinrikyo: Insights Into How Terrorists Develop Biological and Chemical Weapons (second edition)"
+authors = "Richard Danzig, Marc Sageman, Terrance Leighton, Lloyd Hough, Hidemi Yuki, Rui Kotani, Zachary M. Hosford (CNAS)"
+year = 2012
+url = "https://www.cnas.org/publications/reports/aum-shinrikyo-second-edition-english"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
 
 [source.davidson2023compute]
 type = "essay"
@@ -2021,6 +2075,15 @@ url = "https://securitycouncilreport.org/atf/cf/%7B65BFCF9B-6D27-4E9C-8CD3-CF6E4
 opened = "2026-11-27"
 found_in = "research/notes/08-arms-control.md"
 
+[source.iaea-gov-2004-84]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement in the Republic of Korea (GOV/2004/84)"
+authors = "IAEA, Report by the Director General"
+year = 2004
+url = "https://www.iaea.org/sites/default/files/gov2004-84.pdf"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
+
 [source.iaea-gov-2009-74]
 type = "official-docs"
 title = "Implementation of the NPT Safeguards Agreement and relevant provisions of Security Council resolutions in the Islamic Republic of Iran (GOV/2009/74)"
@@ -2038,6 +2101,24 @@ year = 2011
 url = "https://acronym.org.uk/old/archive/docs/1105/Syria%20IAEA%20Report%20May%202011.pdf"
 opened = "2026-11-27"
 found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-gov-2011-41]
+type = "official-docs"
+title = "Implementation of the NPT safeguards agreement in the Syrian Arab Republic: resolution adopted by the Board of Governors on 9 June 2011 (GOV/2011/41)"
+authors = "IAEA Board of Governors"
+year = 2011
+url = "https://www.iaea.org/sites/default/files/gov2011-41.pdf"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e24_response_latency.sources.toml"
+
+[source.iaea-gov-2011-65]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement and relevant provisions of Security Council resolutions in the Islamic Republic of Iran (GOV/2011/65)"
+authors = "IAEA, Report by the Director General"
+year = 2011
+url = "https://www.iaea.org/sites/default/files/gov2011-65.pdf"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
 
 [source.iaea-sir-2024]
 type = "official-docs"
@@ -3859,6 +3940,24 @@ year = 2024
 doi = "10.1038/s41586-023-06747-5"
 opened = "2026-11-27"
 found_in = "research/notes/03-algorithms.md"
+
+[source.un-s-1995-864]
+type = "official-docs"
+title = "Note by the Secretary-General transmitting the eighth report of the Executive Chairman of the Special Commission under resolution 715 (S/1995/864)"
+authors = "United Nations Security Council"
+year = 1995
+url = "https://documents.un.org/api/symbol/access?s=S/1995/864&l=en&t=pdf"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
+
+[source.unscom-1999-chronology]
+type = "official-docs"
+title = "UNSCOM: Chronology of Main Events (December 1999)"
+authors = "United Nations Special Commission"
+year = 1999
+url = "https://www.un.org/Depts/unscom/Chronology/chronology.htm"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e05_detection.sources.toml"
 
 [source.vahdati2026arc]
 type = "preprint"

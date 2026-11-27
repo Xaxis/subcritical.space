@@ -105,6 +105,38 @@
       ]
     },
     {
+      "id": "cli:e05-detection",
+      "kind": "cli",
+      "entry": "tools/exp/e05_detection.py",
+      "reach": ".venv/bin/python tools/exp/e05_detection.py (E5)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:e08-footprint-floor",
+      "kind": "cli",
+      "entry": "tools/exp/e08_footprint_floor.py",
+      "reach": ".venv/bin/python tools/exp/e08_footprint_floor.py (E8)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:e24-response-latency",
+      "kind": "cli",
+      "entry": "tools/exp/e24_response_latency.py",
+      "reach": ".venv/bin/python tools/exp/e24_response_latency.py (E24)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:formal-checks",
+      "kind": "cli",
+      "entry": "tools/formal/run_all.py",
+      "reach": "python3 tools/formal/run_all.py (every statement in research/05-formal.md on seeded random instances)",
+      "area": "formal",
+      "tests": []
+    },
+    {
       "id": "cli:model",
       "kind": "cli",
       "entry": "model/subcritical.py",

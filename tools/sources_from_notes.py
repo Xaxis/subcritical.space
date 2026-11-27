@@ -15,7 +15,10 @@ resolves. Missing fields are filled from the folded entries, and `found_in` list
 
 A research document can hand over sources the same way: a closing "## Sources to add" section
 holding one ```toml block. With --write its entries join the list and the section is removed from
-the document, since the list is now where they live.
+the document, since the list is now where they live. An experiment whose case table cites sources
+nobody had listed keeps them in tools/exp/data/<name>.sources.toml, read like a note's block and
+kept, as the record of what that experiment opened. The verification reports in
+research/verification/ end with a block the same way and are read like notes.
 
   python3 tools/sources_from_notes.py            report what would change, change nothing
   python3 tools/sources_from_notes.py --write    write research/sources.toml, sorted by key
@@ -156,10 +159,16 @@ def main(argv: list[str]) -> int:
     issues: list[str] = []
     docs = sorted((ROOT / "research").glob("*.md"))
     handovers = [d for d in docs if HANDOVER.search(d.read_text())]
-    for note in sorted((ROOT / "research" / "notes").glob("*.md")) + handovers:
+    experiments = sorted((ROOT / "tools" / "exp" / "data").glob("*.sources.toml"))
+    notes = sorted((ROOT / "research" / "notes").glob("*.md"))
+    notes += sorted((ROOT / "research" / "verification").glob("*.md"))
+    for note in notes + handovers + experiments:
         rel = note.relative_to(ROOT).as_posix()
         text = note.read_text()
-        blocks = handover(text)[0] if note in handovers else BLOCK.findall(text)
+        if note in experiments:
+            blocks = [text]
+        else:
+            blocks = handover(text)[0] if note in handovers else BLOCK.findall(text)
         if not blocks:
             continue
         for block in blocks:

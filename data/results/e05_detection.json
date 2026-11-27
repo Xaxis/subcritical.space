@@ -1,0 +1,799 @@
+{
+  "data": [],
+  "details": {
+    "cases": [
+      {
+        "channel": "intelligence",
+        "discovered": 1,
+        "found": "1991-06-23",
+        "id": "iraq-nuclear",
+        "outcome": "found",
+        "source": "unscom-1999-chronology",
+        "start": "late 1981",
+        "start_source": "albright-2002",
+        "years": 9.6016
+      },
+      {
+        "channel": "interdiction",
+        "discovered": 1,
+        "found": "2003-10",
+        "id": "libya-nuclear",
+        "outcome": "found",
+        "source": "crs-2004-libya",
+        "start": "early 1980s",
+        "start_source": "iaea-gov-2004-12",
+        "years": 22.2861
+      },
+      {
+        "channel": "media",
+        "discovered": 1,
+        "found": "2002-08",
+        "id": "iran-centrifuge",
+        "outcome": "found",
+        "source": "iaea-gov-2003-40",
+        "start": "1985",
+        "start_source": "iaea-gov-2003-75",
+        "years": 17.1198
+      },
+      {
+        "channel": "intelligence",
+        "discovered": 1,
+        "found": "2009-09-25",
+        "id": "iran-fordow",
+        "outcome": "found",
+        "source": "whitehouse-2009-qom",
+        "start": "2006",
+        "start_source": "iaea-gov-2009-74",
+        "years": 3.2334
+      },
+      {
+        "channel": "intelligence",
+        "discovered": 1,
+        "found": "2007-09",
+        "id": "syria-reactor",
+        "outcome": "found",
+        "source": "iaea-gov-2011-30",
+        "start": "2001",
+        "start_source": "iaea-gov-2011-30",
+        "years": 6.204
+      },
+      {
+        "channel": "defector",
+        "discovered": 1,
+        "found": "1989-10-late",
+        "id": "ussr-biopreparat",
+        "outcome": "found",
+        "source": "hoffman-2009",
+        "start": "1973",
+        "start_source": "fas-biopreparat",
+        "years": 16.3149
+      },
+      {
+        "channel": "intelligence",
+        "discovered": 1,
+        "found": "1977-07-30",
+        "id": "south-africa",
+        "outcome": "found",
+        "source": "barletta1999sa",
+        "start": "1974",
+        "start_source": "vonbaeckmann-1995",
+        "years": 3.0773
+      },
+      {
+        "channel": "inspectorate",
+        "discovered": 1,
+        "found": "1992-09",
+        "id": "dprk-plutonium",
+        "outcome": "found",
+        "source": "aca2022dprkchron",
+        "start": "1989",
+        "start_source": "aca2022dprkchron",
+        "years": 3.206
+      },
+      {
+        "channel": "intelligence",
+        "discovered": 1,
+        "found": "2002-10-03",
+        "id": "dprk-enrichment",
+        "outcome": "found",
+        "source": "aca2022dprkchron",
+        "start": "about 2 years before 2002-11-19",
+        "start_source": "cia2002dprk",
+        "years": 1.87
+      },
+      {
+        "channel": "inspectorate",
+        "discovered": 1,
+        "found": "1995-07-01",
+        "id": "iraq-biological",
+        "outcome": "found",
+        "source": "unscom-1999-chronology",
+        "start": "1985-05/06",
+        "start_source": "un-s-1995-864",
+        "years": 10.0808
+      },
+      {
+        "channel": "inspectorate",
+        "discovered": 1,
+        "found": "1997-11",
+        "id": "rok-plutonium",
+        "outcome": "found",
+        "source": "iaea-gov-2004-84",
+        "start": "1981-07-20",
+        "start_source": "iaea-gov-2004-84",
+        "years": 16.3231
+      },
+      {
+        "channel": "self",
+        "discovered": 0,
+        "found": "2004-08-23",
+        "id": "rok-laser",
+        "outcome": "disclosed",
+        "source": "iaea-gov-2004-84",
+        "start": "2000-01",
+        "start_source": "iaea-gov-2004-84",
+        "years": 4.6051
+      },
+      {
+        "channel": "self",
+        "discovered": 0,
+        "found": "2003-11-10",
+        "id": "iran-laser",
+        "outcome": "disclosed",
+        "source": "iaea-gov-2003-75",
+        "start": "about 12 years before 2003-11-10",
+        "start_source": "iaea-gov-2003-75",
+        "years": 12.0
+      },
+      {
+        "channel": "intelligence",
+        "discovered": 1,
+        "found": "2005",
+        "id": "iran-weaponisation",
+        "outcome": "found",
+        "source": "iaea-gov-2011-65",
+        "start": "1989",
+        "start_source": "iaea-gov-2011-65",
+        "years": 16.0
+      },
+      {
+        "channel": "intelligence",
+        "discovered": 1,
+        "found": "1960-07-late",
+        "id": "israel-dimona",
+        "outcome": "found",
+        "source": "cohen2015dimona",
+        "start": "1957-10-30",
+        "start_source": "cohen2015dimona",
+        "years": 2.7351
+      },
+      {
+        "channel": "police",
+        "discovered": 1,
+        "found": "1994-11",
+        "id": "aum-shinrikyo",
+        "outcome": "found",
+        "source": "danzig2012aum",
+        "start": "spring 1990",
+        "start_source": "danzig2012aum",
+        "years": 4.5859
+      }
+    ],
+    "channels": {
+      "chip sampling, per year": 28.03397350720251,
+      "diversion detection": "two-piece normal in log-odds through Epoch's median and 90% interval",
+      "facility power, MW": {
+        "site-now": 38.642707726725554,
+        "site-pause": 7.245507698761041
+      },
+      "historical": "the case bootstrap of part 1, redrawn in every Monte Carlo draw",
+      "merged groups": [
+        "sampling with metering (the host's access)",
+        "imagery with intelligence (tips)"
+      ],
+      "power metering under the strongest disguise, per year": 745.190657619324,
+      "satellite": "uniform [0, 1] above 10.0 MW, zero below"
+    },
+    "channels_by_discovery": {
+      "defector": 1,
+      "inspectorate": 3,
+      "intelligence": 7,
+      "interdiction": 1,
+      "media": 1,
+      "police": 1,
+      "self": 0
+    },
+    "date_rules": {
+      "YYYY": "2 July (mid-year)",
+      "YYYY-MM": "the 15th of the month",
+      "YYYY-MM-DD": "that day",
+      "YYYY-MM-late": "the 25th of the month",
+      "YYYY-MM/MM": "the first day of the second month (the midpoint of the two)",
+      "about N years before D": "D moved back N years",
+      "early YYY0s": "2 July of the decade's second year (1.5 years in)",
+      "early YYYY": "1 March",
+      "late YYYY": "15 November",
+      "mid YYYY": "2 July",
+      "spring YYYY": "15 April"
+    },
+    "detection_time_years": {
+      "cloud": {
+        "hi": 43.00492789788488,
+        "lo": 22.65178712499427,
+        "median": 31.900579595103533,
+        "share_infinite": 0.0
+      },
+      "declared, independent": {
+        "hi": 0.0038743363221492933,
+        "lo": 0.0038743363221492933,
+        "median": 0.0038743363221492933,
+        "share_infinite": 0.0
+      },
+      "declared, merged": {
+        "hi": 0.0040200883397069394,
+        "lo": 0.0040200883397069394,
+        "median": 0.0040200883397069394,
+        "share_infinite": 0.0
+      },
+      "distillation": {
+        "hi": 43.00492789788488,
+        "lo": 22.65178712499427,
+        "median": 31.900579595103533,
+        "share_infinite": 0.0
+      },
+      "distributed": {
+        "hi": 38.45412981621975,
+        "lo": 13.580369396321572,
+        "median": 27.04553075384848,
+        "share_infinite": 0.0
+      },
+      "pool": {
+        "hi": 43.00492789788488,
+        "lo": 22.65178712499427,
+        "median": 31.900579595103533,
+        "share_infinite": 0.0
+      },
+      "site-now, independent": {
+        "hi": 32.383421120962915,
+        "lo": 0.0,
+        "median": 18.009561606943006,
+        "share_infinite": 0.0
+      },
+      "site-now, merged": {
+        "hi": 38.22848454985297,
+        "lo": 0.0,
+        "median": 26.40424975367377,
+        "share_infinite": 0.0
+      },
+      "site-pause": {
+        "hi": 38.45412981621975,
+        "lo": 13.580369396321572,
+        "median": 27.04553075384848,
+        "share_infinite": 0.0
+      }
+    },
+    "discovery_fit": {
+      "bootstrap": {
+        "draws": 10000,
+        "weibull_draws": 2000
+      },
+      "events": 14,
+      "exposure_years": 149.24298425735796,
+      "hazard": 0.093806754599989,
+      "hi": 0.14665001522034393,
+      "km_median_years": 9.60164271047228,
+      "lo": 0.056712465006836396,
+      "weibull": {
+        "loglik": -45.65415474868155,
+        "loglik_exponential": -47.131257808624326,
+        "scale_years": 11.325540774443816,
+        "shape": 1.492265920958448
+      }
+    },
+    "leave_one_out": {
+      "aum-shinrikyo": 0.089868,
+      "dprk-enrichment": 0.088212,
+      "dprk-plutonium": 0.089019,
+      "iran-centrifuge": 0.098393,
+      "iran-fordow": 0.089035,
+      "iran-laser": 0.102009,
+      "iran-weaponisation": 0.097566,
+      "iraq-biological": 0.093416,
+      "iraq-nuclear": 0.093096,
+      "israel-dimona": 0.088732,
+      "libya-nuclear": 0.102397,
+      "rok-laser": 0.096793,
+      "rok-plutonium": 0.097803,
+      "south-africa": 0.08894,
+      "syria-reactor": 0.090884,
+      "ussr-biopreparat": 0.097797
+    },
+    "ledger_inputs": {
+      "breakout-years": 1.0,
+      "claim-confidence": 0.9,
+      "def-prevent-beta": 0.05,
+      "miss-prob-one-channel": 0.30119421191220214,
+      "org-biopreparat-years": 16.0,
+      "org-covert-hazard": 0.08045977011494253,
+      "org-diversion-detect": 0.25,
+      "org-diversion-detect-high": 0.8,
+      "org-diversion-detect-low": 0.1,
+      "org-fordow-years-low": 3.0,
+      "org-hwp-tb": 2.0,
+      "org-iran-years": 17.0,
+      "org-iraq-years": 10.0,
+      "org-libya-years": 20.0,
+      "org-memo-detect-rate": 1.2,
+      "org-sa-years": 15.0,
+      "org-syria-years": 6.0,
+      "phys-floor-power-1e26-now": 38.642707726725554,
+      "phys-floor-power-1e26-pause": 7.245507698761041,
+      "phys-meter-day-detect": 0.87,
+      "phys-sat-miss-max": 3.2,
+      "phys-sat-reliable": 10.0,
+      "phys-shavit-days": 30.0,
+      "phys-shavit-prob": 0.9
+    },
+    "miss_by_path_1y": {
+      "cloud": 0.9103661512510343,
+      "declared": 0.0,
+      "distillation": 0.9103661512510343,
+      "distributed": 0.6758443204989366,
+      "pool": 0.9103661512510343,
+      "site-now": 0.2922848570489337,
+      "site-pause": 0.6758443204989366
+    },
+    "monte_carlo": {
+      "draws": 200000
+    },
+    "paths": {
+      "cloud": "rented across providers; no sourced rate for customer checks: intelligence",
+      "declared": "registered chips at a metered declared site: sampling, metering",
+      "distillation": "queries to others' models; no sourced channel: intelligence",
+      "distributed": "smuggled chips spread over sites below the satellite line: diversion, intelligence",
+      "pool": "untraced chips already held: intelligence",
+      "site-now": "one undeclared site of smuggled chips for 1e26 FLOP over today's longest run: diversion, imagery, intelligence",
+      "site-pause": "the same over a pause's longest run, below the satellite line: diversion, intelligence"
+    },
+    "sensitivity": {
+      "Fordow from 2002": {
+        "cases": 16,
+        "events": 14,
+        "exposure_years": 153.242984,
+        "hazard": 0.091358,
+        "hi": 0.142822,
+        "lo": 0.055232
+      },
+      "O4's seven, South Africa coded as O4 did": {
+        "cases": 7,
+        "events": 6,
+        "exposure_years": 90.132786,
+        "hazard": 0.066568,
+        "hi": 0.131388,
+        "lo": 0.028991
+      },
+      "O4's seven, coded from the case table": {
+        "cases": 7,
+        "events": 7,
+        "exposure_years": 77.837098,
+        "hazard": 0.089931,
+        "hi": 0.168918,
+        "lo": 0.042208
+      },
+      "discoveries after the activity ended censored at its end": {
+        "cases": 16,
+        "events": 12,
+        "exposure_years": 132.071184,
+        "hazard": 0.09086,
+        "hi": 0.147213,
+        "lo": 0.052428
+      },
+      "every coding that lowers the rate at once": {
+        "cases": 16,
+        "events": 10,
+        "exposure_years": 147.780972,
+        "hazard": 0.067668,
+        "hi": 0.114779,
+        "lo": 0.036712
+      },
+      "every coding that raises the rate at once": {
+        "cases": 16,
+        "events": 15,
+        "exposure_years": 149.242984,
+        "hazard": 0.100507,
+        "hi": 0.154762,
+        "lo": 0.061955
+      },
+      "first programme per party only": {
+        "cases": 10,
+        "events": 10,
+        "exposure_years": 101.453799,
+        "hazard": 0.098567,
+        "hi": 0.167192,
+        "lo": 0.053477
+      },
+      "iran-laser coded found at 2003-11-10": {
+        "cases": 16,
+        "events": 15,
+        "exposure_years": 149.242984,
+        "hazard": 0.100507,
+        "hi": 0.154762,
+        "lo": 0.061955
+      },
+      "libya-nuclear coded disclosed at 2003-03": {
+        "cases": 16,
+        "events": 13,
+        "exposure_years": 148.657084,
+        "hazard": 0.08745,
+        "hi": 0.139035,
+        "lo": 0.051727
+      },
+      "main: every case, main codings": {
+        "cases": 16,
+        "events": 14,
+        "exposure_years": 149.242984,
+        "hazard": 0.093807,
+        "hi": 0.14665,
+        "lo": 0.056712
+      },
+      "nuclear only": {
+        "cases": 13,
+        "events": 11,
+        "exposure_years": 118.261465,
+        "hazard": 0.093014,
+        "hi": 0.15396,
+        "lo": 0.052164
+      },
+      "programmes only (without laboratory experiments)": {
+        "cases": 14,
+        "events": 13,
+        "exposure_years": 128.314853,
+        "hazard": 0.101313,
+        "hi": 0.161077,
+        "lo": 0.059927
+      },
+      "south-africa coded undetected at 1989-11": {
+        "cases": 16,
+        "events": 13,
+        "exposure_years": 161.538672,
+        "hazard": 0.080476,
+        "hi": 0.127948,
+        "lo": 0.047602
+      },
+      "states only (without Aum Shinrikyo)": {
+        "cases": 15,
+        "events": 13,
+        "exposure_years": 144.657084,
+        "hazard": 0.089868,
+        "hi": 0.14288,
+        "lo": 0.053157
+      },
+      "under a treaty or Council obligation only": {
+        "cases": 13,
+        "events": 11,
+        "exposure_years": 138.844627,
+        "hazard": 0.079225,
+        "hi": 0.131136,
+        "lo": 0.044431
+      }
+    },
+    "windows_years": {
+      "hardwired_pause": 2.0,
+      "memo_placeholder": 1.0
+    }
+  },
+  "experiment": "E5",
+  "name": "e05_detection",
+  "numbers": {
+    "e5-cases": {
+      "fmt": ",.0f",
+      "label": "covert programmes and undeclared experiments in the case table",
+      "note": "",
+      "unit": "cases",
+      "value": 16.0
+    },
+    "e5-events": {
+      "fmt": ",.0f",
+      "label": "cases discovered from outside (the rest disclosed by the party, so censored)",
+      "note": "",
+      "unit": "discoveries",
+      "value": 14.0
+    },
+    "e5-exposure-years": {
+      "fmt": ",.0f",
+      "label": "programme-years from start to discovery or disclosure, summed over the cases",
+      "note": "",
+      "unit": "programme-years",
+      "value": 149.24298425735796
+    },
+    "e5-hazard": {
+      "fmt": ".3f",
+      "label": "historical discovery rate of covert programmes, discoveries over programme-years (main coding)",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.093806754599989
+    },
+    "e5-hazard-boot-hi": {
+      "fmt": ".3f",
+      "label": "discovery rate, 95th percentile of resampling the cases",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.13209876412252608
+    },
+    "e5-hazard-boot-lo": {
+      "fmt": ".3f",
+      "label": "discovery rate, 5th percentile of resampling the cases",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.06938049278686723
+    },
+    "e5-hazard-hi": {
+      "fmt": ".3f",
+      "label": "discovery rate, 95th percentile of the exact Poisson interval",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.14665001522034393
+    },
+    "e5-hazard-lo": {
+      "fmt": ".3f",
+      "label": "discovery rate, 5th percentile of the exact Poisson interval",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.056712465006836396
+    },
+    "e5-km-median-years": {
+      "fmt": ".1f",
+      "label": "Kaplan-Meier median time to discovery, disclosures censored",
+      "note": "",
+      "unit": "years",
+      "value": 9.60164271047228
+    },
+    "e5-loo-max": {
+      "fmt": ".3f",
+      "label": "highest discovery rate leaving out one case at a time",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.10239697224558453
+    },
+    "e5-loo-min": {
+      "fmt": ".3f",
+      "label": "lowest discovery rate leaving out one case at a time",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.08821152560005945
+    },
+    "e5-mean-years": {
+      "fmt": ".1f",
+      "label": "mean time to discovery at the fitted rate",
+      "note": "",
+      "unit": "years",
+      "value": 10.660213161239856
+    },
+    "e5-memo-log10-miss-1y": {
+      "fmt": ",.0f",
+      "label": "log10 of the memo-style miss chance over the same time: the product over every channel, as if each watched the programme",
+      "note": "",
+      "unit": "",
+      "value": -336.3826128711617
+    },
+    "e5-memo-over-hazard": {
+      "fmt": ".1f",
+      "label": "the memo's placeholder detection rate over the fitted historical rate",
+      "note": "",
+      "unit": "",
+      "value": 12.792255793487826
+    },
+    "e5-memo-over-sens-max": {
+      "fmt": ".1f",
+      "label": "the memo's placeholder rate over the highest rate any sensitivity variant gives",
+      "note": "",
+      "unit": "",
+      "value": 11.844447954509555
+    },
+    "e5-o4-hazard": {
+      "fmt": ".3f",
+      "label": "O4's seven programmes from the ledger, seven discoveries over their summed years (reproduces O4)",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.08045977011494253
+    },
+    "e5-o4-hazard-censored": {
+      "fmt": ".3f",
+      "label": "the same seven with self-disclosed South Africa censored, as a survival fit requires",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.06896551724137931
+    },
+    "e5-pmiss-max-1y": {
+      "fmt": "%",
+      "label": "chance a breakout is missed on the evader's best path over the memo's placeholder breakout time, with no response time",
+      "note": "",
+      "unit": "",
+      "value": 0.9103661512510343
+    },
+    "e5-pmiss-max-1y-hi": {
+      "fmt": "%",
+      "label": "the same miss chance, 95th percentile",
+      "note": "",
+      "unit": "",
+      "value": 0.9327106925896396
+    },
+    "e5-pmiss-max-1y-lo": {
+      "fmt": "%",
+      "label": "the same miss chance, 5th percentile",
+      "note": "",
+      "unit": "",
+      "value": 0.8761206443583988
+    },
+    "e5-pmiss-max-2y": {
+      "fmt": "%",
+      "label": "chance a breakout is missed on the evader's best path over the hardwired-pause horizon, with no response time",
+      "note": "",
+      "unit": "",
+      "value": 0.8287665293436209
+    },
+    "e5-pmiss-site-indep-1y": {
+      "fmt": "%",
+      "label": "the same miss chance with imagery and intelligence independent; also the memo-style product over the channels that watch undeclared work",
+      "note": "",
+      "unit": "",
+      "value": 0.26581390694162466
+    },
+    "e5-pmiss-site-merged-1y": {
+      "fmt": "%",
+      "label": "miss chance for one undeclared site above the satellite line, imagery and intelligence merged, median",
+      "note": "",
+      "unit": "",
+      "value": 0.2922848570489337
+    },
+    "e5-product-le-max-share": {
+      "fmt": "%",
+      "label": "share of Monte Carlo draws in which the memo's product is at most the evader's miss (the proposition says all)",
+      "note": "",
+      "unit": "",
+      "value": 1.0
+    },
+    "e5-sens-max": {
+      "fmt": ".3f",
+      "label": "highest discovery rate across the sensitivity variants (cases and codings)",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.10131329080163015
+    },
+    "e5-sens-min": {
+      "fmt": ".3f",
+      "label": "lowest discovery rate across the sensitivity variants (cases and codings)",
+      "note": "",
+      "unit": "/yr",
+      "value": 0.06656845174812429
+    },
+    "e5-td-declared-days": {
+      "fmt": ".1f",
+      "label": "detection time on the declared path (sampling and metering merged), at the prevention miss chance",
+      "note": "",
+      "unit": "days",
+      "value": 1.4683372660779597
+    },
+    "e5-td-distributed-years": {
+      "fmt": ",.0f",
+      "label": "detection time, smuggled chips spread over sites below the satellite line, median",
+      "note": "",
+      "unit": "years",
+      "value": 27.04553075384848
+    },
+    "e5-td-hist-years": {
+      "fmt": ",.0f",
+      "label": "detection time at the prevention miss chance for a path only the historical channels see",
+      "note": "",
+      "unit": "years",
+      "value": 31.935144610091246
+    },
+    "e5-td-pool-years": {
+      "fmt": ",.0f",
+      "label": "detection time, the untraced chip pool (no acquisition to catch), median",
+      "note": "",
+      "unit": "years",
+      "value": 31.900579595103533
+    },
+    "e5-td-pool-years-hi": {
+      "fmt": ",.0f",
+      "label": "detection time, the untraced chip pool, 95th percentile",
+      "note": "",
+      "unit": "years",
+      "value": 43.00492789788488
+    },
+    "e5-td-pool-years-lo": {
+      "fmt": ",.0f",
+      "label": "detection time, the untraced chip pool, 5th percentile",
+      "note": "",
+      "unit": "years",
+      "value": 22.65178712499427
+    },
+    "e5-td-ratio": {
+      "fmt": ",.0f",
+      "label": "detection time of the evader's best undeclared path over the declared path's, median",
+      "note": "",
+      "unit": "",
+      "value": 7935.293182494854
+    },
+    "e5-td-site-indep-years": {
+      "fmt": ",.0f",
+      "label": "detection time for the same site if imagery and intelligence were independent, median",
+      "note": "",
+      "unit": "years",
+      "value": 18.009561606943006
+    },
+    "e5-td-site-now-years": {
+      "fmt": ",.0f",
+      "label": "detection time, one undeclared site above the satellite line, median of the Monte Carlo",
+      "note": "",
+      "unit": "years",
+      "value": 26.40424975367377
+    },
+    "e5-td-site-now-years-hi": {
+      "fmt": ",.0f",
+      "label": "detection time, one undeclared site above the satellite line, 95th percentile",
+      "note": "",
+      "unit": "years",
+      "value": 38.22848454985297
+    },
+    "e5-td-site-now-years-lo": {
+      "fmt": ",.0f",
+      "label": "detection time, one undeclared site above the satellite line, 5th percentile",
+      "note": "",
+      "unit": "years",
+      "value": 0.0
+    },
+    "e5-td-site-pause-years": {
+      "fmt": ",.0f",
+      "label": "detection time, one undeclared site sized for a pause's longest run (below the satellite line), median",
+      "note": "",
+      "unit": "years",
+      "value": 27.04553075384848
+    },
+    "e5-td-site-satopt-years": {
+      "fmt": ",.1f",
+      "label": "detection time for the same site if satellites found every site above their line, median",
+      "note": "",
+      "unit": "years",
+      "value": 0.0
+    },
+    "e5-td-weibull-years": {
+      "fmt": ",.0f",
+      "label": "the same detection time under the Weibull fit",
+      "note": "",
+      "unit": "years",
+      "value": 23.625119762539192
+    },
+    "e5-weibull-lr-p": {
+      "fmt": ".2f",
+      "label": "p-value of the likelihood-ratio test of a Weibull against a constant rate",
+      "note": "",
+      "unit": "",
+      "value": 0.08565436274010758
+    },
+    "e5-weibull-shape": {
+      "fmt": ".2f",
+      "label": "Weibull shape of the time to discovery (1 is a constant rate; above 1, discovery likelier later)",
+      "note": "",
+      "unit": "",
+      "value": 1.492265920958448
+    },
+    "e5-weibull-shape-hi": {
+      "fmt": ".2f",
+      "label": "Weibull shape, 95th percentile of resampling the cases",
+      "note": "",
+      "unit": "",
+      "value": 2.1187618204359158
+    },
+    "e5-weibull-shape-lo": {
+      "fmt": ".2f",
+      "label": "Weibull shape, 5th percentile of resampling the cases",
+      "note": "",
+      "unit": "",
+      "value": 1.2501272648177264
+    }
+  },
+  "script": "tools/exp/e05_detection.py",
+  "seed": 20261127
+}

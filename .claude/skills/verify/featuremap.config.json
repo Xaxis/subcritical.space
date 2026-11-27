@@ -48,6 +48,34 @@
       "entry": "tools/exp/e02_time_horizons.py",
       "reach": ".venv/bin/python tools/exp/e02_time_horizons.py (E2)",
       "area": "experiments"
+    },
+    {
+      "kind": "cli",
+      "label": "e05-detection",
+      "entry": "tools/exp/e05_detection.py",
+      "reach": ".venv/bin/python tools/exp/e05_detection.py (E5)",
+      "area": "experiments"
+    },
+    {
+      "kind": "cli",
+      "label": "e08-footprint-floor",
+      "entry": "tools/exp/e08_footprint_floor.py",
+      "reach": ".venv/bin/python tools/exp/e08_footprint_floor.py (E8)",
+      "area": "experiments"
+    },
+    {
+      "kind": "cli",
+      "label": "e24-response-latency",
+      "entry": "tools/exp/e24_response_latency.py",
+      "reach": ".venv/bin/python tools/exp/e24_response_latency.py (E24)",
+      "area": "experiments"
+    },
+    {
+      "kind": "cli",
+      "label": "formal-checks",
+      "entry": "tools/formal/run_all.py",
+      "reach": "python3 tools/formal/run_all.py (every statement in research/05-formal.md on seeded random instances)",
+      "area": "formal"
     }
   ],
   "tests": [

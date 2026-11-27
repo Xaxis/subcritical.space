@@ -9711,6 +9711,1059 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - note: rerun: python3 tools/exp/e02_time_horizons.py
 - defined in: `data/results/e02_time_horizons.json`
 
+<a id="e5-cases"></a>
+### e5-cases
+
+**16 cases**: covert programmes and undeclared experiments in the case table
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-events"></a>
+### e5-events
+
+**14 discoveries**: cases discovered from outside (the rest disclosed by the party, so censored)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-exposure-years"></a>
+### e5-exposure-years
+
+**149 programme-years**: programme-years from start to discovery or disclosure, summed over the cases
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-hazard"></a>
+### e5-hazard
+
+**0.094/yr**: historical discovery rate of covert programmes, discoveries over programme-years (main coding)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-hazard-boot-hi"></a>
+### e5-hazard-boot-hi
+
+**0.132/yr**: discovery rate, 95th percentile of resampling the cases
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-hazard-boot-lo"></a>
+### e5-hazard-boot-lo
+
+**0.069/yr**: discovery rate, 5th percentile of resampling the cases
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-hazard-hi"></a>
+### e5-hazard-hi
+
+**0.147/yr**: discovery rate, 95th percentile of the exact Poisson interval
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-hazard-lo"></a>
+### e5-hazard-lo
+
+**0.057/yr**: discovery rate, 5th percentile of the exact Poisson interval
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-km-median-years"></a>
+### e5-km-median-years
+
+**9.6 years**: Kaplan-Meier median time to discovery, disclosures censored
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-loo-max"></a>
+### e5-loo-max
+
+**0.102/yr**: highest discovery rate leaving out one case at a time
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-loo-min"></a>
+### e5-loo-min
+
+**0.088/yr**: lowest discovery rate leaving out one case at a time
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-mean-years"></a>
+### e5-mean-years
+
+**10.7 years**: mean time to discovery at the fitted rate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-memo-log10-miss-1y"></a>
+### e5-memo-log10-miss-1y
+
+**-336**: log10 of the memo-style miss chance over the same time: the product over every channel, as if each watched the programme
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-memo-over-hazard"></a>
+### e5-memo-over-hazard
+
+**12.8**: the memo's placeholder detection rate over the fitted historical rate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-memo-over-sens-max"></a>
+### e5-memo-over-sens-max
+
+**11.8**: the memo's placeholder rate over the highest rate any sensitivity variant gives
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-o4-hazard"></a>
+### e5-o4-hazard
+
+**0.080/yr**: O4's seven programmes from the ledger, seven discoveries over their summed years (reproduces O4)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-o4-hazard-censored"></a>
+### e5-o4-hazard-censored
+
+**0.069/yr**: the same seven with self-disclosed South Africa censored, as a survival fit requires
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-pmiss-max-1y"></a>
+### e5-pmiss-max-1y
+
+**91%**: chance a breakout is missed on the evader's best path over the memo's placeholder breakout time, with no response time
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-pmiss-max-1y-hi"></a>
+### e5-pmiss-max-1y-hi
+
+**93%**: the same miss chance, 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-pmiss-max-1y-lo"></a>
+### e5-pmiss-max-1y-lo
+
+**88%**: the same miss chance, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-pmiss-max-2y"></a>
+### e5-pmiss-max-2y
+
+**83%**: chance a breakout is missed on the evader's best path over the hardwired-pause horizon, with no response time
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-pmiss-site-indep-1y"></a>
+### e5-pmiss-site-indep-1y
+
+**27%**: the same miss chance with imagery and intelligence independent; also the memo-style product over the channels that watch undeclared work
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-pmiss-site-merged-1y"></a>
+### e5-pmiss-site-merged-1y
+
+**29%**: miss chance for one undeclared site above the satellite line, imagery and intelligence merged, median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-product-le-max-share"></a>
+### e5-product-le-max-share
+
+**100%**: share of Monte Carlo draws in which the memo's product is at most the evader's miss (the proposition says all)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-sens-max"></a>
+### e5-sens-max
+
+**0.101/yr**: highest discovery rate across the sensitivity variants (cases and codings)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-sens-min"></a>
+### e5-sens-min
+
+**0.067/yr**: lowest discovery rate across the sensitivity variants (cases and codings)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-declared-days"></a>
+### e5-td-declared-days
+
+**1.5 days**: detection time on the declared path (sampling and metering merged), at the prevention miss chance
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-distributed-years"></a>
+### e5-td-distributed-years
+
+**27 years**: detection time, smuggled chips spread over sites below the satellite line, median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-hist-years"></a>
+### e5-td-hist-years
+
+**32 years**: detection time at the prevention miss chance for a path only the historical channels see
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-pool-years"></a>
+### e5-td-pool-years
+
+**32 years**: detection time, the untraced chip pool (no acquisition to catch), median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-pool-years-hi"></a>
+### e5-td-pool-years-hi
+
+**43 years**: detection time, the untraced chip pool, 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-pool-years-lo"></a>
+### e5-td-pool-years-lo
+
+**23 years**: detection time, the untraced chip pool, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-ratio"></a>
+### e5-td-ratio
+
+**7,935**: detection time of the evader's best undeclared path over the declared path's, median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-site-indep-years"></a>
+### e5-td-site-indep-years
+
+**18 years**: detection time for the same site if imagery and intelligence were independent, median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-site-now-years"></a>
+### e5-td-site-now-years
+
+**26 years**: detection time, one undeclared site above the satellite line, median of the Monte Carlo
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-site-now-years-hi"></a>
+### e5-td-site-now-years-hi
+
+**38 years**: detection time, one undeclared site above the satellite line, 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-site-now-years-lo"></a>
+### e5-td-site-now-years-lo
+
+**0 years**: detection time, one undeclared site above the satellite line, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-site-pause-years"></a>
+### e5-td-site-pause-years
+
+**27 years**: detection time, one undeclared site sized for a pause's longest run (below the satellite line), median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-site-satopt-years"></a>
+### e5-td-site-satopt-years
+
+**0.0 years**: detection time for the same site if satellites found every site above their line, median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-td-weibull-years"></a>
+### e5-td-weibull-years
+
+**24 years**: the same detection time under the Weibull fit
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-weibull-lr-p"></a>
+### e5-weibull-lr-p
+
+**0.09**: p-value of the likelihood-ratio test of a Weibull against a constant rate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-weibull-shape"></a>
+### e5-weibull-shape
+
+**1.49**: Weibull shape of the time to discovery (1 is a constant rate; above 1, discovery likelier later)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-weibull-shape-hi"></a>
+### e5-weibull-shape-hi
+
+**2.12**: Weibull shape, 95th percentile of resampling the cases
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e5-weibull-shape-lo"></a>
+### e5-weibull-shape-lo
+
+**1.25**: Weibull shape, 5th percentile of resampling the cases
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e05_detection.py
+- defined in: `data/results/e05_detection.json`
+
+<a id="e8-concentrated-1e25-now-seen"></a>
+### e8-concentrated-1e25-now-seen
+
+**0%**: share of draws in which a 1e25 FLOP run on one site over today's longest sensible run draws at least the satellite limit (drawn between the largest miss and the reliable line)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-concentrated-1e25-now-seen-denied"></a>
+### e8-concentrated-1e25-now-seen-denied
+
+**17%**: the same share for a denied party's site
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-concentrated-1e26-pause-seen"></a>
+### e8-concentrated-1e26-pause-seen
+
+**19%**: share of draws in which a 1e26 FLOP run on one site over a pause's run length draws at least the satellite limit
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-concentrated-1e26-pause-seen-denied"></a>
+### e8-concentrated-1e26-pause-seen-denied
+
+**60%**: the same share for a denied party's site
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-container-1e26-pause-capability"></a>
+### e8-cross-container-1e26-pause-capability
+
+**2028**: first year the chip floor of the capability 1e26 FLOP buys in the base year, at a pause's run length, fits one container, algorithms at the measured rate (counted from 2024, the year the power per chip was measured; 2024 means already below)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-grid-1e26-now"></a>
+### e8-cross-grid-1e26-now
+
+**2031**: first year a 1e26 FLOP run on one site over today's run length draws less than a utility's system impact study threshold, fixed compute, central inputs (counted from 2024, the year the power per chip was measured; 2024 means already below)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-sat-1e26-now"></a>
+### e8-cross-sat-1e26-now
+
+**2029**: first year a 1e26 FLOP run on one site over today's run length draws less than the satellite reliable line, fixed compute, central inputs (counted from 2024, the year the power per chip was measured; 2024 means already below)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-sat-1e26-now-denied"></a>
+### e8-cross-sat-1e26-now-denied
+
+**2032**: the same first year for a denied party at the full denial multiplier, central inputs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-sat-1e26-now-p05"></a>
+### e8-cross-sat-1e26-now-p05
+
+**2026**: the same first year, 5th percentile of the Monte Carlo (efficiency trend, utilisation, power per H100e, satellite limit)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-sat-1e26-now-p95"></a>
+### e8-cross-sat-1e26-now-p95
+
+**2032**: the same first year, 95th percentile of the Monte Carlo (efficiency trend, utilisation, power per H100e, satellite limit)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-sat-1e27-pause"></a>
+### e8-cross-sat-1e27-pause
+
+**2031**: first year a 1e27 FLOP run on one site over a pause's run length draws less than the satellite reliable line, fixed compute, central inputs (counted from 2024, the year the power per chip was measured; 2024 means already below)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-cross-sat-1e27-pause-capability"></a>
+### e8-cross-sat-1e27-pause-capability
+
+**2026**: the same first year for the capability 1e27 FLOP buys in the base year, with algorithms at the measured rate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-denial-delay-years"></a>
+### e8-denial-delay-years
+
+**3.1 years**: years by which the full denial multiplier delays a power channel's crossing for a fixed compute, at the measured efficiency trend
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-distributed-1e25-margin-min"></a>
+### e8-distributed-1e25-margin-min
+
+**1.4**: smallest margin over every facility channel and every draw for a distributed 1e25 FLOP run on one-node sites, a denied party's power included (above 1: no facility channel sees a site; the smallest is commercial-anonymity)
+
+- basis: experiment
+- note: the per-site floor is one node whatever C is; thermal infrared's margin is a lower bound (rerun: python3 tools/exp/e08_footprint_floor.py)
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-distributed-sat-margin"></a>
+### e8-distributed-sat-margin
+
+**345**: satellite's reliable line over one node's facility power, central inputs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-floor-1e24-pause-bound"></a>
+### e8-floor-1e24-pause-bound
+
+**21 H100e**: aggregate chip floor for 1e24 FLOP over a pause's longest sensible run, at the highest measured utilisation
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-floor-1e26-pause-bound"></a>
+### e8-floor-1e26-pause-bound
+
+**2,100 H100e**: the same floor at the highest measured utilisation, the bound an adversary could reach (L2's correction)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-floor-1e26-pause-p05"></a>
+### e8-floor-1e26-pause-p05
+
+**2,200 H100e**: the same floor, 5th percentile (high utilisation)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-floor-1e26-pause-p50"></a>
+### e8-floor-1e26-pause-p50
+
+**2,900 H100e**: aggregate chip floor for 1e26 FLOP over a pause's longest sensible run, median over utilisation drawn uniform across the measured range (no sourced distribution)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-floor-1e26-pause-p95"></a>
+### e8-floor-1e26-pause-p95
+
+**4,200 H100e**: the same floor, 95th percentile (low utilisation)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-floor-check"></a>
+### e8-floor-check
+
+**1.000**: E8's chip floor for 1e26 FLOP over today's longest sensible run, over the ledger's (1 means E8 reproduces it)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-pool-over-floor-1e26-pause-p05"></a>
+### e8-pool-over-floor-1e26-pause-p05
+
+**110**: the same ratio, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-pool-over-floor-1e26-pause-p50"></a>
+### e8-pool-over-floor-1e26-pause-p50
+
+**340**: the untraced pool over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-pool-over-floor-1e26-pause-p95"></a>
+### e8-pool-over-floor-1e26-pause-p95
+
+**1,000**: the same ratio, 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-pool-shrink-1e24-pause"></a>
+### e8-pool-shrink-1e24-pause
+
+**47,000**: factor by which the untraced pool exceeds the bound chip floor of a 1e24 FLOP run at a pause's run length: how far it must shrink for chip accounting to resolve that run
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-pool-shrink-1e26-pause"></a>
+### e8-pool-shrink-1e26-pause
+
+**470**: the same factor for a 1e26 FLOP run
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-power-1e26-now-p05"></a>
+### e8-power-1e26-now-p05
+
+**13 MW**: the same power, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-power-1e26-now-p50"></a>
+### e8-power-1e26-now-p50
+
+**20 MW**: average facility power of a 1e26 FLOP run over today's longest sensible run, median of the Monte Carlo over utilisation and power per H100e
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-power-1e26-now-p95"></a>
+### e8-power-1e26-now-p95
+
+**33 MW**: the same power, 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-power-1e26-pause-denied-p95"></a>
+### e8-power-1e26-pause-denied-p95
+
+**12 MW**: average facility power of a 1e26 FLOP run over a pause's run length for a denied party, 95th percentile (denial multiplier drawn uniform from 1 to the ledger's value)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-power-1e26-pause-p05"></a>
+### e8-power-1e26-pause-p05
+
+**2.4 MW**: the same power, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-power-1e26-pause-p50"></a>
+### e8-power-1e26-pause-p50
+
+**3.8 MW**: average facility power of a 1e26 FLOP run over a pause's longest sensible run, median of the Monte Carlo over utilisation and power per H100e
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-power-1e26-pause-p95"></a>
+### e8-power-1e26-pause-p95
+
+**6.2 MW**: the same power, 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-sat-max-c-now"></a>
+### e8-sat-max-c-now
+
+**2.6e+25 FLOP**: largest run one site below the satellite reliable line can finish within today's longest sensible run, central inputs, base year
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-sat-max-c-pause"></a>
+### e8-sat-max-c-pause
+
+**1.4e+26 FLOP**: largest run one site below the satellite reliable line can finish within a pause's longest sensible run, central inputs, base year
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-sat-max-c-pause-bound"></a>
+### e8-sat-max-c-pause-bound
+
+**5.0e+26 FLOP**: the same at a pause's run length with the lowest energy per operation the ledger's ranges allow
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-sat-max-c-pause-denied"></a>
+### e8-sat-max-c-pause-denied
+
+**5.5e+25 FLOP**: the same at a pause's run length for a denied party at the full denial multiplier, central inputs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-smuggled-over-floor-1e26-now-p05"></a>
+### e8-smuggled-over-floor-1e26-now-p05
+
+**18**: compute smuggled into one country over the chip floor of a 1e26 FLOP run at today's run length, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-smuggled-over-floor-1e26-pause-p05"></a>
+### e8-smuggled-over-floor-1e26-pause-p05
+
+**94**: the same ratio, 5th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-smuggled-over-floor-1e26-pause-p50"></a>
+### e8-smuggled-over-floor-1e26-pause-p50
+
+**230**: compute smuggled into one country over the chip floor of a 1e26 FLOP run at a pause's run length, median of the Monte Carlo
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-smuggled-over-floor-1e26-pause-p95"></a>
+### e8-smuggled-over-floor-1e26-pause-p95
+
+**590**: the same ratio, 95th percentile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-smuggled-run-now-p05"></a>
+### e8-smuggled-run-now-p05
+
+**1.8e+27 FLOP**: training compute the smuggled stock could do within today's longest sensible run, 5th percentile (smuggled stock and utilisation drawn)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-smuggled-run-pause-p05"></a>
+### e8-smuggled-run-pause-p05
+
+**9.4e+27 FLOP**: training compute the smuggled stock could do within a pause's longest sensible run, 5th percentile (smuggled stock and utilisation drawn)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-thermal-margin-1e26-now"></a>
+### e8-thermal-margin-1e26-now
+
+**3.3**: thermal infrared's margin over a 1e26 FLOP run on one site at today's run length, central inputs, a lower bound (the cluster it did not see drew at least 126 MW)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e8-years-to-cap-slow"></a>
+### e8-years-to-cap-slow
+
+**13.2 years**: years until the chip floor of the capability 1e26 FLOP buys, at a pause's run length, falls to MIRI's unmonitored cluster cap, at Gundlach et al.'s slow algorithmic rate
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e08_footprint_floor.py
+- defined in: `data/results/e08_footprint_floor.json`
+
+<a id="e24-exit-min-days"></a>
+### e24-exit-min-days
+
+**31 days**: fastest exit by the violator after a finding (its withdrawal notice)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-findings"></a>
+### e24-findings
+
+**17 findings**: confirmed findings in the response table
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-findings"></a>
+### e24-halt-findings
+
+**13 findings**: findings in the halt analysis (those whose sources say whether a halt followed)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-first-km-median-years"></a>
+### e24-halt-first-km-median-years
+
+**0.9 years**: Kaplan-Meier median years to a halt, first finding per programme only
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-first-share-never"></a>
+### e24-halt-first-share-never
+
+**17%**: share never halted, first finding per programme only
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-km-median-years"></a>
+### e24-halt-km-median-years
+
+**6.3 years**: Kaplan-Meier median years from a finding to a halt, findings never halted censored
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-km-median-years-lo"></a>
+### e24-halt-km-median-years-lo
+
+**0.9 years**: the same median, 5th percentile of resampling the findings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-km-over-hwp"></a>
+### e24-halt-km-over-hwp
+
+**3.2**: Kaplan-Meier median time to a halt over the reaction horizon the hardwired-pause paper chooses
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-km-share-unbounded"></a>
+### e24-halt-km-share-unbounded
+
+**26%**: share of resampled tables in which fewer than half the findings are ever halted (no median)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-lognormal-median-years"></a>
+### e24-halt-lognormal-median-years
+
+**5.0 years**: median years to a halt of a log-normal fitted with censoring
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-lognormal-median-years-hi"></a>
+### e24-halt-lognormal-median-years-hi
+
+**31.1 years**: the log-normal median, 95th percentile of resampling the findings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-lognormal-median-years-lo"></a>
+### e24-halt-lognormal-median-years-lo
+
+**1.6 years**: the log-normal median, 5th percentile of resampling the findings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-median-if-halted-years"></a>
+### e24-halt-median-if-halted-years
+
+**0.9 years**: median years from a finding to the first halt, among findings that were halted
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-min-days"></a>
+### e24-halt-min-days
+
+**64 days**: fastest halt after a finding in the table
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-over-exit"></a>
+### e24-halt-over-exit
+
+**11**: median time to a halt, among findings halted, over the violator's fastest exit
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-share-never"></a>
+### e24-halt-share-never
+
+**46%**: share of those findings followed by no halt by the end of what the sources cover
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-halt-share-reversed"></a>
+### e24-halt-share-reversed
+
+**71%**: share of halts later reversed or shown incomplete in the same sources
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-military-max-days"></a>
+### e24-military-max-days
+
+**6 days**: slowest of the strikes in the table, days after the attack they answered
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-miri-notice-over-halt"></a>
+### e24-miri-notice-over-halt
+
+**1.1**: MIRI's draft withdrawal notice over the median time to a halt among findings halted
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-programmes"></a>
+### e24-programmes
+
+**8 programmes**: distinct programmes those findings concern
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-responses"></a>
+### e24-responses
+
+**36 responses**: dated responses in the table
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-sanctions-median-days"></a>
+### e24-sanctions-median-days
+
+**32 days**: median days from a finding to its first sanctions
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-sanctions-median-days-hi"></a>
+### e24-sanctions-median-days-hi
+
+**156 days**: the same median, 95th percentile of resampling the findings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-sanctions-median-days-lo"></a>
+### e24-sanctions-median-days-lo
+
+**13 days**: the same median, 5th percentile of resampling the findings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-statement-max-days"></a>
+### e24-statement-max-days
+
+**1,102 days**: longest wait from a finding to its first formal statement in the table
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-statement-median-days"></a>
+### e24-statement-median-days
+
+**60 days**: median days from a finding to its first formal statement, demand or referral
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-statement-median-days-hi"></a>
+### e24-statement-median-days-hi
+
+**202 days**: the same median, 95th percentile of resampling the findings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
+<a id="e24-statement-median-days-lo"></a>
+### e24-statement-median-days-lo
+
+**28 days**: the same median, 5th percentile of resampling the findings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e24_response_latency.py
+- defined in: `data/results/e24_response_latency.json`
+
 <a id="miss-prob-one-channel"></a>
 ### miss-prob-one-channel
 
@@ -12772,3 +13825,63 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - inputs: [claim-confidence](#claim-confidence), [claim-d5-miss-target](#claim-d5-miss-target)
 - note: exact binomial bound with zero misses; any miss raises the number needed
 - defined in: `model/parts/040_claims.py#L62`
+
+<a id="formal-d5-organisms-one-miss"></a>
+### formal-d5-organisms-one-miss
+
+**38 organisms**: locked organisms per budget for the exact one-sided bound on the miss rate to reach its target when one organism is missed
+
+- basis: derived
+- formula: `smallest n with P(Bin(n, claim-d5-miss-target) <= 1) <= 1 - claim-confidence`
+- inputs: [claim-d5-miss-target](#claim-d5-miss-target), [claim-confidence](#claim-confidence)
+- defined in: `model/parts/050_formal.py#L36`
+
+<a id="formal-d5-organisms-two-miss"></a>
+### formal-d5-organisms-two-miss
+
+**52 organisms**: locked organisms per budget for the exact one-sided bound on the miss rate to reach its target when two organisms are missed
+
+- basis: derived
+- formula: `smallest n with P(Bin(n, claim-d5-miss-target) <= 2) <= 1 - claim-confidence`
+- inputs: [claim-d5-miss-target](#claim-d5-miss-target), [claim-confidence](#claim-confidence)
+- defined in: `model/parts/050_formal.py#L45`
+
+<a id="formal-floor-bound-1e26-pause"></a>
+### formal-floor-bound-1e26-pause
+
+**1,600 H100e**: aggregate chip floor for 1e26 FLOP over a pause's longest sensible run at full utilisation: a bound in H100e-equivalents for any mix of chips
+
+- basis: derived
+- formula: `phys-floor-chips-1e26-pause * phys-util-ref / 1 (full utilisation)`
+- inputs: [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause), [phys-util-ref](#phys-util-ref)
+- defined in: `model/parts/050_formal.py#L59`
+
+<a id="formal-floor-mfu-1e26-pause"></a>
+### formal-floor-mfu-1e26-pause
+
+**2,100 H100e**: the same floor at the highest utilisation in the ledger (a vendor figure for large-batch input processing)
+
+- basis: derived
+- formula: `phys-floor-chips-1e26-pause * phys-util-ref / phys-pope-mfu-prefill`
+- inputs: [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause), [phys-util-ref](#phys-util-ref), [phys-pope-mfu-prefill](#phys-pope-mfu-prefill)
+- defined in: `model/parts/050_formal.py#L68`
+
+<a id="formal-floor-ref-over-bound"></a>
+### formal-floor-ref-over-bound
+
+**2.5**: factor by which a floor at the reference utilisation exceeds the bound at full utilisation
+
+- basis: derived
+- formula: `1 / phys-util-ref`
+- inputs: [phys-util-ref](#phys-util-ref)
+- defined in: `model/parts/050_formal.py#L76`
+
+<a id="formal-pool-over-floor-bound"></a>
+### formal-pool-over-floor-bound
+
+**412**: median compute smuggled into one country through 2025, as a multiple of the 1e26 FLOP pause floor taken as a bound (full utilisation)
+
+- basis: derived
+- formula: `org-smuggled-cum / formal-floor-bound-1e26-pause`
+- inputs: [org-smuggled-cum](#org-smuggled-cum), [formal-floor-bound-1e26-pause](#formal-floor-bound-1e26-pause)
+- defined in: `model/parts/050_formal.py#L84`
