@@ -4,3 +4,4566 @@
 #   title, year (or undated = true), and at least one identifier: doi, arxiv, isbn or url.
 # Prefer DOIs and arXiv IDs: Paperwright adds sources only by identifier.
 # A source nobody opened is not cited. Add `opened = "YYYY-MM-DD"` when it was read.
+
+[source.aarne2024securechips]
+type = "report"
+title = "Secure, Governable Chips: Using On-Chip Mechanisms to Manage National Security Risks from AI & Advanced Computing"
+authors = "Onni Aarne, Tim Fist, Caleb Withers (CNAS)"
+year = 2024
+url = "https://www.cnas.org/publications/reports/secure-governable-chips"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.aarne2025flexheg3]
+type = "preprint"
+title = "Flexible Hardware-Enabled Guarantees, Part III: International Security"
+authors = "Onni Aarne, James Petrie"
+year = 2025
+arxiv = "2506.15100"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.aca-2026-newstart]
+type = "news"
+title = "New START Expires As U.S. Urges 'Modernized' Treaty"
+authors = "Xiaodon Liang"
+year = 2026
+url = "https://www.armscontrol.org/act/2026-03/news/new-start-expires-us-urges-modernized-treaty"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.aca2022dprkchron]
+type = "report"
+title = "Chronology of U.S.-North Korean Nuclear and Missile Diplomacy, 1985-2022"
+authors = "Arms Control Association"
+undated = true
+url = "https://www.armscontrol.org/factsheets/dprkchron"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.aghion2017ai]
+type = "report"
+title = "Artificial Intelligence and Economic Growth"
+authors = "Philippe Aghion, Benjamin F. Jones, Charles I. Jones"
+year = 2017
+doi = "10.3386/w23928"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.aguirre2025ktfh]
+type = "preprint"
+title = "Keep the Future Human: Why and How We Should Close the Gates to AGI and Superintelligence, and What We Should Build Instead"
+authors = "Anthony Aguirre"
+year = 2025
+arxiv = "2311.09452"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.aiimpacts2016coordinated]
+type = "essay"
+title = "Coordinated human action as example of superhuman intelligence"
+authors = "AI Impacts"
+undated = true
+url = "https://aiimpacts.org/coordinated-human-action-example-superhuman-intelligence/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.aisi2025auditingblog]
+type = "report"
+title = "Auditing games for sandbagging detection"
+authors = "UK AI Security Institute"
+year = 2025
+url = "https://www.aisi.gov.uk/blog/auditing-games-for-sandbagging-detection"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.aisi2025auditingrepo]
+type = "code"
+title = "AI-Safety-Institute/sandbagging_auditing_games"
+authors = "UK AI Security Institute"
+year = 2025
+url = "https://github.com/AI-Safety-Institute/sandbagging_auditing_games"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.aisi2025trends]
+type = "report"
+title = "Frontier AI Trends Report"
+authors = "UK AI Security Institute"
+year = 2025
+url = "https://www.aisi.gov.uk/frontier-ai-trends-report"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.akyurek2024ttt]
+type = "preprint"
+title = "The Surprising Effectiveness of Test-Time Training for Few-Shot Learning"
+authors = "Ekin Akyurek, Mehul Damani, Adam Zweiger, Linlu Qiu, Han Guo, Jyothish Pari, Yoon Kim, Jacob Andreas"
+year = 2024
+arxiv = "2411.07279"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.albright-2002]
+type = "report"
+title = "Iraq's Programs to Make Highly Enriched Uranium and Plutonium for Nuclear Weapons Prior to the Gulf War"
+authors = "David Albright"
+year = 2002
+url = "https://isis-online.org/isis-reports/detail/iraqs-programs-to-make-highly-enriched-uranium-and-plutonium-for-nuclear-we"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.ali2019coalitions]
+type = "preprint"
+title = "Coalitions in Repeated Games"
+authors = "S. Nageeb Ali, Ce Liu"
+year = 2019
+arxiv = "1906.00280"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.aljazeera-2026-iran]
+type = "news"
+title = "IAEA urges Iran to allow inspections, points at Isfahan"
+authors = "Al Jazeera staff and AFP"
+year = 2026
+url = "https://www.aljazeera.com/news/2026/2/27/iaea-eyes-isfahan-nuclear-complex-as-it-urges-iran-to-allow"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.allen-2015-llnl]
+type = "report"
+title = "Systems Approach to Arms Control Verification (LLNL-CONF-671180)"
+authors = "K. Allen, I. Neimeyer, C. Listner, G. Stein, C. Chen, M. Dreicer"
+year = 2015
+url = "https://www.osti.gov/servlets/purl/1184177"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.allen2025senate]
+type = "official-docs"
+title = "China's Challenge to American AI Leadership (written testimony before the Senate Foreign Relations Committee)"
+authors = "Gregory C. Allen (CSIS)"
+year = 2025
+url = "https://www.foreign.senate.gov/download/120225_allen_testimonypdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.allison-herzog-2025]
+type = "peer-reviewed"
+title = "Artificial Intelligence and Nuclear Weapons Proliferation: The Technological Arms Race for (In)visibility"
+authors = "David M. Allison, Stephen Herzog"
+year = 2025
+doi = "10.1111/risa.70105"
+arxiv = "2512.07487"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.allison2025nuclear]
+type = "peer-reviewed"
+title = "Artificial Intelligence and Nuclear Weapons Proliferation: The Technological Arms Race for (In)visibility"
+authors = "David M. Allison, Stephen Herzog"
+year = 2025
+doi = "10.1111/risa.70105"
+arxiv = "2512.07487"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.alramiah-2025]
+type = "preprint"
+title = "Toward a Global Regime for Compute Governance: Building the Pause Button"
+authors = "Ananthi Al Ramiah, Raymond Koopmanschap, Josh Thorsteinson, Sadruddin Khan, Jim Zhou, Shafira Noh, Joep Meindertsma, Farhan Shafiq"
+year = 2025
+arxiv = "2506.20530"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.alramiah2025pause]
+type = "preprint"
+title = "Toward a Global Regime for Compute Governance: Building the Pause Button"
+authors = "Ananthi Al Ramiah, Raymond Koopmanschap, Josh Thorsteinson, Sadruddin Khan, Jim Zhou, Shafira Noh, Joep Meindertsma, Farhan Shafiq"
+year = 2025
+arxiv = "2506.20530"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.alston2022ideas]
+type = "report"
+title = "Are Ideas Really Getting Harder to Find?"
+authors = "Julian M. Alston, Philip G. Pardey"
+year = 2022
+doi = "10.22004/ag.econ.320517"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.altman2023governance]
+type = "essay"
+title = "Governance of superintelligence"
+authors = "Sam Altman, Greg Brockman, Ilya Sutskever"
+year = 2023
+url = "https://openai.com/index/governance-of-superintelligence/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.amd-mi300x]
+type = "vendor"
+title = "AMD Instinct MI300X Accelerator data sheet"
+authors = "AMD"
+undated = true
+url = "https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/data-sheets/amd-instinct-mi300x-data-sheet.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.amodei2024grace]
+type = "essay"
+title = "Machines of Loving Grace"
+authors = "Dario Amodei"
+year = 2024
+url = "https://www.darioamodei.com/essay/machines-of-loving-grace"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.ansari-2026]
+type = "preprint"
+title = "Hardware-Level Governance of AI Compute: A Feasibility Taxonomy for Regulatory Compliance and Treaty Verification"
+authors = "Samar Ansari"
+year = 2026
+arxiv = "2604.04712"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.ansari2026inferencegov]
+type = "preprint"
+title = "Beyond Training: A Feasibility Taxonomy for Inference-Time AI Governance"
+authors = "Samar Ansari"
+year = 2026
+arxiv = "2609.10105"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ansari2026taxonomy]
+type = "preprint"
+title = "Hardware-Level Governance of AI Compute: A Feasibility Taxonomy for Regulatory Compliance and Treaty Verification"
+authors = "Samar Ansari"
+year = 2026
+arxiv = "2604.04712"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.anthropic-rsp-page-2026]
+type = "vendor"
+title = "Anthropic's Responsible Scaling Policy (policy page and update log)"
+authors = "Anthropic"
+year = 2026
+url = "https://www.anthropic.com/rsp"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.anthropic-rsp-v3-4]
+type = "vendor"
+title = "Responsible Scaling Policy, Version 3.4"
+authors = "Anthropic"
+year = 2026
+url = "https://assets.claude.com/0bacdc8440ea96e62a8766d99ebe1d4eea6d5f3a.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.anthropic-rsp-v3-announcement-2026]
+type = "vendor"
+title = "Anthropic's Responsible Scaling Policy, Version 3.0"
+authors = "Anthropic"
+year = 2026
+url = "https://www.anthropic.com/news/responsible-scaling-policy-v3"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.anthropic2023rsp]
+type = "vendor"
+title = "Anthropic's Responsible Scaling Policy, Version 1.0"
+authors = "Anthropic"
+year = 2023
+url = "https://www-cdn.anthropic.com/1adf000c8f675958c2ee23805d91aaade1cd4613/responsible-scaling-policy.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.anthropic2025sonnet45card]
+type = "vendor"
+title = "System Card: Claude Sonnet 4.5"
+authors = "Anthropic"
+year = 2025
+url = "https://assets.anthropic.com/m/12f214efcc2f457a/original/claude-sonnet-4-5-system-card.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.anthropic2026pace]
+type = "vendor"
+title = "Measurements for understanding the pace of AI development inside frontier labs"
+authors = "Anthropic (Marina Favaro, Phillie Wright)"
+year = 2026
+url = "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.anthropic2026rsp]
+type = "vendor"
+title = "Responsible Scaling Policy, Version 3.4"
+authors = "Anthropic"
+year = 2026
+url = "https://www.anthropic.com/responsible-scaling-policy"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.armstrong2013racing]
+type = "report"
+title = "Racing to the precipice: a model of artificial intelligence development (FHI Technical Report 2013-1; published in AI & Society 31(2), 2016, doi 10.1007/s00146-015-0590-y)"
+authors = "Stuart Armstrong, Nick Bostrom, Carl Shulman"
+year = 2013
+url = "https://www.futureofhumanityinstitute.org/s/2013-1.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.armstrong2016racing]
+type = "peer-reviewed"
+title = "Racing to the precipice: a model of artificial intelligence development"
+authors = "Stuart Armstrong, Nick Bostrom, Carl Shulman"
+year = 2016
+doi = "10.1007/s00146-015-0590-y"
+url = "https://www.futureofhumanityinstitute.org/s/2013-1.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.aschenbrenner2024sa]
+type = "essay"
+title = "Situational Awareness, II. From AGI to Superintelligence: the Intelligence Explosion"
+authors = "Leopold Aschenbrenner"
+year = 2024
+url = "https://situational-awareness.ai/from-agi-to-superintelligence/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.askell2019cooperation]
+type = "preprint"
+title = "The Role of Cooperation in Responsible AI Development"
+authors = "Amanda Askell, Miles Brundage, Gillian Hadfield"
+year = 2019
+arxiv = "1907.04534"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.asml2026annualreport]
+type = "vendor"
+title = "ASML Annual Report 2025: Financial performance section"
+authors = "ASML Holding N.V."
+year = 2026
+url = "https://ourbrand.asml.com/m/419103cb23dfeaa4/original/asml-2025-annual-report-financial-performance-section.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.asml2026q2call]
+type = "vendor"
+title = "ASML Q2 2026 earnings call transcript"
+authors = "ASML Holding N.V. (Roger Dassen, Christophe Fouquet); transcript by The Motley Fool"
+year = 2026
+url = "https://www.fool.com/earnings/call-transcripts/2026/07/15/asml-asml-q2-2026-earnings-call-transcript/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.avenhaus-2002]
+type = "book"
+title = "Inspection Games (Handbook of Game Theory with Economic Applications, vol. 3, ch. 51)"
+authors = "Rudolf Avenhaus, Bernhard von Stengel, Shmuel Zamir"
+year = 2002
+doi = "10.1016/S1574-0005(02)03014-X"
+url = "https://ideas.repec.org/h/eee/gamchp/3-51.html"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.avenhaus1996compliance]
+type = "book"
+title = "Compliance Quantified: An Introduction to Data Verification"
+authors = "Rudolf Avenhaus, Morton John Canty"
+year = 1996
+isbn = "9780521553667"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.avenhaus2002inspection]
+type = "book"
+title = "Inspection Games (Handbook of Game Theory with Economic Applications, vol. 3, ch. 51)"
+authors = "Rudolf Avenhaus, Bernhard von Stengel, Shmuel Zamir"
+year = 2002
+doi = "10.1016/S1574-0005(02)03014-X"
+url = "http://www.maths.lse.ac.uk/Personal/stengel/TEXTE/insp.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.bailey2026steam]
+type = "news"
+title = "Is Steam the Answer to the Gas Turbine Bottleneck?"
+authors = "Richard Bailey, Anthony Brough, Alicia Bigica (Turbomachinery Magazine)"
+year = 2026
+url = "https://www.turbomachinerymag.com/view/steam-turbines-gas-turbine-bottleneck-siemens-energy"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.baker-2023]
+type = "preprint"
+title = "Nuclear Arms Control Verification and Lessons for AI Treaties"
+authors = "Mauricio Baker"
+year = 2023
+arxiv = "2304.04123"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.baker-2025-six-layers]
+type = "preprint"
+title = "Verifying International Agreements on AI: Six Layers of Verification for Rules on Large-Scale AI Development and Deployment"
+authors = "Mauricio Baker, Gabriel Kulp, Oliver Marks, Miles Brundage, Lennart Heim"
+year = 2025
+arxiv = "2507.15916"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.baker2023nuclear]
+type = "preprint"
+title = "Nuclear Arms Control Verification and Lessons for AI Treaties"
+authors = "Mauricio Baker"
+year = 2023
+arxiv = "2304.04123"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.baker2025sixlayers]
+type = "preprint"
+title = "Verifying International Agreements on AI: Six Layers of Verification for Rules on Large-Scale AI Development and Deployment"
+authors = "Mauricio Baker, Gabriel Kulp, Oliver Marks, Miles Brundage, Lennart Heim"
+year = 2025
+arxiv = "2507.15916"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.baker2025verifying]
+type = "preprint"
+title = "Verifying International Agreements on AI: Six Layers of Verification for Rules on Large-Scale AI Development and Deployment"
+authors = "Mauricio Baker, Gabriel Kulp, Oliver Marks, Miles Brundage, Lennart Heim"
+year = 2025
+arxiv = "2507.15916"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.barnett-scher-2025]
+type = "preprint"
+title = "AI Governance to Avoid Extinction: The Strategic Landscape and Actionable Research Questions"
+authors = "Peter Barnett, Aaron Scher"
+year = 2025
+arxiv = "2505.04592"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.barnett2024evallimits]
+type = "preprint"
+title = "What AI evaluations for preventing catastrophic risks can and cannot do"
+authors = "Peter Barnett, Lisa Thiergart"
+year = 2024
+arxiv = "2412.08653"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.barnett2024evaluations]
+type = "preprint"
+title = "What AI evaluations for preventing catastrophic risks can and cannot do"
+authors = "Peter Barnett, Lisa Thiergart"
+year = 2024
+arxiv = "2412.08653"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.barnett2025governance]
+type = "preprint"
+title = "AI Governance to Avoid Extinction: The Strategic Landscape and Actionable Research Questions"
+authors = "Peter Barnett, Aaron Scher"
+year = 2025
+arxiv = "2505.04592"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.barnett2025innovation]
+type = "preprint"
+title = "Compute Requirements for Algorithmic Innovation in Frontier AI Models"
+authors = "Peter Barnett"
+year = 2025
+arxiv = "2507.10618"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.barnett2026closingwindow]
+type = "preprint"
+title = "The Closing Window: How Governments Could Lose Their Ability to Restrain Advanced AI"
+authors = "Peter Barnett"
+year = 2026
+arxiv = "2608.05173"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.barres2026harder]
+type = "preprint"
+title = "Harder Than the Task: From Technical to Organizational Difficulty in AI Benchmarking"
+authors = "Victor Barres, Aden Barton, Nicolai J. Foss, Henrik M. Nielsen"
+year = 2026
+arxiv = "2611.03494"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.barrett1994self]
+type = "peer-reviewed"
+title = "Self-Enforcing International Environmental Agreements"
+authors = "Scott Barrett"
+year = 1994
+doi = "10.1093/oep/46.Supplement_1.878"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.barrett2012climate]
+type = "peer-reviewed"
+title = "Climate negotiations under scientific uncertainty"
+authors = "Scott Barrett, Astrid Dannenberg"
+year = 2012
+doi = "10.1073/pnas.1208417109"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.becker2025rct]
+type = "preprint"
+title = "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
+authors = "Joel Becker, Nate Rush, Elizabeth Barnes, David Rein"
+year = 2025
+arxiv = "2507.09089"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.benton2024sabotage]
+type = "preprint"
+title = "Sabotage Evaluations for Frontier Models"
+authors = "Joe Benton, Misha Wagner, Eric Christiansen, Cem Anil, Ethan Perez, Jai Srivastav, Esin Durmus, Deep Ganguli, Shauna Kravec, Buck Shlegeris, Jared Kaplan, Holden Karnofsky, Evan Hubinger, Roger Grosse, Samuel R. Bowman, David Duvenaud"
+year = 2024
+arxiv = "2410.21514"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.bernheim1987coalition]
+type = "peer-reviewed"
+title = "Coalition-Proof Nash Equilibria I. Concepts"
+authors = "B. Douglas Bernheim, Bezalel Peleg, Michael D. Whinston"
+year = 1987
+doi = "10.1016/0022-0531(87)90099-8"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.berut2012]
+type = "peer-reviewed"
+title = "Experimental verification of Landauer's principle linking information and thermodynamics"
+authors = "Antoine Bérut, Artak Arakelyan, Artyom Petrosyan, Sergio Ciliberto, Raoul Dillenschneider, Eric Lutz"
+year = 2012
+doi = "10.1038/nature10872"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.berut2015]
+type = "peer-reviewed"
+title = "Information and thermodynamics: Experimental verification of Landauer's erasure principle"
+authors = "Antoine Bérut, Artyom Petrosyan, Sergio Ciliberto"
+year = 2015
+doi = "10.1088/1742-5468/2015/06/P06015"
+arxiv = "1503.06537"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.besiroglu2024replication]
+type = "preprint"
+title = "Chinchilla Scaling: A replication attempt"
+authors = "Tamay Besiroglu, Ege Erdil, Matthew Barnett, Josh You"
+year = 2024
+arxiv = "2404.10102"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.besiroglu2024returns]
+type = "report"
+title = "Do the Returns to Software R&D Point Towards a Singularity?"
+authors = "Tamay Besiroglu, Ege Erdil, Anson Ho"
+year = 2024
+url = "https://epoch.ai/blog/do-the-returns-to-software-rnd-point-towards-a-singularity"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.bis2022advancedcomputing]
+type = "legislation"
+title = "Implementation of Additional Export Controls: Certain Advanced Computing and Semiconductor Manufacturing Items; Supercomputer and Semiconductor End Use; Entity List Modification (87 FR 62186)"
+authors = "Bureau of Industry and Security, US Department of Commerce"
+year = 2022
+url = "https://www.federalregister.gov/documents/2022/10/13/2022-21658/implementation-of-additional-export-controls-certain-advanced-computing-and-semiconductor-manufacturing-items"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.bis2023advancedcomputing]
+type = "legislation"
+title = "Implementation of Additional Export Controls: Certain Advanced Computing Items; Supercomputer and Semiconductor End Use; Updates and Corrections (88 FR 73458)"
+authors = "Bureau of Industry and Security, US Department of Commerce"
+year = 2023
+url = "https://www.federalregister.gov/documents/2023/10/25/2023-23055/implementation-of-additional-export-controls-certain-advanced-computing-items-supercomputer-and-semiconductor-end-use-updates"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.bis2024hbm]
+type = "legislation"
+title = "Foreign-Produced Direct Product Rule Additions, and Refinements to Controls for Advanced Computing and Semiconductor Manufacturing Items (89 FR 96790)"
+authors = "Bureau of Industry and Security, US Department of Commerce"
+year = 2024
+url = "https://www.federalregister.gov/documents/2024/12/05/2024-28270/foreign-produced-direct-product-rule-additions-and-refinements-to-controls-for-advanced-computing-and-semiconductor-manufacturing-items"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.bis2025diffusion]
+type = "legislation"
+title = "Framework for Artificial Intelligence Diffusion (90 FR 4544)"
+authors = "Bureau of Industry and Security, US Department of Commerce"
+year = 2025
+url = "https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.bis2025rescission]
+type = "official-docs"
+title = "Department of Commerce Announces Rescission of Biden-Era Artificial Intelligence Diffusion Rule, Strengthens Chip-Related Export Controls"
+authors = "Bureau of Industry and Security, US Department of Commerce"
+year = 2025
+url = "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.blablova2025china]
+type = "essay"
+title = "Why China isn't about to leap ahead of the West on compute"
+authors = "Veronika Blablova and Robi Rahman (Epoch AI Gradient Updates)"
+year = 2025
+url = "https://epoch.ai/gradient-updates/why-china-isnt-about-to-leap-ahead-of-the-west-on-compute"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.black2025replibench]
+type = "preprint"
+title = "RepliBench: Evaluating the Autonomous Replication Capabilities of Language Model Agents"
+authors = "Sid Black, Asa Cooper Stickland, Jake Pencharz, Oliver Sourbut, Michael Schmatz, Jay Bailey, Ollie Matthews, Ben Millwood, Alex Remedios, Alan Cooney"
+year = 2025
+arxiv = "2504.18565"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.bloom2020ideas]
+type = "peer-reviewed"
+title = "Are Ideas Getting Harder to Find?"
+authors = "Nicholas Bloom, Charles I. Jones, John Van Reenen, Michael Webb"
+year = 2020
+doi = "10.1257/aer.20180338"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.bloom2025whitebox]
+type = "report"
+title = "White Box Control at UK AISI - Update on Sandbagging Investigations"
+authors = "Joseph Bloom, Jordan Taylor, Connor Kissane, Sid Black, Alan Cooney, et al."
+year = 2025
+url = "https://www.alignmentforum.org/posts/pPEeMdgjpjHZWCDFw/white-box-control-at-uk-aisi-update-on-sandbagging"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.bostrom1998howlong]
+type = "peer-reviewed"
+title = "How Long Before Superintelligence?"
+authors = "Nick Bostrom"
+year = 1998
+url = "https://nickbostrom.com/superintelligence"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.bostrom1998long]
+type = "peer-reviewed"
+title = "How Long Before Superintelligence?"
+authors = "Nick Bostrom"
+year = 1998
+url = "https://nickbostrom.com/superintelligence"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.brass2024location]
+type = "report"
+title = "Location Verification for AI Chips"
+authors = "Asher Brass, Onni Aarne (Institute for AI Policy and Strategy)"
+year = 2024
+url = "https://www.iaps.ai/s/Location-Verification-for-AI-Chips.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.bromme2026agentbb]
+type = "preprint"
+title = "A Black Box for Agentic Processes: Blockchain-Anchored Evidence for AI Agent Communication, Human Oversight, and GRC Audits"
+authors = "Arslan Bromme"
+year = 2026
+arxiv = "2609.04017"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.brown2019pluribus]
+type = "peer-reviewed"
+title = "Superhuman AI for multiplayer poker"
+authors = "Noam Brown, Tuomas Sandholm"
+year = 2019
+doi = "10.1126/science.aay2400"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.brown2024monkeys]
+type = "preprint"
+title = "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling"
+authors = "Bradley Brown, Jordan Juravsky, Ryan Ehrlich, Ronald Clark, Quoc V. Le, Christopher Re, Azalia Mirhoseini"
+year = 2024
+arxiv = "2407.21787"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.brugger-2002]
+type = "news"
+title = "U.S. May Request Chemical Weapons Convention Inspections"
+authors = "Seth Brugger"
+year = 2002
+url = "https://www.armscontrol.org/act/2002-03/press-releases/us-may-request-chemical-weapons-convention-inspections"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.buenodemesquita2026agirace]
+type = "report"
+title = "The AGI Race and Existential Risk (research brief of BFI Working Paper 2026-71)"
+authors = "Ethan Bueno de Mesquita, Wioletta Dziuda, Mattias Polborn (Becker Friedman Institute)"
+year = 2026
+url = "https://bfi.uchicago.edu/wp-content/uploads/2026/09/The-AGI-Race-and-Existential-Risk-2.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.bukkapatnam2026absent]
+type = "preprint"
+title = "When Can We Conclude a Dangerous Capability is Absent? Statistical Foundations for AI Capability Evaluation"
+authors = "Kaustubh Bukkapatnam, Siddharth Karuturi"
+year = 2026
+url = "https://icml.cc/virtual/2026/78563"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.bunn2005npt]
+type = "essay"
+title = "NPT Withdrawal: Time for the Security Council to Step In"
+authors = "George Bunn, John B. Rhinelander"
+year = 2005
+url = "https://www.armscontrol.org/node/1801"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.burtsev2026criticality]
+type = "preprint"
+title = "Recursive Criticality of AI Self-Improvement"
+authors = "Mikhail Burtsev"
+year = 2026
+arxiv = "2609.00137"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.burtsev2026recursive]
+type = "preprint"
+title = "Recursive Criticality of AI Self-Improvement"
+authors = "Mikhail Burtsev"
+year = 2026
+arxiv = "2609.00137"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.busbridge2025distillation]
+type = "peer-reviewed"
+title = "Distillation Scaling Laws"
+authors = "Dan Busbridge, Amitis Shidani, Floris Weers, Jason Ramapuram, Etai Littwin, Russ Webb"
+year = 2025
+arxiv = "2502.08606"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ca-sb53-analysis-2025]
+type = "report"
+title = "SB 53 (Wiener), as amended September 5, 2025: bill analysis"
+authors = "California Assembly Committee on Privacy and Consumer Protection"
+year = 2025
+url = "https://apcp.assembly.ca.gov/media/1019"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.canty2001timely]
+type = "peer-reviewed"
+title = "Timely inspection and deterrence"
+authors = "Morton J. Canty, Daniel Rothenstein, Rudolf Avenhaus"
+year = 2001
+doi = "10.1016/S0377-2217(00)00082-5"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.carlsmith2020]
+type = "report"
+title = "How Much Computational Power Does It Take to Match the Human Brain?"
+authors = "Joseph Carlsmith (Open Philanthropy)"
+year = 2020
+url = "https://www.openphilanthropy.org/research/how-much-computational-power-does-it-take-to-match-the-human-brain/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.chan2024mlebench]
+type = "preprint"
+title = "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering"
+authors = "Jun Shern Chan, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Madry"
+year = 2024
+arxiv = "2410.07095"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.chan2026explosion]
+type = "preprint"
+title = "What if automating AI R&D triggers an intelligence explosion?"
+authors = "Alan Chan, Christoph Winter, Andrew Barto, Jakub Pachocki, Geoffrey Hinton, Eric Horvitz, Yoshua Bengio, Dawn Song, Jack Clark, Hilary Greaves, Anton Korinek, Samuel Hammond, Thore Graepel, Ben Bariach, Philip H. S. Torr, Sheila A. McIlraith, Jeff Clune, Sam Manning, Girish Sastry, Tom Davidson, Daniel Eth, Soren Mindermann"
+year = 2026
+arxiv = "2609.36054"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.chan2026measuring]
+type = "preprint"
+title = "Measuring AI R&D Automation"
+authors = "Alan Chan, Ranay Padarath, Joe Kwon, Hilary Greaves, Markus Anderljung"
+year = 2026
+arxiv = "2603.03992"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.chaudhary2025evalawarescaling]
+type = "preprint"
+title = "Evaluation Awareness Scales Predictably in Open-Weights Large Language Models"
+authors = "Maheep Chaudhary, Ian Su, Nikhil Hooda, Nishith Shankar, Julia Tan, Kevin Zhu, Ryan Lagasse, Vasu Sharma, Ashwinee Panda"
+year = 2025
+arxiv = "2509.13333"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.chen2026rsisurvey]
+type = "preprint"
+title = "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops"
+authors = "Mingguang Chen, Licheng Wang, Bo Qu"
+year = 2026
+arxiv = "2607.07663"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.chipsecurityact2025]
+type = "legislation"
+title = "Chip Security Act, H.R. 3447, 119th Congress (introduced)"
+authors = "US House of Representatives"
+year = 2025
+url = "https://www.govinfo.gov/content/pkg/BILLS-119hr3447ih/html/BILLS-119hr3447ih.htm"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.choi2023potd]
+type = "preprint"
+title = "Tools for Verifying Neural Models' Training Data"
+authors = "Dami Choi, Yonadav Shavit, David Duvenaud"
+year = 2023
+arxiv = "2307.00682"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.chowdhury2024swebv]
+type = "vendor"
+title = "Introducing SWE-bench Verified"
+authors = "Neil Chowdhury, James Aung, Chan Jun Shern, et al., Aleksander Madry"
+year = 2024
+url = "https://openai.com/index/introducing-swe-bench-verified/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.chuang2026teefail]
+type = "peer-reviewed"
+title = "TEE.fail: Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition"
+authors = "Jalen Chuang, Alex Seto, Nicolas Berrios, Stephan van Schaik, Christina Garman, Daniel Genkin"
+year = 2026
+url = "https://tee.fail/"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.clymer2024poser]
+type = "preprint"
+title = "Poser: Unmasking Alignment Faking LLMs by Manipulating Their Internals"
+authors = "Joshua Clymer, Caden Juang, Severin Field"
+year = 2024
+arxiv = "2405.05466"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.clymer2024safetycases]
+type = "preprint"
+title = "Safety Cases: How to Justify the Safety of Advanced AI Systems"
+authors = "Joshua Clymer, Nicholas Gabrieli, David Krueger, Thomas Larsen"
+year = 2024
+arxiv = "2403.10462"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.clymer2025elicitationbound]
+type = "essay"
+title = "When does capability elicitation bound risk?"
+authors = "Joshua Clymer"
+year = 2025
+url = "https://www.alignmentforum.org/posts/u3taQsgxqCzrgErMM/when-does-capability-elicitation-bound-risk"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.cochran-2005]
+type = "report"
+title = "Adequacy of IAEA's Safeguards for Achieving Timely Detection (Draft 2)"
+authors = "Thomas B. Cochran"
+year = 2005
+url = "https://npolicy.org/adequacy-of-iaeas-safeguards-for-achieving-timely-detection/"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.codata2022-k]
+type = "official-docs"
+title = "CODATA 2022 value: Boltzmann constant"
+authors = "NIST"
+undated = true
+url = "https://physics.nist.gov/cgi-bin/cuu/Value?k"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.coe2020arms]
+type = "peer-reviewed"
+title = "Why Arms Control Is So Rare"
+authors = "Andrew J. Coe, Jane Vaynman"
+year = 2020
+doi = "10.1017/S000305541900073X"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.cottier2024rising]
+type = "preprint"
+title = "The rising costs of training frontier AI models"
+authors = "Ben Cottier, Robi Rahman, Loredana Fattorini, Nestor Maslej, Tamay Besiroglu, David Owen"
+year = 2024
+arxiv = "2405.21015"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.cottier2025inferenceprices]
+type = "report"
+title = "LLM inference prices have fallen rapidly but unequally across tasks"
+authors = "Ben Cottier, Ben Snodin, David Owen, Tom Adamczewski (Epoch AI)"
+year = 2025
+url = "https://epoch.ai/data-insights/llm-inference-price-trends"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.cottier2026horinger]
+type = "report"
+title = "What Huawei's Horinger data center reveals about China's compute gap"
+authors = "Ben Cottier (Epoch AI)"
+year = 2026
+url = "https://epoch.ai/publications/huawei-horinger-china-compute-gap"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.counterpoint2026hbm]
+type = "report"
+title = "Global DRAM and HBM Market Share: Quarterly"
+authors = "Counterpoint Research"
+year = 2026
+url = "https://counterpointresearch.com/insights/global-dram-and-hbm-market-share"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.crs-2004-libya]
+type = "report"
+title = "Disarming Libya: Weapons of Mass Destruction (RS21823)"
+authors = "Sharon A. Squassoni, Andrew Feickert"
+year = 2004
+url = "https://www.everycrsreport.com/files/20040422_RS21823_9c2b81fe3a3385f6aa0d78a8ac41e3e8cd0cb7ad.html"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.ctbto-artxiv-2025]
+type = "official-docs"
+title = "Background document prepared for the Conference on Facilitating the Entry into Force of the CTBT (CTBT-Art.XIV/2025/3)"
+authors = "CTBTO Preparatory Commission, Provisional Technical Secretariat"
+year = 2025
+url = "https://www.ctbto.org/sites/default/files/2025-09/CTBT-Art.XIV-2025-3.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.cunningham2026rsi]
+type = "preprint"
+title = "The Economics of Recursive Self-Improvement"
+authors = "Tom Cunningham, Lukas Althoff, Basil Halperin, Brian Jabarian, Andrew Koh, Arjun Ramani, Phil Trammell, Parker Whitfill, Cheryl Wu"
+year = 2026
+arxiv = "2609.15802"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.cwc-text]
+type = "legislation"
+title = "Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on their Destruction"
+authors = "Organisation for the Prohibition of Chemical Weapons"
+year = 1993
+url = "https://www.opcw.org/fileadmin/OPCW/CWC/CWC_en.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.davidson2023ceg]
+type = "preprint"
+title = "AI capabilities can be significantly improved without expensive retraining"
+authors = "Tom Davidson, Jean-Stanislas Denain, Pablo Villalobos, Guillem Bas"
+year = 2023
+arxiv = "2312.07413"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.davidson2023compute]
+type = "essay"
+title = "What a compute-centric framework says about AI takeoff speeds"
+authors = "Tom Davidson"
+year = 2023
+url = "https://www.lesswrong.com/posts/Gc9FGtdXhK9sCSEYu/what-a-compute-centric-framework-says-about-ai-takeoff"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.davidson2023enhancements]
+type = "preprint"
+title = "AI capabilities can be significantly improved without expensive retraining"
+authors = "Tom Davidson, Jean-Stanislas Denain, Pablo Villalobos, Guillem Bas"
+year = 2023
+arxiv = "2312.07413"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.davidson2025sie]
+type = "report"
+title = "How quick and big would a software intelligence explosion be?"
+authors = "Tom Davidson, Tom Houlden"
+year = 2025
+url = "https://www.forethought.org/research/how-quick-and-big-would-a-software-intelligence-explosion-be"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.davidson2025three]
+type = "report"
+title = "Three Types of Intelligence Explosion"
+authors = "Tom Davidson, Rose Hadshar, William MacAskill"
+year = 2025
+url = "https://www.forethought.org/research/three-types-of-intelligence-explosion"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.davidson2026feedback]
+type = "report"
+title = "When Does Automating AI Research Produce Explosive Growth? Feedback Loops in Innovation Networks"
+authors = "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek"
+year = 2026
+doi = "10.3386/w35155"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.day2026capex]
+type = "news"
+title = "Big Tech to Spend $650B This Year as AI Race Intensifies"
+authors = "Matt Day (Bloomberg, via Data Center Knowledge)"
+year = 2026
+url = "https://www.datacenterknowledge.com/hyperscalers/big-tech-to-spend-650b-this-year-as-ai-race-intensifies"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.deepmind2025imo]
+type = "vendor"
+title = "Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad"
+authors = "Thang Luong, Edward Lockhart (Google DeepMind)"
+year = 2025
+url = "https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.deepseek2025r1]
+type = "peer-reviewed"
+title = "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+authors = "DeepSeek-AI"
+year = 2025
+doi = "10.1038/s41586-025-09422-z"
+arxiv = "2501.12948"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.doj2026supermicro]
+type = "official-docs"
+title = "Three Charged with Conspiring to Unlawfully Divert Cutting Edge U.S. Artificial Intelligence Technology to China"
+authors = "US Department of Justice, Office of Public Affairs"
+year = 2026
+url = "https://www.justice.gov/opa/pr/three-charged-conspiring-unlawfully-divert-cutting-edge-us-artificial-intelligence"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.dominguezolmedo2024testtask]
+type = "peer-reviewed"
+title = "Training on the Test Task Confounds Evaluation and Emergence"
+authors = "Ricardo Dominguez-Olmedo, Florian E. Dorner, Moritz Hardt"
+year = 2025
+arxiv = "2407.07890"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.douillard2023]
+type = "preprint"
+title = "DiLoCo: Distributed Low-Communication Training of Language Models"
+authors = "Arthur Douillard, Qixuan Feng, Andrei A. Rusu, Rachita Chhaparia, Yani Donchev, Adhiguna Kuncoro, Marc'Aurelio Ranzato, Arthur Szlam, Jiajun Shen"
+year = 2023
+arxiv = "2311.08105"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.douillard2023diloco]
+type = "preprint"
+title = "DiLoCo: Distributed Low-Communication Training of Language Models"
+authors = "Arthur Douillard, Qixuan Feng, Andrei A. Rusu, Rachita Chhaparia, Yani Donchev, Adhiguna Kuncoro, Marc'Aurelio Ranzato, Arthur Szlam, Jiajun Shen"
+year = 2023
+arxiv = "2311.08105"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.douillard2025]
+type = "preprint"
+title = "Streaming DiLoCo with overlapping communication: Towards a Distributed Free Lunch"
+authors = "Arthur Douillard, Yanislav Donchev, Keith Rush, Satyen Kale, Zachary Charles, Zachary Garrett, Gabriel Teston, Dave Lacey, Ross McIlroy, Jiajun Shen, Alexandre Ramé, Arthur Szlam, Marc'Aurelio Ranzato, Paul Barham"
+year = 2025
+arxiv = "2501.18512"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.douillard2025streaming]
+type = "preprint"
+title = "Streaming DiLoCo with overlapping communication: Towards a Distributed Free Lunch"
+authors = "Arthur Douillard, Yanislav Donchev, Keith Rush, Satyen Kale, Zachary Charles, Zachary Garrett, Gabriel Teston, Dave Lacey, Ross McIlroy, Jiajun Shen, Alexandre Rame, Arthur Szlam, Marc'Aurelio Ranzato, Paul Barham"
+year = 2025
+arxiv = "2501.18512"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.draguns2024unelicitable]
+type = "peer-reviewed"
+title = "Unelicitable Backdoors in Language Models via Cryptographic Transformer Circuits"
+authors = "Andis Draguns, Andrew Gritsevskiy, Sumeet Ramesh Motwani, Charlie Rogers-Smith, Jeffrey Ladish, Christian Schroeder de Witt"
+year = 2024
+arxiv = "2406.02619"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.dresher1962sampling]
+type = "report"
+title = "A Sampling Inspection Problem in Arms Control Agreements: A Game-Theoretic Analysis"
+authors = "Melvin Dresher"
+year = 1962
+url = "https://www.rand.org/pubs/research_memoranda/RM2972.html"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.dyck2007whistle]
+type = "preprint"
+title = "Who Blows the Whistle on Corporate Fraud? (NBER Working Paper 12882; published in Journal of Finance 65(6), 2010, doi 10.1111/j.1540-6261.2010.01614.x)"
+authors = "Alexander Dyck, Adair Morse, Luigi Zingales"
+year = 2007
+doi = "10.3386/w12882"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.dyck2017pervasive]
+type = "preprint"
+title = "How Pervasive Is Corporate Fraud? (working paper; published in Review of Accounting Studies 29(1), 2024, doi 10.1007/s11142-022-09738-5)"
+authors = "Alexander Dyck, Adair Morse, Luigi Zingales"
+year = 2017
+url = "https://www.law.nyu.edu/sites/default/files/upload_documents/Adair%20Morse%20How%20Pervasive%20is%20Corporate%20Fraud.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.dyer2025survivalbandit]
+type = "preprint"
+title = "Sandbagging in a Simple Survival Bandit Problem"
+authors = "Joel Dyer, Daniel Jarne Ornia, Nicholas Bishop, Anisoara Calinescu, Michael Wooldridge"
+year = 2025
+arxiv = "2509.26239"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.ec-gpai-guidelines-faq-2025]
+type = "official-docs"
+title = "Guidelines for providers of general-purpose AI models: General FAQ"
+authors = "European Commission, AI Office"
+year = 2025
+url = "https://digital-strategy.ec.europa.eu/en/faqs/guidelines-obligations-gpai-providers"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.edwards2026openclosed]
+type = "report"
+title = "Open models lag state-of-the-art closed models by 4 months"
+authors = "Jack Edwards, Luke Emberson (Epoch AI)"
+year = 2026
+url = "https://epoch.ai/data-insights/open-closed-eci-gap"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.egan2023kyc]
+type = "preprint"
+title = "Oversight for Frontier AI through a Know-Your-Customer Scheme for Compute Providers"
+authors = "Janet Egan, Lennart Heim"
+year = 2023
+arxiv = "2310.13625"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.ehsan2026capex]
+type = "news"
+title = "Hyperscalers Hit $700 Billion in 2026 AI Spending Plans"
+authors = "Omor Ibne Ehsan (Yahoo Finance)"
+year = 2026
+url = "https://finance.yahoo.com/sectors/technology/articles/hyperscalers-hit-700-billion-2026-111243744.html"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.eloundou2024gpts]
+type = "peer-reviewed"
+title = "GPTs are GPTs: Labor market impact potential of LLMs"
+authors = "Tyna Eloundou, Sam Manning, Pamela Mishkin, Daniel Rock"
+year = 2024
+doi = "10.1126/science.adj0998"
+arxiv = "2303.10130"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.emberson2024]
+type = "dataset"
+title = "The power required to train frontier AI models is doubling annually"
+authors = "Luke Emberson, Robi Rahman (Epoch AI)"
+year = 2024
+url = "https://epoch.ai/data-insights/power-usage-trend"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.emeryxu2024uncertainty]
+type = "peer-reviewed"
+title = "Uncertainty, Information, and Risk in International Technology Races"
+authors = "Nicholas Emery-Xu, Andrew Park, Robert Trager"
+year = 2024
+doi = "10.1177/00220027231214996"
+url = "https://aigi.ox.ac.uk/publications/uncertainty-information-and-risk-in-international-technology-races/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.eo14110-2023]
+type = "legislation"
+title = "Executive Order 14110: Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence (88 FR 75191)"
+authors = "Executive Office of the President of the United States"
+year = 2023
+url = "https://www.govinfo.gov/content/pkg/FR-2023-11-01/pdf/2023-24283.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.eo14148-2025]
+type = "legislation"
+title = "Executive Order 14148: Initial Rescissions of Harmful Executive Orders and Actions (90 FR 8237)"
+authors = "Executive Office of the President of the United States"
+year = 2025
+url = "https://www.govinfo.gov/content/pkg/FR-2025-01-28/pdf/2025-01901.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.epoch-datacenters-2026]
+type = "dataset"
+title = "AI data centers (Frontier Data Centers hub), with methodology and CSV downloads"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/data/data-centers"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.epoch-hw-efficiency-2024]
+type = "dataset"
+title = "Leading ML hardware becomes 40% more energy-efficient each year"
+authors = "Robi Rahman (Epoch AI)"
+year = 2024
+url = "https://epoch.ai/data-insights/ml-hardware-energy-efficiency"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.epoch2025datacentershub]
+type = "report"
+title = "Introducing the Frontier Data Centers Hub"
+authors = "Epoch AI"
+year = 2025
+url = "https://epoch.ai/blog/introducing-the-frontier-data-centers-hub/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.epoch2025eci]
+type = "dataset"
+title = "Epoch Capabilities Index"
+authors = "Epoch AI"
+year = 2025
+url = "https://epoch.ai/benchmarks/eci"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.epoch2026aimodels]
+type = "dataset"
+title = "Data on AI models"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/data/ai-models"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.epoch2026benchmarks]
+type = "dataset"
+title = "Capabilities and benchmarking data"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/benchmarks/use-this-data"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.epoch2026chipsales]
+type = "dataset"
+title = "Data on AI chip sales"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/data/ai-chip-sales"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.epoch2026hlereview]
+type = "report"
+title = "Humanity's Last Exam: Benchmark Review"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/benchmarks/hle/review"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.epoch2026hub]
+type = "dataset"
+title = "Capabilities & benchmarking (benchmark data)"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/benchmarks"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.epoch2026models]
+type = "dataset"
+title = "Data on AI Models"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/data/ai-models"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.epoch2026speedrundata]
+type = "dataset"
+title = "NanoGPT speedrun record training time"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/data/nanogpt-speedrun-record-time"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.epoch2026trends]
+type = "report"
+title = "Trends in AI"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/trends"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ercot2026]
+type = "official-docs"
+title = "ERCOT Update, Senate Committee on Business and Commerce (Large Load update)"
+authors = "ERCOT (Pablo Vegas)"
+year = 2026
+url = "https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.erdil2022vision]
+type = "preprint"
+title = "Algorithmic progress in computer vision"
+authors = "Ege Erdil, Tamay Besiroglu"
+year = 2022
+arxiv = "2212.05153"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.erdil2023explosive]
+type = "preprint"
+title = "Explosive growth from AI automation: A review of the arguments"
+authors = "Ege Erdil, Tamay Besiroglu"
+year = 2023
+arxiv = "2309.11690"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.erdil2024]
+type = "preprint"
+title = "Data movement limits to frontier model training"
+authors = "Ege Erdil, David Schneider-Joseph"
+year = 2024
+arxiv = "2411.01137"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.erdil2024datamovement]
+type = "preprint"
+title = "Data Movement Limits to Frontier Model Training"
+authors = "Ege Erdil, David Schneider-Joseph"
+year = 2024
+arxiv = "2411.01137"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.erdil2024idea]
+type = "preprint"
+title = "Estimating Idea Production: A Methodological Survey"
+authors = "Ege Erdil, Tamay Besiroglu, Anson Ho"
+year = 2024
+arxiv = "2405.10494"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.eth2025sie]
+type = "report"
+title = "Will AI R&D Automation Cause a Software Intelligence Explosion?"
+authors = "Daniel Eth, Tom Davidson"
+year = 2025
+url = "https://www.forethought.org/research/will-ai-r-and-d-automation-cause-a-software-intelligence-explosion"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.eu-ai-act-2024]
+type = "legislation"
+title = "Regulation (EU) 2024/1689 (Artificial Intelligence Act), Articles 51 and 52 and Annex XIII"
+authors = "European Parliament and Council of the European Union"
+year = 2024
+url = "https://artificialintelligenceact.eu/article/51/"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.eu2005nptwithdrawal]
+type = "official-docs"
+title = "Withdrawal from the Treaty on the Non-Proliferation of Nuclear Weapons: European Union common approach (NPT/CONF.2005/WP.32)"
+authors = "European Union (submitted by Luxembourg)"
+year = 2005
+url = "https://digitallibrary.un.org/record/548700/files/NPT_CONF.2005_WP.32-EN.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.eu2025gpaicode]
+type = "official-docs"
+title = "Code of Practice for General-Purpose AI Models: Safety and Security Chapter"
+authors = "European Commission (Chairs and Vice-Chairs of the Code of Practice working groups)"
+year = 2025
+url = "https://ec.europa.eu/newsroom/dae/redirection/document/118119"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.fair2022cicero]
+type = "peer-reviewed"
+title = "Human-level play in the game of Diplomacy by combining language models with strategic reasoning"
+authors = "Meta Fundamental AI Research Diplomacy Team (FAIR), Anton Bakhtin, Noam Brown, et al."
+year = 2022
+doi = "10.1126/science.ade9097"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.fang2023polbroken]
+type = "preprint"
+title = "Proof-of-Learning is Currently More Broken Than You Think"
+authors = "Congyu Fang, Hengrui Jia, Anvith Thudi, Mohammad Yaghini, Christopher A. Choquette-Choo, Natalie Dullerud, Varun Chandrasekaran, Nicolas Papernot"
+year = 2023
+arxiv = "2208.03567"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.fas-2026-newstart]
+type = "report"
+title = "The Aftermath: The Expiration of New START and What It Means For Us All"
+authors = "Matt Korda, Eliana Johns, Mackenzie Knight-Boyle, Hans Kristensen"
+year = 2026
+url = "https://fas.org/publication/the-expiration-of-new-start/"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.fas-biopreparat]
+type = "report"
+title = "Biopreparat"
+authors = "Federation of American Scientists"
+year = 1998
+url = "https://nuke.fas.org/guide/russia/agency/bw.htm"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.feldgoise2026tracking]
+type = "report"
+title = "Tracking AI Chips: Assessing Location Verification as an Export Control Enforcement Tool"
+authors = "Jacob Feldgoise, Kyle Miller, Hanna Dohmen (CSET)"
+year = 2026
+url = "https://cset.georgetown.edu/wp-content/uploads/CSET-Tracking-AI-Chips.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.finke2026robustorganisms]
+type = "preprint"
+title = "Towards Robust Model Organisms for Eliciting Latent Knowledge"
+authors = "Lennart Finke, Hardik Bhatnagar, Euodia Dodd, Francis Rhys Ward, Yves-Alexandre de Montjoye, Matthias Bethge, Mary Phuong"
+year = 2026
+arxiv = "2610.26698"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.fithian2026hardwired]
+type = "report"
+title = "The Feasibility of a Hardwired Pause of Frontier AI Training (working paper v1.0.2)"
+authors = "Working Group on AI Pause Feasibility (organizers William Fithian, Wesley H. Holliday)"
+year = 2026
+url = "https://hardwired-pause.ai/paper"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.fli-superintelligence-statement]
+type = "essay"
+title = "Statement on Superintelligence"
+authors = "Future of Life Institute (host)"
+undated = true
+url = "https://superintelligence-statement.org/"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.forecastbench2026board]
+type = "dataset"
+title = "ForecastBench tournament leaderboard"
+authors = "Forecasting Research Institute"
+year = 2026
+url = "https://forecastbench.org/leaderboards/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.fourati2025coherence]
+type = "preprint"
+title = "A Coherence-Based Measure of AGI"
+authors = "Fares Fourati"
+year = 2025
+arxiv = "2510.20784"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.fpf-sb53-2025]
+type = "report"
+title = "California's SB 53: The First Frontier AI Law, Explained"
+authors = "Justine Gluck (Future of Privacy Forum)"
+year = 2025
+url = "https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.fudenberg2026cooperating]
+type = "preprint"
+title = "Cooperating Against Catastrophe"
+authors = "Drew Fudenberg and Andrew Koh"
+year = 2026
+url = "https://economics.mit.edu/sites/default/files/inline-files/Pacing.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.gan-2026-clock]
+type = "preprint"
+title = "Agreements Have a Clock: Compute Growth and the Verification of AI Restraint"
+authors = "Li Gan"
+year = 2026
+arxiv = "2611.04272"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.gan2026clock]
+type = "preprint"
+title = "Agreements Have a Clock: Compute Growth and the Verification of AI Restraint"
+authors = "Li Gan"
+year = 2026
+arxiv = "2611.04272"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.gargiulo2026sidechannel]
+type = "preprint"
+title = "Workload Identification with Physical Side Channels for AI Governance"
+authors = "Simone Gargiulo, Gabriel Kulp"
+year = 2026
+arxiv = "2609.00309"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.gasteiger2025subtlesandbag]
+type = "vendor"
+title = "Automated Researchers Can Subtly Sandbag"
+authors = "Johannes Gasteiger, Vladimir Mikulik"
+year = 2025
+url = "https://alignment.anthropic.com/2025/automated-researchers-sandbag/"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.gdm-fsf-v3-1-2026]
+type = "vendor"
+title = "Frontier Safety Framework, Version 3.1"
+authors = "Google DeepMind"
+year = 2026
+url = "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.genewein2026agiasi]
+type = "preprint"
+title = "From AGI to ASI"
+authors = "Tim Genewein, Matija Franklin, Alexander Lerchner, Laurent Orseau, Samuel Albanie, Adam Bales, Cole Wyeth, Stephanie Chan, Iason Gabriel, Joel Z. Leibo, Allan Dafoe, Marcus Hutter, Thore Graepel, Shane Legg"
+year = 2026
+arxiv = "2606.12683"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.genkina2025]
+type = "news"
+title = "Reversible Computing Escapes the Lab in 2025"
+authors = "Dina Genkina (IEEE Spectrum)"
+year = 2025
+url = "https://spectrum.ieee.org/reversible-computing"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.gerstgrasser2024accumulate]
+type = "preprint"
+title = "Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data"
+authors = "Matthias Gerstgrasser, Rylan Schaeffer, Apratim Dey, et al."
+year = 2024
+arxiv = "2404.01413"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.gholami2024]
+type = "peer-reviewed"
+title = "AI and Memory Wall"
+authors = "Amir Gholami, Zhewei Yao, Sehoon Kim, Coleman Hooper, Michael W. Mahoney, Kurt Keutzer"
+year = 2024
+arxiv = "2403.14123"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.gipp2015timestamping]
+type = "preprint"
+title = "Decentralized Trusted Timestamping using the Crypto Currency Bitcoin"
+authors = "Bela Gipp, Norman Meuschke, Andre Gernandt"
+year = 2015
+arxiv = "1502.04015"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.glazer2024frontiermath]
+type = "preprint"
+title = "FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI"
+authors = "Elliot Glazer, Ege Erdil, Tamay Besiroglu, et al., Mark Wildon"
+year = 2024
+arxiv = "2411.04872"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.goemans2024cyberinability]
+type = "preprint"
+title = "Safety case template for frontier AI: A cyber inability argument"
+authors = "Arthur Goemans, Marie Davidsen Buhl, Jonas Schuett, Tomek Korbak, Jessica Wang, Benjamin Hilton, Geoffrey Irving"
+year = 2024
+arxiv = "2411.08088"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.gomez2026escalation]
+type = "preprint"
+title = "Designing escalation criteria for international AI incident response: criteria, triggers, and thresholds"
+authors = "Francesca Gomez, Matthew Ball, Michael Harre, Lydia Preston, Josephine Schwab, Caio Machado"
+year = 2026
+arxiv = "2604.23183"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.good1965speculations]
+type = "peer-reviewed"
+title = "Speculations Concerning the First Ultraintelligent Machine"
+authors = "Irving John Good"
+year = 1965
+doi = "10.1016/S0065-2458(08)60418-0"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.google-ironwood-2025]
+type = "vendor"
+title = "Ironwood: The first Google TPU for the age of inference"
+authors = "Amin Vahdat (Google)"
+year = 2025
+url = "https://blog.google/products/google-cloud/ironwood-tpu-age-of-inference/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.gotting2025vct]
+type = "preprint"
+title = "Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark"
+authors = "Jasper Gotting, Pedro Medeiros, Jon G Sanders, Nathaniel Li, Long Phan, Karam Elabd, Lennart Justen, Dan Hendrycks, Seth Donoughe"
+year = 2025
+arxiv = "2504.16137"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.gpai-code-of-practice-2025]
+type = "official-docs"
+title = "General-Purpose AI Code of Practice: Safety and Security chapter (final version) and Chairs' statement"
+authors = "Chairs and Vice-Chairs of the General-Purpose AI Code of Practice"
+year = 2025
+url = "https://code-of-practice.ai/?section=safety-security"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.grace2014forms]
+type = "essay"
+title = "Superintelligence 5: Forms of superintelligence"
+authors = "Katja Grace"
+year = 2014
+url = "https://www.lesswrong.com/posts/semvkn56ZFcXBNc2d/superintelligence-5-forms-of-superintelligence"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.greenblatt2024alignfaking]
+type = "preprint"
+title = "Alignment faking in large language models"
+authors = "Ryan Greenblatt et al."
+year = 2024
+arxiv = "2412.14093"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.greenblatt2024password]
+type = "preprint"
+title = "Stress-Testing Capability Elicitation With Password-Locked Models"
+authors = "Ryan Greenblatt, Fabien Roger, Dmitrii Krasheninnikov, David Krueger"
+year = 2024
+arxiv = "2405.19550"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.greenblatt2024pwlock]
+type = "preprint"
+title = "Stress-Testing Capability Elicitation With Password-Locked Models"
+authors = "Ryan Greenblatt, Fabien Roger, Dmitrii Krasheninnikov, David Krueger"
+year = 2024
+arxiv = "2405.19550"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.grunewald2025smuggling]
+type = "report"
+title = "Countering AI Chip Smuggling Has Become a National Security Priority: An Updated Playbook for Preventing AI Chip Smuggling to the PRC"
+authors = "Erich Grunewald and Tim Fist (CNAS)"
+year = 2025
+url = "https://www.cnas.org/publications/reports/countering-ai-chip-smuggling-has-become-a-national-security-priority"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.gundlach2025meek]
+type = "preprint"
+title = "Meek Models Shall Inherit the Earth"
+authors = "Hans Gundlach, Jayson Lynch, Neil Thompson"
+year = 2025
+arxiv = "2507.07931"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.gundlach2025origin]
+type = "peer-reviewed"
+title = "On the Origin of Algorithmic Progress in AI: Evidence from Language Model Pre-Training"
+authors = "Hans Gundlach, Alex Fogelson, Jayson Lynch, Ana Trisovic, Jonathan Rosenfeld, Anmol Sandhu, Neil Thompson"
+year = 2025
+arxiv = "2511.21622"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.gundlach2025priceprogress]
+type = "preprint"
+title = "The Price of Progress: Price Performance and the Future of AI"
+authors = "Hans Gundlach, Jayson Lynch, Matthias Mertens, Neil Thompson"
+year = 2025
+arxiv = "2511.23455"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.hackenburg2025levers]
+type = "peer-reviewed"
+title = "The levers of political persuasion with conversational artificial intelligence"
+authors = "Kobi Hackenburg, Ben M. Tappin, Luke Hewitt, Ed Saunders, Sid Black, Hause Lin, Catherine Fist, Helen Margetts, David G. Rand, Christopher Summerfield"
+year = 2025
+doi = "10.1126/science.aea3884"
+arxiv = "2507.13919"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.hai2025aiindex]
+type = "report"
+title = "The 2025 AI Index Report, Chapter 2: Technical Performance"
+authors = "Stanford Institute for Human-Centered Artificial Intelligence"
+year = 2025
+url = "https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.halstead-ai2040]
+type = "essay"
+title = "Covert AI Projects (supplement to AI 2040: Plan A)"
+authors = "Brendan Halstead, Thomas Larsen (AI Futures Project)"
+undated = true
+url = "https://ai-2040.com/supplements/covert-ai-projects"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.han2020regulate]
+type = "peer-reviewed"
+title = "To Regulate or Not: A Social Dynamics Analysis of an Idealised AI Race"
+authors = "The Anh Han, Luis Moniz Pereira, Francisco C. Santos, Tom Lenaerts"
+year = 2020
+doi = "10.1613/jair.1.12225"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.handa2025aei]
+type = "preprint"
+title = "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations"
+authors = "Kunal Handa, Alex Tamkin, Miles McCain, et al."
+year = 2025
+arxiv = "2503.04761"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.harack2025oxford]
+type = "report"
+title = "Verification for International AI Governance"
+authors = "Ben Harack, Robert F. Trager, Anka Reuel, David Manheim, Miles Brundage, Onni Aarne, Aaron Scher, et al. (Oxford Martin AI Governance Initiative)"
+year = 2025
+url = "https://aigi.ox.ac.uk/wp-content/uploads/2025/07/Verification_for_International_AI_Governance.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.harrington2026continual]
+type = "preprint"
+title = "When Does Continual Learning Require Learning"
+authors = "Anne Harrington, Nayan Saxena, Michael Murphy, Anastasia Borovykh, Zeyu Yun, Sridhar Kamath, Ara Eindra Kyi, Trevor Darrell, Jitendra Malik, Yutong Bai"
+year = 2026
+arxiv = "2607.07847"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.heim2024cloud]
+type = "preprint"
+title = "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation"
+authors = "Lennart Heim, Tim Fist, Janet Egan, Sihao Huang, Stephen Zekany, Robert Trager, Michael A. Osborne, Noa Zilberman"
+year = 2024
+arxiv = "2403.08501"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.heim2024compute]
+type = "preprint"
+title = "Training Compute Thresholds: Features and Functions in AI Regulation"
+authors = "Lennart Heim, Leonie Koessler"
+year = 2024
+arxiv = "2405.10799"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.heim2024thresholds]
+type = "preprint"
+title = "Training Compute Thresholds: Features and Functions in AI Regulation"
+authors = "Lennart Heim, Leonie Koessler"
+year = 2024
+arxiv = "2405.10799"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.helfer2005exiting]
+type = "legal-scholarship"
+title = "Exiting Treaties"
+authors = "Laurence R. Helfer"
+year = 2005
+url = "https://virginialawreview.org/articles/exiting-treaties/"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.hendrycks-2025]
+type = "preprint"
+title = "Superintelligence Strategy: Expert Version"
+authors = "Dan Hendrycks, Eric Schmidt, Alexandr Wang"
+year = 2025
+arxiv = "2503.05628"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.hendrycks2025agi]
+type = "preprint"
+title = "A Definition of AGI"
+authors = "Dan Hendrycks, Dawn Song, Christian Szegedy, et al."
+year = 2025
+arxiv = "2510.18212"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.hendrycks2025agidef]
+type = "preprint"
+title = "A Definition of AGI"
+authors = "Dan Hendrycks, Dawn Song, Christian Szegedy, Honglak Lee, Yarin Gal, et al., Yoshua Bengio"
+year = 2025
+arxiv = "2510.18212"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.hendrycks2025superintelligence]
+type = "preprint"
+title = "Superintelligence Strategy: Expert Version"
+authors = "Dan Hendrycks, Eric Schmidt, Alexandr Wang"
+year = 2025
+arxiv = "2503.05628"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.hernandez2020efficiency]
+type = "preprint"
+title = "Measuring the Algorithmic Efficiency of Neural Networks"
+authors = "Danny Hernandez, Tom B. Brown"
+year = 2020
+arxiv = "2005.04305"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ho-2023]
+type = "preprint"
+title = "International Institutions for Advanced AI"
+authors = "Lewis Ho, Joslyn Barnhart, Robert Trager, Yoshua Bengio, Miles Brundage, Allison Carnegie, Rumman Chowdhury, Allan Dafoe, Gillian Hadfield, Margaret Levi, Duncan Snidal"
+year = 2023
+arxiv = "2307.04699"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.ho2023]
+type = "preprint"
+title = "Limits to the Energy Efficiency of CMOS Microprocessors"
+authors = "Anson Ho, Ege Erdil, Tamay Besiroglu"
+year = 2023
+arxiv = "2312.08595"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.ho2024algorithmic]
+type = "peer-reviewed"
+title = "Algorithmic progress in language models"
+authors = "Anson Ho, Tamay Besiroglu, Ege Erdil, David Owen, Robi Rahman, Zifan Carl Guo, David Atkinson, Neil Thompson, Jaime Sevilla"
+year = 2024
+arxiv = "2403.05812"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ho2024algorithmiccode]
+type = "code"
+title = "lm-algorithmic-progress: code and data for Algorithmic progress in language models"
+authors = "Epoch AI"
+year = 2024
+url = "https://github.com/epoch-research/lm-algorithmic-progress"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ho2025experiments]
+type = "essay"
+title = "The software intelligence explosion debate needs experiments"
+authors = "Anson Ho, Parker Whitfill"
+year = 2025
+url = "https://epoch.ai/gradient-updates/the-software-intelligence-explosion-debate-needs-experiments"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.ho2025rosetta]
+type = "preprint"
+title = "A Rosetta Stone for AI Benchmarks"
+authors = "Anson Ho, Jean-Stanislas Denain, David Atanasov, Samuel Albanie, Rohin Shah"
+year = 2025
+arxiv = "2512.00193"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.hobbhahn2023]
+type = "report"
+title = "Trends in machine learning hardware"
+authors = "Marius Hobbhahn, Lennart Heim, Gökçe Aydos (Epoch AI)"
+year = 2023
+url = "https://epoch.ai/blog/trends-in-machine-learning-hardware"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.hoffman-2009]
+type = "news"
+title = "The other Berlin Wall: How the Soviet bioweapons program was revealed"
+authors = "David E. Hoffman"
+year = 2009
+url = "https://thebulletin.org/2009/11/the-other-berlin-wall-how-the-soviet-bioweapons-program-was-revealed/"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.hoffmann2022chinchilla]
+type = "preprint"
+title = "Training Compute-Optimal Large Language Models"
+authors = "Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, et al."
+year = 2022
+arxiv = "2203.15556"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.hofstatter2025elicitationgame]
+type = "preprint"
+title = "The Elicitation Game: Evaluating Capability Elicitation Techniques"
+authors = "Felix Hofstätter, Teun van der Weij, Jayden Teoh, Rada Djoneva, Henning Bartsch, Francis Rhys Ward"
+year = 2025
+arxiv = "2502.02180"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.hong2014]
+type = "preprint"
+title = "Experimental verification of Landauer's principle in erasure of nanomagnetic memory bits"
+authors = "J. Hong, B. Lambson, S. Dhuey, J. Bokor"
+year = 2014
+arxiv = "1411.6730"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.hooker2024limits]
+type = "preprint"
+title = "On the Limitations of Compute Thresholds as a Governance Strategy"
+authors = "Sara Hooker"
+year = 2024
+arxiv = "2407.05694"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.hooker2024thresholds]
+type = "preprint"
+title = "On the Limitations of Compute Thresholds as a Governance Strategy"
+authors = "Sara Hooker"
+year = 2024
+arxiv = "2407.05694"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.huan2026mathtransfer]
+type = "peer-reviewed"
+title = "Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning"
+authors = "Maggie Ziyu Huan, Yuetai Li, Tianyu Zheng, Xiaoyu Xu, Seungone Kim, Minxin Du, Radha Poovendran, Graham Neubig, Xiang Yue"
+year = 2026
+arxiv = "2507.00432"
+url = "https://proceedings.mlr.press/v306/huan26a.html"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.hubert2026alphaproof]
+type = "peer-reviewed"
+title = "Olympiad-level formal mathematical reasoning with reinforcement learning"
+authors = "Thomas Hubert, Rishi Mehta, Laurent Sartran, et al."
+year = 2026
+doi = "10.1038/s41586-025-09833-y"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.hubinger2023trusteval]
+type = "essay"
+title = "When can we trust model evaluations?"
+authors = "Evan Hubinger"
+year = 2023
+url = "https://www.alignmentforum.org/posts/dBmfb76zx6wjPsBC7/when-can-we-trust-model-evaluations"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.hulick2025]
+type = "news"
+title = "This experimental computer chip reuses energy"
+authors = "Kathryn Hulick (Science News)"
+year = 2025
+url = "https://www.sciencenews.org/article/computer-chip-reuses-energy"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.hwp-2026]
+type = "report"
+title = "The Feasibility of a Hardwired Pause of Frontier AI Training (working paper v1.0.2)"
+authors = "Working Group on AI Pause Feasibility (organisers William Fithian, Wesley H. Holliday)"
+year = 2026
+url = "https://hardwired-pause.ai/paper"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.iaea-gc37-1084]
+type = "official-docs"
+title = "Implementation of the Agreement between the Agency and the Democratic People's Republic of Korea for the Application of Safeguards (GC(XXXVII)/1084)"
+authors = "IAEA Director General"
+year = 1993
+url = "https://iaea.org/sites/default/files/gc/gc37-1084_en.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-glossary-2001]
+type = "official-docs"
+title = "IAEA Safeguards Glossary, 2001 Edition (International Nuclear Verification Series No. 3)"
+authors = "International Atomic Energy Agency"
+year = 2002
+isbn = "92-0-111902-X"
+url = "https://www-pub.iaea.org/MTCD/Publications/PDF/NVS3_scr.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-glossary-2022]
+type = "official-docs"
+title = "IAEA Safeguards Glossary, 2022 Edition (International Nuclear Verification Series No. 3, Rev. 1)"
+authors = "International Atomic Energy Agency"
+year = 2022
+url = "https://www.bnl.gov/ispo/docs/iaea-sgs-glossary.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.iaea-gov-2003-40]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement in the Islamic Republic of Iran (GOV/2003/40)"
+authors = "IAEA Director General"
+year = 2003
+url = "https://www.iaea.org/sites/default/files/gov2003-40.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-gov-2003-75]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement in the Islamic Republic of Iran (GOV/2003/75)"
+authors = "IAEA Director General"
+year = 2003
+url = "https://www.iaea.org/sites/default/files/gov2003-75.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-gov-2004-12]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement of the Socialist People's Libyan Arab Jamahiriya (GOV/2004/12)"
+authors = "IAEA Director General"
+year = 2004
+url = "https://securitycouncilreport.org/atf/cf/%7B65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9%7D/Disarm%20GOV200412.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-gov-2009-74]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement and relevant provisions of Security Council resolutions in the Islamic Republic of Iran (GOV/2009/74)"
+authors = "IAEA Director General"
+year = 2009
+url = "https://www.iaea.org/sites/default/files/gov2009-74.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-gov-2011-30]
+type = "official-docs"
+title = "Implementation of the NPT Safeguards Agreement in the Syrian Arab Republic (GOV/2011/30)"
+authors = "IAEA Director General"
+year = 2011
+url = "https://acronym.org.uk/old/archive/docs/1105/Syria%20IAEA%20Report%20May%202011.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea-sir-2024]
+type = "official-docs"
+title = "The Safeguards Implementation Report for 2024: Safeguards Statement"
+authors = "International Atomic Energy Agency"
+year = 2025
+url = "https://www.iaea.org/sites/default/files/25/06/sir-2024.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.iaea2022glossary]
+type = "official-docs"
+title = "IAEA Safeguards Glossary, 2022 Edition"
+authors = "International Atomic Energy Agency"
+year = 2022
+url = "https://www-pub.iaea.org/MTCD/Publications/PDF/PUB2003_web.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.iea2025]
+type = "report"
+title = "Energy and AI"
+authors = "International Energy Agency"
+year = 2025
+url = "https://www.iea.org/reports/energy-and-ai/executive-summary"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.iea2025energyai]
+type = "report"
+title = "Energy and AI: Executive Summary"
+authors = "International Energy Agency"
+year = 2025
+url = "https://www.iea.org/reports/energy-and-ai/executive-summary"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.infcirc-540]
+type = "legislation"
+title = "Model Protocol Additional to the Agreement(s) between State(s) and the International Atomic Energy Agency for the Application of Safeguards, INFCIRC/540 (Corrected)"
+authors = "International Atomic Energy Agency"
+year = 1997
+url = "https://www.iaea.org/sites/default/files/infcirc540c.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.jaghouar2024intellect1]
+type = "preprint"
+title = "INTELLECT-1 Technical Report"
+authors = "Sami Jaghouar, Jack Min Ong, Manveer Basra, Fares Obeid, Jannik Straube, Michael Keiblinger, Elie Bakouch, Lucas Atkins, Maziyar Panahi, Charles Goddard, Max Ryabinin, Johannes Hagemann"
+year = 2024
+arxiv = "2412.01152"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.jain2024livecodebench]
+type = "preprint"
+title = "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code"
+authors = "Naman Jain, King Han, Alex Gu, Wen-Ding Li, Fanjia Yan, Tianjun Zhang, Sida Wang, Armando Solar-Lezama, Koushik Sen, Ion Stoica"
+year = 2024
+arxiv = "2403.07974"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.james2025h200]
+type = "news"
+title = "The Nvidia H200 export saga, as it happened"
+authors = "Luke James (Tom's Hardware)"
+year = 2025
+url = "https://www.tomshardware.com/tech-industry/semiconductors/us-eases-nvidia-export-restrictions-h200-cleared-for-china-under-tight-controls"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.jang2026explorationhacking]
+type = "preprint"
+title = "Exploration Hacking: Can LLMs Learn to Resist RL Training?"
+authors = "Eyon Jang, Damon Falck, Joschka Braun, Nathalie Kirch, Achu Menon, Perusha Moodley, Scott Emmons, Roland S. Zimmermann, David Lindner"
+year = 2026
+arxiv = "2604.28182"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.jia2021pol]
+type = "peer-reviewed"
+title = "Proof-of-Learning: Definitions and Practice"
+authors = "Hengrui Jia, Mohammad Yaghini, Christopher A. Choquette-Choo, Natalie Dullerud, Anvith Thudi, Varun Chandrasekaran, Nicolas Papernot"
+year = 2021
+arxiv = "2103.05633"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.jing2026]
+type = "peer-reviewed"
+title = "Satellite observations and energy balance constrain the thermal footprint of a hyperscale data-centre cluster"
+authors = "Jiawei Jing"
+year = 2026
+doi = "10.1088/1748-9326/aead02"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.jones2021boardgames]
+type = "preprint"
+title = "Scaling Scaling Laws with Board Games"
+authors = "Andy L. Jones"
+year = 2021
+arxiv = "2104.03113"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.jumper2021alphafold]
+type = "peer-reviewed"
+title = "Highly accurate protein structure prediction with AlphaFold"
+authors = "John Jumper, Richard Evans, Alexander Pritzel, et al."
+year = 2021
+doi = "10.1038/s41586-021-03819-2"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.juniewicz2026smuggling]
+type = "report"
+title = "Diversion and resale: estimating compute smuggling to China"
+authors = "Isabel Juniewicz (Epoch AI)"
+year = 2026
+url = "https://epoch.ai/blog/chip-smuggling"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.justen2025bio]
+type = "preprint"
+title = "LLMs Outperform Experts on Challenging Biology Benchmarks"
+authors = "Lennart Justen"
+year = 2025
+arxiv = "2505.06108"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.kaplan2020scaling]
+type = "preprint"
+title = "Scaling Laws for Neural Language Models"
+authors = "Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei"
+year = 2020
+arxiv = "2001.08361"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.karger2025forecastbench]
+type = "preprint"
+title = "ForecastBench: A Dynamic Benchmark of AI Forecasting Capabilities"
+authors = "Ezra Karger, Houtan Bastani, Chen Yueh-Han, Zachary Jacobs, Danny Halawi, Fred Zhang, Philip E. Tetlock"
+year = 2025
+arxiv = "2409.19839"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.karnofsky2022defeat]
+type = "essay"
+title = "AI Could Defeat All Of Us Combined"
+authors = "Holden Karnofsky"
+year = 2022
+url = "https://www.cold-takes.com/ai-could-defeat-all-of-us-combined/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.khan2020aichips]
+type = "report"
+title = "AI Chips: What They Are and Why They Matter"
+authors = "Saif M. Khan and Alexander Mann (CSET)"
+year = 2020
+doi = "10.51593/20190014"
+url = "https://cset.georgetown.edu/publication/ai-chips-what-they-are-and-why-they-matter/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.khan2021supplychain]
+type = "report"
+title = "The Semiconductor Supply Chain: Assessing National Competitiveness"
+authors = "Saif M. Khan, Alexander Mann, Dahlia Peterson (CSET)"
+year = 2021
+doi = "10.51593/20190016"
+url = "https://cset.georgetown.edu/publication/the-semiconductor-supply-chain/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.khatri2025scalerl]
+type = "preprint"
+title = "The Art of Scaling Reinforcement Learning Compute for LLMs"
+authors = "Devvrit Khatri, Lovish Madaan, Rishabh Tiwari, Rachit Bansal, Sai Surya Duvvuri, Manzil Zaheer, Inderjit S. Dhillon, David Brandfonbrener, Rishabh Agarwal"
+year = 2025
+arxiv = "2510.13786"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.kiela2021dynabench]
+type = "peer-reviewed"
+title = "Dynabench: Rethinking Benchmarking in NLP"
+authors = "Douwe Kiela, Max Bartolo, Yixin Nie, et al."
+year = 2021
+arxiv = "2104.14337"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.kimpson2026a]
+type = "preprint"
+title = "Detecting AI Training in Datacentre Power"
+authors = "Tom Kimpson, Mauricio Baker, Emlyn Graham"
+year = 2026
+arxiv = "2610.30182"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.kimpson2026b]
+type = "preprint"
+title = "Can Power Draw Constrain Covert Compute? Limits of Analogue Verification for AI Governance"
+authors = "Tom Kimpson, Mauricio Baker, Emlyn Graham"
+year = 2026
+arxiv = "2610.07476"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.kimpson2026dcpower]
+type = "preprint"
+title = "Detecting AI Training in Datacentre Power"
+authors = "Tom Kimpson, Mauricio Baker, Emlyn Graham"
+year = 2026
+arxiv = "2610.30182"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.kimpson2026supply]
+type = "preprint"
+title = "Verifying Declared AI Workloads from GPU Supply Current"
+authors = "Tom Kimpson"
+year = 2026
+arxiv = "2611.29982"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.kinniment2023ara]
+type = "preprint"
+title = "Evaluating Language-Model Agents on Realistic Autonomous Tasks"
+authors = "Megan Kinniment, Lucas Jun Koba Sato, Haoxing Du, Brian Goodrich, Max Hasin, Lawrence Chan, Luke Harold Miles, Tao R. Lin, Hjalmar Wijk, Joel Burget, Aaron Ho, Elizabeth Barnes, Paul Christiano"
+year = 2023
+arxiv = "2312.11671"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.kirgis2003dprk]
+type = "legal-scholarship"
+title = "North Korea's Withdrawal from the Nuclear Nonproliferation Treaty"
+authors = "Frederic L. Kirgis"
+year = 2003
+url = "https://www.asil.org/insights/volume-8-issue-2-2/"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.koessler2024risk]
+type = "preprint"
+title = "Risk thresholds for frontier AI"
+authors = "Leonie Koessler, Jonas Schuett, Markus Anderljung"
+year = 2024
+arxiv = "2406.14713"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.kokotajlo2025takeoff]
+type = "report"
+title = "Takeoff Forecast"
+authors = "Daniel Kokotajlo, Eli Lifland"
+year = 2025
+url = "https://ai-2027.com/research/takeoff-forecast"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.koomey2011]
+type = "peer-reviewed"
+title = "Implications of Historical Trends in the Electrical Efficiency of Computing"
+authors = "Jonathan G. Koomey, Stephen Berard, Marla Sanchez, Henry Wong"
+year = 2011
+doi = "10.1109/MAHC.2010.28"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.koomey2015]
+type = "essay"
+title = "Moore's Law Might Be Slowing Down, But Not Energy Efficiency"
+authors = "Jonathan Koomey, Samuel Naffziger"
+year = 2015
+url = "https://spectrum.ieee.org/moores-law-might-be-slowing-down-but-not-energy-efficiency"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.koopmanschap2026]
+type = "preprint"
+title = "How to Catch a GPU: A Taxonomy of Verification and Enforcement Mechanisms for International AI Agreements"
+authors = "Raymond Koopmanschap, Otto Barten"
+year = 2026
+arxiv = "2607.22619"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.koopmanschap2026gpu]
+type = "preprint"
+title = "How to Catch a GPU: A Taxonomy of Verification and Enforcement Mechanisms for International AI Agreements"
+authors = "Raymond Koopmanschap, Otto Barten"
+year = 2026
+arxiv = "2607.22619"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.korbak2025controlsketch]
+type = "preprint"
+title = "A sketch of an AI control safety case"
+authors = "Tomek Korbak, Joshua Clymer, Benjamin Hilton, Buck Shlegeris, Geoffrey Irving"
+year = 2025
+arxiv = "2501.17315"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.koremenos2016continent]
+type = "book"
+title = "The Continent of International Law: Explaining Agreement Design"
+authors = "Barbara Koremenos"
+year = 2016
+doi = "10.1017/CBO9781316415832"
+isbn = "9781107124233"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.krawec2026]
+type = "report"
+title = "Tracking Hyperscale AI Data Center Growth with Satellite Imagery"
+authors = "Christina Krawec (Federation of American Scientists)"
+year = 2026
+url = "https://fas.org/publication/tracking-hyperscale/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.krys2025]
+type = "preprint"
+title = "Distributed and Decentralised Training: Technical Governance Challenges in a Shifting AI Landscape"
+authors = "Jakub Kryś, Yashvardhan Sharma, Janet Egan"
+year = 2025
+arxiv = "2507.07765"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.krys2025distributed]
+type = "preprint"
+title = "Distributed and Decentralised Training: Technical Governance Challenges in a Shifting AI Landscape"
+authors = "Jakub Krys, Yashvardhan Sharma, Janet Egan"
+year = 2025
+arxiv = "2507.07765"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.kulp2024hem]
+type = "report"
+title = "Hardware-Enabled Governance Mechanisms: Developing Technical Solutions to Exempt Items Otherwise Classified Under Export Control Classification Numbers 3A090 and 4A090"
+authors = "Gabriel Kulp, Daniel Gonzales, Everett Smith, Lennart Heim, Prateek Puri, Michael J. D. Vermeer, Zev Winkelman (RAND)"
+year = 2024
+doi = "10.7249/WRA3056-1"
+url = "https://www.rand.org/pubs/working_papers/WRA3056-1.html"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.kwa2025horizon]
+type = "peer-reviewed"
+title = "Measuring AI Ability to Complete Long Software Tasks"
+authors = "Thomas Kwa, Ben West, Joel Becker, Amy Deng, Katharyn Garcia, Max Hasin, Sami Jawhar, Megan Kinniment, Nate Rush, Sydney Von Arx, et al."
+year = 2025
+arxiv = "2503.14499"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.kydd2000trust]
+type = "peer-reviewed"
+title = "Trust, Reassurance, and Cooperation"
+authors = "Andrew Kydd"
+year = 2000
+doi = "10.1162/002081800551190"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.landauer1961]
+type = "peer-reviewed"
+title = "Irreversibility and Heat Generation in the Computing Process"
+authors = "R. Landauer"
+year = 1961
+doi = "10.1147/rd.53.0183"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.laurie2013ct]
+type = "spec"
+title = "Certificate Transparency (RFC 6962)"
+authors = "Ben Laurie, Adam Langley, Emilia Kasper"
+year = 2013
+doi = "10.17487/RFC6962"
+url = "https://www.rfc-editor.org/rfc/rfc6962"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.le2026grafting]
+type = "preprint"
+title = "Reference-Grafting Matches Fine-Tuning at Eliciting Sandbagged Capabilities"
+authors = "Linh Le, Hong Kiat Tan, David Williams-King"
+year = 2026
+arxiv = "2608.29458"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.lee2025]
+type = "dataset"
+title = "Today's largest data center can do more than 20 GPT-4-scale training runs each month"
+authors = "Jaeho Lee (Epoch AI)"
+year = 2025
+url = "https://epoch.ai/data-insights/gpt-4s-trainable"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.levy2021]
+type = "peer-reviewed"
+title = "Communication consumes 35 times more energy than computation in the human cortex, but both costs are needed to predict synapse number"
+authors = "William B. Levy, Victoria G. Calvert"
+year = 2021
+doi = "10.1073/pnas.2008173118"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.li2024wmdp]
+type = "preprint"
+title = "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning"
+authors = "Nathaniel Li, Alexander Pan, Anjali Gopal, et al., Dan Hendrycks"
+year = 2024
+arxiv = "2403.03218"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.li2025covertsandbag]
+type = "peer-reviewed"
+title = "LLMs Can Covertly Sandbag on Capability Evaluations Against Chain-of-Thought Monitoring"
+authors = "Chloe Li, Mary Phuong, Noah Y. Siegel"
+year = 2025
+arxiv = "2508.00943"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.liang2025illusion]
+type = "preprint"
+title = "The SWE-Bench Illusion: When State-of-the-Art LLMs Remember Instead of Reason"
+authors = "Shanchao Liang, Spandan Garg, Roshanak Zilouchian Moghaddam"
+year = 2025
+arxiv = "2506.12286"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.lifland2025timelines]
+type = "report"
+title = "Timelines Forecast (AI 2027)"
+authors = "Eli Lifland, Nikola Jurkovic, FutureSearch"
+year = 2025
+url = "https://ai-2027.com/research/timelines-forecast"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.littlewood-lentzos-2024]
+type = "essay"
+title = "Strengthening the Biological Weapons Convention"
+authors = "Jez Littlewood, Filippa Lentzos"
+year = 2024
+url = "https://www.armscontrol.org/act/2024-12/features/strengthening-biological-weapons-convention"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.liu2025prorl]
+type = "preprint"
+title = "ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models"
+authors = "Mingjie Liu, Shizhe Diao, Ximing Lu, Jian Hu, Xin Dong, Yejin Choi, Jan Kautz, Yi Dong"
+year = 2025
+arxiv = "2505.24864"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.liu2025spiral]
+type = "peer-reviewed"
+title = "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning"
+authors = "Bo Liu, Leon Guertler, Simon Yu, et al."
+year = 2025
+arxiv = "2506.24119"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.long2024protocol]
+type = "preprint"
+title = "Protocol Learning, Decentralized Frontier Risk and the No-Off Problem"
+authors = "Alexander Long"
+year = 2024
+arxiv = "2412.07890"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.lu2024aiscientist]
+type = "preprint"
+title = "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery"
+authors = "Chris Lu, Cong Lu, Robert Tjarko Lange, Jakob Foerster, Jeff Clune, David Ha"
+year = 2024
+arxiv = "2408.06292"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.lucki2024unlearning]
+type = "peer-reviewed"
+title = "An Adversarial Perspective on Machine Unlearning for AI Safety"
+authors = "Jakub Łucki, Boyi Wei, Yangsibo Huang, Peter Henderson, Florian Tramèr, Javier Rando"
+year = 2025
+arxiv = "2409.18025"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.luo2023forgetting]
+type = "preprint"
+title = "An Empirical Study of Catastrophic Forgetting in Large Language Models During Continual Fine-tuning"
+authors = "Yun Luo, Zhen Yang, Fandong Meng, Yafu Li, Jie Zhou, Yue Zhang"
+year = 2023
+arxiv = "2308.08747"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.ma2026talent]
+type = "report"
+title = "Who's Ahead in the Global AI Talent Race?"
+authors = "Damien Ma and Binyi Yang (Carnegie China, Carnegie Endowment for International Peace)"
+year = 2026
+url = "https://carnegieendowment.org/features/whos-ahead-in-the-global-ai-talent-race"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.mack2026cpe]
+type = "preprint"
+title = "Mechanistically Eliciting Latent Behaviors in Language Models"
+authors = "Andrew Mack, Nina Panickssery, Alexander Matt Turner"
+year = 2026
+arxiv = "2606.29604"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.mahley-2001]
+type = "official-docs"
+title = "Statement by the United States to the Ad Hoc Group of Biological Weapons Convention States Parties"
+authors = "Donald A. Mahley, US Department of State"
+year = 2001
+url = "https://usinfo.org/wf-archive/2001/010725/epf314.htm"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.mahran2026partition]
+type = "preprint"
+title = "What Lies Beyond Perception: A Partition Theory of the Limits of AI Evaluation and Oversight"
+authors = "Ahmed M. Mahran"
+year = 2026
+arxiv = "2610.30803"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.marinoni2026]
+type = "preprint"
+title = "The data heat island effect: quantifying the impact of AI data centers in a warming world"
+authors = "Andrea Marinoni, Erik Cambria, Weisi Lin, Mauro Dalla Mura, Jocelyn Chanussot, Edoardo Ragusa, Chi Yan Tso, Yihao Zhu, Benjamin Horton"
+year = 2026
+arxiv = "2603.20897"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.marks2025auditing]
+type = "preprint"
+title = "Auditing language models for hidden objectives"
+authors = "Samuel Marks, Johannes Treutlein, Trenton Bricken, et al."
+year = 2025
+arxiv = "2503.10965"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.maschler1966price]
+type = "peer-reviewed"
+title = "A price leadership method for solving the inspector's non-constant-sum game"
+authors = "Michael Maschler"
+year = 1966
+doi = "10.1002/nav.3800130103"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.mayoral2025cai]
+type = "preprint"
+title = "Cybersecurity AI: The World's Top AI Agent for Security Capture-the-Flag (CTF)"
+authors = "Victor Mayoral-Vilches, Luis Javier Navarrete-Lozano, Francesco Balassone, Maria Sanz-Gomez, Cristobal R. J. Veas Chavez, Maite del Mundo de Torres, Vanesa Turiel"
+year = 2025
+arxiv = "2512.02654"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.mazeika2025rli]
+type = "preprint"
+title = "Remote Labor Index: Measuring AI Automation of Remote Work"
+authors = "Mantas Mazeika, Alice Gatti, Cristina Menghini, et al., Dan Hendrycks"
+year = 2025
+arxiv = "2510.26787"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.meinke2024scheming]
+type = "preprint"
+title = "Frontier Models are Capable of In-context Scheming"
+authors = "Alexander Meinke, Bronson Schoen, Jérémy Scheurer, Mikita Balesni, Rusheb Shah, Marius Hobbhahn"
+year = 2024
+arxiv = "2412.04984"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.mertens2026secretsauce]
+type = "preprint"
+title = "Is there \"Secret Sauce\" in Large Language Model Development?"
+authors = "Matthias Mertens, Natalia Fischl-Lanzoni, Neil Thompson"
+year = 2026
+arxiv = "2602.07238"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.meta-infra-2025]
+type = "vendor"
+title = "Meta's Infrastructure Evolution and the Advent of AI"
+authors = "Yee Jiun Song, Kaushik Veeraraghavan (Meta)"
+year = 2025
+url = "https://engineering.fb.com/2025/09/29/data-infrastructure/metas-infrastructure-evolution-and-the-advent-of-ai/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.meta-ssf-v2-1-2026]
+type = "vendor"
+title = "Meta Superintelligence Scaling Framework, Version 2.1"
+authors = "Meta"
+year = 2026
+url = "https://research.meta.ai/static/meta-superintelligence-scaling-framework"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.meta2019pluribus]
+type = "vendor"
+title = "Facebook, Carnegie Mellon build first AI that beats pros in 6-player poker"
+authors = "Meta AI"
+year = 2019
+url = "https://ai.meta.com/blog/pluribus-first-ai-to-beat-pros-in-6-player-poker/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.metaculus2026futureeval]
+type = "report"
+title = "FutureEval Spring Results: Pros Beat Bots, but the Gap is Nearly Gone"
+authors = "Ben Wilson, John Bash (Metaculus)"
+year = 2026
+url = "https://www.lesswrong.com/posts/wZBbDqzfBjYG58CxK/futureeval-spring-results-pros-beat-bots-but-the-gap-is"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.metr-anthropic-acceleration-2026]
+type = "report"
+title = "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026"
+authors = "METR (Tom Cunningham, Nate Rush, Parker Whitfill, Hjalmar Wijk)"
+year = 2026
+url = "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.metr-common-elements-2025]
+type = "report"
+title = "Common Elements of Frontier AI Safety Policies"
+authors = "METR"
+year = 2025
+url = "https://metr.org/common-elements"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.metr2024elicitation]
+type = "report"
+title = "Guidelines for capability elicitation"
+authors = "METR"
+year = 2024
+url = "https://metr.org/blog/2024-03-15-guidelines-for-capability-elicitation/"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.metr2026expenditure]
+type = "report"
+title = "Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT"
+authors = "Tom Cunningham, Manish Shetty, Vincent Cheng, Nate Rush (METR)"
+year = 2026
+url = "https://metr.org/blog/2026-07-21-expenditure-horizon/"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.metr2026horizons]
+type = "dataset"
+title = "Time horizons (METR-Horizon-v1.1 benchmark results)"
+authors = "METR"
+year = 2026
+url = "https://metr.org/time-horizons/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.metr2026th11]
+type = "report"
+title = "Time Horizon 1.1"
+authors = "METR"
+year = 2026
+url = "https://metr.org/blog/2026-01-29-time-horizon-1-1/"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.metr2026thdata]
+type = "dataset"
+title = "Task-Completion Time Horizons of Frontier AI Models (METR-Horizon-v1.1 results)"
+authors = "METR"
+year = 2026
+url = "https://metr.org/assets/benchmark_results_1_1.yaml"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.metr2026uplift]
+type = "report"
+title = "We are Changing our Developer Productivity Experiment Design"
+authors = "METR"
+year = 2026
+url = "https://metr.org/blog/2026-02-24-uplift-update/"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.miotti2023cap]
+type = "preprint"
+title = "An international treaty to implement a global compute cap for advanced artificial intelligence"
+authors = "Andrea Miotti"
+year = 2023
+arxiv = "2311.10748"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.miotti2025narrowpath]
+type = "report"
+title = "A Narrow Path: How to secure our future (V1.2.0)"
+authors = "Andrea Miotti, Tolga Bilge, Dave Kasten, James Newport"
+year = 2025
+url = "https://pdf.narrowpath.co/A_Narrow_Path.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.mlgw2025]
+type = "official-docs"
+title = "MLGW update to the public regarding utility support for xAI"
+authors = "Memphis Light, Gas and Water"
+year = 2025
+url = "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.moddednanogpt]
+type = "code"
+title = "Modded-NanoGPT (the NanoGPT speedrun)"
+authors = "Keller Jordan and contributors"
+undated = true
+url = "https://github.com/KellerJordan/modded-nanogpt"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.morris2023levels]
+type = "peer-reviewed"
+title = "Levels of AGI for Operationalizing Progress on the Path to AGI"
+authors = "Meredith Ringel Morris, Jascha Sohl-Dickstein, Noah Fiedel, Tris Warkentin, Allan Dafoe, Aleksandra Faust, Clement Farabet, Shane Legg"
+year = 2024
+doi = "10.48550/arXiv.2311.02462"
+arxiv = "2311.02462"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.muennighoff2023dataconstrained]
+type = "preprint"
+title = "Scaling Data-Constrained Language Models"
+authors = "Niklas Muennighoff, Alexander M. Rush, Boaz Barak, Teven Le Scao, Aleksandra Piktus, Nouamane Tazi, Sampo Pyysalo, Thomas Wolf, Colin Raffel"
+year = 2023
+arxiv = "2305.16264"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.needham2025evalaware]
+type = "preprint"
+title = "Large Language Models Often Know When They Are Being Evaluated"
+authors = "Joe Needham, Giles Edkins, Govind Pimpale, Henning Bartsch, Marius Hobbhahn"
+year = 2025
+arxiv = "2505.23836"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.newstart-protocol]
+type = "legislation"
+title = "Protocol to the Treaty between the United States of America and the Russian Federation on Measures for the Further Reduction and Limitation of Strategic Offensive Arms"
+authors = "United States of America and Russian Federation"
+year = 2010
+url = "https://courses.physics.illinois.edu/phys280/sp2014/archive/2010%20New%20START%20Protocol.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.ngo2023tagi]
+type = "essay"
+title = "Clarifying and predicting AGI"
+authors = "Richard Ngo"
+year = 2023
+url = "https://www.lesswrong.com/posts/BoA3agdkAzL6HQtQP/clarifying-and-predicting-agi"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.niyigaba2026structural]
+type = "preprint"
+title = "Eliciting sandbagged LLM capability via structural interventions on attention-head functional networks"
+authors = "Manzi Fabrice Niyigaba, Ishan Verma Prasad, Sansheng Cao, Zheng Huang, Yujun Yan"
+year = 2026
+arxiv = "2611.31615"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.nordhaus2015climate]
+type = "peer-reviewed"
+title = "Climate Clubs: Overcoming Free-riding in International Climate Policy"
+authors = "William Nordhaus"
+year = 2015
+doi = "10.1257/aer.15000001"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.nous2025psyche]
+type = "vendor"
+title = "Democratizing AI: The Psyche Network Architecture"
+authors = "Nous Research"
+year = 2025
+url = "https://nousresearch.com/nous-psyche/"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.novikov2025alphaevolve]
+type = "preprint"
+title = "AlphaEvolve: A coding agent for scientific and algorithmic discovery"
+authors = "Alexander Novikov, Ngan Vu, Marvin Eisenberger, Emilien Dupont, Po-Sen Huang, Adam Zsolt Wagner, Sergey Shirobokov, Borislav Kozlovskii, Francisco J. R. Ruiz, Abbas Mehrabian, et al."
+year = 2025
+arxiv = "2506.13131"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.nrc-2012-ctbt]
+type = "report"
+title = "The Comprehensive Nuclear Test Ban Treaty: Technical Issues for the United States"
+authors = "National Research Council"
+year = 2012
+doi = "10.17226/12849"
+url = "https://www.nationalacademies.org/read/12849/chapter/5"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.nvidia-a100]
+type = "vendor"
+title = "NVIDIA A100 Tensor Core GPU datasheet"
+authors = "NVIDIA"
+year = 2021
+url = "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.nvidia-dgx-b200]
+type = "vendor"
+title = "NVIDIA DGX B200: specifications"
+authors = "NVIDIA"
+undated = true
+url = "https://www.nvidia.com/en-us/data-center/dgx-b200/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.nvidia-gb200]
+type = "vendor"
+title = "NVIDIA GB200 NVL72: specifications"
+authors = "NVIDIA"
+undated = true
+url = "https://www.nvidia.com/en-us/data-center/gb200-nvl72/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.nvidia-h100]
+type = "vendor"
+title = "NVIDIA H100 Tensor Core GPU: specifications"
+authors = "NVIDIA"
+undated = true
+url = "https://www.nvidia.com/en-us/data-center/h100/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.nvidia-v100]
+type = "vendor"
+title = "NVIDIA V100 Tensor Core GPU datasheet"
+authors = "NVIDIA"
+undated = true
+url = "https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.nvidia2023hcc]
+type = "vendor"
+title = "Confidential Compute on NVIDIA Hopper H100 (Whitepaper WP-11459-001 v1.0)"
+authors = "NVIDIA"
+year = 2023
+url = "https://images.nvidia.com/aem-dam/en-zz/Solutions/data-center/HCC-Whitepaper-v1.0.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.nvidia2025fleet]
+type = "vendor"
+title = "Opt-In NVIDIA Software Enables Data Center Fleet Management"
+authors = "NVIDIA Newsroom"
+year = 2025
+url = "https://blogs.nvidia.com/blog/optional-data-center-fleet-management-software"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.nvidia2025nobackdoors]
+type = "vendor"
+title = "No Backdoors. No Kill Switches. No Spyware."
+authors = "David Reber Jr. (NVIDIA)"
+year = 2025
+url = "https://blogs.nvidia.com/blog/no-backdoors-no-kill-switches-no-spyware"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.ny-a9449-2026]
+type = "legislation"
+title = "New York Assembly Bill A9449 (2026): chapter amendment to the RAISE Act"
+authors = "New York State Assembly"
+year = 2026
+url = "https://legislation.nysenate.gov/pdf/bills/2025/A9449"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.opcw-ec109-dg22]
+type = "official-docs"
+title = "Update on the Technical Secretariat's Readiness to Conduct a Challenge Inspection or an Investigation of Alleged Use (EC-109/DG.22)"
+authors = "OPCW Director-General"
+year = 2025
+url = "https://www.opcw.org/sites/default/files/documents/2025/07/ec109dg22%28e%29.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.opcw-numbers]
+type = "official-docs"
+title = "OPCW by the Numbers"
+authors = "Organisation for the Prohibition of Chemical Weapons"
+year = 2026
+url = "https://www.opcw.org/media-centre/opcw-numbers"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.openai-preparedness-v2-2025]
+type = "vendor"
+title = "Preparedness Framework, Version 2"
+authors = "OpenAI"
+year = 2025
+url = "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.openai-stargate-2025]
+type = "vendor"
+title = "OpenAI, Oracle, and SoftBank expand Stargate with five new AI data center sites"
+authors = "OpenAI"
+year = 2025
+url = "https://openai.com/index/five-new-stargate-sites/"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.openai2023governance]
+type = "vendor"
+title = "Governance of superintelligence"
+authors = "Sam Altman, Greg Brockman, Ilya Sutskever (OpenAI)"
+year = 2023
+url = "https://openai.com/index/governance-of-superintelligence/"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.openai2024o1]
+type = "vendor"
+title = "Learning to reason with LLMs"
+authors = "OpenAI"
+year = 2024
+url = "https://openai.com/index/learning-to-reason-with-llms/"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.openai2025o3]
+type = "vendor"
+title = "Introducing OpenAI o3 and o4-mini"
+authors = "OpenAI"
+year = 2025
+url = "https://openai.com/index/introducing-o3-and-o4-mini/"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.openai2025preparedness]
+type = "vendor"
+title = "Preparedness Framework, Version 2"
+authors = "OpenAI"
+year = 2025
+url = "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.openaicharter]
+type = "vendor"
+title = "OpenAI Charter"
+authors = "OpenAI"
+undated = true
+url = "https://openai.com/charter/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.openllmleaderboard2025contents]
+type = "dataset"
+title = "Open LLM Leaderboard contents"
+authors = "Hugging Face Open LLM Leaderboard"
+year = 2025
+url = "https://huggingface.co/datasets/open-llm-leaderboard/contents"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ord2025govaireport]
+type = "report"
+title = "Inference Scaling and AI Governance: Technical Report"
+authors = "Toby Ord (Centre for the Governance of AI)"
+year = 2025
+url = "https://www.governance.ai/research-paper/inference-scaling-and-ai-governance"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ord2025halflife]
+type = "preprint"
+title = "Is there a half-life for the success rates of AI agents?"
+authors = "Toby Ord"
+year = 2025
+arxiv = "2505.05115"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.ord2025inferencegov]
+type = "preprint"
+title = "Inference Scaling Reshapes AI Governance"
+authors = "Toby Ord"
+year = 2025
+arxiv = "2503.05705"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ord2025rlscale]
+type = "essay"
+title = "How Well Does RL Scale?"
+authors = "Toby Ord"
+year = 2025
+url = "https://www.tobyord.com/writing/how-well-does-rl-scale"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.owen2024predictable]
+type = "preprint"
+title = "How predictable is language model benchmark performance?"
+authors = "David Owen"
+year = 2024
+arxiv = "2401.04757"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.pan2024selfrep]
+type = "preprint"
+title = "Frontier AI systems have surpassed the self-replicating red line"
+authors = "Xudong Pan, Jiarun Dai, Yihe Fan, Min Yang"
+year = 2024
+arxiv = "2412.12140"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.pan2025selfrep]
+type = "preprint"
+title = "Large language model-powered AI systems achieve self-replication with no human intervention"
+authors = "Xudong Pan, Jiarun Dai, Yihe Fan, Minyuan Luo, Changyi Li, Min Yang"
+year = 2025
+arxiv = "2503.17378"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.pan2026idc]
+type = "news"
+title = "Chinese chipmakers claim nearly half of local market as Nvidia's lead shrinks"
+authors = "Che Pan and Laurie Chen (Reuters, via Yahoo Finance)"
+year = 2026
+url = "https://finance.yahoo.com/sectors/technology/articles/chinese-chipmakers-claim-nearly-half-091441757.html"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.patel2025ascend]
+type = "report"
+title = "Huawei Ascend Production Ramp: Die Banks, TSMC Continued Production, HBM is The Bottleneck"
+authors = "Dylan Patel, AJ, Myron Xie (SemiAnalysis)"
+year = 2025
+url = "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.patwardhan2025gdpval]
+type = "preprint"
+title = "GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks"
+authors = "Tejal Patwardhan, et al. (OpenAI)"
+year = 2025
+arxiv = "2510.04374"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.peng2024demo]
+type = "preprint"
+title = "DeMo: Decoupled Momentum Optimization"
+authors = "Bowen Peng, Lizhang Chen, Baiyu Su, Jeffrey Quesnelle, Diederik P. Kingma, Qiang Liu"
+year = 2024
+arxiv = "2411.19870"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.petrie2024offline]
+type = "preprint"
+title = "Near-Term Enforcement of AI Chip Export Controls Using A Firmware-Based Design for Offline Licensing"
+authors = "James Petrie"
+year = 2024
+arxiv = "2404.18308"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.petrie2025flexheg]
+type = "preprint"
+title = "Flexible Hardware-Enabled Guarantees for AI Compute"
+authors = "James Petrie, Onni Aarne, Nora Ammann, David Dalrymple"
+year = 2025
+arxiv = "2506.15093"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.petrie2025flexheg1]
+type = "preprint"
+title = "Flexible Hardware-Enabled Guarantees for AI Compute"
+authors = "James Petrie, Onni Aarne, Nora Ammann, David Dalrymple"
+year = 2025
+arxiv = "2506.15093"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.petrie2025flexheg2]
+type = "preprint"
+title = "Technical Options for Flexible Hardware-Enabled Guarantees"
+authors = "James Petrie, Onni Aarne"
+year = 2025
+arxiv = "2506.03409"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.phan2025hle]
+type = "preprint"
+title = "Humanity's Last Exam"
+authors = "Long Phan, et al., Dan Hendrycks"
+year = 2025
+arxiv = "2501.14249"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.pilz2023]
+type = "preprint"
+title = "Compute at Scale: A Broad Investigation into the Data Center Industry"
+authors = "Konstantin Pilz, Lennart Heim"
+year = 2023
+arxiv = "2311.02651"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.pilz2023diffusion]
+type = "preprint"
+title = "Increased Compute Efficiency and the Diffusion of AI Capabilities"
+authors = "Konstantin Pilz, Lennart Heim, Nicholas Brown"
+year = 2023
+arxiv = "2311.15377"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.pilz2023efficiency]
+type = "preprint"
+title = "Increased Compute Efficiency and the Diffusion of AI Capabilities"
+authors = "Konstantin Pilz, Lennart Heim, Nicholas Brown"
+year = 2023
+arxiv = "2311.15377"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.pilz2025]
+type = "preprint"
+title = "Trends in AI Supercomputers"
+authors = "Konstantin F. Pilz, James Sanders, Robi Rahman, Lennart Heim"
+year = 2025
+arxiv = "2504.16026"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.pilz2025supercomputers]
+type = "preprint"
+title = "Trends in AI Supercomputers"
+authors = "Konstantin F. Pilz, James Sanders, Robi Rahman, Lennart Heim"
+year = 2025
+arxiv = "2504.16026"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.primeintellect2025intellect2]
+type = "preprint"
+title = "INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning"
+authors = "Prime Intellect Team (Sami Jaghouar, Justus Mattern, Jack Min Ong, et al.)"
+year = 2025
+arxiv = "2505.07291"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.rahman2025nonparty]
+type = "essay"
+title = "Would ASI development in non-party states undermine a nonproliferation agreement?"
+authors = "Robi Rahman"
+year = 2025
+url = "https://techgov.intelligence.org/blog/would-asi-development-in-non-party-states-undermine-a-nonproliferation-agreement"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.rahman2026]
+type = "preprint"
+title = "Does Distributed Training Undermine Compute Governance?"
+authors = "Robi Rahman"
+year = 2026
+arxiv = "2605.29359"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.rahman2026telemetry]
+type = "preprint"
+title = "Detecting Hidden ML Training With Zero-Overhead Telemetry"
+authors = "Robi Rahman, Sabiha Tajdari"
+year = 2026
+arxiv = "2606.19262"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.rand2026queued]
+type = "report"
+title = "Queued Up: 2026 Edition, Characteristics of Power Plants Seeking Transmission Interconnection As of the End of 2025"
+authors = "Joseph Rand, Anna Cheyette, Chris Talley, Steven Zhang, Will Gorman, Ryan Wiser, Joachim Seel, Seongeun Jeong, Fritz Kahrl (LBNL and Interconnection.fyi)"
+year = 2026
+url = "https://eta-publications.lbl.gov/sites/default/files/2026-06/queued_up_2026_edition.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.redlines-2025]
+type = "essay"
+title = "Global Call for AI Red Lines"
+authors = "CeSIA, The Future Society, Center for Human-Compatible AI"
+year = 2025
+url = "https://red-lines.ai/"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.redwood2024mathpwdlock]
+type = "code"
+title = "redwoodresearch/math_pwd_lock_deepseek_math7b_on_weak_pythia1b (model weights)"
+authors = "Redwood Research"
+year = 2024
+url = "https://huggingface.co/redwoodresearch/math_pwd_lock_deepseek_math7b_on_weak_pythia1b"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.rein2023gpqa]
+type = "preprint"
+title = "GPQA: A Graduate-Level Google-Proof Q&A Benchmark"
+authors = "David Rein, Betty Li Hou, Asa Cooper Stickland, Jackson Petty, Richard Yuanzhe Pang, Julien Dirani, Julian Michael, Samuel R. Bowman"
+year = 2023
+arxiv = "2311.12022"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.rein2025hcast]
+type = "preprint"
+title = "HCAST: Human-Calibrated Autonomy Software Tasks"
+authors = "David Rein, Joel Becker, et al."
+year = 2025
+arxiv = "2503.17354"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.rein2025holistic]
+type = "report"
+title = "Research Update: Algorithmic vs. Holistic Evaluation"
+authors = "David Rein (METR)"
+year = 2025
+url = "https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.reuters-2025-iran]
+type = "news"
+title = "Verifying Iran's enriched uranium stock is 'long overdue', IAEA report says"
+authors = "Francois Murphy (Reuters)"
+year = 2025
+url = "https://theprint.in/world/verifying-irans-enriched-uranium-stock-is-long-overdue-iaea-report-says/2782711/"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.reuters2025nvidialocation]
+type = "news"
+title = "Nvidia builds location verification tech that could help fight chip smuggling"
+authors = "Reuters"
+year = 2025
+url = "https://www.thestar.com.my/business/business-news/2025/12/11/nvidia-builds-location-verification-tech-that-could-help-fight-chip-smuggling"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.roger2024sandbaggingrepo]
+type = "code"
+title = "FabienRoger/sandbagging: codebase for Stress-Testing Capability Elicitation With Password-Locked Models"
+authors = "Fabien Roger et al."
+year = 2024
+url = "https://github.com/FabienRoger/sandbagging"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.rosendorff2001optimal]
+type = "peer-reviewed"
+title = "The Optimal Design of International Trade Institutions: Uncertainty and Escape"
+authors = "B. Peter Rosendorff, Helen V. Milner"
+year = 2001
+doi = "10.1162/002081801317193619"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.ruan2024observational]
+type = "peer-reviewed"
+title = "Observational Scaling Laws and the Predictability of Language Model Performance"
+authors = "Yangjun Ruan, Chris J. Maddison, Tatsunori Hashimoto"
+year = 2024
+arxiv = "2405.10938"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.ryabinin2023swarm]
+type = "peer-reviewed"
+title = "SWARM Parallelism: Training Large Models Can Be Surprisingly Communication-Efficient"
+authors = "Max Ryabinin, Tim Dettmers, Michael Diskin, Alexander Borzunov"
+year = 2023
+arxiv = "2301.11913"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.salvi2025persuasion]
+type = "peer-reviewed"
+title = "On the conversational persuasiveness of GPT-4"
+authors = "Francesco Salvi, Manoel Horta Ribeiro, Riccardo Gallotti, Robert West"
+year = 2025
+doi = "10.1038/s41562-025-02194-6"
+arxiv = "2403.14380"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.sandberg2008]
+type = "report"
+title = "Whole Brain Emulation: A Roadmap (Technical Report 2008-3)"
+authors = "Anders Sandberg, Nick Bostrom (Future of Humanity Institute)"
+year = 2008
+url = "https://www.fhi.ox.ac.uk/brain-emulation-roadmap-report.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.sardana2024beyondchinchilla]
+type = "peer-reviewed"
+title = "Beyond Chinchilla-Optimal: Accounting for Inference in Language Model Scaling Laws"
+authors = "Nikhil Sardana, Jacob Portes, Sasha Doubov, Jonathan Frankle"
+year = 2024
+arxiv = "2401.00448"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.sastry-2024]
+type = "preprint"
+title = "Computing Power and the Governance of Artificial Intelligence"
+authors = "Girish Sastry, Lennart Heim, Haydn Belfield, Markus Anderljung, Miles Brundage, Julian Hazell, Cullen O'Keefe, Gillian K. Hadfield, Richard Ngo, Konstantin Pilz, George Gor, et al."
+year = 2024
+arxiv = "2402.08797"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.sastry2024]
+type = "preprint"
+title = "Computing Power and the Governance of Artificial Intelligence"
+authors = "Girish Sastry, Lennart Heim, Haydn Belfield, Markus Anderljung, Miles Brundage, Julian Hazell, Cullen O'Keefe, Gillian K. Hadfield, et al."
+year = 2024
+arxiv = "2402.08797"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.sastry2024compute]
+type = "preprint"
+title = "Computing Power and the Governance of Artificial Intelligence"
+authors = "Girish Sastry, Lennart Heim, Haydn Belfield, Markus Anderljung, Miles Brundage, Julian Hazell, Cullen O'Keefe, Gillian K. Hadfield, Richard Ngo, Konstantin Pilz, George Gor, Emma Bluemke, Sarah Shoker, Janet Egan, Robert F. Trager, Shahar Avin, Adrian Weller, Yoshua Bengio, Diane Coyle"
+year = 2024
+arxiv = "2402.08797"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.scale2026hleboard]
+type = "dataset"
+title = "Humanity's Last Exam leaderboard"
+authors = "Scale AI"
+year = 2026
+url = "https://labs.scale.com/leaderboard/humanitys_last_exam"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.schaeffer2023mirage]
+type = "preprint"
+title = "Are Emergent Abilities of Large Language Models a Mirage?"
+authors = "Rylan Schaeffer, Brando Miranda, Sanmi Koyejo"
+year = 2023
+arxiv = "2304.15004"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.scher-2025-agreement]
+type = "preprint"
+title = "An International Agreement to Prevent the Premature Creation of Artificial Superintelligence"
+authors = "Aaron Scher, David Abecassis, Peter Barnett, Brian Abeyta"
+year = 2025
+arxiv = "2511.10783"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.scher-thiergart-2025]
+type = "preprint"
+title = "Mechanisms to Verify International Agreements About AI Development"
+authors = "Aaron Scher, Lisa Thiergart"
+year = 2025
+arxiv = "2506.15867"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.scher2024mechanisms]
+type = "preprint"
+title = "Mechanisms to Verify International Agreements About AI Development"
+authors = "Aaron Scher, Lisa Thiergart"
+year = 2024
+arxiv = "2506.15867"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.scher2025]
+type = "preprint"
+title = "Mechanisms to Verify International Agreements About AI Development"
+authors = "Aaron Scher, Lisa Thiergart"
+year = 2025
+arxiv = "2506.15867"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.scher2025agreement]
+type = "preprint"
+title = "An International Agreement to Prevent the Premature Creation of Artificial Superintelligence"
+authors = "Aaron Scher, David Abecassis, Peter Barnett, Brian Abeyta"
+year = 2025
+arxiv = "2511.10783"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.scher2025b]
+type = "preprint"
+title = "An International Agreement to Prevent the Premature Creation of Artificial Superintelligence"
+authors = "Aaron Scher, David Abecassis, Peter Barnett, Brian Abeyta"
+year = 2025
+arxiv = "2511.10783"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.scher2026research]
+type = "preprint"
+title = "Verifying Restrictions on Frontier AI Research"
+authors = "Aaron Scher"
+year = 2026
+arxiv = "2606.28694"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.schoen2025antischeming]
+type = "preprint"
+title = "Stress Testing Deliberative Alignment for Anti-Scheming Training"
+authors = "Bronson Schoen, Evgenia Nitishinskaya, Mikita Balesni, et al."
+year = 2025
+arxiv = "2509.15541"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.schoenegger2025persuasion]
+type = "preprint"
+title = "Large Language Models Are More Persuasive Than Incentivized Human Persuaders"
+authors = "Philipp Schoenegger, Francesco Salvi, Jiacheng Liu, Xiaoli Nan, et al."
+year = 2025
+arxiv = "2505.09662"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.schrittwieser2020muzero]
+type = "peer-reviewed"
+title = "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model"
+authors = "Julian Schrittwieser, Ioannis Antonoglou, Thomas Hubert, et al."
+year = 2020
+doi = "10.1038/s41586-020-03051-4"
+arxiv = "1911.08265"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.sec2024whistleblower]
+type = "official-docs"
+title = "Securities and Exchange Commission Office of the Whistleblower Annual Report to Congress for Fiscal Year 2024"
+authors = "U.S. Securities and Exchange Commission, Office of the Whistleblower"
+year = 2024
+url = "https://www.sec.gov/files/fy24-annual-whistleblower-report.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.sec2026whistleblower]
+type = "official-docs"
+title = "Securities and Exchange Commission Office of the Whistleblower Annual Report to Congress for Fiscal Year 2025"
+authors = "U.S. Securities and Exchange Commission, Office of the Whistleblower"
+year = 2026
+url = "https://www.sec.gov/files/fy25-annual-whistleblower-report.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.seoul-commitments-2024]
+type = "official-docs"
+title = "Frontier AI Safety Commitments, AI Seoul Summit 2024"
+authors = "UK Department for Science, Innovation and Technology"
+year = 2024
+url = "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.sevilla2024]
+type = "report"
+title = "Can AI scaling continue through 2030?"
+authors = "Jaime Sevilla, Tamay Besiroglu, Ben Cottier, Josh You, Edu Roldán, Pablo Villalobos, Ege Erdil (Epoch AI)"
+year = 2024
+url = "https://epoch.ai/blog/can-ai-scaling-continue-through-2030"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.sevilla2024computegrowth]
+type = "report"
+title = "Training compute of frontier AI models grows by 4-5x per year"
+authors = "Jaime Sevilla and Edu Roldan (Epoch AI)"
+year = 2024
+url = "https://epoch.ai/blog/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.sevilla2024scaling2030]
+type = "report"
+title = "Can AI scaling continue through 2030?"
+authors = "Jaime Sevilla, Tamay Besiroglu, Ben Cottier, Josh You, Edu Roldan, Pablo Villalobos, Ege Erdil (Epoch AI)"
+year = 2024
+url = "https://epoch.ai/blog/can-ai-scaling-continue-through-2030"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.sevilla2025-decentralized]
+type = "essay"
+title = "How far can decentralized training over the internet scale?"
+authors = "Jaime Sevilla (Epoch AI)"
+year = 2025
+url = "https://epoch.ai/gradient-updates/how-far-can-decentralized-training-over-the-internet-scale"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.sevilla2025-power]
+type = "report"
+title = "Could decentralized training solve AI's power problem?"
+authors = "Jaime Sevilla, Anton Troynikov (Epoch AI)"
+year = 2025
+url = "https://epoch.ai/blog/could-decentralized-training-solve-ais-power-problem"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.sevilla2025decentralized]
+type = "essay"
+title = "How far can decentralized training over the internet scale?"
+authors = "Jaime Sevilla (Epoch AI Gradient Updates)"
+year = 2025
+url = "https://epoch.ai/gradient-updates/how-far-can-decentralized-training-over-the-internet-scale"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.shavit-2023]
+type = "preprint"
+title = "What does it take to catch a Chinchilla? Verifying Rules on Large-Scale Neural Network Training via Compute Monitoring"
+authors = "Yonadav Shavit"
+year = 2023
+arxiv = "2303.11341"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.shavit2023chinchilla]
+type = "preprint"
+title = "What does it take to catch a Chinchilla? Verifying Rules on Large-Scale Neural Network Training via Compute Monitoring"
+authors = "Yonadav Shavit"
+year = 2023
+arxiv = "2303.11341"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.shaw2026chinasolar]
+type = "news"
+title = "China adds 315 GW of solar in 2025"
+authors = "Vincent Shaw (pv magazine)"
+year = 2026
+url = "https://www.pv-magazine.com/2026/01/28/china-adds-315-gw-of-solar-in-2025/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.shehabi2024]
+type = "report"
+title = "2024 United States Data Center Energy Usage Report (LBNL-2001637)"
+authors = "Arman Shehabi, Sarah Smith, Alex Hubbard, Alex Newkirk, Nuoa Lei, A.B. Saddik, Billie Holecek, Jonathan Koomey, Eric Masanet, Dale Sartor"
+year = 2024
+url = "https://eta-publications.lbl.gov/sites/default/files/2024-12/us_data_center_energy_usage_report_lbnl-2001637.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.shehabi2024datacenter]
+type = "report"
+title = "2024 United States Data Center Energy Usage Report"
+authors = "Arman Shehabi, Sarah Smith, Alex Hubbard, Alex Newkirk, Nuoa Lei, A.B. Saddik, Billie Holecek, Jonathan Koomey, Eric Masanet, Dale Sartor (LBNL)"
+year = 2024
+doi = "10.71468/P1WC7Q"
+url = "https://eta-publications.lbl.gov/sites/default/files/2024-12/us_data_center_energy_usage_report_lbnl-2001637.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.shetty2026metrnanogpt]
+type = "report"
+title = "Evidence on AI R&D Progress from NanoGPT"
+authors = "Manish Shetty (METR)"
+year = 2026
+url = "https://metr.org/notes/2026-04-21-ai-rd-nanogpt-progress/"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.shetty2026nanogpt]
+type = "report"
+title = "Evidence on AI R&D Progress from NanoGPT"
+authors = "Manish Shetty (METR)"
+year = 2026
+url = "https://metr.org/notes/2026-04-21-ai-rd-nanogpt-progress/"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.shilov2026asml]
+type = "news"
+title = "ASML projects $71 billion in revenue by 2030, as demand for EUV lithography machines intensifies due to AI boom"
+authors = "Anton Shilov (Tom's Hardware)"
+year = 2026
+url = "https://www.tomshardware.com/tech-industry/semiconductors/asml-projects-usd71-billion-in-revenue-by-2030-as-demand-for-euv-lithography-machines-intensifies-due-to-ai-boom-china-sales-lag-behind-while-company-cashes-in-on-high-end-twinscan-systems"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.shumailov2024collapse]
+type = "peer-reviewed"
+title = "AI models collapse when trained on recursively generated data"
+authors = "Ilia Shumailov, Zakhar Shumaylov, Yiren Zhao, Nicolas Papernot, Ross Anderson, Yarin Gal"
+year = 2024
+doi = "10.1038/s41586-024-07566-y"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.silver2017alphagozero]
+type = "peer-reviewed"
+title = "Mastering the game of Go without human knowledge"
+authors = "David Silver, Julian Schrittwieser, Karen Simonyan, et al."
+year = 2017
+doi = "10.1038/nature24270"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.silver2018alphazero]
+type = "peer-reviewed"
+title = "A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play"
+authors = "David Silver, Thomas Hubert, Julian Schrittwieser, et al."
+year = 2018
+doi = "10.1126/science.aar6404"
+arxiv = "1712.01815"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.singh2025leaderboard]
+type = "preprint"
+title = "The Leaderboard Illusion"
+authors = "Shivalika Singh, Yiyang Nan, Alex Wang, Daniel D'Souza, Sayash Kapoor, Ahmet Üstün, Sanmi Koyejo, Yuntian Deng, Shayne Longpre, Noah A. Smith, Beyza Ermis, Marzieh Fadaee, Sara Hooker"
+year = 2025
+arxiv = "2504.20879"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.smith2026]
+type = "report"
+title = "United States Data Center Energy Usage Report: 2025 Update (LBNL-2001758)"
+authors = "Sarah J. Smith, Alex Hubbard, Alex Newkirk, Mohan Ganeshalingam, et al."
+year = 2026
+doi = "10.71468/P1RP4F"
+url = "https://escholarship.org/uc/item/33m6w3x0"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.snell2024emergence]
+type = "preprint"
+title = "Predicting Emergent Capabilities by Finetuning"
+authors = "Charlie Snell, Eric Wallace, Dan Klein, Sergey Levine"
+year = 2024
+arxiv = "2411.16035"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.snell2024testtime]
+type = "preprint"
+title = "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters"
+authors = "Charlie Snell, Jaehoon Lee, Kelvin Xu, Aviral Kumar"
+year = 2024
+arxiv = "2408.03314"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.somala2025buildtimes]
+type = "report"
+title = "Build times for gigawatt-scale data centers can be 2 years or less"
+authors = "Venkat Somala and Ben Cottier (Epoch AI)"
+year = 2025
+url = "https://epoch.ai/data-insights/data-centers-buildout-speeds"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.somala2025consumergpu]
+type = "report"
+title = "Frontier AI performance becomes accessible on consumer hardware within a year"
+authors = "Venkat Somala, Luke Emberson (Epoch AI)"
+year = 2025
+url = "https://epoch.ai/data-insights/consumer-gpu-model-gap"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.song2024gap]
+type = "peer-reviewed"
+title = "Mind the Gap: Examining the Self-Improvement Capabilities of Large Language Models"
+authors = "Yuda Song, Hanlin Zhang, Carson Eisenach, Sham Kakade, Dean Foster, Udaya Ghai"
+year = 2025
+arxiv = "2412.02674"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.soopal2026adaptive]
+type = "preprint"
+title = "Stress-Testing Sandbagging Detection Under Adaptive Attack"
+authors = "Bhoj Rani Soopal, Aarohi Agrawal, Josh Karthikeyan, Edward Lue Chee Lip"
+year = 2026
+arxiv = "2611.14950"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.stafford2022safety]
+type = "preprint"
+title = "Safety Not Guaranteed: International Races for Risky Technologies"
+authors = "Eoghan Stafford, Robert F. Trager, Allan Dafoe"
+year = 2022
+url = "https://cdn.governance.ai/International_Races_for_Risky_Technologies_DRAFT_NOV_2022.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.starace2025paperbench]
+type = "preprint"
+title = "PaperBench: Evaluating AI's Ability to Replicate AI Research"
+authors = "Giulio Starace, Oliver Jaffe, Dane Sherburn, James Aung, Jun Shern Chan, Leon Maksin, Rachel Dias, Evan Mays, Benjamin Kinsella, Wyatt Thompson, Johannes Heidecke, Amelia Glaese, Tejal Patwardhan"
+year = 2025
+arxiv = "2504.01848"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.ta2026automatedaudit]
+type = "preprint"
+title = "Automating Auditing Games of Sandbagging"
+authors = "Christopher Ta, Anna Upreti, David Williams-King, Alan Cooney, Shi Feng"
+year = 2026
+url = "https://neurips.cc/virtual/2026/169826"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.tang2026ctfcollab]
+type = "preprint"
+title = "Understanding Human-AI Collaboration in Cybersecurity Competitions"
+authors = "Tingxuan Tang, Nicolas Janis, Kalyn Asher Montague, Kevin Eykholt, Dhilung Kirat, Youngja Park, Jiyong Jang, Adwait Nadkarni, Yue Xiao"
+year = 2026
+arxiv = "2602.20446"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.taylor2025auditing]
+type = "preprint"
+title = "Auditing Games for Sandbagging"
+authors = "Jordan Taylor, Sid Black, Dillon Bowen, et al."
+year = 2025
+arxiv = "2512.07810"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.taylor2025auditinggames]
+type = "preprint"
+title = "Auditing Games for Sandbagging"
+authors = "Jordan Taylor, Sid Black, Dillon Bowen, Thomas Read, Satvik Golechha, Alex Zelenka-Martin, Oliver Makins, Connor Kissane, Kola Ayonrinde, Jacob Merizian, Samuel Marks, Chris Cundy, Joseph Bloom"
+year = 2025
+arxiv = "2512.07810"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.teague2026]
+type = "preprint"
+title = "Could Underwater Data Centers Pose a Risk to AI Treaty Verification?"
+authors = "James Teague, Ashmita Rajmohan, Yannick Muehlhaeuser"
+year = 2026
+arxiv = "2609.18824"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.techinsights2025kirin]
+type = "report"
+title = "SMIC N+3 Confirmed: Kirin 9030 Analysis Reveals How Close SMIC Is to 5nm"
+authors = "TechInsights"
+year = 2025
+url = "https://www.techinsights.com/blog/smic-n3-confirmed-kirin-9030-analysis-reveals-how-close-smic-5nm"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.techinsights2026datacenter]
+type = "report"
+title = "Analysis: Can China even build data center AI chips?"
+authors = "TechInsights"
+year = 2026
+url = "https://www.techinsights.com/ja/node/61228"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.thorne-1992]
+type = "official-docs"
+title = "IAEA nuclear inspections in Iraq"
+authors = "Leslie Thorne"
+year = 1992
+url = "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull34-1/34102451624.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.tice2024noise]
+type = "peer-reviewed"
+title = "Noise Injection Reveals Hidden Capabilities of Sandbagging Language Models"
+authors = "Cameron Tice, Philipp Alexander Kreer, Nathan Helm-Burger, Prithviraj Singh Shahani, Fedor Ryzhenkov, Fabien Roger, Clement Neo, Jacob Haimes, Felix Hofstätter, Teun van der Weij"
+year = 2025
+arxiv = "2412.01784"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.tice2025noiserepo]
+type = "code"
+title = "camtice/noise_injection_extended"
+authors = "Cameron Tice et al."
+year = 2025
+url = "https://github.com/camtice/noise_injection_extended"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.titotal2025critique]
+type = "essay"
+title = "A deep critique of AI 2027's bad timeline models"
+authors = "titotal"
+year = 2025
+url = "https://titotal.substack.com/p/a-deep-critique-of-ai-2027s-bad-timeline"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.todd2016opentimestamps]
+type = "essay"
+title = "OpenTimestamps: Scalable, Trust-Minimized, Distributed Timestamping with Bitcoin"
+authors = "Peter Todd"
+year = 2016
+url = "https://petertodd.org/2016/opentimestamps-announcement"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.trammell2023growth]
+type = "report"
+title = "Economic Growth under Transformative AI"
+authors = "Philip Trammell, Anton Korinek"
+year = 2023
+doi = "10.3386/w31815"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.trammell2026parallel]
+type = "report"
+title = "Even after R&D is automated, parallelization constraints could delay a technological singularity"
+authors = "Phil Trammell"
+year = 2026
+url = "https://epoch.ai/publications/parallelization-constraints-could-delay-a-technological-singularity"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.trehan2026scientists]
+type = "preprint"
+title = "Why LLMs Aren't Scientists Yet: Lessons from Four Autonomous Research Attempts"
+authors = "Dhruv Trehan, Paras Chopra"
+year = 2026
+arxiv = "2601.03315"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.trendforce2026cowos]
+type = "news"
+title = "TSMC CoWoS Supply-Demand Gap Reportedly Seen Narrowing from 20% to 10% by End-2026 as Capacity Expands"
+authors = "TrendForce News"
+year = 2026
+url = "https://www.trendforce.com/news/2026/06/15/news-tsmc-cowos-supply-demand-gap-reportedly-seen-narrowing-from-20-to-10-by-end-2026-as-capacity-expands"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.trendforce2026foundry]
+type = "report"
+title = "Global Foundry Revenue Approaches US$53.49 Billion in 2Q26 as SMIC Narrows Market Share Gap with Samsung"
+authors = "TrendForce"
+year = 2026
+url = "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.trinh2024alphageometry]
+type = "peer-reviewed"
+title = "Solving olympiad geometry without human demonstrations"
+authors = "Trieu H. Trinh, Yuhuai Wu, Quoc V. Le, He He, Thang Luong"
+year = 2024
+doi = "10.1038/s41586-023-06747-5"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.vahdati2026arc]
+type = "preprint"
+title = "The ARC of Progress towards AGI: A Living Survey of Abstraction and Reasoning"
+authors = "Sahar Vahdati, Andrei Aioanei, Haridhra Suresh, Jens Lehmann"
+year = 2026
+arxiv = "2603.13372"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.vanderweij2024sandbagging]
+type = "peer-reviewed"
+title = "AI Sandbagging: Language Models can Strategically Underperform on Evaluations"
+authors = "Teun van der Weij, Felix Hofstätter, Ollie Jaffe, Samuel F. Brown, Francis Rhys Ward"
+year = 2025
+arxiv = "2406.07358"
+url = "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5e5753b0a0e440a6d8dc7e143617cec-Paper-Conference.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.varadarajan2024resilience]
+type = "report"
+title = "Emerging Resilience in the Semiconductor Supply Chain"
+authors = "Raj Varadarajan, Iacob Koch-Weser, Chris Richard, Joseph Fitzgerald, Jaskaran Singh, Mary Thornton, Robert Casanova, David Isaacs (BCG and SIA)"
+year = 2024
+url = "https://www.semiconductors.org/wp-content/uploads/2024/05/Report_Emerging-Resilience-in-the-Semiconductor-Supply-Chain.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.verwey2021permits]
+type = "report"
+title = "No Permits, No Fabs: The Importance of Regulatory Reform for Semiconductor Manufacturing"
+authors = "John VerWey (CSET)"
+year = 2021
+doi = "10.51593/20210053"
+url = "https://cset.georgetown.edu/wp-content/uploads/CSET-No-Permits-No-Fabs.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.villalobos2022data]
+type = "preprint"
+title = "Will we run out of data? Limits of LLM scaling based on human-generated data"
+authors = "Pablo Villalobos, Anson Ho, Jaime Sevilla, Tamay Besiroglu, Lennart Heim, Marius Hobbhahn"
+year = 2022
+arxiv = "2211.04325"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.villalobos2023tradeoff]
+type = "report"
+title = "Trading off compute in training and inference"
+authors = "Pablo Villalobos, David Atkinson (Epoch AI)"
+year = 2023
+url = "https://epoch.ai/publications/trading-off-compute-in-training-and-inference"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.vonbaeckmann-1995]
+type = "official-docs"
+title = "Nuclear verification in South Africa"
+authors = "Adolf von Baeckmann, Garry Dillon, Demetrius Perricos"
+year = 1995
+url = "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull37-1/37105394248.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.vonstengel2016recursive]
+type = "peer-reviewed"
+title = "Recursive Inspection Games"
+authors = "Bernhard von Stengel"
+year = 2016
+doi = "10.1287/moor.2015.0762"
+arxiv = "1412.0129"
+opened = "2026-11-27"
+found_in = "research/notes/09-mechanism-design.md"
+
+[source.wallace2025worstcase]
+type = "preprint"
+title = "Estimating Worst-Case Frontier Risks of Open-Weight LLMs"
+authors = "Eric Wallace, Olivia Watkins, Miles Wang, Kai Chen, Chris Koch"
+year = 2025
+arxiv = "2508.03153"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.wang2023adversarialgo]
+type = "preprint"
+title = "Adversarial Policies Beat Superhuman Go AIs"
+authors = "Tony T. Wang, Adam Gleave, Tom Tseng, Kellin Pelrine, Nora Belrose, Joseph Miller, Michael D. Dennis, Yawen Duan, Viktor Pogrebniak, Sergey Levine, Stuart Russell"
+year = 2023
+arxiv = "2211.00241"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.wang2023katago]
+type = "peer-reviewed"
+title = "Adversarial Policies Beat Superhuman Go AIs"
+authors = "Tony T. Wang, Adam Gleave, Tom Tseng, Kellin Pelrine, Nora Belrose, Joseph Miller, Michael D. Dennis, Yawen Duan, Viktor Pogrebniak, Sergey Levine, Stuart Russell"
+year = 2023
+arxiv = "2211.00241"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.washenko2025euv]
+type = "news"
+title = "China reportedly has a prototype EUV machine built by ex-ASML employees"
+authors = "Anna Washenko (Engadget, relaying Reuters)"
+year = 2025
+url = "https://www.engadget.com/big-tech/china-reportedly-has-a-prototype-euv-machine-built-by-ex-asml-employees-235833756.html"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.wasil-2024]
+type = "preprint"
+title = "Verification methods for international AI agreements"
+authors = "Akash R. Wasil, Tom Reed, Jack William Miller, Peter Barnett"
+year = 2024
+arxiv = "2408.16074"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.wasil2024]
+type = "preprint"
+title = "Verification methods for international AI agreements"
+authors = "Akash R. Wasil, Tom Reed, Jack William Miller, Peter Barnett"
+year = 2024
+arxiv = "2408.16074"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.wasil2024verification]
+type = "preprint"
+title = "Verification methods for international AI agreements"
+authors = "Akash R. Wasil, Tom Reed, Jack William Miller, Peter Barnett"
+year = 2024
+arxiv = "2408.16074"
+opened = "2026-11-27"
+found_in = "research/notes/07-compute-governance.md"
+
+[source.wei2022emergent]
+type = "peer-reviewed"
+title = "Emergent Abilities of Large Language Models"
+authors = "Jason Wei, Yi Tay, Rishi Bommasani, et al."
+year = 2022
+arxiv = "2206.07682"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.white2024livebench]
+type = "preprint"
+title = "LiveBench: A Challenging, Contamination-Limited LLM Benchmark"
+authors = "Colin White, Samuel Dooley, Manley Roberts, Arka Pal, Ben Feuer, et al."
+year = 2024
+arxiv = "2406.19314"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.white2025hleaudit]
+type = "report"
+title = "About 30% of Humanity's Last Exam Chemistry/biology Answers are Likely Wrong"
+authors = "Andrew White, Michael Skarlinski, Jon Laurent, Albert Bou (FutureHouse)"
+year = 2025
+url = "https://futurehouse.org/research/hle-exam"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.whitehouse-2009-qom]
+type = "official-docs"
+title = "Statements by President Obama, President Sarkozy and Prime Minister Brown on Iranian Nuclear Facility"
+authors = "The White House"
+year = 2009
+url = "https://obamawhitehouse.archives.gov/video/Obama-Sarkozy-and-Brown-on-Iranian-Nuclear-Facility/index__q_page=70.html"
+opened = "2026-11-27"
+found_in = "research/notes/08-arms-control.md"
+
+[source.whitfill2025bottlenecks]
+type = "preprint"
+title = "Will Compute Bottlenecks Prevent an Intelligence Explosion?"
+authors = "Parker Whitfill, Cheryl Wu"
+year = 2025
+arxiv = "2507.23181"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.whitfill2025horizon]
+type = "preprint"
+title = "Forecasting AI Time Horizon Under Compute Slowdowns"
+authors = "Parker Whitfill, Ben Snodin, Joel Becker"
+year = 2025
+arxiv = "2511.19492"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.whitfill2025selection]
+type = "preprint"
+title = "Note on Selection Bias in Observational Estimates of Algorithmic Progress"
+authors = "Parker Whitfill"
+year = 2025
+arxiv = "2508.11033"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.whitfill2026merge]
+type = "report"
+title = "Many SWE-bench-Passing PRs Would Not Be Merged into Main"
+authors = "Parker Whitfill, Cheryl Wu, Joel Becker, Nate Rush (METR)"
+year = 2026
+url = "https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.wijk2024rebench]
+type = "preprint"
+title = "RE-Bench: Evaluating frontier AI R&D capabilities of language model agents against human experts"
+authors = "Hjalmar Wijk, Tao Lin, Joel Becker, et al."
+year = 2024
+arxiv = "2411.15114"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.woodmac2025connection]
+type = "report"
+title = "Making the connection: meeting the electric T&D supply chain challenge, Executive Summary"
+authors = "Wood Mackenzie and American Clean Power"
+year = 2025
+url = "https://www.powermag.com/wp-content/uploads/2026/01/making-the-connection-executive-summary-september-2025.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.woodmac2025transformers]
+type = "report"
+title = "Power transformers and distribution transformers will face supply deficits of 30% and 10% in 2025, according to Wood Mackenzie"
+authors = "Wood Mackenzie"
+year = 2025
+url = "https://www.woodmac.com/zh/press-releases/power-transformers-and-distribution-transformers-will-face-supply-deficits-of-30-and-10-in-2025/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.wu2024inferencescaling]
+type = "preprint"
+title = "Inference Scaling Laws: An Empirical Analysis of Compute-Optimal Inference for Problem-Solving with Language Models"
+authors = "Yangzhen Wu, Zhiqing Sun, Shanda Li, Sean Welleck, Yiming Yang"
+year = 2024
+arxiv = "2408.00724"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.xai-rmf-2025]
+type = "vendor"
+title = "xAI Risk Management Framework"
+authors = "xAI"
+year = 2025
+url = "https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.xiao2024densing]
+type = "preprint"
+title = "Densing Law of LLMs"
+authors = "Chaojun Xiao, Jie Cai, Weilin Zhao, et al."
+year = 2024
+arxiv = "2412.04315"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.xu2024contamination]
+type = "preprint"
+title = "Benchmark Data Contamination of Large Language Models: A Survey"
+authors = "Cheng Xu, Shuhao Guan, Derek Greene, M-Tahar Kechadi"
+year = 2024
+arxiv = "2406.04244"
+opened = "2026-11-27"
+found_in = "research/notes/10-gameable-evals.md"
+
+[source.xu2025huaweiconnect]
+type = "vendor"
+title = "Groundbreaking SuperPoD Interconnect: Leading a New Paradigm for AI Infrastructure"
+authors = "Eric Xu (Huawei), keynote at Huawei Connect 2025"
+year = 2025
+url = "https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.yamada2025aiscientist2]
+type = "preprint"
+title = "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
+authors = "Yutaro Yamada, Robert Tjarko Lange, Cong Lu, Shengran Hu, Chris Lu, Jakob Foerster, Jeff Clune, David Ha"
+year = 2025
+arxiv = "2504.08066"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.you2025]
+type = "report"
+title = "How much power will frontier AI training demand in 2030?"
+authors = "Josh You, David Owen (Epoch AI, with EPRI)"
+year = 2025
+url = "https://epoch.ai/blog/power-demands-of-frontier-ai-training"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"
+
+[source.you2026chipowners]
+type = "report"
+title = "Introducing the AI Chip Owners Explorer"
+authors = "Josh You and Venkat Somala (Epoch AI)"
+year = 2026
+url = "https://epoch.ai/blog/introducing-the-ai-chip-owners-explorer"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.yudkowsky2013iem]
+type = "report"
+title = "Intelligence Explosion Microeconomics"
+authors = "Eliezer Yudkowsky"
+year = 2013
+url = "https://intelligence.org/files/IEM.pdf"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.yudkowsky2016superintelligent]
+type = "essay"
+title = "Superintelligent (Arbital)"
+authors = "Eliezer Yudkowsky"
+year = 2016
+url = "https://arbital.greaterwrong.com/p/superintelligent"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.yue2025rlvr]
+type = "peer-reviewed"
+title = "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?"
+authors = "Yang Yue, Zhiqi Chen, Rui Lu, Andrew Zhao, Zhaokai Wang, Shiji Song, Gao Huang, et al."
+year = 2025
+arxiv = "2504.13837"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.zafar2025kessler]
+type = "news"
+title = "China's Huawei Can Make 200,000 Advanced AI Chips In 2025 At Most, Says US Official"
+authors = "Ramish Zafar (Wccftech)"
+year = 2025
+url = "https://wccftech.com/chinas-huawei-can-make-200000-advanced-ai-chips-in-2025-at-most-says-us-official/"
+opened = "2026-11-27"
+found_in = "research/notes/06-economics.md"
+
+[source.zhang2024cybench]
+type = "preprint"
+title = "Cybench: A Framework for Evaluating Cybersecurity Capabilities and Risks of Language Models"
+authors = "Andy K. Zhang, et al., Dan Boneh, Daniel E. Ho, Percy Liang"
+year = 2024
+arxiv = "2408.08926"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.zhang2024gsm1k]
+type = "preprint"
+title = "A Careful Examination of Large Language Model Performance on Grade School Arithmetic"
+authors = "Hugh Zhang, Jeff Da, Dean Lee, et al."
+year = 2024
+arxiv = "2405.00332"
+opened = "2026-11-27"
+found_in = "research/notes/05-cognition.md"
+
+[source.zhao2025absolutezero]
+type = "preprint"
+title = "Absolute Zero: Reinforced Self-play Reasoning with Zero Data"
+authors = "Andrew Zhao, Yiran Wu, Yang Yue, et al."
+year = 2025
+arxiv = "2505.03335"
+opened = "2026-11-27"
+found_in = "research/notes/03-algorithms.md"
+
+[source.zhao2025speedrun]
+type = "preprint"
+title = "The Automated LLM Speedrunning Benchmark: Reproducing NanoGPT Improvements"
+authors = "Bingchen Zhao, Despoina Magka, Minqi Jiang, Xian Li, Roberta Raileanu, et al."
+year = 2025
+arxiv = "2506.22419"
+opened = "2026-11-27"
+found_in = "research/notes/01-definitions.md"
+
+[source.zweiger2025seal]
+type = "preprint"
+title = "Self-Adapting Language Models"
+authors = "Adam Zweiger, Jyothish Pari, Han Guo, Ekin Akyurek, Yoon Kim, Pulkit Agrawal"
+year = 2025
+arxiv = "2506.10943"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.bennett2003]
+type = "peer-reviewed"
+title = "Notes on Landauer's principle, Reversible Computation and Maxwell's Demon"
+authors = "Charles H. Bennett"
+year = 2003
+arxiv = "physics/0210005"
+opened = "2026-11-27"
+found_in = "research/notes/02-physics.md"

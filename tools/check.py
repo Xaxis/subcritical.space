@@ -41,7 +41,8 @@ TYPES = {
 CITE_GROUP = re.compile(r"\[([^\[\]]*@[^\[\]]*)\]")
 CITE_KEY = re.compile(r"(?<![\w.])@([A-Za-z][\w:-]*[\w])")
 DOI = re.compile(r"^10\.\d{4,9}/\S+$")
-ARXIV = re.compile(r"^\d{4}\.\d{4,5}(v\d+)?$")
+# New-style IDs (2401.01234) and the old style before April 2007 (physics/0210005, math.PR/0301001).
+ARXIV = re.compile(r"^(\d{4}\.\d{4,5}|[a-z-]+(\.[A-Z]{2})?/\d{7})(v\d+)?$")
 
 failures: list[str] = []
 

@@ -111,6 +111,14 @@
       "tests": []
     },
     {
+      "id": "cli:sources-from-notes",
+      "kind": "cli",
+      "entry": "tools/sources_from_notes.py",
+      "reach": "python3 tools/sources_from_notes.py [--write]",
+      "area": "docs",
+      "tests": []
+    },
+    {
       "id": "cli:sync",
       "kind": "cli",
       "entry": "tools/sync.py",
