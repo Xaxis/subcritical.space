@@ -2,6 +2,9 @@
 // how a heading becomes an anchor, and how citations and cross-links in the Markdown resolve.
 
 /** A heading's anchor, the same rule for the table of contents and the rendered heading. */
+/** The text with its first letter capitalised. */
+export const capital = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
+
 export function slugify(text: string): string {
   return text
     .toLowerCase()
@@ -58,4 +61,44 @@ export function plannedExperiments(claims: string | null): number {
   if (at < 0) return 11;
   const list = claims.slice(at).split(/\n## /)[0] ?? "";
   return new Set([...list.matchAll(/^\d+\. \*\*(E\d+)\b/gm)].map((m) => m[1])).size || 11;
+}
+
+// A person's name: up to five words, each capitalised, an initial or a surname particle.
+const PERSON =
+  /^(?:(?:\p{Lu}[\p{L}'’-]*\.?|van|von|de|der|den|da|del|di|la|le|du|bin|ibn|al|el)\s+){1,4}\p{Lu}[\p{L}'’-]+$/u;
+// Words that make a capitalised name an organisation's, and acronyms such as METR or IAEA.
+const ORG =
+  /\b(?:AI|Institute|Agency|Foundation|Department|Council|Commission|Office|Research|Labs?|Laboratory|Group|Centre|Center|University|Committee|Association|Corporation|Inc|Ltd|Company|Bureau|Ministry|Organi[sz]ation|Government|Union|Nations|Board|Authority|Team|Forum|Society|Federation|Holding)\b|(?:^|\s)\p{Lu}{2,}(?:\s|$)/u;
+
+const isPerson = (name: string) => PERSON.test(name) && !ORG.test(name);
+// A fragment that only continues a name with a comma in it: "Memphis Light, Gas and Water".
+const CONTINUES = /^\p{Lu}[\p{L}'’-]*(?:\s+(?:and|of|for|the|\p{Lu}[\p{L}'’-]*))*$/u;
+const continues = (seg: string) => CONTINUES.test(seg) && !isPerson(seg) && !ORG.test(seg);
+
+/**
+ * A short in-text label: the first author's surname, or the organisation's name, and the year.
+ * Affiliations in brackets are dropped, and "et al." is added only when another person follows.
+ */
+export function citeLabel(
+  s: { authors?: string; year?: number; title: string } | undefined,
+  key: string,
+): string {
+  if (!s) return key;
+  const year = s.year ?? "n.d.";
+  let authors = (s.authors ?? "").replace(/\s*\([^)]*\)/g, "").trim();
+  if (authors === "") return `${s.title.split(/\s+/).slice(0, 3).join(" ")} ${year}`;
+  const etAl = /,?\s*et al\.?$/.test(authors);
+  authors = authors.replace(/,?\s*et al\.?$/, "");
+  const [group = "", ...groups] = authors.split(/\s*;\s*/);
+  const segs = group.split(/\s*,\s*/);
+  let n = 1;
+  while (n < segs.length && continues(segs[n] as string)) n++;
+  const name = segs.slice(0, n).join(", ");
+  if (n > 1) return `${name} ${year}`;
+  const people = name.split(/\s+and\s+/);
+  const lead = (people[0] ?? "").replace(/\s+(?:Jr\.?|Sr\.?|II|III|IV)$/, "");
+  if (!isPerson(lead)) return `${name} ${year}`;
+  const rest = [...segs.slice(n), ...groups];
+  const many = etAl || people.length > 1 || rest.some((r) => isPerson(r.replace(/^and\s+/, "")));
+  return `${lead.split(/\s+/).at(-1)}${many ? " et al." : ""} ${year}`;
 }

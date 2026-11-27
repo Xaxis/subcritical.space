@@ -3,7 +3,7 @@
 subcritical.space (until registered, https://subcritical.vercel.app): the Next.js site in `site/`,
 rendered at build time from `research/` and `data/`, deployed by `tools/site/deploy.sh`.
 
-<!-- covers: page:/, page:/research, page:/research/[slug], page:/notes/[slug], page:/numbers, page:/sources, api:GET /apple-icon, api:GET /manifest.webmanifest, api:GET /opengraph-image, api:GET /robots.txt, api:GET /sitemap.xml -->
+<!-- covers: page:/, page:/research, page:/research/[slug], page:/notes/[slug], page:/experiments, page:/numbers, page:/sources, api:GET /apple-icon, api:GET /manifest.webmanifest, api:GET /opengraph-image, api:GET /robots.txt, api:GET /sitemap.xml -->
 
 ## Sub-features
 
@@ -24,7 +24,14 @@ rendered at build time from `research/` and `data/`, deployed by `tools/site/dep
   not on SwiftShader).
 - `/research`, `/research/[slug]`: every `research/*.md` except the ledger; `/notes/[slug]` the
   survey notes. Ledger links render the model's value as `a.num`, citations `[@key]` link to
-  `/sources#key`, links between research files go to their pages (`site/lib/text.ts`).
+  `/sources#key`, links between research files go to their pages (`site/lib/text.ts`). A
+  citation's label is the first author's surname or the organisation's name and the year
+  (`citeLabel` in `site/lib/text.ts`; affiliations in brackets dropped; a test runs it over every
+  source).
+- `/experiments`: the plan in `research/04-claims.md` "## Experiments", parsed by
+  `site/lib/experiments.ts` (code, title, what it does, CPU or GPU, its script, what it serves); an
+  item whose `data/results/<script>.json` exists shows "has results" and its numbers through the
+  ledger, its data with sha256, and its seed. Only in the sitemap once the claims file exists.
 - `/numbers`: `data/numbers.json`, each entry anchored by id. `/sources`: `research/sources.toml`.
 - Share card, home-screen icon, manifest, robots and sitemap; the sitemap lists every page and is
   what `tools/site/shots.ts` checks.
@@ -32,13 +39,13 @@ rendered at build time from `research/` and `data/`, deployed by `tools/site/dep
 ## How to check it
 
 ```sh
-pnpm lint && pnpm typecheck && pnpm test          # test/content.test.ts: memo parse, links, port, loops, ranking, plan
+pnpm lint && pnpm typecheck && pnpm test          # test/content.test.ts: memo parse, links, port, loops, ranking, plan, experiments, labels
 cd site && ~/.claude/claude-core/bin/heavy npx next build && (npx next start -p 4527 &) && cd ..
 ~/.claude/claude-core/bin/heavy node tools/site/shots.ts --url http://localhost:4527
 ~/.claude/claude-core/bin/heavy node tools/site/interact.ts --url http://localhost:4527
 ```
 
-Expect: tests pass (8); the build lists every page as static; shots.ts prints `"ok":true` with
+Expect: tests pass (10); the build lists every page as static; shots.ts prints `"ok":true` with
 each sitemap page at 200 and `/no-such-page` at 404, and writes shots to `out/site-shots/` (look at
 the ones you changed, both themes, both widths); interact.ts prints its `ok` lines and exits 0 (among them the 3D stage
 drawing, turning supercritical together at c = 0.1, the reduced-motion still frame and the words

@@ -5,7 +5,7 @@ import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { TRACKS } from "./docs";
 import { ROOT, readRepoFile, repoFileExists } from "./repo";
-import { plannedExperiments } from "./text";
+import { docSlug, plannedExperiments } from "./text";
 
 export interface Step {
   name: string;
@@ -13,6 +13,8 @@ export interface Step {
   /** written: the file exists and awaits the six verification levels; done: nothing left to do. */
   state: "done" | "written" | "begun" | "not begun";
   detail: string;
+  /** Where the step reads on this site, when it has a page; otherwise the repository. */
+  href?: string;
 }
 
 function count(folder: string, ext: string): number {
@@ -45,12 +47,14 @@ export function progress(): Step[] {
     where: file,
     state: has(file) ? "written" : "not begun",
     detail,
+    href: `/research/${docSlug(file)}`,
   });
   const partI = PART_I.filter(has).length;
   return [
     {
       name: "Memo: candidate definitions and the protocol's shape",
       where: "research/00-memo.md",
+      href: "/research/memo",
       state: has("research/00-memo.md") ? "done" : "not begun",
       detail: "Candidates before the survey, not findings.",
     },
@@ -63,6 +67,7 @@ export function progress(): Step[] {
     {
       name: "Part I: what superintelligence is and how it forms",
       where: "research/01-anatomy.md",
+      href: "/research/anatomy",
       state: partI === PART_I.length ? "written" : partI > 0 ? "begun" : "not begun",
       detail: `The definitions and the five perspectives, each mechanism defined, measured, with the evidence for and against (${partI} of ${PART_I.length} chapters).`,
     },
@@ -84,6 +89,7 @@ export function progress(): Step[] {
     {
       name: "Experiments on real data and models",
       where: "tools/exp/",
+      href: has("research/04-claims.md") ? "/experiments" : undefined,
       state: results > 0 ? "begun" : "not begun",
       detail: `${results} of ${plannedExperiments(has("research/04-claims.md") ? readRepoFile("research/04-claims.md") : null)} planned experiments have results.`,
     },

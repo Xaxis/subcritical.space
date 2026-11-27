@@ -10,7 +10,8 @@ import { entry } from "@/lib/ledger";
 import { progress } from "@/lib/progress";
 import { repoFileExists } from "@/lib/repo";
 import { repoLink, SITE } from "@/lib/site";
-import { citeLabel, sourceIndex } from "@/lib/sources";
+import { sourceIndex } from "@/lib/sources";
+import { capital, citeLabel } from "@/lib/text";
 
 const WORDS = [
   "none",
@@ -25,7 +26,6 @@ const WORDS = [
   "nine",
   "ten",
 ];
-const capital = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
 
 export default function Home() {
   const m = memo();
@@ -384,7 +384,7 @@ export default function Home() {
                     {s.state === "not begun" ? (
                       s.name
                     ) : (
-                      <a href={repoLink(s.where)} rel="noopener">
+                      <a href={s.href ?? repoLink(s.where)} rel={s.href ? undefined : "noopener"}>
                         {s.name}
                       </a>
                     )}

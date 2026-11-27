@@ -951,6 +951,21 @@ tbody th {
   white-space: nowrap;
 }
 
+/* An organisation's full name is too long to keep on one line on a phone. */
+.cite.cite-long {
+  white-space: normal;
+}
+
+/* A bare URL, path or identifier in the text breaks where it must rather than widening the page.
+   Tables keep their words whole and scroll in their wrapper instead. */
+.prose {
+  overflow-wrap: anywhere;
+}
+
+.prose table {
+  overflow-wrap: normal;
+}
+
 .doc-list {
   list-style: none;
   padding: 0;
@@ -1229,4 +1244,68 @@ details.before summary {
 
 details.before[open] summary {
   margin-bottom: 1rem;
+}
+
+/* The experiment plan. A planned item has an empty mark, one with results a filled one. */
+.exps {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+}
+
+.exp {
+  margin-bottom: 1.6rem;
+}
+
+.exp h3 {
+  margin-bottom: 0.35rem;
+}
+
+.exp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.1rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.exp-state {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.exp-state::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  flex: none;
+}
+
+.exp-state.state-ran {
+  color: var(--text);
+}
+
+.exp-state.state-ran::before {
+  background: currentColor;
+}
+
+.exp-serves,
+.exp-provenance {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  max-width: var(--measure);
+}
+
+.exp-provenance {
+  overflow-wrap: anywhere;
+}
+
+.exp-value {
+  white-space: nowrap;
 }

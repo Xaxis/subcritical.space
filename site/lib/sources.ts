@@ -51,13 +51,3 @@ export function sourceHref(s: Source): string | null {
   if (s.isbn) return `https://openlibrary.org/isbn/${s.isbn.replace(/[^0-9Xx]/g, "")}`;
   return null;
 }
-
-/** A short in-text label: the first author's surname (or the organisation) and the year. */
-export function citeLabel(s: Source | undefined, key: string): string {
-  if (!s) return key;
-  const first = (s.authors ?? "").split(/,| and |;/)[0]?.trim() ?? "";
-  const words = first.split(/\s+/);
-  const name = first === "" ? s.title.split(/\s+/).slice(0, 3).join(" ") : words[words.length - 1];
-  const many = /,| and |;|et al/.test(s.authors ?? "");
-  return `${name}${many ? " et al." : ""} ${s.year ?? "n.d."}`;
-}

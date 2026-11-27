@@ -100,7 +100,9 @@
       "entry": "tools/exp/e02_time_horizons.py",
       "reach": ".venv/bin/python tools/exp/e02_time_horizons.py (E2)",
       "area": "experiments",
-      "tests": []
+      "tests": [
+        "site/test/content.test.ts"
+      ]
     },
     {
       "id": "cli:model",
@@ -148,6 +150,14 @@
       "entry": "site/app/page.tsx",
       "reach": "http://localhost:$PORT/",
       "area": "home",
+      "tests": []
+    },
+    {
+      "id": "page:/experiments",
+      "kind": "page",
+      "entry": "site/app/experiments/page.tsx",
+      "reach": "http://localhost:$PORT/experiments",
+      "area": "experiments",
       "tests": []
     },
     {

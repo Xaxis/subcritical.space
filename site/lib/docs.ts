@@ -1,6 +1,7 @@
 // The research documents as pages: every research/*.md except the ledger (which is /numbers), and
 // the survey notes in research/notes/. Server only.
 import "server-only";
+import { type Phase, parseExperiments } from "./experiments";
 import { parseMemo } from "./memo";
 import { parseRanking, type Ranking } from "./pathways";
 import { markdownIn, readRepoFile, repoFileExists } from "./repo";
@@ -59,6 +60,37 @@ export function memo() {
 export function ranking(): Ranking | null {
   const file = "research/02-pathways.md";
   return repoFileExists(file) ? parseRanking(readRepoFile(file)) : null;
+}
+
+/** The experiment plan in research/04-claims.md, once it exists. */
+export function experimentPlan(): Phase[] | null {
+  const file = "research/04-claims.md";
+  return repoFileExists(file) ? parseExperiments(readRepoFile(file)) : null;
+}
+
+/** What an experiment wrote to data/results/<script>.json (tools/exp/lib.py's Results). */
+export interface ExperimentResult {
+  experiment: string;
+  script: string;
+  seed: number;
+  data: { url: string; sha256: string; what: string }[];
+  /** Its numbers' ids, sorted as the file stores them; the page shows the ledger's values. */
+  ids: string[];
+}
+
+export function experimentResult(script: string): ExperimentResult | null {
+  const file = `data/results/${script}.json`;
+  if (!repoFileExists(file)) return null;
+  const r = JSON.parse(readRepoFile(file)) as Omit<ExperimentResult, "ids"> & {
+    numbers: Record<string, unknown>;
+  };
+  return {
+    experiment: r.experiment,
+    script: r.script,
+    seed: r.seed,
+    data: r.data ?? [],
+    ids: Object.keys(r.numbers),
+  };
 }
 
 /** The ten survey tracks the plan names, so the site can say which have reported. */

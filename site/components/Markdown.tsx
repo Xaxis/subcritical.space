@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { entry, ledger } from "@/lib/ledger";
-import { citeLabel, sourceIndex } from "@/lib/sources";
-import { docHref, ledgerId, linkCitations, slugify } from "@/lib/text";
+import { sourceIndex } from "@/lib/sources";
+import { citeLabel, docHref, ledgerId, linkCitations, slugify } from "@/lib/text";
 
 /** A number from the ledger, linked to its entry; its basis shows in its style and its title. */
 export function Num({ id }: { id: string }) {
@@ -38,7 +38,7 @@ function components(inline: boolean): Components {
       if (doc) return <a href={doc}>{children}</a>;
       if (href.startsWith("/sources#"))
         return (
-          <a className="cite" href={href}>
+          <a className={text(children).length > 28 ? "cite cite-long" : "cite"} href={href}>
             {children}
           </a>
         );
@@ -52,6 +52,10 @@ function components(inline: boolean): Components {
     },
     h2: ({ children }) => <h2 id={slugify(text(children))}>{children}</h2>,
     h3: ({ children }) => <h3 id={slugify(text(children))}>{children}</h3>,
+    pre: ({ children }) => (
+      // biome-ignore lint/a11y/noNoninteractiveTabindex: a wide code block scrolls, and a keyboard must reach it
+      <pre tabIndex={0}>{children}</pre>
+    ),
     table: ({ children }) => (
       // biome-ignore lint/a11y/noNoninteractiveTabindex: a wide table scrolls, and a keyboard must reach it
       <div className="table-wrap" tabIndex={0}>

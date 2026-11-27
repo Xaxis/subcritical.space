@@ -2,7 +2,7 @@
 // and citations resolve the way tools/check.py and tools/sync.py read them, and the page's port of
 // the detection bound gives the model's number to the last bit or so.
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { test } from "node:test";
 import { loopGains, loopLimit, missAll, missOneChannel, weaponsGrade } from "../lib/detection.ts";
 import { fmtProb } from "../lib/format.ts";
@@ -177,4 +177,66 @@ test("the planned experiments are counted from the claims file's numbered list",
     plannedExperiments("## Experiments\n\n1. **E1, a.** x\n2. **E4, b.** y\n3. **E4, c.** z\n"),
     2,
   );
+});
+
+test("the experiment plan parses from the claims file, every item with its claims", async () => {
+  const { parseExperiments } = await import("../lib/experiments.ts");
+  const plan = parseExperiments(read("research/04-claims.md"));
+  const items = plan.flatMap((p) => p.items);
+  assert.ok(plan.length >= 2, "at least the CPU and GPU phases");
+  assert.deepEqual(
+    items.map((e) => e.order),
+    items.map((_, i) => i + 1),
+    "numbered 1 to N in build order",
+  );
+  for (const e of items) {
+    assert.match(e.code, /^E\d+$/);
+    assert.ok(e.title.length > 3, `${e.code} has a title`);
+    assert.ok(e.body.length > 20, `${e.code} says what it does`);
+    assert.ok(e.serves.length > 0, `${e.code} says what it serves`);
+    assert.ok(
+      !/Browser:|`heavy`|`gpu`/.test(e.body),
+      `${e.code}'s body ends before its particulars`,
+    );
+  }
+  const e2 = items.find((e) => e.code === "E2");
+  assert.equal(e2?.script, "e02_time_horizons");
+  assert.equal(e2?.runner, "heavy");
+  // A script named in the plan and a result file must agree on the name.
+  assert.ok(existsSync(new URL("data/results/e02_time_horizons.json", root)));
+  const sample = parseExperiments(
+    "## Experiments\n\n**Phase 1: CPU.**\n\n1. **E9, returns.** r refitted from [@x].\n   `heavy`, minutes. `e09_returns`. C4, C6. Browser: yes.\n2. **E4, later parts.** (b) an agent.\n   `gpu`, weeks; needs E3. C4, C11. Browser: no.\n\n## Cut\n",
+  );
+  assert.deepEqual(
+    sample[0]?.items.map((e) => [e.code, e.script, e.runner, e.time, e.serves, e.browser]),
+    [
+      ["E9", "e09_returns", "heavy", "minutes", "C4, C6", true],
+      ["E4", null, "gpu", "weeks; needs E3", "C4, C11", false],
+    ],
+  );
+});
+
+test("every source gets a citation label naming a person or an organisation", async () => {
+  const { citeLabel } = await import("../lib/text.ts");
+  const { parse } = await import("smol-toml");
+  const all = (parse(read("research/sources.toml")) as { source: Record<string, never> }).source;
+  for (const [key, s] of Object.entries(all)) {
+    const label = citeLabel(s, key);
+    assert.doesNotMatch(label, /[()]|al\. et al\./, `${key}: ${label}`);
+    assert.match(label, /(\d{4}|n\.d\.)$/, `${key} ends in its year: ${label}`);
+  }
+  const at = (authors: string) => citeLabel({ authors, year: 2026, title: "T" }, "k");
+  assert.equal(at("Epoch AI"), "Epoch AI 2026");
+  assert.equal(at("Gregory C. Allen (CSIS)"), "Allen 2026");
+  assert.equal(at("Ryan Greenblatt et al."), "Greenblatt et al. 2026");
+  assert.equal(at("Jakub Łucki, Boyi Wei, Yangsibo Huang"), "Łucki et al. 2026");
+  assert.equal(at("Keller Jordan and contributors"), "Jordan et al. 2026");
+  assert.equal(at("Donald A. Mahley, US Department of State"), "Mahley 2026");
+  assert.equal(
+    at("Bureau of Industry and Security, US Department of Commerce"),
+    "Bureau of Industry and Security 2026",
+  );
+  assert.equal(at("Memphis Light, Gas and Water"), "Memphis Light, Gas and Water 2026");
+  assert.equal(at("METR (Tom Cunningham, Nate Rush)"), "METR 2026");
+  assert.equal(at("David Reber Jr. (NVIDIA)"), "Reber 2026");
 });

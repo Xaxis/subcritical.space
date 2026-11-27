@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { researchDocs, surveyNotes } from "@/lib/docs";
+import { experimentPlan, researchDocs, surveyNotes } from "@/lib/docs";
 import { SITE } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -11,6 +11,7 @@ function pages(): string[] {
     "/research",
     ...researchDocs().map((d) => `/research/${d.slug}`),
     ...surveyNotes().map((d) => `/notes/${d.slug}`),
+    ...(experimentPlan() ? ["/experiments"] : []),
     "/numbers",
     "/sources",
   ];
