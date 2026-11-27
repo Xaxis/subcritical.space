@@ -2,7 +2,8 @@
 // the survey notes in research/notes/. Server only.
 import "server-only";
 import { parseMemo } from "./memo";
-import { markdownIn, readRepoFile } from "./repo";
+import { parseRanking, type Ranking } from "./pathways";
+import { markdownIn, readRepoFile, repoFileExists } from "./repo";
 import { docSlug, slugify } from "./text";
 
 export interface Doc {
@@ -52,6 +53,12 @@ export function surveyNotes(): Doc[] {
 
 export function memo() {
   return parseMemo(readRepoFile("research/00-memo.md"));
+}
+
+/** The pathways re-ranked on Part I's evidence, once research/02-pathways.md exists. */
+export function ranking(): Ranking | null {
+  const file = "research/02-pathways.md";
+  return repoFileExists(file) ? parseRanking(readRepoFile(file)) : null;
 }
 
 /** The ten survey tracks the plan names, so the site can say which have reported. */

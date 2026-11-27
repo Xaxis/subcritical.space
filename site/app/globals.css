@@ -573,8 +573,13 @@ em {
   background: currentColor;
 }
 
-.state-begun .step-state {
+.state-begun .step-state,
+.state-written .step-state {
   color: var(--text);
+}
+
+.state-written .step-state::before {
+  background: conic-gradient(currentColor 0 75%, transparent 75% 100%);
 }
 
 .state-begun .step-state::before {
@@ -1206,4 +1211,22 @@ tbody th {
   padding: 0.75rem 0;
   max-width: var(--measure);
   margin-bottom: 2rem;
+}
+
+/* The memo's pathway ranking, kept behind the one the evidence supports. */
+details.before {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+details.before summary {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+
+details.before[open] summary {
+  margin-bottom: 1rem;
 }

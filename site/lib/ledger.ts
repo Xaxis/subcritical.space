@@ -40,5 +40,6 @@ export const BASES: Record<string, string> = {
   design: "a choice this design makes",
   assumption: "a number picked where no source fixes it",
   modelled: "the output of a published model",
+  experiment: "a result of this project's experiments, rerunnable from tools/exp/",
   derived: "computed from the others",
 };

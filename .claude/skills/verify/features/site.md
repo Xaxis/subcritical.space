@@ -8,9 +8,12 @@ rendered at build time from `research/` and `data/`, deployed by `tools/site/dep
 ## Sub-features
 
 - `/`: the memo read as structure (`site/lib/memo.ts`): perspectives and mechanisms, definitions,
-  pathways, protocol planks; four figures (`site/components/figures/`): the loop gain (D2), the
+  protocol planks; the pathways as `research/02-pathways.md` ranks them (`site/lib/pathways.ts`
+  reads its "## The ranking" table by column name, the memo's pre-survey table behind a
+  disclosure); four figures (`site/components/figures/`): the loop gain (D2), the
   line (D4), the detection bound, which starts from the ledger's inputs, and the coupled loops (Y3)
-  in 3D; the plan's progress, read from which files exist (`site/lib/progress.ts`). Under the
+  in 3D; the plan's progress, read from which files exist (`site/lib/progress.ts`: a document that
+  exists is "written", which is not verified; Part I is written when all six of its files are). Under the
   memo's mechanisms and definitions, a note that the survey revised its labels, linking the
   novelty file once `research/03-novelty.md` exists.
 - 3D: `site/components/three/` (from corerope.space): `Stage.tsx` loads three.js only near the
@@ -29,13 +32,13 @@ rendered at build time from `research/` and `data/`, deployed by `tools/site/dep
 ## How to check it
 
 ```sh
-pnpm lint && pnpm typecheck && pnpm test          # test/content.test.ts: memo parse, links, port, loops
+pnpm lint && pnpm typecheck && pnpm test          # test/content.test.ts: memo parse, links, port, loops, ranking
 cd site && ~/.claude/claude-core/bin/heavy npx next build && (npx next start -p 4527 &) && cd ..
 ~/.claude/claude-core/bin/heavy node tools/site/shots.ts --url http://localhost:4527
 ~/.claude/claude-core/bin/heavy node tools/site/interact.ts --url http://localhost:4527
 ```
 
-Expect: tests pass (6); the build lists every page as static; shots.ts prints `"ok":true` with
+Expect: tests pass (7); the build lists every page as static; shots.ts prints `"ok":true` with
 each sitemap page at 200 and `/no-such-page` at 404, and writes shots to `out/site-shots/` (look at
 the ones you changed, both themes, both widths); interact.ts prints its `ok` lines and exits 0 (among them the 3D stage
 drawing, turning supercritical together at c = 0.1, the reduced-motion still frame and the words

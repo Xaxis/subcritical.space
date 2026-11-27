@@ -815,6 +815,15 @@ arxiv = "2403.10462"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
 
+[source.clymer2025bareminimum]
+type = "preprint"
+title = "Bare Minimum Mitigations for Autonomous AI Development"
+authors = "Joshua Clymer, Isabella Duan, Chris Cundy, Yawen Duan, Fynn Heide, Chaochao Lu, Sören Mindermann, Conor McGurk, Xudong Pan, Saad Siddiqui, Jingren Wang, Min Yang, Xianyuan Zhan"
+year = 2025
+arxiv = "2504.15416"
+opened = "2026-11-27"
+found_in = "research/02-pathways.md"
+
 [source.clymer2025elicitationbound]
 type = "essay"
 title = "When does capability elicitation bound risk?"
@@ -3260,6 +3269,15 @@ year = 2025
 url = "https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
+
+[source.remler2026distillation]
+type = "report"
+title = "Adversarial Distillation: China's Campaign to Extract American AI Capabilities"
+authors = "Daniel Remler and Ben Hayum (CNAS)"
+year = 2026
+url = "https://www.cnas.org/publications/reports/adversarial-distillation"
+opened = "2026-11-27"
+found_in = "research/02-pathways.md"
 
 [source.reuters-2025-iran]
 type = "news"

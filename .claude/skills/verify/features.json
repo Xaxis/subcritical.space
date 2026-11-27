@@ -95,6 +95,14 @@
       "tests": []
     },
     {
+      "id": "cli:exp-horizons",
+      "kind": "cli",
+      "entry": "tools/exp/horizons.py",
+      "reach": ".venv/bin/python tools/exp/horizons.py (E2)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
       "id": "cli:model",
       "kind": "cli",
       "entry": "model/subcritical.py",

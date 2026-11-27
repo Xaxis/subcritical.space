@@ -9,7 +9,8 @@ import { ROOT, repoFileExists } from "./repo";
 export interface Step {
   name: string;
   where: string;
-  state: "done" | "begun" | "not begun";
+  /** written: the file exists and awaits the six verification levels; done: nothing left to do. */
+  state: "done" | "written" | "begun" | "not begun";
   detail: string;
 }
 
@@ -24,6 +25,16 @@ export function tracksReported(): Set<string> {
   return new Set(TRACKS.filter(([n, slug]) => have.includes(`${n}-${slug}.md`)).map(([n]) => n));
 }
 
+/** Part I: the definitions and one chapter per perspective. */
+const PART_I = [
+  "research/01-anatomy.md",
+  "research/011-physical.md",
+  "research/012-computational.md",
+  "research/013-dynamical.md",
+  "research/014-cognitive.md",
+  "research/015-organisational.md",
+];
+
 export function progress(): Step[] {
   const tracks = tracksReported().size;
   const results = count("data/results", ".json");
@@ -31,9 +42,10 @@ export function progress(): Step[] {
   const doc = (name: string, file: string, detail: string): Step => ({
     name,
     where: file,
-    state: has(file) ? "begun" : "not begun",
+    state: has(file) ? "written" : "not begun",
     detail,
   });
+  const partI = PART_I.filter(has).length;
   return [
     {
       name: "Memo: candidate definitions and the protocol's shape",
@@ -47,11 +59,12 @@ export function progress(): Step[] {
       state: tracks === TRACKS.length ? "done" : tracks > 0 ? "begun" : "not begun",
       detail: `${tracks} of ${TRACKS.length} tracks have reported. Every source is opened before it is cited.`,
     },
-    doc(
-      "Part I: what superintelligence is and how it forms",
-      "research/01-anatomy.md",
-      "Each mechanism defined, measured, with the evidence for and against.",
-    ),
+    {
+      name: "Part I: what superintelligence is and how it forms",
+      where: "research/01-anatomy.md",
+      state: partI === PART_I.length ? "written" : partI > 0 ? "begun" : "not begun",
+      detail: `The definitions and the five perspectives, each mechanism defined, measured, with the evidence for and against (${partI} of ${PART_I.length} chapters).`,
+    },
     doc(
       "The pathways, ranked by evidence",
       "research/02-pathways.md",

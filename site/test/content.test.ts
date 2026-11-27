@@ -151,3 +151,18 @@ test("coupled loops: subcritical alone, supercritical together, and the radius m
   for (const v of run(0.7, 0.1)) assert.equal(v, 8);
   assert.equal(steadyLevel(1.1, 0.12), null);
 });
+
+test("the pathways chapter's ranking table parses into the columns the home page shows", async () => {
+  const { parseRanking, SHOWN } = await import("../lib/pathways.ts");
+  const r = parseRanking(read("research/02-pathways.md"));
+  assert.deepEqual(r.header, [...SHOWN]);
+  assert.ok(r.rows.length >= 5, `only ${r.rows.length} pathways`);
+  for (const row of r.rows) {
+    assert.equal(row.length, SHOWN.length);
+    assert.match(row[0] ?? "", /^\d/, `rank "${row[0]}" for ${row[1]}`);
+    assert.ok((row[1] ?? "").length > 0);
+  }
+  // Every one of the memo's five keeps a rank from the memo; the rest are the ones Part I added.
+  assert.equal(r.rows.length - r.added, 5);
+  assert.throws(() => parseRanking("## The ranking\n\n| Pathway |\n|---|\n| x |\n"), /no column/);
+});

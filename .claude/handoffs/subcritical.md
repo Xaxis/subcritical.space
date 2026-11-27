@@ -1,4 +1,4 @@
-# Where Subcritical stands, 2026-11-26
+# Where Subcritical stands, 2026-11-27
 
 Started 2026-11-26 as "Detent" from a session launched in the parent folder, which set up the
 repository, wrote the memo, renamed everything to Subcritical (repo `Xaxis/subcritical.space`,
@@ -25,6 +25,33 @@ file, which git ignores.
   signs in through `/mcp` once.
 - Commits are by the owner's personal address from the second commit on, since the site deploys
   through Vercel (see CLAUDE.md); the hooks enforce it.
+- Survey (2026-11-27): ten tracks in `research/notes/01` to `10`, every source opened; an
+  independent spot-check (`research/notes/11-spot-check.md`) confirmed 50 of 53 risky claims and
+  corrected the 3 distorted ones. Sources merged into `research/sources.toml`, one entry per work
+  (other keys as `aliases`; `tools/sources_from_notes.py` folds them, `make check` fails on a second
+  entry or an alias citation).
+- Part I (2026-11-27): `research/01-anatomy.md` (D1 to D6 after the survey) and one chapter per
+  perspective, `research/011-physical.md` to `015-organisational.md`, each with its own inputs file
+  `data/inputs/01N-*.toml` and model module `model/parts/01N_*.py`. `research/03-novelty.md`: of 40
+  ideas none keeps "new", 14 extend prior work, 26 are prior work; what may remain ours is narrow
+  (the D2 estimator, D5's measured miss and false-alarm rates, D3 with loop gain, the narrowed D4,
+  the evader-minimised multi-channel miss, the coalition share from T_r, block-height licences).
+- `research/02-pathways.md` closes Part I: seven pathways (two added: undeclared compute, tied
+  first with recursive self-improvement, and distillation), the memo's five re-ranked. The D2
+  trigger's bound is disputed between chapters (lower in 01, upper in 013); Part II settles it.
+- Experiments: `tools/exp/` contract and `lib.py`; results enter the ledger with basis
+  `experiment`. E2 (`tools/exp/horizons.py`) refits METR's horizon trend and reproduces its
+  doubling time exactly. The venv is built with `uv` (no `python3-venv` on the box).
+- Findings that change the design: power is not a chokepoint; chokepoints leak at the edges and
+  their holders reverse themselves; the historical discovery rate of covert programmes is about 15
+  times below the memo's placeholder; channel miss rates cannot be multiplied (the evader picks the
+  path); the IAEA margin is about 1 and times detection only; a disputed breakout threshold
+  collapses cooperation, so T_b needs agreed tables.
+- Site live at https://subcritical.vercel.app: the memo as structure, four figures (loop gain, the
+  line, the detection bound with the historical record, coupled loops in 3D), Part I and the notes
+  rendered, the ledger and the source list. Proven by `tools/site/deploy.sh --check` (shots at two
+  widths and both themes with axe, and `tools/site/interact.ts`). Port 4527 may be taken by another
+  local server; serve on any free port.
 
 ## The paper's shape (the owner's third addition makes Part I about half)
 
@@ -69,7 +96,7 @@ file, which git ignores.
       participation and withdrawal.
    10. Evaluations that can be gamed: sandbagging, password-locked models, noise injection,
        evaluation awareness, alignment faking, exploration hacking, elicitation by fine-tuning.
-2. **Part I written** in `research/01-anatomy.md` (and per-perspective files if it grows), with the
+2. **Part I written** (done 2026-11-27, with the pathway ranking; now to verify) in `research/01-anatomy.md` (and per-perspective files if it grows), with the
    pathway ranking in `research/02-pathways.md`. This is the centre of the work.
 3. **Claims** in `research/04-claims.md`, each with its runnable test; novelty in `03-novelty.md`.
 4. **Experiments** in `tools/exp/`, results in `data/results/`, into the ledger. E1 compute against

@@ -13012,6 +13012,123 @@
     "note": "",
     "defined_in": "data/inputs/015-organisational.toml#L1608"
   },
+  "e2-doubling-p50": {
+    "value": 128.74380265078003,
+    "display": "129 days",
+    "unit": "days",
+    "basis": "experiment",
+    "label": "doubling time of the frontier 50% time horizon, our refit of METR's data",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-doubling-p50-hi": {
+    "value": 162.17336994310736,
+    "display": "162 days",
+    "unit": "days",
+    "basis": "experiment",
+    "label": "doubling time, 97.5th percentile of our model-and-interval resampling",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-doubling-p50-lo": {
+    "value": 96.43447953181987,
+    "display": "96 days",
+    "unit": "days",
+    "basis": "experiment",
+    "label": "doubling time, 2.5th percentile of our model-and-interval resampling",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-doubling-p80": {
+    "value": 133.40531330403599,
+    "display": "133 days",
+    "unit": "days",
+    "basis": "experiment",
+    "label": "doubling time of the frontier 80% time horizon, our refit",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-latest-p50": {
+    "value": 1044.780145,
+    "display": "1,045 min",
+    "unit": "min",
+    "basis": "experiment",
+    "label": "50% time horizon of the latest frontier model in the file (claude_mythos_preview_early_inspect, 2026-04-07)",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "above the 16-hour cut if so, which is why it is not in the fit (rerun: python3 tools/exp/horizons.py)",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-metr-doubling": {
+    "value": 128.744,
+    "display": "129 days",
+    "unit": "days",
+    "basis": "experiment",
+    "label": "METR's own doubling time for the same points, as published in the file",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-p50-over-p80": {
+    "value": 5.317883030364129,
+    "display": "5.3",
+    "unit": "",
+    "basis": "experiment",
+    "label": "median ratio of a frontier model's 50% horizon to its 80% horizon",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-points": {
+    "value": 14.0,
+    "display": "14 models",
+    "unit": "models",
+    "basis": "experiment",
+    "label": "frontier models in the refit (released 2023 on, central 50% horizon up to 16 hours)",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
+  "e2-refit-over-metr": {
+    "value": 0.9999984671190892,
+    "display": "1.00",
+    "unit": "",
+    "basis": "experiment",
+    "label": "our refitted doubling time over METR's published one (1 means the refit reproduces it)",
+    "formula": "",
+    "inputs": [],
+    "source": "",
+    "date": "",
+    "note": "rerun: python3 tools/exp/horizons.py",
+    "defined_in": "data/results/horizons.json"
+  },
   "miss-prob-one-channel": {
     "value": 0.30119421191220214,
     "display": "30%",
@@ -17759,5 +17876,100 @@
     "date": "",
     "note": "",
     "defined_in": "model/parts/015_organisational.py#L300"
+  },
+  "path-rsi-multiplier-median": {
+    "value": 2.707118964884336,
+    "display": "2.7",
+    "unit": "",
+    "basis": "derived",
+    "label": "total gain of a closed software loop over all rounds, as a multiple of its first round, if g held at the corrected median r",
+    "formula": "1 / (1 - dyn-r-lm-corrected)",
+    "inputs": [
+      "dyn-r-lm-corrected"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/020_pathways.py#L27"
+  },
+  "path-rsi-multiplier-illustration": {
+    "value": 2.4096385542168672,
+    "display": "2.4",
+    "unit": "",
+    "basis": "derived",
+    "label": "the same multiple at Cunningham et al.'s upper-end illustration of the loop gain",
+    "formula": "1 / (1 - dyn-loop-gain-illustration)",
+    "inputs": [
+      "dyn-loop-gain-illustration"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/020_pathways.py#L35"
+  },
+  "path-covert-days-1e26": {
+    "value": 2.922745978301534,
+    "display": "2.9 days",
+    "unit": "days",
+    "basis": "derived",
+    "label": "days for the untraced chip pool, read as H100e at the reference utilisation, to run 1e26 FLOP",
+    "formula": "phys-rahman-1e26-local / (phys-chips-unaccounted * phys-miri-h100e * phys-util-ref) / 86,400 s",
+    "inputs": [
+      "phys-rahman-1e26-local",
+      "phys-chips-unaccounted",
+      "phys-miri-h100e",
+      "phys-util-ref"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/020_pathways.py#L52"
+  },
+  "path-covert-mean-years": {
+    "value": 12.428571428571429,
+    "display": "12 years",
+    "unit": "years",
+    "basis": "derived",
+    "label": "mean time to discovery of a covert programme at the historical discovery rate",
+    "formula": "1 / org-covert-hazard",
+    "inputs": [
+      "org-covert-hazard"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/020_pathways.py#L66"
+  },
+  "path-covert-td-prevent": {
+    "value": 37.232672542742456,
+    "display": "37 years",
+    "unit": "years",
+    "basis": "derived",
+    "label": "detection time T_d at the prevention miss chance for compute only the historical channels see",
+    "formula": "ln(1 / def-prevent-beta) / org-covert-hazard",
+    "inputs": [
+      "def-prevent-beta",
+      "org-covert-hazard"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/020_pathways.py#L75"
+  },
+  "path-horizon-p80-next-year": {
+    "value": 22.1389942614065,
+    "display": "22 hours",
+    "unit": "hours",
+    "basis": "derived",
+    "label": "80% time horizon a year on, if it grows at the 50% horizon's annual multiple",
+    "formula": "dyn-horizon-p80 * dyn-horizon-annual / 60",
+    "inputs": [
+      "dyn-horizon-p80",
+      "dyn-horizon-annual"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/020_pathways.py#L90"
   }
 }

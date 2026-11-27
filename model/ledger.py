@@ -8,6 +8,9 @@ Inputs live in data/inputs.toml and data/inputs/*.toml. Each one says what kind 
   assumption  a number we picked where no source fixes it, stated as an assumption
   modelled    the output of someone else's published model, with its source
 
+Experiment results (data/results/*.json, written by tools/exp/<name>.py) enter with basis
+  experiment  a result of one of this project's experiments, rerunnable from the script it names
+
 Derived quantities are defined in model/subcritical.py as functions of other quantities. The ledger
 evaluates them in order, records the inputs each one read, and renders the results.
 """
@@ -22,7 +25,7 @@ from pathlib import Path
 from typing import Callable
 
 ROOT = Path(__file__).resolve().parent.parent
-BASES = {"measured", "vendor", "spec", "design", "assumption", "modelled", "derived"}
+BASES = {"measured", "vendor", "spec", "design", "assumption", "modelled", "experiment", "derived"}
 
 
 @dataclass
@@ -81,6 +84,11 @@ def input_files() -> list[Path]:
     return [ROOT / "data" / "inputs.toml", *sorted(folder.glob("*.toml"))]
 
 
+def result_files() -> list[Path]:
+    """data/results/*.json in name order, each written by the experiment script it names."""
+    return sorted((ROOT / "data" / "results").glob("*.json"))
+
+
 class Ledger:
     def __init__(self, inputs_paths: list[Path] | None = None, overrides: dict | None = None):
         self.q: dict[str, Quantity] = {}
@@ -88,6 +96,9 @@ class Ledger:
         self._reading: list[str] | None = None
         for inputs_path in inputs_paths or input_files():
             self._load(inputs_path, overrides)
+        if inputs_paths is None:
+            for results_path in result_files():
+                self._load_results(results_path)
         if overrides:
             raise KeyError(f"--set names inputs that do not exist: {sorted(overrides)}")
 
@@ -117,6 +128,28 @@ class Ledger:
                     date=spec.get("date", ""),
                     note=spec.get("note", ""),
                     defined_in=f"{rel}#L{line}",
+                )
+            )
+
+    def _load_results(self, path: Path) -> None:
+        rel = path.relative_to(ROOT).as_posix()
+        data = json.loads(path.read_text())
+        script = data.get("script", "")
+        if not script or not (ROOT / script).exists():
+            raise ValueError(f"{rel}: names no script that exists ({script!r})")
+        for key, spec in data.get("numbers", {}).items():
+            note = spec.get("note", "")
+            rerun = f"rerun: python3 {script}"
+            self._add(
+                Quantity(
+                    id=key,
+                    value=float(spec["value"]),
+                    unit=spec.get("unit", ""),
+                    basis="experiment",
+                    fmt=spec.get("fmt", ",.0f"),
+                    label=spec.get("label", ""),
+                    note=f"{note} ({rerun})" if note else rerun,
+                    defined_in=rel,
                 )
             )
 
@@ -195,6 +228,7 @@ class Ledger:
             "Basis: **measured** (independent measurement), **vendor** (a claim by an interested party),",
             "**spec** (fixed by a protocol rule), **design** (a choice this design makes), **assumption**",
             "(a number we picked where no source fixes it), **modelled** (the output of a published model),",
+            "**experiment** (a result of this project's experiments, rerunnable from `tools/exp/`),",
             "**derived** (computed from the others).",
             "",
         ]

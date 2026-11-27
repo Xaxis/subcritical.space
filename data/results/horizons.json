@@ -1,0 +1,454 @@
+{
+  "data": [
+    {
+      "sha256": "aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9",
+      "url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "what": "METR-Horizon-v1.1 results"
+    }
+  ],
+  "details": {
+    "all_models": [
+      {
+        "model": "claude_3_5_sonnet_20240620_inspect",
+        "p50": 11.395377,
+        "p50_hi": 22.384214,
+        "p50_lo": 5.489734,
+        "p80": 1.671757,
+        "released": "2024-06-20",
+        "sota": true
+      },
+      {
+        "model": "claude_3_5_sonnet_20241022_inspect",
+        "p50": 20.522872,
+        "p50_hi": 40.82028,
+        "p50_lo": 10.144026,
+        "p80": 2.595677,
+        "released": "2024-10-22",
+        "sota": true
+      },
+      {
+        "model": "claude_3_7_sonnet_inspect",
+        "p50": 60.388937,
+        "p50_hi": 104.226017,
+        "p50_lo": 33.006168,
+        "p80": 12.09179,
+        "released": "2025-02-24",
+        "sota": true
+      },
+      {
+        "model": "claude_3_opus_inspect",
+        "p50": 3.952262,
+        "p50_hi": 8.76484,
+        "p50_lo": 1.706313,
+        "p80": 0.638973,
+        "released": "2024-03-04",
+        "sota": false
+      },
+      {
+        "model": "claude_4_1_opus_inspect",
+        "p50": 100.472004,
+        "p50_hi": 159.451918,
+        "p50_lo": 59.272391,
+        "p80": 23.455761,
+        "released": "2025-08-05",
+        "sota": false
+      },
+      {
+        "model": "claude_4_opus_inspect",
+        "p50": 100.366123,
+        "p50_hi": 163.454074,
+        "p50_lo": 59.994073,
+        "p80": 20.429752,
+        "released": "2025-05-22",
+        "sota": false
+      },
+      {
+        "model": "claude_mythos_preview_early_inspect",
+        "p50": 1044.780145,
+        "p50_hi": 3304.261235,
+        "p50_lo": 508.876789,
+        "p80": 185.911829,
+        "released": "2026-04-07",
+        "sota": true
+      },
+      {
+        "model": "claude_opus_4_5_inspect",
+        "p50": 292.994594,
+        "p50_hi": 623.704698,
+        "p50_lo": 161.717714,
+        "p80": 49.430584,
+        "released": "2025-11-24",
+        "sota": true
+      },
+      {
+        "model": "claude_opus_4_6_inspect",
+        "p50": 718.80683,
+        "p50_hi": 3633.786163,
+        "p50_lo": 316.685725,
+        "p80": 69.874587,
+        "released": "2026-02-05",
+        "sota": true
+      },
+      {
+        "model": "davinci_002",
+        "p50": 0.144057,
+        "p50_hi": 0.221209,
+        "p50_lo": 0.093319,
+        "p80": 0.056238,
+        "released": "2020-05-28",
+        "sota": true
+      },
+      {
+        "model": "gemini_3_1_pro",
+        "p50": 384.147435,
+        "p50_hi": 694.750898,
+        "p50_lo": 233.50073,
+        "p80": 89.801503,
+        "released": "2026-02-19",
+        "sota": false
+      },
+      {
+        "model": "gemini_3_pro",
+        "p50": 224.325884,
+        "p50_hi": 379.235434,
+        "p50_lo": 139.565157,
+        "p80": 54.142849,
+        "released": "2025-11-18",
+        "sota": true
+      },
+      {
+        "model": "gpt2",
+        "p50": 0.053778,
+        "p50_hi": 0.141825,
+        "p50_lo": 0.009994,
+        "p80": 0.0128,
+        "released": "2019-02-14",
+        "sota": true
+      },
+      {
+        "model": "gpt_3_5_turbo_instruct",
+        "p50": 0.599247,
+        "p50_hi": 1.115905,
+        "p50_lo": 0.255148,
+        "p80": 0.25538,
+        "released": "2022-03-15",
+        "sota": true
+      },
+      {
+        "model": "gpt_4",
+        "p50": 3.987428,
+        "p50_hi": 7.995283,
+        "p50_lo": 1.93292,
+        "p80": 0.889561,
+        "released": "2023-03-14",
+        "sota": true
+      },
+      {
+        "model": "gpt_4_1106_inspect",
+        "p50": 4.044959,
+        "p50_hi": 8.443226,
+        "p50_lo": 1.866859,
+        "p80": 0.783032,
+        "released": "2023-11-06",
+        "sota": true
+      },
+      {
+        "model": "gpt_4_turbo_inspect",
+        "p50": 3.732787,
+        "p50_hi": 6.736613,
+        "p50_lo": 1.980046,
+        "p80": 0.927933,
+        "released": "2024-04-09",
+        "sota": false
+      },
+      {
+        "model": "gpt_4o_inspect",
+        "p50": 6.991195,
+        "p50_hi": 12.905741,
+        "p50_lo": 4.001482,
+        "p80": 1.267009,
+        "released": "2024-05-13",
+        "sota": true
+      },
+      {
+        "model": "gpt_5_1_codex_max_inspect",
+        "p50": 223.714694,
+        "p50_hi": 396.206723,
+        "p50_lo": 134.31077,
+        "p80": 50.632499,
+        "released": "2025-11-19",
+        "sota": false
+      },
+      {
+        "model": "gpt_5_2",
+        "p50": 352.249302,
+        "p50_hi": 815.177445,
+        "p50_lo": 198.067494,
+        "p80": 66.002649,
+        "released": "2025-12-11",
+        "sota": true
+      },
+      {
+        "model": "gpt_5_2025_08_07_inspect",
+        "p50": 203.012577,
+        "p50_hi": 405.551565,
+        "p50_lo": 112.641357,
+        "p80": 38.312431,
+        "released": "2025-08-07",
+        "sota": true
+      },
+      {
+        "model": "gpt_5_3_codex",
+        "p50": 349.530732,
+        "p50_hi": 816.351994,
+        "p50_lo": 194.913134,
+        "p80": 54.739407,
+        "released": "2026-02-05",
+        "sota": false
+      },
+      {
+        "model": "gpt_5_4",
+        "p50": 341.735276,
+        "p50_hi": 768.779526,
+        "p50_lo": 186.581591,
+        "p80": 53.877851,
+        "released": "2026-03-05",
+        "sota": false
+      },
+      {
+        "model": "o1_inspect",
+        "p50": 38.831588,
+        "p50_hi": 64.95249,
+        "p50_lo": 21.164512,
+        "p80": 7.090121,
+        "released": "2024-12-05",
+        "sota": true
+      },
+      {
+        "model": "o1_preview",
+        "p50": 20.326586,
+        "p50_hi": 33.379877,
+        "p50_lo": 11.716193,
+        "p80": 4.420545,
+        "released": "2024-09-12",
+        "sota": true
+      },
+      {
+        "model": "o3_inspect",
+        "p50": 119.732634,
+        "p50_hi": 190.943818,
+        "p50_lo": 74.615398,
+        "p80": 29.981603,
+        "released": "2025-04-16",
+        "sota": true
+      }
+    ],
+    "metr_published": {
+      "ci_high": 158.012,
+      "ci_low": 104.428,
+      "point_estimate": 128.744
+    },
+    "points": [
+      {
+        "model": "claude_3_5_sonnet_20240620_inspect",
+        "p50": 11.395377,
+        "p50_hi": 22.384214,
+        "p50_lo": 5.489734,
+        "p80": 1.671757,
+        "released": "2024-06-20",
+        "sota": true
+      },
+      {
+        "model": "claude_3_5_sonnet_20241022_inspect",
+        "p50": 20.522872,
+        "p50_hi": 40.82028,
+        "p50_lo": 10.144026,
+        "p80": 2.595677,
+        "released": "2024-10-22",
+        "sota": true
+      },
+      {
+        "model": "claude_3_7_sonnet_inspect",
+        "p50": 60.388937,
+        "p50_hi": 104.226017,
+        "p50_lo": 33.006168,
+        "p80": 12.09179,
+        "released": "2025-02-24",
+        "sota": true
+      },
+      {
+        "model": "claude_opus_4_5_inspect",
+        "p50": 292.994594,
+        "p50_hi": 623.704698,
+        "p50_lo": 161.717714,
+        "p80": 49.430584,
+        "released": "2025-11-24",
+        "sota": true
+      },
+      {
+        "model": "claude_opus_4_6_inspect",
+        "p50": 718.80683,
+        "p50_hi": 3633.786163,
+        "p50_lo": 316.685725,
+        "p80": 69.874587,
+        "released": "2026-02-05",
+        "sota": true
+      },
+      {
+        "model": "gemini_3_pro",
+        "p50": 224.325884,
+        "p50_hi": 379.235434,
+        "p50_lo": 139.565157,
+        "p80": 54.142849,
+        "released": "2025-11-18",
+        "sota": true
+      },
+      {
+        "model": "gpt_4",
+        "p50": 3.987428,
+        "p50_hi": 7.995283,
+        "p50_lo": 1.93292,
+        "p80": 0.889561,
+        "released": "2023-03-14",
+        "sota": true
+      },
+      {
+        "model": "gpt_4_1106_inspect",
+        "p50": 4.044959,
+        "p50_hi": 8.443226,
+        "p50_lo": 1.866859,
+        "p80": 0.783032,
+        "released": "2023-11-06",
+        "sota": true
+      },
+      {
+        "model": "gpt_4o_inspect",
+        "p50": 6.991195,
+        "p50_hi": 12.905741,
+        "p50_lo": 4.001482,
+        "p80": 1.267009,
+        "released": "2024-05-13",
+        "sota": true
+      },
+      {
+        "model": "gpt_5_2",
+        "p50": 352.249302,
+        "p50_hi": 815.177445,
+        "p50_lo": 198.067494,
+        "p80": 66.002649,
+        "released": "2025-12-11",
+        "sota": true
+      },
+      {
+        "model": "gpt_5_2025_08_07_inspect",
+        "p50": 203.012577,
+        "p50_hi": 405.551565,
+        "p50_lo": 112.641357,
+        "p80": 38.312431,
+        "released": "2025-08-07",
+        "sota": true
+      },
+      {
+        "model": "o1_inspect",
+        "p50": 38.831588,
+        "p50_hi": 64.95249,
+        "p50_lo": 21.164512,
+        "p80": 7.090121,
+        "released": "2024-12-05",
+        "sota": true
+      },
+      {
+        "model": "o1_preview",
+        "p50": 20.326586,
+        "p50_hi": 33.379877,
+        "p50_lo": 11.716193,
+        "p80": 4.420545,
+        "released": "2024-09-12",
+        "sota": true
+      },
+      {
+        "model": "o3_inspect",
+        "p50": 119.732634,
+        "p50_hi": 190.943818,
+        "p50_lo": 74.615398,
+        "p80": 29.981603,
+        "released": "2025-04-16",
+        "sota": true
+      }
+    ],
+    "resampling": {
+      "draws": 10000,
+      "kept": 10000,
+      "median": 127.59810037329026
+    }
+  },
+  "experiment": "E2",
+  "name": "horizons",
+  "numbers": {
+    "e2-doubling-p50": {
+      "fmt": ",.0f",
+      "label": "doubling time of the frontier 50% time horizon, our refit of METR's data",
+      "note": "",
+      "unit": "days",
+      "value": 128.74380265078003
+    },
+    "e2-doubling-p50-hi": {
+      "fmt": ",.0f",
+      "label": "doubling time, 97.5th percentile of our model-and-interval resampling",
+      "note": "",
+      "unit": "days",
+      "value": 162.17336994310736
+    },
+    "e2-doubling-p50-lo": {
+      "fmt": ",.0f",
+      "label": "doubling time, 2.5th percentile of our model-and-interval resampling",
+      "note": "",
+      "unit": "days",
+      "value": 96.43447953181987
+    },
+    "e2-doubling-p80": {
+      "fmt": ",.0f",
+      "label": "doubling time of the frontier 80% time horizon, our refit",
+      "note": "",
+      "unit": "days",
+      "value": 133.40531330403599
+    },
+    "e2-latest-p50": {
+      "fmt": ",.0f",
+      "label": "50% time horizon of the latest frontier model in the file (claude_mythos_preview_early_inspect, 2026-04-07)",
+      "note": "above the 16-hour cut if so, which is why it is not in the fit",
+      "unit": "min",
+      "value": 1044.780145
+    },
+    "e2-metr-doubling": {
+      "fmt": ",.0f",
+      "label": "METR's own doubling time for the same points, as published in the file",
+      "note": "",
+      "unit": "days",
+      "value": 128.744
+    },
+    "e2-p50-over-p80": {
+      "fmt": ".1f",
+      "label": "median ratio of a frontier model's 50% horizon to its 80% horizon",
+      "note": "",
+      "unit": "",
+      "value": 5.317883030364129
+    },
+    "e2-points": {
+      "fmt": ",.0f",
+      "label": "frontier models in the refit (released 2023 on, central 50% horizon up to 16 hours)",
+      "note": "",
+      "unit": "models",
+      "value": 14.0
+    },
+    "e2-refit-over-metr": {
+      "fmt": ".2f",
+      "label": "our refitted doubling time over METR's published one (1 means the refit reproduces it)",
+      "note": "",
+      "unit": "",
+      "value": 0.9999984671190892
+    }
+  },
+  "script": "tools/exp/horizons.py",
+  "seed": 20261127
+}

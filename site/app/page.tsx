@@ -5,12 +5,27 @@ import { LoopGain } from "@/components/figures/LoopGain";
 import { TheLine } from "@/components/figures/TheLine";
 import { Header } from "@/components/Header";
 import { Markdown } from "@/components/Markdown";
-import { memo } from "@/lib/docs";
+import { memo, ranking } from "@/lib/docs";
 import { entry } from "@/lib/ledger";
 import { progress } from "@/lib/progress";
 import { repoFileExists } from "@/lib/repo";
 import { repoLink, SITE } from "@/lib/site";
 import { citeLabel, sourceIndex } from "@/lib/sources";
+
+const WORDS = [
+  "none",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "ten",
+];
+const capital = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
 
 export default function Home() {
   const m = memo();
@@ -19,6 +34,7 @@ export default function Home() {
   const steps = progress();
   const miss = entry("miss-prob-one-channel");
   const [lead, ...ideaRest] = m.idea.split("\n\n");
+  const ranked = ranking();
   const byKey = sourceIndex();
   const cite = (key: string) => ({
     href: `/sources#${byKey.get(key)?.key ?? key}`,
@@ -186,43 +202,128 @@ export default function Home() {
         <section className="band alt" id="pathways">
           <div className="wrap">
             <p className="eyebrow">Which systems cross the line</p>
-            <h2>Five candidate pathways, ranked before testing</h2>
-            <p className="section-lead">
-              Candidates to test, not conclusions. The survey and experiments decide the final
-              ranking, and the ranking decides what the protocol restricts.
-            </p>
-            {/* biome-ignore lint/a11y/noNoninteractiveTabindex: a wide table scrolls, and a keyboard must reach it */}
-            <div className="table-wrap" tabIndex={0}>
-              <table>
-                <thead>
-                  <tr>
-                    {m.pathways.header.map((h) => (
-                      <th key={h} scope="col">
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {m.pathways.rows.map((r) => (
-                    <tr key={r[0]}>
-                      {r.map((c, i) =>
-                        i === 0 ? (
-                          <th key={m.pathways.header[i]} scope="row">
-                            {c}
+            {ranked ? (
+              <>
+                <h2>{`${capital(WORDS[ranked.rows.length] ?? String(ranked.rows.length))} pathways, ranked on the evidence`}</h2>
+                <p className="section-lead">
+                  Part I re-ranked the memo&apos;s pathways on the survey&apos;s evidence
+                  {ranked.added > 0 ? ` and added ${WORDS[ranked.added] ?? ranked.added}` : ""}.
+                  Pathways the evidence cannot separate share a rank. Provisional until the
+                  experiments run; the ranking decides what the protocol restricts, meters or
+                  watches.
+                </p>
+                {/* biome-ignore lint/a11y/noNoninteractiveTabindex: a wide table scrolls, and a keyboard must reach it */}
+                <div className="table-wrap" tabIndex={0}>
+                  <table>
+                    <thead>
+                      <tr>
+                        {ranked.header.map((h) => (
+                          <th key={h} scope="col">
+                            {h}
                           </th>
-                        ) : (
-                          <td key={m.pathways.header[i]}>{c}</td>
-                        ),
-                      )}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="prose narrow">
-              <Markdown md={m.pathways.reasons} />
-            </div>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {ranked.rows.map((r) => (
+                        <tr key={r[1]}>
+                          {r.map((c, i) =>
+                            i === 1 ? (
+                              <th key={ranked.header[i]} scope="row">
+                                <Markdown md={c} inline />
+                              </th>
+                            ) : (
+                              <td key={ranked.header[i]}>
+                                <Markdown md={c} inline />
+                              </td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="prose narrow">
+                  The evidence for each, what moved it and the weakest judgements:{" "}
+                  <a href="/research/pathways">the pathways chapter</a>.
+                </p>
+                <details className="before">
+                  <summary>The memo&apos;s ranking, before the survey</summary>
+                  {/* biome-ignore lint/a11y/noNoninteractiveTabindex: a wide table scrolls, and a keyboard must reach it */}
+                  <div className="table-wrap" tabIndex={0}>
+                    <table>
+                      <thead>
+                        <tr>
+                          {m.pathways.header.map((h) => (
+                            <th key={h} scope="col">
+                              {h}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {m.pathways.rows.map((r) => (
+                          <tr key={r[0]}>
+                            {r.map((c, i) =>
+                              i === 0 ? (
+                                <th key={m.pathways.header[i]} scope="row">
+                                  {c}
+                                </th>
+                              ) : (
+                                <td key={m.pathways.header[i]}>{c}</td>
+                              ),
+                            )}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="prose narrow">
+                    <Markdown md={m.pathways.reasons} />
+                  </div>
+                </details>
+              </>
+            ) : (
+              <>
+                <h2>Five candidate pathways, ranked before testing</h2>
+                <p className="section-lead">
+                  Candidates to test, not conclusions. The survey and experiments decide the final
+                  ranking, and the ranking decides what the protocol restricts.
+                </p>
+                {/* biome-ignore lint/a11y/noNoninteractiveTabindex: a wide table scrolls, and a keyboard must reach it */}
+                <div className="table-wrap" tabIndex={0}>
+                  <table>
+                    <thead>
+                      <tr>
+                        {m.pathways.header.map((h) => (
+                          <th key={h} scope="col">
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {m.pathways.rows.map((r) => (
+                        <tr key={r[0]}>
+                          {r.map((c, i) =>
+                            i === 0 ? (
+                              <th key={m.pathways.header[i]} scope="row">
+                                {c}
+                              </th>
+                            ) : (
+                              <td key={m.pathways.header[i]}>{c}</td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="prose narrow">
+                  <Markdown md={m.pathways.reasons} />
+                </div>
+              </>
+            )}
           </div>
         </section>
 
@@ -268,11 +369,12 @@ export default function Home() {
             <p className="eyebrow">Where the work stands</p>
             <h2>The plan, read from the repository</h2>
             <p className="section-lead">
-              A step shows as begun when its file exists in the{" "}
+              A step shows as written when its file exists in the{" "}
               <a href={SITE.repo} rel="noopener">
                 repository
               </a>
-              , so this list cannot claim more than has been written.
+              , so this list cannot claim more than has been written. Written is not verified: each
+              claim still has to pass six independent levels.
             </p>
             <ol className="steps">
               {steps.map((s) => (
