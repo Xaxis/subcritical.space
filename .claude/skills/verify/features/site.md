@@ -1,6 +1,6 @@
 # Site
 
-subcritical.space (until registered, https://subcritical.vercel.app): the Next.js site in `site/`,
+subcritical.space: the Next.js site in `site/`,
 rendered at build time from `research/` and `data/`, deployed by `tools/site/deploy.sh`.
 
 <!-- covers: page:/, page:/research, page:/research/[slug], page:/notes/[slug], page:/experiments, page:/numbers, page:/sources, api:GET /apple-icon, api:GET /manifest.webmanifest, api:GET /opengraph-image, api:GET /robots.txt, api:GET /sitemap.xml -->

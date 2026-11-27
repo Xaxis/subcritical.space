@@ -1,8 +1,8 @@
-// What the site is called and where it lives. Until subcritical.space is registered the site is
-// served from its Vercel preview address; switch `url` (and nothing else) the day the domain is live.
+// What the site is called and where it lives: subcritical.space, registered 2026-11-27. The Vercel
+// preview address still answers, but every canonical link, the sitemap and the share card use this.
 export const SITE = {
   name: "Subcritical",
-  url: "https://subcritical.vercel.app",
+  url: "https://subcritical.space",
   domain: "subcritical.space",
   tagline: "Prevent superintelligence. Keep useful AI.",
   description:

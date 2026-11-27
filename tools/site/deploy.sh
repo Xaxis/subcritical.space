@@ -18,8 +18,9 @@
 # directory, which reads research/ and data/ from the repository root. The project, its settings
 # and its domains are set here, so they live in the repo.
 #
-# Until subcritical.space is registered (it has no nameservers), the domain is not added and the
-# site lives at the project's vercel.app address, which site/lib/site.ts names as the canonical URL.
+# The site is served at subcritical.space, with www redirecting to it (308), as corerope.space and
+# phosphoros.space do. Each deploy sets both domains that way, so a change in Vercel's dashboard
+# (whose default is the reverse) is put back.
 #
 # A deploy counts only when a production domain proves it:
 #   - / answers 200 with the security headers and this commit's build marker;
@@ -93,20 +94,24 @@ org_id="$(body "$res" | jq -er .accountId)"
 if [[ $check_only == 0 ]]; then
   res="$(api PATCH "/v9/projects/$project_id?slug=$team" "$settings")"
   [[ "$(status "$res")" == 200 ]] || fail "could not apply project settings: $(body "$res" | head -c 400)"
-  have="$(body "$(api GET "/v9/projects/$project_id/domains?slug=$team")" | jq -r '.domains[].name')"
-  add_domain() { # add_domain JSON NAME
-    grep -qxF "$2" <<<"$have" && return 0
-    local r
-    r="$(api POST "/v10/projects/$project_id/domains?slug=$team" "$1")"
-    [[ "$(status "$r")" == 200 ]] || fail "could not add $2: $(body "$r" | head -c 400)"
-    echo "added domain $2"
+  have="$(body "$(api GET "/v9/projects/$project_id/domains?slug=$team")")"
+  set_domain() { # set_domain NAME REDIRECT ("" to serve the site)
+    local want r now
+    if [[ -z "$2" ]]; then want='{"redirect":null}'; else want="{\"redirect\":\"$2\",\"redirectStatusCode\":308}"; fi
+    now="$(jq -r --arg d "$1" '.domains[] | select(.name == $d) | .redirect // ""' <<<"$have")"
+    if ! jq -e --arg d "$1" '.domains[] | select(.name == $d)' <<<"$have" >/dev/null; then
+      r="$(api POST "/v10/projects/$project_id/domains?slug=$team" "$(jq -c --arg d "$1" '. + {name: $d}' <<<"$want")")"
+      [[ "$(status "$r")" == 200 ]] || fail "could not add $1: $(body "$r" | head -c 400)"
+      echo "added domain $1"
+    elif [[ "$now" != "$2" ]]; then
+      r="$(api PATCH "/v9/projects/$project_id/domains/$1?slug=$team" "$want")"
+      [[ "$(status "$r")" == 200 ]] || fail "could not set $1: $(body "$r" | head -c 400)"
+      echo "set domain $1: ${2:+redirect to }${2:-serves the site} (was ${now:+redirect to }${now:-serving the site})"
+    fi
   }
-  if [[ -n "$(dig +short NS "$apex" 2>/dev/null)" ]]; then
-    add_domain "{\"name\":\"$apex\"}" "$apex"
-    add_domain "{\"name\":\"www.$apex\",\"redirect\":\"$apex\",\"redirectStatusCode\":308}" "www.$apex"
-  else
-    echo "note: $apex has no nameservers yet (not registered?); serving from the vercel.app address"
-  fi
+  # The apex first: www cannot redirect to a domain that itself redirects.
+  set_domain "$apex" ""
+  set_domain "www.$apex" "$apex"
 fi
 
 # --- deploy -----------------------------------------------------------------------------------
@@ -247,14 +252,13 @@ for domain in "${live[@]}"; do
 done
 
 # www only redirects, so it is not a production domain above; check it once its DNS is right.
-registered() { [[ -n "$(dig +short NS "$apex" 2>/dev/null)" ]]; }
 dns_ok() { [[ "$(body "$(api GET "/v6/domains/$1/config?slug=$team")" | jq -r .misconfigured)" == "false" ]]; }
-if registered && dns_ok "www.$apex"; then
+if dns_ok "www.$apex"; then
   code="$(curl -sS --max-time 20 -o /dev/null -w '%{http_code} %{redirect_url}' "https://www.$apex/" || true)"
   [[ "$code" == "308 https://$apex/" ]] || fail "https://www.$apex/ answers '$code', not a 308 to https://$apex/"
   echo "  ok  https://www.$apex/ (308 to https://$apex/)"
   checks=$((checks + 1))
-elif registered; then
+else
   dns_todo+=("www.$apex")
 fi
 
@@ -262,9 +266,6 @@ if [[ $browser == 1 ]]; then
   echo "site ok: $sha is live at ${live[*]/#/https://} ($checks checks passed)"
 else
   echo "site up, not yet proven: $sha is live at ${live[*]/#/https://} ($checks HTTP checks passed; browser checks pending)"
-fi
-if ! registered; then
-  echo "waiting for the owner: $apex is not registered yet; once it is, rerun this to add it"
 fi
 for domain in "${dns_todo[@]}"; do
   cfg="$(body "$(api GET "/v6/domains/$domain/config?slug=$team")")"

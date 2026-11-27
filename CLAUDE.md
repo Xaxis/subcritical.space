@@ -78,10 +78,9 @@ Gate before committing: `make model docs check` all exit 0, and for a site chang
   project `subcritical` by `heavy tools/site/deploy.sh`, which uploads the committed tree (git
   archive of HEAD; pushing does not deploy) and proves it live: headers, build marker, assets,
   every sitemap page shot at 1440 and 390 px in both themes with axe (`tools/site/shots.ts`), and
-  the figures and theme toggle driven in a browser (`tools/site/interact.ts`). Until the owner
-  registers subcritical.space it serves https://subcritical.vercel.app, the `url` in
-  `site/lib/site.ts`; switch that one line when the domain is live and rerun the deploy, which
-  adds the domain once it has nameservers. The site reads `research/` and `data/` at build time
+  the figures and theme toggle driven in a browser (`tools/site/interact.ts`). It serves
+  https://subcritical.space (registered 2026-11-27; the `url` in `site/lib/site.ts`), with www
+  redirecting to it; the deploy adds both to the project and proves them. The site reads `research/` and `data/` at build time
   and types no number: ledger links render the model's value, citations resolve through
   `research/sources.toml`. Port 4527 for the local server (`pnpm --filter @subcritical/site
   start` after a build). 3D, when added, follows corerope.space and phosphoros.space, with

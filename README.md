@@ -1,7 +1,7 @@
 # Subcritical
 
-An open research program, and a site at subcritical.space (until the domain is registered,
-https://subcritical.vercel.app), on one question: can there be a protocol
+An open research program, and a site at https://subcritical.space, on one question: can there be
+a protocol
 that prevents the development of artificial superintelligence while leaving useful AI free to keep
 improving?
 
