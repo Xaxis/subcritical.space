@@ -13261,7 +13261,7 @@
     },
     "e4-sr-boot-corr": {
       "fmt": ".2f",
-      "label": "correlation between beta and lambda across block-bootstrap draws of the speedrun's growth-law fit",
+      "label": "correlation between b and lambda across block-bootstrap draws of the speedrun's growth-law fit",
       "note": "",
       "unit": "",
       "value": 0.9503944947341749
@@ -13282,7 +13282,7 @@
     },
     "e4-sr-p-below-1": {
       "fmt": "%",
-      "label": "share of block-bootstrap draws giving a diminishing-returns law with a positive return below 1 (beta and lambda above 0, r below 1)",
+      "label": "share of block-bootstrap draws giving a diminishing-returns law with a positive return below 1 (b and lambda above 0, r below 1)",
       "note": "",
       "unit": "",
       "value": 0.33
@@ -13296,7 +13296,7 @@
     },
     "e4-sr-p-unbounded": {
       "fmt": "%",
-      "label": "share of block-bootstrap draws in which monthly gains do not fall as the speedup grows (beta at or below 0)",
+      "label": "share of block-bootstrap draws in which monthly gains do not fall as the speedup grows (b at or below 0)",
       "note": "0.5% with lambda above 0 (r unbounded) and 29.4% with both signs flipped",
       "unit": "",
       "value": 0.29925

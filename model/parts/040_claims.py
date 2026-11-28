@@ -3,8 +3,9 @@
 Derives the few numbers the claims file needs that Part I did not: the time the whole projected
 fleet needs to reach the hardwired-pause paper's breakout budget (the scale of the coalition share),
 the untraced stock against the aggregate chip floor, how many locked organisms the elicitation
-test needs, the staged runs the loop-gain test costs, and which pairs of pathways the evidence
-orders. Inputs are in data/inputs/040-claims.toml. Every id starts with claim-.
+test needs, the staged runs the loop-gain test costs, and which pairs of pathways our grades
+order (the grades are judgements, so the order is too). Inputs are in data/inputs/040-claims.toml.
+Every id starts with claim-.
 """
 
 from __future__ import annotations
@@ -119,9 +120,10 @@ def build(L, here) -> None:
     )
 
     # -----------------------------------------------------------------------------------------
-    # C12: which pairs of pathways the evidence orders. Each pathway has an ordinal grade per
-    # criterion in data/inputs/040-claims.toml, read from the pathways table; a pair is fixed when
-    # one pathway's grade is higher on every criterion, and every other order is a judgement.
+    # C12: which pairs of pathways our grades order. Each pathway has an ordinal grade per criterion
+    # in data/inputs/040-claims.toml, read from the pathways table, each an assumption; a pair is
+    # Pareto-ordered when one pathway's grade is higher on every criterion. The grades are
+    # judgements, so the count is a property of our reading, not of evidence (L6, M8).
     pathways = ["rsi", "uc", "ds", "dist", "repl", "cl", "lha"]
 
     def fixed_pairs(criteria):
@@ -151,8 +153,8 @@ def build(L, here) -> None:
         fixed_pairs(("effect", "hidden")),
         "pairs (a, b) with claim-c12-effect-a > claim-c12-effect-b and claim-c12-hidden-a > claim-c12-hidden-b",
         fmt=",.0f",
-        label="pairs of pathways fixed by the evidence on the ranking's two criteria, effect on the line and how hard it is to see: one pathway graded higher on both",
-        note="an ordinal reading of the pathways table; every other order is a judgement",
+        label="pairs of pathways Pareto-ordered under our grades on the ranking's two criteria, effect on the line and how hard it is to see: one pathway graded higher on both",
+        note="an ordinal reading of the pathways table whose grades are assumptions, so the count is a judgement too",
         defined_in=here(),
     )
     L.derive(

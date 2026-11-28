@@ -523,7 +523,7 @@
     },
     "e5-hazard": {
       "fmt": ".3f",
-      "label": "historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; an upper bound on a careful evader's rate",
+      "label": "historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; within the sample an upper bound on a careful evader's rate, its transfer to AI assumed",
       "note": "",
       "unit": "/yr",
       "value": 0.093806754599989
@@ -698,14 +698,14 @@
     },
     "e5-td-hist-years": {
       "fmt": ",.0f",
-      "label": "detection time at the prevention miss chance for a path only the historical channels see, from the programme's start; a lower bound, as the rate is an upper bound",
+      "label": "detection time at the prevention miss chance for a path only the historical channels see, from the programme's start, at the constant rate; a central estimate under the transfer from weapons programmes, not a bound",
       "note": "",
       "unit": "years",
       "value": 31.935144610091246
     },
     "e5-td-pool-years": {
       "fmt": ",.0f",
-      "label": "detection time, the untraced chip pool (no acquisition to catch), median; a lower bound, as the historical rate is an upper bound",
+      "label": "detection time, the untraced chip pool (no acquisition to catch), median; a central estimate under the historical transfer, not a bound",
       "note": "",
       "unit": "years",
       "value": 31.900579595103533

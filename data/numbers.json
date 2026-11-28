@@ -3881,9 +3881,9 @@
     "label": "largest facility the satellite classifier missed",
     "formula": "",
     "inputs": [],
-    "source": "koopmanschap2026gpu",
-    "date": "2026-06",
-    "note": "misses at 1.2, 0.5, 3.2 and 0.5 MW",
+    "source": "clymer2025datacenter",
+    "date": "2025-10",
+    "note": "misclassified/manual_labels.json: four false negatives confirmed as data centres, at 1.92, 1, 3.2 and 2.5 MW; the secondary report (koopmanschap2026gpu, App. B) gives 1.2, 0.5, 3.2 and 0.5 MW, the same largest",
     "defined_in": "data/inputs/011-physical.toml#L1517"
   },
   "phys-container-cluster": {
@@ -6595,7 +6595,7 @@
     "display": "3.1",
     "unit": "",
     "basis": "measured",
-    "label": "dynamic diminishing returns beta, aggregate US economy, 1930 to 2015",
+    "label": "dynamic diminishing returns b, aggregate US economy, 1930 to 2015",
     "formula": "",
     "inputs": [],
     "source": "bloom2020ideas",
@@ -6608,7 +6608,7 @@
     "display": "0.2",
     "unit": "",
     "basis": "measured",
-    "label": "dynamic diminishing returns beta, Moore's Law research, 1971 to 2014",
+    "label": "dynamic diminishing returns b, Moore's Law research, 1971 to 2014",
     "formula": "",
     "inputs": [],
     "source": "bloom2020ideas",
@@ -13389,6 +13389,32 @@
     "note": "flexHEG Part II's example, 'a new license every three months' (p. 38). Bitcoin time is accurate only to hours [todd2016opentimestamps], so a height-clocked period should be weeks or longer",
     "defined_in": "data/inputs/060-protocol.toml#L11"
   },
+  "prot-gan-coop-gain": {
+    "value": 1.5,
+    "display": "1.5",
+    "unit": "",
+    "basis": "modelled",
+    "label": "Gan: each country's gain from cooperating over racing, C - R, at his illustrative payoffs (2.5, 3.2, 1.0, 0.6)",
+    "formula": "",
+    "inputs": [],
+    "source": "gan2026clock",
+    "date": "",
+    "note": "Sec. 4.3, p. 15: 'the participation bound is m_max = 1.5/27'. Gan: national utilities and monitoring costs 'are chosen game inputs, not estimates'",
+    "defined_in": "data/inputs/060-protocol.toml#L20"
+  },
+  "prot-gan-monitor-cost": {
+    "value": 27.0,
+    "display": "27",
+    "unit": "",
+    "basis": "modelled",
+    "label": "Gan: monitoring cost eta per country per unit of monitoring intensity (findings a month), his illustrative baseline",
+    "formula": "",
+    "inputs": [],
+    "source": "gan2026clock",
+    "date": "",
+    "note": "Sec. 4.3, p. 15, and Table 2's notes: 'monitoring cost 27m per country'; a chosen game input, not an estimate",
+    "defined_in": "data/inputs/060-protocol.toml#L28"
+  },
   "e1-algo-annual": {
     "value": 17.02964044209155,
     "display": "17",
@@ -15500,7 +15526,7 @@
     "display": "0.95",
     "unit": "",
     "basis": "experiment",
-    "label": "correlation between beta and lambda across block-bootstrap draws of the speedrun's growth-law fit",
+    "label": "correlation between b and lambda across block-bootstrap draws of the speedrun's growth-law fit",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -15539,7 +15565,7 @@
     "display": "33%",
     "unit": "",
     "basis": "experiment",
-    "label": "share of block-bootstrap draws giving a diminishing-returns law with a positive return below 1 (beta and lambda above 0, r below 1)",
+    "label": "share of block-bootstrap draws giving a diminishing-returns law with a positive return below 1 (b and lambda above 0, r below 1)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -15565,7 +15591,7 @@
     "display": "30%",
     "unit": "",
     "basis": "experiment",
-    "label": "share of block-bootstrap draws in which monthly gains do not fall as the speedup grows (beta at or below 0)",
+    "label": "share of block-bootstrap draws in which monthly gains do not fall as the speedup grows (b at or below 0)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -15773,7 +15799,7 @@
     "display": "0.094/yr",
     "unit": "/yr",
     "basis": "experiment",
-    "label": "historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; an upper bound on a careful evader's rate",
+    "label": "historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; within the sample an upper bound on a careful evader's rate, its transfer to AI assumed",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -16098,7 +16124,7 @@
     "display": "32 years",
     "unit": "years",
     "basis": "experiment",
-    "label": "detection time at the prevention miss chance for a path only the historical channels see, from the programme's start; a lower bound, as the rate is an upper bound",
+    "label": "detection time at the prevention miss chance for a path only the historical channels see, from the programme's start, at the constant rate; a central estimate under the transfer from weapons programmes, not a bound",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -16111,7 +16137,7 @@
     "display": "32 years",
     "unit": "years",
     "basis": "experiment",
-    "label": "detection time, the untraced chip pool (no acquisition to catch), median; a lower bound, as the historical rate is an upper bound",
+    "label": "detection time, the untraced chip pool (no acquisition to catch), median; a central estimate under the historical transfer, not a bound",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -18217,7 +18243,7 @@
     "display": "0.20",
     "unit": "",
     "basis": "experiment",
-    "label": "Bloom et al.'s beta for Moore's Law (broad R&D), recomputed from their files (lambda = 1)",
+    "label": "Bloom et al.'s b for Moore's Law (broad R&D), recomputed from their files (lambda = 1)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -18230,7 +18256,7 @@
     "display": "5.1",
     "unit": "",
     "basis": "experiment",
-    "label": "r for Moore's Law research implied by that beta (broad R&D, lambda = 1, output assumed to double every two years)",
+    "label": "r for Moore's Law research implied by that b (broad R&D, lambda = 1, output assumed to double every two years)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -18607,7 +18633,7 @@
     "display": "3.1",
     "unit": "",
     "basis": "experiment",
-    "label": "Bloom et al.'s beta for the US economy, recomputed from their files (lambda = 1)",
+    "label": "Bloom et al.'s b for the US economy, recomputed from their files (lambda = 1)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -18620,7 +18646,7 @@
     "display": "0.33",
     "unit": "",
     "basis": "experiment",
-    "label": "r for the US economy implied by that beta with lambda = 1",
+    "label": "r for the US economy implied by that b with lambda = 1",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20817,7 +20843,7 @@
     "display": "85 stages",
     "unit": "stages",
     "basis": "experiment",
-    "label": "stages a rank test would need to tell the 2022 ranking from a random one at the observed rho, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages",
+    "label": "stages a rank test would need to tell the 2022 ranking from a random one at the observed r_s, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20869,7 +20895,7 @@
     "display": "0.16",
     "unit": "",
     "basis": "experiment",
-    "label": "statistical power of the one-sided 5% rank test with this many stages if the observed rho were the true one (simulated, ties kept)",
+    "label": "statistical power of the one-sided 5% rank test with this many stages if the observed r_s were the true one (simulated, ties kept)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20882,7 +20908,7 @@
     "display": "0.28",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)",
+    "label": "Spearman's r_s between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20895,7 +20921,7 @@
     "display": "0.29",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho, highest over the 6 rules and 6 erosion scorings",
+    "label": "Spearman's r_s, highest over the 6 rules and 6 erosion scorings",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20908,7 +20934,7 @@
     "display": "0.08",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)",
+    "label": "Spearman's r_s, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20921,7 +20947,7 @@
     "display": "-0.69",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho, lowest over the 6 rules and 6 erosion scorings",
+    "label": "Spearman's r_s, lowest over the 6 rules and 6 erosion scorings",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20934,7 +20960,7 @@
     "display": "0.91",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho, 97.5th percentile of resampling the stages",
+    "label": "Spearman's r_s, 97.5th percentile of resampling the stages",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20947,7 +20973,7 @@
     "display": "-0.65",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho, 2.5th percentile of resampling the stages",
+    "label": "Spearman's r_s, 2.5th percentile of resampling the stages",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20960,7 +20986,7 @@
     "display": "0.59",
     "unit": "",
     "basis": "experiment",
-    "label": "smallest Spearman's rho the exact one-sided 5% test could call significant with these stages and ties",
+    "label": "smallest Spearman's r_s the exact one-sided 5% test could call significant with these stages and ties",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20973,7 +20999,7 @@
     "display": "0.09",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho with power put back in, ranked last as the rule places it (every stage O3 names)",
+    "label": "Spearman's r_s with power put back in, ranked last as the rule places it (every stage O3 names)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20986,7 +21012,7 @@
     "display": "0.80",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho, 97.5th percentile by Fisher's z with the Bonett and Wright variance",
+    "label": "Spearman's r_s, 97.5th percentile by Fisher's z with the Bonett and Wright variance",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -20999,7 +21025,7 @@
     "display": "-0.49",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho, 2.5th percentile by Fisher's z with the Bonett and Wright variance",
+    "label": "Spearman's r_s, 2.5th percentile by Fisher's z with the Bonett and Wright variance",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -21012,7 +21038,7 @@
     "display": "0.54",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho with one stage left out, highest (without packaging)",
+    "label": "Spearman's r_s with one stage left out, highest (without packaging)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -21025,7 +21051,7 @@
     "display": "-0.04",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho with one stage left out, lowest (without ai-chips)",
+    "label": "Spearman's r_s with one stage left out, lowest (without ai-chips)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -21038,7 +21064,7 @@
     "display": "0.30",
     "unit": "",
     "basis": "experiment",
-    "label": "Spearman's rho for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)",
+    "label": "Spearman's r_s for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)",
     "formula": "",
     "inputs": [],
     "source": "",
@@ -23039,7 +23065,7 @@
     "display": "140,000,000",
     "unit": "",
     "basis": "derived",
-    "label": "PaLM-540B-sized copies at Pope et al.'s speed that one year's chip sales could run at the reference utilisation",
+    "label": "upper bound on PaLM-540B-sized copies at Pope et al.'s small-batch speed that one year's chip sales could run at the reference utilisation (that utilisation needs large batches, which slow each copy)",
     "formula": "phys-flow-2025-flops * phys-util-ref / phys-palm-copy-flops",
     "inputs": [
       "phys-flow-2025-flops",
@@ -26596,7 +26622,7 @@
     "source": "",
     "date": "",
     "note": "uses that paper's budget, research overhead and utilisation, all assumptions of the paper",
-    "defined_in": "model/parts/040_claims.py#L32"
+    "defined_in": "model/parts/040_claims.py#L33"
   },
   "claim-whole-fleet-days-frozen": {
     "value": 28.456668518626657,
@@ -26613,7 +26639,7 @@
     "source": "",
     "date": "",
     "note": "h_w scales in proportion to the budget; same overhead and utilisation as claim-whole-fleet-horizon",
-    "defined_in": "model/parts/040_claims.py#L46"
+    "defined_in": "model/parts/040_claims.py#L47"
   },
   "claim-whole-fleet-days-1e26": {
     "value": 1.4228334259313327,
@@ -26630,7 +26656,7 @@
     "source": "",
     "date": "",
     "note": "h_w scales in proportion to the budget; same overhead and utilisation as claim-whole-fleet-horizon",
-    "defined_in": "model/parts/040_claims.py#L56"
+    "defined_in": "model/parts/040_claims.py#L57"
   },
   "claim-pool-over-floor-now": {
     "value": 30.913982748000002,
@@ -26646,7 +26672,7 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/040_claims.py#L66"
+    "defined_in": "model/parts/040_claims.py#L67"
   },
   "claim-pool-over-floor-pause": {
     "value": 164.874574656,
@@ -26662,7 +26688,7 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/040_claims.py#L74"
+    "defined_in": "model/parts/040_claims.py#L75"
   },
   "claim-d5-organisms": {
     "value": 22.0,
@@ -26678,7 +26704,7 @@
     "source": "",
     "date": "",
     "note": "exact binomial bound with zero misses; any miss raises the number needed",
-    "defined_in": "model/parts/040_claims.py#L87"
+    "defined_in": "model/parts/040_claims.py#L88"
   },
   "claim-c4-staged-runs": {
     "value": 15.0,
@@ -26694,7 +26720,7 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/040_claims.py#L100"
+    "defined_in": "model/parts/040_claims.py#L101"
   },
   "claim-c4-staged-runs-fav": {
     "value": 36.0,
@@ -26710,7 +26736,7 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/040_claims.py#L109"
+    "defined_in": "model/parts/040_claims.py#L110"
   },
   "claim-c4-k-staged-runs-fav": {
     "value": 60.0,
@@ -26726,7 +26752,7 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/040_claims.py#L118"
+    "defined_in": "model/parts/040_claims.py#L119"
   },
   "claim-c12-pairs": {
     "value": 21.0,
@@ -26739,14 +26765,14 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/040_claims.py#L147"
+    "defined_in": "model/parts/040_claims.py#L149"
   },
   "claim-c12-pareto-two": {
     "value": 12.0,
     "display": "12",
     "unit": "",
     "basis": "derived",
-    "label": "pairs of pathways fixed by the evidence on the ranking's two criteria, effect on the line and how hard it is to see: one pathway graded higher on both",
+    "label": "pairs of pathways Pareto-ordered under our grades on the ranking's two criteria, effect on the line and how hard it is to see: one pathway graded higher on both",
     "formula": "pairs (a, b) with claim-c12-effect-a > claim-c12-effect-b and claim-c12-hidden-a > claim-c12-hidden-b",
     "inputs": [
       "claim-c12-effect-rsi",
@@ -26766,8 +26792,8 @@
     ],
     "source": "",
     "date": "",
-    "note": "an ordinal reading of the pathways table; every other order is a judgement",
-    "defined_in": "model/parts/040_claims.py#L156"
+    "note": "an ordinal reading of the pathways table whose grades are assumptions, so the count is a judgement too",
+    "defined_in": "model/parts/040_claims.py#L158"
   },
   "claim-c12-pareto-three": {
     "value": 9.0,
@@ -26802,7 +26828,7 @@
     "source": "",
     "date": "",
     "note": "checks the grades against the red team's independent reading (L4, C12.1)",
-    "defined_in": "model/parts/040_claims.py#L165"
+    "defined_in": "model/parts/040_claims.py#L167"
   },
   "formal-d5-organisms-one-miss": {
     "value": 38.0,
@@ -27005,7 +27031,7 @@
     "display": "43",
     "unit": "",
     "basis": "derived",
-    "label": "that rate as a multiple of E5's fitted historical discovery rate of covert programmes (a lower bound on the multiple, as E5's rate is an upper bound for a careful evader)",
+    "label": "that rate as a multiple of E5's fitted historical discovery rate of covert programmes (a rate transferred from weapons programmes; survivorship suggests a careful evader's is lower)",
     "formula": "prot-lambda-declared / e5-hazard",
     "inputs": [
       "prot-lambda-declared",
@@ -27326,6 +27352,38 @@
     "note": "",
     "defined_in": "model/parts/060_protocol.py#L234"
   },
+  "prot-gan-consent-rate": {
+    "value": 0.05555555555555555,
+    "display": "0.056/month",
+    "unit": "/month",
+    "basis": "derived",
+    "label": "most monitoring (findings a month) both countries will pay for in Gan's illustrative calibration, m_max = (C - R) / eta",
+    "formula": "prot-gan-coop-gain / prot-gan-monitor-cost",
+    "inputs": [
+      "prot-gan-coop-gain",
+      "prot-gan-monitor-cost"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/060_protocol.py#L247"
+  },
+  "prot-gan-prevent-over-consent": {
+    "value": 4.4935984103309865,
+    "display": "4.5",
+    "unit": "",
+    "basis": "derived",
+    "label": "monitoring that prevention at this work's beta needs over Gan's window, as a multiple of the most both countries will pay in his calibration",
+    "formula": "def-gan-prevent-rate / prot-gan-consent-rate",
+    "inputs": [
+      "def-gan-prevent-rate",
+      "prot-gan-consent-rate"
+    ],
+    "source": "",
+    "date": "",
+    "note": "",
+    "defined_in": "model/parts/060_protocol.py#L255"
+  },
   "prot-eval-interval-months": {
     "value": 6.399147593509539,
     "display": "6 months",
@@ -27341,7 +27399,7 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/060_protocol.py#L247"
+    "defined_in": "model/parts/060_protocol.py#L268"
   },
   "prot-notice-months": {
     "value": 12.0,
@@ -27357,7 +27415,7 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/060_protocol.py#L260"
+    "defined_in": "model/parts/060_protocol.py#L281"
   },
   "prot-prize-over-penalty": {
     "value": 18.999999999999996,
@@ -27372,6 +27430,6 @@
     "source": "",
     "date": "",
     "note": "",
-    "defined_in": "model/parts/060_protocol.py#L273"
+    "defined_in": "model/parts/060_protocol.py#L294"
   }
 }

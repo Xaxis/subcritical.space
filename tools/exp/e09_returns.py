@@ -517,7 +517,7 @@ def frontier_firm(res, ledger, table, gen):
 
 
 def bloom_tables(res):
-    """Bloom et al.'s beta for Moore's Law and the aggregate economy, recomputed from their files
+    """Bloom et al.'s b for Moore's Law and the aggregate economy, recomputed from their files
     with lambda = 1, as their programs do."""
     path = fetch(BLOOM_URL, "bloom2020/IdeaPFPrograms.zip", res,
                  what="Bloom, Jones, Van Reenen and Webb, replication files (licence not stated)")
@@ -1031,10 +1031,10 @@ def main() -> int:
 
     agg = bloom["aggregate"]
     res.number("e9-us-bloom-beta", agg["beta"], fmt=".1f",
-               label="Bloom et al.'s beta for the US economy, recomputed from their files (lambda = 1)",
+               label="Bloom et al.'s b for the US economy, recomputed from their files (lambda = 1)",
                note=f"published {ledger['dyn-bloom-beta-aggregate']:g}")
     res.number("e9-us-bloom-r", agg["r"], fmt=".2f",
-               label="r for the US economy implied by that beta with lambda = 1")
+               label="r for the US economy implied by that b with lambda = 1")
     res.number("e9-us-r", us["r"], fmt=".3f",
                label="r for the US economy with lambda free, best fit of our one-step refit of Erdil et al.'s TFP series; not identified, since lambda cannot be told from 0",
                note="reproduces their best fit; the bootstrap interval runs below 0")
@@ -1047,10 +1047,10 @@ def main() -> int:
     res.number("e9-us-lr-p", us["lr_p"], fmt=".2f",
                label="p-value of the likelihood-ratio test of lambda against 0 for the US economy")
     res.number("e9-moore-beta", bloom["moore"]["Broad"]["beta"], fmt=".2f",
-               label="Bloom et al.'s beta for Moore's Law (broad R&D), recomputed from their files (lambda = 1)",
+               label="Bloom et al.'s b for Moore's Law (broad R&D), recomputed from their files (lambda = 1)",
                note=f"published {ledger['dyn-bloom-beta-moore']:g}")
     res.number("e9-moore-r", bloom["moore"]["Broad"]["r"], fmt=".1f",
-               label="r for Moore's Law research implied by that beta (broad R&D, lambda = 1, output assumed to double every two years)")
+               label="r for Moore's Law research implied by that b (broad R&D, lambda = 1, output assumed to double every two years)")
     mr = [v["r"] for v in bloom["moore"].values()]
     res.number("e9-moore-r-min", min(mr), fmt=".1f",
                label="r for Moore's Law: lowest across Bloom et al.'s six R&D series")

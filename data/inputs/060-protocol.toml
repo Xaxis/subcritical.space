@@ -16,3 +16,19 @@ source = "petrie2025flexheg2"
 fmt = ",.0f"
 label = "licence period of a registered chip: the longest it runs without a logged renewal"
 note = "flexHEG Part II's example, 'a new license every three months' (p. 38). Bitcoin time is accurate only to hours [todd2016opentimestamps], so a height-clocked period should be weeks or longer"
+
+[prot-gan-coop-gain]
+value = 1.5
+basis = "modelled"
+source = "gan2026clock"
+fmt = ",.1f"
+label = "Gan: each country's gain from cooperating over racing, C - R, at his illustrative payoffs (2.5, 3.2, 1.0, 0.6)"
+note = "Sec. 4.3, p. 15: 'the participation bound is m_max = 1.5/27'. Gan: national utilities and monitoring costs 'are chosen game inputs, not estimates'"
+
+[prot-gan-monitor-cost]
+value = 27
+basis = "modelled"
+source = "gan2026clock"
+fmt = ",.0f"
+label = "Gan: monitoring cost eta per country per unit of monitoring intensity (findings a month), his illustrative baseline"
+note = "Sec. 4.3, p. 15, and Table 2's notes: 'monitoring cost 27m per country'; a chosen game input, not an estimate"

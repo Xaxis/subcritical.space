@@ -6,16 +6,18 @@ Paperwright's desks and a fresh reviewer. A claim that fails a level is cut or d
 argued around. The record says where each claim stands at each level, and how every attack the red
 team made was resolved.
 
-Each level's verdict is recorded as the level gave it in its own report. Each resolution was checked in
-the files themselves: the claims file, [the formal file](05-formal.md#summary),
+Each level's verdict is recorded as the level gave it in its own report. Each resolution was checked
+in the files themselves: the claims file, [the formal file](05-formal.md#summary),
 [Part II](06-protocol.md#what-the-protocol-must-do), Part I, the experiments' result files and the
 model's current values. A fix that was reported but cannot be seen in the files is recorded as open.
-The formal checks were rerun for this record, and all thirteen pass with no counterexample. Four
-levels have run, the third in part. Two have not. No claim has passed all six, so none is yet a
-contribution.
+The formal checks were rerun for this record, and all thirteen pass with no counterexample. Five
+levels have run, L1 to L4 and L6, the third in part; L5 has not. No claim has passed all six, so
+none is a contribution, and after L6 none is a candidate either: six are applications of prior work
+and six are downgraded to a design, a definition, framing or a judgement.
 
-Nothing here has been tested against a real adversary. The red team was a helper reading the work and
-rerunning its scripts, not an opponent with resources and a motive. The protocol is a design.
+Nothing here has been tested against a real adversary. The red team was a helper reading the work
+and rerunning its scripts, not an opponent with resources and a motive, and the fresh reviewer was a
+referee, not an opponent either. The protocol is a design.
 
 ## How to read the record
 
@@ -30,21 +32,24 @@ The six levels:
 4. **L4, red team**: a helper whose only job was to break each claim
    ([its report](verification/l4-red-team.md#verdicts)).
 5. **L5, Paperwright**: its integrity, reviewer and editor desks, resolved by us.
-6. **L6, fresh reviewer**: a reviewer who has not seen the work.
+6. **L6, fresh reviewer**: a reviewer who had not seen the work, reading the paper in full before
+   this record ([its report](verification/l6-fresh-review.md#verdict)).
 
-The status words. At L1: **new** (the search did not find it), **extends** (the core is prior work; a
-stated, narrow difference was not found), **prior work** (found in substance). "Not found" is a claim
-about the search, not about the world. At L2: **proved**, **proved under assumptions**, **corrected**
-(false or incomplete as first stated, and restated), **false**, **empirical** (no proof applies; an
-experiment decides), **pending**. At L3: **supports**, **mixed**, **against** (the results so far bear
-against the claim, a claimed part or its use), **untested** (no experiment that could test it has
-run), **pending**. At L4: **survives**, **survives with corrections**, **fails**, **cut in part**. At
-L5 and L6 every claim is **pending**.
+The status words. At L1: **new** (the search did not find it), **extends** (the core is prior work;
+a stated, narrow difference was not found), **prior work** (found in substance). "Not found" is a
+claim about the search, not about the world. At L2: **proved**, **proved under assumptions**,
+**corrected** (false or incomplete as first stated, and restated), **false**, **empirical** (no
+proof applies; an experiment decides), **pending**. At L3: **supports**, **mixed**, **against** (the
+results so far bear against the claim, a claimed part or its use), **untested** (no experiment that
+could test it has run), **pending**. At L4: **survives**, **survives with corrections**, **fails**,
+**cut in part**. L6 uses L4's four words, judged against the reviewer's own standing for each claim:
+a claim that **fails** at L6 lost its standing there, and one **cut in part** lost a part to prior
+work. At L5, the one level that has not run, every claim is **pending**.
 
 The standing. A **contribution** has passed all six levels; none has. A **candidate** is alive, with
-levels still to run. **Downgraded** means reduced to a definition, framing, a judgement or a design.
-An **application** is the use of credited prior work on AI, with any result computed inside that use.
-A **cut** claim is gone.
+levels still to run; after L6 none is. **Downgraded** means reduced to a definition, framing, a
+judgement or a design. An **application** is the use of credited prior work on AI, with any result
+computed inside that use. A **cut** claim is gone.
 
 In the attack tables, a resolution is **fixed** (how), **answered** (with what evidence), **conceded**
 (the claim narrowed or cut), or **open**.
@@ -55,18 +60,18 @@ Each cell gives the level's verdict and, after it, a few words of why.
 
 | Claim | L1 prior art | L2 proof | L3 experiments | L4 red team | L5 Paperwright | L6 fresh reviewer | Standing |
 |---|---|---|---|---|---|---|---|
-| [C1, the line](04-claims.md#c1-the-line-tb-m-td-tresp-with-tr-computed-not-chosen) | **prior work**: EASI from 1977, Nitze 1988 | **corrected**: three times; every check passes | **against**: no bounded response time; attempts compound | **cut in part**: (c) cut; (a), (b) corrected | **pending** | **pending** | **application**: (c) cut |
-| [C2, breakout time](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case) | **extends**: less than claimed; relabelled a combination | **proved under assumptions**: monotone inputs; Corollary 2.3 assumes a constant rate | **against**: (a) cut; (c) cut on E18; (b) not shown | **survives with corrections** | **pending** | **pending** | **downgraded**: to an accounting frame |
-| [C3, detection](04-claims.md#c3-detection-as-the-evader-sees-it-the-per-path-evader-minimised-miss) | **prior work**: physical-protection path analysis, interdiction | **corrected**: Theorem 3.2 restricted | **supports**: (c) measured; (b) only illustrated | **survives with corrections** | **pending** | **pending** | **application**: merging rule the only candidate |
-| [C4, loop gain](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound) | **extends**: narrowly; round identity and budget ladder | **corrected**: trigger moved from per-round ratio to K | **against**: interval under-covers; trigger fails | **fails**: as a trigger; (c) cut | **pending** | **pending** | **downgraded**: to a measurement design |
-| [C5, elicited capability](04-claims.md#c5-elicited-capability-with-measured-miss-and-false-alarm-rates-per-named-budget) | **extends**: diagnostic-test statistics credited | **proved**: textbook | **untested**: E3 not run | **survives with corrections**: non-adaptive hiding only | **pending** | **pending** | **candidate**: non-adaptive hiding only |
-| [C6, coupled-gain certificate](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test) | **prior work**: the network small-gain theorem | **proved**: signed case through K+; (c) restates C4 | **against**: no certificate can issue today | **survives with corrections** | **pending** | **pending** | **application**: no certificate while edges unmeasured |
-| [C7, coalition share](04-claims.md#c7-the-coalition-share-derived-from-the-response-time) | **prior work**: hardwired-pause threshold; cartel leniency | **corrected**: (b) false as stated; drift, repeated play added | **against**: in-run drift met its refuter; (a) corrected, phi added | **survives with corrections**: (b), (c) downgraded | **pending** | **pending** | **application**: of C1 |
-| [C8, footprint floor](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool) | **extends**: narrowly; the bound and crossing years | **corrected**: full utilisation, then FP8 | **supports**: (a) and (c), on E8 alone | **cut in part**: (b) cut | **pending** | **pending** | **candidate**: (b) cut |
-| [C9, licence clock](04-claims.md#c9-the-height-clocked-licence-valid-only-once-logged) | **prior work**: part by part; assembly not found | **corrected**: P2 false as stated, now the counter's | **mixed**: supports P2; the rate floor dominated | **survives with corrections**: C9.4 unanswered | **pending** | **pending** | **application**: engineering |
-| [C10, matched-budget endpoint](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget) | **extends**: matched time and money remain | **empirical**: t* well defined; (c) needs an unsaturated battery | **against**: (b) on the one analogue; (c) only until a battery saturates | **survives with corrections**: as a definition only | **pending** | **pending** | **downgraded**: to a definition, (c) narrowed |
-| [C11, closure by input](04-claims.md#c11-closure-judged-input-by-input-with-narrow-optimisers-inside-the-loop) | **extends**: narrowly; task-based automation model | **corrected**: closures add, weighted by shares | **untested**: E4(d), E4(e) not run | **survives with corrections**: as framing until E4(d) | **pending** | **pending** | **downgraded**: to framing until E4(d) |
-| [C12, the pathway ranking](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line) | **extends**: as an application of path analysis | **empirical**: a judgement, not a theorem | **mixed**: E4, E5, E1, E2, E11, E9, E18 in part | **survives with corrections**: as a judgement | **pending** | **pending** | **application**: [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) pairs fixed |
+| [C1, the line](04-claims.md#c1-the-line-tb-m-td-tresp-with-tr-computed-not-chosen) | **prior work**: EASI from 1977, Nitze 1988 | **corrected**: three times; every check passes | **against**: no bounded response time; attempts compound | **cut in part**: (c) cut; (a), (b) corrected | **pending** | **cut in part**: (b) is the partial-factor format of structural design | **application**: (c) cut; (b) prior work |
+| [C2, breakout time](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case) | **extends**: less than claimed; relabelled a combination | **proved under assumptions**: monotone inputs; Corollary 2.3 assumes a constant rate | **against**: (a) cut; (c) untestable on public data, so cut; (b) not shown | **survives with corrections** | **pending** | **survives with corrections**: (c) untestable as stated, not cut by a backtest | **downgraded**: to an accounting frame |
+| [C3, detection](04-claims.md#c3-detection-as-the-evader-sees-it-the-per-path-evader-minimised-miss) | **prior work**: physical-protection path analysis, interdiction | **corrected**: Theorem 3.2 restricted | **supports**: (c) estimated, under a transfer; (b) only illustrated | **survives with corrections** | **pending** | **cut in part**: the merging rule is the textbook bound on a union | **application**: the merging rule prior work |
+| [C4, loop gain](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound) | **extends**: narrowly; round identity and budget ladder | **corrected**: trigger moved from per-round ratio to K | **against**: interval under-covers; trigger fails at the only calibrated proxy | **fails**: as a trigger; (c) cut | **pending** | **survives with corrections**: fails at a proxy, untested at real round noise | **downgraded**: to a measurement design |
+| [C5, elicited capability](04-claims.md#c5-elicited-capability-with-measured-miss-and-false-alarm-rates-per-named-budget) | **extends**: diagnostic-test statistics credited | **proved**: textbook | **untested**: E3 not run | **survives with corrections**: non-adaptive hiding only | **pending** | **fails**: not a candidate; untested, as C11 is | **downgraded**: to an untested design |
+| [C6, coupled-gain certificate](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test) | **prior work**: the network small-gain theorem | **proved**: signed case through K+; (c) restates C4 | **against**: no certificate can issue today | **survives with corrections** | **pending** | **survives**: E11 shows nothing can issue | **application**: no certificate while edges unmeasured |
+| [C7, coalition share](04-claims.md#c7-the-coalition-share-derived-from-the-response-time) | **prior work**: hardwired-pause threshold; cartel leniency | **corrected**: (b) false as stated; drift, repeated play added | **against**: in-run drift met its refuter; (a) corrected, phi added | **survives with corrections**: (b), (c) downgraded | **pending** | **survives with corrections**: vacuous at fixed algorithms on its own inputs | **application**: of C1 |
+| [C8, footprint floor](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool) | **extends**: narrowly; the bound and crossing years | **corrected**: full utilisation, then FP8 | **untested**: computed, not tested; E8 is arithmetic on ledger inputs | **cut in part**: (b) cut | **pending** | **fails**: not a candidate; (a) cannot fail, (c) rests on an assumed pool | **application**: with calculations; (b) cut |
+| [C9, licence clock](04-claims.md#c9-the-height-clocked-licence-valid-only-once-logged) | **prior work**: part by part; assembly not found | **corrected**: P2 false as stated, now the counter's | **mixed**: supports P2; the rate floor dominated | **survives with corrections**: C9.4 unanswered | **pending** | **survives**: E25 the strongest empirical check | **application**: engineering |
+| [C10, matched-budget endpoint](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget) | **extends**: matched time and money remain | **empirical**: t* well defined; (c) needs an unsaturated battery | **against**: (c) only until a battery saturates; (b) untested | **survives with corrections**: as a definition only | **pending** | **survives with corrections**: E21's flip tests the rank named, not (b) | **downgraded**: to a definition, (c) narrowed |
+| [C11, closure by input](04-claims.md#c11-closure-judged-input-by-input-with-narrow-optimisers-inside-the-loop) | **extends**: narrowly; task-based automation model | **corrected**: closures add, weighted by shares | **untested**: E4(d), E4(e) not run | **survives with corrections**: as framing until E4(d) | **pending** | **survives**: Theorem 11.2 right; the test has not run | **downgraded**: to framing until E4(d) |
+| [C12, the pathway ranking](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line) | **extends**: as an application of path analysis | **empirical**: a judgement, not a theorem | **mixed**: E4, E5, E1, E2, E11, E9, E18 in part | **survives with corrections**: as a judgement | **pending** | **fails**: no pair fixed by evidence; theft of weights not ranked | **downgraded**: to a judgement; [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) pairs Pareto-ordered under our grades |
 
 ## C1. The line
 
@@ -79,26 +84,34 @@ Each cell gives the level's verdict and, after it, a few words of why.
   (Propositions 1.7 and 1.8) and for repeated attempts (Proposition 1.9); and after E6, for the drift
   a run absorbs while it runs (Corollary 1.6a). `c1_margin.py` passes on every correction.
   Propositions 1.7 and 1.8 are not proved for a run whose speed rises with drift.
-- **L3** (E5, E24, E6, E22): against (c). E5 puts T_d on undeclared paths at
-  [31 years](numbers.md#e5-td-site-now-years) to [32 years](numbers.md#e5-td-pool-years). In E24, of
+- **L3** (E5, E24, E6, E22): against (c). E5 puts T_d on undeclared paths at a median of
+  [31 years](numbers.md#e5-td-site-now-years) to [32 years](numbers.md#e5-td-pool-years), central
+  estimates under a transfer from weapons programmes, not bounds (E5's Weibull fit gives
+  [24 years](numbers.md#e5-td-weibull-years)). In E24, of
   [8 findings](numbers.md#e24-halt-findings) made while the party was in its treaty,
-  [25%](numbers.md#e24-halt-share-never) were never followed by a halt, so the record has no high
-  quantile of response time for the line to use. In E6, repeated attempts compound when caught
-  members are re-admitted. E22 bounds the supply part of phi, the fall in T_b before the next check,
-  at [2.5](numbers.md#e22-phi-member-year) a year for the fleet; with drift between checks at the
-  central rate, Part II puts phi at [2.1](numbers.md#prot-phi-quarter) a quarter and
-  [6.8](numbers.md#prot-phi-year) a year ([the response time](06-protocol.md#response-time)). The
-  margin covers estimation error only, so a declared path must show
-  [4.2 years](numbers.md#prot-line-declared-phi-quarter) when checked at each renewal and
-  [13.7 years](numbers.md#prot-line-declared-phi-year) when checked yearly, against a line of
-  [2.0 years](numbers.md#prot-line-declared) without phi.
+  [25%](numbers.md#e24-halt-share-never) were not followed by a halt within what the sources cover,
+  so the record reaches no high quantile of response time for the line to use. In E6, repeated
+  attempts compound when caught members are re-admitted. E22 bounds the supply part of phi, the fall
+  in T_b before the next check, at [2.5](numbers.md#e22-phi-member-year) a year for the fleet; with
+  drift between checks at the central rate, Part II puts phi at [2.1](numbers.md#prot-phi-quarter) a
+  quarter and [6.8](numbers.md#prot-phi-year) a year
+  ([the response time](06-protocol.md#response-time)). The margin covers estimation error only, so a
+  declared path must show [4.2 years](numbers.md#prot-line-declared-phi-quarter) when checked at
+  each renewal and [13.7 years](numbers.md#prot-line-declared-phi-year) when checked yearly, against
+  a line of [2.0 years](numbers.md#prot-line-declared) without phi.
 - **L4** ([report](verification/l4-red-team.md#c1)): one fatal attack and five serious ones. (c) is
   cut: under Part II's deadlock rule every response waited on a political decision (C1.5). The per-path
   test admitted a holding that a switching evader broke (C1.1), the guarantee holds per attempt only
   (C1.4), and while the pool is open the line separates no one (C1.2).
+- **L6** ([M5](verification/l6-fresh-review.md#major)): cut in part. (b), the margin as an error
+  budget, is the partial-factor format of structural design, where a factor on the load and one on
+  the resistance multiply into the overall margin [@jrc2008eurocodes]; L1 had named that literature
+  without opening it. Accepted: (b) is prior work, and C1 is an application only. L6 also found E5's
+  detection times called bounds (M1) and E24's censored finding called never halted (m2); both are
+  corrected above.
 
 Standing: [an application of prior work](04-claims.md#c1-the-line-tb-m-td-tresp-with-tr-computed-not-chosen),
-with (c) cut and (b) a small lemma still to face L5 and L6.
+with (c) cut and (b) prior work (L6).
 
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
@@ -107,7 +120,7 @@ with (c) cut and (b) a small lemma still to face L5 and L6.
 | C1.3 | Serious | Claims writer | Fixed in the statement: T_b is reported conditional on the agreed C*, and m covers estimation error only. |
 | C1.4 | Serious | Formal part; claims writer | Fixed in the text: Proposition 1.9 states the guarantee per attempt, and Part II requires halts to return chips and attempts to be bounded; no mechanism yet bounds them, as the formal file says. |
 | C1.5 | Fatal for (c) | Claims writer; protocol writer | Conceded: (c) is cut; Part II moved to lapse by default, which leaves a licensor's judgement with no drilled decision time. |
-| C1.6 | Minor | E24 | Fixed: E24 leads with the [8 findings](numbers.md#e24-halt-findings) made in treaty, [25%](numbers.md#e24-halt-share-never) never halted, and keeps findings after a withdrawal apart. |
+| C1.6 | Minor | E24 | Fixed: E24 leads with the [8 findings](numbers.md#e24-halt-findings) made in treaty, [25%](numbers.md#e24-halt-share-never) not halted within what the sources cover (wording corrected at L6, m2), and keeps findings after a withdrawal apart. |
 | C1.7 | Serious | Claims writer | Conceded: the statement says m does not cover error a misreporting party introduces; that error is not priced. |
 
 ## C2. Breakout time
@@ -126,24 +139,31 @@ with (c) cut and (b) a small lemma still to face L5 and L6.
   [1,512](numbers.md#e1-algo-annual-subset-max) a year. On the full sample drift falls with scale,
   [-0.34 OOM a year per OOM](numbers.md#e1-drift-per-oom), the case where two evaluations fail, and the
   sign is not robust across samples. No interval tabulated in advance can hold on public data.
-- **L3** (E18): against (c), which is cut, and (b) not shown. In the backtest a model at or below a then-frontier
-  record's compute matched it after [0.48 years](numbers.md#e18-bt-h0-lo) to
+- **L3** (E18): against the constant-rate model behind Corollary 2.3; (c) is cut as untestable on
+  public data, and (b) not shown. In the backtest a model at or below a then-frontier record's
+  compute matched it after [0.48 years](numbers.md#e18-bt-h0-lo) to
   [1.52 years](numbers.md#e18-bt-h0-hi), where the expression predicts no delay, and the
   [4 catch-ups](numbers.md#e18-bt-events) below a record's compute imply yearly rates from
   [1.91](numbers.md#e18-bt-gamma-lo) to [1,125](numbers.md#e18-bt-gamma-hi): the leak comes in jumps
-  that no constant rate follows. Only [3 points](numbers.md#e18-bt-inside-part1) of seven fall inside
-  the expression's exact interval at Part I's bracket. The open-closed lag, (c)'s stated target, cannot
-  be predicted: on [0 days](numbers.md#e18-oc-evaluable-days) of Epoch's window do both models compared
-  have a public compute estimate. (b): in all [8 cases](numbers.md#e18-b-sep-fails-line) of holding
-  class and rate range, the expression and a single multiplier separate only where the cap already
-  fails the line, so the difference never changes a decision; that is arithmetic on Part I's ranges,
-  not a measurement.
+  that no constant rate follows. Only [3 points](numbers.md#e18-bt-inside-part1) of seven fall
+  inside the expression's exact interval at Part I's bracket. The open-closed lag, (c)'s stated
+  target, cannot be tested on public data: on [0 days](numbers.md#e18-oc-evaluable-days) of Epoch's
+  window do both models compared have a public compute estimate, so the backtest tested a
+  substitute, catch-ups to records (L6). (b): in all [8 cases](numbers.md#e18-b-sep-fails-line) of
+  holding class and rate range, the expression and a single multiplier separate only where the cap
+  already fails the line, so the difference never changes a decision; that is arithmetic on Part I's
+  ranges, not a measurement.
 - **L4** ([report](verification/l4-red-team.md#c2)): survives with corrections. Seven attacks were
   rated serious, one of them only for Part II; the strongest came from E1's own fit (C2.2, C2.3).
+- **L6** ([m4](verification/l6-fresh-review.md#minor)): survives with corrections. It agrees with
+  the standing, and finds (c) untestable as stated rather than cut by a backtest: its target has
+  [0 days](numbers.md#e18-oc-evaluable-days) to test on. Accepted: (c) is cut as untestable on
+  public data.
 
 Standing: [downgraded to an accounting frame](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case),
-credited to prior work. (a) is cut, (c) is cut on E18's backtest, and (b) shows a gain only where it decides
-nothing, so C2 claims nothing. E15 and E10, with the distillation uplift, could reopen (b).
+credited to prior work. (a) is cut, (c) is cut as untestable on public data, with E18's substitute
+backtest against the constant-rate model, and (b) shows a gain only where it decides nothing, so C2
+claims nothing. E15 and E10, with the distillation uplift, could reopen (b).
 
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
@@ -154,7 +174,7 @@ nothing, so C2 claims nothing. E15 and E10, with the distillation uplift, could 
 | C2.5 | Serious | Claims writer | Fixed in the statement: distillation enters at the teacher's level plus an uplift term, which E10 is to measure. |
 | C2.6 | Serious for Part II; minor for C2 | Protocol writer | Fixed in Part II: placement by compute now adds E1's [2.8 OOM](numbers.md#e1-gpqa-overlap-oom) overlap, an allowance from one benchmark that Part II still calls a weak fallback. |
 | C2.7 | Serious | Claims writer; protocol writer | Conceded: the allowance for undeclared gains is stated unsized, the declared path's T_b is reported conditional on it, and Part II calls a tabulated T_b an upper bound for a party that hides its algorithms. |
-| C2.8 | Minor | Claims writer; E18 | Answered in part: E18 has run; (c) is cut on it, (b) is not shown, and C2 is downgraded; E15 has not run. |
+| C2.8 | Minor | Claims writer; E18 | Answered in part: E18 has run; (c) is cut, untestable on public data (L6), (b) is not shown, and C2 is downgraded; E15 has not run. |
 
 ## C3. Detection as the evader sees it
 
@@ -167,14 +187,25 @@ nothing, so C2 claims nothing. E15 and E10, with the distillation uplift, could 
   of several dimensions and now needs a scalar latent or independent components; `c3_evader.py`
   covers vector latents and records the counterexample.
 - **L3** (E5): supports (c). The untraced pool's T_d is [299](numbers.md#e5-td-ratio) times the
-  declared path's [39.0 days](numbers.md#e5-td-declared-days), which rests on chip sampling, a design
-  figure. E5 only illustrates (b), which holds by construction. The fitted discovery rate,
-  [0.094/yr](numbers.md#e5-hazard), is an upper bound on a careful evader's.
+  declared path's [39.0 days](numbers.md#e5-td-declared-days), which rests on chip sampling, a
+  design figure. E5 only illustrates (b), which holds by construction. The fitted discovery rate,
+  [0.094/yr](numbers.md#e5-hazard), overstates a careful evader's within its record, by an amount
+  the record cannot measure; the detection times built on it are central estimates under a transfer
+  from weapons programmes, not lower bounds, and E5's Weibull fit gives
+  [24 years](numbers.md#e5-td-weibull-years) against the constant rate's
+  [32 years](numbers.md#e5-td-hist-years) (L6, M1).
 - **L4** ([report](verification/l4-red-team.md#c3)): survives with corrections, after six serious
   attacks on the statement, the theorem and E5.
+- **L6** ([M5](verification/l6-fresh-review.md#major)): cut in part. The merging rule is the
+  textbook bound on a union, and treating channels with a shared cause as one is the common-cause
+  practice of risk assessment [@mosleh1998nureg5485]; L1 had itself named Fréchet's bounds as the
+  rule's source. Accepted: the rule is prior work, and C3 is an application only. Fréchet's 1935
+  paper is named, not cited: its text could not be opened. L6 also found E5's detection times called
+  lower bounds and measurements (M1); the claims file, Part I and Part II now give them as central
+  estimates under a transfer.
 
 Standing: [an application of prior work](04-claims.md#c3-detection-as-the-evader-sees-it-the-per-path-evader-minimised-miss),
-with the merging rule as its only candidate extension.
+with the merging rule prior work too (L6).
 
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
@@ -182,7 +213,7 @@ with the merging rule as its only candidate extension.
 | C3.2 | Serious (for L3) | E5 | Fixed: the share that held by construction is removed and its condition asserted as a code check; the memo-style product, 10 to the power [-14](numbers.md#e5-memo-log10-miss-1y), is labelled an illustration, not evidence. |
 | C3.3 | Serious | E5 | Fixed: cloud and distillation get no T_d and are missed with certainty, the clock is stated as a programme's start, and under the Weibull fit a first-year discovery has chance [2.6%](numbers.md#e5-weibull-detect-1y). |
 | C3.4 | Serious for the theorem; minor for the claim | Formal part | Fixed: Theorem 3.2 needs a scalar latent or independent components, and its check covers vector latents and the counterexample. |
-| C3.5 | Serious | E5 | Fixed: the fitted rate is labelled an upper bound on a careful evader's, and the detection times lower bounds; the size of the bias cannot be measured from this record. |
+| C3.5 | Serious | E5 | Fixed, then corrected at L6 (M1): the fitted rate is said to overstate a careful evader's within its record, by an amount the record cannot measure; the detection times, first called lower bounds, are now central estimates under a transfer, with the Weibull fit's beside them. |
 | C3.6 | Minor | E5 | Fixed: diversion detection is merged with imagery and intelligence, which raises one undeclared site's miss to [40%](numbers.md#e5-pmiss-site-merged-1y). |
 | C3.7 | Serious | Claims writer | Conceded: the statement says P omits stolen weights, open weights and the switching strategy, and Part II lists them as paths; E5 models none. |
 | C3.8 | Minor | Claims writer | Open: the claim's own objection, that a state controls its insiders, is unchanged. |
@@ -196,21 +227,26 @@ with the merging rule as its only candidate extension.
   and the product bound are proved. The trigger was corrected from the per-round ratio, which tends to 1
   in every subcritical loop, to K, and the old bound on a loop's total gain was withdrawn. Corollary
   4.5a: the K rule fires wherever the rule on r does.
-- **L3** (E4, final run; E9): against, for the measurement and the trigger alike. After
+- **L3** (E4, final run; E9): against, for the measurement and the trigger alike, at the only
+  calibrated noise, a human speedrun competition's record-to-record spread. After
   [5 rounds](numbers.md#claim-d2-rounds) at each budget the 90% interval covers r
   [82%](numbers.md#e4-cov-n5) of the time at the corrected median, and
   [77%](numbers.md#e4-cov-n5-xml) with the exact likelihood. On data from the exact law the
-  first-order fit returns [0.82](numbers.md#e4-level1-bias) of the true r, on the unsafe side. At the
-  corrected median the K rule fires in [88%](numbers.md#e4-k-fa-n5) of runs, and at the 95th
-  percentile only [2%](numbers.md#e4-k-fire-gap-n5) more often, within Monte Carlo error. E9 finds that
-  no data identifies compute's share of research input, and the speedrun's r is withdrawn as not
-  identified.
+  first-order fit returns [0.82](numbers.md#e4-level1-bias) of the true r, on the unsafe side. At
+  the corrected median the K rule fires in [88%](numbers.md#e4-k-fa-n5) of runs, and at the 95th
+  percentile only [2%](numbers.md#e4-k-fire-gap-n5) more often, within Monte Carlo error. E9 finds
+  that no data identifies compute's share of research input, and the speedrun's r is withdrawn as
+  not identified.
 - **L4** ([report](verification/l4-red-team.md#c4)): fails as a trigger (C4.1), which E4's final run
   confirms for the rule on r and the K rule.
+- **L6** ([m5](verification/l6-fresh-review.md#minor)): survives with corrections. It agrees with
+  the downgrade, and would say the trigger fails at the only calibrated proxy and is untested at
+  real round noise. Accepted as wording; the standing does not move.
 
 Standing: [downgraded to a measurement design](04-claims.md#c4-a-loop-gain-estimator-at-fixed-inputs-binding-at-its-confidence-bound).
-(c), the trigger, is cut, and the identity and budget ladder are not a candidate contribution. E4(b),
-on real staged rounds, decides whether C4 reopens or is cut.
+(c), the trigger, is cut: it fails at the only calibrated proxy and is untested at real round noise
+(L6). The identity and budget ladder are not a candidate contribution. E4(b), on real staged rounds,
+decides whether C4 reopens or is cut.
 
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
@@ -237,9 +273,13 @@ on real staged rounds, decides whether C4 reopens or is cut.
   non-adaptive hiding inside the sampled population. An audit's AUC fell from
   [0.978](numbers.md#def-adaptive-auc-before) to [0.560](numbers.md#def-adaptive-auc-after) against
   adaptive organisms (C5.2), and no organism can hide a capability above expert level (C5.3).
+- **L6** ([M6](verification/l6-fresh-review.md#major)): fails as a candidate. E3 has not run, the
+  formal part is textbook, C11 in the same position is downgraded, the closest prior work
+  [@hofstatter2025elicitationgame] was not cited in the paper, and the population gap applies at
+  every capability level. Accepted: C5 is downgraded to an untested design.
 
-Standing: [a candidate](04-claims.md#c5-elicited-capability-with-measured-miss-and-false-alarm-rates-per-named-budget),
-narrowed to non-adaptive hiding.
+Standing: [downgraded to an untested design](04-claims.md#c5-elicited-capability-with-measured-miss-and-false-alarm-rates-per-named-budget)
+(L6), valid at most against non-adaptive hiding inside the sampled population.
 
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
@@ -269,6 +309,8 @@ narrowed to non-adaptive hiding.
   share of research input stays below [0.689](numbers.md#e11-epsk-flip).
 - **L4** ([report](verification/l4-red-team.md#c6)): survives with corrections. With unmeasured,
   self-reported edges the certificate carries no probability (C6.1).
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  survives; it agrees with the standing.
 
 Standing: [an application of prior work](04-claims.md#c6-the-coupled-gain-certificate-as-a-treaty-test);
 no certificate issues while any edge is unmeasured, and E11 finds none can issue today.
@@ -276,7 +318,7 @@ no certificate issues while any edge is unmeasured, and E11 finds none can issue
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
 | C6.1 | Serious | Claims writer | Fixed in the statement: no certificate issues while any edge is a stated range or a party's own report; E11 confirms nothing issues under that rule. |
-| C6.2 | Serious | Claims writer | Fixed in the statement: rho* is fixed by agreement until its inputs are measured; E11 judges at the most lenient value, so its failures hold for any drift. |
+| C6.2 | Serious | Claims writer | Fixed in the statement: omega, the certificate's threshold, is fixed by agreement until its inputs are measured; E11 judges at the most lenient value, so its failures hold for any drift. |
 | C6.3 | Serious | Claims writer; protocol writer | Fixed in the statement: ungated edges are listed and bounded, or the certificate says it omits them, as Part II does for weight theft and espionage. |
 | C6.4 | Minor | Formal part | Conceded: the formal file calls (c) C4's statement in matrix form; E11 finds it holds only below a compute share of [0.689](numbers.md#e11-epsk-flip), and E9 that the [1.07](numbers.md#dyn-r-lm-hi-corrected) behind it leaves compute's growth out, so (c) holds under that correction or at a low compute share, not in general. |
 | C6.5 | Minor | Claims writer | Answered: E11 has run, and finds no certificate can issue today. |
@@ -301,19 +343,25 @@ no certificate issues while any edge is unmeasured, and E11 finds none can issue
   phi for the fleet, [1.65](numbers.md#e22-phi-member-quarter) a quarter and
   [2.5](numbers.md#e22-phi-member-year) a year; with the central drift between checks multiplied in,
   Part II's phi is [2.1](numbers.md#prot-phi-quarter) at each licence renewal and
-  [6.8](numbers.md#prot-phi-year) a year. With that phi at each renewal on top of in-run drift at the
-  central rate, Part II's share is [58%](numbers.md#prot-coalition-share-inrun-phi), against
-  [100%](numbers.md#prot-coalition-share-inrun) without it, for a coalition that grows no faster than
-  the fleet; one that takes more than its share of new chips must hold less
+  [6.8](numbers.md#prot-phi-year) a year. With that phi at each renewal on top of in-run drift at
+  the central rate, Part II's share is [58%](numbers.md#prot-coalition-share-inrun-phi), against
+  [100%](numbers.md#prot-coalition-share-inrun) without it, for a coalition that grows no faster
+  than the fleet; one that takes more than its share of new chips must hold less
   ([the coalition share](06-protocol.md#the-coalition-share-derived-from-the-response-time)). E6's
-  staged share, [69%](numbers.md#e6-staged-share), already counts supply: its coalition buys all world
-  chip sales at the 2025 rate, an upper bound for one coalition, while algorithms improve between
-  declarations. It differs from Part II's [58%](numbers.md#prot-coalition-share-inrun-phi) in budget (the paper's bullish one), margin (none), T_r
-  (illustrative) and purchase rate (all new chips, against the fleet's growth). All of it rests on the
-  one published breakout budget and the illustrative T_r.
+  staged share, [69%](numbers.md#e6-staged-share), already counts supply: its coalition buys all
+  world chip sales at the 2025 rate, an upper bound for one coalition, while algorithms improve
+  between declarations. It differs from Part II's [58%](numbers.md#prot-coalition-share-inrun-phi)
+  in budget (the paper's bullish one), margin (none), T_r (illustrative) and purchase rate (all new
+  chips, against the fleet's growth). All of it rests on the one published breakout budget and the
+  illustrative T_r.
 - **L4** ([report](verification/l4-red-team.md#c7)): survives with corrections, (b) and (c)
   downgraded. The protection exists only where rewards exceed beta times a decisive advantage, a region
   the work calls empty (C7.1), and (c) is a property of one assumed budget (C7.3).
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  survives with corrections. It agrees with the standing, and asks that the claim say it is vacuous
+  on its own inputs: at fixed algorithms on the declared path s* is
+  [100%](numbers.md#prot-coalition-share-declared). Accepted: the claim says so, and that s* binds
+  only with drift, growth between renewals or a smaller assumed budget.
 
 Standing: [an application of C1](04-claims.md#c7-the-coalition-share-derived-from-the-response-time),
 with (b) empty for decisive-advantage payoffs and s* lowered for in-run drift and for growth between
@@ -339,23 +387,29 @@ declarations.
   corrected twice, for utilisation and then for precision; `c8_floor.py` passes on both. For a
   [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run under a pause the bound is
   [800 H100e](numbers.md#formal-floor-bound-1e26-pause).
-- **L3** (E8): supports (a) and (c). For chip accounting to resolve such a run the untraced pool must
-  shrink [1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold. The pool is
-  [340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the floor at BF16 and the compute smuggled
-  into one country [230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50) times, each doubled for an
-  FP8 run; the statement now sets the bound's [824](numbers.md#formal-pool-over-floor-bound) against
-  those ranges.
+- **L3** (E8): computed, not tested (L6): E8 is arithmetic on ledger inputs, so it shows what (a)
+  and (c) imply but cannot support them. For chip accounting to resolve such a run the untraced pool
+  must shrink [1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold. At an assumed pool of
+  [1,000,000 chips](numbers.md#phys-chips-unaccounted), the pool is
+  [340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the floor at BF16 and the compute
+  smuggled into one country [230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50) times, each
+  doubled for an FP8 run; the statement now sets the bound's
+  [824](numbers.md#formal-pool-over-floor-bound) against them.
 - **L3** (E22): no evidence either way. E22's envelope is an upper bound on what supply could make,
   so it can never put the pool below the floor, and (c)'s refuter cannot fire on it. It shows only
   that supply leaves room for the pool: the room China's domestic chain leaves for undeclared output
   is [3,549](numbers.md#e22-china-slack-over-floor) times the floor. A test that cannot fail is not
-  evidence, so C8's L3 rests on E8 alone.
+  evidence, so C8's L3 rests on E8 alone, which computes rather than tests.
 - **L4** ([report](verification/l4-red-team.md#c8)): survives with corrections, with (b) cut because
   it could not fail (C8.2). The bound had been computed at BF16 while FP8 training at scale is in
   production (C8.1).
+- **L6** ([M7](verification/l6-fresh-review.md#major)): fails as a candidate. (a) cannot fail, being
+  a sum, the ground on which (b) was cut; (c) rests on an assumed pool with a spread we chose; the
+  crossing years are trend extrapolations; and E8 computes rather than tests. Accepted: C8 is an
+  application with calculations, and the pool's multiple is given as a point at an assumed pool.
 
-Standing: [a candidate](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool),
-with (b) cut and its experimental support from E8 alone.
+Standing: [an application with calculations](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool)
+(L6), with (b) cut and no experimental support: E8 computes on ledger inputs.
 
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
@@ -384,6 +438,9 @@ with (b) cut and its experimental support from E8 alone.
   Withheld log leaves are asserted in the harness, not measured, and no hardware prototype exists.
 - **L4** ([report](verification/l4-red-team.md#c9)): survives with corrections. One secure element
   carrying every chip (C9.4) is unanswered.
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  survives; it agrees with the standing, and calls E25 on the real header chain the strongest
+  empirical check in the work.
 
 Standing: [an application of prior work](04-claims.md#c9-the-height-clocked-licence-valid-only-once-logged),
 claimed as engineering, with the rate floor dominated.
@@ -408,19 +465,20 @@ claimed as engineering, with the rate floor dominated.
 - **L3** (E1): [5 clusters](numbers.md#e1-clusters-baselined) have some human comparison in public
   data and [3 clusters](numbers.md#e1-clusters-verdict) a bar a model wins or loses. None is an
   organisation at matched budget, so (b) cannot be tested on public data.
-- **L3** (E21, its public part): against (b) on the one analogue, and (c) downgraded. No battery
-  compares with an organisation; of [3 clusters](numbers.md#e21-clusters) with a public human
-  comparison, t* has an interval in [2 clusters](numbers.md#e21-clusters-tstar). On MLE-bench the
-  verdict flips between the median and the gold-medal entrant in
-  [45.3%](numbers.md#e21-mle-flip-best) of competitions, so it changes with the comparison within one
-  class of entrant: (b)'s refuter, met by contest entrants, the nearest thing to an organisation any
-  battery has. t* rises with release date, a rank correlation of [0.57](numbers.md#e21-rebench-rho) on
-  RE-Bench and [0.91](numbers.md#e21-cyber-rho) on Cybench, but it stops at each battery's ceiling: on
-  RE-Bench the best model is at the score's cap in every environment at
-  [32 h](numbers.md#cog-rebench-budget-long) in [99.4%](numbers.md#e21-rebench-cap-32h) of resamples,
-  so its t* is censored above [32.0 h](numbers.md#e21-rebench-tstar-best), and on Cybench t* cannot be
-  measured above [24.9 h](numbers.md#e21-cyber-ceiling-h). So (c) holds only while a battery's
-  baselines last. E21's live part, with teams, is blocked.
+- **L3** (E21, its public part): (b) untested, and (c) downgraded. No battery compares with an
+  organisation; of [3 clusters](numbers.md#e21-clusters) with a public human comparison, t* has an
+  interval in [2 clusters](numbers.md#e21-clusters-tstar). On MLE-bench the best entry beats the
+  median entrant in [71.1%](numbers.md#e21-mle-median-best) of competitions and the gold threshold
+  in [25.8%](numbers.md#e21-mle-gold-best), so the verdict flips in
+  [45.3%](numbers.md#e21-mle-flip-best), just the difference of the two: it depends on the rank
+  named, could not have failed to appear, and does not test (b) (L6). t* rises with release date, a
+  rank correlation of [0.57](numbers.md#e21-rebench-rho) on RE-Bench and
+  [0.91](numbers.md#e21-cyber-rho) on Cybench, but it stops at each battery's ceiling: on RE-Bench
+  the best model is at the score's cap in every environment at
+  [32 h](numbers.md#cog-rebench-budget-long) in [99.4%](numbers.md#e21-rebench-cap-32h) of
+  resamples, so its t* is censored above [32.0 h](numbers.md#e21-rebench-tstar-best), and on Cybench
+  t* cannot be measured above [24.9 h](numbers.md#e21-cyber-ceiling-h). So (c) holds only while a
+  battery's baselines last. E21's live part, with teams, is blocked.
 - **L3** (E2): tests neither (b) nor (c). METR's time horizons compare an agent with one person's time
   on single tasks, not with an organisation at matched budget, so E2 is not t*. It meets the same
   ceiling: the latest model's 50% horizon, [1,045 min](numbers.md#e2-latest-p50), already lies above
@@ -429,6 +487,10 @@ claimed as engineering, with the rate floor dominated.
   suite have a human baseline.
 - **L4** ([report](verification/l4-red-team.md#c10)): survives as a definition only. The endpoint
   cannot warn (C10.1).
+- **L6** ([m3](verification/l6-fresh-review.md#minor)): survives with corrections. It agrees with
+  the standing, and reads E21's flips as the verdict depending on the rank named, not as (b)'s
+  refuter met. Accepted, checked against E21's code: the flip share is the median share minus the
+  gold share, both rank thresholds, so (b) is untested, not against.
 
 Standing: [downgraded to a definition](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget),
 with (c) narrowed to "while the battery's baselines last" and "without saturating" withdrawn.
@@ -439,7 +501,7 @@ with (c) narrowed to "while the battery's baselines last" and "without saturatin
 | C10.2 | Serious for the sentence; minor for the conclusion | E1 | Fixed: E1 counts by a search of the archive's columns, [5 clusters](numbers.md#e1-clusters-baselined) with any human comparison and [3 clusters](numbers.md#e1-clusters-verdict) with a won-or-lost bar. |
 | C10.3 | Minor | Claims writer | Fixed in the statement: the verdict is stated under both matches, and the grid of budgets is fixed in advance. |
 | C10.4 | Minor | Claims writer | Open: listed in the results; the statement is unchanged. |
-| C10.5 | Minor | Claims writer; E21 | Answered: E21's public part has run, against (b) on the one analogue and with (c) downgraded to a battery's life; the live part is blocked. |
+| C10.5 | Minor | Claims writer; E21 | Answered: E21's public part has run, leaving (b) untested (L6) and (c) downgraded to a battery's life; the live part is blocked. |
 
 ## C11. Closure by input
 
@@ -452,6 +514,8 @@ with (c) narrowed to "while the battery's baselines last" and "without saturatin
 - **L3**: E4(d) and E4(e) have not run.
 - **L4** ([report](verification/l4-red-team.md#c11)): survives as framing until E4(d). Under the safe
   bound the decomposition reduces to holding every input together, which is prior work (C11.3).
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  survives; it agrees with the standing. Theorem 11.2 is right, and the test has not run.
 
 Standing: [downgraded to framing](04-claims.md#c11-closure-judged-input-by-input-with-narrow-optimisers-inside-the-loop)
 until E4(d) decides.
@@ -471,31 +535,42 @@ until E4(d) decides.
   Bostrom's 2014 chapter on paths to superintelligence was not opened.
 - **L2** ([formal file](05-formal.md#c12-the-ranking-what-can-be-proved)): a judgement, not a theorem;
   necessity within a horizon follows from the runaway condition.
-- **L3**: mixed. E5 keeps undeclared compute's discovery rate far from the memo's placeholder, but that
-  refuter needed a [12.8](numbers.md#e5-memo-over-hazard)-fold error to fire. AI-credited records are
-  [1.1%](numbers.md#e4-ai-share) of the speedrun's log speedup. E1 leaves compute's share of
-  capability growth on Epoch's index unidentified, from [18%](numbers.md#e1-compute-share-subset-min)
-  to [63%](numbers.md#e1-compute-share-subset-max) across samples; that is a share of capability
-  growth, not compute's share of research input, which E9 finds no data identifies. In E11 no pathway's gate, cut alone,
-  issues the certificate with honest bounds ([0 pathways](numbers.md#e11-pathways-alone-honest) do);
-  the sets that issue it join several pathways' gates, which fits a top the evidence does not order.
-  E9's one frontier case gives a gain at fixed compute of [0.29](numbers.md#e9-openai-k-fixed) but r of
+- **L3**: mixed. E5 keeps undeclared compute's discovery rate far from the memo's placeholder, but
+  that refuter needed a [12.8](numbers.md#e5-memo-over-hazard)-fold error to fire. AI-credited
+  records are [1.1%](numbers.md#e4-ai-share) of the speedrun's log speedup. E1 leaves compute's
+  share of capability growth on Epoch's index unidentified, from
+  [18%](numbers.md#e1-compute-share-subset-min) to [63%](numbers.md#e1-compute-share-subset-max)
+  across samples; that is a share of capability growth, not compute's share of research input, which
+  E9 finds no data identifies. In E11 no pathway's gate, cut alone, issues the certificate with
+  honest bounds ([0 pathways](numbers.md#e11-pathways-alone-honest) do); the sets that issue it join
+  several pathways' gates, which fits a top the evidence does not order. E9's one frontier case
+  gives a gain at fixed compute of [0.29](numbers.md#e9-openai-k-fixed) but r of
   [0.89](numbers.md#e9-openai-r), near 1; with the share of research input unidentified it does not
   move the rank. E18, which the claims file counts for C12, finds that the cap leaks in jumps; the
-  pair count is unchanged. E2 measures the clock long-horizon autonomy is recast as, the frontier 50%
-  horizon doubling every [129 days](numbers.md#e2-doubling-p50), and contradicts no Pareto pair, since
-  a horizon says how long a task an agent completes, not how close it brings a holding to the line.
+  pair count is unchanged. E2 measures the clock long-horizon autonomy is recast as, the frontier
+  50% horizon doubling every [129 days](numbers.md#e2-doubling-p50), and contradicts no Pareto pair,
+  since a horizon says how long a task an agent completes, not how close it brings a holding to the
+  line.
 - **L4** ([report](verification/l4-red-team.md#c12)): survives as a judgement. On L4's three
   criteria [9](numbers.md#claim-c12-pareto-three) of [21](numbers.md#claim-c12-pairs) pairs were fixed,
   none at the top (C12.1); recounted on two criteria, it is
   [12](numbers.md#claim-c12-pareto-two), none ordering the first three places.
+- **L6** ([M8](verification/l6-fresh-review.md#major)): fails as an order fixed in part by evidence.
+  The grades are ledger inputs with basis "assumption", so no pair is fixed by evidence; six of the
+  twelve pairs rest on one grade, long-horizon autonomy's effect of 0; and theft of weights, which
+  may rank first for a state [@nevo2024securing], is not ranked. Accepted: the pairs are
+  Pareto-ordered under our grades, the order covers the seven routes assessed, and C12 is downgraded
+  to a judgement. L6 also found that the tie at the top turns on detection not rising with a
+  breakout's intensity, which nothing measures (M9).
 
-Standing: [an application of prior work](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line),
-whose order is a judgement with [12](numbers.md#claim-c12-pareto-two) evidence-fixed pairs.
+Standing: [downgraded to a judgement](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)
+(L6). Its label stays an application of prior work; [12](numbers.md#claim-c12-pareto-two) of
+[21](numbers.md#claim-c12-pairs) pairs are Pareto-ordered under our grades, which are judgements, and
+theft of weights is not ranked.
 
 | Attack | Severity | Owner | Resolution |
 |---|---|---|---|
-| C12.1 | Serious | Claims writer | Fixed: the statement and the pathways chapter claim only the Pareto-ordered pairs, [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) on two criteria, from grades kept as inputs so a different reading reruns the count. |
+| C12.1 | Serious | Claims writer | Fixed: the statement and the pathways chapter claim only the Pareto-ordered pairs, [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) on two criteria, from grades kept as inputs so a different reading reruns the count. L6 found the grades themselves judgements, so the pairs are Pareto-ordered under our grades, not fixed by evidence (M8). |
 | C12.2 | Serious | Claims writer | Fixed: the cost of a limit sets the response, not the rank, and the pairs are recounted on effect and visibility alone. |
 | C12.3 | Serious | Claims writer | Conceded: the statement says the tie at the top joins an effect on T_r with an effect on T_b on no common scale. |
 | C12.4 | Minor | Claims writer | Conceded: the results say the refuter needed a [12.8](numbers.md#e5-memo-over-hazard)-fold error to fire. |
@@ -609,21 +684,62 @@ none is a claim; each changed a claim, Part I or Part II.
   ([formal file](05-formal.md#c10-superintelligence-at-matched-budget-what-is-empirical)).
 - **The durability ranking cannot be decided (E23).** [9 stages](numbers.md#e23-stages) of the chip
   supply chain, ranked by a rule fixed on data public at the end of 2022, match the erosion found from
-  2023 to November 2026 at rho [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p). The
-  smallest rho the test could call significant with these stages is
+  2023 to November 2026 at r_s [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p). The
+  smallest r_s the test could call significant with these stages is
   [0.59](numbers.md#e23-rho-critical), and its power was [0.16](numbers.md#e23-power-here) even if the
-  observed rho were true. A rank test would need [85 stages](numbers.md#e23-n-needed); the 2022
+  observed r_s were true. A rank test would need [85 stages](numbers.md#e23-n-needed); the 2022
   dataset lists [79 inputs](numbers.md#e23-eto-inputs-2022), nested and correlated, so fewer
   independent stages than that. No version of the test can decide, and ranking stages by durability
   stays unclaimed ([O3](015-organisational.md#o3-chokepoints)).
 
+## Level 6
+
+A referee who had not seen the work read the flattened paper in full, checked its statements against
+the research files, the ledger, the experiments and the formal checks, and only then opened this
+record ([the report](verification/l6-fresh-review.md#verdict)). Its verdict is revise (major), with
+nothing fatal: no proof it followed fails, no experiment contradicts the paper's own conclusion, and
+the paper never claims the protocol works. It reran the formal checks, and all thirteen pass. It
+disagreed with the earlier levels on C1(b), C3's merging rule, C5, C8, C12 and E5's bounds, and
+raised M2, M3, M4, M9 and m1 to m3, which no level had
+([its comparison](verification/l6-fresh-review.md#where-this-review-disagrees-with-the-earlier-levels)).
+Each finding was checked against its source or the code before acting. None was rejected, and every
+change of standing it asked for was made in the claims file and this record.
+
+The rows record the research files. The paper, which is flattened from `paper/`, has been revised for
+m1 only, so every other finding stays open there until it is rebuilt from them.
+
+| Finding | Severity | Owner | Resolution |
+|---|---|---|---|
+| M1 | Major | Part I; protocol writer; claims writer | Fixed: D4, P4, O4, the pathways chapter, Part II and the claims file give E5's undeclared T_d as central estimates under a transfer from weapons programmes, not bounds or measurements, with the Weibull fit's [24 years](numbers.md#e5-td-weibull-years) beside the constant rate's [32 years](numbers.md#e5-td-hist-years). D4 and Part II give the site's spread, [0 years](numbers.md#e5-td-site-now-years-lo) to [43 years](numbers.md#e5-td-site-now-years-hi), and [0.0 years](numbers.md#e5-td-site-satopt-years) with satellites working as in the one sample, a chance E5 draws with no source. |
+| M2 | Major | Protocol writer; Part I | Fixed in D4, Part II and the claims file: the [5%](numbers.md#def-prevent-beta) tolerance is this work's choice, not Gan's calibration, Gan's parties consent to at most [0.056/month](numbers.md#prot-gan-consent-rate) of monitoring, and prevention at that tolerance needs [4.5](numbers.md#prot-gan-prevent-over-consent) times that, so Part II calls prevention near the line a design choice the only calibrated model does not support. |
+| M3 | Major | Protocol writer | Fixed in Part II: its summary and [where the promise is not kept](06-protocol.md#where-the-promise-is-not-kept) say the line is evaluable today only on the declared path, with illustrative inputs, and that every party able to rent compute or query a stronger model fails it through cloud and distillation, as through the pool. D4 says the pool puts every party inside the line and that cloud and distillation are missed with certainty. |
+| M4 | Major | Paper | Answered in the research files: D3 says T_b inherits all the uncertainty in C*, Part II that C* is a convention and every table conditional on it, and both that one OOM of C* moves T_b by [2.3 years](numbers.md#comp-years-per-oom-ho), more than the illustrative line of [2.0 years](numbers.md#prot-line-declared). The unqualified contrast with a capability score is in the paper's introduction alone: open there. |
+| M5 | Major | Claims writer; Part I; protocol writer | Fixed in the claims and novelty files, D4, Part I's opening and definitions table, and Part II's summary, margin section and table of what is ours: C1(b) is the partial-factor format of structural design (EN 1990) [@jrc2008eurocodes], and C3's merging rule the textbook bound on a union, with the common-cause practice of risk assessment [@mosleh1998nureg5485]; both are prior work, and C1 and C3 are applications only. Fréchet's 1935 paper is named, not cited: its text could not be opened. |
+| M6 | Major | Claims writer; Part I | Fixed in the claims and novelty files, D5 and Part I's opening and definitions table: C5 is an untested design, as C11 is framing, valid against non-adaptive hiding only and on the sampled population only; the closest prior work, [@hofstatter2025elicitationgame], is cited; and the population gap is stated at every capability level. |
+| M7 | Major | Claims writer; Part I; protocol writer | Fixed in the claims and novelty files, P4, the pathways chapter and Part II: C8 and P4 are an application with calculations, E8 computes rather than tests, and the pool's multiple is a point at an assumed pool of [1,000,000 chips](numbers.md#phys-chips-unaccounted), the spread E8 draws around it our reading of "order of magnitude", not a sourced range; Part II's table gives the pool over the floor taken as a bound, [1,200](numbers.md#e8-pool-shrink-1e26-pause) times, as such a point. The paper's limits chapter still gives the 5th to 95th percentile range. |
+| M8 | Major | Claims writer; Part I | Fixed in the claims and novelty files, the pathways chapter and the model's label: no part of the order is fixed by evidence; the [12](numbers.md#claim-c12-pareto-two) pairs are Pareto-ordered under our grades, ledger inputs with basis "assumption"; six rest on long-horizon autonomy's grade of 0; theft of weights is not ranked [@nevo2024securing]; and C12 is downgraded to a judgement. The test L6 proposes, independent graders blind to the order, has not run. |
+| M9 | Major | Protocol writer; Part I; formal part | Fixed in the formal file's (A1.1), the pathways chapter, Part II and the claims file: the hazard is taken as independent of how fast or intensely a party breaks out, while a breakout's footprint grows with its speed, so its hazard may rise by an amount nothing measures. Every result resting on (A1.1) holds as stated only where it does not; where the hazard used is only a lower bound at the evader's intensity, the guarantees that a path is stopped hold as one-sided bounds, but a verdict that a path fails the line may not. Part II: the verdicts on unregistered chips survive on response alone, and the T_d figures for a fast covert run do not. No model yet makes the hazard a function of footprint. |
+| m1 | Minor | Part I | Fixed: Part I's opening and Part II say catastrophe was certain in [9 groups](numbers.md#def-bd-uncertain-catastrophe) of [10 groups](numbers.md#def-bd-groups) and the threshold crossed in all ten; so does the paper. |
+| m2 | Minor | Part I; protocol writer; claims writer | Fixed in Part I, Part II, the claims file and this record: [25%](numbers.md#e24-halt-share-never) of in-treaty findings were not followed by a halt within what the sources cover, one of them censored, so the 95th percentile is not reached within follow-up; the fastest halt, [64 days](numbers.md#e24-halt-min-days), is set against the fastest exit, [31 days](numbers.md#e24-exit-min-days). |
+| m3 | Minor | Claims writer; Part I | Fixed: C10's L3, D1 and the cognitive chapter report the flip as the verdict depending on the rank named, the median share [71.1%](numbers.md#e21-mle-median-best) minus the gold share [25.8%](numbers.md#e21-mle-gold-best), not (b)'s refuter; checked against E21's code, (b) is untested. |
+| m4 | Minor | Claims writer; Part I | Fixed in the claims file, D3, Part I's opening and the computational chapter: C2(c) cannot be tested on public data, its target having [0 days](numbers.md#e18-oc-evaluable-days) to test on, so it is untestable there, not cut by a backtest; E18's backtest is of a substitute. |
+| m5 | Minor | Claims writer | Fixed as wording: the claims file and this record say the trigger fails at the only calibrated proxy, a human speedrun's record-to-record spread, and is untested at real round noise; D2 and Part II say E4 ran at the only noise calibrated on data. The standing does not move. |
+| m6 | Minor | Part I; formal part; protocol writer; claims writer | Fixed in Part I, the formal file, Part II, the claims file and this record: beta is the miss tolerance only, b the returns exponent, mu the detection rates, zeta the confidence errors, omega the certificate's threshold, xi_min the block-rate floor, r_s Spearman's correlation and P Proposition E.3's penalty; rho is the spectral radius and lambda the return to input. D1, as the cognitive chapter states it, gives the money budget as psi_k over N_d decisive clusters, and C10 follows. Open in the paper. |
+| m7 | Minor | Part I; claims writer | Fixed in D4 and the claims file: D4 keeps the brief's name but says it marks a position against the line, not a material property or a verdict on capability, and labels every party on today's inputs; in running text both say "inside the line". Part II uses the name only in links to D4; the paper keeps it in running text: open there. |
+| m8 | Minor | Claims writer | Fixed in this record and the claims file: each level's cell gives that level's verdict, and the standing, one label set, may sit below it, as C8's and C12's do, which the claims file says; D3's "a combination of prior work" is L1's relabelling, which C2's L1 cell names. The introduction's counts are the paper's: open there. |
+| m9 | Minor | Claims writer; protocol writer; paper | Fixed in the research files: Part II cites Hendrycks, Schmidt and Wang [@hendrycks2025superintelligence], Wasil et al. [@wasil2024verification], Avenhaus and Canty [@avenhaus1996compliance], Bonneau, Clark and Goldfeder [@bonneau2015bitcoinbeacon] for the inspection beacon, and Downs, Rocke and Barsoom [@downs1996compliance]; the novelty file cites Avenhaus and Canty and Bonneau et al., the claims file Downs et al., and Harack et al. [@harack2025oxford] was already cited. Mixing rival blocs into the beacon is still unsearched. Open in the paper, which cites none of them. |
+| m10 | Minor | Part I; protocol writer | Fixed in P4 and in Part II's limit on undeclared compute (L2), which cite the classifier itself [@clymer2025datacenter] beside the reading of it by Koopmanschap and Barten, and in Part II's table of channels, which cites both for the [10 MW](numbers.md#phys-sat-reliable) line. |
+| m11 | Minor | Part I | Fixed: P1 calls the copy count, [140,000,000](numbers.md#phys-flow-2025-copies), an upper bound that mixes two batch regimes. |
+| m12 | Minor | Part I | Fixed: D6 says Theorem 11.2 treats closure as an elasticity while D6 defines it as a share of ungated increments, and that reading one as the other is for E4(d) to check. |
+| m13 | Minor | Paper | Open: one record table and one statement per claim, and a paper about half its length; not yet done. |
+
 ## Open for the next levels
 
 - **A published result our reimplementation does not reproduce.** In E6, Emery-Xu, Park and Trager's
-  Proposition 2 is not a best response in our reimplementation of their model: a deviation gains up to
-  [0.017](numbers.md#e6-ex-prop2-br-gain-max). This is our reimplementation's finding about published
-  work, not a settled fact. An independent check, at level 4 or level 6, must confirm or overturn it
-  before anything rests on it; O2 and Part II already say nothing does.
+  Proposition 2 is not a best response in our reimplementation of their model: a deviation gains up
+  to [0.017](numbers.md#e6-ex-prop2-br-gain-max). This is our reimplementation's finding about
+  published work, not a settled fact. L6 did not check it. An independent check must confirm or
+  overturn it before anything rests on it; O2 and Part II already say nothing does.
 - **A published estimate E9 did not reproduce.** Of [12](numbers.md#e9-recomputed) published
   estimates E9 recomputed on their authors' own inputs, [11](numbers.md#e9-reproduced) reproduced; the
   growth of OpenAI's compute in Ho and Whitfill's appendix did not. The same independent check
@@ -635,19 +751,33 @@ none is a claim; each changed a claim, Part I or Part II.
   amnesty, makers' records and contraband status can close it; E22 bounds supply from above, not
   closure ([Part II](06-protocol.md#what-must-hold-for-the-protocol-to-stand)). Until it closes, no
   party meets the line.
-- **Attacks still open**: C3.8, C4.9, C9.4 and C10.4, besides those that wait on experiments (C2.8 on
-  E15, C5.6 on E3, C11.5 on E4(e)).
+- **What L6 says a reader still needs.** Independent graders, blind to the order, to grade the
+  pathway table (C12); a detection rate for an AI-specific channel measured against a resourced red
+  team, without which every T_d is a transfer; and the hazard as a function of a breakout's
+  footprint (M9), which decides the covert-path verdicts and the tie at the top of C12. Threats not
+  addressed: theft of weights as a pathway; a model that games the evaluations gates rest on, which
+  is adaptive hiding, the case D5 excludes; collusion among log operators or licensors beyond the
+  stated t of n; and a maker's host state compelling the secure element's keys. Assumptions stated
+  nowhere: that effective compute is one scalar across training, inference, post-training and
+  distillation, so one C* serves every path; that detection does not depend on a breakout's
+  intensity; and that the parties agree on C* and the tables.
+- **Attacks and findings still open**: C3.8, C4.9, C9.4 and C10.4, besides those that wait on
+  experiments (C2.8 on E15, C5.6 on E3, C11.5 on E4(e)); and the L6 findings that
+  [the Level 6 table](#level-6) marks open: none in the research files; in the paper, which has
+  been revised for m1 only, every other finding.
 
 ## What has not been done
 
 - **L5 is blocked.** Paperwright is not yet connected, so no claim has been through its integrity,
   reviewer or editor desks.
-- **L6 has not run.** No reviewer who has not seen the work has read it.
+- **L6 has run once**, on the paper as it stood before its findings. The research files carry the
+  fixes; the paper does not yet, beyond m1, and no second fresh reviewer has read the result.
 - **Experiments not yet run**, by claim:
   - C1: C2's remaining experiments for T_b's inputs, and a drilled measure of the licensors' decision
     time, which no experiment yet plans; without it (c) stays cut.
   - C2: E15 and E10 with its distillation uplift, which could reopen (b), and E4(b).
-  - C3: E13; nothing yet gives cloud or distillation a channel.
+  - C3: E13; nothing yet gives cloud or distillation a channel, measures an AI-specific channel
+    against a resourced red team, or makes the hazard a function of footprint (L6).
   - C4: E4(b), which decides whether C4 reopens or is cut.
   - C5: E3.
   - C6: E11 again, with the diagonal from E9, the compute edge from E10 and a cross-party edge, which
@@ -659,13 +789,15 @@ none is a claim; each changed a claim, Part I or Part II.
   - C10: E21's live part, with teams, which is blocked, and any battery with an organisation's
     baseline.
   - C11: E4(d), E4(e), E16, E17 and E19.
-  - C12: E15, E10's distillation arm, E19 and E7.
+  - C12: E15, E10's distillation arm, E19 and E7; blind grading of the pathway table, and an
+    assessment of theft of weights (L6).
   - The first footing: no experiment yet tests whether the pool can be closed.
-- **Searches not yet run.** The safety-factor literature, the likeliest earlier home of C1(b);
-  Bostrom's 2014 chapter on paths (C12); two 2026 works that could decompose closure by input (C11),
-  which must be opened before L5; hardware-wallet and trusted-time designs that check headers offline
-  (C9); and six pieces of Part II never searched: the two-stage loop-gain rule, the renewal evidence
-  list with periods set per holding, the log replicas, the mixed inspection beacon, distillation keyed
-  to the teacher and the drift trigger for continual learning.
+- **Searches not yet run.** Fréchet's 1935 paper on the bounds of a union, whose identifier L6
+  confirmed but whose text neither L6 nor we could open (C3); Bostrom's 2014 chapter on paths (C12);
+  two 2026 works that could decompose closure by input (C11), which must be opened before L5;
+  hardware-wallet and trusted-time designs that check headers offline (C9); and five pieces of Part
+  II never searched: the two-stage loop-gain rule, the renewal evidence list with periods set per
+  holding, the log replicas, distillation keyed to the teacher and the drift trigger for continual
+  learning. L6 found prior work for a sixth, the inspection beacon [@bonneau2015bitcoinbeacon].
 
 None of this has been tested against a real adversary. The protocol is a design.

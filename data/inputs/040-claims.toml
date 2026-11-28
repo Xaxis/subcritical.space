@@ -52,9 +52,9 @@ note = "the paper sets its breakout budget, def-hwp-breakout-budget, at 100 time
 
 # C12: an ordinal reading of the pathways table (research/02-pathways.md, "The ranking") on each
 # criterion, 0 the least and 3 the most. Equal grades mean the table's entries do not separate the
-# two pathways on that criterion. A pair is fixed by the evidence when one pathway's grade is higher
-# on every criterion; model/parts/040_claims.py counts those pairs. Change a grade with --set to
-# see how the count moves. The cost grades only reproduce the red team's three-criterion count.
+# two pathways on that criterion. Each grade is our judgement, an assumption. A pair is
+# Pareto-ordered when one pathway's grade is higher on every criterion; model/parts/040_claims.py
+# counts those pairs. Change a grade with --set to see how the count moves. The cost grades only reproduce the red team's three-criterion count.
 
 [claim-c12-effect-rsi]
 value = 3

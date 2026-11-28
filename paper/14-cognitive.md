@@ -1,155 +1,108 @@
 # The cognitive and functional perspective
 
-This perspective asks what a superintelligent system can do that humans and their institutions
-cannot, measured rather than asserted. Superiority alone is not the line: narrow systems have long
-been superhuman and are among the most useful AI. It matters because the endpoint D1 rests on it, as
-does D5, the capability measurement on which triggers depend.
+This perspective measures what a superintelligent system can do that humans and their institutions
+cannot. Narrow systems have long been superhuman and useful, so superiority alone is not the line.
+The endpoint D1 and the measurement D5 rest on it.
 
 ## F1. Kinds of advantage: speed, copies and quality
 
-**Definition.** A system S (weights, scaffolding, tools and the inference compute its holder
-controls) is compared on a task family with a named human comparison H, an individual, team or
-organisation, given a wall-clock budget t and a money budget b. Serial speed s is the ratio of H's
-time to one instance's time to reach the same score, retries included. Copies n is the number of
-instances the compute sustains at speed s; batching trades one for the other, so they are reported
-as a pair. Quality is S's best score relative to H's under the same budgets. The typology is prior
-work [@grace2014forms; @bostrom1998howlong], speed and cost ratios have been measured
-[@wijk2024rebench; @patwardhan2025gdpval], and the sources found assume copies
-[@karnofsky2022defeat; @lifland2025timelines]; measuring them from held compute was not found, a
-claim about our search. Label: extends prior work.
+**Definition.** S, with its holder's inference compute, faces a named individual, team or
+organisation given time t and money psi. Speed s is the comparison's time over one instance's;
+copies n, the instances the compute sustains at that speed; quality, S's best score relative to the
+comparison's. The typology is prior work [@grace2014forms; @bostrom1998howlong]; the sources found
+assume copies [@karnofsky2022defeat; @lifland2025timelines]. Label: extends prior work.
 
 **Measurement.** GPT-5's naive speed gain on GDPval,
 [90](../research/numbers.md#cog-gdpval-naive-speedup) times, falls to
-[1.39](../research/numbers.md#cog-gdpval-review-speedup) once an expert reviews the output
-[@patwardhan2025gdpval]. Copies can be computed from accounted chips and per-instance throughput,
-but this is not among the paper's claims: the formula follows from a known bound [@pope2022],
-forecasts already compute copies from compute [@lifland2025timelines], and nothing triggers on it.
+[1.39](../research/numbers.md#cog-gdpval-review-speedup) under expert review
+[@patwardhan2025gdpval]. Measuring copies from held compute was not found, but it follows from a
+known bound [@pope2022] and is not claimed here.
 
-**Evidence for and against.** Advantages are largest on short tasks and reverse at long budgets (F4)
-[@wijk2024rebench]. Karnofsky argues that copies alone make a workforce [@karnofsky2022defeat].
-Against free labour, larger human groups did not beat smaller ones [@aiimpacts2016coordinated].
+**Evidence for and against.** Copies alone may make a workforce [@karnofsky2022defeat], but larger
+human groups did not beat smaller ones [@aiimpacts2016coordinated].
 
-**Open questions.** Whether a quality advantage over organisations exists outside narrow domains,
-and how much copies add before coordination binds. E20, the run that would measure both, has not
-run.
+**Open questions.** Quality against organisations, and the return to copies (E20, not run).
 
 ## F2. The decisive functions
 
-**Definition.** A function is decisive if superiority in it, against the best human organisation at
-matched time and budget, would let a system shorten its breakout time (D3) without passing a
-human-held gate, or defeat the regime's detection and response. Five are named: AI research, cyber
-operations, weapons-relevant science, persuasion and strategy, and economic production. The list
-overlaps the frontier frameworks [@openai2025preparedness; @anthropic2026rsp], and expert baselines
-exist for each cluster [@wijk2024rebench; @zhang2024cybench; @gotting2025vct; @salvi2025persuasion;
+**Definition.** A function is decisive if superiority in it, against the best organisation at
+matched budget, shortens breakout time (D3) past human-held gates or defeats detection: AI research,
+cyber operations, weapons-relevant science, persuasion and strategy, and economic production. The
+list overlaps the frontier frameworks [@openai2025preparedness; @anthropic2026rsp], and each has
+expert baselines [@wijk2024rebench; @zhang2024cybench; @gotting2025vct; @salvi2025persuasion;
 @patwardhan2025gdpval]. Label: prior work.
 
-**Measurement.** The one live CTF comparison set an agent against mostly undergraduate teams who
-used AI themselves [@tang2026ctfcollab]. Institutional baselines exist only as policy text
-[@anthropic2026rsp; @gdm-fsf-v3-1-2026]; a benchmark against a measured institution was not found,
-and would be D1's (C10).
+**Measurement.** Institutional baselines exist only as policy text [@anthropic2026rsp;
+@gdm-fsf-v3-1-2026]; the one live CTF faced mostly undergraduates using AI [@tang2026ctfcollab].
 
-Table: Where each decisive function stood in November 2026 {#tab:cognitive-functions}
+Table: The decisive functions in November 2026 {#tab:cognitive-functions}
 
-| Function | Baseline | Status in the sources |
+| Function | Baseline | Status |
 |---|---|---|
-| AI research | individuals; Kaggle teams | 2024 agents ahead at short budgets, behind at long; the best 2026 model at the score's cap at the longest budget tested, its t* censored (E21) |
-| Cyber operations | contest teams | ahead of student teams on short CTFs; no expert-organisation baseline |
-| Weapons-relevant science | individual experts | ahead on written questions |
-| Persuasion and strategy | individuals; forecasting teams | ahead of individuals; near parity with teams |
-| Economic production | experts and freelancers | ahead on one-shot tasks, far from whole projects |
+| AI research | experts; Kaggle teams | at the cap (E21) |
+| Cyber operations | contest teams | ahead on short CTFs |
+| Weapons-relevant science | experts | ahead on written tests |
+| Persuasion and strategy | individuals; forecasters | near parity with teams |
+| Economic production | experts; freelancers | ahead on one-shot tasks |
 
-**Evidence for and against.** AI research is the only function whose output is a better version of
-the system, so the only one that can close a loop on compute alone. Against the list:
-weapons-relevant science and persuasion are misuse harms that arise well below superintelligence,
-and persuasion rose more with post-training than with scale [@hackenburg2025levers], so a compute
-channel would not see it.
+**Evidence for and against.** Only AI research yields a better system, closing a loop on compute
+alone. Weapons-relevant science and persuasion are misuse harms below superintelligence, and
+persuasion tracks post-training more than scale [@hackenburg2025levers].
 
-**Open questions.** Whether superiority at AI research produces the others through the loop. A
-candidate split measures only AI research and cyber operations against D1, which cannot warn; the
-trigger is the line on breakout time (D4).
+**Open questions.** Whether AI research yields the others through the loop.
 
 ## F3. Narrow versus general
 
-**Definition.** Generality G(S) is the number, or fraction alpha, of decisive clusters in which S
-meets the institutional bar at matched t and b, counted without averaging. A system is narrow if G
-is at most one and its outputs do not enter the training data, code or compute allocation of a
-system above the line (closure). The split is prior work [@morris2023levels; @genewein2026agiasi],
-as are separate limits on general intelligence and on AI improving AI [@miotti2025narrowpath];
-joining generality to a closed loop was not found. Label: extends prior work.
+**Definition.** Generality G is the number, or fraction alpha, of decisive clusters where S meets
+the institutional bar, without averaging [@fourati2025coherence]; S is narrow if G is at most one
+and its outputs feed no system above the line. The split is prior work [@morris2023levels;
+@genewein2026agiasi; @miotti2025narrowpath]; joining it to a closed loop was not found. Label:
+extends prior work.
 
-**Measurement.** Existing scales compare with individuals [@morris2023levels], and averaging
-"implicitly assumes compensability" [@fourati2025coherence]. The battery must be held by the regime.
+**Measurement.** Scales compare with individuals [@morris2023levels]; E1 could not count G from
+public data.
 
-**Evidence for and against.** Narrow superhuman systems are cheap [@meta2019pluribus] and brittle
-[@wang2023adversarialgo]. Against: AlphaEvolve, a general model working against automated
-evaluators, cut Gemini's training time by [1%](../research/numbers.md#cog-alphaevolve-training-cut),
-by the vendor's figures [@novikov2025alphaevolve]. "Narrow" describes a task, not a system. The
-effect is small: it shows the loop exists, not that its gain is high.
+**Evidence for and against.** Narrow systems are cheap [@meta2019pluribus] and brittle
+[@wang2023adversarialgo], but AlphaEvolve, a general model, cut Gemini's training time by
+[1%](../research/numbers.md#cog-alphaevolve-training-cut) (vendor's figure)
+[@novikov2025alphaevolve]: narrowness belongs to tasks, not systems, though the effect is small.
 
-**Open questions.** E1 could not count G from public data. Whether narrow training raises G (the
-evidence says mostly not [@huan2026mathtransfer]) or a narrow optimiser raises loop gain (E4(e)) is
-untested. The line on breakout time supersedes F3's line; only the rule that a narrow optimiser
-inside a covered loop counts as part of it survives (C11).
+**Open questions.** Whether narrow training raises G [@huan2026mathtransfer] or a narrow optimiser
+raises loop gain (E4(e)). Of F3's line, Part II keeps only the rule counting such an optimiser as
+part of its loop (C11).
 
 ## F4. Measuring capability so a protocol can trigger on it
 
-Benchmarks saturate: FrontierMath's best score rose from under
-[2%](../research/numbers.md#cog-fm-release-best) at release [@glazer2024frontiermath] to
-[95.1%](../research/numbers.md#cog-fm-best) by November 2026 [@epoch2026hub]. Items are often wrong:
-Epoch judged [46%](../research/numbers.md#cog-hle-defective-share) of a sample of HLE questions
-defective [@epoch2026hlereview]. Scores overstate real work: maintainers' merge rates for AI patches
-sit about [24 points](../research/numbers.md#cog-swebv-maintainer-gap) below SWE-bench scores
-[@whitfill2026merge]. A test set the developer has seen measures memory [@liang2025illusion].
-Refreshed batteries are prior work [@white2024livebench; @kiela2021dynabench]; refresh with
-institutional baselines was not found.
+Benchmarks saturate within years [@glazer2024frontiermath; @epoch2026hub]. Items are often wrong
+[@epoch2026hlereview], scores overstate real work [@whitfill2026merge], and seen test sets measure
+memory [@liang2025illusion]. Refreshed batteries are prior work [@white2024livebench;
+@kiela2021dynabench].
 
-Verdicts depend on the budget: RE-Bench's AI-to-human ratio moves
-[8](../research/numbers.md#cog-rebench-swing)-fold between the
-[2 h](../research/numbers.md#cog-rebench-budget-short) and
-[32 h](../research/numbers.md#cog-rebench-budget-long) budgets [@wijk2024rebench]. The crossover
-budget t\* is the largest tested time budget at which S's score on the AI-research cluster is at
-least the comparison's at equal compute and money; if S still wins at the largest budget tested, t\*
-is censored, never extrapolated. Crossovers are prior work [@wijk2024rebench;
-@robinson2026horizons]. E21's public part estimated t\* on two boards, against single experts and
-contest teams, none an organisation. On RE-Bench [@metr2026evalanalysis],
-[14 models](../research/numbers.md#e21-rebench-below-8h) of
-[18 models](../research/numbers.md#e21-rebench-models) are censored below
-[8 h](../research/numbers.md#cog-rebench-budget-mid); the best sits at the score's cap at
-[32 h](../research/numbers.md#cog-rebench-budget-long) in
-[99.4%](../research/numbers.md#e21-rebench-cap-32h) of resamples, so its t\* is censored above
-[32.0 h](../research/numbers.md#e21-rebench-tstar-best). On Cybench, against the fastest contest
-team [@cybench2024repo], t\* cannot be measured above the pool's longest first-solve time,
-[24.9 h](../research/numbers.md#e21-cyber-ceiling-h). t\* rises with release date on both boards
-(rank correlations [0.57](../research/numbers.md#e21-rebench-rho) and
-[0.91](../research/numbers.md#e21-cyber-rho)), but only while a battery's baselines last: it
-saturates with the battery, so a rising t\* needs batteries refreshed with longer baselines. Each
-side is charged the inference it uses [@vahdati2026arc], and the human side's tools are frozen at a
-declared date [@genewein2026agiasi].
+Verdicts depend on the budget [@wijk2024rebench]. The crossover budget t\* is the largest tested
+time budget at which S's AI-research score at least equals the comparison's at equal compute and
+money, censored, never extrapolated; crossovers are prior work [@wijk2024rebench;
+@robinson2026horizons]. Against experts and contest teams, none an organisation, E21 found
+RE-Bench's best model at the score's cap at the top budget [@metr2026evalanalysis], and t\*
+unmeasurable on Cybench beyond its longest task [@cybench2024repo]: t\* rises with release date only
+while baselines last.
 
-An observed score is a lower bound [@barnett2024evaluations]. Sandbagging is often recoverable
-[@benton2024sabotage], but elicitation of password-locked models fails without high-quality
-demonstrations [@greenblatt2024password], and tamper-resistant locks survive weak-to-strong
-fine-tuning [@finke2026robustorganisms]. Detectors tuned on fixed organisms fail against adaptive
-ones [@soopal2026adaptive], and models increasingly tell tests from use [@needham2025evalaware]. D5
-judges a threshold by miss and false-alarm rates per named elicitation budget, an extension of
-diagnostic-test practice [@fda2007diagnostic]. It bounds only non-adaptive hiding, and E3, the
-experiment that would measure its rates, has not run. Above expert level no demonstrations exist, so
-the guarantee is weakest where D1 begins.
+An observed score is a lower bound [@barnett2024evaluations]. Hidden capability is often recoverable
+[@benton2024sabotage], but not without good demonstrations [@greenblatt2024password] or from
+tamper-resistant locks [@finke2026robustorganisms]; detectors fail against adaptive organisms
+[@soopal2026adaptive], and models tell tests from use [@needham2025evalaware]. D5's rule is untested
+(E3) and covers only non-adaptive hiding on the regime's own organisms, which a frontier model's
+hiding is not drawn from, at any capability level.
 
-As the evidence leaves it, D1 holds if, in at least a fraction alpha of decisive clusters, S's
-elicited score beats a named organisation given the same time and money, on a regime-held, refreshed
-battery, with the organisation's tools frozen. The verdict is stated under both matches, money and
-time. It extends prior work [@genewein2026agiasi; @ngo2023tagi; @anthropic2026rsp]. No public
-battery compares with an organisation at matched budget, so D1 is a definition only. Its pass
-condition, a verdict stable when the organisation changes within its class, met its refuter on the
-nearest analogue any battery has: on MLE-bench, E21 found the verdict flips on
-[45.3%](../research/numbers.md#e21-mle-flip-best) of competitions between the median entrant and the
-gold threshold [@openai2026mlebenchruns; @chan2024mlebench], so the rank must be named.
-Institutional baselines still have to be built; E21's live part has not run. It holds only once a
-system beats an institution, so it cannot warn; the protocol must act on the line before it.
+D1, as the evidence leaves it, holds if S's elicited score beats a named organisation O_k, with the
+same time t_k and money psi_k and its tools frozen, in at least a fraction alpha of the N_d decisive
+clusters of a regime-held, refreshed battery [@genewein2026agiasi; @ngo2023tagi; @anthropic2026rsp].
+No battery compares with an organisation, so D1 is a definition only, its pass condition untested.
+On MLE-bench the verdict depends on the rank named: the best entry beats the median entrant in
+[71.1%](../research/numbers.md#e21-mle-median-best) of competitions and the gold threshold in
+[25.8%](../research/numbers.md#e21-mle-gold-best) [@openai2026mlebenchruns]. D1 holds only once a
+system is ahead, so it cannot warn; the line on breakout time (D4) must act first.
 
 ## What this perspective gives the line
 
-It gives the protocol its endpoint, D1, as a fully stated definition, not a trigger. Part II takes
-from it elicited capability (D5) and the narrow-optimiser rule, both untested, and counts serving
-capacity without limiting it.
+The endpoint as a definition, not a trigger; Part II takes D5 and the narrow-optimiser rule, both
+untested, and counts serving capacity without limiting it.

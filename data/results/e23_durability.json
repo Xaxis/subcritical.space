@@ -1401,7 +1401,7 @@
     },
     "e23-n-needed": {
       "fmt": ",.0f",
-      "label": "stages a rank test would need to tell the 2022 ranking from a random one at the observed rho, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages",
+      "label": "stages a rank test would need to tell the 2022 ranking from a random one at the observed r_s, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages",
       "note": "",
       "unit": "stages",
       "value": 85.0
@@ -1429,98 +1429,98 @@
     },
     "e23-power-here": {
       "fmt": ".2f",
-      "label": "statistical power of the one-sided 5% rank test with this many stages if the observed rho were the true one (simulated, ties kept)",
+      "label": "statistical power of the one-sided 5% rank test with this many stages if the observed r_s were the true one (simulated, ties kept)",
       "note": "",
       "unit": "",
       "value": 0.15675
     },
     "e23-rho": {
       "fmt": ".2f",
-      "label": "Spearman's rho between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)",
+      "label": "Spearman's r_s between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)",
       "note": "",
       "unit": "",
       "value": 0.2778183707602797
     },
     "e23-rho-alt-max": {
       "fmt": ".2f",
-      "label": "Spearman's rho, highest over the 6 rules and 6 erosion scorings",
+      "label": "Spearman's r_s, highest over the 6 rules and 6 erosion scorings",
       "note": "",
       "unit": "",
       "value": 0.2907469922895337
     },
     "e23-rho-alt-median": {
       "fmt": ".2f",
-      "label": "Spearman's rho, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)",
+      "label": "Spearman's r_s, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)",
       "note": "",
       "unit": "",
       "value": 0.08120844683762021
     },
     "e23-rho-alt-min": {
       "fmt": ".2f",
-      "label": "Spearman's rho, lowest over the 6 rules and 6 erosion scorings",
+      "label": "Spearman's r_s, lowest over the 6 rules and 6 erosion scorings",
       "note": "",
       "unit": "",
       "value": -0.6933752452815364
     },
     "e23-rho-boot-hi": {
       "fmt": ".2f",
-      "label": "Spearman's rho, 97.5th percentile of resampling the stages",
+      "label": "Spearman's r_s, 97.5th percentile of resampling the stages",
       "note": "",
       "unit": "",
       "value": 0.9075630385563792
     },
     "e23-rho-boot-lo": {
       "fmt": ".2f",
-      "label": "Spearman's rho, 2.5th percentile of resampling the stages",
+      "label": "Spearman's r_s, 2.5th percentile of resampling the stages",
       "note": "",
       "unit": "",
       "value": -0.6548672566371682
     },
     "e23-rho-critical": {
       "fmt": ".2f",
-      "label": "smallest Spearman's rho the exact one-sided 5% test could call significant with these stages and ties",
+      "label": "smallest Spearman's r_s the exact one-sided 5% test could call significant with these stages and ties",
       "note": "",
       "unit": "",
       "value": 0.589829771768
     },
     "e23-rho-full": {
       "fmt": ".2f",
-      "label": "Spearman's rho with power put back in, ranked last as the rule places it (every stage O3 names)",
+      "label": "Spearman's r_s with power put back in, ranked last as the rule places it (every stage O3 names)",
       "note": "",
       "unit": "",
       "value": 0.09124009268835112
     },
     "e23-rho-hi": {
       "fmt": ".2f",
-      "label": "Spearman's rho, 97.5th percentile by Fisher's z with the Bonett and Wright variance",
+      "label": "Spearman's r_s, 97.5th percentile by Fisher's z with the Bonett and Wright variance",
       "note": "",
       "unit": "",
       "value": 0.8007724773267177
     },
     "e23-rho-lo": {
       "fmt": ".2f",
-      "label": "Spearman's rho, 2.5th percentile by Fisher's z with the Bonett and Wright variance",
+      "label": "Spearman's r_s, 2.5th percentile by Fisher's z with the Bonett and Wright variance",
       "note": "",
       "unit": "",
       "value": -0.48547963040776215
     },
     "e23-rho-loo-max": {
       "fmt": ".2f",
-      "label": "Spearman's rho with one stage left out, highest (without packaging)",
+      "label": "Spearman's r_s with one stage left out, highest (without packaging)",
       "note": "",
       "unit": "",
       "value": 0.5372008177779709
     },
     "e23-rho-loo-min": {
       "fmt": ".2f",
-      "label": "Spearman's rho with one stage left out, lowest (without ai-chips)",
+      "label": "Spearman's r_s with one stage left out, lowest (without ai-chips)",
       "note": "",
       "unit": "",
       "value": -0.04322305430397467
     },
     "e23-rho-part1": {
       "fmt": ".2f",
-      "label": "Spearman's rho for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)",
+      "label": "Spearman's r_s for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)",
       "note": "",
       "unit": "",
       "value": 0.3

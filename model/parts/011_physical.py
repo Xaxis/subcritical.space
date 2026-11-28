@@ -404,7 +404,7 @@ def build(L, here) -> None:
         lambda q: q["phys-flow-2025-flops"] * q["phys-util-ref"] / q["phys-palm-copy-flops"],
         "phys-flow-2025-flops * phys-util-ref / phys-palm-copy-flops",
         fmt="sig2",
-        label="PaLM-540B-sized copies at Pope et al.'s speed that one year's chip sales could run at the reference utilisation",
+        label="upper bound on PaLM-540B-sized copies at Pope et al.'s small-batch speed that one year's chip sales could run at the reference utilisation (that utilisation needs large batches, which slow each copy)",
         defined_in=here(),
     )
     L.derive(

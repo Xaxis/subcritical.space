@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """Check the statements of section C4 in research/05-formal.md.
 
-Round model: within round k the stock follows the common form du/dt = theta * exp(-b u) * E_k^lam,
+Round model: within round k the stock follows the common form du/dt = theta * exp(-b u) * E_k^lambda,
 with the input fixed for the round at E_k = c * exp(e * u_k) (closure e; e = 0 is a fixed
-researcher). K = e * lam / b. Delta_k = u_(k+1) - u_k, x_k = b * Delta_k.
+researcher). K = e * lambda / b. Delta_k = u_(k+1) - u_k, x_k = b * Delta_k.
 
 Lemma 4.1  exact identity  ln[(e^(x_(k+1)) - 1) / (e^(x_k) - 1)] = b (K - 1) Delta_k, checked against
            a numerical integration of the ODE inside each round (not the closed form).
 Cor 4.1a   first-order form: ln(Delta_(k+1)/Delta_k) = b (K - 1) Delta_k - [f(x_(k+1)) - f(x_k)],
            f(x) = ln((e^x - 1)/x), with |f(x') - f(x)| between |x' - x|/2 and |x' - x|.
-Lemma 4.2  ln(e^(b Delta_0(E)) - 1) is linear in ln E with slope lam (budgets 1, 2, 4).
+Lemma 4.2  ln(e^(b Delta_0(E)) - 1) is linear in ln E with slope lambda (budgets 1, 2, 4).
 Prop 4.3   Delta_(k+1) > Delta_k iff K > 1; for K < 1, g_k < 1 always, the level is unbounded
            (u_k >= ln(y_0 + k * gamma * y_0^K) / b), and g_k approaches 1.
 Cor 4.5a   the rule on K's product bound fires on {U_e U_r > K*}: with U_e <= 1 this lies inside
-           the r-only rule's firing set at the tightened level alpha_r, which contains the r-only
-           rule's firing set at alpha; with U_e = 1 the K rule fires whenever the r-only rule at
-           alpha does. So a false-alarm rate quoted for r alone is not the K rule's (red team C4.7).
+           the r-only rule's firing set at the tightened level zeta_r, which contains the r-only
+           rule's firing set at zeta; with U_e = 1 the K rule fires whenever the r-only rule at
+           zeta does. So a false-alarm rate quoted for r alone is not the K rule's (red team C4.7).
 Prop 4.6   (demonstration, reported not asserted) measurement noise on Delta biases the naive
            through-origin regression toward subcritical; a split-sample regression removes the
            correlated part.
@@ -96,7 +96,7 @@ def main() -> None:
             if abs(K - 1) > 1e-6:
                 ck.ok("Prop 4.3: Delta_(k+1) > Delta_k iff K > 1", (dn > d) == (K > 1), (b, lam, e, k, d, dn))
 
-    # Lemma 4.2: lam from budgets, at a fixed start
+    # Lemma 4.2: lambda from budgets, at a fixed start
     for _ in range(N):
         b = rng.uniform(0.2, 3.0)
         lam = rng.uniform(0.2, 2.0)
@@ -107,7 +107,7 @@ def main() -> None:
             ys.append(math.log(math.expm1(b * d0)))
         s1 = (ys[1] - ys[0]) / math.log(2)
         s2 = (ys[2] - ys[1]) / math.log(2)
-        ck.ok("Lemma 4.2: ln(e^(b Delta_0) - 1) has slope lam in ln E",
+        ck.ok("Lemma 4.2: ln(e^(b Delta_0) - 1) has slope lambda in ln E",
               abs(s1 - lam) <= 1e-6 and abs(s2 - lam) <= 1e-6, (b, lam, theta, s1, s2))
 
     # Prop 4.3, subcritical: exact recursion y_(k+1) = y_k + gamma * y_k^K, y = e^(b u)
@@ -191,12 +191,12 @@ def main() -> None:
         u_r_t = r_hat + z(1 - alpha_r) * s_r
         u_e = min(1.0, e_hat + z(1 - alpha_e) * s_e)
         fires_k = u_e * max(u_r_t, 0.0) > k_star
-        ck.ok("Cor 4.5a: with U_e <= 1 the K rule fires only where the r rule at alpha_r does",
+        ck.ok("Cor 4.5a: with U_e <= 1 the K rule fires only where the r rule at zeta_r does",
               (not fires_k) or u_r_t > k_star, (u_e, u_r_t, k_star))
-        ck.ok("Cor 4.5a: the r rule at alpha_r fires wherever the r rule at alpha does",
+        ck.ok("Cor 4.5a: the r rule at zeta_r fires wherever the r rule at zeta does",
               (not u_r_a > k_star) or u_r_t > k_star, (u_r_a, u_r_t, k_star))
         if u_e == 1.0:
-            ck.ok("Cor 4.5a: with U_e = 1 the K rule fires wherever the r rule at alpha does",
+            ck.ok("Cor 4.5a: with U_e = 1 the K rule fires wherever the r rule at zeta does",
                   (not u_r_a > k_star) or fires_k, (u_r_a, u_r_t, k_star))
     ck.done()
 

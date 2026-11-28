@@ -13,8 +13,10 @@ bootstrap), a Weibull with censoring (is discovery likelier early or late?) and 
 median. A sensitivity analysis reruns the fit over which cases are included and how the disputed
 ones are coded, and leaves out each case in turn. The record is a convenience sample of programmes
 that were eventually found or disclosed; programmes never found are missing by construction, and a
-disclosure under investigation is informative censoring. So the fitted rate is an upper bound on a
-careful evader's rate, by an unknown amount, and every detection time built on it a lower bound.
+disclosure under investigation is informative censoring. So within the sample the fitted rate is an
+upper bound on a careful evader's rate, by an unknown amount. That it transfers from slow weapons
+programmes to an AI breakout is an assumption, and the Weibull fit gives shorter times in short
+windows, so every detection time built on it is a central estimate under that transfer, not a bound.
 
 Part 2, C3's Monte Carlo. Paths open to a party (the declared fleet, one undeclared site, sites
 spread below the satellite line, the untraced chip pool, cloud rental, distillation) and the
@@ -374,7 +376,7 @@ def main() -> int:
     res.number("e5-exposure-years", fit["exposure_years"], unit="programme-years", fmt=",.0f",
                label="programme-years from start to discovery or disclosure, summed over the cases")
     res.number("e5-hazard", lam_hat, unit="/yr", fmt=".3f",
-               label="historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; an upper bound on a careful evader's rate")
+               label="historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; within the sample an upper bound on a careful evader's rate, its transfer to AI assumed")
     res.number("e5-hazard-lo", fit["lo"], unit="/yr", fmt=".3f",
                label=f"discovery rate, {pct} percentile of the exact Poisson interval")
     res.number("e5-hazard-hi", fit["hi"], unit="/yr", fmt=".3f",
@@ -413,7 +415,7 @@ def main() -> int:
                label="the memo's placeholder rate over the highest rate any sensitivity variant gives")
     td_h = math.log(1 / beta) / lam_hat
     res.number("e5-td-hist-years", td_h, unit="years", fmt=",.0f",
-               label="detection time at the prevention miss chance for a path only the historical channels see, from the programme's start; a lower bound, as the rate is an upper bound")
+               label="detection time at the prevention miss chance for a path only the historical channels see, from the programme's start, at the constant rate; a central estimate under the transfer from weapons programmes, not a bound")
     res.number("e5-td-weibull-years", scale_hat * math.log(1 / beta) ** (1 / k_hat), unit="years", fmt=",.0f",
                label="the same detection time under the Weibull fit, from the programme's start (in short windows the Weibull finds less than the constant rate)")
 
@@ -437,7 +439,7 @@ def main() -> int:
     res.number("e5-td-distributed-years", tdq("distributed", 0.5), unit="years", fmt=",.0f",
                label="detection time, smuggled chips spread over sites below the satellite line, median")
     res.number("e5-td-pool-years", tdq("pool", 0.5), unit="years", fmt=",.0f",
-               label="detection time, the untraced chip pool (no acquisition to catch), median; a lower bound, as the historical rate is an upper bound")
+               label="detection time, the untraced chip pool (no acquisition to catch), median; a central estimate under the historical transfer, not a bound")
     res.number("e5-td-pool-years-lo", tdq("pool", plo), unit="years", fmt=",.0f",
                label=f"detection time, the untraced chip pool, {pct} percentile")
     res.number("e5-td-pool-years-hi", tdq("pool", phi), unit="years", fmt=",.0f",

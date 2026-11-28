@@ -2843,8 +2843,8 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 **3.2 MW**: largest facility the satellite classifier missed
 
 - basis: measured
-- source: [@koopmanschap2026gpu], 2026-06
-- note: misses at 1.2, 0.5, 3.2 and 0.5 MW
+- source: [@clymer2025datacenter], 2025-10
+- note: misclassified/manual_labels.json: four false negatives confirmed as data centres, at 1.92, 1, 3.2 and 2.5 MW; the secondary report (koopmanschap2026gpu, App. B) gives 1.2, 0.5, 3.2 and 0.5 MW, the same largest
 - defined in: `data/inputs/011-physical.toml#L1517`
 
 <a id="phys-container-cluster"></a>
@@ -4864,7 +4864,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="dyn-bloom-beta-aggregate"></a>
 ### dyn-bloom-beta-aggregate
 
-**3.1**: dynamic diminishing returns beta, aggregate US economy, 1930 to 2015
+**3.1**: dynamic diminishing returns b, aggregate US economy, 1930 to 2015
 
 - basis: measured
 - source: [@bloom2020ideas], 2015
@@ -4874,7 +4874,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="dyn-bloom-beta-moore"></a>
 ### dyn-bloom-beta-moore
 
-**0.2**: dynamic diminishing returns beta, Moore's Law research, 1971 to 2014
+**0.2**: dynamic diminishing returns b, Moore's Law research, 1971 to 2014
 
 - basis: measured
 - source: [@bloom2020ideas], 2014
@@ -9830,6 +9830,26 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - note: flexHEG Part II's example, 'a new license every three months' (p. 38). Bitcoin time is accurate only to hours [todd2016opentimestamps], so a height-clocked period should be weeks or longer
 - defined in: `data/inputs/060-protocol.toml#L11`
 
+<a id="prot-gan-coop-gain"></a>
+### prot-gan-coop-gain
+
+**1.5**: Gan: each country's gain from cooperating over racing, C - R, at his illustrative payoffs (2.5, 3.2, 1.0, 0.6)
+
+- basis: modelled
+- source: [@gan2026clock]
+- note: Sec. 4.3, p. 15: 'the participation bound is m_max = 1.5/27'. Gan: national utilities and monitoring costs 'are chosen game inputs, not estimates'
+- defined in: `data/inputs/060-protocol.toml#L20`
+
+<a id="prot-gan-monitor-cost"></a>
+### prot-gan-monitor-cost
+
+**27**: Gan: monitoring cost eta per country per unit of monitoring intensity (findings a month), his illustrative baseline
+
+- basis: modelled
+- source: [@gan2026clock]
+- note: Sec. 4.3, p. 15, and Table 2's notes: 'monitoring cost 27m per country'; a chosen game input, not an estimate
+- defined in: `data/inputs/060-protocol.toml#L28`
+
 <a id="e1-algo-annual"></a>
 ### e1-algo-annual
 
@@ -11291,7 +11311,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e4-sr-boot-corr"></a>
 ### e4-sr-boot-corr
 
-**0.95**: correlation between beta and lambda across block-bootstrap draws of the speedrun's growth-law fit
+**0.95**: correlation between b and lambda across block-bootstrap draws of the speedrun's growth-law fit
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e04_loop_gain.py
@@ -11318,7 +11338,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e4-sr-p-below-1"></a>
 ### e4-sr-p-below-1
 
-**33%**: share of block-bootstrap draws giving a diminishing-returns law with a positive return below 1 (beta and lambda above 0, r below 1)
+**33%**: share of block-bootstrap draws giving a diminishing-returns law with a positive return below 1 (b and lambda above 0, r below 1)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e04_loop_gain.py
@@ -11336,7 +11356,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e4-sr-p-unbounded"></a>
 ### e4-sr-p-unbounded
 
-**30%**: share of block-bootstrap draws in which monthly gains do not fall as the speedup grows (beta at or below 0)
+**30%**: share of block-bootstrap draws in which monthly gains do not fall as the speedup grows (b at or below 0)
 
 - basis: experiment
 - note: 0.5% with lambda above 0 (r unbounded) and 29.4% with both signs flipped (rerun: python3 tools/exp/e04_loop_gain.py)
@@ -11480,7 +11500,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-hazard"></a>
 ### e5-hazard
 
-**0.094/yr**: historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; an upper bound on a careful evader's rate
+**0.094/yr**: historical discovery rate of covert programmes that were found or disclosed, discoveries over programme-years; within the sample an upper bound on a careful evader's rate, its transfer to AI assumed
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -11705,7 +11725,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-hist-years"></a>
 ### e5-td-hist-years
 
-**32 years**: detection time at the prevention miss chance for a path only the historical channels see, from the programme's start; a lower bound, as the rate is an upper bound
+**32 years**: detection time at the prevention miss chance for a path only the historical channels see, from the programme's start, at the constant rate; a central estimate under the transfer from weapons programmes, not a bound
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -11714,7 +11734,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e5-td-pool-years"></a>
 ### e5-td-pool-years
 
-**32 years**: detection time, the untraced chip pool (no acquisition to catch), median; a lower bound, as the historical rate is an upper bound
+**32 years**: detection time, the untraced chip pool (no acquisition to catch), median; a central estimate under the historical transfer, not a bound
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e05_detection.py
@@ -13172,7 +13192,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e9-moore-beta"></a>
 ### e9-moore-beta
 
-**0.20**: Bloom et al.'s beta for Moore's Law (broad R&D), recomputed from their files (lambda = 1)
+**0.20**: Bloom et al.'s b for Moore's Law (broad R&D), recomputed from their files (lambda = 1)
 
 - basis: experiment
 - note: published 0.2 (rerun: python3 tools/exp/e09_returns.py)
@@ -13181,7 +13201,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e9-moore-r"></a>
 ### e9-moore-r
 
-**5.1**: r for Moore's Law research implied by that beta (broad R&D, lambda = 1, output assumed to double every two years)
+**5.1**: r for Moore's Law research implied by that b (broad R&D, lambda = 1, output assumed to double every two years)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e09_returns.py
@@ -13442,7 +13462,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e9-us-bloom-beta"></a>
 ### e9-us-bloom-beta
 
-**3.1**: Bloom et al.'s beta for the US economy, recomputed from their files (lambda = 1)
+**3.1**: Bloom et al.'s b for the US economy, recomputed from their files (lambda = 1)
 
 - basis: experiment
 - note: published 3.1 (rerun: python3 tools/exp/e09_returns.py)
@@ -13451,7 +13471,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e9-us-bloom-r"></a>
 ### e9-us-bloom-r
 
-**0.33**: r for the US economy implied by that beta with lambda = 1
+**0.33**: r for the US economy implied by that b with lambda = 1
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e09_returns.py
@@ -14972,7 +14992,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-n-needed"></a>
 ### e23-n-needed
 
-**85 stages**: stages a rank test would need to tell the 2022 ranking from a random one at the observed rho, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages
+**85 stages**: stages a rank test would need to tell the 2022 ranking from a random one at the observed r_s, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15008,7 +15028,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-power-here"></a>
 ### e23-power-here
 
-**0.16**: statistical power of the one-sided 5% rank test with this many stages if the observed rho were the true one (simulated, ties kept)
+**0.16**: statistical power of the one-sided 5% rank test with this many stages if the observed r_s were the true one (simulated, ties kept)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15017,7 +15037,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho"></a>
 ### e23-rho
 
-**0.28**: Spearman's rho between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)
+**0.28**: Spearman's r_s between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15026,7 +15046,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-alt-max"></a>
 ### e23-rho-alt-max
 
-**0.29**: Spearman's rho, highest over the 6 rules and 6 erosion scorings
+**0.29**: Spearman's r_s, highest over the 6 rules and 6 erosion scorings
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15035,7 +15055,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-alt-median"></a>
 ### e23-rho-alt-median
 
-**0.08**: Spearman's rho, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)
+**0.08**: Spearman's r_s, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15044,7 +15064,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-alt-min"></a>
 ### e23-rho-alt-min
 
-**-0.69**: Spearman's rho, lowest over the 6 rules and 6 erosion scorings
+**-0.69**: Spearman's r_s, lowest over the 6 rules and 6 erosion scorings
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15053,7 +15073,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-boot-hi"></a>
 ### e23-rho-boot-hi
 
-**0.91**: Spearman's rho, 97.5th percentile of resampling the stages
+**0.91**: Spearman's r_s, 97.5th percentile of resampling the stages
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15062,7 +15082,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-boot-lo"></a>
 ### e23-rho-boot-lo
 
-**-0.65**: Spearman's rho, 2.5th percentile of resampling the stages
+**-0.65**: Spearman's r_s, 2.5th percentile of resampling the stages
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15071,7 +15091,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-critical"></a>
 ### e23-rho-critical
 
-**0.59**: smallest Spearman's rho the exact one-sided 5% test could call significant with these stages and ties
+**0.59**: smallest Spearman's r_s the exact one-sided 5% test could call significant with these stages and ties
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15080,7 +15100,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-full"></a>
 ### e23-rho-full
 
-**0.09**: Spearman's rho with power put back in, ranked last as the rule places it (every stage O3 names)
+**0.09**: Spearman's r_s with power put back in, ranked last as the rule places it (every stage O3 names)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15089,7 +15109,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-hi"></a>
 ### e23-rho-hi
 
-**0.80**: Spearman's rho, 97.5th percentile by Fisher's z with the Bonett and Wright variance
+**0.80**: Spearman's r_s, 97.5th percentile by Fisher's z with the Bonett and Wright variance
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15098,7 +15118,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-lo"></a>
 ### e23-rho-lo
 
-**-0.49**: Spearman's rho, 2.5th percentile by Fisher's z with the Bonett and Wright variance
+**-0.49**: Spearman's r_s, 2.5th percentile by Fisher's z with the Bonett and Wright variance
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15107,7 +15127,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-loo-max"></a>
 ### e23-rho-loo-max
 
-**0.54**: Spearman's rho with one stage left out, highest (without packaging)
+**0.54**: Spearman's r_s with one stage left out, highest (without packaging)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15116,7 +15136,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-loo-min"></a>
 ### e23-rho-loo-min
 
-**-0.04**: Spearman's rho with one stage left out, lowest (without ai-chips)
+**-0.04**: Spearman's r_s with one stage left out, lowest (without ai-chips)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -15125,7 +15145,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="e23-rho-part1"></a>
 ### e23-rho-part1
 
-**0.30**: Spearman's rho for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)
+**0.30**: Spearman's r_s for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)
 
 - basis: experiment
 - note: rerun: python3 tools/exp/e23_durability.py
@@ -16434,7 +16454,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="phys-flow-2025-copies"></a>
 ### phys-flow-2025-copies
 
-**140,000,000**: PaLM-540B-sized copies at Pope et al.'s speed that one year's chip sales could run at the reference utilisation
+**140,000,000**: upper bound on PaLM-540B-sized copies at Pope et al.'s small-batch speed that one year's chip sales could run at the reference utilisation (that utilisation needs large batches, which slow each copy)
 
 - basis: derived
 - formula: `phys-flow-2025-flops * phys-util-ref / phys-palm-copy-flops`
@@ -18643,7 +18663,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `def-hwp-horizon * def-hwp-fleet-over-global`
 - inputs: [def-hwp-horizon](#def-hwp-horizon), [def-hwp-fleet-over-global](#def-hwp-fleet-over-global)
 - note: uses that paper's budget, research overhead and utilisation, all assumptions of the paper
-- defined in: `model/parts/040_claims.py#L32`
+- defined in: `model/parts/040_claims.py#L33`
 
 <a id="claim-whole-fleet-days-frozen"></a>
 ### claim-whole-fleet-days-frozen
@@ -18654,7 +18674,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `claim-whole-fleet-horizon * claim-hwp-frozen-frontier / def-hwp-breakout-budget * 365.25`
 - inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [claim-hwp-frozen-frontier](#claim-hwp-frozen-frontier), [def-hwp-breakout-budget](#def-hwp-breakout-budget)
 - note: h_w scales in proportion to the budget; same overhead and utilisation as claim-whole-fleet-horizon
-- defined in: `model/parts/040_claims.py#L46`
+- defined in: `model/parts/040_claims.py#L47`
 
 <a id="claim-whole-fleet-days-1e26"></a>
 ### claim-whole-fleet-days-1e26
@@ -18665,7 +18685,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `claim-whole-fleet-horizon * phys-rahman-1e26-local / def-hwp-breakout-budget * 365.25`
 - inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [phys-rahman-1e26-local](#phys-rahman-1e26-local), [def-hwp-breakout-budget](#def-hwp-breakout-budget)
 - note: h_w scales in proportion to the budget; same overhead and utilisation as claim-whole-fleet-horizon
-- defined in: `model/parts/040_claims.py#L56`
+- defined in: `model/parts/040_claims.py#L57`
 
 <a id="claim-pool-over-floor-now"></a>
 ### claim-pool-over-floor-now
@@ -18675,7 +18695,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `org-smuggled-cum / phys-floor-chips-1e26-now`
 - inputs: [org-smuggled-cum](#org-smuggled-cum), [phys-floor-chips-1e26-now](#phys-floor-chips-1e26-now)
-- defined in: `model/parts/040_claims.py#L66`
+- defined in: `model/parts/040_claims.py#L67`
 
 <a id="claim-pool-over-floor-pause"></a>
 ### claim-pool-over-floor-pause
@@ -18685,7 +18705,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `org-smuggled-cum / phys-floor-chips-1e26-pause`
 - inputs: [org-smuggled-cum](#org-smuggled-cum), [phys-floor-chips-1e26-pause](#phys-floor-chips-1e26-pause)
-- defined in: `model/parts/040_claims.py#L74`
+- defined in: `model/parts/040_claims.py#L75`
 
 <a id="claim-d5-organisms"></a>
 ### claim-d5-organisms
@@ -18696,7 +18716,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `ceil(ln(1 - claim-confidence) / ln(1 - claim-d5-miss-target))`
 - inputs: [claim-confidence](#claim-confidence), [claim-d5-miss-target](#claim-d5-miss-target)
 - note: exact binomial bound with zero misses; any miss raises the number needed
-- defined in: `model/parts/040_claims.py#L87`
+- defined in: `model/parts/040_claims.py#L88`
 
 <a id="claim-c4-staged-runs"></a>
 ### claim-c4-staged-runs
@@ -18706,7 +18726,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `claim-c4-budgets * claim-d2-rounds`
 - inputs: [claim-c4-budgets](#claim-c4-budgets), [claim-d2-rounds](#claim-d2-rounds)
-- defined in: `model/parts/040_claims.py#L100`
+- defined in: `model/parts/040_claims.py#L101`
 
 <a id="claim-c4-staged-runs-fav"></a>
 ### claim-c4-staged-runs-fav
@@ -18716,7 +18736,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `claim-c4-budgets * e4-fa-rounds-fav`
 - inputs: [claim-c4-budgets](#claim-c4-budgets), [e4-fa-rounds-fav](#e4-fa-rounds-fav)
-- defined in: `model/parts/040_claims.py#L109`
+- defined in: `model/parts/040_claims.py#L110`
 
 <a id="claim-c4-k-staged-runs-fav"></a>
 ### claim-c4-k-staged-runs-fav
@@ -18726,7 +18746,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `claim-c4-budgets * e4-k-fa-rounds-fav`
 - inputs: [claim-c4-budgets](#claim-c4-budgets), [e4-k-fa-rounds-fav](#e4-k-fa-rounds-fav)
-- defined in: `model/parts/040_claims.py#L118`
+- defined in: `model/parts/040_claims.py#L119`
 
 <a id="claim-c12-pairs"></a>
 ### claim-c12-pairs
@@ -18736,18 +18756,18 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `n * (n - 1) / 2 for the pathways chapter's n pathways`
 - inputs: 
-- defined in: `model/parts/040_claims.py#L147`
+- defined in: `model/parts/040_claims.py#L149`
 
 <a id="claim-c12-pareto-two"></a>
 ### claim-c12-pareto-two
 
-**12**: pairs of pathways fixed by the evidence on the ranking's two criteria, effect on the line and how hard it is to see: one pathway graded higher on both
+**12**: pairs of pathways Pareto-ordered under our grades on the ranking's two criteria, effect on the line and how hard it is to see: one pathway graded higher on both
 
 - basis: derived
 - formula: `pairs (a, b) with claim-c12-effect-a > claim-c12-effect-b and claim-c12-hidden-a > claim-c12-hidden-b`
 - inputs: [claim-c12-effect-rsi](#claim-c12-effect-rsi), [claim-c12-effect-uc](#claim-c12-effect-uc), [claim-c12-effect-ds](#claim-c12-effect-ds), [claim-c12-effect-dist](#claim-c12-effect-dist), [claim-c12-effect-repl](#claim-c12-effect-repl), [claim-c12-effect-cl](#claim-c12-effect-cl), [claim-c12-effect-lha](#claim-c12-effect-lha), [claim-c12-hidden-rsi](#claim-c12-hidden-rsi), [claim-c12-hidden-uc](#claim-c12-hidden-uc), [claim-c12-hidden-ds](#claim-c12-hidden-ds), [claim-c12-hidden-dist](#claim-c12-hidden-dist), [claim-c12-hidden-repl](#claim-c12-hidden-repl), [claim-c12-hidden-cl](#claim-c12-hidden-cl), [claim-c12-hidden-lha](#claim-c12-hidden-lha)
-- note: an ordinal reading of the pathways table; every other order is a judgement
-- defined in: `model/parts/040_claims.py#L156`
+- note: an ordinal reading of the pathways table whose grades are assumptions, so the count is a judgement too
+- defined in: `model/parts/040_claims.py#L158`
 
 <a id="claim-c12-pareto-three"></a>
 ### claim-c12-pareto-three
@@ -18758,7 +18778,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - formula: `pairs (a, b) graded higher on effect, hidden and cheap alike`
 - inputs: [claim-c12-effect-rsi](#claim-c12-effect-rsi), [claim-c12-effect-uc](#claim-c12-effect-uc), [claim-c12-effect-ds](#claim-c12-effect-ds), [claim-c12-effect-dist](#claim-c12-effect-dist), [claim-c12-effect-repl](#claim-c12-effect-repl), [claim-c12-effect-cl](#claim-c12-effect-cl), [claim-c12-effect-lha](#claim-c12-effect-lha), [claim-c12-hidden-rsi](#claim-c12-hidden-rsi), [claim-c12-hidden-uc](#claim-c12-hidden-uc), [claim-c12-hidden-ds](#claim-c12-hidden-ds), [claim-c12-hidden-dist](#claim-c12-hidden-dist), [claim-c12-hidden-repl](#claim-c12-hidden-repl), [claim-c12-hidden-cl](#claim-c12-hidden-cl), [claim-c12-hidden-lha](#claim-c12-hidden-lha), [claim-c12-cheap-rsi](#claim-c12-cheap-rsi), [claim-c12-cheap-uc](#claim-c12-cheap-uc), [claim-c12-cheap-ds](#claim-c12-cheap-ds), [claim-c12-cheap-dist](#claim-c12-cheap-dist), [claim-c12-cheap-repl](#claim-c12-cheap-repl), [claim-c12-cheap-cl](#claim-c12-cheap-cl), [claim-c12-cheap-lha](#claim-c12-cheap-lha)
 - note: checks the grades against the red team's independent reading (L4, C12.1)
-- defined in: `model/parts/040_claims.py#L165`
+- defined in: `model/parts/040_claims.py#L167`
 
 <a id="formal-d5-organisms-one-miss"></a>
 ### formal-d5-organisms-one-miss
@@ -18883,7 +18903,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 <a id="prot-lambda-over-history"></a>
 ### prot-lambda-over-history
 
-**43**: that rate as a multiple of E5's fitted historical discovery rate of covert programmes (a lower bound on the multiple, as E5's rate is an upper bound for a careful evader)
+**43**: that rate as a multiple of E5's fitted historical discovery rate of covert programmes (a rate transferred from weapons programmes; survivorship suggests a careful evader's is lower)
 
 - basis: derived
 - formula: `prot-lambda-declared / e5-hazard`
@@ -19080,6 +19100,26 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [prot-line-declared-inrun-phi-quarter](#prot-line-declared-inrun-phi-quarter)
 - defined in: `model/parts/060_protocol.py#L234`
 
+<a id="prot-gan-consent-rate"></a>
+### prot-gan-consent-rate
+
+**0.056/month**: most monitoring (findings a month) both countries will pay for in Gan's illustrative calibration, m_max = (C - R) / eta
+
+- basis: derived
+- formula: `prot-gan-coop-gain / prot-gan-monitor-cost`
+- inputs: [prot-gan-coop-gain](#prot-gan-coop-gain), [prot-gan-monitor-cost](#prot-gan-monitor-cost)
+- defined in: `model/parts/060_protocol.py#L247`
+
+<a id="prot-gan-prevent-over-consent"></a>
+### prot-gan-prevent-over-consent
+
+**4.5**: monitoring that prevention at this work's beta needs over Gan's window, as a multiple of the most both countries will pay in his calibration
+
+- basis: derived
+- formula: `def-gan-prevent-rate / prot-gan-consent-rate`
+- inputs: [def-gan-prevent-rate](#def-gan-prevent-rate), [prot-gan-consent-rate](#prot-gan-consent-rate)
+- defined in: `model/parts/060_protocol.py#L255`
+
 <a id="prot-eval-interval-months"></a>
 ### prot-eval-interval-months
 
@@ -19088,7 +19128,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `12 * ln(comp-rsp-cadence) / ln(comp-frontier-compute-growth * comp-ho-annual)`
 - inputs: [comp-rsp-cadence](#comp-rsp-cadence), [comp-frontier-compute-growth](#comp-frontier-compute-growth), [comp-ho-annual](#comp-ho-annual)
-- defined in: `model/parts/060_protocol.py#L247`
+- defined in: `model/parts/060_protocol.py#L268`
 
 <a id="prot-notice-months"></a>
 ### prot-notice-months
@@ -19098,7 +19138,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `(prot-margin - 1) * prot-tr-declared * 12`
 - inputs: [prot-margin](#prot-margin), [prot-tr-declared](#prot-tr-declared)
-- defined in: `model/parts/060_protocol.py#L260`
+- defined in: `model/parts/060_protocol.py#L281`
 
 <a id="prot-prize-over-penalty"></a>
 ### prot-prize-over-penalty
@@ -19108,4 +19148,4 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `(1 - def-prevent-beta) / def-prevent-beta`
 - inputs: [def-prevent-beta](#def-prevent-beta)
-- defined in: `model/parts/060_protocol.py#L273`
+- defined in: `model/parts/060_protocol.py#L294`

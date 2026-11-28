@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Check the crossover-budget statements of section C10 in research/05-formal.md.
 
-Prop 10.1  if the score ratio rho(t) (system over organisation, at matched budget t) is continuous
+Prop 10.1  if the score ratio kappa(t) (system over organisation, at matched budget t) is continuous
            and strictly decreasing in ln t and crosses 1 inside the tested range, the crossover t* is
-           unique; interpolating ln rho linearly in ln t between the bracketing budgets returns a t*
-           inside the bracket, and the exact t* when ln rho is linear in ln t.
-           Without monotonicity, t* = sup{t : rho(t) >= 1} on the tested budgets is the largest
+           unique; interpolating ln kappa linearly in ln t between the bracketing budgets returns a t*
+           inside the bracket, and the exact t* when ln kappa is linear in ln t.
+           Without monotonicity, t* = sup{t : kappa(t) >= 1} on the tested budgets is the largest
            bracketing crossing; a ratio above 1 at every budget is reported as censored (t* beyond the
            range), never extrapolated.
 

@@ -1,4 +1,4 @@
-# Where Subcritical stands, 2026-11-27
+# Where Subcritical stands, 2026-11-28
 
 Started 2026-11-26 as "Detent" from a session launched in the parent folder, which set up the
 repository, wrote the memo, renamed everything to Subcritical (repo `Xaxis/subcritical.space`,
@@ -70,7 +70,8 @@ file, which git ignores.
   (published games reproduced except Emery-Xu's Prop 2, pending an independent check;
   compliance-only disclosure cut; in-run drift beats the margin-2 line), E8 (the floor at FP8), E9
   (compute's share of research input not identified; Part I's loop gains omit compute's growth),
-  E11 (the coupled certificate cannot issue today), E24 (25% of in-treaty findings never halted),
+  E11 (the coupled certificate cannot issue today), E24 (25% of in-treaty findings not halted
+  within what the sources cover),
   E25 (Bitcoin's real headers: the rate floor is dominated), E18 (the cap leaks in jumps, not at a
   constant rate), E21 (t* rises but saturates with each battery; no battery has an organisation),
   E22 (the supply envelope holds 19 of 19; it bounds phi, so the declared margin covers estimation
@@ -82,18 +83,30 @@ file, which git ignores.
   `research/verification/` (kept as written; the site shows their numbers as written and titles
   each with the ledger's current value). Every attack went to the owner of the work it hit; the
   record of each claim at each level and each attack's resolution is `research/07-verification.md`,
-  which the home page shows as a grid. Open: C3.8, C4.9, C9.4, C10.4; Emery-Xu's Prop 2 and one E9
-  reproduction need an independent check. Level 5 needs Paperwright (see below); level 6 is next.
-- The paper: all three parts and a conclusion in `paper/` (about 27,000 words, Part I about half),
-  written from the research files and resynced after each wave; `make paper` flattens it.
+  which the home page shows as cards by standing. Level 6 ran: a fresh referee who saw only the
+  flattened paper and the repo (`research/verification/l6-fresh-review.md`: revise, major; 0 fatal,
+  9 major, 13 minor). Every finding is resolved in the research files (the record's "## Level 6"
+  table). After it no claim is a candidate: six applications (C1, C3, C6, C7, C8, C9) and six
+  downgraded (C2, C4, C5, C10, C11, C12); C1(b) and C3's merging rule are prior work. The E5
+  detection times are central estimates under a transfer from weapons programmes, not bounds; in
+  Gan's calibration prevention at our 5% needs 4.5 times what parties would consent to; the line is
+  evaluable today only on the declared path. Open: C3.8, C4.9, C9.4, C10.4; Emery-Xu's Prop 2 and
+  one E9 reproduction need an independent check. Level 5 needs Paperwright (see below).
+- The paper: all three parts and a conclusion in `paper/` (16,721 words after level 6, from 27,010;
+  Part I about half), written from the research files and resynced after each wave; `make paper`
+  flattens it. Standings are stated once, in Part III's record. A second fresh reviewer should
+  read it before level 5.
 - Findings that change the design: power is not a chokepoint; chokepoints leak at the edges and
   their holders reverse themselves; the historical discovery rate of covert programmes is about 15
   times below the memo's placeholder; channel miss rates cannot be multiplied (the evader picks the
   path); the IAEA margin is about 1 and times detection only; a disputed breakout threshold
   collapses cooperation, so T_b needs agreed tables.
-- Site live at https://subcritical.space: the memo as structure, four figures (loop gain, the
-  line, the detection bound with the historical record, coupled loops in 3D), Part I and the notes
-  rendered, the ledger and the source list. Proven by `tools/site/deploy.sh --check` (shots at two
+- Site live at https://subcritical.space, rebuilt around what a reader needs first: a home page
+  in chapters (a dark 3D hero, the line, the loops, verification, what the tests found as claim
+  cards, the pathways, progress), the paper on one page (/paper), the research index by part, the
+  ledger folded by file with search and basis filters, the experiments leading with where their
+  claims stand. Full-page capture stalls on any overflowing scroller with an opaque background;
+  `tools/lib/scrollers.ts` makes shots.ts name one instead of hanging. Proven by `tools/site/deploy.sh --check` (shots at two
   widths and both themes with axe, and `tools/site/interact.ts`). Port 4527 may be taken by another
   local server; serve on any free port.
 
@@ -162,8 +175,8 @@ file, which git ignores.
 6. **The protocol** (`research/06-protocol.md`, written), derived from Part I.
 7. **Verification** (`research/07-verification.md`, written and current through level 4): levels
    1, 4 and 6 by fresh helpers given the claim, not our case for it; 2 and 3 by us; 5 through
-   Paperwright's desks. Next: level 6 (a fresh reviewer given only the paper and the claims), the
-   open attacks (C3.8, C4.9, C9.4, C10.4), an independent check of Emery-Xu's Prop 2 and of E9's one
+   Paperwright's desks. Level 6 ran once (above). Next: the paper's revision and a second fresh
+   reviewer on it, the open attacks (C3.8, C4.9, C9.4, C10.4), an independent check of Emery-Xu's Prop 2 and of E9's one
    non-reproduction, a test of whether the untraced pool can be closed (nothing tests it), and the
    experiments still unrun (phase 2 on the GPU: E3, E12 and on; E4(b), E4(d), E4(e), E10, E15).
    A claim that fails a level is cut or downgraded.

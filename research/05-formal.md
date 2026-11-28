@@ -63,20 +63,23 @@ it goes (Corollary 1.6a), and that re-admitting caught members raises the reward
 - C*: the agreed effective compute that reaches D1, a convention ([D3](01-anatomy.md#d3-breakout-time)).
 - T_b(p): breakout time on path p (C2). T_b(H) = min over p of T_b(p).
 - D_p: the time from the start of a breakout on p to the regime's first confirmed finding, with
-  cumulative hazard Phi_p(t) = -ln Pr[D_p > t]. At a constant rate Lambda(p), Phi_p(t) = Lambda(p) t.
+  cumulative hazard Phi_p(t) = -ln Pr[D_p > t]. At a constant rate mu(p), Phi_p(t) = mu(p) t.
 - beta: the tolerated chance that a breakout succeeds ([5%](numbers.md#def-prevent-beta) in Part I's
-  illustrations). T_d(p) = inf{t : Phi_p(t) >= ln(1/beta)}, which is ln(1/beta) / Lambda(p) at a
+  illustrations). T_d(p) = inf{t : Phi_p(t) >= ln(1/beta)}, which is ln(1/beta) / mu(p) at a
   constant rate.
 - T_resp(p): the time from a confirmed finding to an effective halt. T_r(p) = T_d(p) + T_resp(p).
   m >= 1: the margin. S(p): the chance a breakout on p succeeds; S = max over p of S(p).
-- c: a channel. C(p): the channels that watch p. lambda_c(p): channel c's detection rate on p (a
+- c: a channel. C(p): the channels that watch p. mu_c(p): channel c's detection rate on p (a
   year). q_c(p): its miss chance over a window.
 - The common form ([the dynamical chapter](013-dynamical.md#the-common-form-a-growth-law-and-its-returns)):
   (1/X) dX/dt = theta X^(-b) E^lambda, u = ln(X/X_0), r = lambda / b, closure e, loop gain K = e r;
-  for several loops K_ij = lambda_i e_ij / b_i. Part I calls the diminishing-returns exponent beta;
-  it is b here, because beta is the miss tolerance. lambda without a channel subscript is the return
-  to input, never a detection rate.
-- rho(A): spectral radius. U: entrywise upper bounds on K. alpha: the error of a confidence statement.
+  for several loops K_ij = lambda_i e_ij / b_i. The diminishing-returns exponent is b throughout,
+  Part I included, because beta is the miss tolerance. lambda, with or without a subscript, is the
+  return to input, never a detection rate; detection rates are mu.
+- rho(A): spectral radius, and rho means nothing else; omega: the certificate's threshold on rho(U)
+  (Corollary 6.6). U: entrywise upper bounds on K. zeta: the error probability of a test or a
+  confidence statement, an inspection's false-alarm probability included. alpha is kept for D1's
+  fraction of decisive clusters.
 - Delta_k: capability gained in round k of a staged run, on a log compute-equivalent axis.
   g_k = Delta_(k+1) / Delta_k: D2's loop gain for that round.
 - s: a coalition's share of the accounted fleet. h_w: the time the whole fleet needs to reach the
@@ -91,7 +94,13 @@ it goes (Corollary 1.6a), and that re-admitting caught members raises the reward
 
 **Assumptions.** (A1.1) For each path p, D_p has a continuous cumulative hazard Phi_p, nondecreasing,
 with Phi_p(0) = 0, and Phi_p is the evader's best case on that path: whatever evasion the path allows
-is already in it. (A1.2) A finding at time D halts the breakout at D + T_resp(p); the breakout
+is already in it. Phi_p is taken as given, independent of how fast or how intensely the evader breaks
+out. A breakout's footprint (power, procurement, staff, traffic) grows with its speed, so its hazard
+may rise with intensity by an amount nothing here measures. Every result that rests on (A1.1) holds
+as stated only where the hazard does not rise with intensity. Where the Phi_p used is only a lower
+bound on the hazard at the evader's intensity, the guarantees that a path is stopped still hold, as
+one-sided bounds, but a verdict that a path fails the line may not
+([Part II, response time](06-protocol.md#response-time)). (A1.2) A finding at time D halts the breakout at D + T_resp(p); the breakout
 succeeds if D + T_resp(p) >= T_b(p). (A1.3) The regime's estimates err in the unsafe direction by at
 most known factors: T_b(p) >= T_b_hat(p) / e_b and T_r(p) <= e_r T_r_hat(p), with e_b, e_r >= 1.
 (A1.4) The evader chooses its path, and P(H) contains every path it can take.
@@ -104,7 +113,7 @@ fails too, since T_d(p) > 0. Otherwise, as Phi_p is continuous, S(p) = exp(-Phi_
 S(p) <= beta iff Phi_p(T_b - T_resp) >= ln(1/beta). The set {x : Phi_p(x) >= ln(1/beta)} of a
 continuous nondecreasing function is the closed half-line starting at T_d(p). ∎
 
-At a constant rate this is T_b >= ln(1/beta) / Lambda + T_resp, the prevention condition of Gan's
+At a constant rate this is T_b >= ln(1/beta) / mu + T_resp, the prevention condition of Gan's
 response-window model [@gan2026clock]: Part I's line with m = 1, an identity not claimed.
 
 **Proposition 1.2 (the margin covers error).** Under (A1.1) to (A1.3), if a path is admitted,
@@ -204,7 +213,7 @@ next two propositions say when the per-path test survives an adaptive evader, an
 when it does not.
 
 **Assumptions for an adaptive evader.** (A1.5) On each path p, the first event bearing on a finding
-that the evader can observe arrives at a constant rate lambda_p, and that event counts as the
+that the evader can observe arrives at a constant rate mu_p, and that event counts as the
 finding: a precursor the evader can react to (a meter anomaly, an inspector's request) starts the
 response, and any confirmation delay is part of T_resp(p). (A1.6) A finding on path p at time D halts
 the party's breakout on every path by D + T_resp(p). (A1.7) The evader works on one path at a time
@@ -214,7 +223,7 @@ either restarts when the evader changes path or carries over (a checkpoint is a 
 **Proposition 1.7 (adaptive evader, progress restarts).** Under (A1.5) to (A1.7), if progress
 restarts and no path's breakout fits inside any path's response time, T_resp(p) < T_b(q) for all p
 and q, then every strategy, adaptive ones included, succeeds with probability at most the largest
-S(p) = exp(-lambda_p (T_b(p) - T_resp(p))). The per-path test is then exact.
+S(p) = exp(-mu_p (T_b(p) - T_resp(p))). The per-path test is then exact.
 
 *Proof.* Until the first finding the evader observes nothing that predicts findings, so up to then
 its schedule is a randomised plan: a sequence of stretches, each on one path from scratch. After a
@@ -231,7 +240,7 @@ S(p) just under beta, that succeeds with nearly twice beta. That is Proposition 
 attempt, inside one response window.
 
 **Proposition 1.8 (adaptive evader, progress carries over).** Under (A1.5) to (A1.7) with progress
-carried over, let c_min be the smallest lambda_p T_b(p), the expected number of findings in a whole
+carried over, let c_min be the smallest mu_p T_b(p), the expected number of findings in a whole
 breakout's worth of work on the best-hidden path, and x* = 1 - max_p T_resp(p) / min_p T_b(p), the
 share of the work left once the fastest path can finish the rest inside the longest response. Every
 strategy succeeds with probability at most exp(-c_min max(0, x*)), with equality when every path
@@ -240,23 +249,23 @@ c_min x* >= ln(1/beta). It implies the per-path test, and the strict scalar test
 min_p T_b(p) >= max_p T_d(p) + max_p T_resp(p), implies it.
 
 *Proof.* Before the first finding the schedule is a randomised plan, as before. A unit of progress on
-path p takes T_b(p) and meets lambda_p T_b(p) >= c_min findings in expectation, so when progress
+path p takes T_b(p) and meets mu_p T_b(p) >= c_min findings in expectation, so when progress
 first reaches x the cumulative hazard is at least c_min x. Success needs completion with no finding,
 or a first finding on some p at a progress x with x + T_resp(p) / min T_b >= 1, since otherwise not
 even the fastest path can finish before the halt (later findings only bring the halt forward).
 Either way it needs no finding before progress reaches x*, which has probability at most
-exp(-c_min x*). With a common T_resp, working on the path with the least lambda_p T_b(p) up to x*
+exp(-c_min x*). With a common T_resp, working on the path with the least mu_p T_b(p) up to x*
 and then finishing on the fastest path attains it, since findings in the last stretch come too late.
-The per-path test follows from lambda_p (T_b(p) - T_resp(p)) = lambda_p T_b(p) (1 - T_resp(p) /
-T_b(p)) >= c_min x*. With lambda_min the smallest rate, the strict scalar test gives
-c_min x* >= lambda_min (min T_b - max T_resp) >= ln(1/beta). ∎
+The per-path test follows from mu_p (T_b(p) - T_resp(p)) = mu_p T_b(p) (1 - T_resp(p) /
+T_b(p)) >= c_min x*. With mu_min the smallest rate, the strict scalar test gives
+c_min x* >= mu_min (min T_b - max T_resp) >= ln(1/beta). ∎
 
 For AI, progress usually carries over, so the per-path test is not enough: a covert path can carry
 most of the work, and a fast declared path can finish the rest inside its response time. Counted
 under (A1.5), with the precursor as the finding, the red team's instance fails Proposition 1.8's
 line: training covertly to the midpoint and finishing on the declared path succeeds with 0.21 in
 `c1_margin.py`, more than four times beta. Read at the historical discovery rate, the line asks that
-every path's lambda_p T_b(p) reach ln(1/beta) / x*, so that every covert path a party's progress
+every path's mu_p T_b(p) reach ln(1/beta) / x*, so that every covert path a party's progress
 could move to take at least its T_d divided by x* to finish alone. For a path only the historical
 channels see, E5 puts T_d at [32 years](numbers.md#e5-td-hist-years) from the programme's start, a
 lower bound, since its historical rate is an upper bound. When every response is short against the
@@ -268,8 +277,8 @@ fastest path too, which is safe and much stricter.
 attempts over the regime's life, the i-th meeting the line at beta_i, the chance that one succeeds
 is at most the sum of the beta_i under any dependence, and 1 - prod(1 - beta_i) if they are
 independent. Meeting the line at beta / n per attempt keeps the total at beta, which at a constant
-rate lengthens T_d by ln(n) / Lambda. *Proof:* the union bound, the product for independence, and
-T_d(beta / n) = ln(n / beta) / Lambda. ∎
+rate lengthens T_d by ln(n) / mu. *Proof:* the union bound, the product for independence, and
+T_d(beta / n) = ln(n / beta) / mu. ∎
 
 This answers the red team's [C1.4](verification/l4-red-team.md#c1): at beta per attempt,
 independent attempts compound to 1 - (1 - beta)^n. Two things follow. The protocol must bound n, for
@@ -414,8 +423,8 @@ break [@chuang2026teefail]: both are this case.
 **Theorem 3.3 (merging).** Let channels on a path have detection times D_1, ..., D_n with any joint
 law, and D = min_i D_i. Then Pr[D > t] <= min_i Pr[D_i > t]. If the D_i are positively upper-orthant
 dependent, Pr[all D_i > t] >= prod_i Pr[D_i > t], then also Pr[D > t] >= prod_i Pr[D_i > t]. So with
-constant marginal rates the merged rate, -ln Pr[D > t] / t, is at least max_i lambda_i under any
-dependence, and at most sum_i lambda_i under positive dependence.
+constant marginal rates the merged rate, -ln Pr[D > t] / t, is at least max_i mu_i under any
+dependence, and at most sum_i mu_i under positive dependence.
 
 *Proof.* {D > t} is contained in each {D_i > t} (Fréchet's bound). The second part restates the
 definition. Comonotone mixtures (Theorem 3.2 applied to the conditional survival chances) and common
@@ -429,8 +438,8 @@ paths, where the maximum of Theorem 3.1 takes it.
 
 **Corollary 3.4 (the detection bound over breakout time, several channels).** Partition C(p) into
 groups that are independent of each other given the strategy, with any dependence inside a group.
-Then miss(p) <= exp(-Lambda_m(p) w(p)), with Lambda_m(p) the sum over groups of the largest rate in the
-group, so T_d(p) <= ln(1/beta) / Lambda_m(p), and Proposition 1.5 holds with this T_d. *Proof:*
+Then miss(p) <= exp(-mu_m(p) w(p)), with mu_m(p) the sum over groups of the largest rate in the
+group, so T_d(p) <= ln(1/beta) / mu_m(p), and Proposition 1.5 holds with this T_d. *Proof:*
 independence across groups multiplies the groups' survival chances; Theorem 3.3 bounds each. ∎
 
 This is the memo's "combined chance of missing a secret program over its breakout time", restated so
@@ -501,25 +510,25 @@ equivalently the slope b (K - 1) of ln g_k against Delta_k. The trigger should b
 K exceeds K* < 1", with K estimated from Lemma 4.1 in a closed-loop run, or as the product of
 separately measured factors (Proposition 4.5), which the claim already describes.
 
-**Proposition 4.4 (which bound binds).** Let U_alpha satisfy Pr_K[U_alpha >= K] >= 1 - alpha for
-every K. The rule "restrict while U_alpha > K*" leaves a loop with K > K* unrestricted with
-probability at most alpha; the rule on a lower bound controls false alarms at K <= K* and leaves misses
-uncontrolled. *Proof:* if K > K*, Pr[U_alpha <= K*] <= Pr[U_alpha < K] <= alpha; the lower bound is
+**Proposition 4.4 (which bound binds).** Let U_zeta satisfy Pr_K[U_zeta >= K] >= 1 - zeta for
+every K. The rule "restrict while U_zeta > K*" leaves a loop with K > K* unrestricted with
+probability at most zeta; the rule on a lower bound controls false alarms at K <= K* and leaves misses
+uncontrolled. *Proof:* if K > K*, Pr[U_zeta <= K*] <= Pr[U_zeta < K] <= zeta; the lower bound is
 symmetric. ∎ Textbook (tests and confidence intervals are dual). It settles Part I's dispute in the
 direction the claims file chose; its price, false alarms below K*, falls only as rounds narrow the
 interval (E4(c)).
 
 **Proposition 4.5 (combining factors).** If K = prod_i f_i with nonnegative factors and
-Pr[U_i >= f_i] >= 1 - alpha_i, then Pr[prod_i U_i >= K] >= 1 - sum_i alpha_i. *Proof:* the union bound,
+Pr[U_i >= f_i] >= 1 - zeta_i, then Pr[prod_i U_i >= K] >= 1 - sum_i zeta_i. *Proof:* the union bound,
 and the product rises in each nonnegative factor. ∎ The delta method is narrower but only
 asymptotic; at five rounds the Bonferroni product is the one with a guarantee.
 
 **Corollary 4.5a (which false-alarm rate).** The rule on K's product bound fires when U_e U_r > K*,
-each factor at its own error, alpha_e + alpha_r <= alpha. If the closure's bound satisfies U_e <= 1,
-the K rule fires only where the rule on r alone at the tightened error alpha_r fires, and that rule
-fires wherever the rule on r at alpha does. With U_e = 1, a loop that may be fully closed, the K
-rule fires wherever the r rule at alpha does. *Proof:* U_e U_r <= U_r(alpha_r), and
-U_r(alpha_r) >= U_r(alpha) because a smaller error widens a bound. ∎ So a false-alarm rate measured
+each factor at its own error, zeta_e + zeta_r <= zeta. If the closure's bound satisfies U_e <= 1,
+the K rule fires only where the rule on r alone at the tightened error zeta_r fires, and that rule
+fires wherever the rule on r at zeta does. With U_e = 1, a loop that may be fully closed, the K
+rule fires wherever the r rule at zeta does. *Proof:* U_e U_r <= U_r(zeta_r), and
+U_r(zeta_r) >= U_r(zeta) because a smaller error widens a bound. ∎ So a false-alarm rate measured
 for r alone, such as E4's [84%](numbers.md#e4-fa-n5) after five rounds, is not the K rule's: at a
 closure bound of 1 the K rule fires at least as often, and E4(c) must report the rate for the K rule
 itself (the red team's [C4.7](verification/l4-red-team.md#c4)).
@@ -558,27 +567,27 @@ by `tools/formal/c4_identity.py`; no counterexample.
 locks), built after E is fixed by builders blind to it.
 
 **Theorem 5.1 (exact one-sided bound).** Let X be the number missed, and U(x, n) the p with
-Pr[Bin(n, p) <= x] = alpha (U = 1 if x = n). Then Pr_p[U(X, n) >= p] >= 1 - alpha for every p. With no
-misses U = 1 - alpha^(1/n), at most a target p_T iff n >= ln(alpha) / ln(1 - p_T): at
+Pr[Bin(n, p) <= x] = zeta (U = 1 if x = n). Then Pr_p[U(X, n) >= p] >= 1 - zeta for every p. With no
+misses U = 1 - zeta^(1/n), at most a target p_T iff n >= ln(zeta) / ln(1 - p_T): at
 [90%](numbers.md#claim-confidence) and a [10%](numbers.md#claim-d5-miss-target) target,
 [22 organisms](numbers.md#claim-d5-organisms). One miss raises it to
 [38 organisms](numbers.md#formal-d5-organisms-one-miss), two to
 [52 organisms](numbers.md#formal-d5-organisms-two-miss).
 
-*Proof.* F_p(x) = Pr_p[X <= x] is continuous and decreasing in p, so U(x) < p iff F_p(x) < alpha. With
-x_p the largest x for which F_p(x) < alpha, Pr_p[U(X) < p] = F_p(x_p) < alpha. ∎ Textbook (Clopper and
+*Proof.* F_p(x) = Pr_p[X <= x] is continuous and decreasing in p, so U(x) < p iff F_p(x) < zeta. With
+x_p the largest x for which F_p(x) < zeta, Pr_p[U(X) < p] = F_p(x_p) < zeta. ∎ Textbook (Clopper and
 Pearson). The false-alarm rate on benign models has the same bound; on disjoint samples the two hold
-together with probability at least (1 - alpha)^2.
+together with probability at least (1 - zeta)^2.
 
 **Proposition 5.2 (a sequential test for absence).** Fix 0 <= p_1 < p_T and let
 M_n = prod over i <= n of (p_1 / p_T)^(Y_i) ((1 - p_1) / (1 - p_T))^(1 - Y_i), with Y_i = 1 if organism
-i is missed. Declaring "miss rate below p_T" once M_n >= 1/alpha errs with probability at most alpha
+i is missed. Declaring "miss rate below p_T" once M_n >= 1/zeta errs with probability at most zeta
 under every p >= p_T, for any stopping rule. With p_1 = 0 and no misses it stops at Theorem 5.1's
 count.
 
 *Proof.* Under p the expected factor is p p_1 / p_T + (1 - p)(1 - p_1) / (1 - p_T): linear in p, 1 at
 p_T, and decreasing because p_1 / p_T < (1 - p_1) / (1 - p_T). So for p >= p_T, M is a nonnegative
-supermartingale from 1, and Ville's inequality gives Pr[sup M_n >= 1/alpha] <= alpha. With p_1 = 0
+supermartingale from 1, and Ville's inequality gives Pr[sup M_n >= 1/zeta] <= zeta. With p_1 = 0
 and no misses, M_n = (1 - p_T)^(-n). ∎ Textbook (Ville; Wald's sequential test).
 
 **Proposition 5.3 (what the guarantee covers).** If a share epsilon of the organisms the regime will
@@ -592,7 +601,7 @@ epsilon. *Proof:* p_mix = (1 - epsilon) p_tested + epsilon p_other. ∎ That is 
 budget meets both targets on RL-locked organisms (E3), the range where E's methods work, and gradient
 hacking [@hubinger2023trusteval]. The organism method is prior work [@greenblatt2024password;
 @taylor2025auditinggames; @finke2026robustorganisms]. *Checked* exactly (no simulation) for p
-from 1/400 to 399/400 in steps of 1/400, n from 1 to 60 and alpha of 10%, 5% and 1%, and Ville's test
+from 1/400 to 399/400 in steps of 1/400, n from 1 to 60 and zeta of 10%, 5% and 1%, and Ville's test
 over 300 organisms by dynamic programming, by `tools/formal/c5_binomial.py`; no counterexample.
 
 ## C6. The coupled-gain certificate and the runaway condition
@@ -605,13 +614,13 @@ on any cycle.
 
 *Proof.* Gelfand's formula, rho(A) = lim ||A^k||^(1/k), with the max-row-sum norm, which rises with
 the entries' absolute values. (a) and (b): |A^k| <= |A|^k <= B^k entrywise. (c): rho(B) =
-rho(D^(-1) B D) with D = diag(w), whose row sums are (Bw)_i / w_i; for the lower bound, Bw >= mu w gives
-B^k w >= mu^k w, so ||B^k|| >= mu^k min w / max w. (d): B dominates the matrix holding only a cycle's
+rho(D^(-1) B D) with D = diag(w), whose row sums are (Bw)_i / w_i; for the lower bound, Bw >= c_0 w gives
+B^k w >= c_0^k w, so ||B^k|| >= c_0^k min w / max w. (d): B dominates the matrix holding only a cycle's
 edges, whose L-th power, for a cycle of length L, is diagonal on the cycle with the cycle's product. ∎ (Perron and Frobenius; Collatz and
 Wielandt.)
 
 **Theorem 6.2 (the certificate).** If the bounds |K_ij| <= U_ij hold jointly with probability at
-least 1 - alpha (for instance each with error alpha_ij, the alpha_ij summing to at most alpha), then
+least 1 - zeta (for instance each with error zeta_ij, the zeta_ij summing to at most zeta), then
 with that probability rho(K+) <= rho(U) and rho(K) <= rho(U), with rho(U) <= max_i (Uw)_i / w_i for
 every w > 0 and rho(U) <= max_i sum_j U_ij; K+ is K with its negative entries set to 0. *Proof:* the
 union bound; 0 <= K+ <= |K| <= U with Lemma 6.1 (a), and Lemma 6.1 (b), (c). ∎
@@ -642,7 +651,7 @@ result; the matrix adds only that cross-feeds cannot help. And the 1.07 is r's 9
 joint 95% bound.
 
 **The smallest cut set (C6(b)).** f(S) = rho(U with the edges in S cut) is nonincreasing in S, so a
-smallest set reaching rho* exists, and a search over sets by size finds it. Cutting greedily, largest
+smallest set reaching omega exists, and a search over sets by size finds it. Cutting greedily, largest
 single drop first, is not enough: it needed more cuts than the smallest set in 12 of 296 random
 four-loop instances. With a handful of named edges, exhaustive search is cheap.
 
@@ -679,7 +688,7 @@ headroom stops a supercritical loop first.
 earlier than (exp(a b_i D / v_i) - 1) / (a c). *Proof:* invert the bound at N = b_i D / v_i. ∎
 **Corollary 6.6 (the drift margin).** If rho(K+(t)) rises at most at rate rho_dot, a certificate
 rho(U) <= 1 - m rho_dot T_r keeps rho(K+) <= 1 for at least m T_r. *Proof:* rho(K+(t)) <= rho(U) +
-rho_dot t, since K+ <= U at the start. ∎ For nonnegative K, K+ = K. That is Part I's rho*; rho_dot is
+rho_dot t, since K+ <= U at the start. ∎ For nonnegative K, K+ = K. That is Part I's threshold omega; rho_dot is
 unmeasured.
 
 **Fails when.** The bounds are not jointly valid, for instance because parties report their own
@@ -872,19 +881,19 @@ of real powered time. (A9.4) Every leaf behind every anchored root is published.
 (A9.3) fails for every chip at once if one trust anchor breaks [@chuang2026teefail].
 
 **Proposition 9.1 (P2, corrected: the counter's budget).** Under (A9.3) alone, with the rule "stop
-once h >= H_e, or once h < k + rho_min (t - t_l) - s" (t_l the counter at acceptance, rho_min a floor
+once h >= H_e, or once h < k + xi_min (t - t_l) - s" (t_l the counter at acceptance, xi_min a floor
 on the block rate per unit of counter time, s a slack in blocks), the chip runs under the licence for
-at most (L + s) / rho_min of counter time, whatever headers it is fed and whatever chain its height
+at most (L + s) / xi_min of counter time, whatever headers it is fed and whatever chain its height
 follows, even one whose height falls. Fed the honest chain and kept on, it stops when block H_e
 arrives, or earlier if the honest chain falls behind the floor. *Proof:* while running,
-k + rho_min (t - t_l) - s <= h < k + L. ∎
+k + xi_min (t - t_l) - s <= h < k + L. ∎
 
 The rule in the claim, stop after "no headers showing progress for longer than a local bound", fails
 P2. A holder who feeds one header, real or mined, just inside each local bound tau keeps the chip
 running for about L tau of counter time against a nominal L block intervals, a stretch of tau over the
 block interval, which `c9_clock.py` reproduces in every run. The rate floor closes that, and the level
 4 red team is right about what is left ([C9.1](verification/l4-red-team.md#c9)): the bound in
-Proposition 9.1 is the powered-time counter's. A licence that said "run for (L + s) / rho_min powered
+Proposition 9.1 is the powered-time counter's. A licence that said "run for (L + s) / xi_min powered
 hours" would give the same bound with no chain at all, and such counters are prior work, with the
 idle-chip weakness flexHEG names, leaving a chip idle "to save up usage time"
 [@petrie2025flexheg2]. Against a holder who refuses, who keeps a chip offline across its expiry and
@@ -1092,16 +1101,16 @@ over its expected life than an attempt; with V the value of a decisive advantage
 then only prevention, pi <= beta, is left.
 
 **Proposition E.3 (the inspectee's best response).** In the general inspection game of Avenhaus, von
-Stengel and Zamir, with the violator's gain normalised to 1, penalty b, false-alarm cost h and
-false-alarm probability alpha, acting legally is a best response iff the non-detection probability is
-at most (b - h alpha) / (1 + b) [@avenhaus2002inspection]. *Proof:* from their payoffs, legal behaviour
-earns -h alpha and violation -b + (1 + b) times non-detection. ∎ The survey derived this corollary. In
+Stengel and Zamir, with the violator's gain normalised to 1, penalty P (in units of that gain), false-alarm cost h and
+false-alarm probability zeta, acting legally is a best response iff the non-detection probability is
+at most (P - h zeta) / (1 + P) [@avenhaus2002inspection]. *Proof:* from their payoffs, legal behaviour
+earns -h zeta and violation -P + (1 + P) times non-detection. ∎ The survey derived this corollary. In
 simultaneous play no equilibrium has the inspectee legal with certainty; an inspector who commits to a
 published inspection probability makes legal behaviour the best response [@avenhaus2002inspection;
 @maschler1966price; @vonstengel2016recursive], and commitment needs a verifiable randomiser.
 
 **Proposition E.4 (prevention against deterrence).** Prevention, non-detection at most beta, implies
-Proposition E.3's condition whenever b >= (beta + h alpha) / (1 - beta), and not in general.
+Proposition E.3's condition whenever P >= (beta + h zeta) / (1 - beta), and not in general.
 *Proof:* substitute. ∎ The two come apart in both directions. Deterrence can hold while a breakout would
 usually succeed: in Gan's calibration it takes a chance of detection within the window of only
 [32%](numbers.md#def-gan-deter-detect) [@gan2026clock]. Prevention can hold while an attempt is still
@@ -1145,7 +1154,7 @@ outside the model.
 7. **Coupling (C6).** Most off-diagonal entries are unmeasured, parties report their own edges, joint
    validity of the bounds is an assumption, runaway is proved only for nonnegative couplings (for
    signed ones only rho(K+) < 1 decides, ruling it out), the model has no ceiling, and the drift rate
-   behind rho* is unmeasured.
+   behind omega is unmeasured.
 8. **Payoffs (C7, compliance).** V, P, R, Q, w and delta are unmeasured; the games are one-shot or
    stationary, and with caught members re-admitted, (i) needs a reward that approaches V_i as delta
    nears 1; insiders can be coerced; non-members are outside.

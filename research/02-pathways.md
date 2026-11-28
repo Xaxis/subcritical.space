@@ -24,12 +24,15 @@ The short version:
 - **The rest.** Distillation is fourth, self-replication fifth, continual learning sixth.
   Long-horizon autonomy is seventh, recast as the clock of closure: watched, and used to space the
   protocol's gates, not limited.
-- **Only part of the order is fixed by evidence.** Of the [21](numbers.md#claim-c12-pairs) pairs of
-  pathways, [12](numbers.md#claim-c12-pareto-two) have one pathway ahead on both criteria: every
-  pathway over long-horizon autonomy, and self-improvement, undeclared compute and distillation each
-  over continual learning and over self-replication. None orders the first three places. Every other
-  order, the tie included, is a stated judgement. The cost of a limit sets each pathway's response
-  (restrict, meter or watch), not its rank.
+- **No part of the order is fixed by evidence.** Of the [21](numbers.md#claim-c12-pairs) pairs of
+  pathways, [12](numbers.md#claim-c12-pareto-two) are Pareto-ordered under our grades, one pathway
+  graded higher on both criteria: every pathway over long-horizon autonomy, and self-improvement,
+  undeclared compute and distillation each over continual learning and over self-replication. The
+  grades are our judgements, entered as assumptions, so the count describes our reading, not the
+  evidence, and the pairs over autonomy all rest on its grades on effect and visibility, both
+  [0](numbers.md#claim-c12-effect-lha). None orders the first three places. Every other order, the tie included, is a stated judgement too. Theft of
+  weights is not ranked, so this is a ranking of the seven routes assessed, not of every route. The
+  cost of a limit sets each pathway's response (restrict, meter or watch), not its rank.
 
 Every judgement below rests on proxies. Nobody has reached D1, the effective compute that would
 reach it is a convention rather than a measurement ([D3 in the anatomy chapter](01-anatomy.md#d3-breakout-time)),
@@ -89,8 +92,9 @@ cheap. That made the rank answer "what should be restricted first", Part II's qu
 "what leads to superintelligence", the brief's, and the red team cut that criterion
 ([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). The criteria are not
 given numerical weights, because the evidence is too uneven for weights to mean anything. So the
-evidence fixes only the pairs in which one pathway is ahead on every criterion; every other order is
-a stated judgement. Where the evidence cannot separate two pathways, they share a rank.
+only orders that need no weighing are the pairs in which one pathway is graded ahead on every
+criterion, and even those rest on the grades, which are our judgements; every other order is a
+stated judgement on top of them. Where the evidence cannot separate two pathways, they share a rank.
 
 The method has a precedent. Acquisition path analysis, from the IAEA's State-level concept, was
 applied by Allen et al. to a hypothetical arms-cap treaty: each path carries a "Proliferation Time"
@@ -180,9 +184,13 @@ is unmeasured, and the edge the protocol holds is the one from money to compute
 ([Y1c](013-dynamical.md#y1c-the-economic-loop)).
 
 **Not assessed: theft of weights.** It is the obvious sibling of distillation, and Remler and
-Hayum's second axis is industrial espionage [@remler2026distillation]. Part I gathered no evidence
-on how often weights are stolen or how well they are protected. It is named here as a gap for Part
-II, not ranked.
+Hayum's second axis is industrial espionage [@remler2026distillation]. Nevo et al. set out the
+routes by which frontier weights could be stolen and the security a lab would need against each
+class of attacker, up to the most capable states [@nevo2024securing]. Part I gathered no evidence
+on how often weights are stolen or how well they are protected. For a state it plausibly ranks
+first on both criteria: a theft moves the thief's breakout time to its victim's at once, and no
+compute channel sees it. It is named here as a gap for Part II, not ranked, and its absence means
+the ranking below covers the seven routes assessed, not every route to superintelligence.
 
 That leaves seven pathways. The sections below take them in the order of the new ranking.
 
@@ -290,10 +298,11 @@ breakout fleet, [180 million H100e](numbers.md#def-hwp-fleet-threshold), is
 a two-year horizon. Against the thresholds a protocol would set, it is large. The untraced pool,
 on the order of [1,000,000 chips](numbers.md#phys-chips-unaccounted) [@koopmanschap2026gpu], is in E8
 a median [340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the aggregate chip floor of a
-[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run at a pause's run length (5th to 95th percentile
-[110](numbers.md#e8-pool-over-floor-1e26-pause-p05) to
-[1,000](numbers.md#e8-pool-over-floor-1e26-pause-p95)), with the floor at BF16; an FP8 run doubles
-the ratio. The pool's size is an assumed order of magnitude and that spread is our reading. Against
+[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run at a pause's run length, with the floor at BF16;
+an FP8 run doubles the ratio. That is a point at an assumed pool, not a measured range. The pool's
+size is an assumption, and the spread E8 draws around it is our reading of "order of magnitude",
+not a sourced range, so no percentiles are given for it. E8 computes on ledger inputs; it tests
+nothing. Against
 the floor taken as a bound, at FP8 and full utilisation, the pool would have to shrink
 [1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold before chip accounting could resolve such a run
 ([P4](011-physical.md#p4-the-footprint-and-its-floor)). The compute smuggled into one country alone,
@@ -340,14 +349,23 @@ programme's start. At that rate the mean wait for discovery is
 historical channels see; for the untraced pool the median is
 [32 years](numbers.md#e5-td-pool-years) ([23 years](numbers.md#e5-td-pool-years-lo) to
 [43 years](numbers.md#e5-td-pool-years-hi)). The rate counts only programmes that were later found or
-disclosed, so it is an upper bound on a careful evader's rate, and these detection times are lower
-bounds. Nor is the rate even over a programme's life: within a year of the start a Weibull fit finds
+disclosed, so within that record it overstates a careful evader's rate. That does not make these
+detection times lower bounds: the constant rate is an assumption, E5's Weibull fit gives
+[24 years](numbers.md#e5-td-weibull-years) for the historical channels' path, and nothing measures how nuclear and biological
+programme-years transfer to AI. They are central estimates under that transfer. They also assume
+that detection does not depend on how intensely a party breaks out. Breakout time on this path is
+counted in days of compute, while E5's rate is per calendar year, fitted to programmes that ran for
+years at low intensity. A breakout's footprint (power, procurement, staff, traffic) grows with its
+speed, so its chance of discovery plausibly grows too, perhaps by orders of magnitude for a run of
+days on a million chips. The size and even the direction of the error are unknown, and nothing here
+models the hazard as a function of footprint; E8's channel limits are where that would start. Every
+verdict on a covert path, and the tie at the top, turns on this assumption. Nor is the rate even over a programme's life: within a year of the start a Weibull fit finds
 [2.6%](numbers.md#e5-weibull-detect-1y) discovered, against [9.0%](numbers.md#e5-hazard-detect-1y) at
 the constant rate. Cloud compute and distillation have no measured channel at all, so a breakout
 through them is missed with certainty. The memo's placeholder channel needed
 [2.5 yr](numbers.md#def-placeholder-detect-time). On these figures, for compute that only the
 historical channels see, D4 is in effect unsatisfiable: any undeclared holding whose breakout time
-is shorter than decades is weapons-grade. That is why the protocol cannot rely on
+is shorter than decades is inside the line. That is why the protocol cannot rely on
 finding covert work after it starts and must keep the covert reserve small
 ([O4](015-organisational.md#o4-covert-supply-how-secret-programmes-were-run-and-found)). On the T_b
 side, it adds a reserve to every party's holdings: D3 should count the untraced pool as held by the
@@ -358,14 +376,14 @@ uncertain; undeclared compute exists now, with a moderate effect on T_b and an e
 Both are hard to see. On T_b alone undeclared compute is weak: the smuggled stock at fixed
 algorithms needs [555 years](numbers.md#prot-pool-years-fixed) to reach the one published budget.
 The tie sets an effect on T_r against one on T_b, which share no scale, so it is a judgement, not a
-finding. That both can be limited at little cost to useful AI sets their response, restrict, not
+finding, and its T_r side assumes that detection does not scale with a breakout's intensity (above). That both can be limited at little cost to useful AI sets their response, restrict, not
 their rank.
 
 **What would change its rank.** Chip accounting with a resolution finer than the aggregate floor at
 the pause run length would drop it; so would E5 fitting a discovery rate near the memo's
 placeholder. E5 has run and did not:
-the placeholder is [12.8](numbers.md#e5-memo-over-hazard) times its fitted rate, which is itself an
-upper bound on a careful evader's rate. A test that could fail only on an error that large is weak
+the placeholder is [12.8](numbers.md#e5-memo-over-hazard) times its fitted rate, which within its
+record overstates a careful evader's rate. A test that could fail only on an error that large is weak
 evidence when it passes. Leading-edge chips made at volume outside any agreement (first chips
 targeted for [2028](numbers.md#org-china-euv-target), other experts say
 [2030](numbers.md#org-china-euv-expert), on unnamed-source reporting) would raise it, as would
@@ -655,17 +673,22 @@ Self-replication is blocked today by human-held gates and seen by evaluations an
 identity checks; that it is cheap to forbid sets its response, not its rank. Continual learning is
 unmeasured and damped by forgetting. Autonomy adds nothing by itself and is seen in public.
 
-**What the evidence fixes.** Graded on the table's entries, with equal grades wherever the entries
+**What the grades fix.** Graded on the table's entries, with equal grades wherever the entries
 do not separate two pathways, [12](numbers.md#claim-c12-pareto-two) of the
-[21](numbers.md#claim-c12-pairs) pairs have one pathway ahead on both criteria: every pathway over
+[21](numbers.md#claim-c12-pairs) pairs are Pareto-ordered under our grades, one pathway graded
+higher on both criteria: every pathway over
 long-horizon autonomy, and self-improvement, undeclared compute and distillation each over continual
 learning and over self-replication
 ([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). The same grades with cost
 as a third criterion give the red team's [9](numbers.md#claim-c12-pareto-three)
 ([C12.1](verification/l4-red-team.md#c12)); taking cost out of the rank adds self-improvement,
 undeclared compute and distillation over self-replication, whose cheap limit had kept those pairs
-open. The grades are inputs to the model, so a different reading reruns the count. None orders the
-first three places. The tie between self-improvement and undeclared compute, declared scaling's
+open. The grades are our judgements, entered in the model as assumptions, so the count is a
+property of our reading, not of evidence. The pairs over long-horizon autonomy all rest on its
+grades on both criteria, effect [0](numbers.md#claim-c12-effect-lha) and visibility
+[0](numbers.md#claim-c12-hidden-lha), though long-horizon competence is part of D1. No independent grader, blind to this order,
+has graded the table, so the count's spread across readers is unknown; a different reading reruns
+it. None orders the first three places. The tie between self-improvement and undeclared compute, declared scaling's
 place below both, and every other order are judgements.
 
 Of the judgements, three are weakest. Distillation against declared scaling: if a gate on teacher
@@ -814,8 +837,10 @@ candidate pathways, their modelling and the loops' comparison are prior work; tr
 compute and distillation as routes is prior work in substance [@fithian2026hardwired;
 @remler2026distillation]. What remains ours is the ranking itself: these seven routes, loops and
 supply and transfer routes together, each judged on stated proxies and tied to the terms of D4, to
-the channel that sees it and to the cost of a limit. It is a judgement made with a known method, of
-which only [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) pairs are fixed
-by evidence, none among the first three places
-([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). "Not found" is a claim
+the channel that sees it and to the cost of a limit. It is a judgement made with a known method, in
+which [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) pairs are
+Pareto-ordered under our grades, which are judgements, and none among the first three places
+([C12](04-claims.md#c12-the-pathways-ranked-by-their-effect-on-the-line)). It ranks the seven
+routes assessed; theft of weights, which may rank first for a state, is not among them
+[@nevo2024securing]. "Not found" is a claim
 about our search and level 1's, not about the world, and the later levels may still lower it.

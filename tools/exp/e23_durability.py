@@ -157,7 +157,7 @@ def perms(n: int) -> np.ndarray:
 
 
 def perm_null(x, y) -> np.ndarray:
-    """Spearman's rho for every ordering of y against x (exact; n up to 10)."""
+    """Spearman's r_s for every ordering of y against x (exact; n up to 10)."""
     rx, ry = rankdata(x), rankdata(y)
     rx, ry = rx - rx.mean(), ry - ry.mean()
     den = math.sqrt((rx * rx).sum() * (ry * ry).sum())
@@ -184,13 +184,13 @@ def exact_test(x, y) -> dict:
 
 
 def fisher_ci(rho: float, n: int) -> tuple[float, float]:
-    """95% interval by Fisher's z with the Bonett and Wright variance for Spearman's rho."""
+    """95% interval by Fisher's z with the Bonett and Wright variance for Spearman's r_s."""
     z, se = math.atanh(rho), math.sqrt((1 + rho * rho / 2) / (n - 3))
     return math.tanh(z - 1.959963984540054 * se), math.tanh(z + 1.959963984540054 * se)
 
 
 def copula(gen, rho_s: float, n: int, m: int) -> tuple[np.ndarray, np.ndarray]:
-    """m samples of n pairs from a normal copula with Spearman's rho = rho_s."""
+    """m samples of n pairs from a normal copula with Spearman's r_s = rho_s."""
     r = 2 * math.sin(math.pi * rho_s / 6)
     x = gen.standard_normal((m, n))
     y = r * x + math.sqrt(max(0.0, 1 - r * r)) * gen.standard_normal((m, n))
@@ -520,47 +520,47 @@ def main() -> int:
     res.number("e23-events", sum(1 for r in events if r["stage"] in main_stages), unit="events", fmt=",.0f",
                label="sourced erosion events from 2023 to November 2026 at those stages (found by our searches, so a lower bound)")
     res.number("e23-rho", rho, fmt=".2f",
-               label=f"Spearman's rho between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule {verdict})")
+               label=f"Spearman's r_s between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule {verdict})")
     res.number("e23-rho-lo", f_lo, fmt=".2f",
-               label="Spearman's rho, 2.5th percentile by Fisher's z with the Bonett and Wright variance")
+               label="Spearman's r_s, 2.5th percentile by Fisher's z with the Bonett and Wright variance")
     res.number("e23-rho-hi", f_hi, fmt=".2f",
-               label="Spearman's rho, 97.5th percentile by Fisher's z with the Bonett and Wright variance")
+               label="Spearman's r_s, 97.5th percentile by Fisher's z with the Bonett and Wright variance")
     res.number("e23-rho-boot-lo", b_lo, fmt=".2f",
-               label="Spearman's rho, 2.5th percentile of resampling the stages")
+               label="Spearman's r_s, 2.5th percentile of resampling the stages")
     res.number("e23-rho-boot-hi", b_hi, fmt=".2f",
-               label="Spearman's rho, 97.5th percentile of resampling the stages")
+               label="Spearman's r_s, 97.5th percentile of resampling the stages")
     res.number("e23-p", main["p_one_sided"], fmt=".2f",
                label="one-sided p value of the rank test, exact over every ordering of the stages")
     res.number("e23-rho-critical", main["rho_critical"], fmt=".2f",
-               label="smallest Spearman's rho the exact one-sided 5% test could call significant with these stages and ties")
+               label="smallest Spearman's r_s the exact one-sided 5% test could call significant with these stages and ties")
     if rho > 0:
         res.number("e23-power-here", power_here, unit="", fmt=".2f",
-                   label="statistical power of the one-sided 5% rank test with this many stages if the observed rho were the true one (simulated, ties kept)")
+                   label="statistical power of the one-sided 5% rank test with this many stages if the observed r_s were the true one (simulated, ties kept)")
         nt = curve["n_tied"] or N_GRID[-1]
         nu = curve["n_untied"] or N_GRID[-1]
         res.number("e23-n-needed", nt, unit="stages", fmt=",.0f",
-                   label=("stages a rank test would need to tell the 2022 ranking from a random one at the observed rho, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages"
+                   label=("stages a rank test would need to tell the 2022 ranking from a random one at the observed r_s, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages"
                           + ("" if curve["n_tied"] else f" (more than {N_GRID[-1]}: a lower bound)")))
         res.number("e23-n-needed-untied", nu, unit="stages", fmt=",.0f",
                    label=("the same with untied scores, the optimistic case" + ("" if curve["n_untied"] else f" (more than {N_GRID[-1]})")))
         res.number("e23-n-needed-formula", n_formula, unit="stages", fmt=",.0f",
                    label="the same by Fisher's z with the Bonett and Wright variance (untied)")
     res.number("e23-rho-loo-min", min(loo.values()), fmt=".2f",
-               label=f"Spearman's rho with one stage left out, lowest (without {min(loo, key=loo.get)})")
+               label=f"Spearman's r_s with one stage left out, lowest (without {min(loo, key=loo.get)})")
     res.number("e23-rho-loo-max", max(loo.values()), fmt=".2f",
-               label=f"Spearman's rho with one stage left out, highest (without {max(loo, key=loo.get)})")
+               label=f"Spearman's r_s with one stage left out, highest (without {max(loo, key=loo.get)})")
     res.number("e23-rho-alt-min", min(alt), fmt=".2f",
-               label=f"Spearman's rho, lowest over the {len(rules)} rules and {len(scorings)} erosion scorings")
+               label=f"Spearman's r_s, lowest over the {len(rules)} rules and {len(scorings)} erosion scorings")
     res.number("e23-rho-alt-max", max(alt), fmt=".2f",
-               label=f"Spearman's rho, highest over the {len(rules)} rules and {len(scorings)} erosion scorings")
+               label=f"Spearman's r_s, highest over the {len(rules)} rules and {len(scorings)} erosion scorings")
     res.number("e23-rho-alt-median", float(np.median(alt)), fmt=".2f",
-               label=f"Spearman's rho, median over the {len(rules)} rules and {len(scorings)} erosion scorings (the rule as fixed is near the top)")
+               label=f"Spearman's r_s, median over the {len(rules)} rules and {len(scorings)} erosion scorings (the rule as fixed is near the top)")
     res.number("e23-eto-inputs-2022", len(inputs22), unit="inputs", fmt=",.0f",
                label="tools, materials and design inputs the 2022 supply-chain dataset lists, nested and correlated, so fewer independent stages than this")
     res.number("e23-rho-full", full["rho"], fmt=".2f",
-               label="Spearman's rho with power put back in, ranked last as the rule places it (every stage O3 names)")
+               label="Spearman's r_s with power put back in, ranked last as the rule places it (every stage O3 names)")
     res.number("e23-rho-part1", part1["rho"], fmt=".2f",
-               label=f"Spearman's rho for Part I's own ranking of {part1['n']} stages, made in 2026 with the erosion in view (contaminated, a reference only)")
+               label=f"Spearman's r_s for Part I's own ranking of {part1['n']} stages, made in 2026 with the erosion in view (contaminated, a reference only)")
     res.number("e23-china-power-share-2021", data22["power"]["china_share"], unit="%", fmt=".0f",
                label="China's share of world electricity generation in 2021, from data public at the end of 2022")
 

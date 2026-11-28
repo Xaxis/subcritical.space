@@ -10,7 +10,7 @@
 value = 3.1
 basis = "measured"
 fmt = ".1f"
-label = "dynamic diminishing returns beta, aggregate US economy, 1930 to 2015"
+label = "dynamic diminishing returns b, aggregate US economy, 1930 to 2015"
 source = "bloom2020ideas"
 date = "2015"
 note = "Table 7, p. 1134; with lambda = 1, r = 1/beta"
@@ -19,7 +19,7 @@ note = "Table 7, p. 1134; with lambda = 1, r = 1/beta"
 value = 0.2
 basis = "measured"
 fmt = ".1f"
-label = "dynamic diminishing returns beta, Moore's Law research, 1971 to 2014"
+label = "dynamic diminishing returns b, Moore's Law research, 1971 to 2014"
 source = "bloom2020ideas"
 date = "2014"
 note = "Table 7; p. 1135 gives 7/35, the smallest beta in the paper"

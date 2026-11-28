@@ -32,8 +32,10 @@ the combination was not found.
 The short version: the memo believed one definition new and several ideas possibly new. None of
 them survives as new, and level 1 took five more down to prior work. Most of the anatomy is prior
 work, which is what it should be: the paper draws it together rather than discovers it. What
-survives as possibly ours is a short list of narrow extensions, most of them estimators, bounds and
-one small lemma, listed at the end with the claim that carries each.
+survived level 1 as possibly ours was a short list of narrow extensions, most of them estimators,
+bounds and one small lemma. Level 6 found each of them textbook, a calculation, untested or a
+judgement, so none survives as a candidate; the list at the end says what each became, with the
+claim that carries it.
 
 ## Summary
 
@@ -42,7 +44,7 @@ one small lemma, listed at the end with the claim that carries each.
 | P1 Compute budget | none stated | prior work | [@carlsmith2020]; [@davidson2023compute]; [@sandberg2008] | nothing as stated; tying the budget to D1 was not searched |
 | P2 Energy headroom | none stated | prior work | [@ho2023]; [@koomey2011]; [@davidson2025three] | at most its use as a bound inside P4 |
 | P3 Memory and bandwidth | none stated | prior work | [@gholami2024]; [@erdil2024datamovement]; [@douillard2023diloco] | nothing |
-| P4 Footprint floor | may be new | extends prior work, narrowly | [@fithian2026hardwired]; [@koopmanschap2026gpu]; [@iaea-glossary-2022]; [@rahman2026] | the floor as a bound at the lowest precision and full utilisation, each channel's margin and crossing year (C8) |
+| P4 Footprint floor | may be new | prior work | [@fithian2026hardwired]; [@koopmanschap2026gpu]; [@iaea-glossary-2022]; [@rahman2026] | applied, with calculations: the floor as a bound at the lowest precision and full utilisation, each channel's margin and crossing year (C8) |
 | A1 Capability against effective compute | none stated | prior work | [@hoffmann2022chinchilla]; [@ruan2024observational]; [@ho2025rosetta] | only the choice of capability axis for D4 |
 | A2 Training-inference exchange, cap leak | none stated | prior work | [@villalobos2023tradeoff]; [@pistillo2025loopholes]; [@ord2025govaireport]; [@heim2024thresholds] | only as the fixed-compute case of D3's per-path expression |
 | A3 Algorithmic progress | none stated | prior work, contested | [@ho2024algorithmic]; [@gundlach2025origin]; [@whitfill2025selection] | nothing |
@@ -59,11 +61,11 @@ one small lemma, listed at the end with the claim that carries each.
 | O3 Chokepoints | none stated | prior work | [@sastry2024compute]; [@scher2025agreement]; [@khan2020aichips] | denial-induced footprint growth as a detection gain; ranking stages by durability is unsupported and undecidable (E23) |
 | D1 Superintelligence against the best organisation | extends | extends prior work | [@robinson2026horizons]; [@wijk2024rebench]; [@genewein2026agiasi]; [@anthropic2026rsp] | as a definition: time and money matched together against an organisation, the alpha fraction, a censored t* that stops at each battery's ceiling (C10) |
 | D2 Loop gain | condition prior work; the estimator may be new | extends prior work, narrowly | [@srikanth2026aide2]; [@blumberg2020supercritical]; [@cunningham2026rsi]; [@burtsev2026criticality] | the exact round identity as the estimator of K, and the budget ladder, as a measurement design only: its estimator fails at calibrated noise (C4) |
-| D3 Breakout time | extends | extends prior work, as a combination | [@fithian2026hardwired]; [@gan2026clock]; [@pistillo2025loopholes]; [@villalobos2023tradeoff] | nothing: an accounting frame credited to prior work, since tabulating it in advance is cut (C2(a)), its backtest is cut (C2(c), E18 against) and its gain over one multiplier is not shown (C2(b)) |
-| D4 Weapons-grade line | new | prior work | [@snell2007itc20]; [@hafemeister2008ctbt]; [@gan2026clock]; [@fithian2026hardwired] | applied to AI holdings; the margin as a multiplicative error budget, a small lemma (C1) |
-| D5 Elicited capability | extends | extends prior work | [@fda2007diagnostic]; [@greenblatt2024password]; [@abubaker2026fuzzing]; [@taylor2025auditinggames] | rates per named budget over a defined organism population, as a multi-party rule, against non-adaptive hiding (C5) |
+| D3 Breakout time | extends | extends prior work, as a combination | [@fithian2026hardwired]; [@gan2026clock]; [@pistillo2025loopholes]; [@villalobos2023tradeoff] | nothing: an accounting frame credited to prior work, since tabulating it in advance is cut (C2(a)), its backtest is cut as untestable on public data (C2(c), E18) and its gain over one multiplier is not shown (C2(b)) |
+| D4 Weapons-grade line | new | prior work | [@snell2007itc20]; [@hafemeister2008ctbt]; [@gan2026clock]; [@fithian2026hardwired] | applied to AI holdings (C1); the margin as an error budget is the partial-factor format of structural design |
+| D5 Elicited capability | extends | extends prior work | [@fda2007diagnostic]; [@greenblatt2024password]; [@abubaker2026fuzzing]; [@taylor2025auditinggames] | rates per named budget over a defined organism population, as a multi-party rule, against non-adaptive hiding: an untested design (C5) |
 | D6 Closure | may be new, or only framing | extends prior work, narrowly; framing until tested | [@aghion2017ai]; [@burtsev2026criticality]; [@miotti2025narrowpath] | closure input by input against verifiable gates, the gain predicted from one gate at a time (C11) |
-| The pathway ranking | none stated | prior work | [@clarke2022mtair]; [@barrett2016asipath]; [@fithian2026hardwired]; [@remler2026distillation] | applied: the ranking itself, a judgement with [12](numbers.md#claim-c12-pareto-two) evidence-fixed pairs (C12) |
+| The pathway ranking | none stated | prior work | [@clarke2022mtair]; [@barrett2016asipath]; [@fithian2026hardwired]; [@remler2026distillation] | applied: the ranking itself, a judgement, with [12](numbers.md#claim-c12-pareto-two) pairs Pareto-ordered under our grades; theft of weights not ranked (C12) |
 | The organising idea (safeguards timeliness) | none stated | prior work, and the memo misstates the nuclear record | [@openai2023governance]; [@sastry2024compute]; [@iaea-glossary-2001] | nothing |
 | Registered chips under expiring licences | none stated | prior work | [@petrie2025flexheg1]; [@petrie2025flexheg2]; [@kulp2024hem]; [@aarne2024securechips] | nothing |
 | Renewal by k of n licensors from rival blocs | none stated | prior work | [@petrie2025flexheg2]; [@aarne2025flexheg3]; [@petrie2024offline] | nothing; the deadlock and double-signing problems flexHEG names remain open |
@@ -72,7 +74,7 @@ one small lemma, listed at the end with the claim that carries each.
 | Evaluations on elicited capability against the line | none stated | prior work | [@anthropic2023rsp]; [@openai2025preparedness]; [@eu2025gpaicode] | only what D4 and D5 add |
 | Continual-learning updates counted toward compute, re-evaluation on drift | none stated | prior work (provisional, not searched) | [@fpf-sb53-2025]; [@ec-gpai-guidelines-faq-2025]; [@anthropic2026rsp] | a drift trigger on elicited capability for fleets that update after deployment |
 | Bans on closed loops above a loop-gain threshold | none stated | prior work | [@miotti2025narrowpath]; [@redlines-2025]; [@scher2025agreement] | only the trigger, which is D2's, cut with its estimator (C4) |
-| Multi-channel detection guarantee over breakout time | none stated | prior work | [@snell2007itc20]; [@washburn1995interdiction]; [@gif2011prppem]; [@baker2025verifying] | applied to AI paths; the merging rule for dependent channels, elementary (C3) |
+| Multi-channel detection guarantee over breakout time | none stated | prior work | [@snell2007itc20]; [@washburn1995interdiction]; [@gif2011prppem]; [@baker2025verifying] | applied to AI paths (C3); the merging rule is the textbook bound on a union |
 | Random challenge inspections | none stated | prior work | [@scher2025agreement]; [@opcw-ec109-dg22]; [@infcirc-540] | nothing |
 | Rewarded whistleblowing | none stated | prior work | [@scher2025agreement]; [@baker2025verifying]; [@dyck2007whistle] | a transferred detection rate, with caveats |
 | Power and heat signatures | none stated | prior work | [@wasil2024verification]; [@kimpson2026dcpower]; [@jing2026] | nothing |
@@ -122,8 +124,8 @@ most this is a step inside P4, not a separate contribution.
 
 **Design consequence.** There are two headrooms, not one. Within the protocol's horizon the binding
 limit is CMOS [@ho2023], not Landauer; going further needs adiabatic or reversible logic, which has
-only reached prototype chips with modest savings [@genkina2025; @hulick2025]. The memo's comparison with Landauer alone points at the wrong limit for the
-near term.
+only reached prototype chips with modest savings [@genkina2025; @hulick2025]. The memo's comparison
+with Landauer alone points at the wrong limit for the near term.
 
 **Searches tried.** Track 02 lists none for P2 separately; the judgement rests on the sources it
 opened on thermodynamic limits and efficiency trends.
@@ -182,8 +184,10 @@ spread across many small sites.
 narrow differences remain: the floor as a bound, at the highest attainable utilisation, the lowest
 precision and the lowest energy per operation, where the hardwired-pause threshold is an estimate at
 standard utilisation; each facility channel's margin as a ratio to the floor, with the year it
-crosses one; and the pool's multiple of the floor at small-run inputs, with a measured discovery rate
-behind the conclusion. Each is a computation others could easily have run. They are C8's, in
+crosses one; and the pool's multiple of the floor at small-run inputs, with a measured discovery
+rate behind the conclusion. Each is a computation others could easily have run, and level 6 judged
+them an application with calculations: the bound cannot fail, being a sum, and the pool is an
+assumption. They are C8's, in
 [the claims file](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool).
 
 **Design consequence.** The memo treats satellites, grids and supply-chain accounting as seeing one
@@ -211,10 +215,11 @@ aggregate floor in chips and energy, which hardware efficiency lowers only until
 - Track 06 searched chokepoint erosion (listed under O3), which bears on the denial-induced growth in
   footprint.
 
-**Label: extends prior work, narrowly.** Tracks 01 and 02 agreed that the named floor was not
-found, and track 02 showed that every part of it exists. Level 1 found the floor, its time axis and
-the pool in the hardwired-pause paper; only the bound, the crossing years and the measured discovery
-rate remain. The memo's "may be new" does not survive.
+**Label: prior work, applied, with calculations.** Tracks 01 and 02 agreed that the named floor was
+not found, and track 02 showed that every part of it exists. Level 1 found the floor, its time axis
+and the pool in the hardwired-pause paper and left the bound, the crossing years and the measured
+discovery rate as a narrow extension; level 6 found those calculations, not contributions. The
+memo's "may be new" does not survive.
 
 ### A1 Capability as a function of effective compute
 
@@ -255,9 +260,10 @@ general LLM capabilities transferability RL vs SFT arXiv 2025".
 - The wider cap leak: thresholds should move down as efficiency improves, with a safety buffer for
   post-training enhancement [@heim2024thresholds]; access and performance effects of efficiency
   [@pilz2023efficiency]; post-training enhancements improve capability without retraining
-  [@davidson2023enhancements]; many innovations remain feasible under stringent caps [@barnett2025innovation];
-  a range of efficiency growth rates with no calculation [@barnett2026closingwindow]; a fixed cap
-  that cites algorithmic progress but sets no schedule [@scher2025agreement].
+  [@davidson2023enhancements]; many innovations remain feasible under stringent caps
+  [@barnett2025innovation]; a range of efficiency growth rates with no calculation
+  [@barnett2026closingwindow]; a fixed cap that cites algorithmic progress but sets no schedule
+  [@scher2025agreement].
 - Level 1, searching for the claim that carries the leak ([C2](verification/l1-prior-art-c1-c6.md#c2)),
   adds additive accounting of fine-tuning, above-optimal inference and distillation against a training
   threshold [@pistillo2025loopholes], and reads the span set by a cheap verifier as an accounting rule
@@ -554,7 +560,7 @@ detection of data centres by their cooling plant [@epoch2025datacentershub].
 erosion. (b) Treating denial-induced growth in footprint [@cottier2026horinger] as a detection gain,
 quantified against P4's floor. Track 06 did not find either done quantitatively. E23 then tested (a)
 and found it unsupported: a ranking made on data public at the end of 2022 orders the erosion of
-2023 to 2026 no better than chance (Spearman's rho [0.28](numbers.md#e23-rho), one-sided p
+2023 to 2026 no better than chance (Spearman's r_s [0.28](numbers.md#e23-rho), one-sided p
 [0.23](numbers.md#e23-p)). No version of the test can decide: a rank test would need
 [85 stages](numbers.md#e23-n-needed), and the 2022 dataset lists
 [79 inputs](numbers.md#e23-eto-inputs-2022), nested and correlated, so far fewer independent stages.
@@ -661,10 +667,11 @@ counting copies and speed, are prior work, and so is the crossover budget as suc
 
 **Closest prior work.**
 - [@cunningham2026rsi] names the product of elasticities "the loop gain", derives the threshold at
-  one, says estimating it, tracking it and extrapolating its crossing "is arguably the most important
-  empirical exercise", and calibrates the threshold. Even a reported uplift that they call "very
-  likely to be an overestimate" would, taken at face value, fall below it. Their footnote notes the loop gain is invariant to
-  the capability normalisation, while a raw ratio of gains is not.
+  one, says estimating it, tracking it and extrapolating its crossing "is arguably the most
+  important empirical exercise", and calibrates the threshold. Even a reported uplift that they call
+  "very likely to be an overestimate" would, taken at face value, fall below it. Their footnote
+  notes the loop gain is invariant to the capability normalisation, while a raw ratio of gains is
+  not.
 - [@burtsev2026criticality] defines a recursive reproduction number with a damped and an amplified
   regime either side of one, includes an operational closure factor, and lists the quantities to
   estimate per development cycle. It gives no estimation procedure.
@@ -786,10 +793,11 @@ not identified on public data, from [2.6](numbers.md#e1-algo-annual-subset-min) 
 [1,512](numbers.md#e1-algo-annual-subset-max) a year across samples, so the expression stays as an
 accounting frame credited to prior work. Whether it added anything rested on two claims, that it
 differs from a single-multiplier breakout time by more than either's interval and that it backtests.
-E18 is against the backtest, so it is cut: the leak comes in jumps that no constant rate follows,
-after a follower's delay the expression lacks. And it separates from one multiplier only at
-headrooms where a cap already fails the line, arithmetic on Part I's ranges. So C2 is downgraded to
-an accounting frame and claims nothing
+The backtest cannot be run as stated, since its target, the open-closed lag, has no day on which
+both sides have a public compute estimate, and the substitute E18 ran is against it, so it is cut:
+the leak comes in jumps that no constant rate follows, after a follower's delay the expression
+lacks. And it separates from one multiplier only at headrooms where a cap already fails the line,
+arithmetic on Part I's ranges. So C2 is downgraded to an accounting frame and claims nothing
 ([C2](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case)).
 
 **Design consequence.** Efficiency may depend on scale and on the reference algorithm
@@ -851,11 +859,13 @@ systems and holdings; (ii) an explicit margin m; (iii) a response time T_r deriv
 own measured channels and response latency rather than chosen; (iv) a breakout time that includes
 loop gain. Level 1 took most of them. (i) is an application of the inequality; (iii) is practice in
 physical protection and outbreak response, and in AI the red team found it cannot yet be done; (iv)
-belongs to D3. Only (ii) survives in a precise form: a margin m covers an error e_b in the breakout
-time and e_r in the response time whenever e_b * e_r <= m, for any continuous detection hazard. It is
-one line of algebra, and the safety-factor literature of structural engineering, not opened, is its
-likeliest earlier home. The paper should credit physical protection, Nitze, Barnett and Scher, A
-Narrow Path, the hardwired-pause group and Gan.
+belongs to D3. Only (ii) survived level 1 in a precise form: a margin m covers an error e_b in the
+breakout time and e_r in the response time whenever e_b * e_r <= m, for any continuous detection
+hazard. It is one line of algebra, and level 6 found it where level 1 pointed: it is the
+partial-factor format of structural design, where a factor on the load and one on the resistance
+multiply into the overall margin [@jrc2008eurocodes]. Nothing of D4 remains ours but the
+application. The paper should credit physical protection, Nitze, Barnett and Scher, A Narrow Path,
+the hardwired-pause group and Gan.
 
 **Design consequence.**
 - On the glossary's own figures the nuclear margin is about one, and below one for metal
@@ -884,7 +894,8 @@ Narrow Path, the hardwired-pause group and Gan.
 **Label: prior work.** This is the largest downgrade from the memo. Tracks 01, 08 and 09
 independently found the inequality and threshold design built around it in AI work from the two
 years before this survey; level 1 found it in nuclear physical protection from 1977 and in
-arms-control verification from 1988. D4 is an application, with at most a small lemma.
+arms-control verification from 1988. D4 is an application; its small lemma is the partial-factor
+format of structural design (level 6).
 
 ### D5 Elicited capability, robust to hiding
 
@@ -913,10 +924,12 @@ arms-control verification from 1988. D4 is an application, with at most a small 
 **What remains.** A stated, measured miss rate and false-alarm rate for a named elicitation budget,
 measured over a population of organisms that includes hardened and adaptive ones, used as the
 pass-fail rule of a threshold; and its use as a trigger in a regime that trusts no single party. The
-nearest work declines to give a number: the auditing game "does not provide quantitative
-guarantees" [@taylor2025auditinggames], and [@clymer2025elicitationbound] proposes none. Level 1
-agreed. The red team then limited it: rates measured on organisms blind to the procedure bound only
-non-adaptive hiding inside the sampled population, not a developer who sees the procedure.
+nearest work declines to give a number: the auditing game "does not provide quantitative guarantees"
+[@taylor2025auditinggames], and [@clymer2025elicitationbound] proposes none. Level 1 agreed. The red
+team then limited it: rates measured on organisms blind to the procedure bound only non-adaptive
+hiding inside the sampled population, not a developer who sees the procedure. Level 6 judged it an
+untested design, not a candidate: E3 has not run, the statistics are textbook, and the population
+gap applies at every capability level, not only near D1.
 
 **Design consequence.**
 - A budget fixed only as a share of compute ages badly; it has to name methods and be revised as
@@ -980,9 +993,10 @@ checks and persistent deployment [@black2025replibench], which are gates a proto
 **Searches tried.** Track 01: its D2 queries, plus "closed loop" AI governance inputs; operational
 closure AI R&D. Track 04: its list under Y1.
 
-**Label: extends prior work, narrowly, and framing until tested.** Track 01 calls it an extension for research
-labour and says the per-input list may be framing; track 04 calls it an extension. It survives only
-if per-input closure predicts or constrains something the single closure factor does not.
+**Label: extends prior work, narrowly, and framing until tested.** Track 01 calls it an extension
+for research labour and says the per-input list may be framing; track 04 calls it an extension. It
+survives only if per-input closure predicts or constrains something the single closure factor does
+not.
 
 ## The pathway ranking
 
@@ -1005,18 +1019,21 @@ superintelligence was not opened, and a reader should check it.
 together, each tied to a side of the line, a channel and a cost, with ties. Level 1 calls it a
 judgement applied with a known method, acquisition path analysis. On the ranking's three criteria
 the red team found only [9](numbers.md#claim-c12-pareto-three) of [21](numbers.md#claim-c12-pairs)
-pairs fixed by the evidence, none at the top. With the cost of a limit moved from the rank to the
-response, the same reading of the table fixes [12](numbers.md#claim-c12-pareto-two), still none
-among the first three places (C12).
+pairs Pareto-ordered on its reading, none at the top. With the cost of a limit moved from the rank to
+the response, the same reading of the table orders [12](numbers.md#claim-c12-pareto-two), still none
+among the first three places. Level 6 found that these grades are our judgements, entered in the
+ledger as assumptions, so no pair is fixed by evidence; and the ranking omits theft of weights,
+which the pathways chapter leaves unassessed and which state-level actors could carry out
+[@nevo2024securing] (C12).
 
 **Design consequence.** The tracks' evidence moves the ranking even where it does not touch novelty.
-"Unbounded scaling: not necessary, algorithms substitute" is weakened: most language-model gains came
-from compute [@ho2024algorithmic], compute explains most frontier performance differences
+"Unbounded scaling: not necessary, algorithms substitute" is weakened: most language-model gains
+came from compute [@ho2024algorithmic], compute explains most frontier performance differences
 [@mertens2026secretsauce], and the largest algorithmic gains need scale to appear
 [@gundlach2025origin]. In the frontier-experiments specification, research compute complements
-research labour [@whitfill2025bottlenecks]. Algorithms complement compute more than they substitute for it, so the
-compute backbone is stronger than the memo assumed. Self-improvement is the loop closest to closing,
-but measured AI contributions to frontier-relevant progress are still shallow
+research labour [@whitfill2025bottlenecks]. Algorithms complement compute more than they substitute
+for it, so the compute backbone is stronger than the memo assumed. Self-improvement is the loop
+closest to closing, but measured AI contributions to frontier-relevant progress are still shallow
 [@shetty2026metrnanogpt; @starace2025paperbench]. Self-replication components are rising, with
 failures at identity checks and persistence [@black2025replibench; @aisi2025trends]. Continual
 learning is not one capability [@harrington2026continual]. Autonomy horizons are growing faster than
@@ -1027,7 +1044,7 @@ first measured [@kwa2025horizon; @metr2026thdata], but high-reliability horizons
 looked for a prior ranking.
 
 **Label: prior work, applied.** The method is acquisition path analysis; the ranking is a judgement
-made with it.
+made with it, and C12, which carries it, is downgraded to a judgement (level 6).
 
 ## The protocol
 
@@ -1043,8 +1060,8 @@ its own sources; tracks 01 and 08 did.
 **Design consequence.** The memo says safeguards set detection timeliness shorter than conversion
 time. They do not: detection time "should correspond approximately to estimated conversion times",
 and the timeliness goals sit at or above the conversion times [@iaea-glossary-2001]. Track 08's text
-search found no numeric goals in the later glossary [@iaea-glossary-2022]. The memo's opening paragraph must be
-corrected, and D4's margin argued without that precedent.
+search found no numeric goals in the later glossary [@iaea-glossary-2022]. The memo's opening
+paragraph must be corrected, and D4's margin argued without that precedent.
 
 **Searches tried.** Track 01 and track 08 queries under D4 and D3.
 
@@ -1065,10 +1082,10 @@ recent survey rates multiparty control "speculative", with "No prototype" [@ansa
 
 **What remains.** Nothing.
 
-**Design consequence.** A licence that lapses is a remote off switch, which a leading chip maker publicly
-opposes [@nvidia2025nobackdoors], and on-chip verification faces "severe, unsolved hardware security
-challenges" [@baker2025verifying]. The registry would also start with a hole, since a large stock of smuggled
-chips sits outside any licence [@juniewicz2026smuggling].
+**Design consequence.** A licence that lapses is a remote off switch, which a leading chip maker
+publicly opposes [@nvidia2025nobackdoors], and on-chip verification faces "severe, unsolved hardware
+security challenges" [@baker2025verifying]. The registry would also start with a hole, since a large
+stock of smuggled chips sits outside any licence [@juniewicz2026smuggling].
 
 **Searches tried.** Track 07: "Flexible Hardware-Enabled Guarantees flexHEG report Petrie 2025
 arXiv"; "Kulp RAND Hardware-Enabled Governance Mechanisms 2024"; "AI chip operating license
@@ -1203,10 +1220,10 @@ keeps updating its weights after deployment. Not searched.
 **Design consequence.** Continual learning "is not one capability" [@harrington2026continual]:
 weight updates and scaffolding or context methods need different accounting, and only the first
 leaves compute to count. Test-time weight updates [@akyurek2024ttt] and self-edits applied by
-fine-tuning [@zweiger2025seal] already work, so update compute has to be metered where it happens. Reinforcement learning puts most of its compute into
-rollouts that can run on unregistered hardware [@primeintellect2025intellect2], so counting update
-compute at the trainer misses part of it. Forgetting is a natural brake on a cheap experiential loop
-[@luo2023forgetting; @zweiger2025seal].
+fine-tuning [@zweiger2025seal] already work, so update compute has to be metered where it happens.
+Reinforcement learning puts most of its compute into rollouts that can run on unregistered hardware
+[@primeintellect2025intellect2], so counting update compute at the trainer misses part of it.
+Forgetting is a natural brake on a cheap experiential loop [@luo2023forgetting; @zweiger2025seal].
 
 **Searches tried.** None aimed at this idea. Track 04 ran "2026 continual learning"; tracks 01 and 03
 opened the compute-counting rules while searching thresholds.
@@ -1264,10 +1281,12 @@ R&D); track 04's "Anthropic RSP AI R&D threshold", "OpenAI Preparedness \"AI Sel
 **What remains.** Tracks 07 and 08 did not find a model that (i) gives each channel a sourced
 detection rate, (ii) combines redundant channels with an explicit correlation term, (iii) takes the
 evader's best path, and (iv) evaluates the miss over the breakout time. Level 1 found (iii) and (iv)
-in physical protection and (i) as an application. One elementary rule remains: channels that share a
-cause are merged at the larger rate, safe under any dependence, while the sum holds only under
-independence. It is a bound on the probability of a union, and stays only if later levels judge it
-more than the textbook bound (C3).
+in physical protection and (i) as an application. One elementary rule seemed to remain: channels
+that share a cause are merged at the larger rate, safe under any dependence, while the sum holds
+only under independence. Level 6 judged it the textbook bound on the probability of a union, which
+level 1 had named as Fréchet's bounds of 1935 (not opened by us, so not cited), and treating
+channels with a shared cause as one event is the common-cause practice of probabilistic risk
+assessment [@mosleh1998nureg5485]. Nothing of it remains ours but the application (C3).
 
 **Design consequence.** Channel miss rates cannot be multiplied. The memo's product holds only when
 every channel watches the same path and fails independently. An evader picks the path that beats the
@@ -1291,8 +1310,9 @@ game (track 09).
 - Track 08: its list under D3, in particular the acquisition path analysis query.
 
 **Label: prior work.** Track 07 called it an extension; track 08 called the structure prior work and
-only the sourced, per-path, evader-minimised version a possible extension. Level 1 found that version
-in physical protection, so only the merging rule may remain.
+only the sourced, per-path, evader-minimised version a possible extension. Level 1 found that
+version in physical protection, so only the merging rule might have remained, and level 6 found it
+textbook.
 
 ### Random challenge inspections
 
@@ -1348,11 +1368,12 @@ telling workloads apart; and remote heat sensing for discovery, which is weak.
 **Closest prior work.** The inspection-game literature: equilibrium inspection and violation
 probabilities, inspector leadership (an inspector who commits to a randomised inspection probability
 makes legal behaviour the inspectee's best response), recursive inspections and timeliness
-[@avenhaus2002inspection; @vonstengel2016recursive; @maschler1966price; @canty2001timely]. For AI,
+[@avenhaus2002inspection; @vonstengel2016recursive; @maschler1966price; @canty2001timely]. The
+statistics of data verification in safeguards are in [@avenhaus1996compliance]. For AI,
 [@gan2026clock] solves a pause game with Poisson detection inside a response window and a costed
-monitoring bound. Absent a trade-off between transparency and security, deterrence never needs perfect monitoring
-[@coe2020arms]. [@fithian2026hardwired]
-discusses repeated games, and [@hendrycks2025superintelligence] deterrence by sabotage, informally.
+monitoring bound. Absent a trade-off between transparency and security, deterrence never needs
+perfect monitoring [@coe2020arms]. [@fithian2026hardwired] discusses repeated games, and
+[@hendrycks2025superintelligence] deterrence by sabotage, informally.
 
 **What remains.** Track 09 found no paper applying the inspection-game line (inspector leadership,
 non-detection games, recursive inspections) explicitly to AI compute verification, and calls an
@@ -1362,7 +1383,9 @@ whole item prior work.
 
 **Design consequence.**
 - Commitment needs a verifiable randomiser [@avenhaus2002inspection]. Track 09 suggests publishing
-  the inspection probability and drawing from a public random beacon.
+  the inspection probability and drawing from a public random beacon. Bitcoin's block hashes have
+  been analysed as one, with a bound on their entropy and a cost to bias them
+  [@bonneau2015bitcoinbeacon; @bentov2016beacon].
 - The inspection budget must have no known last period. Once inspections run out the inspectee
   violates, so a licence regime with a known final period unravels from the end
   [@avenhaus2002inspection; @vonstengel2016recursive]. The hardwired-pause paper's unknown end date
@@ -1429,16 +1452,16 @@ notice at least m times T_r minus the exiting party's breakout time, together wi
 during notice. Not found by track 09.
 
 **Design consequence.** Notice alone did not hold: North Korea withdrew its notice a day before it
-would take effect, then later revived it, leaving the Security Council a single day [@bunn2005npt]. Notice works only if assets acquired under the regime are frozen or
-removed during it. Under D4 itself, if every holding is outside the weapons-grade line at the moment
-of exit, notice is not needed for detection; it matters for holdings whose breakout time shrank
-during membership.
+would take effect, then later revived it, leaving the Security Council a single day [@bunn2005npt].
+Notice works only if assets acquired under the regime are frozen or removed during it. Under D4
+itself, if every holding is outside the line at the moment of exit, notice is not
+needed for detection; it matters for holdings whose breakout time shrank during membership.
 
 **Searches tried.** Track 09: `treaty withdrawal notice period longer than breakout time design
 proposal nuclear OR AI "notice period" "breakout"`; an NPT Article X text query; a query for
 Koremenos's article on withdrawal clauses (found, not used); readings of the MIRI draft's withdrawal
-article, the EU proposals on NPT withdrawal, Bunn, Helfer, Rosendorff and Milner, and the hardwired-pause paper.
-Track 08: its list under D3.
+article, the EU proposals on NPT withdrawal, Bunn, Helfer, Rosendorff and Milner, and the
+hardwired-pause paper. Track 08: its list under D3.
 
 **Label: prior work.** Track 08 calls it prior work, track 09 an extension for the derived inequality.
 The cautious label is taken; the derived inequality is a small step, not a contribution in its own
@@ -1453,36 +1476,44 @@ level 3 then left an accounting frame, and D2 an estimator that the red team fai
 E4 failed as a measurement at calibrated noise, leaving a measurement design. Of the protocol parts
 the memo called strongest, the compute chokepoint, expiring licences, the height clock and sealed
 declarations are prior work, assembled here. Y3, the treaty rule built on it, and the criticality
-metaphor behind the project's name are prior work. That is the finding.
+metaphor behind the project's name are prior work. Level 6, a fresh referee, then found the margin
+lemma and the merging rule textbook, the floor's results calculations, the elicitation rates an
+untested design and the ranking's ordered pairs our own judgements. That is the finding.
 
-What remains possibly ours is listed below, each with the claim that carries it in
-[the claims file](04-claims.md#summary), where its test and its results so far are recorded. Every
-item must still pass L5 and L6.
+What might have been ours is listed below, each with the claim that carries it in
+[the claims file](04-claims.md#summary), where its test and its results so far are recorded. After
+level 6 none remains a candidate: each is an application, a design, a definition, framing or a
+judgement, and each must still pass L5.
 
 1. **D4's margin as an error budget** (C1(b)): a margin m covers multiplicative errors in the
-   breakout and response times whenever e_b * e_r <= m, for any continuous detection hazard. A small
-   lemma, likely already in the structural safety-factor literature.
+   breakout and response times whenever e_b * e_r <= m, for any continuous detection hazard. Prior
+   work: the partial-factor format of structural design (level 6).
 2. **D3 as one per-path expression** (C2), downgraded to an accounting frame: breakout time from
    verified holdings, a combination credited to prior work. Tabulating it in advance is cut, since
-   E1 cannot identify the drift rate; the backtest is cut (E18 against), and its gain over one
-   multiplier shows only where a cap already fails the line. No longer a candidate.
+   E1 cannot identify the drift rate; the backtest is cut as untestable on public data (E18), and
+   its gain over one multiplier shows only where a cap already fails the line. No longer a
+   candidate.
 3. **D2's estimator** (C4), downgraded to a measurement design: the exact round identity as the
    estimator of the loop gain for a staged AI research loop, and the budget ladder. The identity is
    proved, but at the only data-calibrated noise every estimator tried under-covers and is biased
    toward the unsafe side or useless, and the trigger built on it is cut. No longer a candidate, it
    reopens only if a staged run (E4(b)) measures rounds far tighter than the calibrated ones.
 4. **D5's rates** (C5): miss and false-alarm rates per named budget over a defined population of
-   organisms, as the rule of a trigger rival parties run. It bounds only non-adaptive hiding.
-5. **The merging rule** (C3): channels that share a cause merged at the larger rate. Elementary.
+   organisms, as the rule of a trigger rival parties run. It bounds only non-adaptive hiding, and it
+   is an untested design until E3 runs (level 6).
+5. **The merging rule** (C3): channels that share a cause merged at the larger rate. Prior work:
+   the textbook bound on a union, with common-cause practice in risk assessment (level 6).
 6. **P4's floor as a bound** (C8): at the lowest precision and full utilisation, with each channel's
-   margin and the year it crosses one.
+   margin and the year it crosses one. An application with calculations: the bound cannot fail and
+   the pool is assumed (level 6).
 7. **D1's combination** (C10): time and money matched together against an organisation, the alpha
    fraction and a censored crossover budget. A definition only, and E21 finds t* stopped by each
    battery's ceiling.
 8. **D6 by input** (C11): closure measured one gate at a time, predicting the gain under any set of
    gates. Framing until an experiment shows it.
-9. **The pathway order** (C12): a judgement, with [12](numbers.md#claim-c12-pareto-two) pairs fixed by
-   evidence and none among the first three places.
+9. **The pathway order** (C12), downgraded to a judgement: [12](numbers.md#claim-c12-pareto-two)
+   pairs Pareto-ordered under our grades, which are judgements too, and none among the first three
+   places; theft of weights is not ranked.
 10. **Applications, not contributions:** the coupled-gain certificate as a treaty test (C6), the
     coalition threshold (C7), and the height-clocked licence valid only once logged (C9).
 11. **Cut or not searched:** F1's copies from held compute, F3's line as generality joined to

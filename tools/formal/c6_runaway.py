@@ -2,9 +2,9 @@
 """Check the runaway condition of section C6 (Theorem 6.4) and its corollary for C12 (Cor 6.5)
 in research/05-formal.md, by integrating the coupled common form numerically.
 
-Model: du_i/dt = theta_i * exp(-b_i u_i + lam_i * sum_j e_ij u_j), u(0) = 0, with
-K_ij = lam_i e_ij / b_i. In z_i = b_i u_i the law is dz/dt = a * exp((M - I) z), a_i = b_i theta_i,
-M_ij = lam_i e_ij / b_j = (D K D^-1)_ij with D = diag(b), so rho(M) = rho(K).
+Model: du_i/dt = theta_i * exp(-b_i u_i + lambda_i * sum_j e_ij u_j), u(0) = 0, with
+K_ij = lambda_i e_ij / b_i. In z_i = b_i u_i the law is dz/dt = a * exp((M - I) z), a_i = b_i theta_i,
+M_ij = lambda_i e_ij / b_j = (D K D^-1)_ij with D = diag(b), so rho(M) = rho(K).
 
 Thm 6.4 (i)   rho(K) > 1: with w the left Perron vector of M (sum 1) and a_min = min_i a_i,
               w.z(t) >= -ln(1 - a_min (rho - 1) t) / (rho - 1), so w.z reaches any level V by

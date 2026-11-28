@@ -14,62 +14,75 @@ passes six levels or is cut:
 Results go in [the verification record](07-verification.md#the-record), one row per claim per level.
 A claim that fails a level is cut or downgraded, never argued around.
 
-Four levels have run, L3 in part. L2 is done for all twelve claims in
+Five levels have run, L3 in part; L5 waits. L2 is done for all twelve claims in
 [the formal file](05-formal.md#summary). L1, a search for each claim by helpers that did not propose
 it, is in two reports, [C1 to C6](verification/l1-prior-art-c1-c6.md#summary) and
 [C7 to C12](verification/l1-prior-art-c7-c12.md#summary). L4, a red team that only tried to break
-each claim, is in [its report](verification/l4-red-team.md#verdicts). These experiments have
-results: E1, E2, E4's simulation and history, E5, E6, E8, E9, E11, E18, E21, E22, E23, E24 and E25;
-C5 and C11 still wait on theirs (E3, E4(d) and E4(e)). Each section below opens with what each level
-found, one line per level, and states the claim as it now stands.
+each claim, is in [its report](verification/l4-red-team.md#verdicts). L6, a fresh referee who saw
+only the paper and the repo, is in [its report](verification/l6-fresh-review.md#verdict). These
+experiments have results: E1, E2, E4's simulation and history, E5, E6, E8, E9, E11, E18, E21, E22,
+E23, E24 and E25; C5 and C11 still wait on theirs (E3, E4(d) and E4(e)). Each section below opens
+with what each level found, one line per level, and states the claim as it now stands.
 
 They cut deep. L1 found C1, C3, C6, C7 and C9 prior work in substance, first done in nuclear
 physical protection, control theory, epidemic control, cartel law and transparency-log engineering;
 each is now an application to AI, credited. It found the other seven narrower than stated. L4 cut
 C1(c) and C8(b), failed C4 as a trigger, limited C5 to non-adaptive hiding, and left C10 a
 definition, C11 framing and C12 a judgement. L3 cut C2(a), since E1 cannot identify the drift rate
-it needs, then cut C2(c) (E18 against) and left (b) unshown, which downgrades C2 to an accounting
-frame; it found C6's certificate cannot issue today, failed C4's estimator and its trigger at the
-only data-calibrated noise, which downgrades C4 to a measurement design, and found C10's t* stopped
-by the ceilings of today's batteries. No claim is new.
+it needs, then cut C2(c), which cannot be tested on public data (E18), and left (b) unshown, which
+downgrades C2 to an accounting frame; it found C6's certificate cannot issue today, failed C4's
+estimator and its trigger at the only calibrated noise, a proxy from human speedrun records, which
+downgrades C4 to a measurement design, and found C10's t* stopped by the ceilings of today's
+batteries. L6 then found C1(b) and C3's merging rule textbook, which leaves both claims applications
+only; downgraded C5 to an untested design; found C8 an application with calculations, E8 computing
+rather than testing; found C12's pairs, called fixed by evidence, fixed only by our own grades,
+which downgrades C12 to a judgement; and found C2(c) untestable as stated rather than cut by its
+backtest. No claim is new, and none remains a candidate.
 
 [The novelty file](03-novelty.md#what-this-leaves-as-our-contribution) had already found none of the
 memo's ideas new; this file gathered the narrow extensions it left and kept twelve. Three labels are
 now used. **Application of prior work**: the method is prior work, credited by name; only its use on
-AI, and any result computed inside that use, is ours. **Combination of prior work**: each part is known; the
-combination was not found. **Extends prior work**: the core is prior work; a stated, narrow
-difference was not found. "Not found" is a claim about our search and L1's, not about the world, and
-L5 or L6 may still lower any label. The few numbers Part I did not compute are derived in
+AI, and any result computed inside that use, is ours. **Combination of prior work**: each part is
+known; the combination was not found. **Extends prior work**: the core is prior work; a stated,
+narrow difference was not found. "Not found" is a claim about our search and L1's, not about the
+world. L5 may still lower any label, and L6 has lowered several. A claim's label can sit below its
+L1 verdict when a later level lowered it: C12, which L1 found to extend prior work as an
+application, is labelled an application, and C8, which L1 found to extend prior work narrowly, has
+been an application since L6. The few numbers Part I did not compute are derived in
 `model/parts/040_claims.py` from targets in `data/inputs/040-claims.toml`.
 
 ## Summary
 
 | Id | The claim in one line | Label | Closest prior work | Experiments | Status |
 |---|---|---|---|---|---|
-| C1 | A holding is weapons-grade if T_b < m * (T_d + T_resp) on some path, or over the paths between which progress can move; the margin covers estimation error per attempt whenever e_b * e_r <= m | application of prior work | [@snell2007itc20]; [@hafemeister2008ctbt]; [@gan2026clock]; [@fithian2026hardwired] | E5, E24, E6, E22, E18 | L1 prior work; L2 corrected; L3 against; L4 (c) cut |
-| C2 | Breakout time per path from verified holdings, an accounting frame: tabulating it in advance (a) is cut, the backtest (c) is cut (E18 against) and its gain over one multiplier (b) is not shown | combination of prior work | [@fithian2026hardwired]; [@gan2026clock]; [@pistillo2025loopholes]; [@villalobos2023tradeoff] | E1, E18, E10, E15, E22, E4 | Downgraded to an accounting frame: L1 extends, relabelled a combination; L2 proved under assumptions; L3 against, (a) cut, (c) cut (E18 against), (b) not shown; L4 corrected |
-| C3 | The chance a breakout is missed is a maximum over the evader's paths, dependent channels merged at the larger rate, over each path's own breakout time | application of prior work | [@snell2007itc20]; [@washburn1995interdiction]; [@gif2011prppem]; [@baker2025verifying] | E5, E8, E13 | L1 prior work; L2 corrected; L3 supports, (c) measured; L4 corrected |
-| C4 | A design for measuring the loop gain K at fixed inputs, from an exact round identity and a budget ladder; its estimator and the trigger on it fail at calibrated noise | extends prior work | [@srikanth2026aide2]; [@blumberg2020supercritical]; [@cunningham2026rsi] | E4, E9 | Downgraded to a measurement design: L1 extends narrowly; L2 corrected; L3 against, estimator and trigger; L4 fails as a trigger |
-| C5 | Elicited capability judged by miss and false-alarm rates per named budget over a sampled population of organisms; it bounds non-adaptive hiding only | extends prior work | [@fda2007diagnostic]; [@greenblatt2024password]; [@taylor2025auditinggames] | E3 | L1 extends; L2 proved; L3 untested; L4 non-adaptive hiding only |
-| C6 | The small-gain certificate rho(K) <= rho(U) <= max row sum of U as a treaty test, issued only when every edge has a measured bound | application of prior work | [@dashkovskiy2007smallgain]; [@roberts2003typer]; [@vanmieghem2011spectral]; [@bardoscia2017pathways] | E11, E9, E6 | L1 prior work; L2 proved; L3 against issuing today; L4 corrected |
-| C7 | C1 applied to the hardwired-pause threshold for coalitions, s* = min(1, h_w / (m * T_r)), with the leniency condition for reporting | application of prior work | [@fithian2026hardwired]; [@whitehouse2015jcpoaparameters]; [@aubert2006leniency] | E6, E22 | L1 prior work; L2 corrected; L3 against, (a) corrected for in-run drift and for growth between declarations; L4 (b), (c) downgraded |
-| C8 | The aggregate footprint floor as a bound at the lowest precision and full utilisation, each channel's margin and crossing year, and the untraced pool's multiple of the floor | extends prior work | [@fithian2026hardwired]; [@koopmanschap2026gpu]; [@iaea-glossary-2022] | E8, E14, E13, E22 | L1 extends narrowly; L2 corrected; L3 supports (a), (c), on E8 alone; L4 (b) cut |
-| C9 | Chip licences fresh by a block hash, ending at a height on the most-work chain for chips fed honest headers, valid only once logged: engineering | application of prior work | [@bentov2019tesseract]; [@mouallem2026alerting]; [@tomescu2017catena]; [@laurie2013ct] | E25 | L1 prior work; L2 P2 corrected; L3 mixed, supports P2, against the rate floor; L4 corrected |
-| C10 | Superintelligence against a named institution at matched time and money on a regime-held battery, with a censored crossover budget t*: a definition only | extends prior work | [@robinson2026horizons]; [@wijk2024rebench]; [@genewein2026agiasi] | E21, E2, E1 | L1 extends; L2 empirical, t* well defined; L3 against (b) on the one analogue, (c) downgraded: t* rises but stops at each battery's ceiling; L4 a definition only |
-| C11 | Closure judged input by input against verifiable gates, the gain with any set of gates predicted from closures measured one gate at a time | extends prior work | [@aghion2017ai]; [@miotti2025narrowpath]; [@burtsev2026criticality] | E4, E16, E17, E19 | L1 extends narrowly; L2 corrected; L3 untested; L4 framing until E4(d) |
-| C12 | Seven pathways ranked by effect on the line and visibility; only the Pareto-ordered pairs, [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) and none among the first three places, fixed by evidence | application of prior work | [@clarke2022mtair]; [@barrett2016asipath]; [@fithian2026hardwired] | E4, E5, E1, E2, E11, E9, E18, E15, E10, E19, E7 | L1 extends, as an application of path analysis; L2 empirical; L3 mixed; L4 a judgement |
+| C1 | A holding is inside the line if T_b < m * (T_d + T_resp) on some path, or over the paths between which progress can move; the margin covers estimation error per attempt whenever e_b * e_r <= m | application of prior work | [@snell2007itc20]; [@hafemeister2008ctbt]; [@gan2026clock]; [@fithian2026hardwired] | E5, E24, E6, E22, E18 | L1 prior work; L2 corrected; L3 against; L4 (c) cut; L6 (b) prior work |
+| C2 | Breakout time per path from verified holdings, an accounting frame: tabulating it in advance (a) is cut, the backtest (c) is cut, untestable on public data (E18), and its gain over one multiplier (b) is not shown | combination of prior work | [@fithian2026hardwired]; [@gan2026clock]; [@pistillo2025loopholes]; [@villalobos2023tradeoff] | E1, E18, E10, E15, E22, E4 | Downgraded to an accounting frame: L1 extends, relabelled a combination; L2 proved under assumptions; L3 against, (a) cut, (c) cut, untestable (E18), (b) not shown; L4 corrected; L6 agrees |
+| C3 | The chance a breakout is missed is a maximum over the evader's paths, dependent channels merged at the larger rate, over each path's own breakout time | application of prior work | [@snell2007itc20]; [@washburn1995interdiction]; [@gif2011prppem]; [@baker2025verifying] | E5, E8, E13 | L1 prior work; L2 corrected; L3 supports, (c) measured; L4 corrected; L6 merging rule prior work |
+| C4 | A design for measuring the loop gain K at fixed inputs, from an exact round identity and a budget ladder; its estimator and the trigger on it fail at calibrated noise | extends prior work | [@srikanth2026aide2]; [@blumberg2020supercritical]; [@cunningham2026rsi] | E4, E9 | Downgraded to a measurement design: L1 extends narrowly; L2 corrected; L3 against at the only calibrated proxy, estimator and trigger; L4 fails as a trigger; L6 agrees |
+| C5 | Elicited capability judged by miss and false-alarm rates per named budget over a sampled population of organisms; it bounds non-adaptive hiding only: an untested design | extends prior work | [@fda2007diagnostic]; [@greenblatt2024password]; [@taylor2025auditinggames] | E3 | Downgraded to an untested design: L1 extends; L2 proved; L3 untested; L4 non-adaptive hiding only; L6 not a candidate |
+| C6 | The small-gain certificate rho(K) <= rho(U) <= max row sum of U as a treaty test, issued only when every edge has a measured bound | application of prior work | [@dashkovskiy2007smallgain]; [@roberts2003typer]; [@vanmieghem2011spectral]; [@bardoscia2017pathways] | E11, E9, E6 | L1 prior work; L2 proved; L3 against issuing today; L4 corrected; L6 agrees |
+| C7 | C1 applied to the hardwired-pause threshold for coalitions, s* = min(1, h_w / (m * T_r)), with the leniency condition for reporting | application of prior work | [@fithian2026hardwired]; [@whitehouse2015jcpoaparameters]; [@aubert2006leniency] | E6, E22 | L1 prior work; L2 corrected; L3 against, (a) corrected for in-run drift and for growth between declarations; L4 (b), (c) downgraded; L6 agrees |
+| C8 | The aggregate footprint floor as a bound at the lowest precision and full utilisation, each channel's margin and crossing year, and the untraced pool's multiple of the floor: calculations | application of prior work | [@fithian2026hardwired]; [@koopmanschap2026gpu]; [@iaea-glossary-2022] | E8, E14, E13, E22 | L1 extends narrowly; L2 corrected; L3 computed, not tested: (a), (c) on E8 alone; L4 (b) cut; L6 an application with calculations |
+| C9 | Chip licences fresh by a block hash, ending at a height on the most-work chain for chips fed honest headers, valid only once logged: engineering | application of prior work | [@bentov2019tesseract]; [@mouallem2026alerting]; [@tomescu2017catena]; [@laurie2013ct] | E25 | L1 prior work; L2 P2 corrected; L3 mixed, supports P2, against the rate floor; L4 corrected; L6 agrees |
+| C10 | Superintelligence against a named institution at matched time and money on a regime-held battery, with a censored crossover budget t*: a definition only | extends prior work | [@robinson2026horizons]; [@wijk2024rebench]; [@genewein2026agiasi] | E21, E2, E1 | L1 extends; L2 empirical, t* well defined; L3 (b) untested, (c) downgraded: t* rises but stops at each battery's ceiling; L4 a definition only; L6 agrees |
+| C11 | Closure judged input by input against verifiable gates, the gain with any set of gates predicted from closures measured one gate at a time | extends prior work | [@aghion2017ai]; [@miotti2025narrowpath]; [@burtsev2026criticality] | E4, E16, E17, E19 | L1 extends narrowly; L2 corrected; L3 untested; L4 framing until E4(d); L6 agrees |
+| C12 | Seven pathways ranked by effect on the line and visibility, a judgement: [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs) pairs Pareto-ordered under our grades, which are judgements, none among the first three places; theft of weights not ranked | application of prior work | [@clarke2022mtair]; [@barrett2016asipath]; [@fithian2026hardwired] | E4, E5, E1, E2, E11, E9, E18, E15, E10, E19, E7 | Downgraded to a judgement: L1 extends, as an application of path analysis; L2 empirical; L3 mixed; L4 a judgement; L6 no pair fixed by evidence |
 
-What may still be ours is small, and each piece still faces L5 and L6: the margin as a
-multiplicative error budget (C1(b), a lemma); the merging rule for dependent channels (C3,
-elementary); rates per budget over a defined organism population (C5, non-adaptive hiding only); the
-floor as a bound with each channel's margin and crossing year (C8); time and money matched against
-an organisation with a censored t* (C10, a definition); closure measured one gate at a time (C11,
-untested); and the pathway order as a judgement with [12](numbers.md#claim-c12-pareto-two)
-evidence-fixed pairs (C12). C6, C7 and C9 add applications only. C4 is no longer a candidate: its
-round identity is proved, but every estimator E4 tried fails L3 at the only data-calibrated noise,
-so the identity and budget ladder stand as a measurement design until E4(b) measures real staged
-rounds. Nor is C2: its backtest (c) is cut (E18 against) and its gain over one multiplier is not
-shown, so the per-path expression stands as an accounting frame, credited to prior work.
+Nothing here remains a candidate contribution. L6 found the two smallest pieces textbook, the margin
+as a multiplicative error budget (C1(b)) and the merging rule for dependent channels (C3), and
+lowered three more: rates per budget over a defined organism population are an untested design (C5),
+the floor with each channel's margin and crossing year is an application with calculations (C8), and
+the pathway order's [12](numbers.md#claim-c12-pareto-two) Pareto-ordered pairs rest on our own
+grades, so the order is a judgement (C12). What the work offers is the application of known methods
+to AI holdings with sourced rates (C1, C3, C6, C7, C8 and C9), the measurements and negative results
+its experiments report, and six designs, definitions or judgements that are untested or have failed
+a test: the per-path expression as an accounting frame (C2), whose backtest cannot be run on public
+data and whose gain over one multiplier is not shown; the round identity and budget ladder as a
+measurement design (C4), whose every estimator fails at the only calibrated noise, until E4(b)
+measures real staged rounds; rates per named budget (C5), until E3 runs; time and money matched
+against an organisation with a censored t* (C10, a definition); closure measured one gate at a time
+(C11, framing until E4(d)); and the pathway order (C12), a judgement whose ordered pairs rest on our
+grades, with theft of weights not ranked.
 
 C1 is the line, C2 and C3 its two sides, and C8 says which channel sees covert compute; C4, C5 and
 C11 feed C2; C6 and C7 extend the line to coupled loops and coalitions; C9 is the regime's record; C10
@@ -78,26 +91,27 @@ is the endpoint; C12 decides what is restricted.
 ## C1. The line: T_b < m * (T_d + T_resp), with T_r computed, not chosen
 
 **The claim.** A holding H (chips, weights, data, research labour, and every path p its holder can
-use) is weapons-grade if and only if, on some path, T_b(p) < m * T_r(p), with T_r(p) = T_d(p) +
-T_resp(p), all in years. T_b(p) is C2's breakout time on that path. T_d(p) is the time by which the
-regime's channels on p detect a breakout there with probability at least 1 - beta, from C3.
-T_resp(p) is the time from a confirmed finding to an effective halt; where it is random, its (1 -
-beta_2) quantile, and the miss chance is then at most beta + beta_2. m >= 1 is a stated margin. Five
-limits, from L4, E6 and E22. Where progress can move between paths, as a checkpoint can, a strategy
-that switches on a partial signal has a random breakout time, and the per-path test does not cover
-it: over such paths the test is the shortest T_b against the longest T_r, which is safe, or the
-formal file's line for progress that carries over (Proposition 1.8), which is exact when responses
-are equal. Beta bounds one attempt; n independent attempts succeed with chance up to 1 - (1 -
-beta)^n, so the regime must bound attempts or state its guarantee per attempt; re-admitting a caught
-party gives it another (E6). While the untraced pool is open, its path fails the line for every
-party (C8), so the line separates no one until the pool closes. And T_b must count the drift a run
-absorbs while it runs (Corollary 1.6a, after E6): a line computed at launch speed, with algorithms
-fixed when the run starts, must rise by a factor of [3.2](numbers.md#formal-inrun-line-factor) at
-the central drift rate and [10.6](numbers.md#formal-inrun-line-factor-high) at the high end, at the
-protocol's margin and declared T_r; both are upper bounds, since they assume a run adopts every gain
-the moment it appears. Holdings grow between declarations too: Proposition 1.6 keeps the line only
-if it holds at phi * m * T_r at each check, phi the most T_b can fall before the next. E22 bounds
-the supply part of phi for the fleet at [1.65](numbers.md#e22-phi-member-quarter) a quarter and
+use) is inside the line (weapons-grade, in D4's name) if and only if, on some path, T_b(p) < m *
+T_r(p), with T_r(p) = T_d(p) + T_resp(p), all in years. T_b(p) is C2's breakout time on that path.
+T_d(p) is the time by which the regime's channels on p detect a breakout there with probability at
+least 1 - beta, from C3. T_resp(p) is the time from a confirmed finding to an effective halt; where
+it is random, its (1 - beta_2) quantile, and the miss chance is then at most beta + beta_2. m >= 1
+is a stated margin. Five limits, from L4, E6 and E22. Where progress can move between paths, as a
+checkpoint can, a strategy that switches on a partial signal has a random breakout time, and the
+per-path test does not cover it: over such paths the test is the shortest T_b against the longest
+T_r, which is safe, or the formal file's line for progress that carries over (Proposition 1.8),
+which is exact when responses are equal. Beta bounds one attempt; n independent attempts succeed
+with chance up to 1 - (1 - beta)^n, so the regime must bound attempts or state its guarantee per
+attempt; re-admitting a caught party gives it another (E6). While the untraced pool is open, its
+path fails the line for every party (C8), so the line separates no one until the pool closes. And
+T_b must count the drift a run absorbs while it runs (Corollary 1.6a, after E6): a line computed at
+launch speed, with algorithms fixed when the run starts, must rise by a factor of
+[3.2](numbers.md#formal-inrun-line-factor) at the central drift rate and
+[10.6](numbers.md#formal-inrun-line-factor-high) at the high end, at the protocol's margin and
+declared T_r; both are upper bounds, since they assume a run adopts every gain the moment it
+appears. Holdings grow between declarations too: Proposition 1.6 keeps the line only if it holds at
+phi * m * T_r at each check, phi the most T_b can fall before the next. E22 bounds the supply part
+of phi for the fleet at [1.65](numbers.md#e22-phi-member-quarter) a quarter and
 [2.5](numbers.md#e22-phi-member-year) a year; with the central algorithmic drift between checks,
 Part II puts phi at [2.1](numbers.md#prot-phi-quarter) for a check at each licence renewal and
 [6.8](numbers.md#prot-phi-year) for a check once a year, more for a party that takes more than its
@@ -108,15 +122,16 @@ share of new chips. Either way phi exceeds Part II's illustrative margin of
 ([13.4 years](numbers.md#prot-line-declared-inrun-phi-quarter) at launch speed), and one checked
 yearly [13.7 years](numbers.md#prot-line-declared-phi-year). Claimed: (a) the inequality, per path
 where progress cannot move, as the definition of the line for systems and holdings in a regime whose
-pool is closed; (b) the margin as an error budget: if the estimates of T_b and T_r err in the unsafe
-direction by at most factors e_b and e_r, an admitted holding is still stopped, per attempt, with
-probability at least 1 - beta whenever e_b * e_r <= m, for any continuous detection hazard. m covers
-estimation error only. It does not cover C*'s, which has no bound, so T_b is reported conditional on
-the agreed C*. Nor does it cover error a party introduces by understating its efficiency or delaying
-a response. (c) Cut: T_r computed per path from drilled latencies (L4, below). Not claimed: the
-inequality itself, which is timely detection in physical protection; that the line at m = 1 is Gan's
-prevention condition; or that a prevention line belongs near the threshold and deterrence far from
-it, which is Gan's [@gan2026clock].
+pool is closed; (b) the margin as an error budget, the partial-factor format of structural design
+applied here (L6): if the estimates of T_b and T_r err in the unsafe direction by at most factors
+e_b and e_r, an admitted holding is still stopped, per attempt, with probability at least 1 - beta
+whenever e_b * e_r <= m, for any continuous detection hazard. m covers estimation error only. It
+does not cover C*'s, which has no bound, so T_b is reported conditional on the agreed C*. Nor does
+it cover error a party introduces by understating its efficiency or delaying a response. (c) Cut:
+T_r computed per path from drilled latencies (L4, below). Not claimed: the inequality itself, which
+is timely detection in physical protection; that the line at m = 1 is Gan's prevention condition; or
+that a prevention line belongs near the threshold and deterrence far from it, which is Gan's
+[@gan2026clock].
 
 **Results so far.**
 
@@ -133,19 +148,22 @@ it, which is Gan's [@gan2026clock].
   central drift rate and [10.6](numbers.md#formal-inrun-line-factor-high) at the high end, both
   upper bounds, and Proposition 7.1 and Theorem 7.2 carry it into C7. `c1_margin.py` passes on every
   correction, Corollary 1.6a included.
-- **L3**: against (c). E5 puts T_d on undeclared paths at
-  [31 years](numbers.md#e5-td-site-now-years) to [32 years](numbers.md#e5-td-pool-years), against
+- **L3**: against (c). E5 puts T_d on undeclared paths at a median of
+  [31 years](numbers.md#e5-td-site-now-years) to [32 years](numbers.md#e5-td-pool-years), central
+  estimates under a transfer from weapons programmes, not bounds (E5's Weibull fit gives
+  [24 years](numbers.md#e5-td-weibull-years) for the historical channels' path; L6), against
   [39.0 days](numbers.md#e5-td-declared-days) on the declared path; cloud and distillation have no
   measured channel. In E24, of [8 findings](numbers.md#e24-halt-findings) made while the party was
-  in its treaty, [25%](numbers.md#e24-halt-share-never) were never followed by a halt
-  ([46%](numbers.md#e24-halt-share-never-all) of all
+  in its treaty, [25%](numbers.md#e24-halt-share-never) were not followed by a halt within what the
+  sources cover ([46%](numbers.md#e24-halt-share-never-all) of all
   [13 findings](numbers.md#e24-halt-findings-all), counting those after a withdrawal). Halts took a
-  Kaplan-Meier median of [1.2 years](numbers.md#e24-halt-km-median-years), against the violator's
-  fastest exit of [31 days](numbers.md#e24-exit-min-days), and
-  [67%](numbers.md#e24-halt-share-reversed) were later reversed or shown incomplete. With more than
-  5% never halted, the response time has no finite 95th percentile. In E6, repeated attempts
-  compound when caught members are re-admitted, which also weakens the reporting condition by a
-  factor up to 1/beta (C7). E22 bounds the supply part of Proposition 1.6's phi for the fleet at
+  Kaplan-Meier median of [1.2 years](numbers.md#e24-halt-km-median-years); the fastest took
+  [64 days](numbers.md#e24-halt-min-days), against the violator's fastest exit of
+  [31 days](numbers.md#e24-exit-min-days), and [67%](numbers.md#e24-halt-share-reversed) were later
+  reversed or shown incomplete. With more than 5% not halted within follow-up, the response time's
+  95th percentile is not reached within it. In E6, repeated attempts compound when caught members
+  are re-admitted, which also weakens the reporting condition by a factor up to 1/beta (C7). E22
+  bounds the supply part of Proposition 1.6's phi for the fleet at
   [2.5](numbers.md#e22-phi-member-year) a year; with the central drift between checks, Part II's phi
   is [6.8](numbers.md#prot-phi-year) a year and [2.1](numbers.md#prot-phi-quarter) at each licence
   renewal, a factor the line needs on top of the margin.
@@ -157,39 +175,50 @@ it, which is Gan's [@gan2026clock].
   [2.0 years](numbers.md#prot-line-declared) (C1.3). The open pool (C1.2), repeated attempts (C1.4)
   and misreporting (C1.7) are the other serious attacks. All are now in the statement. Survives with
   corrections, as an application.
+- **L6** ([M5](verification/l6-fresh-review.md#major)): (b) is the partial-factor format of
+  structural design, where a factor on the load and one on the resistance multiply into the overall
+  margin [@jrc2008eurocodes]; L1 had named that literature without opening it. Accepted: (b) is
+  prior work, and C1 is an application only, as its own refuter said.
 
 **What it rests on.** [D4](01-anatomy.md#d4-weapons-grade-the-line-tb-m-tr). The memo's placeholder
 channel needs [2.5 yr](numbers.md#def-placeholder-detect-time) to bring the miss chance to
 [5%](numbers.md#def-prevent-beta); at E5's fitted discovery rate of covert programmes,
-[0.094/yr](numbers.md#e5-hazard), an upper bound on a careful evader's, a path only the historical
-channels see takes [32 years](numbers.md#e5-td-hist-years), before any response
+[0.094/yr](numbers.md#e5-hazard), a path only the historical channels see takes
+[32 years](numbers.md#e5-td-hist-years) before any response, or
+[24 years](numbers.md#e5-td-weibull-years) under E5's Weibull fit: central estimates under a
+transfer from weapons programmes to AI that nothing measures, not bounds (L6)
 ([O4](015-organisational.md#o4-covert-supply-how-secret-programmes-were-run-and-found)).
-Prevention costs [7.8](numbers.md#def-gan-prevent-multiple) times the monitoring deterrence needs in
-Gan's calibration. The nuclear margin never exceeds [1.00](numbers.md#def-iaea-m-irr-high) and times
+On our arithmetic from Gan's formula, prevention at a [5%](numbers.md#def-prevent-beta) tolerance
+costs [7.8](numbers.md#def-gan-prevent-multiple) times the monitoring deterrence needs in his
+calibration, and [4.5](numbers.md#prot-gan-prevent-over-consent) times the most his model's parties
+would consent to (L6). The nuclear margin never exceeds [1.00](numbers.md#def-iaea-m-irr-high) and times
 detection only [@iaea-glossary-2001; @cochran-2005].
 
 **Prior work, and what remains.** The timely-detection condition, evaluated per adversary path,
 judged at the weakest path, with a response time built from measured parts at a high quantile and a
 time margin, is Sandia's physical-protection practice, evaluated with EASI from 1977
 [@snell2007itc20]. The same inequality is Nitze's 1988 standard for effective verification
-[@hafemeister2008ctbt], time-based security in cyber defence [@farhang2017tbs] and the process-safety
-rule for response times [@dearden2022sif]. In AI, [@barnett2025governance] states it in words,
-[@gan2026clock] as a formula, [@miotti2025narrowpath] sizes thresholds for "ample time to
+[@hafemeister2008ctbt], time-based security in cyber defence [@farhang2017tbs] and the
+process-safety rule for response times [@dearden2022sif]. In AI, [@barnett2025governance] states it
+in words, [@gan2026clock] as a formula, [@miotti2025narrowpath] sizes thresholds for "ample time to
 intervene", and [@fithian2026hardwired] applies it per route with an uncertainty allowance. Per-path
 analysis is also safeguards practice [@allen-2015-llnl]. What remains ours: the application to AI
-holdings, and (b) as a small lemma.
+holdings. (b) is the partial-factor format of structural design, where a factor on the load and one
+on the resistance multiply into the overall margin [@jrc2008eurocodes]; L6 decided the search L1
+left open.
 
 **What would refute it.** (b) is found in the safety-factor literature: C1 is then an application
-only. L3 cannot compute T_r for any path with an interval narrower than the T_b intervals it faces,
-so the line decides nothing. E6 finds compliance collapses once T_b is drawn from its interval, as a
-disputed threshold did in [@barrett2012climate].
+only. L6 found it there. L3 cannot compute T_r for any path with an
+interval narrower than the T_b intervals it faces, so the line decides nothing. E6 finds compliance
+collapses once T_b is drawn from its interval, as a disputed threshold did in [@barrett2012climate].
 
 **L3.** Done: E5 (T_d per path), E24 (T_resp), E6 (repeated attempts compound when caught members
-are re-admitted, and a line computed at launch speed misses in-run drift), E22 (phi's supply part, which Part II combines with drift between checks). To
-come: C2's remaining experiments (T_b's inputs). The gap is a drilled measure of the licensors'
-decision time, which no experiment yet plans; without it (c) stays cut.
+are re-admitted, and a line computed at launch speed misses in-run drift), E22 (phi's supply part,
+which Part II combines with drift between checks). To come: C2's remaining experiments (T_b's
+inputs). The gap is a drilled measure of the licensors' decision time, which no experiment yet
+plans; without it (c) stays cut.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C2. Breakout time from verified holdings, and the cap leak as its fixed-compute case
 
@@ -216,13 +245,15 @@ from a single-multiplier T_b by more than either's interval; (c) backtested at p
 predicts the open-closed lag of [4 months](numbers.md#comp-open-closed-lag) within its interval.
 
 **Standing: downgraded to an accounting frame.** C2 was a candidate only through (b) and (c), and L3
-leaves neither. (c) is cut (E18 against): in E18's backtest the leak comes in jumps, which Corollary
-2.3's constant rate cannot follow, and the expression has no term for a follower's delay. (b) is not
-shown: the expression separates from a single multiplier only at headrooms where the cap already
-fails the line, arithmetic on Part I's ranges that no data narrows. The expression stays as the
-protocol's accounting frame, credited to prior work, and claims nothing. It would reopen if E10 and
-E15 narrowed the rate enough for the two intervals to separate where a cap passes the line, and a
-version with a follower's delay backtested.
+leaves neither. (c) is cut as untestable on public data: its stated target, the open-closed lag, has
+[0 days](numbers.md#e18-oc-evaluable-days) on which both sides have a public compute estimate, and
+the substitute E18 ran, catch-ups to records, bears against the expression: the leak comes in jumps,
+which Corollary 2.3's constant rate cannot follow, and the expression has no term for a follower's
+delay. (b) is not shown: the expression separates from a single multiplier only at headrooms where
+the cap already fails the line, arithmetic on Part I's ranges that no data narrows. The expression
+stays as the protocol's accounting frame, credited to prior work, and claims nothing. It would
+reopen if E10 and E15 narrowed the rate enough for the two intervals to separate where a cap passes
+the line, and a version with a follower's delay backtested.
 
 **Results so far.**
 
@@ -252,8 +283,9 @@ version with a follower's delay backtested.
   resamples. The one-OOM forecast bound is wide and overshoots at the top. This fails (a): an
   interval tabulated in advance cannot be delivered on public data, so (a) is cut, and C2 stood as a
   candidate only through (b) and (c).
-- **L3** (E18): against (c), which is cut, and (b) not shown. In the backtest a model at or below a
-  then-frontier record's compute matched the record after [0.48 years](numbers.md#e18-bt-h0-lo) to
+- **L3** (E18): (c) cannot be tested as stated, so it is cut, and a substitute backtest bears
+  against it; (b) not shown. In the backtest a model at or below a then-frontier record's compute
+  matched the record after [0.48 years](numbers.md#e18-bt-h0-lo) to
   [1.52 years](numbers.md#e18-bt-h0-hi), where the expression predicts no delay for any input, and
   the [4 catch-ups](numbers.md#e18-bt-events) below a record's compute imply yearly rates from
   [1.91](numbers.md#e18-bt-gamma-lo) to [1,125](numbers.md#e18-bt-gamma-hi), the last closing most
@@ -274,16 +306,21 @@ version with a follower's delay backtested.
   one model (C2.4); distillation can exceed its teacher [@furlanello2018born; @burns2023weak] (C2.5);
   compute misplaced systems by up to [2.8 OOM](numbers.md#e1-gpqa-overlap-oom) on one benchmark
   (C2.6); hidden algorithms shorten T_b (C2.7), and the allowance for them is unsized.
+- **L6** ([m4](verification/l6-fresh-review.md#minor)): agrees with the standing, and finds (c)
+  untestable as stated rather than cut by a backtest: its target has
+  [0 days](numbers.md#e18-oc-evaluable-days) to test on, and E18 tested a substitute, catch-ups to
+  records. Accepted: (c) is cut as untestable on public data.
 
 **What it rests on.** [D3](01-anatomy.md#d3-breakout-time) and
 [the combined leak](012-computational.md#the-combined-leak-of-a-training-cap). With an example
 headroom of [3 OOM](numbers.md#comp-example-headroom-oom), a capped party closes it in
-[4.0 years](numbers.md#comp-leak-years-ho) at Ho et al.'s rate, [2.2 years](numbers.md#comp-leak-years-rosetta)
-at the Rosetta rate and no sooner than [9.3 years](numbers.md#comp-leak-years-small) at the
-small-compute bound; a cheap verifier leaves [0 OOM](numbers.md#comp-leak-left-verifier). Of a
-[22,000](numbers.md#def-gundlach-claimed)-fold efficiency gain, less than
-[100](numbers.md#def-gundlach-low-compute-max)-fold reproduces at low compute [@gundlach2025origin].
-The model reproduces the hardwired-pause threshold of [180 million H100e](numbers.md#def-hwp-fleet-check).
+[4.0 years](numbers.md#comp-leak-years-ho) at Ho et al.'s rate,
+[2.2 years](numbers.md#comp-leak-years-rosetta) at the Rosetta rate and no sooner than
+[9.3 years](numbers.md#comp-leak-years-small) at the small-compute bound; a cheap verifier leaves
+[0 OOM](numbers.md#comp-leak-left-verifier). Of a [22,000](numbers.md#def-gundlach-claimed)-fold
+efficiency gain, less than [100](numbers.md#def-gundlach-low-compute-max)-fold reproduces at low
+compute [@gundlach2025origin]. The model reproduces the hardwired-pause threshold of
+[180 million H100e](numbers.md#def-hwp-fleet-check).
 
 **Prior work, and what remains.** Fleet accounting from holdings with research overhead,
 utilisation, an inference multiple and an uncertainty allowance is [@fithian2026hardwired]; a
@@ -300,33 +337,33 @@ cut, (b) and (c) were the whole test of whether it adds anything; neither passed
 nothing.
 
 **What would refute it.** (b) fails: no gain over one multiplier, and C2 is prior work. (c) fails:
-the model should not set a treaty schedule, by the computational chapter's own test. (c) has failed
-in E18, and (b) shows a gain only where it decides nothing. E15 finds no scale trend at fixed
-algorithms: the scale term is cut.
+the model should not set a treaty schedule, by the computational chapter's own test. (c) cannot be
+tested as stated, its substitute failed in E18, and (b) shows a gain only where it decides nothing.
+E15 finds no scale trend at fixed algorithms: the scale term is cut.
 
 **L3.** Done: E1, E18. To come: E15 and E10 (with the distillation uplift), which could reopen (b);
 E22 bounds how fast C_p(t) can grow (C7); E4.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C3. Detection as the evader sees it: the per-path, evader-minimised miss
 
 **The claim.** Let P be the paths open to a party (declared fleet, undeclared site with smuggled
 chips, the untraced pool, cloud split across providers, distillation from others' outputs) and C(p)
 the channels watching path p. The chance a breakout succeeds is P_miss = max over p of Pr[no channel
-in C(p) detects before T_b(p) - T_resp]; with channels at rates lambda_c(p), independent given the
-path, that is the maximum of exp(-sum of lambda_c(p) * (T_b(p) - T_resp)). Channels resting on one
+in C(p) detects before T_b(p) - T_resp]; with channels at rates mu_c(p), independent given the
+path, that is the maximum of exp(-sum of mu_c(p) * (T_b(p) - T_resp)). Channels resting on one
 trust anchor, or fed by one source of tips, merge into one at the larger rate, the rate under the
 strategy the evader plays; if breaking the anchor is open to the evader, the break is itself a path,
 on which that group's rate is zero. A path with no measured channel gets no T_d, not a rate
 transferred from another domain. P omits stolen weights, open weights and C1's switching strategy.
-Claimed: (a) the model applied to AI compute paths with sourced rates, and the merging rule: merging
-at the larger rate is safe under any dependence, the sum only under independence; (b) a proposition:
-the memo's product of channel misses equals P_miss only if every channel with a miss chance below one
-watches every path, and otherwise understates it, and a scalar common cause, such as one
-intelligence source, makes it understate further; (c) on today's sourced rates, the untraced pool's
-T_d exceeds the declared path's by a large factor, so the regime's detection time is set by the pool
-(C8).
+Claimed: (a) the model applied to AI compute paths with sourced rates, and the merging rule, now
+credited as prior work (L6): merging at the larger rate is safe under any dependence, the sum only
+under independence; (b) a proposition: the memo's product of channel misses equals P_miss only if
+every channel with a miss chance below one watches every path, and otherwise understates it, and a
+scalar common cause, such as one intelligence source, makes it understate further; (c) on today's
+sourced rates, the untraced pool's T_d exceeds the declared path's by a large factor, so the
+regime's detection time is set by the pool (C8).
 
 **Results so far.**
 
@@ -348,7 +385,10 @@ T_d exceeds the declared path's by a large factor, so the regime's detection tim
   [39.0 days](numbers.md#e5-td-declared-days), which chip sampling now sets, with metering's one-day
   catch counted once. The fitted discovery rate, [0.094/yr](numbers.md#e5-hazard) (90% interval
   [0.057/yr](numbers.md#e5-hazard-lo) to [0.147/yr](numbers.md#e5-hazard-hi)), comes from programmes
-  all found in the end, so it is an upper bound on a careful evader's. It runs from a programme's
+  all found in the end, so within that record it overstates a careful evader's; that does not make
+  the detection times lower bounds, since the transfer to AI is unmeasured and E5's Weibull fit gives
+  [24 years](numbers.md#e5-td-weibull-years) against the constant rate's
+  [32 years](numbers.md#e5-td-hist-years) (L6). It runs from a programme's
   start, not a breakout's, and under the Weibull fit a first-year discovery has chance
   [2.6%](numbers.md#e5-weibull-detect-1y), not [9.0%](numbers.md#e5-hazard-detect-1y).
 - **L4** ([C3](verification/l4-red-team.md#c3)): survives with corrections, each now in the
@@ -356,45 +396,54 @@ T_d exceeds the declared path's by a large factor, so the regime's detection tim
   not extend (C3.1); the Monte Carlo could not fail (b) (C3.2); a nuclear-programme rate was given to
   cloud and distillation, on a different clock (C3.3); the common-cause theorem fails for a cause of
   more than one dimension (C3.4); the fit is an upper bound (C3.5); three paths lie outside P (C3.7).
+- **L6** ([M5](verification/l6-fresh-review.md#major)): the merging rule is the textbook bound on a
+  union, and treating channels with a shared cause as one is the common-cause practice of risk
+  assessment [@mosleh1998nureg5485]. Accepted: the rule is prior work, and C3 is an application
+  only, as its own refuter said.
 
-**What it rests on.** [The novelty file's multi-channel section](03-novelty.md#the-multi-channel-detection-guarantee-over-breakout-time)
-and the channel limits in [P4](011-physical.md#p4-the-footprint-and-its-floor). The memo's placeholder
-rate is [1.2/yr](numbers.md#org-memo-detect-rate). Epoch's smuggling model assumes [25%](numbers.md#org-diversion-detect)
-of diversions are detected. Metering catches [96%](numbers.md#phys-meter-detect) of undisguised
-training at [1%](numbers.md#phys-meter-false-alarm) false alarms, on simulated power
-[@kimpson2026dcpower]. No challenge inspection has been requested
-([0 requests](numbers.md#org-cwc-ci-requests)) [@opcw-ec109-dg22]. A mature many-channel system
-caught about [31%](numbers.md#org-fraud-detect) of frauds [@dyck2017pervasive].
+**What it rests on.**
+[The novelty file's multi-channel section](03-novelty.md#the-multi-channel-detection-guarantee-over-breakout-time)
+and the channel limits in [P4](011-physical.md#p4-the-footprint-and-its-floor). The memo's
+placeholder rate is [1.2/yr](numbers.md#org-memo-detect-rate). Epoch's smuggling model assumes
+[25%](numbers.md#org-diversion-detect) of diversions are detected. Metering catches
+[96%](numbers.md#phys-meter-detect) of undisguised training at
+[1%](numbers.md#phys-meter-false-alarm) false alarms, on simulated power [@kimpson2026dcpower]. No
+challenge inspection has been requested ([0 requests](numbers.md#org-cwc-ci-requests))
+[@opcw-ec109-dg22]. A mature many-channel system caught about [31%](numbers.md#org-fraud-detect) of
+frauds [@dyck2017pervasive].
 
 **Prior work, and what remains.** The structure was first done in physical-protection path analysis,
-EASI from 1977 [@snell2007itc20]: the evader takes the path of least detection, detection counts only
-if early enough for the response, channel values depend on the adversary's tactics, and broken
-elements are modelled per path. The game form is network interdiction [@washburn1995interdiction] and
-safeguards selection [@ward2016safeguards]; per-pathway detection with timing is in
+EASI from 1977 [@snell2007itc20]: the evader takes the path of least detection, detection counts
+only if early enough for the response, channel values depend on the adversary's tactics, and broken
+elements are modelled per path. The game form is network interdiction [@washburn1995interdiction]
+and safeguards selection [@ward2016safeguards]; per-pathway detection with timing is in
 [@gif2011prppem]; acquisition path analysis computes detection per path in safeguards
 [@allen-2015-llnl; @iaea-glossary-2022]; [@burr2012safeguards] flags dependence between measures
 without a rule. In AI, [@baker2025verifying] judges a regime at its weakest subgoal and flags
 correlation; [@gan2026clock] uses one aggregate rate, [@allison2025nuclear] a Poisson risk over a
 horizon, [@shavit2023chinchilla] one channel in closed form, [@wasil2024verification] a "Swiss
-cheese" model in words. What remains ours: the application to AI paths with sourced rates, and the
-merging rule if L6 finds it more than the textbook bound.
+cheese" model in words. What remains ours: the application to AI paths with sourced rates. The
+merging rule is the textbook bound on the probability of a union, at least its largest term under
+any dependence and at most the sum, which L1 named as Fréchet's bounds of 1935 (a paper we have not
+opened, so not cited); treating channels with a shared cause as one event is the common-cause
+practice of probabilistic risk assessment [@mosleh1998nureg5485]. L6 judged it textbook.
 
-**What would refute it.** L6 judges the merging rule textbook: C3 is an application only. T_d's
-interval spans every T_b of interest, which makes the model a framework, not a result. A path
+**What would refute it.** L6 judges the merging rule textbook: C3 is an application only. L6 did.
+T_d's interval spans every T_b of interest, which makes the model a framework, not a result. A path
 outside P with low detection, beyond the three already named.
 
 **L3.** Done: E5 (Monte Carlo and the discovery-rate survival fit), E8 (facility margins). To come:
 E13 (a measured multi-day rate for the metering channel against disguises). No experiment yet gives
 cloud or distillation a channel.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C4. A loop-gain estimator at fixed inputs, binding at its confidence bound
 
 **The claim.** Capability is measured on a log compute-equivalent axis; a round is one research
 cycle at a fixed budget (experiment compute, data, wall-clock). In
 [the common form](013-dynamical.md#the-common-form-a-growth-law-and-its-returns), with returns
-exponent b (Part I's beta), return to input lambda and closure e, the loop's gain is K = e * lambda
+exponent b, return to input lambda and closure e, the loop's gain is K = e * lambda
 / b, and round k's gain Delta_k satisfies, exactly, ln[(exp(b Delta_(k+1)) - 1) / (exp(b Delta_k) -
 1)] = b (K - 1) Delta_k. A staged run with a fixed, elicited agent (e = 0) estimates b from that
 identity; repeating at one, two and four times the agent budget (the budget ladder) estimates
@@ -405,10 +454,12 @@ the ladder, so [5 rounds](numbers.md#claim-d2-rounds) cost
 [15 staged runs](numbers.md#claim-c4-staged-runs).
 
 **Standing: downgraded to a measurement design.** The identity is proved (L2), but at the only
-data-calibrated noise every estimator E4 tried fails L3: its interval under-covers, its estimate is
-biased toward the unsafe side or its upper bound is unbounded, and the trigger built on it fires
-about as often below 1 as above. A claim that fails a level is cut or downgraded, so C4 is no longer
-a candidate contribution. What stands: (a) the identity and the budget ladder as a design for
+calibrated noise, a proxy taken from the round-to-round spread of a human speedrun competition's
+records rather than from staged rounds of an AI research loop, every estimator E4 tried fails L3:
+its interval under-covers, its estimate is biased toward the unsafe side or its upper bound is
+unbounded, and the trigger built on it fires about as often below 1 as above. At real round noise
+none of it is tested yet (L6). A claim that fails a level is cut or downgraded, so C4 is no longer a
+candidate contribution. What stands: (a) the identity and the budget ladder as a design for
 measuring K, whose interval under-covers at the data-calibrated noise for every round count E4
 tried; (b) untested: on real staged runs the interval puts r on one side of 1; (c) cut: restricting
 closed-loop research on a declared frontier-scale system while the upper bound on K exceeds a margin
@@ -419,7 +470,7 @@ loops a developer declares.
 **What would reopen it.** E4(b) measures real staged rounds as large and as tightly measured as E4's
 favourable setting, on which the first-order difference regression is close to unbiased
 ([1.01](numbers.md#e4-diff-fav-bias) of the true r) and the upper bound nearly calibrated (with the
-true gain exactly at K* it fires in [94%](numbers.md#e4-fa-gstar-n5) of runs, close to the 1 - alpha
+true gain exactly at K* it fires in [94%](numbers.md#e4-fa-gstar-n5) of runs, close to the 1 - zeta
 a calibrated one-sided bound gives); and on such rounds an estimator's
 [90%](numbers.md#claim-confidence) interval reaches its nominal coverage within a stated number of
 rounds. A trigger would need, besides, an elicitation step that catches a withheld share of each
@@ -496,10 +547,13 @@ E4's runs even on favourable rounds.
   under measurement error (C4.3, it fails at calibrated noise), counts rounds per budget (C4.4),
   withdraws the speedrun's r (C4.5), fits the exact identity (C4.6) and quotes the K rule's rates
   (C4.7). Undeclared loops (C4.8) and transfer to the frontier (C4.9) remain.
+- **L6** ([m5](verification/l6-fresh-review.md#minor)): agrees with the downgrade, and would say the
+  trigger fails at the only calibrated proxy, a human speedrun's record-to-record spread, and is
+  untested at real round noise. Accepted as wording; the standing does not move.
 
 **Which bound, and what it costs.** If a trigger returns, the rule is on the upper bound, the
 epidemic rule [@blumberg2020supercritical]: it leaves a loop above K* unrestricted with probability
-at most alpha, where a lower-bound rule missed [89%](numbers.md#e4-miss-lb-s0-fav) of loops at the
+at most zeta, where a lower-bound rule missed [89%](numbers.md#e4-miss-lb-s0-fav) of loops at the
 corrected 95th percentile on favourable rounds, [95%](numbers.md#e4-miss-lb-s0-cal) at calibrated
 noise and [100%](numbers.md#e4-miss-lb-hide25-fav) against the pattern sandbagger. The trigger is on
 K, and the K rule fires at least as often as the rule on r, so its price is K's. At calibrated noise
@@ -539,7 +593,7 @@ the trigger on r and on K, and a pattern sandbagger; E4(a), the speedrun history
 come: E4(b), a staged run at two scales, which measures a round's noise and so decides whether C4
 reopens or is cut.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C5. Elicited capability with measured miss and false-alarm rates per named budget
 
@@ -565,6 +619,12 @@ with no misses, the miss target at [90%](numbers.md#claim-confidence) one-sided 
 (c) stated in advance: on tamper-resistant and adaptive organisms the claim is expected to fail,
 their range falls outside the guarantee, and the protocol leans on compute (C2).
 
+**Standing: downgraded to an untested design** (L6). E3 has not run, the formal part is textbook,
+and rates over regime-built organisms bound the miss rate only on that population, at every
+capability level and not only near D1: a frontier model's hiding, emergent or trained, is not drawn
+from it. C11, untested in the same way, is framing until its experiment runs, and C5 stands alike.
+What stands is the rule as a design for E3 to test; it is not a candidate contribution.
+
 **Results so far.**
 
 - **L1** ([C5](verification/l1-prior-art-c1-c6.md#c5)): extends prior work. The statistics are
@@ -582,6 +642,9 @@ their range falls outside the guarantee, and the protocol leans on compute (C2).
   from [0.978](numbers.md#def-adaptive-auc-before) to [0.560](numbers.md#def-adaptive-auc-after)
   against adaptive organisms (C5.2). The trigger is unvalidated above expert level (C5.3), and a few
   builders give a clustered sample (C5.4). Each is now in the statement.
+- **L6** ([M6](verification/l6-fresh-review.md#major)): an untested design, not a candidate: E3 has
+  not run, the formal part is textbook, C11 in the same position is downgraded, and the population
+  gap applies at every capability level. Accepted: C5 is downgraded to an untested design.
 
 **What it rests on.** [D5](01-anatomy.md#d5-elicited-capability-robust-to-hiding) and
 [F4](014-cognitive.md#f4-measuring-capability-so-a-protocol-can-trigger-on-it). A tamper-resistant
@@ -592,15 +655,16 @@ organism recalled [7.8%](numbers.md#def-robust-hard-recall) on hard tasks agains
 
 **Prior work, and what remains.** Sensitivity and specificity with exact one-sided bounds are
 diagnostic-test practice [@fda2007diagnostic]; evaluating after a defence is fixed is security
-practice [@carlini2019evaluating; @tramer2020adaptive]. A fixed budget was in [@anthropic2023rsp] and
-was dropped; [@eu2025gpaicode] asks for state-of-the-art elicitation with no budget or miss rate;
-[@openai2025preparedness] treats elicitation as a lower bound. Per-budget success on locked organisms
-is in [@greenblatt2024password], rates with intervals per method in [@abubaker2026fuzzing], and
-hardened organisms in [@finke2026robustorganisms] and [@duddu2026deceptive]; the organism method is
-also [@taylor2025auditinggames], [@hofstatter2025elicitationgame], [@jang2026explorationhacking] and
-[@soopal2026adaptive]; tests of absence are in [@bukkapatnam2026absent]. What remains ours: both rates
-per named budget, over a defined population of organism kinds, as the pass-fail rule of a trigger
-rival parties run, with its range and its limit to non-adaptive hiding stated.
+practice [@carlini2019evaluating; @tramer2020adaptive]. A fixed budget was in [@anthropic2023rsp]
+and was dropped; [@eu2025gpaicode] asks for state-of-the-art elicitation with no budget or miss
+rate; [@openai2025preparedness] treats elicitation as a lower bound. Per-budget success on locked
+organisms is in [@greenblatt2024password], rates with intervals per method in
+[@abubaker2026fuzzing], and hardened organisms in [@finke2026robustorganisms] and
+[@duddu2026deceptive]; the organism method is also [@taylor2025auditinggames],
+[@hofstatter2025elicitationgame], [@jang2026explorationhacking] and [@soopal2026adaptive]; tests of
+absence are in [@bukkapatnam2026absent]. What remains ours: both rates per named budget, over a
+defined population of organism kinds, as the pass-fail rule of a trigger rival parties run, with its
+range and its limit to non-adaptive hiding stated. It is a design, untested until E3 runs.
 
 **What would refute it.** No affordable budget meets the targets on RL-locked organisms: the claim
 then covers only naive locks, which prior work already shows, and is cut. A rate measured on blind
@@ -611,23 +675,23 @@ rate is not worth publishing.
 auditing-game organisms [@aisi2025auditingrepo] and noise injection [@tice2024noise;
 @tice2025noiserepo], with adaptive organisms built by a separate team that has E in hand.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C6. The coupled-gain certificate as a treaty test
 
 **The claim.** With K the gain matrix over loops and parties, K_ij = lambda_i * e_ij / b_i
 ([Y3](013-dynamical.md#y3-coupling)), signs allowed, if upper bounds U_ij >= |K_ij| hold jointly
-with probability at least 1 - alpha, then rho(K+) <= rho(U) and rho(K) <= rho(U) <= max_i sum_j U_ij
+with probability at least 1 - zeta, then rho(K+) <= rho(U) and rho(K) <= rho(U) <= max_i sum_j U_ij
 with that probability, K+ being K with its negative couplings set to zero, and any positive weights
 w give rho(U) <= max_i (sum_j U_ij w_j) / w_i: the linear case of the network small-gain theorem.
 For signed couplings it is rho(K+) < 1 that rules out runaway, and rho(K) > 1 no longer shows it.
-Claimed, as an application: (a) the treaty test "the certificate is at most rho*", each edge named,
+Claimed, as an application: (a) the treaty test "the certificate is at most omega", each edge named,
 gated and verified on its own, issued only when every edge has a measured bound that holds jointly
-at 1 - alpha. While any edge is a stated range or a party's own report, the result is a calculation
-on judgements and no certificate issues. rho* = 1 - m * rho_dot * T_r is fixed by agreement until
+at 1 - zeta. While any edge is a stated range or a party's own report, the result is a calculation
+on judgements and no certificate issues. omega = 1 - m * rho_dot * T_r is fixed by agreement until
 rho_dot and T_r are measured. Edges no gate covers, such as weight theft, are listed and bounded, or
 the certificate states that it omits them. (b) The smallest set of edge cuts that brings the
-certificate below rho*, found by exhaustive search over sets by size, with its sensitivity to each
+certificate below omega, found by exhaustive search over sets by size, with its sensitivity to each
 unmeasured edge. (c) A result computed within the application: rho(U) is at least its largest
 diagonal entry, and a fully closed software loop at its corrected 95th percentile,
 [1.07](numbers.md#dyn-r-lm-hi-corrected), leaves [-0.07](numbers.md#dyn-software-headroom-upper) of
@@ -675,8 +739,10 @@ So (c) holds under that correction or at a low compute share, not in general.
   1 when fully closed. E9 adds that the 1.07 behind (c) leaves compute's growth out (statement).
 - **L4** ([C6](verification/l4-red-team.md#c6)): survives with corrections, each now in the
   statement: with unmeasured, self-reported edges the certificate carries no probability (C6.1);
-  rho* is not a number (C6.2); weight theft is an edge no gate covers (C6.3); (c) restates what C4
+  omega is not a number (C6.2); weight theft is an edge no gate covers (C6.3); (c) restates what C4
   says of a fully closed loop (C6.4).
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  agrees with the standing.
 
 **What it rests on.** [Y3](013-dynamical.md#y3-coupling). Burtsev's individually subcritical blocs
 reach a network rho of [1.15](numbers.md#dyn-burtsev-network-rho), an e-folding time of
@@ -700,7 +766,7 @@ certificate never issues.
 E11 again with the diagonal from E9 and, if C4 reopens, E4(b), the compute edge from E10 and the
 cross-party edge from E6; the economic elasticity has no source and stays a stated range.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C7. The coalition share derived from the response time
 
@@ -810,6 +876,10 @@ fleet).
   conditions; the check counted shares where neither was checked, and a direct counterexample exists
   (C7.2). (c) is an artefact of the assumed budget (C7.3); (a) now gives s* over the budget. Also:
   Part II's covert shares (C7.4), the stock counted (C7.5), major powers (C7.6).
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  agrees with the standing, and notes that at fixed algorithms the share is vacuous on its own
+  inputs: on the declared path s* is [100%](numbers.md#prot-coalition-share-declared). It binds only
+  with drift, growth between renewals or a smaller assumed budget, as above.
 
 **What it rests on.** [D4](01-anatomy.md#d4-weapons-grade-the-line-tb-m-tr) and
 [O3](015-organisational.md#o3-chokepoints). The hardwired-pause overt threshold is
@@ -831,7 +901,7 @@ accumulation that keeps each step outside the line, or repeated play undoes the 
 **L3.** Done: E6, on illustrative payoffs; E22 (how much each kind of party can add, and phi). To
 come: payoffs measured rather than illustrated, which no experiment yet plans.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C8. The aggregate footprint floor, a margin per channel, and the untraced pool
 
@@ -851,11 +921,11 @@ every facility channel's margin exceeds one for a distributed run at
 reserve in every party's breakout time, and already exceeds the floor many times over. For a
 [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run at a pause's run length, with the floor at BF16
 and utilisation drawn over its measured range, E8 puts the pool at
-[340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the floor
-([110](numbers.md#e8-pool-over-floor-1e26-pause-p05) to
-[1,000](numbers.md#e8-pool-over-floor-1e26-pause-p95), 5th to 95th percentile; the pool's size is an
-assumed order of magnitude), and the compute smuggled into one country, which has a published
-interval, at [230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50) times
+[340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the floor, a point at an assumed pool of
+[1,000,000 chips](numbers.md#phys-chips-unaccounted) (the spread E8 draws around it is our reading
+of "order of magnitude", not a sourced range, so no interval is given), and the compute smuggled
+into one country, which has a published interval, at
+[230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50) times
 ([94](numbers.md#e8-smuggled-over-floor-1e26-pause-p05) to
 [590](numbers.md#e8-smuggled-over-floor-1e26-pause-p95)). An FP8 run doubles each ratio. Against the
 floor taken as a bound, FP8 at full utilisation, the smuggled median is
@@ -865,6 +935,12 @@ the floor, which is all (c) needs; (d) with C3, at the historical discovery rate
 that reserve only if it cannot reach C* at all, so the protocol must shrink the pool, not hope to
 find what it hides. (c) and (d) are the hardwired-pause paper's ledger at other inputs; the bound
 and the measured discovery rate are the difference.
+
+**Standing: an application with calculations** (L6). (a) cannot fail, being the sum that Theorem 8.1
+bounds, the ground on which (b) was cut; (c) divides a pool the ledger marks an assumption by the
+floor; and E8 computes on ledger inputs rather than testing them. What is ours after crediting
+[@fithian2026hardwired] is the choice of the lowest precision and full utilisation for the bound,
+the margins and crossing years computed from it, and the pool's multiple at an assumed pool.
 
 **Results so far.**
 
@@ -880,27 +956,32 @@ and the measured discovery rate are the difference.
   The bound for that run under a pause is [800 H100e](numbers.md#formal-floor-bound-1e26-pause), or
   [1,600 H100e](numbers.md#formal-floor-bound-1e26-pause-bf16) for a run held to BF16, not the
   chapter's [4,000 H100e](numbers.md#phys-floor-chips-1e26-pause).
-- **L3** (E8): supports (a) and (c). E8's bound agrees,
+- **L3** (E8): computed, not tested (L6): E8 is arithmetic on ledger inputs, so it shows what (a)
+  and (c) imply but cannot support them. E8's bound agrees,
   [800 H100e](numbers.md#e8-floor-1e26-pause-bound). (a): for chip accounting to resolve such a run,
   the untraced pool must shrink [1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold. (c): the
   untraced pool is [340](numbers.md#e8-pool-over-floor-1e26-pause-p50) times the floor at BF16 and
   the compute smuggled into one country [230](numbers.md#e8-smuggled-over-floor-1e26-pause-p50)
-  times, each doubled for an FP8 run, with the intervals given in (c). (d): E5 gives the pool a T_d
-  of [32 years](numbers.md#e5-td-pool-years). Facility channels also lose concentrated runs: a
-  [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run on one site over today's run length falls
-  below the satellite line by [2029](numbers.md#e8-cross-sat-1e26-now)
-  ([2026](numbers.md#e8-cross-sat-1e26-now-p05) to [2032](numbers.md#e8-cross-sat-1e26-now-p95)).
-  E22 cannot test (c): its envelope is an upper bound on what supply could make, so it can never put
-  the pool below the floor. It shows only that supply leaves room for the pool: the smuggled stock's
-  95th percentile is [8.9%](numbers.md#e22-smuggled-share-of-allied) of allied 2024-25 sales, and
-  the room China's domestic chain leaves for undeclared output is
-  [3,549](numbers.md#e22-china-slack-over-floor) times the floor. A test that cannot fail is not
-  evidence, so (c)'s L3 rests on E8 alone.
+  times, each doubled for an FP8 run, with the smuggled stock's interval given in (c). (d): E5 gives
+  the pool a central T_d of [32 years](numbers.md#e5-td-pool-years) under the historical transfer.
+  Facility channels also lose concentrated runs: a [1e+26 FLOP](numbers.md#phys-rahman-1e26-local)
+  run on one site over today's run length falls below the satellite line by
+  [2029](numbers.md#e8-cross-sat-1e26-now) ([2026](numbers.md#e8-cross-sat-1e26-now-p05) to
+  [2032](numbers.md#e8-cross-sat-1e26-now-p95)). E22 cannot test (c): its envelope is an upper bound
+  on what supply could make, so it can never put the pool below the floor. It shows only that supply
+  leaves room for the pool: the smuggled stock's 95th percentile is
+  [8.9%](numbers.md#e22-smuggled-share-of-allied) of allied 2024-25 sales, and the room China's
+  domestic chain leaves for undeclared output is [3,549](numbers.md#e22-china-slack-over-floor)
+  times the floor. A test that cannot fail is not evidence, so (c)'s L3 rests on E8 alone.
 - **L4** ([C8](verification/l4-red-team.md#c8)): survives with corrections. The bound was at
   BF16 while FP8 training at scale is in production [@deepseek2024v3]; it is now at FP8 (C8.1). (b)
   cannot fail, since a one-node site sits far below every facility limit whatever the run: cut
   (C8.2). Also, now in the statement: T is the adversary's (C8.3), "only" was false (C8.4), and the
   pool of [1,000,000 chips](numbers.md#phys-chips-unaccounted) is an assumption (C8.5).
+- **L6** ([M7](verification/l6-fresh-review.md#major)): not a candidate. (a) cannot fail, the ground
+  on which (b) was cut; (c) rests on an assumed pool with a spread we chose; and E8 computes rather
+  than tests. Accepted: C8 is an application with calculations, and the pool's multiple is given as
+  a point at an assumed pool.
 
 **What it rests on.** [P4](011-physical.md#p4-the-footprint-and-its-floor). Satellites reliably found
 facilities above [10 MW](numbers.md#phys-sat-reliable); about
@@ -911,13 +992,14 @@ channels.
 **Prior work, and what remains.** The formula as an aggregate floor in chips with a time axis, the
 untraced pool entered against it, and the conclusion that the pool must be shrunk rather than found
 are in [@fithian2026hardwired]. Per-channel detection limits by facility size are in
-[@koopmanschap2026gpu]; (a)'s resolution requirement is the IAEA's lesson on material unaccounted for
-[@iaea-glossary-2022]. [@scher2025] argues for tracking chips, not data centres;
+[@koopmanschap2026gpu]; (a)'s resolution requirement is the IAEA's lesson on material unaccounted
+for [@iaea-glossary-2022]. [@scher2025] argues for tracking chips, not data centres;
 [@scher2025agreement] caps unmonitored clusters; [@rahman2026] gives the cheapest distributed
 configuration and the longest sensible run; [@halstead-ai2040] gives per-site chances;
-[@sastry2024compute] flagged distribution. What remains ours: the floor as a bound at the lowest
-precision and full utilisation, each channel's margin and crossing year, and the pool's multiple with
-E5's discovery rate behind (d).
+[@sastry2024compute] flagged distribution. What remains ours, as an application with calculations:
+the choice of the lowest precision and full utilisation for the bound, each channel's margin and
+crossing year computed from it, and the pool's multiple at an assumed pool with E5's discovery rate
+behind (d).
 
 **What would refute it.** A published crossing-year analysis of satellite or grid detection, which
 L1 names as the likeliest way to lose the second difference. E13 measures energy per operation below
@@ -927,7 +1009,7 @@ whose upper end lies below the floor; E22, an upper bound, cannot do this.
 **L3.** Done: E8; E22, which cannot refute (c). To come: E14 (distribution tax), E13 (power per
 useful operation), and a count of the pool, which no experiment plans.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C9. The height-clocked licence, valid only once logged
 
@@ -947,7 +1029,7 @@ no advance signing; **P2** a bounded compute budget: whatever headers it is fed,
 one licence for at most that budget of powered time, and the height expiry can only shorten it. This
 is the counter's property, not the height clock's; the height clock adds a calendar expiry only for
 a chip that keeps receiving honest headers. An earlier design stopped the chip instead when h fell
-behind a floor rho_min on the block rate per unit of counter time, bounding it at (L + s) / rho_min
+behind a floor xi_min on the block rate per unit of counter time, bounding it at (L + s) / xi_min
 (Proposition 9.1). On Bitcoin's real record that floor is dominated (E25): a floor that never stops
 a compliant chip grants at least the longest honest span, and a finite floor adds only false stops,
 so Part II dropped it. **P3** no undetected equivocation of licences or declarations; **P4**
@@ -994,10 +1076,13 @@ of known parts, claimed as such.
   (C9.1); forged headers can end licences early (C9.2), which rule W confines to offline chips and
   to a majority of the hash power; data availability makes the log operator trusted (C9.3); these
   are now in the statement. One secure element carrying every chip (C9.4) is unanswered.
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  agrees with the standing, and calls E25 the strongest empirical check in the work.
 
-**What it rests on.** [The height clock](03-novelty.md#bitcoin-block-height-as-the-licence-clock-and-freshness)
-and [sealed declarations](03-novelty.md#sealed-declarations) in the novelty file, and the memo's
-section on Escapement.
+**What it rests on.**
+[The height clock](03-novelty.md#bitcoin-block-height-as-the-licence-clock-and-freshness) and
+[sealed declarations](03-novelty.md#sealed-declarations) in the novelty file, and the memo's section
+on Escapement.
 
 **Prior work, and what remains.** P1 rests on block hashes as unpredictable public values
 [@bentov2016beacon]. A height clock in trusted hardware with a monotone checkpoint is in
@@ -1022,14 +1107,14 @@ on a constrained secure element, which L1 did not search, would make E25 a repli
 are asserted, not measured. To come: the check on a constrained secure element itself. Bitcoin time
 is accurate only to hours [@todd2016opentimestamps], so periods are weeks or longer.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C10. Superintelligence against an institution at matched time and budget, and the crossover budget
 
 **The claim.** D1 as Part I leaves it ([D1](01-anatomy.md#d1-superintelligence-the-endpoint);
 [F4](014-cognitive.md#f4-measuring-capability-so-a-protocol-can-trigger-on-it)): in at least a
-fraction alpha of K decisive clusters, S's elicited score beats a named organisation O_k given the
-same wall-clock time t_k and money b_k, on items from a regime-held, refreshed pool, with O_k's
+fraction alpha of N_d decisive clusters, S's elicited score beats a named organisation O_k given the
+same wall-clock time t_k and money psi_k, on items from a regime-held, refreshed pool, with O_k's
 tools frozen at a declared date. Matched money gives the system as many copies as the money buys;
 matched time gives the organisation its headcount; the verdict is stated under both. Added: the
 **crossover budget t\***, the largest tested time budget at which S's score on the AI-research
@@ -1058,13 +1143,16 @@ baselines; "without saturating" is withdrawn.
   have some human comparison in public data, and [3 clusters](numbers.md#e1-clusters-verdict) a bar
   that a model wins or loses. None is an organisation at matched budget, so (b) cannot be tested on
   public data; E21 must build the baselines.
-- **L3** (E21): against (b) on the one analogue, and (c) downgraded. No battery compares with an
-  organisation: of [3 clusters](numbers.md#e21-clusters) with a public human comparison, t* has an
-  interval in [2 clusters](numbers.md#e21-clusters-tstar). (b): on MLE-bench the verdict flips
-  between the median and the gold-medal entrant in [45.3%](numbers.md#e21-mle-flip-best) of
-  competitions, so it changes with the comparison within one class of entrant. That is (b)'s
-  refuter, met by contest entrants, the nearest thing to an organisation any battery has. (c): t*
-  rises with release date, a rank correlation of [0.57](numbers.md#e21-rebench-rho) on RE-Bench
+- **L3** (E21): (b) untested, and (c) downgraded. No battery compares with an organisation: of
+  [3 clusters](numbers.md#e21-clusters) with a public human comparison, t* has an interval in
+  [2 clusters](numbers.md#e21-clusters-tstar). (b): on MLE-bench the best entry, picked by medal
+  share, beats the median entrant in [71.1%](numbers.md#e21-mle-median-best) of competitions and the
+  gold-threshold entrant in [25.8%](numbers.md#e21-mle-gold-best), so the verdict flips in
+  [45.3%](numbers.md#e21-mle-flip-best), the difference of the two shares, since beating the gold
+  threshold implies beating the median. That shows the rank must be named, not that the verdict
+  changes with the organisation within its class: the thresholds are ranks, not organisations, so
+  the flip could not fail to appear for an entry between them. (b) stays untested. (c): t* rises
+  with release date, a rank correlation of [0.57](numbers.md#e21-rebench-rho) on RE-Bench
   ([0.16](numbers.md#e21-rebench-rho-lo) to [0.86](numbers.md#e21-rebench-rho-hi)) and
   [0.91](numbers.md#e21-cyber-rho) on Cybench ([0.65](numbers.md#e21-cyber-rho-lo) to
   [0.97](numbers.md#e21-cyber-rho-hi)), with Cybench's t* doubling every
@@ -1089,6 +1177,10 @@ baselines; "without saturating" is withdrawn.
 - **L4** ([C10](verification/l4-red-team.md#c10)): survives as a definition only. The endpoint
   cannot warn (C10.1). The old count of three clusters was a dictionary in the code, now a search
   (C10.2). Also: two matches (C10.3), one cluster below D1 (C10.4).
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  agrees with the standing. It reads E21's flips as the verdict depending on the rank named, not as
+  (b)'s refuter met (m3). Accepted, checked against E21's code: the flip share is the median share
+  minus the gold share, and both are rank thresholds, so (b) is untested, not against.
 
 **What it rests on.** [Matching time and cost](014-cognitive.md#matching-time-and-cost). RE-Bench's
 AI-to-human ratio moves [8](numbers.md#cog-rebench-swing)-fold between
@@ -1111,14 +1203,15 @@ fraction, and t* censored at the largest tested budget.
 
 **What would refute it.** The verdict flips with the organisation within its class, or with t in a
 way t* misses: D1 is underspecified. t* cannot be estimated for lack of long baselines: the claim
-shrinks to the definition. E21 met the first on contest entrants and the second in part, since t*
-stops at each battery's ceiling. A frontier developer publishes evaluations against whole research
-teams at matched cost across clusters, which would close the first difference.
+shrinks to the definition. E21 met the second in part, since t* stops at each battery's ceiling; its
+MLE-bench flips show only that the rank must be named, so the first is untested. A frontier
+developer publishes evaluations against whole research teams at matched cost across clusters, which
+would close the first difference.
 
 **L3.** Done: E1, E2, E21's public part (which absorbs Part I's scaled-down D1 battery). To come:
 E21's live part, blocked, and any battery with an organisation's baseline.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C11. Closure judged input by input, with narrow optimisers inside the loop
 
@@ -1160,6 +1253,8 @@ fails, narrow systems need no loop exception.
   bound the decomposition reduces to holding every input together (C11.3). Also, now in the
   statement: rubber-stamp gates and a recognisable audit (C11.1), unmeasured inputs (C11.2), gates
   spaced in human time (C11.4), now counted in the agent's completed horizon-length tasks.
+- **L6** ([table](verification/l6-fresh-review.md#each-claim-the-papers-standing-and-this-reviews)):
+  agrees with the standing; Theorem 11.2 is right, and the test has not run.
 
 **What it rests on.** [D6](01-anatomy.md#d6-closure), [F3](014-cognitive.md#f3-narrow-versus-general),
 [the acquisitive loop](013-dynamical.md#y1e-the-acquisitive-loop), [A4](012-computational.md#a4-data).
@@ -1183,7 +1278,7 @@ by input.
 **L3.** To come: E4(d) (gates on and off, with seeded requests a working gate must refuse), E4(e)
 (with and without a narrow optimiser), E16, E17, E19.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## C12. The pathways ranked by their effect on the line
 
@@ -1196,18 +1291,29 @@ chapter's order is a judgement: recursive self-improvement and undeclared comput
 of declared compute, training and inference, is third; distillation from a stronger model fourth;
 self-replication and resource acquisition fifth; continual learning sixth; long-horizon autonomy
 seventh, recast as the clock that spaces the gates. Claimed: (a) the method, with each pathway tied
-to a side of D4, to the channel that sees it and to the cost of a limit; (b) of the order, only the
-pairs in which one pathway leads on both criteria are fixed by evidence. On an ordinal reading of
-the pathways table, with equal grades wherever its entries do not separate two pathways, that is
-[12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs): every pathway over
-long-horizon autonomy, and self-improvement, undeclared compute and distillation each over continual
-learning and over self-replication. None orders the first three places. The same grades on L4's
-three criteria, cost included, give L4's own count, [9](numbers.md#claim-c12-pareto-three); taking
-cost out adds the pairs over self-replication, whose cheap limit had kept them open. The grades are
-inputs in `data/inputs/040-claims.toml`, so a different reading reruns the count. The tie at the top
-joins an effect on T_r with an effect on T_b on no common scale. (c) The response class each rank
-gets, from which Part II is derived. Not claimed: undeclared compute and distillation as pathways
-rather than failure modes, which is prior work in substance.
+to a side of D4, to the channel that sees it and to the cost of a limit; (b) of the order, the pairs
+in which one pathway leads on both criteria are Pareto-ordered under our grades, which are
+judgements, not evidence: each grade is a ledger input with basis "assumption" (L6). On an ordinal
+reading of the pathways table, with equal grades wherever its entries do not separate two pathways,
+that is [12](numbers.md#claim-c12-pareto-two) of [21](numbers.md#claim-c12-pairs): every pathway
+over long-horizon autonomy, and self-improvement, undeclared compute and distillation each over
+continual learning and over self-replication. Six of the twelve rest on one grade, long-horizon
+autonomy's effect of 0, though the pathways table counts long-horizon competence as part of D1. None
+orders the first three places. The same grades on L4's three criteria, cost included, give L4's own
+count, [9](numbers.md#claim-c12-pareto-three); taking cost out adds the pairs over self-replication,
+whose cheap limit had kept them open. The grades are inputs in `data/inputs/040-claims.toml`, so a
+different reading reruns the count. The tie at the top joins an effect on T_r with an effect on T_b
+on no common scale. (c) The response class each rank gets, from which Part II is derived. Not
+claimed: undeclared compute and distillation as pathways rather than failure modes, which is prior
+work in substance. Not ranked: theft of weights, which the pathways chapter leaves unassessed and
+which L6 argues may rank first for a state on both criteria; that state-level actors could steal
+frontier weights is in [@nevo2024securing]. The order covers the seven routes assessed, not every
+route.
+
+**Standing: downgraded to a judgement** (L6). Nothing in C12 is fixed by evidence: the method is
+acquisition path analysis, credited as prior work, and its result is a judgement, whose
+[12](numbers.md#claim-c12-pareto-two) Pareto-ordered pairs rest on grades we assumed. Theft of
+weights is not ranked. The label stays "application of prior work".
 
 **Results so far.**
 
@@ -1243,13 +1349,22 @@ rather than failure modes, which is prior work in substance.
   at the top (C12.1); the recount on two criteria is in the statement. Also, now in the statement:
   cost mixed danger with ease of restriction (C12.2), the top tie has no common unit (C12.3), the
   refuter could hardly fire (C12.4), E1's sample lacks the frontier (C12.5).
+- **L6** ([M8](verification/l6-fresh-review.md#major)): a judgement throughout; no pair is fixed by
+  evidence. The grades are ledger inputs with basis "assumption", six of the twelve pairs rest on
+  one grade, and theft of weights is not ranked. Accepted: (b) now says the pairs are Pareto-ordered
+  under our grades, the order covers the seven routes assessed, and C12 is downgraded to a
+  judgement.
 
-**What it rests on.** [The pathways chapter](02-pathways.md#what-a-pathway-is-and-what-would-decide-necessary-and-sufficient).
+**What it rests on.**
+[The pathways chapter](02-pathways.md#what-a-pathway-is-and-what-would-decide-necessary-and-sufficient).
 Undeclared compute lengthens T_r to [32 years](numbers.md#e5-td-hist-years) at E5's fitted discovery
 rate, and the untraced pool, gathered, would run a [1e+26 FLOP](numbers.md#phys-rahman-1e26-local)
-job in [2.9 days](numbers.md#path-covert-days-1e26). Algorithms complement compute more than they
-substitute [@gundlach2025origin; @whitfill2025bottlenecks]; measured AI contributions to frontier
-research are shallow [@shetty2026metrnanogpt].
+job in [2.9 days](numbers.md#path-covert-days-1e26). Setting one against the other assumes a
+breakout of days is as hard to see as the slow programmes behind the rate; its footprint grows with
+its speed, so its hazard may be higher, by an amount nothing measures, and the tie at the top turns
+on it (L6). Algorithms complement compute more than they substitute [@gundlach2025origin;
+@whitfill2025bottlenecks]; measured AI contributions to frontier research are shallow
+[@shetty2026metrnanogpt].
 
 **Prior work, and what remains.** The method is acquisition path analysis, which ranks paths by time
 and detection probability [@allen-2015-llnl]. Comparing paths to advanced AI by arrival time
@@ -1260,7 +1375,8 @@ Davidson, Hadshar and MacAskill compare the loops [@davidson2025three]; [@genewe
 four pathways without ranking them; [@delaney2026strategicvisions] compares strategic visions;
 [@miotti2025narrowpath] and [@redlines-2025] imply self-improvement first. What remains ours: the
 ranking of these seven routes together as a stated judgement, with its
-[12](numbers.md#claim-c12-pareto-two) evidence-fixed pairs.
+[12](numbers.md#claim-c12-pareto-two) pairs Pareto-ordered under our grades. Independent graders,
+blind to the order, grading the table would show how far the count depends on our reading; none has.
 
 **What would refute it.** An experiment contradicts a Pareto pair. E1 and E15 show algorithms
 substitute for compute at the frontier, which would undo "nearly necessary in practice" for declared
@@ -1269,7 +1385,7 @@ scaling. A prior ranking of loops and supply routes together, for instance in th
 **L3.** Done in part: E4, E5, E1, E2, E11, E9 (no data identifies compute's share, so the rank
 stands), E18 (the cap leaks in jumps). To come: E15 (scaling), E10's distillation arm, E19, E7.
 
-**L5, L6.** Pending.
+**L5.** Pending.
 
 ## Experiments
 
@@ -1303,8 +1419,9 @@ whether the core could run on the site. Times are rough. The list is in build or
 3. **E5, detection.** C3's Monte Carlo with sourced rates (diversion [@juniewicz2026smuggling],
    metering [@kimpson2026dcpower], chip sampling [@shavit2023chinchilla], E8's facility limits), the
    merging rule and the evader's maximum, against the memo's product; and a survival fit of the
-   discovery rate over a wider, sourced set of covert programmes, self-disclosed ones censored, with a
-   sensitivity analysis over the cases. `heavy`, minutes. `e05_detection`. C3, C1, C8, C12. Browser: yes.
+   discovery rate over a wider, sourced set of covert programmes, self-disclosed ones censored, with
+   a sensitivity analysis over the cases. `heavy`, minutes. `e05_detection`. C3, C1, C8, C12.
+   Browser: yes.
 4. **E24, response latencies.** The time from a confirmed finding to an effective response in the
    arms-control record (the DPRK's notice [31 days](numbers.md#org-dprk-withdrawal-days) after a
    special inspection request [@iaea-gc37-1084]; the Security Council's single day [@bunn2005npt]),
@@ -1442,14 +1559,15 @@ The first five, E4 (c and a), E1, E5, E24 and E8, have run, and so has E2; the c
 their results; E11 has run on ledger values, and E6, E9, E25, E18, E21, E22 and E23 have run. After
 L4, E1, E5, E8 and E24 were corrected, and E4 was rerun. They failed C4's estimator and trigger at
 calibrated noise, which downgrades C4 to a measurement design, cut against C1 on covert paths and on
-response, left C2's drift rate unidentified and so cut C2(a), measured C3(c), supported C8(a) and
-(c), found C6's certificate unable to issue today, found the rate floor in C9 dominated by a
-powered-time budget, showed the corrected loop gains leave compute's growth out (E9), corrected C7's
-share for drift during a run and cut the compliance-only disclosure candidate (E6), found no
-organisation baselines for C10 and t* stopped at each battery's ceiling (E21), cut against C2's
-backtest and so downgraded C2 (E18), bounded the supply part of the fleet's growth between
-declarations, which with drift between checks C1's and C7's margins must carry (E22), and found that
-no version of the durability test can decide (E23). E4(b) decides whether C4 reopens.
+response, left C2's drift rate unidentified and so cut C2(a), measured C3(c), computed C8(a) and (c)
+(a calculation, not a test, as L6 notes), found C6's certificate unable to issue today, found the
+rate floor in C9 dominated by a powered-time budget, showed the corrected loop gains leave compute's
+growth out (E9), corrected C7's share for drift during a run and cut the compliance-only disclosure
+candidate (E6), found no organisation baselines for C10 and t* stopped at each battery's ceiling
+(E21), found C2's stated backtest untestable and a substitute against it, and so downgraded C2
+(E18), bounded the supply part of the fleet's growth between declarations, which with drift between
+checks C1's and C7's margins must carry (E22), and found that no version of the durability test can
+decide (E23). E4(b) decides whether C4 reopens.
 
 ## Cut, and why
 
@@ -1458,25 +1576,32 @@ work, kept for their use on AI and credited in their sections. Cut: C1(c), since
 waits on a political decision; C2(a), the interval tabulated in advance, since E1 cannot identify
 the drift rate; C4(c), the trigger, which E4's rerun confirms fails at calibrated noise for the rule
 on r and the K rule alike; C8(b), which could not fail. Cut on L3 as well: C2(c), the backtest,
-which E18 cuts against. Downgraded on L3: C4 as a whole, to a measurement design, since every
-estimator E4 tried fails at calibrated noise; C2 as a whole, to an accounting frame, since its
-backtest fails and its gain over one multiplier shows only where it decides nothing; and C10(c), to
-"while the battery's baselines last". Each section says what would reopen it. Moved to prior work:
-C1(d) (Gan's); C2's verifier-conditioned span and its accounting of distillation at the teacher's
-compute, the ceiling once drawn from it being withdrawn (C2.5); C4's upper-bound rule and two
-held-out sets; C12(b). E5's support for C3(b) is withdrawn: the proposition is proved, and E5
-illustrates it.
+which cannot be tested on public data; the substitute E18 ran bears against the constant rate (L6,
+m4). Downgraded on L3: C4 as a whole, to a measurement design, since every estimator E4 tried fails
+at calibrated noise; C2 as a whole, to an accounting frame, since its backtest cannot be run and its
+gain over one multiplier shows only where it decides nothing; and C10(c), to "while the battery's
+baselines last". Each section says what would reopen it. Moved to prior work: C1(d) (Gan's); C2's
+verifier-conditioned span and its accounting of distillation at the teacher's compute, the ceiling
+once drawn from it being withdrawn (C2.5); C4's upper-bound rule and two held-out sets; C12(b). E5's
+support for C3(b) is withdrawn: the proposition is proved, and E5 illustrates it.
+
+**Moved or downgraded by L6.** To prior work: C1(b), the partial-factor format of structural design
+[@jrc2008eurocodes], and C3's merging rule, the textbook bound on a union with the common-cause
+practice of risk assessment [@mosleh1998nureg5485], so C1 and C3 are applications only. Downgraded:
+C5, to an untested design; C12, to a judgement, its Pareto-ordered pairs resting on our grades and
+theft of weights not ranked. Relabelled: C8, an application with calculations.
 
 **Prior work, so used and credited, not claimed.** The organising idea of safeguards timeliness
 [@openai2023governance; @sastry2024compute]; registered chips under expiring licences
 [@petrie2025flexheg1; @petrie2025flexheg2]; renewal by k of n licensors [@aarne2025flexheg3]; random
-challenge inspections [@scher2025agreement]; rewarded whistleblowing [@dyck2007whistle]; power and heat
-signatures [@wasil2024verification]; evaluations on elicited capability against thresholds
-[@anthropic2023rsp; @eu2025gpaicode]; bans on closed loops [@miotti2025narrowpath], whose only possible
-addition was C4's trigger; the loops as growth laws, runaway against saturation, and coupling itself
-[@davidson2026feedback; @besiroglu2024returns]; the criticality metaphor behind the project's name
-[@yudkowsky2013iem]; P1 to P3, A1, A3 and A4, each prior work in [the novelty file](03-novelty.md#summary);
-and the identity between the line at m = 1 and Gan's prevention condition.
+challenge inspections [@scher2025agreement]; rewarded whistleblowing [@dyck2007whistle]; power and
+heat signatures [@wasil2024verification]; evaluations on elicited capability against thresholds
+[@anthropic2023rsp; @eu2025gpaicode]; bans on closed loops [@miotti2025narrowpath], whose only
+possible addition was C4's trigger; the loops as growth laws, runaway against saturation, and
+coupling itself [@davidson2026feedback; @besiroglu2024returns]; the criticality metaphor behind the
+project's name [@yudkowsky2013iem]; P1 to P3, A1, A3 and A4, each prior work in
+[the novelty file](03-novelty.md#summary); and the identity between the line at m = 1 and Gan's
+prevention condition.
 
 **Too small, framing, or merged.**
 
@@ -1490,7 +1615,7 @@ and the identity between the line at m = 1 and Gan's prevention condition.
   E12 and E20 still measure it.
 - The per-input supply table (O1): assembly, not substance, as its chapter says.
 - Ranking supply stages by durability (O3): too few stages for any test to discriminate, which E23
-  confirms. The 2022 ranking orders later erosion no better than chance (rho
+  confirms. The 2022 ranking orders later erosion no better than chance (r_s
   [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p)), and a rank test would need
   [85 stages](numbers.md#e23-n-needed) where the 2022 dataset lists
   [79 inputs](numbers.md#e23-eto-inputs-2022), nested and correlated, so far fewer independent
@@ -1515,12 +1640,13 @@ compliance-only disclosure gave a higher disaster risk than no information in
 private information alone in [100%](numbers.md#e6-o2-compliance-over-private)
 ([O2](015-organisational.md#o2-race-dynamics)).
 
-In all, twelve claims are kept, none new and six of them applications of prior work (C1, C3, C6, C7,
-C9 and C12); five parts of kept claims are cut, two of them on L3 and one on L4 that L3 confirmed;
-C2 and C4 are downgraded on L3, to an accounting frame and a measurement design, and C10(c) is
-narrowed; and four more parts moved to prior work; and thirty-three earlier candidates stay cut or
-deferred: nineteen as prior work, eleven as too small, framing or merged, one cut by experiment and
-two deferred.
+In all, twelve claims are kept, none new and none a candidate. Six are applications of prior work
+(C1, C3, C6, C7, C8 and C9). Six are downgraded: C2 and C4 on L3, to an accounting frame and a
+measurement design; C10 and C11 on L4, to a definition and framing, with C10(c) narrowed on L3; and
+C5 and C12 on L6, to an untested design and a judgement. Five parts of kept claims are cut, two of
+them on L3 and one on L4 that L3 confirmed; six more parts moved to prior work, two of them on L6;
+and thirty-three earlier candidates stay cut or deferred: nineteen as prior work, eleven as too
+small, framing or merged, one cut by experiment and two deferred.
 
 ## What would make this program fail
 
@@ -1530,27 +1656,28 @@ protocol needs them. The results so far bear on three, and all three bear agains
 
 1. **C1, the line.** If T_r cannot be computed with an interval narrower than the T_b intervals it
    faces, or a T_b the parties compute differently collapses compliance as in [@barrett2012climate],
-   there is no agreed boundary between useful AI and weapons-grade, and the protocol falls back on
-   fixed compute caps, which are prior work and drift as algorithms improve. The record cuts against
-   this footing: of findings made while the party was in its treaty,
-   [25%](numbers.md#e24-halt-share-never) were never followed by a halt, so history bounds no response
-   time. L4 then found that the protocol's deadlock rule made even licence lapse wait on a quorum's
-   finding. Part II now lets a licence lapse unless it is renewed, so a failed check or a withheld
-   signature stops a chip by design, at the price of hold-up; a judgement call still adds a decision
-   time no record measures. Until a drill measures it, the line has no computable right side for any
-   violation that needs judging.
+   there is no agreed boundary between useful AI and holdings inside the line, and the protocol
+   falls back on fixed compute caps, which are prior work and drift as algorithms improve. The
+   record cuts against this footing: of findings made while the party was in its treaty,
+   [25%](numbers.md#e24-halt-share-never) were not followed by a halt within what the sources cover,
+   so history bounds no response time. L4 then found that the protocol's deadlock rule made even
+   licence lapse wait on a quorum's finding. Part II now lets a licence lapse unless it is renewed,
+   so a failed check or a withheld signature stops a chip by design, at the price of hold-up; a
+   judgement call still adds a decision time no record measures. Until a drill measures it, the line
+   has no computable right side for any violation that needs judging.
 2. **C2, breakout time.** If C* and the efficiency path leave every relevant T_b interval spanning
-   the line, the line decides nothing. C* must then be set so low that frontier holdings become
-   weapons-grade by default, and the protocol stops keeping useful AI allowed, which fails the
-   brief's first addition. The evidence bears against it: one OOM of C*, whose error has no bound,
-   moves T_b by [2.3 years](numbers.md#comp-years-per-oom-ho), more than Part II's illustrative line
-   of [2.0 years](numbers.md#prot-line-declared), and E1's drift rate runs from
+   the line, the line decides nothing. C* must then be set so low that frontier holdings fall inside
+   the line by default, and the protocol stops keeping useful AI allowed, which fails the brief's
+   first addition. The evidence bears against it: one OOM of C*, whose error has no bound, moves T_b
+   by [2.3 years](numbers.md#comp-years-per-oom-ho), more than Part II's illustrative line of
+   [2.0 years](numbers.md#prot-line-declared), and E1's drift rate runs from
    [2.6](numbers.md#e1-algo-annual-subset-min) to [1,512](numbers.md#e1-algo-annual-subset-max) a
    year with the choice of models. E18's backtest then finds the leak coming in jumps that no
    constant rate follows, after a follower's delay the expression lacks.
-3. **C3 with C8, covert compute.** At E5's fitted discovery rate, itself an upper bound on a careful
-   evader's, undeclared paths need [31 years](numbers.md#e5-td-site-now-years) to
-   [32 years](numbers.md#e5-td-pool-years) to reach a [5%](numbers.md#def-prevent-beta) miss, the
+3. **C3 with C8, covert compute.** At E5's fitted discovery rate, transferred from weapons programmes,
+   undeclared paths need a median of [31 years](numbers.md#e5-td-site-now-years) to
+   [32 years](numbers.md#e5-td-pool-years) to reach a [5%](numbers.md#def-prevent-beta) miss, central
+   estimates rather than bounds (E5's Weibull fit gives [24 years](numbers.md#e5-td-weibull-years)), the
    evader's best watched path is missed with probability [91%](numbers.md#e5-pmiss-max-1y) over a
    year, and cloud and distillation are not watched at all. Chip accounting would need the untraced
    pool to shrink [1,200](numbers.md#e8-pool-shrink-1e26-pause)-fold to resolve a
@@ -1562,17 +1689,21 @@ protocol needs them. The results so far bear on three, and all three bear agains
    parties alike. On today's evidence this footing does not hold, and L4 found nothing in the
    protocol that closes the pool. The protocol binds only parties that choose to declare, until the
    pool shrinks or a channel with a measured rate does far better.
-4. **The compute backbone.** Prior work, not a claim here, but every claim assumes it: chips counted at
-   birth at a few narrow stages, and the states hosting those stages bound by the same rules. The
+4. **The compute backbone.** Prior work, not a claim here, but every claim assumes it: chips counted
+   at birth at a few narrow stages, and the states hosting those stages bound by the same rules. The
    organisational chapter found leaks at the edges and a holder that reversed its own rule within
-   months. Without it C1, C2, C7 and C8 have no holdings to compute from. No experiment here tests it.
+   months. Observed compliance says little here: high compliance often means a treaty asks states to
+   do little more than they would anyway [@downs1996compliance], and this one asks the hosts of the
+   chokepoints to deny themselves. Without it C1, C2, C7 and C8 have no holdings to compute from. No
+   experiment here tests it.
 
 The other losses are survivable, and two have happened. C4 has failed, as a trigger and as an
 estimator at calibrated noise, so self-improvement falls back on the prior-work ban: a declared
-closed loop at frontier scale is treated as above the trigger. C5 bounds only non-adaptive hiding,
-so against a developer who sees E the protocol places systems by compute, which E1 shows can
-misplace one by [2.8 OOM](numbers.md#e1-gpqa-overlap-oom), at a higher cost to useful AI. Without C6
-or C7, coupled loops and coalitions are handled by judgement, and C7 offers nothing against a
-coalition that includes a major power. Without C9, licences use flexHEG's clocks, whose counter
-gives P2 anyway. C10 to C12 are now a definition, framing and a judgement, and the line stands
-without them. None of this has been tested against a real adversary. The protocol is a design.
+closed loop at frontier scale is treated as above the trigger. C5 is an untested design and bounds
+only non-adaptive hiding, so against a developer who sees E the protocol places systems by compute,
+which E1 shows can misplace one by [2.8 OOM](numbers.md#e1-gpqa-overlap-oom), at a higher cost to
+useful AI. Without C6 or C7, coupled loops and coalitions are handled by judgement, and C7 offers
+nothing against a coalition that includes a major power. Without C9, licences use flexHEG's clocks,
+whose counter gives P2 anyway. C10 to C12 are now a definition, framing and a judgement, and the
+line stands without them. None of this has been tested against a real adversary. The protocol is a
+design.

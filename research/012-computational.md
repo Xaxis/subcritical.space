@@ -8,7 +8,7 @@ way. Four other ways are on the table: better algorithms at the same compute, in
 time, post-training enhancement, and distillation from a stronger model. Data and search decide
 where those routes pay and where they stop.
 
-The line itself is drawn by time (D4 in `research/00-memo.md`): a holding is weapons-grade when its
+The line itself is drawn by time (D4 in `research/00-memo.md`): a holding is inside the line when its
 breakout time is shorter than the regime's time to detect and respond, with a margin. This chapter
 supplies the computational terms inside breakout time: how fast a fixed cap leaks, how much leaks at
 once, and which of those leaks a chip count can see.
@@ -42,8 +42,9 @@ they are a combination of prior work, C2 in
 [the claims file](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case),
 now downgraded to an accounting frame that claims nothing. Tabulating it in advance with an
 interval is cut, since E1 cannot identify the drift rate, and E18 left neither of the predictions
-that could have added something: its backtest cuts against the expression, and its gain over one
-multiplier is not shown.
+that could have added something: the stated target of its backtest, the open-closed lag, cannot be
+tested on public data, a substitute backtest on catch-ups to records bears against its constant
+rate, and its gain over one multiplier is not shown.
 
 Conventions. Every number is a ledger link. Multipliers are written with an x after the number. OOM
 means an order of magnitude, a factor of ten. Where the survey read only a source's abstract, the
@@ -852,6 +853,12 @@ with the post-training jump, or J = 0 with a cheap verifier's span. The headroom
 outlast the regime's response time T_r is J + S_v + T_r log10(g). With D4 this becomes the condition
 on the cap: the leak time must exceed m T_r.
 
+The expression assumes, without evidence, that effective compute is one scalar: that an OOM gained
+by post-training, by inference or by algorithms is worth the same OOM of training compute, so that
+the terms subtract from one headroom and one line in compute serves every path. Nothing here
+measures that, and the exchange rates of A2 vary by technique and by verifier. If the routes are
+not interchangeable, the headroom and the line have to be stated per route.
+
 ### What the numbers say
 
 With the example headroom and the high post-training jump, a capped party closes the gap in
@@ -977,7 +984,7 @@ Three findings cut against the model.
    example headroom they overlap in all ([0 cases](numbers.md#e18-b-disjoint-example) disjoint). So
    the expression adds nothing at fixed compute that changes a verdict. This is arithmetic on the
    ranges, not a measurement.
-2. **The leak comes in jumps, not at a constant rate (C2(c), against).** E18 set a cap at a then-frontier model's
+2. **The leak comes in jumps, not at a constant rate (a substitute for C2(c), against).** E18 set a cap at a then-frontier model's
    compute and at headrooms below it, and recorded when a model at or below the cap first matched the
    record. Each catch-up closing more headroom than any earlier one implies a yearly rate from
    [1.91](numbers.md#e18-bt-gamma-lo) to [1,125](numbers.md#e18-bt-gamma-hi), a range of observed
@@ -1000,11 +1007,13 @@ at [8.2 ECI points](numbers.md#e18-oc-gap-eci); the headline lag is
 [4 months](numbers.md#comp-open-closed-lag) [@edwards2026openclosed]. But on
 [0 days](numbers.md#e18-oc-evaluable-days) of the window do both the best open model and the record it
 matched have a public compute estimate, so the expression cannot predict the lag on public data.
-With the backtest against it, C2(c) has failed. C2 would reopen only if E15 and E10's post-training,
+So C2(c) cannot be tested as stated on public data; it is untestable there, not cut by a backtest.
+What E18 did test, catch-ups to records, is a substitute, and it bears against the constant-rate
+model (finding 2 above). C2 would reopen only if E15 and E10's post-training,
 distillation and verifier arms narrowed the ranges enough for the two intervals to separate where a
 cap passes the line, and a version with a follower's delay backtested. The response time still has no measured bound: of
-findings made while the party was in its treaty, [25%](numbers.md#e24-halt-share-never) were never
-followed by a halt (E24), so the placeholder of [1 yr](numbers.md#comp-response-years) above stays a
+findings made while the party was in its treaty, [25%](numbers.md#e24-halt-share-never) were not
+followed by a halt within what the sources cover (E24), so the placeholder of [1 yr](numbers.md#comp-response-years) above stays a
 placeholder. A model that cannot predict the open-closed lag should not set a treaty schedule.
 
 ## What this perspective contributes to the line

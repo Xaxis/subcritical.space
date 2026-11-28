@@ -10,12 +10,12 @@ it can deliver any number of height increments at any counter time.
 
 Rule as claimed  the chip stops once h_max >= H_e, or once it has seen no new header for longer than
                  a local bound tau (counter time).
-Rule corrected   the chip stops once h_max >= H_e, or once h_max < k + rho_min * (t - t_l) - s, with t_l
-                 the counter when it accepted the licence, rho_min a floor on the block rate and s a
+Rule corrected   the chip stops once h_max >= H_e, or once h_max < k + xi_min * (t - t_l) - s, with t_l
+                 the counter when it accepted the licence, xi_min a floor on the block rate and s a
                  slack in blocks.
 
 Prop 9.1   under the corrected rule, whatever the delivery schedule, the chip runs under the licence
-           for at most (L + s) / rho_min of counter time; with headers delivered as the honest chain
+           for at most (L + s) / xi_min of counter time; with headers delivered as the honest chain
            grows and the chip always on, it stops when block H_e arrives (or earlier, if the honest
            chain falls behind the rate floor).
            The bound is the powered-time counter's and holds whatever heights the chip counts, even
@@ -168,7 +168,7 @@ def main() -> None:
             def sched(t, h, need, arrivals=arrivals):
                 return sum(1 for a in arrivals if a <= t)
         ran = run_corrected(L, rho_min, slack, sched, rng, tmax)
-        ck.ok("Prop 9.1: corrected rule runs at most (L + s) / rho_min of counter time",
+        ck.ok("Prop 9.1: corrected rule runs at most (L + s) / xi_min of counter time",
               ran <= bound + DT, (kind, L, rho_min, slack, ran, bound))
         if kind == "honest":
             honest_runs += 1

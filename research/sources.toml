@@ -753,6 +753,15 @@ doi = "10.1101/2020.02.08.20021311"
 opened = "2026-11-27"
 found_in = "research/verification/l1-prior-art-c1-c6.md"
 
+[source.bonneau2015bitcoinbeacon]
+type = "preprint"
+title = "On Bitcoin as a public randomness source"
+authors = "Joseph Bonneau, Jeremy Clark, Steven Goldfeder"
+year = 2015
+url = "https://eprint.iacr.org/2015/1015"
+opened = "2026-11-27"
+found_in = "research/verification/l6-fresh-review.md"
+
 [source.bostrom1998howlong]
 type = "peer-reviewed"
 title = "How Long Before Superintelligence?"
@@ -1042,6 +1051,15 @@ year = 2025
 arxiv = "2504.15416"
 opened = "2026-11-27"
 found_in = "research/02-pathways.md"
+
+[source.clymer2025datacenter]
+type = "code"
+title = "data_center_classifier: a fine-tuned GPT-4o classifier of data centres in satellite images, with its misclassifications checked by hand"
+authors = "Joshua Clymer"
+year = 2025
+url = "https://github.com/Joshuaclymer/data_center_classifier"
+opened = "2026-11-27"
+found_in = "research/011-physical.md"
 
 [source.clymer2025elicitationbound]
 type = "essay"
@@ -1353,6 +1371,15 @@ arxiv = "2501.18512"
 opened = "2026-11-27"
 found_in = "research/notes/07-compute-governance.md, research/notes/02-physics.md"
 aliases = ["douillard2025"]
+
+[source.downs1996compliance]
+type = "peer-reviewed"
+title = "Is the good news about compliance good news about cooperation?"
+authors = "George W. Downs, David M. Rocke, Peter N. Barsoom"
+year = 1996
+doi = "10.1017/S0020818300033427"
+opened = "2026-11-27"
+found_in = "research/verification/l6-fresh-review.md"
 
 [source.draguns2024unelicitable]
 type = "peer-reviewed"
@@ -2593,6 +2620,15 @@ arxiv = "2104.03113"
 opened = "2026-11-27"
 found_in = "research/notes/03-algorithms.md"
 
+[source.jrc2008eurocodes]
+type = "official-docs"
+title = "The Eurocodes: what are they?"
+authors = "European Commission, Joint Research Centre"
+year = 2008
+url = "https://eurocodes.jrc.ec.europa.eu/sites/default/files/2022-06/Eurocodes_What_are_they.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l6-fresh-review.md"
+
 [source.jumper2021alphafold]
 type = "peer-reviewed"
 title = "Highly accurate protein structure prediction with AlphaFold"
@@ -3305,6 +3341,15 @@ arxiv = "2311.02462"
 opened = "2026-11-27"
 found_in = "research/notes/01-definitions.md"
 
+[source.mosleh1998nureg5485]
+type = "report"
+title = "Guidelines on Modeling Common-Cause Failures in Probabilistic Risk Assessment (NUREG/CR-5485)"
+authors = "A. Mosleh, D. M. Rasmuson, F. M. Marshall (US Nuclear Regulatory Commission)"
+year = 1998
+url = "https://nrcoe.inl.gov/publicdocs/CCF/NUREGCR-5485_Guidelines%20on%20Modeling%20Common-Cause%20Failures%20in%20PRA.pdf"
+opened = "2026-11-27"
+found_in = "research/verification/l6-fresh-review.md"
+
 [source.mouallem2026alerting]
 type = "preprint"
 title = "Resilient Alerting Protocols for Blockchains"
@@ -3331,6 +3376,15 @@ year = 2025
 arxiv = "2505.23836"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.nevo2024securing]
+type = "report"
+title = "Securing AI Model Weights: Preventing Theft and Misuse of Frontier Models"
+authors = "Sella Nevo, Dan Lahav, Ajay Karpur, Yogev Bar-On, Henry Alexander Bradley, Jeff Alstott (RAND)"
+year = 2024
+doi = "10.7249/RRA2849-1"
+opened = "2026-11-27"
+found_in = "research/verification/l6-fresh-review.md"
 
 [source.newstart-protocol]
 type = "legislation"

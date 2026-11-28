@@ -324,7 +324,8 @@ The models agree that racing erodes safety, and disagree on what helps.
 - **More racers, more enmity, more danger.** In Armstrong, Bostrom and Shulman's model, teams with
   random capability choose a safety level, the highest capability net of safety wins, and the
   winner's system is safe with probability equal to its safety level. Without information, the
-  symmetric equilibrium safety is s = mu/(e n) when that is below 1: more teams and more enmity lower
+  symmetric equilibrium safety level is the spread of capabilities divided by enmity times the number
+  of teams, when that is below 1: more teams and more enmity lower
   it. Its abstract adds: "information also increases the risks: the more teams
   know about each others' capabilities (and about their own), the more the danger increases"
   [@armstrong2016racing].
@@ -550,7 +551,7 @@ This ranking is a judgement made in 2026 with the erosion in view, and the test 
 kind does not support it. E23 ranked [9 stages](numbers.md#e23-stages) that were chokepoints against
 China on data public at the end of 2022 and scored the ranking against the erosion found from 2023 to
 November 2026 ([27 events](numbers.md#e23-events), a lower bound, since only events our searches found
-count). Spearman's rho was [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p), with a
+count). Spearman's rank correlation r_s was [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p), with a
 95% interval from [-0.49](numbers.md#e23-rho-lo) to [0.80](numbers.md#e23-rho-hi). Part I's own order
 of five stages scores [0.30](numbers.md#e23-rho-part1), a reference only, since it was made after the
 fact (below).
@@ -674,7 +675,7 @@ Two pieces were not found done quantitatively: ranking stages by durability usin
 erosion evidence, and treating the footprint growth that denial forces (the
 [2.5](numbers.md#org-denial-power-multiplier) times power per unit of compute) as a detection gain to set
 against the physical chapter's footprint floor. That is a claim about our search only, and neither is
-claimed. The ranking is too small, and E23 now measures how small: at the observed rho a rank test
+claimed. The ranking is too small, and E23 now measures how small: at the observed r_s a rank test
 would need [85 stages](numbers.md#e23-n-needed) to tell the 2022 ranking from a random one, while the
 2022 supply-chain dataset lists [79 inputs](numbers.md#e23-eto-inputs-2022), nested and correlated, so
 fewer independent stages than that. The detection gain is merged into the footprint floor
@@ -725,8 +726,10 @@ E5 (multi-channel verification Monte Carlo) has run with the smuggling model's d
 they share sources of tips. For smuggled chips spread over sites below the satellite line its detection
 time at the prevention miss chance is a median of [32 years](numbers.md#e5-td-distributed-years), and for
 the untraced pool, where no acquisition is left to catch, [32 years](numbers.md#e5-td-pool-years), against
-[39.0 days](numbers.md#e5-td-declared-days) on the declared path. Both are lower bounds, since the
-historical rate inside them is an upper bound. The factor of [4.1](numbers.md#org-huawei-spread) in
+[39.0 days](numbers.md#e5-td-declared-days) on the declared path. Both are central estimates under a
+transfer from nuclear and biological programmes, not bounds: within that record the rate overstates
+a careful evader's, but E5's Weibull fit gives a shorter time than the constant rate,
+[24 years](numbers.md#e5-td-weibull-years) for a path only the historical channels see. The factor of [4.1](numbers.md#org-huawei-spread) in
 outside estimates is not yet in E5 as a counting error. E8 (the footprint floor against detection
 limits) has applied the denial multiplier of [2.5](numbers.md#org-denial-power-multiplier): for a fixed
 compute it delays a power channel's crossing by [3.1 years](numbers.md#e8-denial-delay-years), and a
@@ -738,12 +741,12 @@ line are still found only on E5's timescale of decades (above). **E23, the durab
 run. It ranked [9 stages](numbers.md#e23-stages) by a rule fixed on data public at the end of 2022
 (more Chinese suppliers, more predicted erosion; power left out, since China was the largest
 generator) and scored the ranking against the erosion found from 2023 to November 2026. The ranking is
-not supported: rho is [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p), and the
-smallest rho the test could call significant with these stages is
+not supported: r_s is [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p), and the
+smallest r_s the test could call significant with these stages is
 [0.59](numbers.md#e23-rho-critical). The test had power [0.16](numbers.md#e23-power-here) even if the
-observed rho were true. The result moves with every choice: leaving one stage out gives
+observed r_s were true. The result moves with every choice: leaving one stage out gives
 [-0.04](numbers.md#e23-rho-loo-min) to [0.54](numbers.md#e23-rho-loo-max); over six rules and six
-erosion scorings rho runs from [-0.69](numbers.md#e23-rho-alt-min) to
+erosion scorings r_s runs from [-0.69](numbers.md#e23-rho-alt-min) to
 [0.29](numbers.md#e23-rho-alt-max), median [0.08](numbers.md#e23-rho-alt-median); with power put back
 it is [0.09](numbers.md#e23-rho-full). A test that could separate the ranking from chance would need
 [85 stages](numbers.md#e23-n-needed). So the ranking stays unclaimed: the data cannot test it, and
@@ -832,10 +835,13 @@ requires, it falls to [0.069/yr](numbers.md#e5-o4-hazard-censored). E5 then fits
 [149 programme-years](numbers.md#e5-exposure-years), and finds [0.094/yr](numbers.md#e5-hazard) (90%
 interval [0.057/yr](numbers.md#e5-hazard-lo) to [0.147/yr](numbers.md#e5-hazard-hi)); across choices of
 cases and codings it runs from [0.067/yr](numbers.md#e5-sens-min) to [0.101/yr](numbers.md#e5-sens-max),
-and the Kaplan-Meier median time to discovery is [9.6 years](numbers.md#e5-km-median-years). Two things
+and the Kaplan-Meier median time to discovery is [9.6 years](numbers.md#e5-km-median-years). Several things
 limit what that rate means. It comes from programmes that were all found or disclosed in the end, so it
-is an upper bound on a careful evader's rate, and every detection time computed from it is a lower bound;
-the size of that bias cannot be measured from this record. And it runs from a programme's start (the
+overstates a careful evader's rate within this record, by an amount the record cannot measure. That
+does not make the detection times computed from it lower bounds: the constant rate is itself an
+assumption, and E5's Weibull fit gives a shorter time, [24 years](numbers.md#e5-td-weibull-years) against
+[32 years](numbers.md#e5-td-hist-years). Nor does the record say how programme-years of nuclear and
+biological work transfer to AI. And it runs from a programme's start (the
 decision or construction), not from a breakout, so it says nothing directly about a window that opens
 when a breakout begins. Even counted from the start, discovery is likelier later: the Weibull shape is
 [1.49](numbers.md#e5-weibull-shape) ([1.25](numbers.md#e5-weibull-shape-lo) to
@@ -900,18 +906,21 @@ intelligence is documented [@baker2023nuclear]. Turning the record into a discov
 is this chapter's arithmetic; the survey did not search for prior estimates of it, so no novelty is
 claimed. The claims file treats the rate as an input, not a contribution: E5 has refitted it as a
 survival model, and it enters C3 through E5
-([C3](04-claims.md#c3-detection-as-the-evader-sees-it-the-per-path-evader-minimised-miss)). It is an
-upper bound on a careful evader's rate, on a clock that starts with the programme, and it belongs only
-to paths that intelligence, defectors and imagery could see.
+([C3](04-claims.md#c3-detection-as-the-evader-sees-it-the-per-path-evader-minimised-miss)). Within its
+record it overstates a careful evader's rate, it runs on a clock that starts with the programme, its
+use for AI is a transfer, and it belongs only to paths that intelligence, defectors and imagery could
+see.
 
 ### What it means for the protocol
 
 A candidate, not a finding.
 
-1. **Do not rely on finding covert work after it starts.** Even at the historical rate, itself an upper
-   bound, the median time to discovery was [9.6 years](numbers.md#e5-km-median-years) from a
-   programme's start, and a path only those channels see needs [32 years](numbers.md#e5-td-hist-years) from a
-   programme's start to reach the prevention miss chance, a lower bound. Compute rented through cloud
+1. **Do not rely on finding covert work after it starts.** At the historical rate, which within its
+   record overstates a careful evader's, the median time to discovery was
+   [9.6 years](numbers.md#e5-km-median-years) from a programme's start, and a path only those channels
+   see needs [32 years](numbers.md#e5-td-hist-years) at a constant rate, or [24 years](numbers.md#e5-td-weibull-years) under the
+   Weibull fit, from a programme's start to reach the prevention miss chance: decades, a central
+   estimate under a transfer from nuclear and biological programmes. Compute rented through cloud
    providers or distilled from others' outputs has no measured channel at all, so a breakout on those
    paths is missed with certainty. The protocol must instead keep the covert supply route small: the
    unaccounted compute any party could command must stay below what it would need to break out within
@@ -943,8 +952,8 @@ from any record. E6 has not tested withdrawal as a choice. It states the conditi
 frozen during a notice and the response starting at notice, an exit breakout fails only if breakout
 time plus the notice reaches the response time; without the freeze the party can start during the
 notice and its length adds nothing. And on E24's record [25%](numbers.md#e24-halt-share-never) of
-findings made inside a treaty were never followed by a halt; if that share carries over, an exit
-breakout succeeds at least that often whatever the notice. A game in which a party that learns it has
+findings made inside a treaty were not followed by a halt within what the sources cover; if that
+share carries over, an exit breakout succeeds about that often whatever the notice. A game in which a party that learns it has
 been detected chooses between exit and compliance remains to be built.
 
 ## What this perspective contributes to the line
@@ -979,13 +988,15 @@ Four quantities from this chapter should enter the protocol, as limits or as inp
 4. **Discovery time for undeclared programmes.** The realistic detection time for covert work, from the
    historical record: E5's fitted discovery rate of [0.094/yr](numbers.md#e5-hazard), counted from a
    programme's start, and the [32 years](numbers.md#e5-td-hist-years) a path only the historical
-   channels see needs to reach the prevention miss chance. It belongs in the line's detection time only
+   channels see needs to reach the prevention miss chance at that constant rate, or
+   [24 years](numbers.md#e5-td-weibull-years) under E5's Weibull fit. It belongs in the line's detection time only
    for compute outside the registry that those channels could see: an undeclared site, smuggled chips,
    the untraced pool. Cloud and distillation have no measured channel and so no detection time; on those
    paths a breakout is missed with certainty until some channel for them is measured.
    *Weakest point:* a small convenience sample from other domains, with the programmes never found
-   missing, so the rate is an upper bound on a careful evader's and every detection time from it a lower
-   bound.
+   missing, so within the record the rate overstates a careful evader's; its use for AI is a transfer
+   nothing measures, and the detection times from it are central estimates under that transfer, not
+   bounds.
 
 Race pressure (O2) is not a trigger. It is a design constraint: on the published models the protocol
 should cap the prize and publish the line. The memo's answer to the transparency problem, disclosing

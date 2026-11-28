@@ -12,8 +12,8 @@ Thm E.1   with no known last period, complying forever is optimal iff w >= (1 - 
 Thm E.2   with a known last period T: if w < (1 - delta) * dev the party attempts at once; otherwise,
           if dev > w it complies until T and attempts in period T; otherwise it complies throughout.
 Prop E.3  (Avenhaus et al.'s payoffs) acting legally is a best response iff the non-detection
-          probability is at most (b - h alpha) / (1 + b).
-Prop E.4  prevention (non-detection <= beta) implies deterrence when b >= (beta + h alpha) / (1 - beta);
+          probability is at most (P - h zeta) / (1 + P).
+Prop E.4  prevention (non-detection <= beta) implies deterrence when P >= (beta + h zeta) / (1 - beta);
           the check also counts instances where prevention holds without deterrence, and deterrence
           without prevention (demonstrations).
 
@@ -76,12 +76,12 @@ def main() -> None:
         legal_best = v_legal >= v_violate
         thresh = (b - h * alpha) / (1 + b)
         if abs(nd - thresh) > 1e-12:
-            ck.ok("Prop E.3: legal is a best response iff non-detection <= (b - h alpha)/(1 + b)",
+            ck.ok("Prop E.3: legal is a best response iff non-detection <= (P - h zeta)/(1 + P)",
                   legal_best == (nd <= thresh), (b, h, alpha, nd))
         beta = 10 ** rng.uniform(-3, -0.3)
         nd2 = beta * rng.uniform(0, 1)  # prevention holds
         if b >= (beta + h * alpha) / (1 - beta):
-            ck.ok("Prop E.4: prevention and b >= (beta + h alpha)/(1 - beta) imply deterrence",
+            ck.ok("Prop E.4: prevention and P >= (beta + h zeta)/(1 - beta) imply deterrence",
                   -h * alpha >= -b + (1 + b) * nd2 - 1e-12, (b, h, alpha, beta, nd2))
         elif -h * alpha < -b + (1 + b) * nd2:
             prevention_only += 1

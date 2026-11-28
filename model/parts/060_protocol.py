@@ -63,7 +63,7 @@ def build(L, here) -> None:
         lambda q: q["prot-lambda-declared"] / q["e5-hazard"],
         "prot-lambda-declared / e5-hazard",
         fmt=",.0f",
-        label="that rate as a multiple of E5's fitted historical discovery rate of covert programmes (a lower bound on the multiple, as E5's rate is an upper bound for a careful evader)",
+        label="that rate as a multiple of E5's fitted historical discovery rate of covert programmes (a rate transferred from weapons programmes; survivorship suggests a careful evader's is lower)",
         defined_in=here(),
     )
 
@@ -231,6 +231,27 @@ def build(L, here) -> None:
         "min(1, claim-whole-fleet-horizon / prot-line-declared-inrun-phi-quarter)",
         fmt="%",
         label="largest coalition share with central in-run drift and growth between licence renewals at the fleet's phi (a coalition growing no faster than the fleet)",
+        defined_in=here(),
+    )
+
+    # Gan's consent bound (Proposition 4): verification cannot cost more than either country's gain
+    # from cooperating, so monitoring is capped at (C - R) / eta. Prevention at this work's beta
+    # (def-gan-prevent-rate, Gan's formula at our beta) set against that cap.
+    L.derive(
+        "prot-gan-consent-rate",
+        lambda q: q["prot-gan-coop-gain"] / q["prot-gan-monitor-cost"],
+        "prot-gan-coop-gain / prot-gan-monitor-cost",
+        unit="/month",
+        fmt=",.3f",
+        label="most monitoring (findings a month) both countries will pay for in Gan's illustrative calibration, m_max = (C - R) / eta",
+        defined_in=here(),
+    )
+    L.derive(
+        "prot-gan-prevent-over-consent",
+        lambda q: q["def-gan-prevent-rate"] / q["prot-gan-consent-rate"],
+        "def-gan-prevent-rate / prot-gan-consent-rate",
+        fmt=".1f",
+        label="monitoring that prevention at this work's beta needs over Gan's window, as a multiple of the most both countries will pay in his calibration",
         defined_in=here(),
     )
 

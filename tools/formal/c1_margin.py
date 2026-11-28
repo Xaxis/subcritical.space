@@ -11,7 +11,7 @@ Prop 1.4    random response time with any dependence on detection: success <= be
             T_b >= T_d(beta1) + the (1 - beta2) quantile of T_resp.
 Prop 1.5    for fixed paths, max_p success_p <= beta iff every path meets its own condition; the
             scalar test min_p T_b >= max_p T_r implies it, not conversely.
-Adaptive evaders (red team C1.1). Constant rates lam_p of the first event the evader can observe,
+Adaptive evaders (red team C1.1). Constant rates mu_p of the first event the evader can observe,
 counted as the finding; a finding on p halts the party at D + tresp_p; one path at a time.
 Success is computed in the evader-favourable reading (only the first finding sets a deadline, and
 after it the evader does whatever finishes soonest), an upper bound on success when later findings
@@ -19,7 +19,7 @@ also set deadlines, so a bound that holds here holds there.
 Prop 1.7    (adaptive) if progress does not carry over between paths and tresp_p <= tb_q for all
             p, q, every strategy succeeds with at most max_p S(p): the per-path test is exact.
 Prop 1.8    if progress carries over, every strategy succeeds with at most
-            exp(-c_min * (1 - tresp_max / tb_min)), c_min = min_p lam_p tb_p, with equality for a
+            exp(-c_min * (1 - tresp_max / tb_min)), c_min = min_p mu_p tb_p, with equality for a
             common tresp; the portable line implies the per-path line and is implied by the strict
             scalar test tb_min >= max_p T_d(p) + tresp_max.
 Prop 1.9    repeated attempts: n attempts each meeting the line at beta / n succeed together with
@@ -133,7 +133,7 @@ def t_d(hz: Hazard, beta: float) -> float:
 
 
 # -------------------------------------------------------------------------------------------------
-# Adaptive evaders. A path is (lam, tb, tresp). A plan is the evader's schedule before the first
+# Adaptive evaders. A path is (lam, tb, tresp), lam its detection rate mu_p. A plan is the evader's schedule before the first
 # finding: a list of (path index, duration). Before the first finding the evader learns nothing that
 # predicts findings, so every strategy is a randomised plan; after it the evader's best move is
 # computed exactly below.

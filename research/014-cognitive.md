@@ -57,7 +57,7 @@ references [@grace2014forms].
 The system boundary is a system S (weights, scaffolding and tools) together with the inference
 compute R its holder controls or can rent, working on a task family T. It is compared with a named
 human comparison H, which may be an individual expert, a team or an organisation, given a
-wall-clock budget t and a money budget b. Three quantities are measured separately.
+wall-clock budget t and a money budget psi. Three quantities are measured separately.
 
 - **Serial speed s(T).** The ratio of H's wall-clock time to one instance of S's wall-clock time to
   reach the same score on the same tasks. It is dimensionless. It is a task rate, not a token rate:
@@ -67,7 +67,7 @@ wall-clock budget t and a money budget b. Three quantities are measured separate
   equal to R divided by the inference compute one instance needs at that speed. Copies and speed
   trade against each other on fixed hardware (batching raises n and lowers s), so n and s are
   reported as a pair at a declared operating point.
-- **Quality q(T, t, b).** The best score S reaches on T within budgets t and b, relative to the best
+- **Quality q(T, t, psi).** The best score S reaches on T within budgets t and psi, relative to the best
   score H reaches with the same budgets. A pure quality advantage is a set of items S solves that H
   does not solve at any budget the comparison allows.
 
@@ -226,7 +226,7 @@ closed-loop rule, which meters research compute, not under a limit on n times s.
   it completes it. Speed s still needs E20.
 - **E20, the F1 decomposition run.** On a fixed set of RE-Bench-style tasks with human baselines,
   run one open model at several serving operating points on a fixed accelerator budget. Measure s
-  (time to match the human reference score), n (instances sustained) and quality at matched t and b.
+  (time to match the human reference score), n (instances sustained) and quality at matched t and psi.
   Then test whether n times s predicts the output of a group: do k copies working in parallel for
   time t beat k human experts given t? The expected failure is saturation with k, as in human groups
   [@aiimpacts2016coordinated], and the run measures where it sets in. It is deterministic given its
@@ -249,7 +249,7 @@ a human-held gate, or defeat the regime's ability to detect and respond. The mem
 - **Economic production:** earns the money that buys compute (the economic loop, Y1).
 
 For each function the measured quantity is the score ratio or win share of S against a named
-baseline at matched t and b, together with the kind of baseline: individual, team or organisation.
+baseline at matched t and psi, together with the kind of baseline: individual, team or organisation.
 Barnett and Scher define ASI the same way at the top level, as AI that can "substantially surpass
 humanity in all strategically relevant activities (economic, scientific, military, etc.)"
 [@barnett2025governance].
@@ -454,7 +454,8 @@ closure (D6), where Part II puts it, not to the capability.
     [71.1%](numbers.md#e21-mle-median-best) of competitions (an upward-biased pick, the best by
     medal share) and the gold-threshold entrant in [25.8%](numbers.md#e21-mle-gold-best); the verdict
     flips on [45.3%](numbers.md#e21-mle-flip-best) of competitions when the comparison moves from the
-    median to the gold threshold. Nothing is matched (entrants had weeks or months), so t\* is not
+    median to the gold threshold, just the difference of the two shares, since beating the gold
+    threshold implies beating the median. Nothing is matched (entrants had weeks or months), so t\* is not
     identified there except as a lower bound. The share won rises with the entry's date (rank
     correlation [0.97](numbers.md#e21-mle-rho)).
   - **Forecasting does not identify t\*.** Neither ForecastBench nor Metaculus varies the budget. The
@@ -477,7 +478,7 @@ closure (D6), where Part II puts it, not to the capability.
 ### Definition
 
 Generality G(S) is the number of decisive clusters (F2) in which S meets the institutional bar at
-matched t and b, or that number as a fraction alpha of the clusters. It is counted cluster by
+matched t and psi, or that number as a fraction alpha of the clusters. It is counted cluster by
 cluster, without averaging, so a large lead in one cluster cannot make up for a deficit in another.
 A system is **narrow** if G is at most one and its outputs do not enter the training data, code or
 compute allocation of a system above the line. The second clause is the closure condition: a
@@ -824,9 +825,9 @@ saturation, why it cannot be the trigger.
 ### D1, as this evidence leaves it
 
 Stated with every parameter the evidence says it needs: a system S with resources R is
-superintelligent at level alpha on battery B if, in at least a fraction alpha of the K decisive
+superintelligent at level alpha on battery B if, in at least a fraction alpha of the N_d decisive
 clusters, its elicited score (under a stated elicitation budget E) beats the score of the named
-organisation O_k for cluster k, with both sides given wall-clock time t_k and budget b_k (compute at
+organisation O_k for cluster k, with both sides given wall-clock time t_k and budget psi_k (compute at
 a declared price plus money), on items drawn from B's regime-held pool, refreshed on a cycle shorter
 than the battery's useful life, and with O_k's tools frozen at a declared date. The verdict is stated
 under both matches, money and wall-clock time. "Best available
@@ -856,10 +857,11 @@ fraction won that rises smoothly enough with effective compute to extrapolate. E
 [5 clusters](numbers.md#e1-clusters-baselined) with some human comparison in public data and
 [3 clusters](numbers.md#e1-clusters-verdict) with a bar a model wins or loses, none an organisation at
 matched budget. E21's public part compared with experts, contest entrants, contest crowds and
-forecaster teams, not institutions, and found the verdict unstable within one class: on MLE-bench
-it flips on [45.3%](numbers.md#e21-mle-flip-best) of competitions between the median entrant and the
-gold threshold, so the rank must be named. That meets the pass condition's refuter on the nearest
-thing to an organisation any battery has (C10(b), against on that analogue). Institutional baselines still have to be built, by E21's
+forecaster teams, not institutions. On MLE-bench the verdict depends on the rank named: it flips on
+[45.3%](numbers.md#e21-mle-flip-best) of competitions between the median entrant and the gold
+threshold. That flip is the difference of two shares and could not have failed to appear; it changes
+the rank compared against, not the organisation within its class, so it does not test the pass
+condition (C10(b)), which stays untested. Institutional baselines still have to be built, by E21's
 live part or otherwise.
 
 Steelman against D1 itself: Scher et al. define ASI by harm ("sufficiently superhuman cognitive

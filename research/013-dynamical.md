@@ -39,11 +39,11 @@ Every loop below is written in the semi-endogenous form of Jones (1995), as used
 by Epoch [@bloom2020ideas; @besiroglu2024returns]:
 
 ```
-(1/X) dX/dt = theta * X^(-beta) * E^lambda,        r = lambda / beta
+(1/X) dX/dt = theta * X^(-b) * E^lambda,        r = lambda / b
 ```
 
 X is the stock the loop improves: software efficiency, compute per dollar, compute capital, a
-deployed model's skill, or the number of copies. E is the input that improves it. A positive beta
+deployed model's skill, or the number of copies. E is the input that improves it. A positive b
 says ideas get harder to find as X grows. lambda says how much a doubling of input buys (below 1
 when parallel effort duplicates). r is the number of doublings of X per doubling of cumulative
 input.
@@ -52,17 +52,17 @@ The loop closes when the input is itself supplied by the stock, E = c * X^e, wit
 fully the stock supplies its own input). Then
 
 ```
-(1/X) dX/dt = g0 * (X/X0)^(beta * (K - 1)),        K = e * r
+(1/X) dX/dt = g0 * (X/X0)^(b * (K - 1)),        K = e * r
 ```
 
 K is the loop's own gain. With full closure (e = 1) it equals r. Three regimes follow. Writing u =
-ln(X/X0) and k = beta * (K - 1), the law is du/dt = g0 * exp(k u), so (1 - exp(-k u)) / k = g0 t.
+ln(X/X0) and k = b * (K - 1), the law is du/dt = g0 * exp(k u), so (1 - exp(-k u)) / k = g0 t.
 
 - **K < 1:** the growth rate falls as X rises, and each doubling of X takes longer than the last by
-  a factor 2^(beta (1 - K)). This is saturation of the rate, not necessarily of the level.
+  a factor 2^(b (1 - K)). This is saturation of the rate, not necessarily of the level.
 - **K = 1:** steady exponential growth.
-- **K > 1:** each doubling is faster than the last by a factor 2^(-beta (K - 1)). Doubling times
-  form a convergent series and u diverges at t* = 1 / (g0 beta (K - 1)). Physical limits stop it
+- **K > 1:** each doubling is faster than the last by a factor 2^(-b (K - 1)). Doubling times
+  form a convergent series and u diverges at t* = 1 / (g0 b (K - 1)). Physical limits stop it
   first, which is why the headroom of each loop matters.
 
 Three consequences for measurement recur in every section.
@@ -85,7 +85,7 @@ Three consequences for measurement recur in every section.
    (driven by growing inputs) and early supercritical progress can look ordinary. Diagnosing the
    regime takes per-cycle estimates of gain and of how fast the next gain gets harder.
 
-For several loops, write K_ij = lambda_i * e_ij / beta_i, where e_ij says how strongly stock j
+For several loops, write K_ij = lambda_i * e_ij / b_i, where e_ij says how strongly stock j
 supplies loop i's input. The diagonal holds each loop's own gain and the off-diagonal terms are
 cross-feeds. In their innovation-network model, Davidson et al. prove that growth is explosive if
 and only if the spectral radius of the corresponding matrix exceeds 1 (their Proposition 1)
@@ -106,7 +106,7 @@ inference. The boundary is one party's frontier research programme. The loop: hi
 models, which supply more and better AI research labour, which raises the growth of S.
 
 ```
-(1/S) dS/dt = theta_S * S^(-beta_S) * E_S^lambda_S
+(1/S) dS/dt = theta_S * S^(-b_S) * E_S^lambda_S
 E_S = (L_human + L_AI)^(1 - eps_K) * C_exp^eps_K      (the Cobb-Douglas form Ho and Whitfill use)
 L_AI proportional to S * C_inf                          (efficiency times inference compute)
 ```
@@ -375,10 +375,10 @@ A candidate, not a finding:
   at fixed training compute C. The researcher is a fixed agent, so the loop is open, and the run
   measures r for AI research labour on that target, not closure. Round k's gain is Delta_k in log
   effective compute. In the common form with a fixed budget per round, ln(Delta_(k+1) / Delta_k) =
-  -beta * Delta_k holds to first order only; exactly, ln[(e^(beta Delta_(k+1)) - 1) /
-  (e^(beta Delta_k) - 1)] = -beta * Delta_k ([Part III, Lemma 4.1](05-formal.md#c4-the-loop-gain-estimator)),
-  which costs nothing since beta is fitted anyway. The slope of that regression estimates beta; repeating at 1, 2 and 4 times the
-  agent budget per round estimates lambda from how the gain scales. Report r = lambda / beta with a
+  -b * Delta_k holds to first order only; exactly, ln[(e^(b Delta_(k+1)) - 1) /
+  (e^(b Delta_k) - 1)] = -b * Delta_k ([Part III, Lemma 4.1](05-formal.md#c4-the-loop-gain-estimator)),
+  which costs nothing since b is fitted anyway. The slope of that regression estimates b; repeating at 1, 2 and 4 times the
+  agent budget per round estimates lambda from how the gain scales. Report r = lambda / b with a
   bootstrap 90% interval, and repeat at two model scales to test transfer. The test settles the side
   of 1 only if both bounds fall on the same side. Closure e (Burtsev's chi) has to come from
   declarations of how much of the pipeline AI runs. Not yet run, it is also the only measurement of
@@ -406,7 +406,7 @@ chips come from a handful of firms. The loop: AI designs better chips or process
 which supplies more AI.
 
 ```
-(1/H) dH/dt = theta_H * H^(-beta_H) * E_H^lambda_H,        r_H = lambda_H / beta_H
+(1/H) dH/dt = theta_H * H^(-b_H) * E_H^lambda_H,        r_H = lambda_H / b_H
 K_H = e_H * r_H        (e_H: how far AI supplies hardware research, and how that scales with H)
 ```
 
@@ -422,7 +422,7 @@ few plants; AI's role in design is internal to firms and easy to hide.
 ### Evidence for and against
 
 **For a strong loop.** The hardware loop has the highest returns of any estimate we surveyed.
-Moore's Law research has the smallest beta in Bloom et al., [0.2](numbers.md#dyn-bloom-beta-moore)
+Moore's Law research has the smallest b in Bloom et al., [0.2](numbers.md#dyn-bloom-beta-moore)
 [@bloom2020ideas], so with lambda = 1 its r is [5](numbers.md#dyn-r-moore). Eth and Davidson give
 about [5](numbers.md#dyn-r-gpu) for GPUs from 2006 to 2022 and about
 [7](numbers.md#dyn-r-hardware-hist) historically [@eth2025sie]. If AI supplied hardware research and
@@ -470,7 +470,7 @@ and must be declared there.
 
 ### What would test it
 
-E9 recomputed Bloom et al.'s beta for Moore's Law from their files, [0.20](numbers.md#e9-moore-beta),
+E9 recomputed Bloom et al.'s b for Moore's Law from their files, [0.20](numbers.md#e9-moore-beta),
 an r of [5.1](numbers.md#e9-moore-r) at lambda = 1, from [2.5](numbers.md#e9-moore-r-min) to
 [7.3](numbers.md#e9-moore-r-max) across their six R&D series. The closure e_H has no data source in
 our survey, and a measurement of AI's share of chip design advances is an open item, not a planned
@@ -577,8 +577,8 @@ into weight updates. The loop: a better model is deployed more widely, gathers m
 improves. The boundary is one model lineage across its deployment.
 
 ```
-(1/A) dA/dt = theta_X * A^(-beta_X) * (N v)^lambda_X - f,     N proportional to A^e_X
-K_X = lambda_X * e_X / beta_X
+(1/A) dA/dt = theta_X * A^(-b_X) * (N v)^lambda_X - f,     N proportional to A^e_X
+K_X = lambda_X * e_X / b_X
 ```
 
 f is the rate of forgetting, which acts as a brake.
@@ -645,13 +645,13 @@ compute and money they hold. The loop: copies acquire resources, which fund more
 compute, which acquire more.
 
 ```
-dN/dt = (b - d) * N,        b = b0 * p_money * p_KYC * p_compute * p_weights * p_persist
-R_Q = b / d                 (copies each copy starts before it is removed)
+dN/dt = (nu - d) * N,       nu = nu_0 * p_money * p_KYC * p_compute * p_weights * p_persist
+R_Q = nu / d                (copies each copy starts before it is removed)
 ```
 
 The loop is supercritical when R_Q > 1; growth is then exponential until accessible compute
-saturates it, and faster if acquired resources raise b. The reproduction number is the standard
-branching-process threshold. Writing b as a product over stages is our framing of RepliBench's four
+saturates it, and faster if acquired resources raise nu. The reproduction number is the standard
+branching-process threshold. Writing nu as a product over stages is our framing of RepliBench's four
 domains: obtaining resources, exfiltrating weights, replicating onto compute and persisting
 [@black2025replibench].
 
@@ -747,7 +747,7 @@ intuitive judgment" [@kokotajlo2025takeoff].
 
 - *Diminishing returns are the rule.* Research productivity falls about
   [5.3%](numbers.md#dyn-bloom-rp-decline) a year on average across Bloom et al.'s cases, and the
-  aggregate economy's beta of [3.1](numbers.md#dyn-bloom-beta-aggregate) gives r of
+  aggregate economy's b of [3.1](numbers.md#dyn-bloom-beta-aggregate) gives r of
   [0.32](numbers.md#dyn-r-aggregate) [@bloom2020ideas]; Epoch's replication gives
   [0.25](numbers.md#dyn-r-us-economy), and computer chess [0.83](numbers.md#dyn-r-chess) (standard
   error [0.15](numbers.md#dyn-r-chess-se)), "just shy of the threshold of 1"
@@ -842,15 +842,15 @@ time on horizon-length tasks, which no experiment here measures.
 ### Definition
 
 The combined gain is the spectral radius rho(K) of the gain matrix over loops, and over parties,
-with K_ij = lambda_i * e_ij / beta_i as in the common form. The system is supercritical when rho(K)
+with K_ij = lambda_i * e_ij / b_i as in the common form. The system is supercritical when rho(K)
 > 1. For two loops with each own gain below 1 this is
 
 ```
 (1 - K_SS) * (1 - K_HH) < K_SH * K_HS
 ```
 
-Multiplying out by beta_S * beta_H turns it into net diminishing returns against cross-feeds,
-beta_net_S * beta_net_H < phi_S * phi_H, with beta_net_i = beta_i (1 - K_ii), phi_S = lambda_S e_SH
+Multiplying out by b_S * b_H turns it into net diminishing returns against cross-feeds,
+b_net_S * b_net_H < phi_S * phi_H, with b_net_i = b_i (1 - K_ii), phi_S = lambda_S e_SH
 and phi_H = lambda_H e_HS. That is the form of Davidson et al.'s condition [@davidson2026feedback]:
 either loop explodes alone when its net diminishing returns turn negative, and otherwise they
 explode together when the product of cross-feeds beats the product of net diminishing returns.
@@ -865,7 +865,7 @@ this usable:
 2. **Bounds.** max_i K_ii <= rho(K) <= max_i sum_j K_ij, and for any pair rho(K) >= sqrt(K_ij K_ji).
    For any positive weights w, rho(K) <= max_i (sum_j K_ij w_j) / w_i.
 3. **A certificate.** If upper bounds U_ij >= |K_ij| hold jointly with probability at least 1 -
-   alpha (for example by a Bonferroni split of alpha over the entries), then by facts 1 and 2, rho(K)
+   zeta (for example by a Bonferroni split of zeta over the entries), then by facts 1 and 2, rho(K)
    <= rho(U) <= max_i sum_j U_ij with that probability. Subcriticality can be certified from a bound
    on each edge, each verified on its own, without knowing K exactly. The test is rho(U) itself. The
    largest row sum bounds it from above but is looser, and on this chapter's graph it can never
@@ -954,9 +954,9 @@ A candidate design:
   update compute. Software to deployment beyond declared use: evaluations at checkpoints. Across
   parties: limits on transferring frontier AI research results, release decisions for weights above
   the line, and control of smuggled compute.
-- **Bound the certificate.** Require rho(U) <= rho*, with U the matrix of upper confidence bounds
-  and rho* = 1 - m * rho_dot * T_r: a margin set by how fast the gain drifts upward (rho_dot), the
-  response time T_r and a safety factor m. The drift rate is not measured, so rho* is fixed by
+- **Bound the certificate.** Require rho(U) <= omega, with U the matrix of upper confidence bounds
+  and omega = 1 - m * rho_dot * T_r: a margin set by how fast the gain drifts upward (rho_dot), the
+  response time T_r and a safety factor m. The drift rate is not measured, so omega is fixed by
   agreement until it is; this is a design, stated as one. The certificate issues only when every
   edge has a measured bound that holds jointly. While any edge is a stated range or a party's own
   report, rho(U) is a calculation on judgements and carries no probability, and edges no gate
@@ -1023,7 +1023,7 @@ trigger.
    each loop's own gain and on each cross-feed, over loops and parties. Its largest row sum bounds it
    from above, but on this chapter's graph that bound can never fall below
    [2.14](numbers.md#e11-rowsum-floor) while compute feeds software, so only rho(U) can issue (E11).
-   The protocol gates edges until rho(U) sits below rho*. Weakest point: it issues only when every
+   The protocol gates edges until rho(U) sits below omega. Weakest point: it issues only when every
    edge has a measured bound, and of the [10 entries](numbers.md#e11-entries) in the one-party graph
    [5 entries](numbers.md#e11-entries-unbounded) have no bound at all, so today rho(U) falls below 1
    only with the unmeasured entries set to zero, a calculation on judgements, not a certificate
