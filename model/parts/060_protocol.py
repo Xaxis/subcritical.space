@@ -191,6 +191,49 @@ def build(L, here) -> None:
         defined_in=here(),
     )
 
+    # The fall phi in T_b between checks of the line (Proposition 1.6, Corollary 1.6a) has two parts:
+    # holdings growth, which E22 bounds from supply for the fleet as a whole, and algorithmic drift
+    # over the interval, here at the central rate. A party that buys more than its share of new
+    # chips has a larger phi than the fleet's.
+    for suffix, phi_id, years, what in (
+        ("quarter", "e22-phi-member-quarter", lambda q: q["prot-licence-months"] / 12, "a check at each licence renewal"),
+        ("year", "e22-phi-member-year", lambda q: 1.0, "a check once a year"),
+    ):
+        L.derive(
+            f"prot-phi-{suffix}",
+            (lambda f, y: lambda q: q[f] * q["phys-algo-growth"] ** y(q))(phi_id, years),
+            f"{phi_id} * phys-algo-growth ^ (interval in years)",
+            fmt=".1f",
+            label=f"fall in the fleet's breakout time between checks for {what}: E22's supply bound times the central algorithmic drift over the interval",
+            defined_in=here(),
+        )
+        L.derive(
+            f"prot-line-declared-phi-{suffix}",
+            (lambda s: lambda q: q["prot-line-declared"] * q[f"prot-phi-{s}"])(suffix),
+            f"prot-line-declared * prot-phi-{suffix}",
+            unit="years",
+            fmt=".1f",
+            label=f"breakout time a declared path must show at {what} so the line holds until the next (Proposition 1.6; for a T_b that counts in-run drift)",
+            defined_in=here(),
+        )
+    L.derive(
+        "prot-line-declared-inrun-phi-quarter",
+        lambda q: q["prot-line-declared-inrun"] * q["prot-phi-quarter"],
+        "prot-line-declared-inrun * prot-phi-quarter",
+        unit="years",
+        fmt=".1f",
+        label="launch-speed breakout time a declared path must show at each licence renewal, central in-run drift (Corollary 1.6a with phi0 = prot-phi-quarter)",
+        defined_in=here(),
+    )
+    L.derive(
+        "prot-coalition-share-inrun-phi",
+        lambda q: min(1.0, q["claim-whole-fleet-horizon"] / q["prot-line-declared-inrun-phi-quarter"]),
+        "min(1, claim-whole-fleet-horizon / prot-line-declared-inrun-phi-quarter)",
+        fmt="%",
+        label="largest coalition share with central in-run drift and growth between licence renewals at the fleet's phi (a coalition growing no faster than the fleet)",
+        defined_in=here(),
+    )
+
     # Evaluations at every 4x of effective compute, at the frontier's pace: effective compute grows
     # by physical growth times algorithmic progress a year.
     L.derive(

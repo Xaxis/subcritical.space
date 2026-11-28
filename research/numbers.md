@@ -13844,6 +13844,1302 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - note: against its own steady-path bound of 1.00: one direction must be gated or measured well below what growth rates allow (rerun: python3 tools/exp/e11_coupled_loops.py)
 - defined in: `data/results/e11_coupled_loops.json`
 
+<a id="e18-b-disjoint-example"></a>
+### e18-b-disjoint-example
+
+**0 cases**: of 8 pairs of class and rate range, those in which the expression's interval and a single multiplier's do not overlap at the example headroom
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-b-sep-fails-line"></a>
+### e18-b-sep-fails-line
+
+**8 cases**: of 8 pairs of class and rate range, those in which every headroom where the two intervals separate is one where the cap's leak time is below m * T_r at every input
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-b-sep-part1"></a>
+### e18-b-sep-part1
+
+**0.91 OOM**: C2(b) at fixed compute, no cheap verifier, Part I's bracket for both: largest headroom at which the expression's interval and a single multiplier's do not overlap (arithmetic on the ranges)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-b-sep-subsets"></a>
+### e18-b-sep-subsets
+
+**0.80 OOM**: the same boundary with the rate across E1's six samples
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-b-sep-verifier-part1"></a>
+### e18-b-sep-verifier-part1
+
+**1.30 OOM**: the same boundary with a cheap verifier, Part I's bracket
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-b-sep-verifier-subsets"></a>
+### e18-b-sep-verifier-subsets
+
+**1.15 OOM**: the same boundary with a cheap verifier, rate across E1's six samples
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-censored"></a>
+### e18-bt-censored
+
+**1 records**: records not yet matched by any model with a compute estimate at or below their own compute when the data end
+
+- basis: experiment
+- note: censored at 0.78 years (rerun: python3 tools/exp/e18_cap_leak.py)
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-events"></a>
+### e18-bt-events
+
+**4 catch-ups**: catch-ups below a record's compute that close more headroom than any earlier one
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-gamma-hi"></a>
+### e18-bt-gamma-hi
+
+**1,125**: highest yearly rate a catch-up implies, 10^(h / t) with J = 0 (upper end of the observed range)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-gamma-lo"></a>
+### e18-bt-gamma-lo
+
+**1.91**: lowest yearly rate a catch-up implies, 10^(h / t) with J = 0 (lower end of the observed range, not an interval)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-h0-hi"></a>
+### e18-bt-h0-hi
+
+**1.52 years**: longest such time among the records that were matched
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-h0-lo"></a>
+### e18-bt-h0-lo
+
+**0.48 years**: shortest time until a model at or below a then-frontier record's compute matched its ECI (the expression predicts 0 for every input)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-inside-part1"></a>
+### e18-bt-inside-part1
+
+**3 points**: of 7 backtest points (first matches at the record's compute and catch-ups), those inside the expression's exact interval with Part I's bracket and J = 0
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-inside-part1-j"></a>
+### e18-bt-inside-part1-j
+
+**2 points**: of 7 backtest points, those inside the exact interval with Part I's bracket and J over Part I's post-training range
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-inside-subsets"></a>
+### e18-bt-inside-subsets
+
+**2 points**: of 7 backtest points, those inside the exact interval with the rate across E1's six samples and J = 0
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-max-headroom"></a>
+### e18-bt-max-headroom
+
+**1.46 OOM**: largest headroom closed below a record's compute in the backtest
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-bt-targets"></a>
+### e18-bt-targets
+
+**3 records**: ECI records with a compute estimate, set on or after the first closed model's ECI: the then-frontier caps the backtest can place
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-leak-part1-hi"></a>
+### e18-leak-part1-hi
+
+**12.7 years**: leak time of the example cap, no cheap verifier, slow corner of Part I's bracket (small-compute bound, typical jump); the exact interval's upper end
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-leak-part1-lo"></a>
+### e18-leak-part1-lo
+
+**2.2 years**: leak time of the example cap, no cheap verifier, fast corner of Part I's bracket (Rosetta rate, high post-training jump); the exact interval's lower end
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-leak-subset-hi"></a>
+### e18-leak-subset-hi
+
+**5.5 years**: leak time of the example cap at the slowest of E1's six sample rates (not open weights) and the typical post-training jump
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-leak-subset-lo"></a>
+### e18-leak-subset-lo
+
+**0.53 years**: leak time of the example cap at the fastest of E1's six sample rates (at or above 1e24.5 FLOP) and the high post-training jump
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-leak-verifier-hi"></a>
+### e18-leak-verifier-hi
+
+**11.0 years**: leak time of the example cap with a cheap verifier, slow corner of Part I's bracket (span of one typical technique); the fast corner is 0, the span covering the headroom
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-mc-median-spread"></a>
+### e18-mc-median-spread
+
+**1.25**: illustration: largest over smallest Monte Carlo median of the example cap's leak time across three assumed laws for the rate inside Part I's bracket (the median is the law's, not data's)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-need-part1-hi"></a>
+### e18-need-part1-hi
+
+**2.9 OOM**: headroom a cap needs for its leak time to exceed m * T_r, no cheap verifier, high corner of Part I's bracket
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-need-part1-lo"></a>
+### e18-need-part1-lo
+
+**1.1 OOM**: headroom a cap needs for its leak time to exceed m * T_r, no cheap verifier, low corner of Part I's bracket
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-need-record-tr-part1-hi"></a>
+### e18-need-record-tr-part1-hi
+
+**3.3 OOM**: headroom needed, no cheap verifier, high corner of Part I's bracket, with T_r from the record (E5's declared-path detection plus E24's median response, not a high quantile)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-need-subset-hi"></a>
+### e18-need-subset-hi
+
+**7.7 OOM**: headroom a cap needs for its leak time to exceed m * T_r at the fastest of E1's six sample rates, no cheap verifier, high jump
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-need-subset-lo"></a>
+### e18-need-subset-lo
+
+**1.5 OOM**: headroom a cap needs for its leak time to exceed m * T_r at the slowest of E1's six sample rates, no cheap verifier, typical jump
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-need-verifier-part1-hi"></a>
+### e18-need-verifier-part1-hi
+
+**4.6 OOM**: headroom a cap needs for its leak time to exceed m * T_r, cheap verifier, high corner of Part I's bracket
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-need-verifier-subset-hi"></a>
+### e18-need-verifier-subset-hi
+
+**9.4 OOM**: headroom a cap needs at the fastest of E1's six sample rates with a cheap verifier's full span
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-oc-evaluable-days"></a>
+### e18-oc-evaluable-days
+
+**0 days**: of the window's 148 days, those on which both the best open model and the record it matched have a public compute estimate, so the expression could predict the lag
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-oc-gap-eci"></a>
+### e18-oc-gap-eci
+
+**8.2 ECI points**: mean ECI gap between the state of the art and the best open model over Epoch's 2026 window, reproduced
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-oc-lag-over-published"></a>
+### e18-oc-lag-over-published
+
+**1.17**: reproduced strict lag over the strict lag Epoch publishes (1 means it reproduces)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-oc-lag-strict"></a>
+### e18-oc-lag-strict
+
+**7.0 months**: Epoch's open-closed lag over its 2026 window, reproduced from its chart data with point estimates (the strict version)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-subsets-inside-line"></a>
+### e18-subsets-inside-line
+
+**4 samples**: of E1's six sample rates, those at which the example cap's leak time is below m * T_r at every post-training jump in Part I's range (the cap fails the illustrative line)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e18-subsets-outside-line"></a>
+### e18-subsets-outside-line
+
+**1 samples**: of E1's six sample rates, those at which the example cap's leak time exceeds m * T_r at every post-training jump in Part I's range
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e18_cap_leak.py
+- defined in: `data/results/e18_cap_leak.json`
+
+<a id="e21-clusters"></a>
+### e21-clusters
+
+**3 clusters**: decisive clusters with a public human comparison examined here (AI research, cyber, strategy)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-clusters-tstar"></a>
+### e21-clusters-tstar
+
+**2 clusters**: of those, clusters where t* has an interval for at least one model, censored above allowed (its lower end not censored below the grid)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-clusters-tstar-two-sided"></a>
+### e21-clusters-tstar-two-sided
+
+**1 clusters**: of those, clusters where some model's t* interval lies wholly inside the tested budgets (neither end censored)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-ceiling-h"></a>
+### e21-cyber-ceiling-h
+
+**24.9 h**: the longest first-solve time in Cybench, above which t* on this pool cannot be measured
+
+- basis: experiment
+- note: the latest share leaves one step before t* is pinned between the two longest solve times (rerun: python3 tools/exp/e21_team_battery.py)
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-curvature"></a>
+### e21-cyber-curvature
+
+**1.58 per year squared**: curvature of ln t* against release date (negative would mean slowing)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-curvature-hi"></a>
+### e21-cyber-curvature-hi
+
+**12.01 per year squared**: that curvature, 97.5th percentile of resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-curvature-lo"></a>
+### e21-cyber-curvature-lo
+
+**-4.33 per year squared**: that curvature, 2.5th percentile of resampling
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-doubling-days"></a>
+### e21-cyber-doubling-days
+
+**114 days**: doubling time of t* on Cybench across release dates (models with t* inside the grid; least squares on ln t*)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-doubling-days-hi"></a>
+### e21-cyber-doubling-days-hi
+
+**352 days**: that doubling time, 97.5th percentile of resampling models, tasks and solve counts
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-doubling-days-lo"></a>
+### e21-cyber-doubling-days-lo
+
+**57 days**: that doubling time, 2.5th percentile of resampling models, tasks and solve counts
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-models"></a>
+### e21-cyber-models
+
+**21 models**: models with a reported unguided Cybench score and release date (best report per model)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-rho"></a>
+### e21-cyber-rho
+
+**0.91**: rank correlation of Cybench t* with release date
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-rho-hi"></a>
+### e21-cyber-rho-hi
+
+**0.97**: that correlation, 97.5th percentile of resampling models, tasks and solve counts
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-rho-lo"></a>
+### e21-cyber-rho-lo
+
+**0.65**: that correlation, 2.5th percentile of resampling models, tasks and solve counts
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-tstar-latest"></a>
+### e21-cyber-tstar-latest
+
+**6.3 h**: t* of the latest model on Cybench against the contest field's fastest team (claude-opus-4-6_unknown, 2026-02-05; inside the tested budgets)
+
+- basis: experiment
+- note: developer-reported score; first-solve times overstate a dedicated team's time, which raises t* (rerun: python3 tools/exp/e21_team_battery.py)
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-tstar-latest-hi"></a>
+### e21-cyber-tstar-latest-hi
+
+**32.0 h**: that t*, 97.5th percentile of resampling tasks and solve counts (censored: above 32 h, so a lower bound)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-cyber-tstar-latest-lo"></a>
+### e21-cyber-tstar-latest-lo
+
+**3.0 h**: that t*, 2.5th percentile of resampling tasks and solve counts (inside the tested budgets)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-fb-above"></a>
+### e21-fb-above
+
+**10 entries**: ForecastBench tournament AI entries at or above the superforecaster median
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-fb-entries"></a>
+### e21-fb-entries
+
+**526 entries**: ForecastBench tournament AI entries
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-fb-llm-margin"></a>
+### e21-fb-llm-margin
+
+**-5.9 points**: best single model run by ForecastBench itself minus the superforecaster median on its baseline board
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-fb-top-margin"></a>
+### e21-fb-top-margin
+
+**1.4 points**: top ForecastBench tournament entry minus the superforecaster median, Brier Index (intervals overlap)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-meta-decided"></a>
+### e21-meta-decided
+
+**3 rounds**: Metaculus Pro-against-bot rounds whose 95% interval excludes parity (all in the Pros' favour)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-meta-rounds"></a>
+### e21-meta-rounds
+
+**5 rounds**: Metaculus Pro-against-bot rounds reported
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-entries"></a>
+### e21-mle-entries
+
+**27 entries**: MLE-bench leaderboard entries with grading reports at the pinned commit (test-set-feedback entries and ablations left out)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-flip-best"></a>
+### e21-mle-flip-best
+
+**45.3%**: share of competitions whose verdict flips when the comparison moves from the median entrant to the gold-threshold entrant
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-gold-best"></a>
+### e21-mle-gold-best
+
+**25.8%**: its share beating the gold-medal threshold entrant
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-medal-2024"></a>
+### e21-mle-medal-2024
+
+**17.0%**: share beating the bronze-threshold entrant for the best 2024 entry (models-o1-preview-aide)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-medal-best"></a>
+### e21-mle-medal-best
+
+**63.1%**: its share beating the bronze-medal threshold entrant, a contest entrant at that rank
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-medal-best-hi"></a>
+### e21-mle-medal-best-hi
+
+**73.8%**: that share, 97.5th percentile of resampling competitions
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-medal-best-lo"></a>
+### e21-mle-medal-best-lo
+
+**52.9%**: that share, 2.5th percentile of resampling competitions
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-median-best"></a>
+### e21-mle-median-best
+
+**71.1%**: share of the 75 competitions in which the best entry beats the median Kaggle entrant (AIBuildAI, best by medal share, so biased up)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-mle-rho"></a>
+### e21-mle-rho
+
+**0.97**: rank correlation of the medal share with the entry's grading date across leaderboard entries
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-below-8h"></a>
+### e21-rebench-below-8h
+
+**14 models**: models whose t* is censored below 8 hours, the smallest budget with expert data
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-cap-32h"></a>
+### e21-rebench-cap-32h
+
+**99.4%**: share of resampling draws in which Claude Opus 4.6 (Inspect) is at the score's cap in every environment at 32 hours
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-ceiling-32h"></a>
+### e21-rebench-ceiling-32h
+
+**1.006**: the largest ratio any agent can reach at 32 hours on METR's capped score (1 over the experts' best of four)
+
+- basis: experiment
+- note: at the ceiling a win is a tie at the cap; the battery cannot show t* rising further (rerun: python3 tools/exp/e21_team_battery.py)
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-cross-8h"></a>
+### e21-rebench-cross-8h
+
+**4 models**: of those, models whose mean best score at 8 hours is at least the experts' (kappa(8 h) >= 1, point estimates)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-kappa32-best"></a>
+### e21-rebench-kappa32-best
+
+**1.006**: that model's score over the experts' at 32 hours (best of four runs each side, Claude Opus 4.6 (Inspect))
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-kappa8-best"></a>
+### e21-rebench-kappa8-best
+
+**1.35**: that model's score over the experts' at 8 hours, mean best of one run each side (Claude Opus 4.6 (Inspect))
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-kappa8-best-hi"></a>
+### e21-rebench-kappa8-best-hi
+
+**1.73**: that ratio, 97.5th percentile of resampling environments and runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-kappa8-best-lo"></a>
+### e21-rebench-kappa8-best-lo
+
+**1.14**: that ratio, 2.5th percentile of resampling environments and runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-models"></a>
+### e21-rebench-models
+
+**18 models**: models with matched 8-hour runs on every RE-Bench environment in METR's Time Horizon 1.1 data
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-rho"></a>
+### e21-rebench-rho
+
+**0.57**: rank correlation of t* (censored values ranked at their ends) with release date across those models
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-rho-hi"></a>
+### e21-rebench-rho-hi
+
+**0.86**: that correlation, 97.5th percentile of resampling models, environments and runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-rho-lo"></a>
+### e21-rebench-rho-lo
+
+**0.16**: that correlation, 2.5th percentile of resampling models, environments and runs
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-tstar-best"></a>
+### e21-rebench-tstar-best
+
+**32.0 h**: largest crossover budget t* of any model on RE-Bench at matched time (Claude Opus 4.6 (Inspect), released 2026-02-05; censored: above 32 h, so a lower bound)
+
+- basis: experiment
+- note: capped score: 1 is the mean 8-hour expert result on the environment (rerun: python3 tools/exp/e21_team_battery.py)
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e21-rebench-tstar-best-lo"></a>
+### e21-rebench-tstar-best-lo
+
+**32.0 h**: that model's t*, 2.5th percentile of resampling environments and runs (censored: above 32 h, so a lower bound)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e21_team_battery.py
+- defined in: `data/results/e21_team_battery.json`
+
+<a id="e22-china-budget-year"></a>
+### e22-china-budget-year
+
+**2.8e+29 FLOP**: upper bound on compute a year from China's end-2025 holdings plus every unused stacked HBM made into Ascends, at the 8-bit peak and full utilisation
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-env-central-cum"></a>
+### e22-china-env-central-cum
+
+**1.23 million H100e**: the same at central inputs (13M stacks, no CXMT HBM, 8.1 stacks per 910C), an estimate, not a bound
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-env-cum"></a>
+### e22-china-env-cum
+
+**3.55 million H100e**: upper bound on H100e China's domestic chain could make in 2024 and 2025 together: the HBM stockpile plus CXMT at its 2026 rate each year, at the most H100e per stack of any Ascend
+
+- basis: experiment
+- note: set by the 910B at Epoch's listed 32 GB; with its HBM in proportion to its compute the bound is 1.96 million H100e (rerun: python3 tools/exp/e22_supply_envelope.py)
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-margin-central-upper"></a>
+### e22-china-margin-central-upper
+
+**1.43**: the central reading over the sum of Epoch's 95th percentiles for Huawei: inside even then if above 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-margin-cum"></a>
+### e22-china-margin-cum
+
+**5.0**: China's domestic upper bound over Huawei's observed 2024-25 output (above 1: inside)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-obs-cum"></a>
+### e22-china-obs-cum
+
+**0.71 million H100e**: Huawei's 2024 and 2025 output in H100e, Epoch's medians
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-slack"></a>
+### e22-china-slack
+
+**2.84 million H100e**: room the upper bound leaves for undeclared Chinese domestic output in 2024-25 (bound less Epoch's medians)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-slack-central-over-floor"></a>
+### e22-china-slack-central-over-floor
+
+**651**: the room at the central reading over the same floor
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-slack-over-floor"></a>
+### e22-china-slack-over-floor
+
+**3,549**: that room over C8's floor for a 1e26 FLOP run under a pause (800 H100e)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-stacks-left"></a>
+### e22-china-stacks-left
+
+**5.5 million HBM stacks**: stockpiled HBM stacks left at end 2025 at that mix, before any CXMT output (central)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-stacks-share"></a>
+### e22-china-stacks-share
+
+**58%**: share of China's 13M-stack HBM stockpile that Huawei's 2024-25 output needs at Epoch's unit mix (central stacks per chip)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-china-years-to-hwp"></a>
+### e22-china-years-to-hwp
+
+**0.7 years**: least time for China from end 2025 (its implied stock plus every unused stacked HBM made into Ascends, plus CXMT) to the hardwired-pause budget on domestic supply alone, a lower bound
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-cowos-use-2024"></a>
+### e22-cowos-use-2024
+
+**71%**: CoWoS wafers the observed 2024 sales need at each chip's own packages per wafer and median yield, as a share of median capacity (no manufacturing lag)
+
+- basis: experiment
+- note: does not reproduce Epoch's own share: Epoch adds chips made but not sold (inventory, export-control write-downs, stranded H200s) and shifts consumption back by the manufacturing lag; this counts sold units only (rerun: python3 tools/exp/e22_supply_envelope.py)
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-cowos-use-2025"></a>
+### e22-cowos-use-2025
+
+**68%**: CoWoS wafers the observed 2025 sales need at each chip's own packages per wafer and median yield, as a share of median capacity (no manufacturing lag)
+
+- basis: experiment
+- note: does not reproduce Epoch's own share: Epoch adds chips made but not sold (inventory, export-control write-downs, stranded H200s) and shifts consumption back by the manufacturing lag; this counts sold units only (rerun: python3 tools/exp/e22_supply_envelope.py)
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-cowos-use-epoch-2024"></a>
+### e22-cowos-use-epoch-2024
+
+**90%**: the same share in 2024 from Epoch's own lagged consumption of the four designers
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-cowos-use-epoch-2025"></a>
+### e22-cowos-use-epoch-2025
+
+**87%**: the same share in 2025 from Epoch's own lagged consumption of the four designers
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-inside"></a>
+### e22-inside
+
+**19 observations**: observations inside their envelope (the test passes if this equals the count)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-budget-year"></a>
+### e22-member-budget-year
+
+**2.0e+30 FLOP**: upper bound on compute one year of the allied chain's 2025 output delivers in a year at the 8-bit peak and full utilisation
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-env-2024"></a>
+### e22-member-env-2024
+
+**13.6 million H100e**: upper bound on H100e the allied chain (TSMC CoWoS, logic and allied HBM) could make in 2024: each quarter's smallest stage at 95th-percentile capacity, yields of one and the best chip
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-env-2025"></a>
+### e22-member-env-2025
+
+**31.3 million H100e**: upper bound on H100e the allied chain (TSMC CoWoS, logic and allied HBM) could make in 2025: each quarter's smallest stage at 95th-percentile capacity, yields of one and the best chip
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-env-2025-hopper"></a>
+### e22-member-env-2025-hopper
+
+**18.5 million H100e**: the allied chain's 2025 upper bound if only Hopper chips could be made (no Blackwell or TPU v7)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-env-2025-p5cap"></a>
+### e22-member-env-2025-p5cap
+
+**27.2 million H100e**: the allied chain's 2025 upper bound with CoWoS capacity at its 5th percentile instead
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-env-central-2024"></a>
+### e22-member-env-central-2024
+
+**11.3 million H100e**: the allied chain's 2024 envelope at central inputs (median capacity and yields, best chip), an estimate, not a bound
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-env-central-2025"></a>
+### e22-member-env-central-2025
+
+**26.4 million H100e**: the allied chain's 2025 envelope at central inputs (median capacity and yields, best chip), an estimate, not a bound
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-margin-2024"></a>
+### e22-member-margin-2024
+
+**2.8**: the allied chain's 2024 upper bound over its observed sales (above 1: inside)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-margin-2025"></a>
+### e22-member-margin-2025
+
+**2.4**: the allied chain's 2025 upper bound over its observed sales (above 1: inside)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-obs-2024"></a>
+### e22-member-obs-2024
+
+**4.9 million H100e**: H100e Nvidia, Google, AMD and Amazon sold in 2024, sum of Epoch's per-quarter medians
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-obs-2025"></a>
+### e22-member-obs-2025
+
+**13.0 million H100e**: H100e Nvidia, Google, AMD and Amazon sold in 2025, sum of Epoch's per-quarter medians
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-slack"></a>
+### e22-member-slack
+
+**26.9 million H100e**: room the allied upper bound leaves above observed 2024-25 sales
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-member-years-to-hwp"></a>
+### e22-member-years-to-hwp
+
+**0.45 years**: least time from no chips to the hardwired-pause budget (2e+29 FLOP) on new allied supply at the 2025 envelope, a lower bound
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-min-margin"></a>
+### e22-min-margin
+
+**1.97**: smallest margin of any observation over its upper bound (Epoch, Nvidia, Google, AMD and Amazon 2025, sum of row 95th percentiles)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-nostock-budget-year"></a>
+### e22-nostock-budget-year
+
+**2.6e+28 FLOP**: upper bound on compute one year of a denied party's CXMT-limited output delivers in a year, no stockpile
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-nostock-env-year"></a>
+### e22-nostock-env-year
+
+**0.42 million H100e**: upper bound on H100e a year a denied party without a stockpile could make from CXMT's HBM at its 2026 rate (not tested)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-nostock-years-to-frozen"></a>
+### e22-nostock-years-to-frozen
+
+**0.39 years**: the same to the hardwired-pause paper's frozen frontier (2e+27 FLOP), a lower bound
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-nostock-years-to-hwp"></a>
+### e22-nostock-years-to-hwp
+
+**3.9 years**: least time from no chips to the hardwired-pause budget for a denied party without a stockpile (CXMT's HBM only), a lower bound
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-observations"></a>
+### e22-observations
+
+**19 observations**: observations tested against the envelopes (two readings of each where the source gives a range)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-phi-china-year"></a>
+### e22-phi-china-year
+
+**2.4**: upper bound on phi for China over 2026 on domestic supply only (imports and smuggling add to it)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-phi-member-quarter"></a>
+### e22-phi-member-quarter
+
+**1.65**: the same for a quarter: Q4 2025's envelope over the fleet at end Q3 2025
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-phi-member-year"></a>
+### e22-phi-member-year
+
+**2.5**: upper bound on phi for a year between declarations: the fleet Epoch counts at end 2025 plus the 2025 envelope, over that fleet
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e22-smuggled-share-of-allied"></a>
+### e22-smuggled-share-of-allied
+
+**8.9%**: the 95th percentile of compute smuggled into China through 2025 as a share of allied 2024-25 sales: the pool fits if below 1
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e22_supply_envelope.py
+- defined in: `data/results/e22_supply_envelope.json`
+
+<a id="e23-china-power-share-2021"></a>
+### e23-china-power-share-2021
+
+**31**: China's share of world electricity generation in 2021, from data public at the end of 2022
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-eto-inputs-2022"></a>
+### e23-eto-inputs-2022
+
+**79 inputs**: tools, materials and design inputs the 2022 supply-chain dataset lists, nested and correlated, so fewer independent stages than this
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-events"></a>
+### e23-events
+
+**27 events**: sourced erosion events from 2023 to November 2026 at those stages (found by our searches, so a lower bound)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-n-needed"></a>
+### e23-n-needed
+
+**85 stages**: stages a rank test would need to tell the 2022 ranking from a random one at the observed rho, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-n-needed-formula"></a>
+### e23-n-needed-formula
+
+**82 stages**: the same by Fisher's z with the Bonett and Wright variance (untied)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-n-needed-untied"></a>
+### e23-n-needed-untied
+
+**85 stages**: the same with untied scores, the optimistic case
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-p"></a>
+### e23-p
+
+**0.23**: one-sided p value of the rank test, exact over every ordering of the stages
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-power-here"></a>
+### e23-power-here
+
+**0.16**: statistical power of the one-sided 5% rank test with this many stages if the observed rho were the true one (simulated, ties kept)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho"></a>
+### e23-rho
+
+**0.28**: Spearman's rho between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-alt-max"></a>
+### e23-rho-alt-max
+
+**0.29**: Spearman's rho, highest over the 6 rules and 6 erosion scorings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-alt-median"></a>
+### e23-rho-alt-median
+
+**0.08**: Spearman's rho, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-alt-min"></a>
+### e23-rho-alt-min
+
+**-0.69**: Spearman's rho, lowest over the 6 rules and 6 erosion scorings
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-boot-hi"></a>
+### e23-rho-boot-hi
+
+**0.91**: Spearman's rho, 97.5th percentile of resampling the stages
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-boot-lo"></a>
+### e23-rho-boot-lo
+
+**-0.65**: Spearman's rho, 2.5th percentile of resampling the stages
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-critical"></a>
+### e23-rho-critical
+
+**0.59**: smallest Spearman's rho the exact one-sided 5% test could call significant with these stages and ties
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-full"></a>
+### e23-rho-full
+
+**0.09**: Spearman's rho with power put back in, ranked last as the rule places it (every stage O3 names)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-hi"></a>
+### e23-rho-hi
+
+**0.80**: Spearman's rho, 97.5th percentile by Fisher's z with the Bonett and Wright variance
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-lo"></a>
+### e23-rho-lo
+
+**-0.49**: Spearman's rho, 2.5th percentile by Fisher's z with the Bonett and Wright variance
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-loo-max"></a>
+### e23-rho-loo-max
+
+**0.54**: Spearman's rho with one stage left out, highest (without packaging)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-loo-min"></a>
+### e23-rho-loo-min
+
+**-0.04**: Spearman's rho with one stage left out, lowest (without ai-chips)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-rho-part1"></a>
+### e23-rho-part1
+
+**0.30**: Spearman's rho for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
+<a id="e23-stages"></a>
+### e23-stages
+
+**9 stages**: supply-chain stages in the durability backtest that were chokepoints against China by 2022 data (power left out: China was the largest generator)
+
+- basis: experiment
+- note: rerun: python3 tools/exp/e23_durability.py
+- defined in: `data/results/e23_durability.json`
+
 <a id="e24-exit-min-days"></a>
 ### e24-exit-min-days
 
@@ -17724,6 +19020,66 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [prot-line-declared-inrun](#prot-line-declared-inrun)
 - defined in: `model/parts/060_protocol.py#L191`
 
+<a id="prot-phi-quarter"></a>
+### prot-phi-quarter
+
+**2.1**: fall in the fleet's breakout time between checks for a check at each licence renewal: E22's supply bound times the central algorithmic drift over the interval
+
+- basis: derived
+- formula: `e22-phi-member-quarter * phys-algo-growth ^ (interval in years)`
+- inputs: [e22-phi-member-quarter](#e22-phi-member-quarter), [phys-algo-growth](#phys-algo-growth), [prot-licence-months](#prot-licence-months)
+- defined in: `model/parts/060_protocol.py#L208`
+
+<a id="prot-line-declared-phi-quarter"></a>
+### prot-line-declared-phi-quarter
+
+**4.2 years**: breakout time a declared path must show at a check at each licence renewal so the line holds until the next (Proposition 1.6; for a T_b that counts in-run drift)
+
+- basis: derived
+- formula: `prot-line-declared * prot-phi-quarter`
+- inputs: [prot-line-declared](#prot-line-declared), [prot-phi-quarter](#prot-phi-quarter)
+- defined in: `model/parts/060_protocol.py#L217`
+
+<a id="prot-phi-year"></a>
+### prot-phi-year
+
+**6.8**: fall in the fleet's breakout time between checks for a check once a year: E22's supply bound times the central algorithmic drift over the interval
+
+- basis: derived
+- formula: `e22-phi-member-year * phys-algo-growth ^ (interval in years)`
+- inputs: [e22-phi-member-year](#e22-phi-member-year), [phys-algo-growth](#phys-algo-growth)
+- defined in: `model/parts/060_protocol.py#L208`
+
+<a id="prot-line-declared-phi-year"></a>
+### prot-line-declared-phi-year
+
+**13.7 years**: breakout time a declared path must show at a check once a year so the line holds until the next (Proposition 1.6; for a T_b that counts in-run drift)
+
+- basis: derived
+- formula: `prot-line-declared * prot-phi-year`
+- inputs: [prot-line-declared](#prot-line-declared), [prot-phi-year](#prot-phi-year)
+- defined in: `model/parts/060_protocol.py#L217`
+
+<a id="prot-line-declared-inrun-phi-quarter"></a>
+### prot-line-declared-inrun-phi-quarter
+
+**13.4 years**: launch-speed breakout time a declared path must show at each licence renewal, central in-run drift (Corollary 1.6a with phi0 = prot-phi-quarter)
+
+- basis: derived
+- formula: `prot-line-declared-inrun * prot-phi-quarter`
+- inputs: [prot-line-declared-inrun](#prot-line-declared-inrun), [prot-phi-quarter](#prot-phi-quarter)
+- defined in: `model/parts/060_protocol.py#L226`
+
+<a id="prot-coalition-share-inrun-phi"></a>
+### prot-coalition-share-inrun-phi
+
+**58%**: largest coalition share with central in-run drift and growth between licence renewals at the fleet's phi (a coalition growing no faster than the fleet)
+
+- basis: derived
+- formula: `min(1, claim-whole-fleet-horizon / prot-line-declared-inrun-phi-quarter)`
+- inputs: [claim-whole-fleet-horizon](#claim-whole-fleet-horizon), [prot-line-declared-inrun-phi-quarter](#prot-line-declared-inrun-phi-quarter)
+- defined in: `model/parts/060_protocol.py#L234`
+
 <a id="prot-eval-interval-months"></a>
 ### prot-eval-interval-months
 
@@ -17732,7 +19088,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `12 * ln(comp-rsp-cadence) / ln(comp-frontier-compute-growth * comp-ho-annual)`
 - inputs: [comp-rsp-cadence](#comp-rsp-cadence), [comp-frontier-compute-growth](#comp-frontier-compute-growth), [comp-ho-annual](#comp-ho-annual)
-- defined in: `model/parts/060_protocol.py#L204`
+- defined in: `model/parts/060_protocol.py#L247`
 
 <a id="prot-notice-months"></a>
 ### prot-notice-months
@@ -17742,7 +19098,7 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `(prot-margin - 1) * prot-tr-declared * 12`
 - inputs: [prot-margin](#prot-margin), [prot-tr-declared](#prot-tr-declared)
-- defined in: `model/parts/060_protocol.py#L217`
+- defined in: `model/parts/060_protocol.py#L260`
 
 <a id="prot-prize-over-penalty"></a>
 ### prot-prize-over-penalty
@@ -17752,4 +19108,4 @@ Basis: **measured** (independent measurement), **vendor** (a claim by an interes
 - basis: derived
 - formula: `(1 - def-prevent-beta) / def-prevent-beta`
 - inputs: [def-prevent-beta](#def-prevent-beta)
-- defined in: `model/parts/060_protocol.py#L230`
+- defined in: `model/parts/060_protocol.py#L273`

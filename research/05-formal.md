@@ -15,9 +15,17 @@ is a design.
 
 Each statement with numerical content has a deterministic check, `tools/formal/<name>.py`: standard
 library only, seeded random instances with edge cases, exit 1 and the instance printed on any
-counterexample. `python3 tools/formal/run_all.py` runs them all. Every check passes. Three claims are
-false as stated in part (C4, C7 and C9) and are corrected below; C1 and C11 need their statements
-sharpened. The summary says what each claim must change.
+counterexample. `python3 tools/formal/run_all.py` runs them all. Every check passes. At level 2, as
+[the verification record](07-verification.md) states, seven claims are corrected. Three of them are
+false as stated in part: C4 (its trigger on g), C7 (part (b)) and C9 (P2). Four are sharpened: C1
+(three times: per path, then against an adaptive evader and for repeated attempts, then for in-run
+drift), C3 (Theorem 3.2 restricted to a scalar or independent-component latent), C8 (the floor as a
+bound, at full utilisation and then at the lowest precision) and C11 (closures combine as a
+share-weighted mean, not a product). C2 is proved under its assumptions, with Corollary 2.3's
+constant rate now caveated by E18. C5 is proved, and textbook. C6 is proved, with the signed case
+stated through K+. C10 and C12 are empirical, with their statements narrowed: t* as the largest
+crossing, and C10(c) testable only on a battery the systems do not saturate; only Pareto-ordered
+pairs fixed by evidence. The summary says what each claim must change.
 
 The level 4 red team ([its report](verification/l4-red-team.md)) found four errors in
 an earlier version of this file, and each is corrected below with the case that exposed it added to
@@ -43,7 +51,7 @@ it goes (Corollary 1.6a), and that re-admitting caught members raises the reward
 | C7 | (a) proved; (b) false as stated, corrected | Prop 7.1, Thm 7.2 | `c7_coalition.py` | No deviation is self-enforcing up to h_w / T_r = m s*, not s*, given R_i > beta V_i (two or more members) or beta V_i <= (1 - beta) P_i (anyone); "none can" without these conditions is false; under repeated play with re-admission the reward must exceed beta V_i / (1 - delta (1 - beta)); with in-run drift, s* uses G(m T_r) |
 | C8 | Proved as a bound once corrected twice (utilisation, then precision) | Thm 8.1, Lemma 8.2 | `c8_floor.py` | Compute floors at full utilisation and the lowest precision a run can train at (FP8 halves the BF16 figure); the longest run T is an assumption about the adversary |
 | C9 | P1 and P3 proved under assumptions; P2 false as stated, corrected, and the counter's, not the clock's; P4 needs a party trusted for availability | Props 9.1, 9.3, 9.4, Lemma 9.2 | `c9_clock.py` | Claim P2 for the powered-time counter and the height clock only for online expiry; count the most-work chain's height; name the log's publishers as trusted for availability, or replicate them under rival operators |
-| C10 | Empirical; t* made well defined | Prop 10.1 | `c10_crossover.py` | Define t* as the largest crossing and report censoring |
+| C10 | Empirical; t* made well defined; (c) untestable on a saturated battery (E21) | Prop 10.1 | `c10_crossover.py` | Define t* as the largest crossing and report censoring; test (c) only on a battery whose ceiling and top budget the systems do not reach |
 | C11 | (a) combination rule corrected; (b) empirical | Thms 11.1, 11.2 | `c11_closure.py` | For the loop gain, closures combine as a share-weighted mean, not a product; use the largest ungated closure until E4(d) decides |
 | C12 | Empirical; necessity within a horizon as a corollary | Cor 6.5, Prop 12.1 | `c6_runaway.py` | Only Pareto-ordered pairs are fixed by evidence; name them |
 | Memo | Compliance as an equilibrium: proved, textbook form | Thms E.1, E.2, Props E.3, E.4 | `eq_inspection.py` | Nothing claimed |
@@ -332,6 +340,15 @@ reaches the lowest C*. *Proof:* each term is at most its supremum. ∎ **Corolla
 leak).** With physical compute fixed at a cap, drift at a constant log10 gamma a year and headroom
 h = log10 C* - log10 C_cap, T_b = max(0, (h - J - S_v) / log10 gamma), C2's fixed-compute case.
 *Proof:* solve L(t) = log10 C*. ∎
+
+Corollary 2.3 assumes that drift closes the headroom at a constant rate. E18's backtest on the public
+record finds that it closes in jumps. GPT-4's record waited [1.52 years](numbers.md#e18-bt-h0-hi) for
+a model at or below its compute to match it, and a later catch-up closed most of an order of
+magnitude more within days of the one before it; across the records, the yearly rate a catch-up implies runs from
+[1.91](numbers.md#e18-bt-gamma-lo) to [1,125](numbers.md#e18-bt-gamma-hi). The proof stands, as
+arithmetic on the constant-rate model; the model is what fails. A leak time from Corollary 2.3 is
+then an average over jumps, not a bound on when the next one lands, and a cap's line needs the
+largest jump that can arrive within m T_r, not the mean rate.
 
 **Fails when.** An input raises one term and lowers another. The live case is scale dependence: if
 the drift rate fell fast enough with scale, more chips could lengthen T_b and the two-corner
@@ -961,7 +978,19 @@ RE-Bench's ratio, which moves toward humans by [1.68](numbers.md#cog-rebench-swi
 doubling of the budget [@wijk2024rebench], is the monotone case. The interval comes from resampling
 tasks and recomputing t*. **Empirical:** whether the verdict is stable when the organisation changes
 within its class, whether the fraction won rises smoothly with compute, and whether t* is estimable and
-rises without saturating (E21, E2, E1). *Checked* on 20,000 random ratio curves by
+rises without saturating (E21, E2, E1).
+
+**C10(c) against E21.** Proposition 10.1 needs a ratio that can exceed 1 by more than noise. On a
+capped score it cannot: if both sides' scores are capped, kappa(t) is at most the cap over the
+organisation's score, which tends to 1 as the organisation nears the cap, and ln kappa is flat there,
+so the crossing is decided by the cap and by noise. On METR's capped RE-Bench score the largest ratio
+any agent can reach at 32 hours is [1.006](numbers.md#e21-rebench-ceiling-32h), and the best model is
+at the cap in every environment in [99.4%](numbers.md#e21-rebench-cap-32h) of resampling draws. Its t*
+is censored at the battery's top budget, [32.0 h](numbers.md#e21-rebench-tstar-best), a lower bound.
+A censored t* cannot show that t* "rises without saturating": what saturates is the battery. So (c)
+is testable only on a battery whose ceiling and top budget the systems do not reach, and the battery
+must be extended, in budget and in ceiling, faster than the systems saturate it. *Checked* on 20,000
+random ratio curves by
 `tools/formal/c10_crossover.py`; no counterexample.
 
 ## C11. Closure by input: the combination rule

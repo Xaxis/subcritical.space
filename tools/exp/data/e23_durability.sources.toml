@@ -1,0 +1,116 @@
+# Sources the E23 durability backtest cites that no note or chapter had listed, each opened by the
+# experiment's builder on 2026-11-27. tools/sources_from_notes.py merges them into
+# research/sources.toml. The two ETO entries are two releases of one dataset, pinned to commits: the
+# December 2022 release gives the 2022 ranking, the October 2026 release the 2025 market shares.
+
+[source.eto2022chipexplorer]
+type = "dataset"
+title = "ETO Advanced Semiconductor Supply Chain Dataset (Chip Explorer), release of 19 December 2022"
+authors = "Emerging Technology Observatory, Center for Security and Emerging Technology (data from Khan, Mann and Peterson 2021, company profiles annotated in 2022); CC BY-NC 4.0"
+year = 2022
+url = "https://github.com/georgetown-cset/eto-chip-explorer/tree/3f0b236c2368e80d078edc2eae8570738df32974/data"
+opened = "2026-11-27"
+
+[source.eto2026chipexplorer]
+type = "dataset"
+title = "ETO Advanced Semiconductor Supply Chain Dataset (Chip Explorer), August 2026 update with 2025 market shares from TechInsights data"
+authors = "Emerging Technology Observatory, Center for Security and Emerging Technology; CC BY-NC 4.0"
+year = 2026
+url = "https://github.com/georgetown-cset/eto-chip-explorer/tree/9a4e1b128c836cb3bdf065a06a3fc03397e00ff0/data"
+opened = "2026-11-27"
+
+[source.owid2022energy]
+type = "dataset"
+title = "Our World in Data energy dataset (owid-energy-data.csv), release of 30 December 2022"
+authors = "Our World in Data (electricity data from Ember and the Energy Institute); CC BY 4.0"
+year = 2022
+url = "https://github.com/owid/energy-data/blob/555c997c491d31ef98e2fb4a47684a700af268ea/owid-energy-data.csv"
+opened = "2026-11-27"
+
+[source.trendforce2023hbm]
+type = "report"
+title = "HBM Supply Leader SK Hynix's Market Share to Exceed 50% in 2023 Due to Demand for AI Servers, Says TrendForce"
+authors = "TrendForce"
+year = 2023
+url = "https://www.trendforce.com/presscenter/news/20230418-11647.html"
+opened = "2026-11-27"
+
+[source.trendforce2024duv]
+type = "news"
+title = "Updated: Rumored China's DUV Breakthrough - Now Capable of Producing 8-Nanometer Chips"
+authors = "TrendForce News"
+year = 2024
+url = "https://www.trendforce.com/news/2024/09/16/news-chinas-duv-breakthrough-capable-of-producing-8-nanometer-chips/"
+opened = "2026-11-27"
+
+[source.feldgoise2025offensive]
+type = "report"
+title = "Inside Beijing's Chipmaking Offensive"
+authors = "Jacob Feldgoise, Hanna Dohmen (CSET)"
+year = 2025
+url = "https://cset.georgetown.edu/article/inside-beijings-chipmaking-offensive/"
+opened = "2026-11-27"
+
+[source.trendforce2026equipment]
+type = "news"
+title = "China's Domestic Chip Equipment Adoption Beats 2025 Target at 35%, Led by NAURA, AMEC"
+authors = "TrendForce News"
+year = 2026
+url = "https://www.trendforce.com/news/2026/01/12/news-chinas-domestic-chip-equipment-adoption-beats-2025-target-at-35/"
+opened = "2026-11-27"
+
+[source.semi2025billings]
+type = "report"
+title = "Global Semiconductor Equipment Billings Surged to $117 Billion in 2024, SEMI Reports"
+authors = "SEMI (press release via PR Newswire, 9 April 2025)"
+year = 2025
+url = "https://www.prnewswire.com/in/news-releases/global-semiconductor-equipment-billings-surged-to-117-billion-in-2024-semi-reports-302423933.html"
+opened = "2026-11-27"
+
+[source.liang2024cowos]
+type = "news"
+title = "Chinese manufacturers to benefit from CoWoS-like structures and TSMC order surplus"
+authors = "Amanda Liang (DIGITIMES)"
+year = 2024
+url = "https://www.digitimes.com/news/a20240702PD207.html"
+opened = "2026-11-27"
+
+[source.trendforce2024packaging]
+type = "news"
+title = "Two Major Chinese Firms Launch Billion-Dollar Advanced Packaging Projects: How Are Global Giants Progressing?"
+authors = "TrendForce News"
+year = 2024
+url = "https://www.trendforce.com/news/2024/09/26/news-two-major-chinese-firms-launch-billion-dollar-advanced-packaging-projects-how-are-global-giants-progressing/"
+opened = "2026-11-27"
+
+[source.trendforce2025eda]
+type = "news"
+title = "China's EDA Self-Sufficiency Tops 10% in 2024: Will U.S. Crackdown Boost or Block Its Chip Push?"
+authors = "TrendForce News"
+year = 2025
+url = "https://www.trendforce.com/news/2025/06/05/insights-chinas-eda-self-sufficiency-tops-10-in-2024-will-u-s-crackdown-boost-or-block-its-chip-push"
+opened = "2026-11-27"
+
+[source.sharwood2025eda]
+type = "news"
+title = "Gone in 40 days: US drops ban on export of chip design tools to China"
+authors = "Simon Sharwood (The Register)"
+year = 2025
+url = "https://www.theregister.com/2025/07/03/us_eda_export_ban_lifted/"
+opened = "2026-11-27"
+
+[source.sharwood2025riscv]
+type = "news"
+title = "As Alibaba launches server-grade RISC-V CPU, Beijing throws its weight behind ISA"
+authors = "Simon Sharwood (The Register)"
+year = 2025
+url = "https://www.theregister.com/2025/03/05/china_alibaba_risc_v/"
+opened = "2026-11-27"
+
+[source.pan2025riscv]
+type = "news"
+title = "Exclusive: China to publish policy to boost RISC-V chip use nationwide, sources say"
+authors = "Che Pan and Brenda Goh (Reuters, via ThePrint)"
+year = 2025
+url = "https://theprint.in/tech/exclusive-china-to-publish-policy-to-boost-risc-v-chip-use-nationwide-sources/2530352"
+opened = "2026-11-27"

@@ -1,0 +1,7 @@
+id,quantity,value,unit,source,where,note
+oc-window-start,first day of the analysis window,2026-01-01,date,edwards2026openclosed,"Analysis, first paragraph: 'January 1, 2026, through May 28, 2026'",
+oc-window-end,last day of the analysis window,2026-05-28,date,edwards2026openclosed,"Analysis, first paragraph: 'January 1, 2026, through May 28, 2026'",
+oc-lag-strict,average open-closed lag when the open model's point estimate must be strictly higher than the closed model's,6,months,edwards2026openclosed,"Analysis, second paragraph: 'would grow to six months'",The headline four months needs Epoch's paired bootstrap samples, which the page does not publish; this figure needs only point estimates.
+oc-gap-eci,average ECI gap between the absolute and the open-weight state of the art over the window,8,ECI points,edwards2026openclosed,"Analysis, third paragraph: 'average ECI gap of 8 points'",
+oc-gap-eci-lo,"average ECI gap, lower end of Epoch's 90% confidence interval",7,ECI points,edwards2026openclosed,"Analysis, third paragraph: '90% confidence interval of 7 to 11 units'",
+oc-gap-eci-hi,"average ECI gap, upper end of Epoch's 90% confidence interval",11,ECI points,edwards2026openclosed,"Analysis, third paragraph: '90% confidence interval of 7 to 11 units'",

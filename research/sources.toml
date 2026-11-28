@@ -1178,6 +1178,15 @@ url = "https://www.opcw.org/fileadmin/OPCW/CWC/CWC_en.pdf"
 opened = "2026-11-27"
 found_in = "research/notes/08-arms-control.md"
 
+[source.cybench2024repo]
+type = "code"
+title = "Cybench repository: the 40-task list and the first-solve times of the original competitions"
+authors = "Andy K. Zhang, et al."
+year = 2024
+url = "https://github.com/andyzorigin/cybench"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e21_team_battery.sources.toml"
+
 [source.danzig2012aum]
 type = "report"
 title = "Aum Shinrikyo: Insights Into How Terrorists Develop Biological and Chemical Weapons (second edition)"
@@ -1546,6 +1555,15 @@ url = "https://epoch.ai/benchmarks/use-this-data"
 opened = "2026-11-27"
 found_in = "research/notes/03-algorithms.md"
 
+[source.epoch2026chipcomponents]
+type = "dataset"
+title = "Data on AI chip components"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/data/ai-chip-components"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e22_supply_envelope.sources.toml"
+
 [source.epoch2026chipsales]
 type = "dataset"
 title = "Data on AI chip sales"
@@ -1646,6 +1664,24 @@ url = "https://www.forethought.org/research/will-ai-r-and-d-automation-cause-a-s
 opened = "2026-11-27"
 found_in = "research/notes/04-dynamics.md"
 
+[source.eto2022chipexplorer]
+type = "dataset"
+title = "ETO Advanced Semiconductor Supply Chain Dataset (Chip Explorer), release of 19 December 2022"
+authors = "Emerging Technology Observatory, Center for Security and Emerging Technology (data from Khan, Mann and Peterson 2021, company profiles annotated in 2022); CC BY-NC 4.0"
+year = 2022
+url = "https://github.com/georgetown-cset/eto-chip-explorer/tree/3f0b236c2368e80d078edc2eae8570738df32974/data"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
+[source.eto2026chipexplorer]
+type = "dataset"
+title = "ETO Advanced Semiconductor Supply Chain Dataset (Chip Explorer), August 2026 update with 2025 market shares from TechInsights data"
+authors = "Emerging Technology Observatory, Center for Security and Emerging Technology; CC BY-NC 4.0"
+year = 2026
+url = "https://github.com/georgetown-cset/eto-chip-explorer/tree/9a4e1b128c836cb3bdf065a06a3fc03397e00ff0/data"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
 [source.eu-ai-act-2024]
 type = "legislation"
 title = "Regulation (EU) 2024/1689 (Artificial Intelligence Act), Articles 51 and 52 and Annex XIII"
@@ -1727,6 +1763,15 @@ url = "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/
 opened = "2026-11-27"
 found_in = "research/verification/l1-prior-art-c1-c6.md"
 
+[source.feldgoise2025offensive]
+type = "report"
+title = "Inside Beijing's Chipmaking Offensive"
+authors = "Jacob Feldgoise, Hanna Dohmen (CSET)"
+year = 2025
+url = "https://cset.georgetown.edu/article/inside-beijings-chipmaking-offensive/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
 [source.feldgoise2026tracking]
 type = "report"
 title = "Tracking AI Chips: Assessing Location Verification as an Export Control Enforcement Tool"
@@ -1781,6 +1826,15 @@ year = 2026
 url = "https://forecastbench.org/leaderboards/"
 opened = "2026-11-27"
 found_in = "research/notes/05-cognition.md"
+
+[source.forecastbench2026datasets]
+type = "dataset"
+title = "ForecastBench datasets: tournament and baseline leaderboards, parity dates"
+authors = "Forecasting Research Institute"
+year = 2026
+url = "https://github.com/forecastingresearch/forecastbench-datasets"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e21_team_battery.sources.toml"
 
 [source.fourati2025coherence]
 type = "preprint"
@@ -2872,6 +2926,15 @@ arxiv = "2508.00943"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
 
+[source.liang2024cowos]
+type = "news"
+title = "Chinese manufacturers to benefit from CoWoS-like structures and TSMC order surplus"
+authors = "Amanda Liang (DIGITIMES)"
+year = 2024
+url = "https://www.digitimes.com/news/a20240702PD207.html"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
 [source.liang2025illusion]
 type = "preprint"
 title = "The SWE-Bench Illusion: When State-of-the-Art LLMs Remember Instead of Reason"
@@ -3141,6 +3204,15 @@ year = 2024
 url = "https://metr.org/blog/2024-03-15-guidelines-for-capability-elicitation/"
 opened = "2026-11-27"
 found_in = "research/notes/10-gameable-evals.md"
+
+[source.metr2026evalanalysis]
+type = "dataset"
+title = "eval-analysis-public: run data behind METR's time-horizon reports (Time Horizon 1.0 and 1.1 runs.jsonl, model release dates)"
+authors = "METR"
+year = 2026
+url = "https://github.com/METR/eval-analysis-public"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e21_team_battery.sources.toml"
 
 [source.metr2026expenditure]
 type = "report"
@@ -3470,6 +3542,15 @@ opened = "2026-11-27"
 found_in = "research/notes/04-dynamics.md, research/notes/01-definitions.md"
 aliases = ["openai-preparedness-v2-2025"]
 
+[source.openai2026mlebenchruns]
+type = "dataset"
+title = "MLE-bench repository: leaderboard, run-group map and per-competition grading reports"
+authors = "OpenAI"
+year = 2026
+url = "https://github.com/openai/mle-bench"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e21_team_battery.sources.toml"
+
 [source.openaicharter]
 type = "vendor"
 title = "OpenAI Charter"
@@ -3533,6 +3614,15 @@ arxiv = "2401.04757"
 opened = "2026-11-27"
 found_in = "research/notes/03-algorithms.md"
 
+[source.owid2022energy]
+type = "dataset"
+title = "Our World in Data energy dataset (owid-energy-data.csv), release of 30 December 2022"
+authors = "Our World in Data (electricity data from Ember and the Energy Institute); CC BY 4.0"
+year = 2022
+url = "https://github.com/owid/energy-data/blob/555c997c491d31ef98e2fb4a47684a700af268ea/owid-energy-data.csv"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
 [source.ozkutuk2023multipath]
 type = "report"
 title = "Vulnerability Assessment of a Physical Protection System Design Using a Multi Path Analysis and Moving Critical Detection Points"
@@ -3550,6 +3640,15 @@ year = 2024
 arxiv = "2412.12140"
 opened = "2026-11-27"
 found_in = "research/notes/04-dynamics.md"
+
+[source.pan2025riscv]
+type = "news"
+title = "Exclusive: China to publish policy to boost RISC-V chip use nationwide, sources say"
+authors = "Che Pan and Brenda Goh (Reuters, via ThePrint)"
+year = 2025
+url = "https://theprint.in/tech/exclusive-china-to-publish-policy-to-boost-risc-v-chip-use-nationwide-sources/2530352"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
 
 [source.pan2025selfrep]
 type = "preprint"
@@ -4000,6 +4099,15 @@ url = "https://www.sec.gov/files/fy25-annual-whistleblower-report.pdf"
 opened = "2026-11-27"
 found_in = "research/notes/09-mechanism-design.md"
 
+[source.semi2025billings]
+type = "report"
+title = "Global Semiconductor Equipment Billings Surged to $117 Billion in 2024, SEMI Reports"
+authors = "SEMI (press release via PR Newswire, 9 April 2025)"
+year = 2025
+url = "https://www.prnewswire.com/in/news-releases/global-semiconductor-equipment-billings-surged-to-117-billion-in-2024-semi-reports-302423933.html"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
 [source.seoul-commitments-2024]
 type = "official-docs"
 title = "Frontier AI Safety Commitments, AI Seoul Summit 2024"
@@ -4046,6 +4154,24 @@ url = "https://epoch.ai/gradient-updates/how-far-can-decentralized-training-over
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md, research/notes/02-physics.md"
 aliases = ["sevilla2025-decentralized"]
+
+[source.sharwood2025eda]
+type = "news"
+title = "Gone in 40 days: US drops ban on export of chip design tools to China"
+authors = "Simon Sharwood (The Register)"
+year = 2025
+url = "https://www.theregister.com/2025/07/03/us_eda_export_ban_lifted/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
+[source.sharwood2025riscv]
+type = "news"
+title = "As Alibaba launches server-grade RISC-V CPU, Beijing throws its weight behind ISA"
+authors = "Simon Sharwood (The Register)"
+year = 2025
+url = "https://www.theregister.com/2025/03/05/china_alibaba_risc_v/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
 
 [source.shavit2023chinchilla]
 type = "preprint"
@@ -4406,6 +4532,42 @@ arxiv = "2601.03315"
 opened = "2026-11-27"
 found_in = "research/notes/04-dynamics.md"
 
+[source.trendforce2023hbm]
+type = "report"
+title = "HBM Supply Leader SK Hynix's Market Share to Exceed 50% in 2023 Due to Demand for AI Servers, Says TrendForce"
+authors = "TrendForce"
+year = 2023
+url = "https://www.trendforce.com/presscenter/news/20230418-11647.html"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
+[source.trendforce2024duv]
+type = "news"
+title = "Updated: Rumored China's DUV Breakthrough - Now Capable of Producing 8-Nanometer Chips"
+authors = "TrendForce News"
+year = 2024
+url = "https://www.trendforce.com/news/2024/09/16/news-chinas-duv-breakthrough-capable-of-producing-8-nanometer-chips/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
+[source.trendforce2024packaging]
+type = "news"
+title = "Two Major Chinese Firms Launch Billion-Dollar Advanced Packaging Projects: How Are Global Giants Progressing?"
+authors = "TrendForce News"
+year = 2024
+url = "https://www.trendforce.com/news/2024/09/26/news-two-major-chinese-firms-launch-billion-dollar-advanced-packaging-projects-how-are-global-giants-progressing/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
+[source.trendforce2025eda]
+type = "news"
+title = "China's EDA Self-Sufficiency Tops 10% in 2024: Will U.S. Crackdown Boost or Block Its Chip Push?"
+authors = "TrendForce News"
+year = 2025
+url = "https://www.trendforce.com/news/2025/06/05/insights-chinas-eda-self-sufficiency-tops-10-in-2024-will-u-s-crackdown-boost-or-block-its-chip-push"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
+
 [source.trendforce2026cowos]
 type = "news"
 title = "TSMC CoWoS Supply-Demand Gap Reportedly Seen Narrowing from 20% to 10% by End-2026 as Capacity Expands"
@@ -4414,6 +4576,15 @@ year = 2026
 url = "https://www.trendforce.com/news/2026/06/15/news-tsmc-cowos-supply-demand-gap-reportedly-seen-narrowing-from-20-to-10-by-end-2026-as-capacity-expands"
 opened = "2026-11-27"
 found_in = "research/notes/06-economics.md"
+
+[source.trendforce2026equipment]
+type = "news"
+title = "China's Domestic Chip Equipment Adoption Beats 2025 Target at 35%, Led by NAURA, AMEC"
+authors = "TrendForce News"
+year = 2026
+url = "https://www.trendforce.com/news/2026/01/12/news-chinas-domestic-chip-equipment-adoption-beats-2025-target-at-35/"
+opened = "2026-11-27"
+found_in = "tools/exp/data/e23_durability.sources.toml"
 
 [source.trendforce2026foundry]
 type = "report"

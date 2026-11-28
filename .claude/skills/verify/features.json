@@ -163,6 +163,38 @@
       "tests": []
     },
     {
+      "id": "cli:e18-cap-leak",
+      "kind": "cli",
+      "entry": "tools/exp/e18_cap_leak.py",
+      "reach": ".venv/bin/python tools/exp/e18_cap_leak.py (E18)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:e21-team-battery",
+      "kind": "cli",
+      "entry": "tools/exp/e21_team_battery.py",
+      "reach": ".venv/bin/python tools/exp/e21_team_battery.py (E21)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:e22-supply-envelope",
+      "kind": "cli",
+      "entry": "tools/exp/e22_supply_envelope.py",
+      "reach": ".venv/bin/python tools/exp/e22_supply_envelope.py (E22)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
+      "id": "cli:e23-durability",
+      "kind": "cli",
+      "entry": "tools/exp/e23_durability.py",
+      "reach": ".venv/bin/python tools/exp/e23_durability.py (E23)",
+      "area": "experiments",
+      "tests": []
+    },
+    {
       "id": "cli:e24-response-latency",
       "kind": "cli",
       "entry": "tools/exp/e24_response_latency.py",

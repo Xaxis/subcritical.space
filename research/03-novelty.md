@@ -56,10 +56,10 @@ one small lemma, listed at the end with the claim that carries each.
 | F3 Narrow against general | none stated | extends prior work | [@morris2023levels]; [@genewein2026agiasi]; [@novikov2025alphaevolve] | nothing on its own: D4's line (C1) replaces it as the line, its parts merged into C10 and C11 |
 | O1 Supply of inputs | none stated | prior work | [@sevilla2024scaling2030]; [@khan2021supplychain]; [@varadarajan2024resilience] | nothing of substance |
 | O2 Race dynamics | prior work | prior work | [@armstrong2016racing]; [@emeryxu2024uncertainty]; [@fudenberg2026cooperating] | a race model with the regime's detection time inside it, built in E6 as a tool; the candidate that compliance-only disclosure does not raise risk is cut by E6 |
-| O3 Chokepoints | none stated | prior work | [@sastry2024compute]; [@scher2025agreement]; [@khan2020aichips] | ranking stages by durability; denial-induced footprint growth as a detection gain |
-| D1 Superintelligence against the best organisation | extends | extends prior work | [@robinson2026horizons]; [@wijk2024rebench]; [@genewein2026agiasi]; [@anthropic2026rsp] | as a definition: time and money matched together against an organisation, the alpha fraction, a censored t* (C10) |
+| O3 Chokepoints | none stated | prior work | [@sastry2024compute]; [@scher2025agreement]; [@khan2020aichips] | denial-induced footprint growth as a detection gain; ranking stages by durability is unsupported and undecidable (E23) |
+| D1 Superintelligence against the best organisation | extends | extends prior work | [@robinson2026horizons]; [@wijk2024rebench]; [@genewein2026agiasi]; [@anthropic2026rsp] | as a definition: time and money matched together against an organisation, the alpha fraction, a censored t* that stops at each battery's ceiling (C10) |
 | D2 Loop gain | condition prior work; the estimator may be new | extends prior work, narrowly | [@srikanth2026aide2]; [@blumberg2020supercritical]; [@cunningham2026rsi]; [@burtsev2026criticality] | the exact round identity as the estimator of K, and the budget ladder, as a measurement design only: its estimator fails at calibrated noise (C4) |
-| D3 Breakout time | extends | extends prior work, as a combination | [@fithian2026hardwired]; [@gan2026clock]; [@pistillo2025loopholes]; [@villalobos2023tradeoff] | one per-path expression from verified holdings with a measured loop-gain term, if it beats one multiplier or backtests (C2(b), (c)); tabulating it in advance with an interval is cut, the drift rate being unidentified (C2(a)) |
+| D3 Breakout time | extends | extends prior work, as a combination | [@fithian2026hardwired]; [@gan2026clock]; [@pistillo2025loopholes]; [@villalobos2023tradeoff] | nothing: an accounting frame credited to prior work, since tabulating it in advance is cut (C2(a)), its backtest is cut (C2(c), E18 against) and its gain over one multiplier is not shown (C2(b)) |
 | D4 Weapons-grade line | new | prior work | [@snell2007itc20]; [@hafemeister2008ctbt]; [@gan2026clock]; [@fithian2026hardwired] | applied to AI holdings; the margin as a multiplicative error budget, a small lemma (C1) |
 | D5 Elicited capability | extends | extends prior work | [@fda2007diagnostic]; [@greenblatt2024password]; [@abubaker2026fuzzing]; [@taylor2025auditinggames] | rates per named budget over a defined organism population, as a multi-party rule, against non-adaptive hiding (C5) |
 | D6 Closure | may be new, or only framing | extends prior work, narrowly; framing until tested | [@aghion2017ai]; [@burtsev2026criticality]; [@miotti2025narrowpath] | closure input by input against verifiable gates, the gain predicted from one gate at a time (C11) |
@@ -552,7 +552,13 @@ detection of data centres by their cooling plant [@epoch2025datacentershub].
 
 **What remains.** (a) Ranking stages by durability, using measured growth rates and evidence of
 erosion. (b) Treating denial-induced growth in footprint [@cottier2026horinger] as a detection gain,
-quantified against P4's floor. Track 06 did not find either done quantitatively.
+quantified against P4's floor. Track 06 did not find either done quantitatively. E23 then tested (a)
+and found it unsupported: a ranking made on data public at the end of 2022 orders the erosion of
+2023 to 2026 no better than chance (Spearman's rho [0.28](numbers.md#e23-rho), one-sided p
+[0.23](numbers.md#e23-p)). No version of the test can decide: a rank test would need
+[85 stages](numbers.md#e23-n-needed), and the 2022 dataset lists
+[79 inputs](numbers.md#e23-eto-inputs-2022), nested and correlated, so far fewer independent stages.
+(a) is not ours to claim, and the claims file keeps it cut.
 
 **Design consequence.** Chokepoints leak at the edges faster than they erode at the core: diversion
 [@juniewicz2026smuggling], a large bank of foreign-made dies despite a listing meant to cut the buyer
@@ -614,8 +620,11 @@ and money) between the system and the human organisation as part of a definition
 superintelligence, (b) runs that comparison on a refreshed held-out battery with published
 institutional baselines across several decisive clusters, or (c) uses an alpha fraction of clusters.
 The RSP comes closest on (a), for one cluster. Combining refresh with institutional baselines was
-not found. Level 1 kept (a) to (c) and one more: t* defined at equal compute and money as the largest
-tested crossing, censored and never extrapolated. Tracking a human-AI crossover is not ours.
+not found. Level 1 kept (a) to (c) and one more: t* defined at equal compute and money as the
+largest tested crossing, censored and never extrapolated. Tracking a human-AI crossover is not ours.
+Level 3 (E21) found t* rising with release date but stopped by each battery's ceiling, and no
+battery with an organisation's baseline, so what remains is a definition whose t* lasts only as long
+as its battery's baselines (C10).
 
 **Design consequence.** Prior work forces three choices on D1. Say whether the organisation may use
 AI; [@genewein2026agiasi] freezes its technology because otherwise the baseline moves. State the time
@@ -775,9 +784,12 @@ once C4's estimator passes level 3 (it fails today), and the split between leaks
 and leaks it does not. Level 3 then cut the interval tabulated in advance: E1 finds the drift rate
 not identified on public data, from [2.6](numbers.md#e1-algo-annual-subset-min) to
 [1,512](numbers.md#e1-algo-annual-subset-max) a year across samples, so the expression stays as an
-accounting frame credited to prior work. Whether it adds anything rests on two untested claims, that
-it differs from a single-multiplier breakout time by more than either's interval and that it
-backtests
+accounting frame credited to prior work. Whether it added anything rested on two claims, that it
+differs from a single-multiplier breakout time by more than either's interval and that it backtests.
+E18 is against the backtest, so it is cut: the leak comes in jumps that no constant rate follows,
+after a follower's delay the expression lacks. And it separates from one multiplier only at
+headrooms where a cap already fails the line, arithmetic on Part I's ranges. So C2 is downgraded to
+an accounting frame and claims nothing
 ([C2](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case)).
 
 **Design consequence.** Efficiency may depend on scale and on the reference algorithm
@@ -1436,12 +1448,12 @@ right.
 
 Little survives of what the memo hoped, and level 1 took more. No candidate is new. After the survey
 the memo's three strongest ideas (D4 with D3, D2, D5) survived only as narrow extensions. After
-level 1, D4 is an application of nuclear physical protection, D3 a combination of known terms, and
-D2 an estimator that the red team failed as a trigger and E4 failed as a measurement at calibrated
-noise, leaving a measurement design. Of the protocol parts the memo called strongest, the compute
-chokepoint, expiring licences, the height clock and sealed declarations are prior work, assembled
-here. Y3, the treaty rule built on it, and the criticality metaphor behind the project's name are
-prior work. That is the finding.
+level 1, D4 is an application of nuclear physical protection, D3 a combination of known terms, which
+level 3 then left an accounting frame, and D2 an estimator that the red team failed as a trigger and
+E4 failed as a measurement at calibrated noise, leaving a measurement design. Of the protocol parts
+the memo called strongest, the compute chokepoint, expiring licences, the height clock and sealed
+declarations are prior work, assembled here. Y3, the treaty rule built on it, and the criticality
+metaphor behind the project's name are prior work. That is the finding.
 
 What remains possibly ours is listed below, each with the claim that carries it in
 [the claims file](04-claims.md#summary), where its test and its results so far are recorded. Every
@@ -1450,11 +1462,10 @@ item must still pass L5 and L6.
 1. **D4's margin as an error budget** (C1(b)): a margin m covers multiplicative errors in the
    breakout and response times whenever e_b * e_r <= m, for any continuous detection hazard. A small
    lemma, likely already in the structural safety-factor literature.
-2. **D3 as one per-path expression** (C2): breakout time from verified holdings, with a loop-gain
-   term measured once C4's estimator passes level 3, and assumed until then. A combination; it adds
-   something only if it differs from a single multiplier by more than either's interval or
-   backtests. Tabulating it in advance with an interval is cut, since E1 cannot identify the drift
-   rate.
+2. **D3 as one per-path expression** (C2), downgraded to an accounting frame: breakout time from
+   verified holdings, a combination credited to prior work. Tabulating it in advance is cut, since
+   E1 cannot identify the drift rate; the backtest is cut (E18 against), and its gain over one
+   multiplier shows only where a cap already fails the line. No longer a candidate.
 3. **D2's estimator** (C4), downgraded to a measurement design: the exact round identity as the
    estimator of the loop gain for a staged AI research loop, and the budget ladder. The identity is
    proved, but at the only data-calibrated noise every estimator tried under-covers and is biased
@@ -1466,7 +1477,8 @@ item must still pass L5 and L6.
 6. **P4's floor as a bound** (C8): at the lowest precision and full utilisation, with each channel's
    margin and the year it crosses one.
 7. **D1's combination** (C10): time and money matched together against an organisation, the alpha
-   fraction and a censored crossover budget. A definition only.
+   fraction and a censored crossover budget. A definition only, and E21 finds t* stopped by each
+   battery's ceiling.
 8. **D6 by input** (C11): closure measured one gate at a time, predicting the gain under any set of
    gates. Framing until an experiment shows it.
 9. **The pathway order** (C12): a judgement, with [12](numbers.md#claim-c12-pareto-two) pairs fixed by

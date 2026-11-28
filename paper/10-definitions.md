@@ -27,9 +27,9 @@ Table: The six definitions, their labels after the prior-art search, and the cla
 
 | Definition | What it measures | Label | Claim and standing |
 |---|---|---|---|
-| D1 the endpoint | Clusters won against a named organisation at matched time and money | Extends prior work, narrowly | C10: downgraded to a definition |
+| D1 the endpoint | Clusters won against a named organisation at matched time and money | Extends prior work, narrowly | C10: downgraded to a definition, (c) narrowed |
 | D2 loop gain | The gain K of a research loop at fixed inputs | Extends prior work, narrowly, for the estimator | C4: downgraded to a measurement design; the trigger cut |
-| D3 breakout time | Years to reach the agreed effective compute, per path | Extends prior work, as a combination | C2: candidate; (a) cut, (b) and (c) untested |
+| D3 breakout time | Years to reach the agreed effective compute, per path | A combination of prior work | C2: downgraded to an accounting frame; (a) cut |
 | D4 the line | T_b(p) < m * T_r(p) on some path | Prior work, applied | C1: application; (c) cut |
 | D5 elicited capability | Score after a named elicitation, with miss and false-alarm rates | Extends prior work | C5: candidate, against non-adaptive hiding only |
 | D6 closure | Share of each input obtained without a logged human-held gate | Extends prior work, narrowly | C11: downgraded to framing until tested |
@@ -54,10 +54,17 @@ if S wins at every budget tested, and never extrapolated.
 **Measurement and test.** Only an evaluator with access to S and a held-out battery can measure D1,
 on elicited capability (D5). The test scores public models along a capability ladder at matched time
 and money; D1 passes if changing the organisation within its class does not flip the verdict and the
-fraction won rises smoothly with effective compute. Public data cannot run it: E1 found
-[5 clusters](../research/numbers.md#e1-clusters-baselined) with any human comparison and
-[3 clusters](../research/numbers.md#e1-clusters-verdict) with a bar a model wins or loses, none of
-them an organisation at matched budget, so the baselines must be built first.
+fraction won rises smoothly with effective compute. Public data cannot run it against an
+organisation. E21 ran its public part in the [3 clusters](../research/numbers.md#e21-clusters) with a
+public human comparison, against single experts, contest entrants and forecaster teams, none an
+institution. Even there the verdict is not stable within one class of comparison: on MLE-bench the
+best entry beats the median entrant in [71.1%](../research/numbers.md#e21-mle-median-best) of competitions
+and the gold-threshold entrant in [25.8%](../research/numbers.md#e21-mle-gold-best), and the verdict flips
+on [45.3%](../research/numbers.md#e21-mle-flip-best) of them, the pass condition's refuter, met on contest
+entrants (C10(b)). And t* rises only while a battery's baselines last: RE-Bench is censored above
+[32.0 h](../research/numbers.md#e21-rebench-tstar-best) at its ceiling, and Cybench cannot measure t* above
+[24.9 h](../research/numbers.md#e21-cyber-ceiling-h). Institutional baselines must still be built; E21's
+live part, which needs organisers' consent, has not run.
 
 **Label.** Extends prior work, narrowly. Comparison with organisations, copies and speed, matched
 wall-clock time and matched cost are prior work [@genewein2026agiasi; @ngo2023tagi;
@@ -65,7 +72,7 @@ wall-clock time and matched cost are prior work [@genewein2026agiasi; @ngo2023ta
 [@wijk2024rebench; @robinson2026horizons]. Not found: time and money matched together inside a
 definition, on a refreshed, regime-held battery with institutional baselines across several
 clusters, with an alpha fraction and a censored t*. The red team reduced this claim (C10) to a
-definition. D1 holds only once a system already beats an institution, so it cannot warn. It is what
+definition, and E21 withdrew its part (c), that t* rises without saturating. D1 holds only once a system already beats an institution, so it cannot warn. It is what
 breakout time measures the distance to, not a trigger.
 
 ## D2. Loop gain
@@ -77,12 +84,10 @@ so a threshold on it below 1 would in time fire on every such loop (Part III). D
 the loop's gain in the dynamical perspective's growth law, which exceeds 1 exactly when the loop
 compounds with the human-held inputs fixed. An exact round identity relates consecutive gains to the
 returns exponent; repeating the run at one, two and four times the agent budget, the budget ladder,
-estimates the return to input; K follows from the two. Scoring each round on two independent
-held-out sets was meant to remove the bias one noisy set puts toward a loop below 1, and E4 found
-that it does not: where the noise is error in measuring a round's gain, a second set turns a median
-estimate of [0.57](../research/numbers.md#e4-diff-bias-meas1) times the true return into one of
-[8.11](../research/numbers.md#e4-diff-bias-meas2) times it, and where the noise is real variation, a
-second set cannot help.
+estimates the return to input; K follows from the two. A second held-out set per round was meant
+to remove the bias one noisy set puts toward a loop below 1; E4 found that where the noise is
+measurement error it turns a median estimate of [0.57](../research/numbers.md#e4-diff-bias-meas1) times the true return into one of
+[8.11](../research/numbers.md#e4-diff-bias-meas2) times it, and against real variation it cannot help.
 
 **Measurement and test.** Staged runs at fixed inputs on declared checkpoints, which a regime
 evaluator can run on a public harness [@zhao2025speedrun], with the agent elicited because it can
@@ -90,13 +95,10 @@ sandbag [@gasteiger2025subtlesandbag]. E4's final simulation ran, at the only no
 calibrated to data, the rule that restricts while the upper bound on K exceeds a placeholder margin
 of [0.90](../research/numbers.md#e4-gstar). With the loop at the corrected median return, well below
 1, it fired in [88%](../research/numbers.md#e4-k-fa-n5) of runs after 5 rounds at each of three
-budgets and [80%](../research/numbers.md#e4-k-fa-nmax) after 50. It fired only
-[2%](../research/numbers.md#e4-k-fire-gap-n5) more often on a loop at the corrected 95th percentile,
-and the same rule on the return alone only [3%](../research/numbers.md#e4-fire-gap-n5) more, both
-within Monte Carlo error: the rule cannot tell the two loops apart, so the trigger is cut for both.
-The historical fit is withdrawn too: in the speedrun record, stock and input correlate at
-[0.98](../research/numbers.md#e4-sr-collinearity) and placebo inputs also return a value, so its
-return is not identified. The deciding test, a real staged run that measures a round's noise, has not
+budgets, and only [2%](../research/numbers.md#e4-k-fire-gap-n5) more often on a loop at the corrected 95th
+percentile, within Monte Carlo error: the rule cannot tell the two loops apart, so the trigger is cut.
+The historical fit is withdrawn too: in the speedrun record stock and input correlate at
+[0.98](../research/numbers.md#e4-sr-collinearity), so its return is not identified. The deciding test, a real staged run that measures a round's noise, has not
 been made. D2 stays a measurement design if the interval on K always spans 1 over the affordable
 number of rounds.
 
@@ -131,16 +133,26 @@ identify the drift rate of efficiency on public data: across samples it ran from
 [1,512](../research/numbers.md#e1-algo-annual-subset-max) a year. Tabulating T_b in advance with an
 interval, C2(a), is therefore cut, and the expression stays an accounting frame. The weakest input is
 C*: one OOM of it moves T_b by [2.3 years](../research/numbers.md#comp-years-per-oom-ho), more than
-Part II's illustrative line of [2.0 years](../research/numbers.md#prot-line-declared). Two tests are
-unrun: whether the per-path expression differs from a breakout time with a single efficiency
-multiplier by more than either's interval (C2(b)), and whether it backtests (C2(c)).
+Part II's illustrative line of [2.0 years](../research/numbers.md#prot-line-declared). E18 ran the two
+remaining tests. Whether the per-path expression differs from a single efficiency multiplier by more
+than either's interval (C2(b)) is not shown: in all [8 cases](../research/numbers.md#e18-b-sep-fails-line)
+of holding class and rate range the two separate only where the cap already fails the line, and
+that is arithmetic on Part I's ranges, not a measurement. The backtest (C2(c)) cuts against it: the
+leak came in jumps, with catch-ups implying yearly rates from [1.91](../research/numbers.md#e18-bt-gamma-lo)
+to [1,125](../research/numbers.md#e18-bt-gamma-hi), which no constant rate follows, and at zero headroom
+the expression predicts no delay, yet matches took [0.48 years](../research/numbers.md#e18-bt-h0-lo) to
+[1.52 years](../research/numbers.md#e18-bt-h0-hi). The open-closed lag, the stated target, cannot be
+predicted on public data at all: on [0 days](../research/numbers.md#e18-oc-evaluable-days) of Epoch's
+window do both models have a public compute estimate.
 
-**Label.** Extends prior work, as a combination. Breakout time is arms-control vocabulary, with
+**Label.** A combination of prior work, downgraded to an accounting frame that claims nothing.
+Breakout time is arms-control vocabulary, with
 training as the analogue of enrichment [@sastry2024compute]. It is defined for AI
 [@barnett2025governance], computed from compute holdings [@miotti2025narrowpath;
 @fithian2026hardwired] and from a calibrated model [@gan2026clock]; additive accounting of
 post-training, inference and distillation is in [@pistillo2025loopholes], and the span a cheap
-verifier opens in [@villalobos2023tradeoff]. Each term is prior; their combination was not found.
+verifier opens in [@villalobos2023tradeoff]. Each term is prior, and the expression stays as the
+protocol's accounting.
 
 ## D4. Weapons-grade: the line
 
@@ -171,11 +183,8 @@ path that minimises detection [@baker2025verifying]. E5 puts T_d on undeclared p
 [32 years](../research/numbers.md#e5-td-pool-years), against
 [39.0 days](../research/numbers.md#e5-td-declared-days), a design figure, on the declared path; cloud
 and distillation have no measured channel. In E24, [25%](../research/numbers.md#e24-halt-share-never)
-of [8 findings](../research/numbers.md#e24-halt-findings) made while a party was in its treaty were
-never followed by a halt, and halts took a median of
-[1.2 years](../research/numbers.md#e24-halt-km-median-years) against the violator's fastest exit of
-[31 days](../research/numbers.md#e24-exit-min-days); the response time has no finite 95th
-percentile. The claim to compute T_r per path from drilled latencies, C1(c), is cut: a halt waits on
+of findings made while a party was in its treaty were never followed by a halt, so the response time
+has no finite 95th percentile. The claim to compute T_r per path from drilled latencies, C1(c), is cut: a halt waits on
 a finding by a quorum of rival states, a political decision no drill measures.
 
 **Evidence.** The nuclear precedent is weaker than it is often said to be. The IAEA's timeliness
@@ -186,8 +195,7 @@ goals equal or exceed conversion times, so the implied margin runs from
 deterrence: in Gan's illustrative calibration, holding breakout success to
 [5%](../research/numbers.md#def-prevent-beta) needs [7.8](../research/numbers.md#def-gan-prevent-multiple)
 times the monitoring that deters [@gan2026clock]. This design takes prevention near the line, because
-the endpoint is irreversible. Agreement on T_b matters as much, since a disputed threshold destroyed
-cooperation in [@barrett2012climate]. E6 has reproduced the published games, but its treatment with
+the endpoint is irreversible. E6 has reproduced the published games, but its treatment with
 T_b drawn from an interval, which tests whether the line keeps compliance an equilibrium, is still to
 come.
 
@@ -219,9 +227,8 @@ against hardened ones they do not. A tamper-resistant organism recalled
 [@finke2026robustorganisms], and elicitation lifted benign models by about
 [10 points](../research/numbers.md#def-audit-benign-uplift) [@taylor2025auditinggames]. Above expert
 level demonstrations do not exist, so the guarantee weakens as capability nears D1. The test, E3,
-builds password-locked, RL-locked and tamper-resistant organisms on small open models with benign
-controls, by builders blind to E, scores adaptive organisms built with E in hand apart, and reports
-both rates per budget. It has not run. D5 fails if no affordable budget brings both rates below stated
+builds locked and tamper-resistant organisms on small open models, with benign controls, blind to E,
+and reports both rates per budget; it has not run. D5 fails if no affordable budget brings both rates below stated
 targets on RL-locked organisms, since naive locks alone are prior work; it is expected to fail on
 tamper-resistant and adaptive ones, which fall outside its guarantee. Beyond its range the protocol
 falls back on compute, which E1 shows can misplace a system by
@@ -244,8 +251,7 @@ licence renewal and cloud know-your-customer checks for compute, declared weight
 logs for data, human approval of training launches and merges, and know-your-customer checks on
 payment rails. Transfer of research advances between parties is one more input with its own gate,
 and a narrow system whose outputs feed a covered system's training, code or compute counts as part of
-it. Gates count the agent's completed horizon-length tasks, not hours, since a time horizon is
-measured in human time [@kwa2025horizon]. D6 decomposes Burtsev's operational closure input by input
+it. D6 decomposes Burtsev's operational closure input by input
 [@burtsev2026criticality]. In the loop's exponent the closures add, weighted by the inputs' shares,
 as in the task-based model of automation [@aghion2017ai] (Part III): under complements the
 least-closed input comes to set the gain, under substitutes the most-closed.
@@ -254,8 +260,8 @@ least-closed input comes to set the gain, under substitutes the most-closed.
 seed requests that a working gate must refuse. Gates on compute and money can be checked against
 records; gates on research labour rest on a developer's self-report [@anthropic2026pace]. The gates
 that exist hold for now: success on simplified self-replication tasks rose from under
-[5%](../research/numbers.md#def-replibench-2023) to over
-[60%](../research/numbers.md#def-replibench-2025) between 2023 and 2025 [@aisi2025trends], while
+[5%](../research/numbers.md#dyn-aisi-rep-2023) to over
+[60%](../research/numbers.md#dyn-aisi-rep-2025) between 2023 and 2025 [@aisi2025trends], while
 models still fail at identity checks [@black2025replibench]. The test, E4(d), gates each input in
 turn inside a staged run and measures the gain transmitted with the gate on and off. D6 passes if the
 gain with gates on any subset is predicted from closures measured one gate at a time; if not, closure

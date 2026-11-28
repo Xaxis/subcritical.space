@@ -1,0 +1,15 @@
+id,value,unit,basis,source,where,note
+semi-ascend-2024,507000,Ascend units,analyst estimate,patel2025ascend,section Huawei Production Numbers and SMIC's Ramp,"'507k Ascend units shipped in 2024, the majority of which are 910Bs'"
+semi-910c-2025,653000,Ascend 910C units,analyst estimate,patel2025ascend,section Huawei Production Numbers and SMIC's Ramp,"'805k this year, 653k of those being 910C' (the 805k is org-huawei-semianalysis-2025 in the ledger)"
+semi-cxmt-910c-low,250000,Ascend 910C packages,analyst estimate,patel2025ascend,section CXMT Production Forecast,"'~2 million stacks of HBM next year, which is only sufficient for 250,000-300,000 Ascend 910C's'"
+semi-cxmt-910c-high,300000,Ascend 910C packages,analyst estimate,patel2025ascend,section CXMT Production Forecast,as for semi-cxmt-910c-low
+semi-samsung-stacks,11.4,million HBM stacks,analyst estimate,patel2025ascend,HBM section,"'Samsung alone has directly provided 11.4 million stacks of HBM to China'"
+semi-samsung-december,7,million HBM stacks,analyst estimate,patel2025ascend,HBM section,"'including a staggering 7M stacks in the 1-month gap between controls announcement and enforcement dates' (December 2024)"
+ft-910b-2024,200000,Ascend 910B chips,press report relayed,blablova2025china,"body, citing the Financial Times","'manufactured 200,000 Ascend 910B chips in 2024'; counts the 910B only"
+sevilla-cowos-end2024-low,33000,wafers a month,analyst projection,sevilla2024scaling2030,section on chip production,"'a projected 33,000-35,000 wafers per month by the end of 2024' (written in August 2024)"
+sevilla-cowos-end2024-high,35000,wafers a month,analyst projection,sevilla2024scaling2030,section on chip production,as for sevilla-cowos-end2024-low
+epoch-huawei-2024,180000,H100e,modelled,epoch2026chipsales,"methodology page, Huawei","'180K H100-equivalents in 2024 (90% credence interval: 130K-240K)'"
+epoch-huawei-2024-low,130000,H100e,modelled,epoch2026chipsales,"methodology page, Huawei",5th percentile of Epoch's 90% credence interval for 2024
+epoch-huawei-2024-high,240000,H100e,modelled,epoch2026chipsales,"methodology page, Huawei",95th percentile of Epoch's 90% credence interval for 2024
+epoch-huawei-2025-low,450000,H100e,modelled,epoch2026chipsales,"methodology page, Huawei","'530K H100-equivalents in 2025 (450K-620K)'; 5th percentile"
+epoch-huawei-2025-high,620000,H100e,modelled,epoch2026chipsales,"methodology page, Huawei",95th percentile of Epoch's 90% credence interval for 2025

@@ -22,14 +22,15 @@ In short:
 - **What may remain ours is small, and verification has made it smaller.** The independent
   prior-art search (level 1) and the red team (level 4) have run, and found no claim new
   ([the claims file](04-claims.md#summary)). What is left: D4's margin m as a multiplicative error
-  budget, a one-line lemma; one per-path breakout expression, a combination of known terms, which
-  adds something only if it beats a single multiplier or backtests; the round identity and budget
+  budget, a one-line lemma; the round identity and budget
   ladder as a measurement of loop gain, whose decision power is unshown; miss and false-alarm rates
   per named elicitation budget, valid only against non-adaptive hiding; closure measured input by
   input, framing until an experiment tests it; and D1 as a definition that cannot warn. Two earlier
   candidates are cut: a response time computed from drilled latencies, since every response waits
   on a political decision, and breakout times tabulated in advance with an interval, since E1 cannot
-  identify the drift rate they need. Each label is a claim about our search, not about the world.
+  identify the drift rate they need. The per-path breakout expression is downgraded to an accounting
+  frame that claims nothing, since E18's backtest cuts against it and its gain over one multiplier
+  is not shown. Each label is a claim about our search, not about the world.
 - **The memo's organising idea misread nuclear safeguards.** The memo said the IAEA sets detection
   timeliness shorter than conversion time. It does not. Its timeliness goals equal or exceed
   conversion times, and they cover detection only, never response [@iaea-glossary-2001;
@@ -228,7 +229,7 @@ fast the distance shrinks. Its cost to useful AI is the cost of running evaluati
 
 ### What would test it
 
-A new test, the scaled-down D1 battery, now part of E21. Take public models along a capability
+A test, the scaled-down D1 battery, now part of E21. Take public models along a capability
 ladder. Score each on the clusters that have institutional baselines (MLE-bench against Kaggle
 teams, RE-Bench against experts at matched GPU hours, forecasting against professional teams).
 Report the fraction of clusters won at matched time and matched budget, at several time budgets. The
@@ -241,8 +242,37 @@ Public data cannot run this test. E1 searched the archive's columns and found
 [5 clusters](numbers.md#e1-clusters-baselined) with any human comparison, every cluster in the list
 above, though persuasion and strategy has one only through its strategy half (forecasting) and
 persuasion itself has none; and [3 clusters](numbers.md#e1-clusters-verdict) with a bar a model
-wins or loses. None is an organisation at matched budget. So E21 must build the baselines before the pass condition can be
-tested. E2 refitted METR's time horizons: the 50% horizon doubles every
+wins or loses. None is an organisation at matched budget.
+
+E21's public part has now run this battery on the public boards, in the
+[3 clusters](numbers.md#e21-clusters) with a public human comparison
+([F2](014-cognitive.md#f2-the-decisive-functions) and
+[F4](014-cognitive.md#matching-time-and-cost) give the detail). Its comparisons are single experts,
+contest entrants, contest crowds and forecaster teams. A contest team is not an institution, so the
+pass condition is still not tested against an organisation. What it found:
+
+- **t\* is identified in [2 clusters](numbers.md#e21-clusters-tstar)**, AI research and cyber, and
+  lies wholly inside the tested budgets for some model in only
+  [1 clusters](numbers.md#e21-clusters-tstar-two-sided), cyber. In forecasting it is not identified,
+  since neither ForecastBench nor Metaculus varies the budget; the top ForecastBench entry is
+  [1.4 points](numbers.md#e21-fb-top-margin) above the superforecaster median with overlapping
+  intervals.
+- **RE-Bench is at its ceiling.** The best model's t\* is censored above
+  [32.0 h](numbers.md#e21-rebench-tstar-best), where the capped score lets any agent lead by at most
+  [1.006](numbers.md#e21-rebench-ceiling-32h).
+- **Cybench is capped by its pool.** t\* doubles every
+  [114 days](numbers.md#e21-cyber-doubling-days), but cannot be measured above the pool's longest
+  first-solve time, [24.9 h](numbers.md#e21-cyber-ceiling-h).
+- **MLE-bench's verdict flips with the rank named.** The best entry beats the median entrant in
+  [71.1%](numbers.md#e21-mle-median-best) of competitions and the gold-threshold entrant in
+  [25.8%](numbers.md#e21-mle-gold-best); the verdict flips on
+  [45.3%](numbers.md#e21-mle-flip-best) of them.
+
+So the verdict is not stable within one class of comparison, the pass condition's refuter, met on
+contest entrants (C10(b), against on that analogue). And t\* rises only while a battery's baselines
+last, so "without saturating" is withdrawn (C10(c), downgraded). Institutional baselines still have
+to be built; E21's live part, which needs organisers' consent, has not run. E2 refitted METR's time
+horizons: the 50% horizon doubles every
 [129 days](numbers.md#e2-doubling-p50), and its ratio to the 80% horizon is a stable
 [5.3](numbers.md#e2-p50-over-p80). That gives the time-budget dependence for individual tasks, not
 for an organisation.
@@ -594,13 +624,14 @@ fine-tuning, extra inference and distillation against a training threshold is
 [@pistillo2025loopholes]; the span set by cheap verification is [@villalobos2023tradeoff]; scale
 dependence is [@gundlach2025origin]. The verifier-conditioned span and a distillation ceiling are
 others' accounting rules, and the ceiling is wrong as a rule, since a student can exceed its teacher.
-Label: extends prior work, as a combination. Tabulating breakout time in advance by holding class,
-with an interval, is cut: E1 cannot identify the drift rate the interval needs. What may remain ours,
-only if it is shown: one expression evaluated per path from verified holdings, with a measured rather
-than assumed loop-gain term, that differs from a single-multiplier T_b by more than either's interval
-for some holding class, or that backtests
+Label: a combination of prior work, downgraded to an accounting frame that claims nothing.
+Tabulating breakout time in advance by holding class, with an interval, is cut: E1 cannot identify
+the drift rate the interval needs. What would have remained ours: one expression evaluated per path
+from verified holdings, with a measured rather than assumed loop-gain term, that differs from a
+single-multiplier T_b by more than either's interval for some holding class, or that backtests
 ([C2](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case)).
-Both tests are still to run.
+E18 found neither (below). The expression stays as the protocol's accounting frame, credited to the
+work above.
 
 ### What it means for the protocol
 
@@ -618,17 +649,27 @@ does not cover that, since m covers estimation error, not concealment.
 ### What would test it
 
 E1 (compute against capability, and how fast a fixed cap leaks) has run and found the drift rate
-not identified, which cut the interval tabulated in advance. E10 (the training-to-inference exchange
-rate, with the distillation uplift), E15 (scale dependence at fixed algorithms), E18 (the cap leak,
-backtested against the open-closed lag), E22 (the supply envelope) and E4 supply T_b's other terms
-and are still to come. A specific test, C2(b):
-compute T_b for a set of illustrative holdings under a single efficiency multiplier and under the
-per-path expression, and report whether the two differ by more than either's interval and which
-inputs drive the interval. Another, C2(c): backtest at past dates whether the expression predicts
-the open-closed lag of [4 months](numbers.md#comp-open-closed-lag) within its interval. If neither
-passes, D3 is prior work. The model already reproduces the published breakout figures of A Narrow
-Path and the hardwired-pause group from their stated inputs; the tests extend that calculation with
-loop gain.
+not identified, which cut the interval tabulated in advance. E18 (the cap leak, backtested) has run
+both specific tests
+([the combined leak](012-computational.md#the-combined-leak-of-a-training-cap) gives the detail).
+C2(b), whether the per-path expression differs from a single efficiency multiplier by more than
+either's interval, is not shown: in all [8 cases](numbers.md#e18-b-sep-fails-line) of holding class
+and rate range the two separate only at headrooms where the cap already fails the line, arithmetic
+on Part I's ranges, not a measurement. C2(c), a backtest at past dates, cuts against it. The leak
+came in jumps, with catch-ups implying yearly rates from [1.91](numbers.md#e18-bt-gamma-lo) to
+[1,125](numbers.md#e18-bt-gamma-hi), which no constant rate follows. At zero headroom the expression
+predicts no delay, yet matches took [0.48 years](numbers.md#e18-bt-h0-lo) to
+[1.52 years](numbers.md#e18-bt-h0-hi): it has no follower-delay term. And the open-closed lag of
+[4 months](numbers.md#comp-open-closed-lag), the stated target, cannot be predicted on public data,
+since on [0 days](numbers.md#e18-oc-evaluable-days) of Epoch's window do both models have a public
+compute estimate. So D3's expression is prior work used as accounting. E10 (the
+training-to-inference exchange rate, with the distillation uplift), E15 (scale dependence at fixed
+algorithms), E22 (the supply envelope, now run: it bounds how fast holdings grow, O1) and E4 supply
+T_b's other terms; C2 would reopen only if E10 and E15 narrowed the ranges enough for the two
+intervals to separate where a cap passes the line, and a version with a follower's delay
+backtested. The model reproduces the published breakout figures of A Narrow Path and the
+hardwired-pause group from their stated inputs, which shows the accounting is theirs, not that it
+predicts.
 
 ## D4. Weapons-grade: the line T_b < m * T_r
 
@@ -984,7 +1025,7 @@ developer's self-report [@anthropic2026pace].
 ### Evidence for and against
 
 For: the gates that exist are holding. On the UK AISI's self-replication evaluations, success rose
-from under [5%](numbers.md#def-replibench-2023) in early 2023 to over [60%](numbers.md#def-replibench-2025) by summer 2025. The tasks are simplified, and AISI judges models
+from under [5%](numbers.md#dyn-aisi-rep-2023) in early 2023 to over [60%](numbers.md#dyn-aisi-rep-2025) by summer 2025. The tasks are simplified, and AISI judges models
 "currently unlikely to succeed in real-world conditions" [@aisi2025trends]. Models struggle
 with know-your-customer checks and robust persistent deployment [@black2025replibench]. Those are
 human-held gates. The protocol can stand on them.
@@ -1047,7 +1088,7 @@ survived the independent prior-art search and the red team, each piece still fac
 |---|---|---|---|---|
 | D1 superintelligence, the endpoint | Extends prior work | Extends prior work, more narrowly than the memo said; a definition only | Genewein et al. 2026 [@genewein2026agiasi]; Ngo 2023 [@ngo2023tagi]; Anthropic RSP v3.4 [@anthropic2026rsp]; Aguirre 2025 [@aguirre2025ktfh]; RE-Bench [@wijk2024rebench]; Robinson 2026 [@robinson2026horizons] | As a definition, which cannot warn: time and money matched together against an organisation; a refreshed, regime-held battery with institutional baselines across decisive clusters; the alpha fraction; t* censored at the largest tested budget (C10) |
 | D2 loop gain | Condition prior work; estimator may be new | Prior work for the condition and its use as a trigger; extends prior work narrowly for the estimator; as a trigger, cut on current evidence | Cunningham et al. 2026 [@cunningham2026rsi]; Burtsev 2026 [@burtsev2026criticality]; a staged AI research loop [@srikanth2026aide2]; the upper-bound rule in epidemics [@blumberg2020supercritical]; Anthropic and OpenAI rate triggers [@anthropic2026rsp; @openai2025preparedness]; METR 2026 [@metr-anthropic-acceleration-2026] | The exact round identity as the estimator of K for a staged loop at fixed inputs, and the budget ladder: a measurement whose decision power is unshown (C4) |
-| D3 breakout time | Concept prior work; AI version may extend it | Extends prior work, as a combination | Hardwired-pause working paper [@fithian2026hardwired]; Gan 2026 [@gan2026clock]; Pistillo and Villalobos [@pistillo2025loopholes]; Villalobos and Atkinson [@villalobos2023tradeoff]; Barnett and Scher 2025 [@barnett2025governance]; A Narrow Path [@miotti2025narrowpath]; IAEA conversion time [@iaea-glossary-2022] | One per-path expression from verified holdings with a measured loop-gain term, only if it beats a single multiplier or backtests (C2(b), (c)); tabulating it in advance with an interval is cut, the drift rate being unidentified (C2(a)) |
+| D3 breakout time | Concept prior work; AI version may extend it | A combination of prior work, downgraded to an accounting frame | Hardwired-pause working paper [@fithian2026hardwired]; Gan 2026 [@gan2026clock]; Pistillo and Villalobos [@pistillo2025loopholes]; Villalobos and Atkinson [@villalobos2023tradeoff]; Barnett and Scher 2025 [@barnett2025governance]; A Narrow Path [@miotti2025narrowpath]; IAEA conversion time [@iaea-glossary-2022] | Nothing claimed: the per-path expression stays as accounting. Its gain over a single multiplier is not shown (C2(b)), E18's backtest cuts against it (C2(c)), and tabulating it in advance with an interval is cut, the drift rate being unidentified (C2(a)) |
 | D4 the line, T_b < m * T_r | New as a regulatory trigger | Prior work, applied | Sandia physical protection [@snell2007itc20]; Nitze's standard [@hafemeister2008ctbt]; Gan 2026 [@gan2026clock]; hardwired-pause working paper [@fithian2026hardwired]; Barnett and Scher 2025 [@barnett2025governance]; A Narrow Path [@miotti2025narrowpath]; IAEA timeliness [@iaea-glossary-2001] | The application to AI holdings; the margin as a multiplicative error budget, a small lemma (C1(b)); T_r computed from drilled latencies is cut (C1(c)) |
 | D5 elicited capability | Extends prior work | Extends prior work | Diagnostic-test practice [@fda2007diagnostic]; Anthropic RSP v1.0 budget, later dropped [@anthropic2023rsp]; EU Code of Practice [@gpai-code-of-practice-2025]; OpenAI Preparedness v2 [@openai2025preparedness]; password-locked models [@greenblatt2024password]; AISI auditing game [@taylor2025auditinggames]; tests of absence [@bukkapatnam2026absent] | Miss and false-alarm rates per named budget over a defined organism population, as the rule of a trigger rival parties run, valid against non-adaptive hiding only (C5) |
 | D6 closure | May be new; may be framing | Extends prior work, narrowly; framing until tested | Task-based automation [@aghion2017ai]; Burtsev 2026 [@burtsev2026criticality]; Chen et al. 2026 [@chen2026rsisurvey]; A Narrow Path [@miotti2025narrowpath]; Scher 2026 [@scher2026research]; Global Call for AI Red Lines [@redlines-2025] | Closure measured input by input against verifiable gates, including the cross-party transfer edge, and the gain under any set of gates predicted from one gate at a time (C11) |

@@ -1,0 +1,38 @@
+# Datasets E21 fetched that no note or chapter had listed as a source of its own, each opened by
+# the experiment's builder on 2026-11-27. The result file records the exact URL (at a pinned
+# commit) and sha256 of every file read. tools/sources_from_notes.py merges them into
+# research/sources.toml.
+
+[source.metr2026evalanalysis]
+type = "dataset"
+title = "eval-analysis-public: run data behind METR's time-horizon reports (Time Horizon 1.0 and 1.1 runs.jsonl, model release dates)"
+authors = "METR"
+year = 2026
+url = "https://github.com/METR/eval-analysis-public"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.cybench2024repo]
+type = "code"
+title = "Cybench repository: the 40-task list and the first-solve times of the original competitions"
+authors = "Andy K. Zhang, et al."
+year = 2024
+url = "https://github.com/andyzorigin/cybench"
+opened = "2026-11-27"
+
+[source.openai2026mlebenchruns]
+type = "dataset"
+title = "MLE-bench repository: leaderboard, run-group map and per-competition grading reports"
+authors = "OpenAI"
+year = 2026
+url = "https://github.com/openai/mle-bench"
+opened = "2026-11-27"
+found_in = "research/notes/04-dynamics.md"
+
+[source.forecastbench2026datasets]
+type = "dataset"
+title = "ForecastBench datasets: tournament and baseline leaderboards, parity dates"
+authors = "Forecasting Research Institute"
+year = 2026
+url = "https://github.com/forecastingresearch/forecastbench-datasets"
+opened = "2026-11-27"

@@ -1,0 +1,5716 @@
+{
+  "data": [
+    {
+      "sha256": "317b92915df5bf935908567a857116bcf6f0c7686ef8b0840897ed04a29232bc",
+      "url": "https://raw.githubusercontent.com/METR/eval-analysis-public/52cb829c7a2efb2d659285c4b1768d191d97f8d2/data/external/release_dates.yaml",
+      "what": "METR model release dates"
+    },
+    {
+      "sha256": "609f904f4b6ae32129388da89d036e00bac511ad94223d2be1e58fc2b45b55cd",
+      "url": "https://raw.githubusercontent.com/METR/eval-analysis-public/52cb829c7a2efb2d659285c4b1768d191d97f8d2/reports/time-horizon-1-1/data/raw/runs.jsonl",
+      "what": "METR Time Horizon 1.1 runs"
+    },
+    {
+      "sha256": "f489d11728909937dad99ba1ed2d7c40efe12a766891e67dbc7c2486a3311236",
+      "url": "https://raw.githubusercontent.com/METR/eval-analysis-public/52cb829c7a2efb2d659285c4b1768d191d97f8d2/reports/time-horizon-1-0/data/raw/runs.jsonl",
+      "what": "METR Time Horizon 1.0 runs"
+    },
+    {
+      "sha256": "d80124a66c9dde5d27d9e1b436d91a64cd45c272f80b84f49e4a7a73cb2d5f60",
+      "url": "https://raw.githubusercontent.com/andyzorigin/cybench/ca483c6443f17a20ba7d6bac3d274859a1721e51/analytics/CTF%20fastest%20solve%20times.json",
+      "what": "Cybench first-solve times of the original contests"
+    },
+    {
+      "sha256": "11c0bb381ec3ecd4dc81dab0939f02502d13558c04679b20e2921e1dc5b51c84",
+      "url": "https://raw.githubusercontent.com/andyzorigin/cybench/ca483c6443f17a20ba7d6bac3d274859a1721e51/task_list.txt",
+      "what": "Cybench's 40-task list"
+    },
+    {
+      "sha256": "5d4764742d674b599072fa80513940ea2c370098688c2377c6170ea273caddff",
+      "url": "https://epoch.ai/data/benchmark_data.zip",
+      "what": "Epoch AI benchmark data (Cybench table)"
+    },
+    {
+      "sha256": "abcc05a34e7fd385e54058a575b2e0e2048f208161f9224c36a7fd92a76921d4",
+      "url": "https://api.github.com/repos/openai/mle-bench/git/trees/c5631ba61ceeb0573235a6ce209db435327a1e84?recursive=1",
+      "what": "MLE-bench file tree at the pinned commit"
+    },
+    {
+      "sha256": "6a1dadbfee97c607d4425fe4a997676cffb6ffdc61eb9ae048f0f1dbefdc6d0e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/run_group_experiments.csv",
+      "what": "MLE-bench map from experiment to run groups"
+    },
+    {
+      "sha256": "aa6a4dbfd19fee0536235be78361968603c84f0d4e06d4ed0ddc9bb212023057",
+      "url": "https://raw.githubusercontent.com/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/experiments/splits/split75.txt",
+      "what": "MLE-bench 75-competition split"
+    },
+    {
+      "sha256": "8c7aad03bfbc4920e8cb07815ab4a33cde066e9bd6a3cffd256682dfafe1ae90",
+      "url": "https://raw.githubusercontent.com/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/README.md",
+      "what": "MLE-bench README with the leaderboard"
+    },
+    {
+      "sha256": "a4fdba928cd9fe9bca238cbd2c88f181ab7d850567ef8b8d7b91f121e0173484",
+      "url": "https://raw.githubusercontent.com/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/README.md",
+      "what": "MLE-bench runs README (experiment notes)"
+    },
+    {
+      "sha256": "268e69fe8605ca745b25142eebaa51c101d0d0c072b267cee554553d46278a12",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aba_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "1a5c130be32ccc6b6900feb85ac50de595e43faf08b1dc64fedb191d50f76a63",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aba_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "d9a7a7abad0a82f64539a493a15120c36e7507ab82d3720f916f127e1335c51f",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aba_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "368c2d630a2acd49fbaa2bd042d1ce90b4bcc65348f59de460f56b32a508b722",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group1/grading_report_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5c789790f1aa2a0c7f70ed9cdd7d2a6122b8d530ebb43a4b85360f550110d490",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group10/grading_report_10.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "f77532ed2fe6b81af4ba03027e9dc14d999c3e7193367e49a3ab6f560a0c47c7",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group11/grading_report_11.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "6ab4d5cef9f4d4380d49df10e5159852c17200416787d3c679cfe505db74d964",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group12/grading_report_12.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "9f27f1c1f98a7813e9f6ac3484fa17210f4d0981e057dd17e28d932e5fbf6b95",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group13/grading_report_13.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "d1a5a0bc6aab3550ffb3fc4a9328510d2475b6e67dfb9f8d77deb040cc6b777a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group14/grading_report_14.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "bbbe7a867916f25a4944d444d785b6b9726e4e10ca3501a5e90d858b0846ecdd",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group15/grading_report_15.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "901a80ebe0f44d693510764895965f91a302c6c37126732fc35cabe1fa883a37",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group16/grading_report_16.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "3df13d0eb5f0cddd830f1c6f904ba929b9cc33f8678e58c5eaf5f8a7e53c5b7b",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group17/grading_report_17.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "78c4ca925985437715861587db340f5d7e8c53bb6747094040846152ad6633dc",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group18/grading_report_18.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "bbf4d8381bdddd3c037326a98cee05a607c9ddfe83e3bb2218370e09cd5040aa",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group19/grading_report_19.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "c1c7041e989f6d33734344bb70a5d6db3b8abd668bffda9936cd60f377c5c28d",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group2/grading_report_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "f7cb038d6737314ac3804da5ef56fe460cfd27633c694fb54f9bc4d00bed6c60",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group20/grading_report_20.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "e51098549c94329cc33589dab43cc7a3f88c49b51c41f2158d0d03da4ec99e7a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group3/grading_report_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "b09a7b9131c648ad2da27d514c6ebce99c4852fd85ca565582784359b9ea7c35",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group4/grading_report_4.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "6e5e363164a6f8b8e006d64d9fa03cf4fc070586d10f04fd00dc317c6ecc13a0",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group5/grading_report_5.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "1e53138bcd056627501b5016c310d683f42869ae3c43fc47613aa017d4610258",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group6/grading_report_6.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "27b822e328287944671beb8dc040a847f0e5f7d6e38160e47a04941b745d019f",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group7/grading_report_7.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "87b02bb9ddb5a016a112a9d35f705754b0968619f1c4ca8d4331530a97d268fb",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group8/grading_report_8.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "076a4a22a503dcc927ce31599da3343edec13d98d66eda268a4b17c6ceecc1e9",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/aira-dojo_group9/grading_report_9.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5ce0d3603790faa47e77850ecfdd42e549405f8e2afbc3b170d3dc8a06f304fe",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/disarray_group_1/2026-02-03T08-54-09-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "253ebd4f748fc0925e7cc4b58426c1bbd27888673e9b67520085dcf7a9b4d5f6",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/disarray_group_2/2026-02-03T08-58-32-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "436c4203fdfb9164a653fba8b28f4ab540188fd3dfb4bed49a38497dce0b9201",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/disarray_group_3/2026-02-03T09-01-47-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "aa61f46cac8156ce37d5443d96c555c575742eb09546e393d4611ce47ed75a1b",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/famou-agent_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "8e4488c6a03d47b5ca155c14938d9b0bdb3eb36fc445d4669da7310e6399730d",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/famou-agent_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "6b50cc15b477b22b0b8483d127e65fe596b603320abce1133e4f5820f937604e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/famou-agent_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "0a4d6dd7520d02bd422ba8997137a5eca22e9009fe676f46e2140a567352d2b0",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/famou-agent_group4/grading_report_group_4.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "db237a17dba86ec5aad042b99b217beb29249833a9ee8c25bf9ee6d7f94b8d3f",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/famou-agent_group5/grading_report_group_5.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "4a761dde97041dd83e23d5146dc4f08bf459274930c5703d389caba0370cfc24",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/famou-agent_group6/grading_report_group_6.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "e07ea11a0a7e4ab8387b9af28d764abb98f5b290103ec853bdef60bf5338641a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/Leeroo_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "3f97e15dc99d94381adf5eaf0920016c4e3addc4b92c902afcf3047044b4ba1b",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/Leeroo_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "8b8ab0b2f78a7c00a0507504f9bbf3f3d7b5a6881557276710e18c85c5a73d35",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/Leeroo_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "18a5c703a0070cb88e965be5516a17b336b782c42411cfab44828fd4c3f960fd",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/loongflow_group1/2026-02-09T07-43-11-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "a6b73ea5ba74f9c8fcdcf68e284eab376c16c5e8c9a88f8f5c2fb50f3597957e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/loongflow_group2/2026-02-09T07-46-10-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "c46b4cafb6dfc1e3b9106c8b38246a7401952c28cf879a5251c157090801c522",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/loongflow_group3/2026-02-09T07-50-35-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "feac8e9b401ed1ac74bbe6462ed150681851feec8e121374d7c4728b829c4c77",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mars_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "44b47e5af9a425e5b5ef6dcf8f5043b962f315142470b1cef49d34a8e5ec52e9",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mars_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "fabca71ae27ebc02cba6cedf98ffcb335065d730c13b5889fedf39ee8208b2a1",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mars_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "34b708486ed9488ff978439637b79127370d63f83cd1cbbfe5ab2900526ba859",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mars_plus_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5f41eaa17371c06fb175dd3f0886c29d1b8f2ec1f8795471c509ae92c1c2ddd6",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mars_plus_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "cdb1405164d7427a1b7eab7ed48c599cca75eabbfca02321372fcdd22a516808",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mars_plus_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "85d6c7661a0670017c01cb8a386419327ef8fbcd2ae68d553c28fd8e2f184baf",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mle_star_pro_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "91867daa00764594e277a25ade6041efce7255051401aa48626868b4b24106bc",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mle_star_pro_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "2f78ab70a472cce74d5b6ccd0941c6b751158a5795d24c5f5c1f4384ec936bf7",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mle_star_pro_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "c6d9178d6963c5c786540306e789955fc31f39f004297b1cb287670fa15726d4",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mle_star_pro_group4/grading_report_group_4.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "b510fd67e01c789082f6bcd9316a9c5eb77966a316b3475cd6a5f030d88ac696",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mle_star_pro_group5/grading_report_group_5.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "8ed03c24c0b27e252a82d7c14239bf8485ffd668a87c158e7ebb97d564c2f6df",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mle_star_pro_group6/grading_report_group_6.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "a1b0dab08c425ac2700b3b672ad3703dfbe0246f33dde7a379b3f9fff4c5cc08",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlevolve_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "b8014f46cdeda002053cffe3b3ace52dbe880f46cf9ff3cbcde7027cf3fedcca",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlevolve_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "77df1667afa3aa45fb791439228a4e62de889e095a2173bbb7e0510bbd3d465a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlevolve_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "1ba3ec34eb13fafab9ef5c7c71aaf6c7cc0a59687edfa7f37c1a84043ac9bb02",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/pievolve_group4/grading_report_group_4.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "8010cc7f9344806b56e87a215489c3a78fea7962e2234807aa7a0e800ad68477",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/pievolve_group5/grading_report_group_5.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "56027b6dee40c969a2407e38c68eed402dca774e081771d1b1326fbeb0f42e0a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/pievolve_group6/grading_report_group_6.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "e9ec00d0bb733bdce435b9ae1ef96efa24fed0b19a6c5d277da77b6ef5286c2b",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/pievolve_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "ab09a2f6b33d1d35f3398f2fe4407221a125a099c791a088b66dab817c58ed21",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/pievolve_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "14a92a54e4188985a4d6f089b46c63aac2f1d9cf97718dca60da0832b4cdc971",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/pievolve_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "f1bbb431fa88870dc3c76ba60772f15dc3f51b257d1c54fa8649f3149d1dda6c",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/thesis_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "33a15e6aeb3b64dc8541f6f47fbd91584894e5e2a339f32c2d62f1a2ca0884ae",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/thesis_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5ac87b04958cb5d18500f130b0cb6e350f4b16b354f9b8317af68f8b92f8286e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/thesis_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "d67781e6e0532529c689580a8e86ec0de0bd7f928bab048c19b61a6039ad0f53",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-21T00-10-41-GMT_run-group_aide/2024-09-22T14-23-11-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "1f20df91fad3569f46b1da2faefd73376f929576b6b49c70dc2633a7c1dbb61b",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-22T16-12-47-GMT_run-group_aide/2024-09-24T13-54-59-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "e37cca8b3674220fb4099a690eb32bb3bbaa0f87097296fbd894efb72a4e0d8a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-24T01-12-14-GMT_run-group_aide/2024-09-26T09-03-59-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "f9122c56fabe5c0c0dd824251c36cc68fe7eec5316f01d510cdc2d3e962c3f8c",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-25T04-42-50-GMT_run-group_aide/2024-09-26T09-04-52-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "87ba195250b909a1ce08274e1fcb8eeab63987952389488dcbe888f1d9f93a33",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T22-44-59-GMT_run-group_aide/2024-10-08T15-29-37-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "ffe86eefbb2f84176fd426c6a8c0eb642788f1dd514557e76411c4a8b3b6bca8",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-06T18-25-55-UTC_run-group_aide/2024-09-19T20-07-15-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "710d04f5e841c23a6cd65df5645b5afcee1998b4db10bb263ecdfae0dcdcb69c",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-27T17-34-13-GMT_run-group_aide/2024-10-01T07-57-25-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "6817e9467151f9afacff641ab73ee93c6cd81af3dcc48b9f7a328434cb14f4e0",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-05T00-01-03-GMT_run-group_aide/2024-10-08T15-30-31-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "4081749385ec721e787cc94b994fb18098362868c4d4c1578607d4d6a3d319fe",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/internagent_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "b7e6c302224daf52079b3d6bbcd6f56d849d1e94c59bd6fbfbcde5df30a4c221",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/internagent_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "50d00e56da1051c44c8c4f8a5702e5e988c82259cc227bc377d7edfd95e9808d",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/internagent_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "af0eb3855ae91795087d734b15d81f0a8601de1a73cfbe8d865e07fb07728770",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlmaster_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "c06b8f853f05e9e14f2c12bd9f3cfad62a885b9e52d3da8ea3d05c0cdf17e06c",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlmaster_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "958f406b113105f6f872cd7965c7ff8393a2c751143863ffc9aa49b06e42a25f",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlmaster_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "fb5418ca7dcfae88851fd7b53182521b89f13736ae61afec5095dfe896b8a77e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlmaster_group4/grading_report_group_4.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "95ce6744125f022408b73072e4be73f5e32f91de362fe80fceaa45e2797ea355",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlmaster_group5/grading_report_group_5.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "8e825bec59ab003228341344aa38129c0f7bfed66b9d41b4eb1032a2da77956d",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/mlmaster_group6/grading_report_group_6.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5af41833f52999818d1d1049ac84a473efdd39e6b06c46a5c07b3ea2de526b59",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_100.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "878dcd016fa43738a155412bf3da4a07aa01a4eb7e892cdb4d3067b7e85c5ba7",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "46c600d438bc548dcc6405ee368261466955a5a67425da9eb1374d3dc7db4ec9",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "49a49c745ca2d0dea2f8077ed3b72eb772a537c84bb65133de28db804c076687",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_4.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "eb97dbe81e1d62503b4a7b440d3e044364b79aaeec06f9016d7bab56675d534e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_8.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "f8297a53dc0f6582795c790606ed3d687e4ae4bff168a45874457db24a081c80",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_16.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "e0ae5a9c062c37cc932c246eda0d331c14b1a27a308956e0019eac25295075a4",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_24.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "dc978929a1b2d1d3b623eebccfa0ccbb945818b398796bb70782a1cf50524100",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_32.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "54c6d712500721ce881f9495a2f7121d4be005dfffd1b1a8e069ba1719bbcce7",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T14-55-33-GMT_run-group_aide/hourly/grading_report_64.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "29324669a74edb5fe5e4eee1fc29e6562388630b13413bec680ab957d8990f6f",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-03T22-46-46-GMT_run-group_aide/2024-10-08T15-25-27-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "26c578360674c8656a09485a23f3b9c62eb3e6d45262039de74c291fc3aaecb4",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group10/grading_report_group_10.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "ea87540f744527a81fd280633b4f9163d990b99550a5e5b7d11f2d1446ef828c",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group11/grading_report_group_11.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "a9632101aa9174dad35b9a6ef5fa50559d30976d07f37f2e72262f31e1a2df29",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group9/grading_report_group_9.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "65b813e15442e7b7f14493cd7cdafab54ea55997240f15a9af83f571b63e9191",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-08T08-00-07-UTC_run-group_aide/2024-09-19T20-52-52-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "4e239f925c8f5844b7de4dc28cfde01cf78df354de829f0354a452e1641a9841",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-22T17-15-19-GMT_run-group_aide/2024-09-24T13-55-43-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5e1268f18ea8d00ffb6d16fe4a8e5b41b6be3f427df8d337c83678c6972e0264",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T22-58-46-GMT_run-group_aide/2024-10-08T15-30-00-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "1ccd7e5013346e8b65bb1d8fc90aa3903eddc95ec8b5e669b327cd0c26cb9c2f",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-21T00-10-06-GMT_run-group_aide/2024-09-22T14-26-59-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "7b62af82cbd622a577f4ee6592c5840c96a25e538f076e2ff3df8dd3a36c570c",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T22-59-24-GMT_run-group_aide/2024-10-08T15-30-19-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "c61d34097c4a9061f7924cf5beda8f7f3bf07b1d41f1ae34d9c1ecbd70d6da5b",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-08T07-58-11-UTC_run-group_aide/2024-09-19T20-50-11-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "abeea7a734c9ead70c97d6a1410d5262d23621d9738169a5ca0279fa1f3159a4",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-18T18-21-42-GMT_run-group_aide/2024-09-20T21-46-50-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "2b536aaceb9bb5759a157a826edc7faf4e39b3c1afc825ebb25d4f29d9ae8cd7",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-19T04-36-44-GMT_run-group_aide/2024-09-21T00-22-42-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "7b7a9d30f0bcd0db5f7779c77b2b6903969bd97e3ddfb9c824a526b7f8692ced",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-19T23-54-38-GMT_run-group_aide/2024-09-21T22-57-13-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "0d1ac5620b7dc08457c2400f3d90405ef53a18192e17e873aeccbf0c469a0180",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T19-08-06-GMT_run-group_aide/2024-10-08T15-28-17-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "c8669ec93915bc0c665458e17ace29f6bef849fd5ad5de695bc39dff94d41e72",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/neo_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "8c070bcfea54aa62e5b5a459df96a795f5b65686d64451d5ae32bd149e70d9b8",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/neo_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "cc578f3989a067707d97d3a95bc221cc2049d317cb79805aad67eb7c31c11b87",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/neo_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "640fcf0af58c27ab5fbce8670e0e3e1bac92a1b7956c971f392a120a82b4e78d",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "6d5a1f1859e588b12d21f2aa1b72179039078dbaa1522fa38482bc54f9352e4a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "cb7d62669679104cbede28f0b313544ff10b68edb10bc58fef8467783a81e262",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "3588f9c6c71cea8aa7bd346d0e6142a821e683becbbcfc5a2730812ee5934927",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group4/grading_report_group_4.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "0d527be459ecfaa3a6330826b190dd42d7b59df92ef492b34066d1ae6b3c4143",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group5/grading_report_group_5.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "ebab22fea82d4173c247d13186989173d869bb6515ce7aa54a18ac6a00c0a269",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group6/grading_report_group_6.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "507c1996faf5da19d0a5b581912015280b58088b36b258c5fd750a3717ceb37e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group7/grading_report_group_7.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "33857e2044319cbbf19cd9897c5b708434a133842b5a492b79f9b95be90c884a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/rdagent_group8/grading_report_group_8.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "56151276c699f18197b003409ca1ab45b56191d555b4ecac7fe3e23a2669e587",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-20T23-52-25-GMT_run-group_aide/2024-09-22T14-26-08-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "6dcdad45647bd8965e84db93a5dd42e5a89731531d9f04429ec046c4c09b26cb",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-24T22-00-20-GMT_run-group_aide/2024-09-27T10-42-15-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "70c7efbfb9ffc79c378efba81edfb30b7b2435d92b374fa5b5fa1bcaf5239515",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-25T04-20-19-GMT_run-group_aide/2024-09-27T10-44-46-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "755abb2527eb079e3188e15705fd5ec23c9a52185018d7204a42858a8c1c3d53",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T22-37-05-GMT_run-group_aide/2024-10-08T15-28-58-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "6e9e4f1add723487e57d109a324bc318d67f987b3ba84fb3b5a1855b10fffeae",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/operand_group1/grading_report_group_1.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "142cec399faaef3b04070195b1e5e846a110fbb21334ef58a91863143b1e02bf",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/operand_group2/grading_report_group_2.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "3b954639d98d44b460e6d94f52bc7e30b596c7deebb357b8a4d17a62a6371778",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/operand_group3/grading_report_group_3.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "ab41f724fa2f57d0a67d5bb5ac1403bbc5907f3903ad0211449f42f3d4d0f83e",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-07T22-34-42-UTC_run-group_aide/2024-09-19T20-23-08-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "03aa2fe2685726c5c5ada90432d78861df3a6265c2c6749b44e1252277b21730",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-09T16-13-51-UTC_run-group_aide/2024-09-19T20-54-35-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "3ded210b765b92272a02fb6b60915f78454acfa084e650fcdc4bcbb2866bcf91",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-09T17-26-54-UTC_run-group_aide/2024-09-19T20-56-43-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "a83b60ee00bf69457e182a8e0654bb0d90a98d8a28634c02ffc16275c7308770",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-09T21-21-33-UTC_run-group_aide/2024-09-19T21-03-13-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "0d50c787aaf8393ec123a3eaab7c32f0165ae7267c1f6088c7befe89c3f235fc",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-11T09-34-00-UTC_run-group_aide/2024-09-19T21-03-18-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "efd8e89c65f5a78f39b772c1de02a247c1f2ac508dc256f7f4b413e4ee24406a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-11T21-57-50-UTC_run-group_aide/2024-09-19T21-16-52-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5568898a6bb15a7cbca00bf27654294ce732870f858eb96706614591495865ac",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-12T12-30-57-UTC_run-group_aide/2024-09-19T21-26-17-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "42720d1a2bca22fb640f40efa2fd74926b056f05a3b4a1011db40dedde0fe6ae",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-12T21-14-22-UTC_run-group_aide/2024-09-19T21-34-18-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "4fd13c163f9cf598efc1b3eac61f25bb3531b00b9242e6ff03aed1fbf5743182",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-13T13-45-35-UTC_run-group_aide/2024-09-19T21-40-03-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "ef4f7bcb87ff57fea7d75c0fc6b1a26589d5b787316b495fc1eb665906819b26",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-14T11-15-57-UTC_run-group_aide/2024-09-19T21-50-06-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "5cdec99a32835edaa6237c01b07cc138691b5132f1eada91361f3789404a9af7",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-16T14-45-05-UTC_run-group_aide/2024-09-19T21-55-27-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "2d999326ebc1e56847e20b7a8b587c216fcfd5b9ba55b6c54e34e36e0851a36a",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-19T21-48-46-GMT_run-group_aide/2024-09-22T18-05-17-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "12390f868e9c911dc281902d884cbb2feb6381b91eae244fb533eefeed59bdf6",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-21T19-39-16-GMT_run-group_aide/2024-09-23T17-44-13-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "86a35822b41b3162a0ceb8ae2ef2d574eb115a9b54aff1d9b168d84b277ba552",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T17-35-20-GMT_run-group_aide/2024-10-08T15-26-46-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "8aae8cd15b33d91e087e9b11a878f2b48ef02c3a47bb644f6e5ec7b733d82aaa",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-07T22-33-09-UTC_run-group_mlagentbench/2024-09-19T20-13-10-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "2ea717cb65f6681251143fb55c30655b51d35f6afb301617ee9c887a6b4dfd28",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-12T13-52-30-UTC_run-group_mlagentbench/2024-09-19T21-31-49-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "b9662032533464a4a594725ea226f932c49f357b0d91405b9c4222f62559cfe5",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-16T19-44-41-UTC_run-group_mlagentbench/2024-09-19T23-44-06-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "9a003894d53279f42151103feaa50e5794752e4982b7b972a4e62c56b76364ab",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T22-43-43-GMT_run-group_mlagentbench/2024-10-08T15-29-16-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "07877b782ba25232c6723d1068d30410949c299e9400cca3f66fa3227c91d943",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-16T16-59-30-UTC_run-group_opendevin/2024-09-19T21-55-55-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "a4eaa1933228bfe124f5730727a1d431bb000ee548f3c4be374a97a34a26fc42",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-18T20-49-38-UTC_run-group_opendevin/2024-09-20T21-51-54-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "f0c7cdb11c33c6143e3c7aaeb5c29955baa128b4118bef9c2e61a44ee0039916",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-09-23T15-10-54-GMT_run-group_opendevin/2024-09-27T10-32-10-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "87694c3fcced4e6f94f1ce0f0e2036c5b0f26b643f7a73f82597ced4df60d2ff",
+      "url": "https://media.githubusercontent.com/media/openai/mle-bench/c5631ba61ceeb0573235a6ce209db435327a1e84/runs/2024-10-04T22-43-53-GMT_run-group_opendevin/2024-10-08T15-29-24-GMT_grading_report.json",
+      "what": "MLE-bench grading report"
+    },
+    {
+      "sha256": "1e1c1f30cec61df6e955316db4b75680d5c1d214659691d639117921ab9868a9",
+      "url": "https://raw.githubusercontent.com/forecastingresearch/forecastbench-datasets/5b415c0fb3dc7c5c24cba804c2f8bf3732bbacc9/leaderboards/csv/leaderboard_tournament.csv",
+      "what": "ForecastBench tournament leaderboard"
+    },
+    {
+      "sha256": "3b811c2ab6801c91c8d8e65b2997fc3abe208b5438895db17b3cd20d9b7a9130",
+      "url": "https://raw.githubusercontent.com/forecastingresearch/forecastbench-datasets/5b415c0fb3dc7c5c24cba804c2f8bf3732bbacc9/leaderboards/csv/leaderboard_baseline.csv",
+      "what": "ForecastBench baseline leaderboard"
+    },
+    {
+      "sha256": "01c7be762ef02a5a87e8e074d6d77b23b7f328b75c32494852650d29af89c26d",
+      "url": "https://raw.githubusercontent.com/forecastingresearch/forecastbench-datasets/5b415c0fb3dc7c5c24cba804c2f8bf3732bbacc9/datasets/parity_dates/parity_dates.tournament_leaderboard.json",
+      "what": "ForecastBench projected parity dates"
+    }
+  ],
+  "details": {
+    "baselines": [
+      {
+        "battery": "RE-Bench (METR runs, Time Horizon 1.1)",
+        "cluster": "AI research",
+        "comparison": "best of k independent single experts, each with 8 hours",
+        "kind": "single expert",
+        "matched": "wall-clock time and hardware per run; money not matched (agents cheaper)",
+        "source": "metr2026evalanalysis; wijk2024rebench"
+      },
+      {
+        "battery": "MLE-bench grading reports",
+        "cluster": "AI research",
+        "comparison": "Kaggle entrant at the median, bronze or gold threshold of the final private leaderboard",
+        "kind": "contest team or individual entrant",
+        "matched": "nothing: entrants had weeks or months, agents 12 to 36 hours",
+        "source": "openai2026mlebenchruns; chan2024mlebench"
+      },
+      {
+        "battery": "Cybench",
+        "cluster": "cyber",
+        "comparison": "the contest field's fastest team on each task, a different team per task",
+        "kind": "crowd of contest teams (order statistic)",
+        "matched": "wall-clock time from the contest start; agent time uncounted",
+        "source": "cybench2024repo; zhang2024cybench; epoch2026hub"
+      },
+      {
+        "battery": "ForecastBench",
+        "cluster": "strategy",
+        "comparison": "median of the superforecasters' forecasts",
+        "kind": "crowd of individuals (aggregate)",
+        "matched": "the same questions; budget not stated",
+        "source": "forecastbench2026datasets"
+      },
+      {
+        "battery": "Metaculus FutureEval",
+        "cluster": "strategy",
+        "comparison": "a team of professional forecasters, aggregated",
+        "kind": "team (aggregated forecasts)",
+        "matched": "the same questions; Pros had 3 days, bots 1.5 hours",
+        "source": "metaculus2026futureeval"
+      }
+    ],
+    "caveats": [
+      "No battery here compares with an organisation: experts, contest entrants, contest crowds and forecaster teams.",
+      "RE-Bench: four to eight agent runs per environment; METR's own elicitation; experts had AI tools (kwa2025horizon, C.1.2), which raises their scores.",
+      "RE-Bench: the capped score ties the sides at the cap; at 16 and 32 hours the best model is at the ceiling.",
+      "Cybench: newest scores are developers' own reports, some on a 37-task subset; first-solve times count from the contest start.",
+      "MLE-bench: entries are self-submitted; old Kaggle solutions are public and may be in training data; test splits are rebuilt from training data, so the board comparison is approximate (chan2024mlebench).",
+      "MLE-bench: the run-group map after the pinned commit is a merge conflict, so the newest entry (Famou-Agent 2.0 with Gemini 3 Pro) is left out.",
+      "Forecasting: the budget is not varied; the superforecaster median is a crowd aggregate, the Metaculus Pros a team of ten in spring 2026."
+    ],
+    "cybench": {
+      "ceiling_h": 24.91,
+      "dropped_duplicates": [
+        "claude-sonnet-4-5-20250929"
+      ],
+      "fst_hours_sorted": [
+        0.0333,
+        0.0667,
+        0.0853,
+        0.1,
+        0.1,
+        0.1167,
+        0.15,
+        0.1511,
+        0.1606,
+        0.1833,
+        0.1872,
+        0.3333,
+        0.4861,
+        0.5333,
+        0.5972,
+        0.7,
+        0.7086,
+        0.7167,
+        0.7522,
+        0.8606,
+        0.8667,
+        1.0089,
+        1.0833,
+        1.25,
+        1.3,
+        1.4111,
+        1.4289,
+        1.7608,
+        2.0,
+        2.05,
+        2.2,
+        2.2233,
+        2.6622,
+        3.415,
+        4.0692,
+        5.5108,
+        5.9364,
+        6.1333,
+        7.5767,
+        24.91
+      ],
+      "human_share_at_grid": {
+        "0.125": 0.15,
+        "0.25": 0.275,
+        "0.5": 0.325,
+        "1": 0.525,
+        "16": 0.975,
+        "2": 0.725,
+        "32": 1.0,
+        "4": 0.85,
+        "8": 0.975
+      },
+      "latest": "claude-opus-4-6_unknown",
+      "models": {
+        "Llama-3.1-405B-Instruct": {
+          "base": "Llama-3.1-405B-Instruct",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 5.12,
+          "hardest_solved_min": 9.0,
+          "kappa": [
+            0.5,
+            0.2727,
+            0.2308,
+            0.1429,
+            0.1034,
+            0.0882,
+            0.0769,
+            0.0769,
+            0.075
+          ],
+          "model": "Llama-3.1-405B-Instruct",
+          "release": "2024-07-23",
+          "share": 0.075,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.2006
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1,
+          "tasks": 40
+        },
+        "Meta-Llama-3-70B-Instruct": {
+          "base": "Meta-Llama-3-70B-Instruct",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 4.0,
+          "hardest_solved_min": 9.0,
+          "kappa": [
+            0.3333,
+            0.1818,
+            0.1538,
+            0.0952,
+            0.069,
+            0.0588,
+            0.0513,
+            0.0513,
+            0.05
+          ],
+          "model": "Meta-Llama-3-70B-Instruct",
+          "release": "2024-04-18",
+          "share": 0.05,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.155
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.0853,
+          "tasks": 40
+        },
+        "Mixtral-8x22B-Instruct-v0.1": {
+          "base": "Mixtral-8x22B-Instruct-v0.1",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 5.12,
+          "hardest_solved_min": 9.0,
+          "kappa": [
+            0.5,
+            0.2727,
+            0.2308,
+            0.1429,
+            0.1034,
+            0.0882,
+            0.0769,
+            0.0769,
+            0.075
+          ],
+          "model": "Mixtral-8x22B-Instruct-v0.1",
+          "release": "2024-04-17",
+          "share": 0.075,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.189
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1,
+          "tasks": 40
+        },
+        "claude-3-5-sonnet-20240620": {
+          "base": "claude-3-5-sonnet-20240620",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 9.0,
+          "hardest_solved_min": 11.0,
+          "kappa": [
+            1.1667,
+            0.6364,
+            0.5385,
+            0.3333,
+            0.2414,
+            0.2059,
+            0.1795,
+            0.1795,
+            0.175
+          ],
+          "model": "claude-3-5-sonnet-20240620",
+          "release": "2024-06-20",
+          "share": 0.175,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.1491
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.5928
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1511,
+          "tasks": 40
+        },
+        "claude-3-7-sonnet-20250219": {
+          "base": "claude-3-7-sonnet-20250219",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 9.07,
+          "hardest_solved_min": 11.0,
+          "kappa": [
+            1.3333,
+            0.7273,
+            0.6154,
+            0.381,
+            0.2759,
+            0.2353,
+            0.2051,
+            0.2051,
+            0.2
+          ],
+          "model": "claude-3-7-sonnet-20250219",
+          "release": "2025-02-24",
+          "share": 0.2,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.1737
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.6659
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1606,
+          "tasks": 40
+        },
+        "claude-3-opus-20240229": {
+          "base": "claude-3-opus-20240229",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 6.0,
+          "hardest_solved_min": 11.0,
+          "kappa": [
+            0.6667,
+            0.3636,
+            0.3077,
+            0.1905,
+            0.1379,
+            0.1176,
+            0.1026,
+            0.1026,
+            0.1
+          ],
+          "model": "claude-3-opus-20240229",
+          "release": "2024-02-29",
+          "share": 0.1,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.25
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1,
+          "tasks": 40
+        },
+        "claude-opus-4-1-20250805": {
+          "base": "claude-opus-4-1-20250805",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 42.52,
+          "hardest_solved_min": null,
+          "kappa": [
+            2.8,
+            1.5273,
+            1.2923,
+            0.8,
+            0.5793,
+            0.4941,
+            0.4308,
+            0.4308,
+            0.42
+          ],
+          "model": "claude-opus-4-1-20250805",
+          "release": "2025-08-05",
+          "share": 0.42,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.7243
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 1.5678
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 0.2071
+          },
+          "t_star_step_h": 0.7086,
+          "tasks": 37
+        },
+        "claude-opus-4-20250514": {
+          "base": "claude-opus-4-20250514",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 35.83,
+          "hardest_solved_min": null,
+          "kappa": [
+            2.5333,
+            1.3818,
+            1.1692,
+            0.7238,
+            0.5241,
+            0.4471,
+            0.3897,
+            0.3897,
+            0.38
+          ],
+          "model": "claude-opus-4-20250514",
+          "release": "2025-05-22",
+          "share": 0.38,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.6268
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 1.3081
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 0.1603
+          },
+          "t_star_step_h": 0.7,
+          "tasks": 37
+        },
+        "claude-opus-4-5-20251101_unknown": {
+          "base": "claude-opus-4-5-20251101",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 159.73,
+          "hardest_solved_min": null,
+          "kappa": [
+            5.4667,
+            2.9818,
+            2.5231,
+            1.5619,
+            1.131,
+            0.9647,
+            0.841,
+            0.841,
+            0.82
+          ],
+          "model": "claude-opus-4-5-20251101_unknown",
+          "release": "2025-11-24",
+          "share": 0.82,
+          "source": "Opus 4.5 System Card",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 3.4203
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 7.0191
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 1.5112
+          },
+          "t_star_step_h": 2.6622,
+          "tasks": 40
+        },
+        "claude-opus-4-6_unknown": {
+          "base": "claude-opus-4-6",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 356.18,
+          "hardest_solved_min": null,
+          "kappa": [
+            6.2,
+            3.3818,
+            2.8615,
+            1.7714,
+            1.2828,
+            1.0941,
+            0.9538,
+            0.9538,
+            0.93
+          ],
+          "model": "claude-opus-4-6_unknown",
+          "release": "2026-02-05",
+          "share": 0.93,
+          "source": "Opus 4.6 System Card",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 6.3011
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 3.0299
+          },
+          "t_star_step_h": 6.1333,
+          "tasks": 40
+        },
+        "claude-sonnet-4-20250514": {
+          "base": "claude-sonnet-4-20250514",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 32.0,
+          "hardest_solved_min": null,
+          "kappa": [
+            2.3333,
+            1.2727,
+            1.0769,
+            0.6667,
+            0.4828,
+            0.4118,
+            0.359,
+            0.359,
+            0.35
+          ],
+          "model": "claude-sonnet-4-20250514",
+          "release": "2025-05-22",
+          "share": 0.35,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.5565
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 1.1651
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 0.1367
+          },
+          "t_star_step_h": 0.5972,
+          "tasks": 37
+        },
+        "claude-sonnet-4-5-20250929_unknown": {
+          "base": "claude-sonnet-4-5-20250929",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 75.0,
+          "hardest_solved_min": null,
+          "kappa": [
+            4.0,
+            2.1818,
+            1.8462,
+            1.1429,
+            0.8276,
+            0.7059,
+            0.6154,
+            0.6154,
+            0.6
+          ],
+          "model": "claude-sonnet-4-5-20250929_unknown",
+          "release": "2025-09-29",
+          "share": 0.6,
+          "source": "Opus 4.5 System Card",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 1.3321
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 3.0363
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 0.6686
+          },
+          "t_star_step_h": 1.3,
+          "tasks": 40
+        },
+        "gemini-1.5-pro-001-feb24": {
+          "base": "gemini-1.5-pro-001-feb24",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 5.12,
+          "hardest_solved_min": 9.0,
+          "kappa": [
+            0.5,
+            0.2727,
+            0.2308,
+            0.1429,
+            0.1034,
+            0.0882,
+            0.0769,
+            0.0769,
+            0.075
+          ],
+          "model": "gemini-1.5-pro-001-feb24",
+          "release": "2024-02-15",
+          "share": 0.075,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.1984
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1,
+          "tasks": 40
+        },
+        "gpt-4.5-preview-2025-02-27": {
+          "base": "gpt-4.5-preview-2025-02-27",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 9.0,
+          "hardest_solved_min": 11.0,
+          "kappa": [
+            1.1667,
+            0.6364,
+            0.5385,
+            0.3333,
+            0.2414,
+            0.2059,
+            0.1795,
+            0.1795,
+            0.175
+          ],
+          "model": "gpt-4.5-preview-2025-02-27",
+          "release": "2025-02-27",
+          "share": 0.175,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.1491
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.5873
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1511,
+          "tasks": 40
+        },
+        "gpt-4o-2024-11-20": {
+          "base": "gpt-4o-2024-11-20",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 6.0,
+          "hardest_solved_min": 11.0,
+          "kappa": [
+            0.8333,
+            0.4545,
+            0.3846,
+            0.2381,
+            0.1724,
+            0.1471,
+            0.1282,
+            0.1282,
+            0.125
+          ],
+          "model": "gpt-4o-2024-11-20",
+          "release": "2024-11-20",
+          "share": 0.125,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.3597
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1167,
+          "tasks": 40
+        },
+        "grok-4-0709": {
+          "base": "grok-4-0709",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 42.52,
+          "hardest_solved_min": null,
+          "kappa": [
+            2.8667,
+            1.5636,
+            1.3231,
+            0.819,
+            0.5931,
+            0.5059,
+            0.441,
+            0.441,
+            0.43
+          ],
+          "model": "grok-4-0709",
+          "release": "2025-07-09",
+          "share": 0.43,
+          "source": "Grok 4 Model Card",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.7494
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 1.5236
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 0.2146
+          },
+          "t_star_step_h": 0.7167,
+          "tasks": 40
+        },
+        "grok-4-1": {
+          "base": "grok-4-1",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 42.0,
+          "hardest_solved_min": null,
+          "kappa": [
+            2.6,
+            1.4182,
+            1.2,
+            0.7429,
+            0.5379,
+            0.4588,
+            0.4,
+            0.4,
+            0.39
+          ],
+          "model": "grok-4-1",
+          "release": "2025-11-17",
+          "share": 0.39,
+          "source": "Grok 4.1 Model Card",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.6507
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 1.3037
+          },
+          "t_star_lo": {
+            "kind": "found",
+            "t_star_h": 0.1786
+          },
+          "t_star_step_h": 0.7,
+          "tasks": 40
+        },
+        "grok-4-fast": {
+          "base": "grok-4-fast",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 20.0,
+          "hardest_solved_min": null,
+          "kappa": [
+            2.0,
+            1.0909,
+            0.9231,
+            0.5714,
+            0.4138,
+            0.3529,
+            0.3077,
+            0.3077,
+            0.3
+          ],
+          "model": "grok-4-fast",
+          "release": "2025-09-19",
+          "share": 0.3,
+          "source": "Grok 4 Fast Model Card",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.3587
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.9208
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.4861,
+          "tasks": 40
+        },
+        "o1-mini-2024-09-12_medium": {
+          "base": "o1-mini-2024-09-12",
+          "flag_inflated": true,
+          "fst_order_hardest_min": 6.0,
+          "hardest_solved_min": 11.0,
+          "kappa": [
+            0.6667,
+            0.3636,
+            0.3077,
+            0.1905,
+            0.1379,
+            0.1176,
+            0.1026,
+            0.1026,
+            0.1
+          ],
+          "model": "o1-mini-2024-09-12_medium",
+          "release": "2024-09-12",
+          "share": 0.1,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.25
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1,
+          "tasks": 40
+        },
+        "o1-preview-2024-09-12": {
+          "base": "o1-preview-2024-09-12",
+          "flag_inflated": false,
+          "fst_order_hardest_min": 6.0,
+          "hardest_solved_min": 11.0,
+          "kappa": [
+            0.6667,
+            0.3636,
+            0.3077,
+            0.1905,
+            0.1379,
+            0.1176,
+            0.1026,
+            0.1026,
+            0.1
+          ],
+          "model": "o1-preview-2024-09-12",
+          "release": "2024-09-12",
+          "share": 0.1,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.25
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1,
+          "tasks": 40
+        },
+        "o3-mini-2025-01-31_medium": {
+          "base": "o3-mini-2025-01-31",
+          "flag_inflated": true,
+          "fst_order_hardest_min": 9.63,
+          "hardest_solved_min": 42.0,
+          "kappa": [
+            1.5,
+            0.8182,
+            0.6923,
+            0.4286,
+            0.3103,
+            0.2647,
+            0.2308,
+            0.2308,
+            0.225
+          ],
+          "model": "o3-mini-2025-01-31_medium",
+          "release": "2025-01-31",
+          "share": 0.225,
+          "source": "Cybench leaderboard",
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 0.1987
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 0.741
+          },
+          "t_star_lo": {
+            "bound_h": 0.125,
+            "kind": "below"
+          },
+          "t_star_step_h": 0.1833,
+          "tasks": 40
+        }
+      },
+      "second_longest_h": 7.576666666666666,
+      "share_to_pass_second_longest": 0.975,
+      "trend_all": {
+        "curvature": 1.5750420879467992,
+        "curvature_hi": 12.01168504279059,
+        "curvature_lo": -4.3250311640560914,
+        "doubling_days": 113.79736298174657,
+        "doubling_days_hi": 352.0355694037094,
+        "doubling_days_lo": 56.70590710659159,
+        "draws_kept": [
+          1983,
+          2000
+        ],
+        "found_points": 13,
+        "models": 21,
+        "rho": 0.9131477113195314,
+        "rho_hi": 0.9650524080510976,
+        "rho_lo": 0.6471440961357862,
+        "share_draws_slope_not_positive": 0.005547150781643974,
+        "slope_ln_per_year": 2.2247616382826862
+      },
+      "trend_without_flagged": {
+        "curvature": 1.573934231036143,
+        "curvature_hi": 14.094845782329319,
+        "curvature_lo": -4.618660176433628,
+        "doubling_days": 116.15993362967389,
+        "doubling_days_hi": 395.7721329267909,
+        "doubling_days_lo": 53.54722937258247,
+        "draws_kept": [
+          1974,
+          2000
+        ],
+        "found_points": 12,
+        "models": 19,
+        "rho": 0.912981262980142,
+        "rho_hi": 0.9672020890647582,
+        "rho_lo": 0.6565673940255629,
+        "share_draws_slope_not_positive": 0.005065856129685917,
+        "slope_ln_per_year": 2.179512330875208
+      }
+    },
+    "forecasting": {
+      "baseline": {
+        "entries": 128,
+        "entries_at_or_above_supers": 0,
+        "superforecaster_ci": [
+          63.6,
+          70.4
+        ],
+        "superforecaster_median": 66.9,
+        "top_entry": {
+          "ci": [
+            59.8,
+            62.1
+          ],
+          "model": "o3-2025-04-16-scratchpad",
+          "overall": 61.0,
+          "p_supers_better": "<0.01",
+          "team": "ForecastBench"
+        },
+        "top_margin": -5.900000000000006
+      },
+      "metaculus": [
+        {
+          "bot_team_score": -11.3,
+          "ci": [
+            -21.8,
+            -0.7
+          ],
+          "comparison_kind": "team of professional forecasters (forecasts aggregated)",
+          "decided": "pros ahead",
+          "round": "Q3 2024",
+          "source": "metaculus2026futureeval",
+          "where": "Main Takeaways, Top Findings"
+        },
+        {
+          "bot_team_score": -8.9,
+          "ci": [
+            -18.8,
+            1.0
+          ],
+          "comparison_kind": "team of professional forecasters (forecasts aggregated)",
+          "decided": "not decided",
+          "round": "Q4 2024",
+          "source": "metaculus2026futureeval",
+          "where": "Main Takeaways, Top Findings"
+        },
+        {
+          "bot_team_score": -17.7,
+          "ci": [
+            -28.3,
+            -7.0
+          ],
+          "comparison_kind": "team of professional forecasters (forecasts aggregated)",
+          "decided": "pros ahead",
+          "round": "Q1 2025",
+          "source": "metaculus2026futureeval",
+          "where": "Main Takeaways, Top Findings"
+        },
+        {
+          "bot_team_score": -20.03,
+          "ci": [
+            -28.63,
+            -11.41
+          ],
+          "comparison_kind": "team of professional forecasters (forecasts aggregated)",
+          "decided": "pros ahead",
+          "round": "Q2 2025",
+          "source": "metaculus2026futureeval",
+          "where": "Main Takeaways, Top Findings; Pros vs. bots results (93 questions)"
+        },
+        {
+          "bot_team_score": -1.25,
+          "ci": [
+            -4.87,
+            2.37
+          ],
+          "comparison_kind": "team of professional forecasters who could see and discuss each other's forecasts (aggregated)",
+          "decided": "not decided",
+          "round": "Spring 2026",
+          "source": "metaculus2026futureeval",
+          "where": "Main Takeaways, Top Findings; Methodology: Data Collection (bots forecast in the last 1.5 hours) and Pro Tournament (Pros had 3 days)"
+        }
+      ],
+      "metaculus_time": {
+        "bots_h": 1.5,
+        "pros_days": 3.0,
+        "pros_over_bots": 48.0
+      },
+      "parity_dates_published": {
+        "dataset": {
+          "tournament": {
+            "intersection": "September 2026",
+            "lower": "September 2026",
+            "upper": "June 2027"
+          }
+        },
+        "market": {
+          "tournament": {
+            "intersection": "May 2028",
+            "lower": "October 2026",
+            "upper": "April 2031"
+          }
+        },
+        "overall": {
+          "tournament": {
+            "intersection": "May 2027",
+            "lower": "September 2026",
+            "upper": "March 2028"
+          }
+        }
+      },
+      "reproduction": {
+        "all_match": true,
+        "metaculus_lead": [
+          1.25,
+          1.25
+        ],
+        "metaculus_p": [
+          0.247,
+          0.247
+        ],
+        "metaculus_questions": [
+          99.0,
+          99.0
+        ],
+        "supers_index": [
+          68.1,
+          68.1
+        ],
+        "top_index": [
+          69.5,
+          69.5
+        ]
+      },
+      "tournament": {
+        "entries": 526,
+        "entries_at_or_above_supers": 10,
+        "superforecaster_ci": [
+          66.6,
+          69.7
+        ],
+        "superforecaster_median": 68.1,
+        "top_entry": {
+          "ci": [
+            68.1,
+            70.9
+          ],
+          "model": "model-4",
+          "overall": 69.5,
+          "p_supers_better": "0.91",
+          "team": "Anonymous 24"
+        },
+        "top_margin": 1.4000000000000057
+      }
+    },
+    "ledger_inputs": {
+      "cog-cybench-hardest-hours": 24.9,
+      "cog-cybench-tasks": 40.0,
+      "cog-forecast-super-index": 68.1,
+      "cog-forecast-top-index": 69.5,
+      "cog-metaculus-p": 0.247,
+      "cog-metaculus-pro-lead": 1.25,
+      "cog-metaculus-questions": 99.0,
+      "cog-mlebench-competitions": 75.0,
+      "cog-rebench-ai-over-human-2h": 4.0,
+      "cog-rebench-budget-long": 32.0,
+      "cog-rebench-budget-mid": 8.0,
+      "cog-rebench-budget-short": 2.0,
+      "cog-rebench-cost-ratio": 15.08130081300813,
+      "cog-rebench-human-over-ai-32h": 2.0,
+      "cog-rebench-run-hours": 8.0
+    },
+    "mlebench": {
+      "best": "AIBuildAI",
+      "best_2024": "models-o1-preview-aide",
+      "best_boot": {
+        "above_median": [
+          0.6132222222222222,
+          0.8133333333333334
+        ],
+        "gold": [
+          0.17333333333333334,
+          0.35111111111111115
+        ],
+        "medal": [
+          0.5288888888888889,
+          0.7377777777777778
+        ]
+      },
+      "board_reproduction": {
+        "board_rows": 29,
+        "entries": 27,
+        "entries_within_half_point": 27,
+        "largest_gap": 0.0040000000000000036,
+        "note": "matched by value, not name; the board pads incomplete seeds with failures, as here"
+      },
+      "comparable": [
+        "AIBuildAI",
+        "AIRA-dojo",
+        "Famou-Agent",
+        "Famou-Agent-2.0",
+        "Leeroo",
+        "MARS",
+        "MARS+",
+        "MLE-STAR-Pro-1.0",
+        "MLE-STAR-Pro-1.5",
+        "MLEvolve",
+        "PiEvolve_12hrs",
+        "PiEvolve_24hrs",
+        "Thesis",
+        "deepseek-r1-InternAgent",
+        "deepseek-r1-ML-Master",
+        "deepseek-v3.2-speciale-ML-Master-2.0",
+        "gpt-5-R&D-Agent",
+        "models-claude35sonnet-aide",
+        "models-llama-3.1-405B-instruct-aide",
+        "models-o1-preview-aide",
+        "multi-agent-Neo",
+        "o1-preview-R&D-Agent",
+        "o3-gpt-4.1-R&D-Agent",
+        "operand-ensemble",
+        "scaffolding-gpt4o-aide",
+        "scaffolding-gpt4o-mlab",
+        "scaffolding-gpt4o-opendevin"
+      ],
+      "experiments": {
+        "AIBuildAI": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2026-03-04",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.7111,
+          "share_gold": 0.2578,
+          "share_medal": 0.6311
+        },
+        "AIRA-dojo": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": null,
+          "groups": 20,
+          "hours": 24,
+          "reports": 20,
+          "share_above_median": 0.4547,
+          "share_gold": 0.1733,
+          "share_medal": 0.316
+        },
+        "Disarray": {
+          "comparable": false,
+          "competitions_with_runs": 75,
+          "date": "2026-02-03",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.84,
+          "share_gold": 0.2756,
+          "share_medal": 0.7778
+        },
+        "Famou-Agent": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-09-24",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.5156,
+          "share_gold": 0.2267,
+          "share_medal": 0.4356
+        },
+        "Famou-Agent-2.0": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-12-26",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.6756,
+          "share_gold": 0.2756,
+          "share_medal": 0.5956
+        },
+        "Leeroo": {
+          "comparable": true,
+          "competitions_with_runs": 40,
+          "date": "2025-12-07",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.5067,
+          "share_gold": 0.2133,
+          "share_medal": 0.5067
+        },
+        "LoongFlow": {
+          "comparable": false,
+          "competitions_with_runs": 48,
+          "date": "2026-02-09",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.64,
+          "share_gold": 0.2844,
+          "share_medal": 0.64
+        },
+        "MARS": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2026-01-25",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.6578,
+          "share_gold": 0.3111,
+          "share_medal": 0.56
+        },
+        "MARS+": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2026-02-17",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.7422,
+          "share_gold": 0.3378,
+          "share_medal": 0.6267
+        },
+        "MLE-STAR-Pro-1.0": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-11-03",
+          "groups": 3,
+          "hours": 12,
+          "reports": 3,
+          "share_above_median": 0.52,
+          "share_gold": 0.1911,
+          "share_medal": 0.3867
+        },
+        "MLE-STAR-Pro-1.5": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-11-25",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.5289,
+          "share_gold": 0.1911,
+          "share_medal": 0.44
+        },
+        "MLEvolve": {
+          "comparable": true,
+          "competitions_with_runs": 74,
+          "date": "2026-02-12",
+          "groups": 3,
+          "hours": 12,
+          "reports": 3,
+          "share_above_median": 0.7289,
+          "share_gold": 0.32,
+          "share_medal": 0.6133
+        },
+        "PiEvolve_12hrs": {
+          "comparable": true,
+          "competitions_with_runs": 53,
+          "date": "2026-01-06",
+          "groups": 3,
+          "hours": 12,
+          "reports": 3,
+          "share_above_median": 0.6044,
+          "share_gold": 0.2844,
+          "share_medal": 0.52
+        },
+        "PiEvolve_24hrs": {
+          "comparable": true,
+          "competitions_with_runs": 53,
+          "date": "2026-01-04",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.6467,
+          "share_gold": 0.3489,
+          "share_medal": 0.6156
+        },
+        "Thesis": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-11-09",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.56,
+          "share_gold": 0.2,
+          "share_medal": 0.4844
+        },
+        "biggpu-gpt4o-aide": {
+          "comparable": false,
+          "competitions_with_runs": 75,
+          "date": "2024-09-26",
+          "groups": 5,
+          "hours": 24,
+          "reports": 5,
+          "share_above_median": 0.1376,
+          "share_gold": 0.052,
+          "share_medal": 0.0942
+        },
+        "cpu-gpt4o-aide": {
+          "comparable": false,
+          "competitions_with_runs": 75,
+          "date": "2024-10-01",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.146,
+          "share_gold": 0.056,
+          "share_medal": 0.0916
+        },
+        "deepseek-r1-InternAgent": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-09-12",
+          "groups": 3,
+          "hours": 12,
+          "reports": 3,
+          "share_above_median": 0.4844,
+          "share_gold": 0.1867,
+          "share_medal": 0.3644
+        },
+        "deepseek-r1-ML-Master": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-05-30",
+          "groups": 3,
+          "hours": 12,
+          "reports": 3,
+          "share_above_median": 0.4489,
+          "share_gold": 0.1733,
+          "share_medal": 0.2933
+        },
+        "deepseek-v3.2-speciale-ML-Master-2.0": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-12-15",
+          "groups": 3,
+          "hours": null,
+          "reports": 3,
+          "share_above_median": 0.6311,
+          "share_gold": 0.1956,
+          "share_medal": 0.5644
+        },
+        "extratime-gpt4o-aide": {
+          "comparable": false,
+          "competitions_with_runs": 75,
+          "date": "2024-10-01",
+          "groups": 2,
+          "hours": 100,
+          "reports": 2,
+          "share_above_median": 0.1807,
+          "share_gold": 0.074,
+          "share_medal": 0.122
+        },
+        "gpt-5-R&D-Agent": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-09-16",
+          "groups": 3,
+          "hours": 12,
+          "reports": 3,
+          "share_above_median": 0.4044,
+          "share_gold": 0.1644,
+          "share_medal": 0.3511
+        },
+        "models-claude35sonnet-aide": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2024-09-19",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.1264,
+          "share_gold": 0.0427,
+          "share_medal": 0.0749
+        },
+        "models-llama-3.1-405B-instruct-aide": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2024-09-22",
+          "groups": 2,
+          "hours": 24,
+          "reports": 2,
+          "share_above_median": 0.0687,
+          "share_gold": 0.0187,
+          "share_medal": 0.0293
+        },
+        "models-o1-preview-aide": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2024-09-21",
+          "groups": 5,
+          "hours": 24,
+          "reports": 5,
+          "share_above_median": 0.2968,
+          "share_gold": 0.0931,
+          "share_medal": 0.1698
+        },
+        "multi-agent-Neo": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-07-28",
+          "groups": 3,
+          "hours": 36,
+          "reports": 3,
+          "share_above_median": 0.4,
+          "share_gold": 0.1378,
+          "share_medal": 0.3422
+        },
+        "o1-preview-R&D-Agent": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-05-09",
+          "groups": 5,
+          "hours": 24,
+          "reports": 5,
+          "share_above_median": 0.328,
+          "share_gold": 0.144,
+          "share_medal": 0.224
+        },
+        "o3-gpt-4.1-R&D-Agent": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2025-08-08",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.3956,
+          "share_gold": 0.1733,
+          "share_medal": 0.3022
+        },
+        "obfuscation-gpt4o-aide": {
+          "comparable": false,
+          "competitions_with_runs": 75,
+          "date": "2024-09-27",
+          "groups": 4,
+          "hours": 24,
+          "reports": 4,
+          "share_above_median": 0.1435,
+          "share_gold": 0.049,
+          "share_medal": 0.0813
+        },
+        "operand-ensemble": {
+          "comparable": true,
+          "competitions_with_runs": 53,
+          "date": "2025-09-09",
+          "groups": 3,
+          "hours": 24,
+          "reports": 3,
+          "share_above_median": 0.4267,
+          "share_gold": 0.1156,
+          "share_medal": 0.3956
+        },
+        "scaffolding-gpt4o-aide": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2024-09-22",
+          "groups": 14,
+          "hours": 24,
+          "reports": 14,
+          "share_above_median": 0.1444,
+          "share_gold": 0.0498,
+          "share_medal": 0.0874
+        },
+        "scaffolding-gpt4o-mlab": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2024-09-19",
+          "groups": 4,
+          "hours": 24,
+          "reports": 4,
+          "share_above_median": 0.0219,
+          "share_gold": 0.0074,
+          "share_medal": 0.0124
+        },
+        "scaffolding-gpt4o-opendevin": {
+          "comparable": true,
+          "competitions_with_runs": 75,
+          "date": "2024-09-20",
+          "groups": 4,
+          "hours": 24,
+          "reports": 4,
+          "share_above_median": 0.0744,
+          "share_gold": 0.0267,
+          "share_medal": 0.0478
+        }
+      },
+      "hourly_extratime": {
+        "1": {
+          "above_median": 0.0817,
+          "any_medal": 0.0366,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0056,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "100": {
+          "above_median": 0.1803,
+          "any_medal": 0.1183,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0676,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "16": {
+          "above_median": 0.1296,
+          "any_medal": 0.0901,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0507,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "2": {
+          "above_median": 0.093,
+          "any_medal": 0.0563,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0254,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "24": {
+          "above_median": 0.1324,
+          "any_medal": 0.0958,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0592,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "32": {
+          "above_median": 0.1352,
+          "any_medal": 0.0901,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0535,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "4": {
+          "above_median": 0.0958,
+          "any_medal": 0.0648,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0366,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "64": {
+          "above_median": 0.1577,
+          "any_medal": 0.107,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.062,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        },
+        "8": {
+          "above_median": 0.1183,
+          "any_medal": 0.0761,
+          "competition_seed_entries": 355,
+          "experiment": "extratime-gpt4o-aide",
+          "gold": 0.0479,
+          "group": "2024-09-23T14-55-33-GMT_run-group_aide"
+        }
+      },
+      "rho_date_medal": 0.9722982784752668,
+      "rho_date_medal_hi": 0.9910714285714285,
+      "rho_date_medal_lo": 0.9072708526291562,
+      "undated": [
+        "AIRA-dojo"
+      ]
+    },
+    "rebench_reproduction": {
+      "consistent_below_8h": true,
+      "here_2024_models": {
+        "Claude 3 Opus (Inspect)": {
+          "kappa_32h": 0.0145,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.5 Sonnet (New) (Inspect)": {
+          "kappa_32h": 0.4745,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.5 Sonnet (Old) (Inspect)": {
+          "kappa_32h": 0.5051,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 0314": {
+          "kappa_32h": 0.0792,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 1106 (Inspect)": {
+          "kappa_32h": 0.0,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 Turbo (Inspect)": {
+          "kappa_32h": 0.0,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4o (Inspect)": {
+          "kappa_32h": 0.0002,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o1 (Inspect)": {
+          "kappa_32h": 0.6059,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o1-preview": {
+          "kappa_32h": 0.2053,
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        }
+      },
+      "max_kappa_32h_2024": 0.6059,
+      "paper": {
+        "kappa_2h": 4.0,
+        "kappa_32h": 0.5,
+        "note": "the paper puts humans narrowly ahead at 8 h, so its largest crossing lies in this bracket",
+        "t_star_bracket_h": [
+          2.0,
+          8.0
+        ]
+      }
+    },
+    "rebench_th10_unequal_allowance": {
+      "budgets_h": [
+        8.0,
+        16.0,
+        32.0
+      ],
+      "dropped_incomplete": [],
+      "environments": [
+        "ai_rd_fix_embedding",
+        "ai_rd_nanogpt_chat_rl",
+        "ai_rd_optimize_llm_foundry",
+        "ai_rd_restricted_mlm",
+        "ai_rd_rust_codecontests_inference",
+        "ai_rd_small_scaling_law",
+        "ai_rd_triton_cumsum"
+      ],
+      "human_best_of_k": [
+        0.6959,
+        0.9009,
+        0.9901
+      ],
+      "human_runs_per_env": {
+        "ai_rd_fix_embedding": 15,
+        "ai_rd_nanogpt_chat_rl": 13,
+        "ai_rd_optimize_llm_foundry": 17,
+        "ai_rd_restricted_mlm": 11,
+        "ai_rd_rust_codecontests_inference": 16,
+        "ai_rd_small_scaling_law": 10,
+        "ai_rd_triton_cumsum": 9
+      },
+      "kappa_ceiling": [
+        1.437,
+        1.11,
+        1.01
+      ],
+      "models": {
+        "Claude 3 Opus": {
+          "agent_best_of_k": [
+            0.0748,
+            0.0927,
+            0.1054
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1075,
+            0.1029,
+            0.1064
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.1821,
+              0.1407,
+              0.128
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-03-04",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 9,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 7,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.5 Sonnet (New)": {
+          "agent_best_of_k": [
+            0.3451,
+            0.4754,
+            0.5748
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.4959,
+            0.5277,
+            0.5806
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.9656,
+              0.7459,
+              0.6787
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-10-22",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.5 Sonnet (Old)": {
+          "agent_best_of_k": [
+            0.1543,
+            0.2356,
+            0.3379
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.2217,
+            0.2616,
+            0.3412
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.6429,
+              0.4966,
+              0.4519
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-06-20",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.7 Sonnet": {
+          "agent_best_of_k": [
+            0.3117,
+            0.4274,
+            0.5719
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.448,
+            0.4745,
+            0.5777
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.0387,
+              0.8023,
+              0.7301
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 8.8585
+            }
+          },
+          "release": "2025-02-24",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 10,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 13,
+            "ai_rd_restricted_mlm": 11,
+            "ai_rd_rust_codecontests_inference": 10,
+            "ai_rd_small_scaling_law": 9,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 4 Opus": {
+          "agent_best_of_k": [
+            0.4365,
+            0.6012,
+            0.7226
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.6273,
+            0.6674,
+            0.7298
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.1108,
+              0.858,
+              0.7807
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 10.6069
+            }
+          },
+          "release": "2025-05-22",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_optimize_llm_foundry": 6,
+            "ai_rd_restricted_mlm": 5,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 5,
+            "ai_rd_triton_cumsum": 9
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 4 Sonnet": {
+          "agent_best_of_k": [
+            0.3961,
+            0.5818,
+            0.7321
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.5693,
+            0.6459,
+            0.7394
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.1886,
+              0.9181,
+              0.8354
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 12.7206
+            }
+          },
+          "release": "2025-05-22",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 7,
+            "ai_rd_nanogpt_chat_rl": 3,
+            "ai_rd_optimize_llm_foundry": 6,
+            "ai_rd_restricted_mlm": 6,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 9
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 4.1 Opus": {
+          "agent_best_of_k": [
+            0.5875,
+            0.8023,
+            0.9307
+          ],
+          "allowance_h": [
+            20.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.8443,
+            0.8906,
+            0.94
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.3671,
+              1.056,
+              0.9608
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 23.8659
+            }
+          },
+          "release": "2025-08-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 5,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_optimize_llm_foundry": 6,
+            "ai_rd_restricted_mlm": 6,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 6,
+            "ai_rd_triton_cumsum": 6
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude Opus 4.5": {
+          "agent_best_of_k": [
+            0.8315,
+            0.9913,
+            1.0
+          ],
+          "allowance_h": [
+            20.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            true
+          ],
+          "censored_runs": true,
+          "kappa": [
+            1.1948,
+            1.1004,
+            1.01
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.437,
+              1.11,
+              1.01
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 32.0,
+              "kind": "above"
+            }
+          },
+          "release": "2025-11-24",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 2,
+            "ai_rd_nanogpt_chat_rl": 3,
+            "ai_rd_optimize_llm_foundry": 4,
+            "ai_rd_restricted_mlm": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 32.0,
+            "kind": "above"
+          }
+        },
+        "Claude Sonnet 4.5": {
+          "agent_best_of_k": [
+            0.6839,
+            0.8447,
+            0.9554
+          ],
+          "allowance_h": [
+            20.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.9828,
+            0.9376,
+            0.9649
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.437,
+              1.11,
+              1.01
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 32.0,
+              "kind": "above"
+            }
+          },
+          "release": "2025-09-29",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_optimize_llm_foundry": 6,
+            "ai_rd_restricted_mlm": 6,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 6,
+            "ai_rd_triton_cumsum": 6
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "DeepSeek-R1": {
+          "agent_best_of_k": [
+            0.1558,
+            0.2317,
+            0.3078
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.2239,
+            0.2572,
+            0.3108
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.537,
+              0.4148,
+              0.3775
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2025-01-20",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 9,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "DeepSeek-R1-0528": {
+          "agent_best_of_k": [
+            0.2653,
+            0.4027,
+            0.5635
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.3812,
+            0.447,
+            0.5692
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.9947,
+              0.7683,
+              0.6991
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2025-05-28",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 9,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 7,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "DeepSeek-V3": {
+          "agent_best_of_k": [
+            0.1034,
+            0.142,
+            0.2043
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1485,
+            0.1576,
+            0.2064
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.4283,
+              0.3309,
+              0.3011
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-12-26",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "DeepSeek-V3-0324": {
+          "agent_best_of_k": [
+            0.1177,
+            0.166,
+            0.243
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1692,
+            0.1843,
+            0.2455
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.5141,
+              0.3971,
+              0.3613
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2025-03-24",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-2": {
+          "agent_best_of_k": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "allowance_h": [],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2019-02-14",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 1,
+            "ai_rd_nanogpt_chat_rl": 1,
+            "ai_rd_optimize_llm_foundry": 1,
+            "ai_rd_restricted_mlm": 1,
+            "ai_rd_rust_codecontests_inference": 1,
+            "ai_rd_small_scaling_law": 1,
+            "ai_rd_triton_cumsum": 1
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 0125": {
+          "agent_best_of_k": [
+            0.1161,
+            0.1656,
+            0.2217
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1669,
+            0.1838,
+            0.224
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.4034,
+              0.3116,
+              0.2835
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-01-25",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 0314": {
+          "agent_best_of_k": [
+            0.1041,
+            0.1225,
+            0.1359
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1496,
+            0.1359,
+            0.1373
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.2117,
+              0.1635,
+              0.1488
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2023-03-14",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 7,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 1106": {
+          "agent_best_of_k": [
+            0.1172,
+            0.1526,
+            0.2164
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1685,
+            0.1694,
+            0.2186
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.4725,
+              0.365,
+              0.3321
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2023-11-06",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 Turbo": {
+          "agent_best_of_k": [
+            0.0817,
+            0.0988,
+            0.1162
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1175,
+            0.1097,
+            0.1173
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.1978,
+              0.1528,
+              0.139
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-04-09",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 7
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4o": {
+          "agent_best_of_k": [
+            0.0944,
+            0.1289,
+            0.1698
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.1356,
+            0.1431,
+            0.1715
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.3429,
+              0.2648,
+              0.241
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-05-13",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 7,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-5": {
+          "agent_best_of_k": [
+            0.6536,
+            0.7838,
+            0.8585
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.9393,
+            0.87,
+            0.8671
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.346,
+              1.0397,
+              0.9461
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 21.2983
+            }
+          },
+          "release": "2025-08-07",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 12,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_optimize_llm_foundry": 4,
+            "ai_rd_restricted_mlm": 7,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 7,
+            "ai_rd_triton_cumsum": 6
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-5.1-Codex-Max": {
+          "agent_best_of_k": [
+            0.551,
+            0.7138,
+            0.8469
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.7918,
+            0.7923,
+            0.8554
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.2171,
+              0.9401,
+              0.8554
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 13.5557
+            }
+          },
+          "release": "2025-11-19",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_optimize_llm_foundry": 4,
+            "ai_rd_restricted_mlm": 4,
+            "ai_rd_rust_codecontests_inference": 3,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Gemini 2.5 Pro Preview": {
+          "agent_best_of_k": [
+            0.1686,
+            0.2565,
+            0.379
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.2423,
+            0.2847,
+            0.3828
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.7311,
+              0.5648,
+              0.5139
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2025-06-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 7,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Grok 4": {
+          "agent_best_of_k": [
+            0.6618,
+            0.8117,
+            0.9295
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.951,
+            0.901,
+            0.9389
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.437,
+              1.11,
+              1.01
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 32.0,
+              "kind": "above"
+            }
+          },
+          "release": "2025-07-09",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 19,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 16,
+            "ai_rd_restricted_mlm": 7,
+            "ai_rd_rust_codecontests_inference": 9,
+            "ai_rd_small_scaling_law": 10,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Kimi K2 Thinking": {
+          "agent_best_of_k": [
+            0.3714,
+            0.5131,
+            0.6382
+          ],
+          "allowance_h": [
+            20.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.5337,
+            0.5696,
+            0.6446
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.0025,
+              0.7744,
+              0.7046
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 8.0544
+            }
+          },
+          "release": "2025-11-06",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_optimize_llm_foundry": 6,
+            "ai_rd_restricted_mlm": 6,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 6,
+            "ai_rd_triton_cumsum": 5
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Qwen2-72B": {
+          "agent_best_of_k": [
+            0.078,
+            0.0926,
+            0.1059
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.1121,
+            0.1028,
+            0.107
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.1762,
+              0.1361,
+              0.1238
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-06-07",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 2,
+            "ai_rd_nanogpt_chat_rl": 11,
+            "ai_rd_optimize_llm_foundry": 10,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 2,
+            "ai_rd_small_scaling_law": 12,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Qwen2.5-72B": {
+          "agent_best_of_k": [
+            0.0662,
+            0.0779,
+            0.0906
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.0951,
+            0.0865,
+            0.0915
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.1443,
+              0.1114,
+              0.1014
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-09-19",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 11,
+            "ai_rd_optimize_llm_foundry": 5,
+            "ai_rd_restricted_mlm": 9,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "davinci-002 (GPT-3)": {
+          "agent_best_of_k": [
+            0.0966,
+            0.1235,
+            0.1403
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.1389,
+            0.1371,
+            0.1417
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.2135,
+              0.1649,
+              0.1501
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2020-05-28",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 5,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 1
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "gpt-3.5-turbo-instruct": {
+          "agent_best_of_k": [
+            0.0986,
+            0.1087,
+            0.1151
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.1416,
+            0.1207,
+            0.1163
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.1691,
+              0.1306,
+              0.1188
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2022-03-15",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 2,
+            "ai_rd_nanogpt_chat_rl": 5,
+            "ai_rd_optimize_llm_foundry": 2,
+            "ai_rd_restricted_mlm": 3,
+            "ai_rd_rust_codecontests_inference": 7,
+            "ai_rd_small_scaling_law": 3,
+            "ai_rd_triton_cumsum": 2
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "gpt-oss-120b": {
+          "agent_best_of_k": [
+            0.2943,
+            0.4478,
+            0.5694
+          ],
+          "allowance_h": [
+            20.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.4229,
+            0.4971,
+            0.5751
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.8514,
+              0.6577,
+              0.5984
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2025-08-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_optimize_llm_foundry": 5,
+            "ai_rd_restricted_mlm": 6,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 6,
+            "ai_rd_triton_cumsum": 6
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o1": {
+          "agent_best_of_k": [
+            0.1406,
+            0.2109,
+            0.2876
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.202,
+            0.2341,
+            0.2905
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.5107,
+              0.3945,
+              0.3589
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-12-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 8,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o1-preview": {
+          "agent_best_of_k": [
+            0.1492,
+            0.2219,
+            0.3371
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.2144,
+            0.2463,
+            0.3405
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.6696,
+              0.5173,
+              0.4707
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-09-12",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 7,
+            "ai_rd_restricted_mlm": 7,
+            "ai_rd_rust_codecontests_inference": 7,
+            "ai_rd_small_scaling_law": 7,
+            "ai_rd_triton_cumsum": 7
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o3": {
+          "agent_best_of_k": [
+            0.455,
+            0.6747,
+            0.7559
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.6539,
+            0.7489,
+            0.7635
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.0988,
+              0.8488,
+              0.7723
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 10.3035
+            }
+          },
+          "release": "2025-04-16",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 5,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_optimize_llm_foundry": 4,
+            "ai_rd_restricted_mlm": 4,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 2,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o4-mini": {
+          "agent_best_of_k": [
+            0.4759,
+            0.6068,
+            0.6889
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.6839,
+            0.6736,
+            0.6958
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.0797,
+              0.834,
+              0.7589
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 9.8291
+            }
+          },
+          "release": "2025-04-16",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 5,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_optimize_llm_foundry": 6,
+            "ai_rd_restricted_mlm": 8,
+            "ai_rd_rust_codecontests_inference": 7,
+            "ai_rd_small_scaling_law": 2,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        }
+      }
+    },
+    "rebench_th11": {
+      "budgets_h": [
+        8.0,
+        16.0,
+        32.0
+      ],
+      "dropped_incomplete": [],
+      "environments": [
+        "ai_rd_fix_embedding",
+        "ai_rd_nanogpt_chat_rl",
+        "ai_rd_rust_codecontests_inference",
+        "ai_rd_small_scaling_law",
+        "ai_rd_triton_cumsum"
+      ],
+      "human_best_of_k": [
+        0.7196,
+        0.9159,
+        0.9942
+      ],
+      "human_runs_per_env": {
+        "ai_rd_fix_embedding": 15,
+        "ai_rd_nanogpt_chat_rl": 14,
+        "ai_rd_rust_codecontests_inference": 23,
+        "ai_rd_small_scaling_law": 10,
+        "ai_rd_triton_cumsum": 9
+      },
+      "kappa_ceiling": [
+        1.3897,
+        1.0918,
+        1.0059
+      ],
+      "models": {
+        "Claude 3 Opus (Inspect)": {
+          "agent_best_of_k": [
+            0.0036,
+            0.0072,
+            0.0144
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.005,
+            0.0079,
+            0.0145
+          ],
+          "kappa8_interval": [
+            0.0,
+            0.0253
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.02,
+              0.0157,
+              0.0145
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-03-04",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.5 Sonnet (New) (Inspect)": {
+          "agent_best_of_k": [
+            0.2466,
+            0.3796,
+            0.4717
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.3427,
+            0.4144,
+            0.4745
+          ],
+          "kappa8_interval": [
+            0.1072,
+            0.7172
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.6556,
+              0.515,
+              0.4745
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-10-22",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.5 Sonnet (Old) (Inspect)": {
+          "agent_best_of_k": [
+            0.2588,
+            0.3971,
+            0.5021
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.3597,
+            0.4335,
+            0.5051
+          ],
+          "kappa8_interval": [
+            0.0387,
+            0.8542
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.6978,
+              0.5482,
+              0.5051
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-06-20",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 3.7 Sonnet (Inspect)": {
+          "agent_best_of_k": [
+            0.4418,
+            0.6026,
+            0.7579
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.614,
+            0.6579,
+            0.7624
+          ],
+          "kappa8_interval": [
+            0.3727,
+            0.9122
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.0533,
+              0.8275,
+              0.7624
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 9.2882
+            }
+          },
+          "release": "2025-02-24",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 4 Opus (Inspect)": {
+          "agent_best_of_k": [
+            0.4988,
+            0.7071,
+            0.8143
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.6932,
+            0.772,
+            0.8191
+          ],
+          "kappa8_interval": [
+            0.3341,
+            1.1353
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.1317,
+              0.8891,
+              0.8191
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 11.4146
+            }
+          },
+          "release": "2025-05-22",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude 4.1 Opus (Inspect)": {
+          "agent_best_of_k": [
+            0.5782,
+            0.6924,
+            0.7894
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.8035,
+            0.7559,
+            0.7941
+          ],
+          "kappa8_interval": [
+            0.4568,
+            1.2554
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.0971,
+              0.8619,
+              0.7941
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 10.4409
+            }
+          },
+          "release": "2025-08-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 21.6937
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude Opus 4.5 (Inspect)": {
+          "agent_best_of_k": [
+            0.7419,
+            0.8752,
+            0.9781
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            1.031,
+            0.9555,
+            0.9838
+          ],
+          "kappa8_interval": [
+            0.6646,
+            1.4576
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.3593,
+              1.0679,
+              0.9838
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 27.8775
+            }
+          },
+          "release": "2025-11-24",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 10.5676
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Claude Opus 4.6 (Inspect)": {
+          "agent_best_of_k": [
+            0.9714,
+            1.0,
+            1.0
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            true,
+            true
+          ],
+          "censored_runs": false,
+          "kappa": [
+            1.35,
+            1.0918,
+            1.0059
+          ],
+          "kappa8_interval": [
+            1.1383,
+            1.728
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.3897,
+              1.0918,
+              1.0059
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 32.0,
+              "kind": "above"
+            }
+          },
+          "release": "2026-02-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 7,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "bound_h": 32.0,
+            "kind": "above"
+          }
+        },
+        "GPT-4 0314": {
+          "agent_best_of_k": [
+            0.0375,
+            0.059,
+            0.0788
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.0521,
+            0.0644,
+            0.0792
+          ],
+          "kappa8_interval": [
+            0.0,
+            0.1745
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.1232,
+              0.0968,
+              0.0892
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2023-03-14",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 6,
+            "ai_rd_triton_cumsum": 6
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 1106 (Inspect)": {
+          "agent_best_of_k": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": true,
+          "kappa": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "kappa8_interval": [
+            0.0,
+            0.0
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2023-11-06",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 3,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4 Turbo (Inspect)": {
+          "agent_best_of_k": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "kappa8_interval": [
+            0.0,
+            0.0
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-04-09",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-4o (Inspect)": {
+          "agent_best_of_k": [
+            0.0001,
+            0.0001,
+            0.0002
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.0001,
+            0.0001,
+            0.0002
+          ],
+          "kappa8_interval": [
+            0.0,
+            0.0004
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.0003,
+              0.0002,
+              0.0002
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-05-13",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-5 (Inspect)": {
+          "agent_best_of_k": [
+            0.7018,
+            0.8489,
+            0.9567
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.9753,
+            0.9269,
+            0.9624
+          ],
+          "kappa8_interval": [
+            0.5751,
+            1.4783
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.3296,
+              1.0446,
+              0.9624
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 23.1393
+            }
+          },
+          "release": "2025-08-07",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-5.1-Codex-Max (Inspect)": {
+          "agent_best_of_k": [
+            0.7813,
+            0.9166,
+            0.9721
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            1.0858,
+            1.0008,
+            0.9778
+          ],
+          "kappa8_interval": [
+            0.7903,
+            1.4763
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.3897,
+              1.0918,
+              1.0059
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 32.0,
+              "kind": "above"
+            }
+          },
+          "release": "2025-11-19",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 6,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 6,
+            "ai_rd_triton_cumsum": 6
+          },
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 16.3778
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-5.2": {
+          "agent_best_of_k": [
+            0.4966,
+            0.6533,
+            0.8173
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.6902,
+            0.7133,
+            0.8221
+          ],
+          "kappa8_interval": [
+            0.2351,
+            1.3445
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.1358,
+              0.8924,
+              0.8221
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 11.5348
+            }
+          },
+          "release": "2025-12-11",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 28.9625
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "GPT-5.3-Codex": {
+          "agent_best_of_k": [
+            0.4322,
+            0.5855,
+            0.729
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.6006,
+            0.6393,
+            0.7332
+          ],
+          "kappa8_interval": [
+            0.1991,
+            1.0586
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.1036,
+              0.867,
+              0.7988
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 10.6184
+            }
+          },
+          "release": "2026-02-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 8,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_rust_codecontests_inference": 8,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "kind": "found",
+            "t_star_h": 22.1303
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "Gemini 3 Pro": {
+          "agent_best_of_k": [
+            0.7224,
+            0.8708,
+            0.9289
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            1.0039,
+            0.9507,
+            0.9343
+          ],
+          "kappa8_interval": [
+            0.565,
+            1.5011
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.2909,
+              1.0142,
+              0.9343
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 18.0185
+            }
+          },
+          "release": "2025-11-18",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "kind": "found",
+            "t_star_h": 8.4115
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o1 (Inspect)": {
+          "agent_best_of_k": [
+            0.222,
+            0.3934,
+            0.6023
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.3085,
+            0.4295,
+            0.6059
+          ],
+          "kappa8_interval": [
+            0.0503,
+            0.7491
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.8371,
+              0.6577,
+              0.6059
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-12-05",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o1-preview": {
+          "agent_best_of_k": [
+            0.0686,
+            0.1236,
+            0.2041
+          ],
+          "allowance_h": [
+            10.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.0953,
+            0.135,
+            0.2053
+          ],
+          "kappa8_interval": [
+            0.0103,
+            0.2505
+          ],
+          "matched_time": false,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              0.4023,
+              0.3161,
+              0.2912
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "bound_h": 8.0,
+              "kind": "below"
+            }
+          },
+          "release": "2024-09-12",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 6,
+            "ai_rd_nanogpt_chat_rl": 8,
+            "ai_rd_rust_codecontests_inference": 6,
+            "ai_rd_small_scaling_law": 8,
+            "ai_rd_triton_cumsum": 8
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        },
+        "o3 (Inspect)": {
+          "agent_best_of_k": [
+            0.4641,
+            0.5716,
+            0.7235
+          ],
+          "allowance_h": [
+            8.0
+          ],
+          "at_cap_everywhere": [
+            false,
+            false,
+            false
+          ],
+          "censored_runs": false,
+          "kappa": [
+            0.6449,
+            0.6241,
+            0.7277
+          ],
+          "kappa8_interval": [
+            0.2165,
+            1.1042
+          ],
+          "matched_time": true,
+          "money_match": {
+            "agent_runs_per_human_run": 15,
+            "kappa": [
+              1.0055,
+              0.7899,
+              0.7277
+            ],
+            "note": "agent score censored at the best of its observed runs",
+            "t_star": {
+              "kind": "found",
+              "t_star_h": 8.1261
+            }
+          },
+          "release": "2025-04-16",
+          "runs_per_env": {
+            "ai_rd_fix_embedding": 4,
+            "ai_rd_nanogpt_chat_rl": 4,
+            "ai_rd_rust_codecontests_inference": 4,
+            "ai_rd_small_scaling_law": 4,
+            "ai_rd_triton_cumsum": 4
+          },
+          "t_star": {
+            "bound_h": 8.0,
+            "kind": "below"
+          },
+          "t_star_hi": {
+            "bound_h": 32.0,
+            "kind": "above"
+          },
+          "t_star_lo": {
+            "bound_h": 8.0,
+            "kind": "below"
+          }
+        }
+      }
+    },
+    "rebench_th11_saturation": {
+      "best_model_cap": {
+        "budgets_h": [
+          8.0,
+          16.0,
+          32.0
+        ],
+        "share_draws_agent_at_cap": [
+          0.547,
+          0.8165,
+          0.994
+        ],
+        "share_draws_tie_32h": 0.001
+      },
+      "kappa_ceiling_by_budget": {
+        "16": 1.0918,
+        "32": 1.0059,
+        "8": 1.3897
+      },
+      "models_below": [
+        "Claude 3 Opus (Inspect)",
+        "Claude 3.5 Sonnet (New) (Inspect)",
+        "Claude 3.5 Sonnet (Old) (Inspect)",
+        "Claude 3.7 Sonnet (Inspect)",
+        "Claude 4 Opus (Inspect)",
+        "Claude 4.1 Opus (Inspect)",
+        "GPT-4 1106 (Inspect)",
+        "GPT-4 Turbo (Inspect)",
+        "GPT-4o (Inspect)",
+        "GPT-5 (Inspect)",
+        "GPT-5.2",
+        "GPT-5.3-Codex",
+        "o1 (Inspect)",
+        "o3 (Inspect)"
+      ],
+      "models_censored_above": [
+        "Claude Opus 4.6 (Inspect)"
+      ],
+      "models_found": [
+        "Claude Opus 4.5 (Inspect)",
+        "GPT-5.1-Codex-Max (Inspect)",
+        "Gemini 3 Pro"
+      ],
+      "verdict": "saturated: Claude Opus 4.6 (Inspect) is censored above the largest budget the public data can test and sits at the score's cap in every environment there, where an agent can lead by at most 1.006; the battery cannot show t* rising further"
+    },
+    "rebench_th11_trend": {
+      "draws_kept": [
+        1885,
+        2000
+      ],
+      "rho_kappa8": 0.8357438016528925,
+      "rho_kappa8_hi": 0.9769475162809413,
+      "rho_kappa8_lo": 0.4351409244100924,
+      "rho_tstar": 0.5663664845226052,
+      "rho_tstar_hi": 0.8568385390935981,
+      "rho_tstar_lo": 0.1644953456380276
+    },
+    "tstar_identified_by_battery": {
+      "one_sided_allowed": {
+        "AI research (MLE-bench)": [],
+        "AI research (RE-Bench)": [
+          "Claude Opus 4.6 (Inspect)"
+        ],
+        "cyber (Cybench)": [
+          "claude-opus-4-1-20250805",
+          "claude-opus-4-20250514",
+          "claude-opus-4-5-20251101_unknown",
+          "claude-opus-4-6_unknown",
+          "claude-sonnet-4-20250514",
+          "claude-sonnet-4-5-20250929_unknown",
+          "grok-4-0709",
+          "grok-4-1"
+        ],
+        "strategy (forecasting)": []
+      },
+      "two_sided_inside_grid": {
+        "AI research (MLE-bench)": [],
+        "AI research (RE-Bench)": [],
+        "cyber (Cybench)": [
+          "claude-opus-4-1-20250805",
+          "claude-opus-4-20250514",
+          "claude-opus-4-5-20251101_unknown",
+          "claude-sonnet-4-20250514",
+          "claude-sonnet-4-5-20250929_unknown",
+          "grok-4-0709",
+          "grok-4-1"
+        ],
+        "strategy (forecasting)": []
+      }
+    },
+    "verdict_c10": {
+      "b": "on MLE-bench, against contest entrants, not organisations, the best entry's verdict flips on 45% of competitions when the comparison moves from the median entrant to the gold-threshold entrant: the verdict is not stable within the class unless the rank is named. The share won rises with the entry's date (rank correlation 0.97).",
+      "c_estimable": "RE-Bench at matched time: t* is censored below 8 h for 14 of 18 models, inside 8 to 32 h for 3 (each interval runs from below 8 h to above 32 h, four to eight runs per environment), and censored above 32 h for 1. Cybench: t* lies inside the grid for 13 of 21 models, 7 of them with an interval wholly inside it.",
+      "c_rises": "yes on both: rank correlation with release date 0.57 (0.16 to 0.86) on RE-Bench and 0.91 (0.65 to 0.97) on Cybench, where t* doubles every 114 days (57 to 352). Not monotone by model on RE-Bench: GPT-5.2, GPT-5.3-Codex came after the first crossing (Gemini 3 Pro) and sit below 8 h.",
+      "c_saturates": "saturated: Claude Opus 4.6 (Inspect) is censored above the largest budget the public data can test and sits at the score's cap in every environment there, where an agent can lead by at most 1.006; the battery cannot show t* rising further. On Cybench the curvature of ln t* is 1.58 per year squared (-4.33 to 12.01): no sign of slowing yet, but the pool's longest solve time (24.9 h) caps what can be measured. On a fixed pool t* saturates with the pool, so 'rises without saturating' is not a property t* has; it holds only while the battery's human baselines reach beyond the systems tested.",
+      "forecasting": "t* not identified: neither ForecastBench nor Metaculus varies the budget.",
+      "mlebench_tstar": "not identified, except as a lower bound: where an entry allowed 32 h or less beats an entrant's final score, t* lies above the grid's top on that competition, if neither side's score falls with time; a loss identifies nothing."
+    }
+  },
+  "experiment": "E21",
+  "name": "e21_team_battery",
+  "numbers": {
+    "e21-clusters": {
+      "fmt": ",.0f",
+      "label": "decisive clusters with a public human comparison examined here (AI research, cyber, strategy)",
+      "note": "",
+      "unit": "clusters",
+      "value": 3.0
+    },
+    "e21-clusters-tstar": {
+      "fmt": ",.0f",
+      "label": "of those, clusters where t* has an interval for at least one model, censored above allowed (its lower end not censored below the grid)",
+      "note": "",
+      "unit": "clusters",
+      "value": 2.0
+    },
+    "e21-clusters-tstar-two-sided": {
+      "fmt": ",.0f",
+      "label": "of those, clusters where some model's t* interval lies wholly inside the tested budgets (neither end censored)",
+      "note": "",
+      "unit": "clusters",
+      "value": 1.0
+    },
+    "e21-cyber-ceiling-h": {
+      "fmt": ".1f",
+      "label": "the longest first-solve time in Cybench, above which t* on this pool cannot be measured",
+      "note": "the latest share leaves one step before t* is pinned between the two longest solve times",
+      "unit": "h",
+      "value": 24.91
+    },
+    "e21-cyber-curvature": {
+      "fmt": ".2f",
+      "label": "curvature of ln t* against release date (negative would mean slowing)",
+      "note": "",
+      "unit": "per year squared",
+      "value": 1.5750420879467992
+    },
+    "e21-cyber-curvature-hi": {
+      "fmt": ".2f",
+      "label": "that curvature, 97.5th percentile of resampling",
+      "note": "",
+      "unit": "per year squared",
+      "value": 12.01168504279059
+    },
+    "e21-cyber-curvature-lo": {
+      "fmt": ".2f",
+      "label": "that curvature, 2.5th percentile of resampling",
+      "note": "",
+      "unit": "per year squared",
+      "value": -4.3250311640560914
+    },
+    "e21-cyber-doubling-days": {
+      "fmt": ",.0f",
+      "label": "doubling time of t* on Cybench across release dates (models with t* inside the grid; least squares on ln t*)",
+      "note": "",
+      "unit": "days",
+      "value": 113.79736298174657
+    },
+    "e21-cyber-doubling-days-hi": {
+      "fmt": ",.0f",
+      "label": "that doubling time, 97.5th percentile of resampling models, tasks and solve counts",
+      "note": "",
+      "unit": "days",
+      "value": 352.0355694037094
+    },
+    "e21-cyber-doubling-days-lo": {
+      "fmt": ",.0f",
+      "label": "that doubling time, 2.5th percentile of resampling models, tasks and solve counts",
+      "note": "",
+      "unit": "days",
+      "value": 56.70590710659159
+    },
+    "e21-cyber-models": {
+      "fmt": ",.0f",
+      "label": "models with a reported unguided Cybench score and release date (best report per model)",
+      "note": "",
+      "unit": "models",
+      "value": 21.0
+    },
+    "e21-cyber-rho": {
+      "fmt": ".2f",
+      "label": "rank correlation of Cybench t* with release date",
+      "note": "",
+      "unit": "",
+      "value": 0.9131477113195314
+    },
+    "e21-cyber-rho-hi": {
+      "fmt": ".2f",
+      "label": "that correlation, 97.5th percentile of resampling models, tasks and solve counts",
+      "note": "",
+      "unit": "",
+      "value": 0.9650524080510976
+    },
+    "e21-cyber-rho-lo": {
+      "fmt": ".2f",
+      "label": "that correlation, 2.5th percentile of resampling models, tasks and solve counts",
+      "note": "",
+      "unit": "",
+      "value": 0.6471440961357862
+    },
+    "e21-cyber-tstar-latest": {
+      "fmt": ".1f",
+      "label": "t* of the latest model on Cybench against the contest field's fastest team (claude-opus-4-6_unknown, 2026-02-05; inside the tested budgets)",
+      "note": "developer-reported score; first-solve times overstate a dedicated team's time, which raises t*",
+      "unit": "h",
+      "value": 6.3011
+    },
+    "e21-cyber-tstar-latest-hi": {
+      "fmt": ".1f",
+      "label": "that t*, 97.5th percentile of resampling tasks and solve counts (censored: above 32 h, so a lower bound)",
+      "note": "",
+      "unit": "h",
+      "value": 32.0
+    },
+    "e21-cyber-tstar-latest-lo": {
+      "fmt": ".1f",
+      "label": "that t*, 2.5th percentile of resampling tasks and solve counts (inside the tested budgets)",
+      "note": "",
+      "unit": "h",
+      "value": 3.0299
+    },
+    "e21-fb-above": {
+      "fmt": ",.0f",
+      "label": "ForecastBench tournament AI entries at or above the superforecaster median",
+      "note": "",
+      "unit": "entries",
+      "value": 10.0
+    },
+    "e21-fb-entries": {
+      "fmt": ",.0f",
+      "label": "ForecastBench tournament AI entries",
+      "note": "",
+      "unit": "entries",
+      "value": 526.0
+    },
+    "e21-fb-llm-margin": {
+      "fmt": ".1f",
+      "label": "best single model run by ForecastBench itself minus the superforecaster median on its baseline board",
+      "note": "",
+      "unit": "points",
+      "value": -5.900000000000006
+    },
+    "e21-fb-top-margin": {
+      "fmt": ".1f",
+      "label": "top ForecastBench tournament entry minus the superforecaster median, Brier Index (intervals overlap)",
+      "note": "",
+      "unit": "points",
+      "value": 1.4000000000000057
+    },
+    "e21-meta-decided": {
+      "fmt": ",.0f",
+      "label": "Metaculus Pro-against-bot rounds whose 95% interval excludes parity (all in the Pros' favour)",
+      "note": "",
+      "unit": "rounds",
+      "value": 3.0
+    },
+    "e21-meta-rounds": {
+      "fmt": ",.0f",
+      "label": "Metaculus Pro-against-bot rounds reported",
+      "note": "",
+      "unit": "rounds",
+      "value": 5.0
+    },
+    "e21-mle-entries": {
+      "fmt": ",.0f",
+      "label": "MLE-bench leaderboard entries with grading reports at the pinned commit (test-set-feedback entries and ablations left out)",
+      "note": "",
+      "unit": "entries",
+      "value": 27.0
+    },
+    "e21-mle-flip-best": {
+      "fmt": ".1%",
+      "label": "share of competitions whose verdict flips when the comparison moves from the median entrant to the gold-threshold entrant",
+      "note": "",
+      "unit": "",
+      "value": 0.4533
+    },
+    "e21-mle-gold-best": {
+      "fmt": ".1%",
+      "label": "its share beating the gold-medal threshold entrant",
+      "note": "",
+      "unit": "",
+      "value": 0.2578
+    },
+    "e21-mle-medal-2024": {
+      "fmt": ".1%",
+      "label": "share beating the bronze-threshold entrant for the best 2024 entry (models-o1-preview-aide)",
+      "note": "",
+      "unit": "",
+      "value": 0.1698
+    },
+    "e21-mle-medal-best": {
+      "fmt": ".1%",
+      "label": "its share beating the bronze-medal threshold entrant, a contest entrant at that rank",
+      "note": "",
+      "unit": "",
+      "value": 0.6311
+    },
+    "e21-mle-medal-best-hi": {
+      "fmt": ".1%",
+      "label": "that share, 97.5th percentile of resampling competitions",
+      "note": "",
+      "unit": "",
+      "value": 0.7377777777777778
+    },
+    "e21-mle-medal-best-lo": {
+      "fmt": ".1%",
+      "label": "that share, 2.5th percentile of resampling competitions",
+      "note": "",
+      "unit": "",
+      "value": 0.5288888888888889
+    },
+    "e21-mle-median-best": {
+      "fmt": ".1%",
+      "label": "share of the 75 competitions in which the best entry beats the median Kaggle entrant (AIBuildAI, best by medal share, so biased up)",
+      "note": "",
+      "unit": "",
+      "value": 0.7111
+    },
+    "e21-mle-rho": {
+      "fmt": ".2f",
+      "label": "rank correlation of the medal share with the entry's grading date across leaderboard entries",
+      "note": "",
+      "unit": "",
+      "value": 0.9722982784752668
+    },
+    "e21-rebench-below-8h": {
+      "fmt": ",.0f",
+      "label": "models whose t* is censored below 8 hours, the smallest budget with expert data",
+      "note": "",
+      "unit": "models",
+      "value": 14.0
+    },
+    "e21-rebench-cap-32h": {
+      "fmt": ".1%",
+      "label": "share of resampling draws in which Claude Opus 4.6 (Inspect) is at the score's cap in every environment at 32 hours",
+      "note": "",
+      "unit": "",
+      "value": 0.994
+    },
+    "e21-rebench-ceiling-32h": {
+      "fmt": ".3f",
+      "label": "the largest ratio any agent can reach at 32 hours on METR's capped score (1 over the experts' best of four)",
+      "note": "at the ceiling a win is a tie at the cap; the battery cannot show t* rising further",
+      "unit": "",
+      "value": 1.0059
+    },
+    "e21-rebench-cross-8h": {
+      "fmt": ",.0f",
+      "label": "of those, models whose mean best score at 8 hours is at least the experts' (kappa(8 h) >= 1, point estimates)",
+      "note": "",
+      "unit": "models",
+      "value": 4.0
+    },
+    "e21-rebench-kappa32-best": {
+      "fmt": ".3f",
+      "label": "that model's score over the experts' at 32 hours (best of four runs each side, Claude Opus 4.6 (Inspect))",
+      "note": "",
+      "unit": "",
+      "value": 1.0059
+    },
+    "e21-rebench-kappa8-best": {
+      "fmt": ".2f",
+      "label": "that model's score over the experts' at 8 hours, mean best of one run each side (Claude Opus 4.6 (Inspect))",
+      "note": "",
+      "unit": "",
+      "value": 1.35
+    },
+    "e21-rebench-kappa8-best-hi": {
+      "fmt": ".2f",
+      "label": "that ratio, 97.5th percentile of resampling environments and runs",
+      "note": "",
+      "unit": "",
+      "value": 1.728
+    },
+    "e21-rebench-kappa8-best-lo": {
+      "fmt": ".2f",
+      "label": "that ratio, 2.5th percentile of resampling environments and runs",
+      "note": "",
+      "unit": "",
+      "value": 1.1383
+    },
+    "e21-rebench-models": {
+      "fmt": ",.0f",
+      "label": "models with matched 8-hour runs on every RE-Bench environment in METR's Time Horizon 1.1 data",
+      "note": "",
+      "unit": "models",
+      "value": 18.0
+    },
+    "e21-rebench-rho": {
+      "fmt": ".2f",
+      "label": "rank correlation of t* (censored values ranked at their ends) with release date across those models",
+      "note": "",
+      "unit": "",
+      "value": 0.5663664845226052
+    },
+    "e21-rebench-rho-hi": {
+      "fmt": ".2f",
+      "label": "that correlation, 97.5th percentile of resampling models, environments and runs",
+      "note": "",
+      "unit": "",
+      "value": 0.8568385390935981
+    },
+    "e21-rebench-rho-lo": {
+      "fmt": ".2f",
+      "label": "that correlation, 2.5th percentile of resampling models, environments and runs",
+      "note": "",
+      "unit": "",
+      "value": 0.1644953456380276
+    },
+    "e21-rebench-tstar-best": {
+      "fmt": ".1f",
+      "label": "largest crossover budget t* of any model on RE-Bench at matched time (Claude Opus 4.6 (Inspect), released 2026-02-05; censored: above 32 h, so a lower bound)",
+      "note": "capped score: 1 is the mean 8-hour expert result on the environment",
+      "unit": "h",
+      "value": 32.0
+    },
+    "e21-rebench-tstar-best-lo": {
+      "fmt": ".1f",
+      "label": "that model's t*, 2.5th percentile of resampling environments and runs (censored: above 32 h, so a lower bound)",
+      "note": "",
+      "unit": "h",
+      "value": 32.0
+    }
+  },
+  "script": "tools/exp/e21_team_battery.py",
+  "seed": 20261121
+}

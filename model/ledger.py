@@ -66,10 +66,14 @@ def render(value: float, fmt: str, unit: str) -> str:
 
 
 def sig(value: float, digits: int) -> str:
-    """Round to significant digits and group thousands, without scientific notation."""
+    """Round to significant digits and group thousands, without scientific notation below 1e15.
+    From 1e15 up, scientific (2.0e+30): a float's integer there shows binary noise past its 16th
+    digit, and thirty grouped digits are unreadable and widen every card on the ledger page."""
     if value == 0:
         return "0"
     exp = math.floor(math.log10(abs(value)))
+    if exp >= 15:
+        return f"{value:.{digits - 1}e}"
     decimals = max(digits - 1 - exp, 0)
     rounded = round(value, decimals - 0) if decimals else round(value, -(exp - digits + 1))
     if decimals:

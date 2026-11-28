@@ -40,11 +40,13 @@ file, which git ignores.
   first with recursive self-improvement, and distillation), the memo's five re-ranked.
 - `research/04-claims.md`: 12 claims (C1 to C12), each with its plan for the six levels and a
   "Results so far" line per level; the one numbered list of experiments (E1 to E25, in build order).
-  After levels 1 to 4 (2026-11-27): no claim is new or has passed all six levels. Candidates: C2
-  (only (b), (c), untested), C5 (non-adaptive hiding only), C8 ((b) cut). Downgraded: C4 (to a
-  measurement design: E4 shows its interval under-covers and its trigger fails at calibrated
-  noise), C10 (a definition), C11 (framing). Applications of prior work, credited: C1, C3, C6, C7,
-  C9, C12. Cut parts: C1(c), C2(a), C4(c), C8(b).
+  After levels 1 to 4 and three waves of experiments (2026-11-27): no claim is new or has passed
+  all six levels. Candidates: C5 (non-adaptive hiding only, untested at L3) and C8 ((b) cut; L3
+  rests on E8 alone). Downgraded: C2 (an accounting frame: E18 cut against (c), (b) not shown), C4
+  (a measurement design: E4's interval under-covers and its trigger fails at calibrated noise), C10
+  (a definition; E21: t* saturates with its battery, so (c) holds only while baselines last), C11
+  (framing). Applications of prior work, credited: C1, C3, C6, C7, C9, C12. Cut parts: C1(c),
+  C2(a), C2(c), C4(c), C8(b).
 - `research/05-formal.md` (Part III, 1): level 2. Theorems and proofs per claim, each numerical
   statement checked by `tools/formal/<claim>.py` (`run_all.py` under heavy, about 6 minutes). It
   found C4's trigger on g, C7(b) and C9's P2 false as stated, then fixed every red-team attack on
@@ -69,16 +71,21 @@ file, which git ignores.
   compliance-only disclosure cut; in-run drift beats the margin-2 line), E8 (the floor at FP8), E9
   (compute's share of research input not identified; Part I's loop gains omit compute's growth),
   E11 (the coupled certificate cannot issue today), E24 (25% of in-treaty findings never halted),
-  E25 (Bitcoin's real headers: the rate floor is dominated). `lib.Results.detail` now refuses a value
-  the sorted dump would refuse, at the line that adds it. The venv is built with `uv`.
+  E25 (Bitcoin's real headers: the rate floor is dominated), E18 (the cap leaks in jumps, not at a
+  constant rate), E21 (t* rises but saturates with each battery; no battery has an organisation),
+  E22 (the supply envelope holds 19 of 19; it bounds phi, so the declared margin covers estimation
+  error only and a path must show 4.2 years at each renewal), E23 (the chokepoint durability
+  ranking is not supported and no test on public data can decide it). `lib` refuses infinities
+  and unsortable details at the line that adds them, and `make check` fails when a result is not
+  strict JSON or ran on ledger inputs that have since changed. The venv is built with `uv`.
 - Verification: levels 1 (prior art, two helpers) and 4 (red team) ran, writing
   `research/verification/` (kept as written; the site shows their numbers as written and titles
   each with the ledger's current value). Every attack went to the owner of the work it hit; the
   record of each claim at each level and each attack's resolution is `research/07-verification.md`,
   which the home page shows as a grid. Open: C3.8, C4.9, C9.4, C10.4; Emery-Xu's Prop 2 and one E9
   reproduction need an independent check. Level 5 needs Paperwright (see below); level 6 is next.
-- The paper: `paper/01-introduction.md` and Part I (`paper/10` to `16`, about 12,300 words) written
-  from the research files; Parts II and III to follow.
+- The paper: all three parts and a conclusion in `paper/` (about 27,000 words, Part I about half),
+  written from the research files and resynced after each wave; `make paper` flattens it.
 - Findings that change the design: power is not a chokepoint; chokepoints leak at the edges and
   their holders reverse themselves; the historical discovery rate of covert programmes is about 15
   times below the memo's placeholder; channel miss rates cannot be multiplied (the evader picks the
@@ -157,11 +164,11 @@ file, which git ignores.
    1, 4 and 6 by fresh helpers given the claim, not our case for it; 2 and 3 by us; 5 through
    Paperwright's desks. Next: level 6 (a fresh reviewer given only the paper and the claims), the
    open attacks (C3.8, C4.9, C9.4, C10.4), an independent check of Emery-Xu's Prop 2 and of E9's one
-   non-reproduction, and the phase-1 experiments still unrun (E18, E21, E22, E23; then E3, E4(b),
-   E4(d)). A claim that fails a level is cut or downgraded.
-8. **The paper in Paperwright**: `paper/` holds the introduction and Part I; Parts II and III
-   (protocol, proofs, experiments, verification, limitations) are next, then `make paper`. Then
-   create it in Paperwright, add sources by identifier, run its checks and desks, resolve them.
+   non-reproduction, a test of whether the untraced pool can be closed (nothing tests it), and the
+   experiments still unrun (phase 2 on the GPU: E3, E12 and on; E4(b), E4(d), E4(e), E10, E15).
+   A claim that fails a level is cut or downgraded.
+8. **The paper in Paperwright**: `paper/` holds all three parts; `make paper` builds the flat copy.
+   Next: create it in Paperwright, add sources by identifier, run its checks and desks, resolve them.
 9. **The site**, begun once the memo and definitions settle, built alongside the research. Stack and
    deploy as on corerope.space and phosphoros.space (read their CLAUDE.md, `web/` or `site/`, and
    `tools/site/deploy.sh`); the Vercel token and other keys come from those projects' `.env`; no new

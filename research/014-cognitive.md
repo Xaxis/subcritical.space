@@ -23,8 +23,9 @@ D1).
    prior work. What our search did not find is a definition that matches both time and budget, runs
    on a refreshed held-out battery with institutional baselines, and counts clusters won with an
    alpha fraction.
-2. A capability verdict is a function of the time and money each side is given. RE-Bench's agents
-   beat human experts at short budgets and lose at long ones. A definition that does not fix the
+2. A capability verdict is a function of the time and money each side is given. RE-Bench's 2024
+   agents beat human experts at short budgets and lost at long ones; the best 2026 model is at the
+   score's cap at the longest budget tested. A definition that does not fix the
    budget is not yet a definition.
 3. The instruments are the weakest link. Benchmarks with expert baselines saturate within a few
    years, carry error rates of tens of percent, overstate real work, and measure what a system
@@ -257,7 +258,7 @@ humanity in all strategically relevant activities (economic, scientific, militar
 
 | Function | Best evidence | Baseline | Status in the sources |
 |---|---|---|---|
-| AI research | RE-Bench, MLE-bench, PaperBench, NanoGPT records | individuals; Kaggle teams | ahead at short budgets, behind at long ones; contributions shallow |
+| AI research | RE-Bench, MLE-bench, PaperBench, NanoGPT records | individuals; Kaggle teams | 2024 agents ahead at short budgets, behind at long ones; the best 2026 model at the score's cap at the longest budget tested, so its t\* is censored (E21, F4); contributions shallow |
 | Cyber operations | Cybench, live CTFs | human team solve times and scoreboards | ahead of student teams on short jeopardy CTFs; no expert-organisation baseline |
 | Weapons-relevant science | VCT, GPQA, WMDP | individual experts; none for WMDP | ahead of individual experts on knowledge questions |
 | Persuasion and strategy | debate trials, ForecastBench, Metaculus, Cicero | individuals; forecasting teams | ahead of individuals at persuasion; near parity with forecasting teams |
@@ -438,15 +439,34 @@ closure (D6), where Part II puts it, not to the capability.
   [3 clusters](numbers.md#e1-clusters-verdict) a bar that a model wins or loses (GPQA's PhD experts,
   the superforecaster median, GDPval parity). None is an organisation at matched budget, so no
   cluster's institutional verdict can be read from public data.
-- **E21, the matched-budget team battery**. For each Tier A cluster and
-  for forecasting, enter agents into existing contests under the human rules and clock, scored on
-  the same board, with both sides' compute, money and copies recorded: MLE-bench subsets against
-  Kaggle team leaderboards; RE-Bench with matched GPU hours at the
-  [2 h](numbers.md#cog-rebench-budget-short), [8 h](numbers.md#cog-rebench-budget-mid) and
-  [32 h](numbers.md#cog-rebench-budget-long) budgets; fresh CTF events with team size and AI use
-  recorded; ForecastBench rounds and Metaculus tournaments. Output: a win or loss for each cluster
-  at each budget, and the crossover budget defined in F4. Where leaderboards are public it reruns
-  from public data. Its public part has not run; its live part needs organisers' consent.
+- **E21, the matched-budget team battery**, public part, has run on the public boards. It examined
+  the [3 clusters](numbers.md#e21-clusters) with a public human comparison: AI research (RE-Bench
+  against single experts at matched time [@metr2026evalanalysis; @wijk2024rebench], MLE-bench against
+  Kaggle entrants [@openai2026mlebenchruns; @chan2024mlebench]), cyber (Cybench against the contest
+  field's fastest team on each task [@cybench2024repo; @zhang2024cybench]) and strategy (ForecastBench
+  and Metaculus [@forecastbench2026datasets; @metaculus2026futureeval]). None of its comparisons is an
+  organisation: they are single experts, contest entrants, contest crowds and forecaster teams, and a
+  contest team is not an institution. So no cluster's institutional verdict is read here either.
+  - **Where t\* is identified.** It has an interval for at least one model in
+    [2 clusters](numbers.md#e21-clusters-tstar), and lies wholly inside the tested budgets for some
+    model in [1 clusters](numbers.md#e21-clusters-tstar-two-sided), cyber. Details are in F4.
+  - **MLE-bench's verdict depends on the rank named.** The best entry beats the median entrant in
+    [71.1%](numbers.md#e21-mle-median-best) of competitions (an upward-biased pick, the best by
+    medal share) and the gold-threshold entrant in [25.8%](numbers.md#e21-mle-gold-best); the verdict
+    flips on [45.3%](numbers.md#e21-mle-flip-best) of competitions when the comparison moves from the
+    median to the gold threshold. Nothing is matched (entrants had weeks or months), so t\* is not
+    identified there except as a lower bound. The share won rises with the entry's date (rank
+    correlation [0.97](numbers.md#e21-mle-rho)).
+  - **Forecasting does not identify t\*.** Neither ForecastBench nor Metaculus varies the budget. The
+    top ForecastBench tournament entry is [1.4 points](numbers.md#e21-fb-top-margin) above the
+    superforecaster median with overlapping intervals ([10 entries](numbers.md#e21-fb-above) of
+    [526 entries](numbers.md#e21-fb-entries) at or above it), while ForecastBench's own best single
+    model is [-5.9 points](numbers.md#e21-fb-llm-margin) from it. Of
+    [5 rounds](numbers.md#e21-meta-rounds) of Metaculus professionals against bots,
+    [3 rounds](numbers.md#e21-meta-decided) were decided, all in the professionals' favour.
+
+  The live part, agents entered in fresh contests under the human rules with both sides' compute,
+  money and copies recorded, needs organisers' consent and has not run.
 - **E2** has run, for the time-horizon trend behind the AI-research cluster: the frontier 50%
   horizon doubles every [129 days](numbers.md#e2-doubling-p50), with the trend reported under F1.
 - Persuasion against a professional organisation would need a new design with human-subjects
@@ -690,14 +710,45 @@ budget at which S's score on the AI-research cluster is at least the comparison'
 compute and money, on a grid of budgets fixed in advance. If S still wins at the largest budget
 tested, t\* is censored and reported as a lower bound, never extrapolated. For the 2024 RE-Bench
 agents it lay between [2 h](numbers.md#cog-rebench-budget-short) and
-[8 h](numbers.md#cog-rebench-budget-mid). Whether t\* escapes the saturation that ends fixed
-benchmarks is untested. The budget axis is open, so it might, but the claims file lists as
-unshown that t\* can be estimated with an interval and that it rises across model generations
-without saturating (C10(c)). E21 would test both, by estimating t\* with an interval on a
-matched-budget battery for successive models. Its limit is the supply of long-budget human
-baselines: only [5](numbers.md#cog-th11-long-baselined) of [31 tasks](numbers.md#cog-th11-long-tasks)
-over [8 h](numbers.md#cog-th11-long-threshold) have one, and if t\* cannot be estimated for lack of
-them, the claim shrinks to the definition. What may be ours is
+[8 h](numbers.md#cog-rebench-budget-mid). The claims file asked whether t\* can be estimated with
+an interval and rises across model generations without saturating (C10(c)). E21's public part
+answers on two boards, against comparisons that are not organisations (F2).
+
+- **RE-Bench, at matched time against single experts, is at its ceiling.** Of
+  [18 models](numbers.md#e21-rebench-models) with matched runs, t\* is censored below the smallest
+  budget with expert data, [8 h](numbers.md#cog-rebench-budget-mid), for
+  [14 models](numbers.md#e21-rebench-below-8h), and [4 models](numbers.md#e21-rebench-cross-8h) are at
+  least level at that budget. The best, Claude Opus 4.6, scores
+  [1.35](numbers.md#e21-rebench-kappa8-best) times the experts there
+  ([1.14](numbers.md#e21-rebench-kappa8-best-lo) to [1.73](numbers.md#e21-rebench-kappa8-best-hi)),
+  and its t\* is censored above [32.0 h](numbers.md#e21-rebench-tstar-best), the largest budget with
+  data. At that budget the capped score lets any agent lead by at most
+  [1.006](numbers.md#e21-rebench-ceiling-32h), and the best model sits at the cap in every environment
+  in [99.4%](numbers.md#e21-rebench-cap-32h) of resampling draws, so the battery cannot show t\*
+  rising further. t\* rises with release date, rank correlation [0.57](numbers.md#e21-rebench-rho)
+  ([0.16](numbers.md#e21-rebench-rho-lo) to [0.86](numbers.md#e21-rebench-rho-hi)), but not model by
+  model: GPT-5.2 and GPT-5.3-Codex came after the first model to cross and are censored below the
+  smallest budget.
+- **Cybench, against the contest field's fastest team, is capped by its pool.** Across
+  [21 models](numbers.md#e21-cyber-models), t\* rises with release date (rank correlation
+  [0.91](numbers.md#e21-cyber-rho), [0.65](numbers.md#e21-cyber-rho-lo) to
+  [0.97](numbers.md#e21-cyber-rho-hi)) and doubles every [114 days](numbers.md#e21-cyber-doubling-days)
+  ([57 days](numbers.md#e21-cyber-doubling-days-lo) to [352 days](numbers.md#e21-cyber-doubling-days-hi)),
+  with no sign yet of slowing (curvature [1.58 per year squared](numbers.md#e21-cyber-curvature),
+  [-4.33 per year squared](numbers.md#e21-cyber-curvature-lo) to
+  [12.01 per year squared](numbers.md#e21-cyber-curvature-hi)). The latest model's t\* is
+  [6.3 h](numbers.md#e21-cyber-tstar-latest) ([3.0 h](numbers.md#e21-cyber-tstar-latest-lo) to
+  [32.0 h](numbers.md#e21-cyber-tstar-latest-hi), censored above). But the pool's longest
+  first-solve time is [24.9 h](numbers.md#e21-cyber-ceiling-h), and above it t\* cannot be measured.
+
+So t\* can be estimated where the human baselines reach far enough, and it rose on both boards.
+On RE-Bench, though, no model's interval lies inside the tested budgets. And t\* does not rise
+without saturating: on a fixed pool it saturates with the pool, and it rises only while the
+battery's human baselines reach beyond the systems tested. C10(c) is downgraded to that, and
+"without saturating" is withdrawn; a rising t\* needs batteries refreshed with longer baselines. The
+limit is the supply of long-budget human baselines: only [5](numbers.md#cog-th11-long-baselined) of
+[31 tasks](numbers.md#cog-th11-long-tasks) over [8 h](numbers.md#cog-th11-long-threshold) have one.
+What may be ours is
 only that definition, at equal compute and money and censored, as part of D1. It is not a trigger:
 it describes a system already level with its comparison at some budget, so it cannot warn
 ([C10](04-claims.md#c10-superintelligence-against-an-institution-at-matched-time-and-budget-and-the-crossover-budget)).
@@ -804,7 +855,12 @@ tested yet. That condition is a verdict stable when the organisation changes wit
 fraction won that rises smoothly enough with effective compute to extrapolate. E1 found
 [5 clusters](numbers.md#e1-clusters-baselined) with some human comparison in public data and
 [3 clusters](numbers.md#e1-clusters-verdict) with a bar a model wins or loses, none an organisation at
-matched budget. E21 must build the baselines, and has not run.
+matched budget. E21's public part compared with experts, contest entrants, contest crowds and
+forecaster teams, not institutions, and found the verdict unstable within one class: on MLE-bench
+it flips on [45.3%](numbers.md#e21-mle-flip-best) of competitions between the median entrant and the
+gold threshold, so the rank must be named. That meets the pass condition's refuter on the nearest
+thing to an organisation any battery has (C10(b), against on that analogue). Institutional baselines still have to be built, by E21's
+live part or otherwise.
 
 Steelman against D1 itself: Scher et al. define ASI by harm ("sufficiently superhuman cognitive
 performance that it could plan and successfully execute the destruction of humanity") and add a

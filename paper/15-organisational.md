@@ -13,8 +13,7 @@ high-bandwidth memory (HBM), packaging, finished chips, power, talent, data), O1
 narrowest stage the suppliers' concentration, capacity growth, the lead time for a new plant, and
 visibility: who counts units at the source, and how far independent estimates disagree. The scarcest
 input a party can obtain bounds how fast it adds compute, an input to breakout time. Label: prior
-work [@sevilla2024scaling2030; @khan2021supplychain; @epoch2026chipsales]. One table of every input
-is synthesis, not a claim.
+work [@sevilla2024scaling2030; @khan2021supplychain; @epoch2026chipsales].
 
 **Measurement.** The sources are company reports, analyst trackers, vendor guidance and construction
 records [@verwey2021permits].
@@ -23,16 +22,22 @@ records [@verwey2021permits].
 [48 EUV systems](../research/numbers.md#org-euv-2025) in 2025 [@asml2026annualreport], and its
 capacity doubles in about [2.6 years](../research/numbers.md#org-euv-doubling-years) at plan
 [@asml2026q2call]. The yearly flow of chips is countable:
-[13.6 million H100e](../research/numbers.md#org-sold-2025) in 2025,
-[2.67](../research/numbers.md#org-sold-growth) times 2024, a sum of median estimates
+[13.6 million H100e](../research/numbers.md#org-sold-2025) sold in 2025 by all vendors, Huawei
+included, [2.67](../research/numbers.md#org-sold-growth) times 2024, a sum of median estimates
 [@epoch2026chipsales]. Capital, talent and data are fungible, mobile or uncountable. Power slows the
 US build-out [@rand2026queued], but China added
 [434 GW](../research/numbers.md#org-china-renewables-2025) of solar and wind in 2025
 [@shaw2026chinasolar], so power is a detection channel, not a chokepoint. Against this,
-concentration may be temporary [@varadarajan2024resilience; @counterpoint2026hbm].
+concentration may be temporary [@varadarajan2024resilience; @counterpoint2026hbm]. E22 backtested
+the supply bound: every one of the [19 observations](../research/numbers.md#e22-observations) of
+sales and Huawei's output fell inside it, the tightest by a factor of
+[1.97](../research/numbers.md#e22-min-margin) [@epoch2026chipsales]. For China the bound leaves room
+for [2.84 million H100e](../research/numbers.md#e22-china-slack) of undeclared domestic output, so
+supply data cannot rule out a large hidden fleet. It also bounds the allied fleet's growth between
+declarations at [1.65](../research/numbers.md#e22-phi-member-quarter) a quarter.
 
-**Open questions.** The supply bound is untested: E22, a backtest that has not run, would fail it if
-any party's observed output in 2024 or 2025 exceeded what sourced capacities allow.
+**Open questions.** These bound supply, not holdings; the bound for a denied party without a
+stockpile is untested, none being observed.
 
 ## O2. Race dynamics
 
@@ -69,9 +74,9 @@ and cartel leniency [@aubert2006leniency]. The share has no number until a respo
 guard against joint deviation is empty for decisive-advantage payoffs, and it may be empty against a
 coalition with a major power. In E6 a coalition that absorbs drift during its run succeeds per
 attempt with [0.076](../research/numbers.md#e6-staged-pi-line-inrun), above the tolerated
-[5%](../research/numbers.md#def-prevent-beta), meeting the claim's own refuter, so the share is now
-lowered for in-run drift; the reporting condition is only illustrated, nothing about real parties is
-measured, and E22 has not run.
+[5%](../research/numbers.md#def-prevent-beta), so the share is now lowered for in-run drift, and
+again for growth between declarations as E22 bounds it; the reporting condition is only illustrated,
+and nothing about real parties is measured.
 
 ## O3. Chokepoints
 
@@ -81,25 +86,30 @@ replace its output at volume) exceeds detection and response time. Its leak frac
 downstream output that escapes accounting. Label: prior work [@sastry2024compute;
 @shavit2023chinchilla; @scher2025agreement]. Ranking stages by measured durability, and counting
 denial's larger footprint as a detection gain [@cottier2026horinger], were not found done
-quantitatively, a claim about our search; neither is claimed.
+quantitatively, a claim about our search, and are not claimed.
 
 **Measurement.** The horizon and the leak fraction are modelled, not counted, on weak sources and
 assumed detection rates.
 
 **Evidence for and against.** EUV is the most durable stage: China's prototype makes no chips yet,
 on unnamed sources [@washenko2025euv]. Logic, HBM and packaging erode faster [@patel2025ascend;
-@khan2021supplychain]. The edges leak faster than the core erodes. An estimated
-[660,000 H100e](../research/numbers.md#org-smuggled-cum) was smuggled into China through 2025,
-assuming [25%](../research/numbers.md#org-diversion-detect) of diversions are detected
-[@juniewicz2026smuggling]. Outside estimates of Huawei's 2025 output differ by a factor of
-[4.1](../research/numbers.md#org-huawei-spread) [@zafar2025kessler; @patel2025ascend; @pan2026idc];
-and the United States rescinded its own diffusion rule and approved H200 sales to China
-[@bis2025diffusion; @bis2025rescission; @james2025h200]. Denial makes programmes bigger: a denied
-party needs about [2.5](../research/numbers.md#org-denial-power-multiplier) times the power per unit
-of compute [@cottier2026horinger]. Against this, denial builds substitutes [@allen2025senate].
+@khan2021supplychain]. That order is a judgement made with hindsight. E23 ranked
+[9 stages](../research/numbers.md#e23-stages) on data public at the end of 2022 against the erosion
+since and found Spearman's rho of [0.28](../research/numbers.md#e23-rho) (one-sided p
+[0.23](../research/numbers.md#e23-p)), no support for rankings of this kind. The edges leak faster
+than the core erodes. An estimated [660,000 H100e](../research/numbers.md#org-smuggled-cum) was
+smuggled into China through 2025, assuming [25%](../research/numbers.md#org-diversion-detect) of
+diversions are detected [@juniewicz2026smuggling]. Outside estimates of Huawei's 2025 output differ
+by a factor of [4.1](../research/numbers.md#org-huawei-spread) [@zafar2025kessler; @patel2025ascend;
+@pan2026idc]; and the United States relaxed its own rules [@bis2025diffusion; @bis2025rescission;
+@james2025h200]. Denial makes programmes bigger: a denied party needs about
+[2.5](../research/numbers.md#org-denial-power-multiplier) times the power per unit of compute
+[@cottier2026horinger]. Against this, denial builds substitutes [@allen2025senate].
 
-**Open questions.** Whether denial lengthens or shortens the horizon is unsettled, and so few stages
-allow no decisive test of any ranking.
+**Open questions.** Whether denial lengthens or shortens the horizon is unsettled. E23 had power of
+only [0.16](../research/numbers.md#e23-power-here), telling a ranking from chance would need
+[85 stages](../research/numbers.md#e23-n-needed), and under four years may be too short to show slow
+erosion such as EUV's, so the ranking stays unclaimed.
 
 ## O4. Covert supply
 
@@ -126,14 +136,9 @@ Table: Undeclared weapons programmes, time undetected and how found {#tab:organi
 | USSR, Biopreparat | [16 years](../research/numbers.md#org-biopreparat-years) | a defector [@fas-biopreparat; @hoffman-2009] |
 | South Africa, nuclear | [15 years](../research/numbers.md#org-sa-years) active, never detected | self-disclosure [@vonbaeckmann-1995] |
 
-Declared material was watched faster: the DPRK's discrepancies were found within about
-[9 months](../research/numbers.md#org-dprk-months), and it gave notice of withdrawal
-[31 days](../research/numbers.md#org-dprk-withdrawal-days) after a special inspection was requested
-[@iaea-gc37-1084]. E5's survival fit, counted from a programme's start rather than a breakout's,
-gives [0.094/yr](../research/numbers.md#e5-hazard) (90% interval
-[0.057/yr](../research/numbers.md#e5-hazard-lo) to [0.147/yr](../research/numbers.md#e5-hazard-hi)),
-an upper bound on a careful evader's rate, since every programme in the set was found or disclosed.
-Under its Weibull fit a first-year discovery has chance
+E5's survival fit, counted from a programme's start rather than a breakout's, gives
+[0.094/yr](../research/numbers.md#e5-hazard), an upper bound on a careful evader's rate, since every
+programme in the set was found or disclosed. Under its Weibull fit a first-year discovery has chance
 [2.6%](../research/numbers.md#e5-weibull-detect-1y).
 
 C3 combines the channels: the chance a breakout is missed is a maximum over the evader's paths, with

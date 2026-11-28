@@ -1,0 +1,1538 @@
+{
+  "data": [
+    {
+      "sha256": "4aa386a4f608492a30ed67638e0cf357f5ea7bd79d324789815813906d2647ad",
+      "url": "https://raw.githubusercontent.com/georgetown-cset/eto-chip-explorer/3f0b236c2368e80d078edc2eae8570738df32974/data/provision.csv",
+      "what": "ETO Chip Explorer, release of 2022-12-19: provision.csv"
+    },
+    {
+      "sha256": "4a82079dcb7e5adf5a80cdb9208f9ed5ffb2282c38ccf2dd2eea23b43634d191",
+      "url": "https://raw.githubusercontent.com/georgetown-cset/eto-chip-explorer/3f0b236c2368e80d078edc2eae8570738df32974/data/providers.csv",
+      "what": "ETO Chip Explorer, release of 2022-12-19: providers.csv"
+    },
+    {
+      "sha256": "a45db2ca046228b66a19c1a457bea274b1988dd934251195f9d90d2df27f5904",
+      "url": "https://raw.githubusercontent.com/georgetown-cset/eto-chip-explorer/3f0b236c2368e80d078edc2eae8570738df32974/data/stages.csv",
+      "what": "ETO Chip Explorer, release of 2022-12-19: stages.csv"
+    },
+    {
+      "sha256": "75f89526fcfdeb69c948b1efd2551b4c88ef24bce60bb6a3ce0c340853c6beed",
+      "url": "https://raw.githubusercontent.com/georgetown-cset/eto-chip-explorer/3f0b236c2368e80d078edc2eae8570738df32974/data/inputs.csv",
+      "what": "ETO Chip Explorer, release of 2022-12-19: inputs.csv"
+    },
+    {
+      "sha256": "110412d2892daca5ac0a17cc9a2a67bab30d4d5b3f0f7edde3d8d0956118f636",
+      "url": "https://raw.githubusercontent.com/owid/energy-data/555c997c491d31ef98e2fb4a47684a700af268ea/owid-energy-data.csv",
+      "what": "Our World in Data energy data, release of 2022-12-30"
+    },
+    {
+      "sha256": "d94267801a73745e40bfaee8a30341adb37a168a8a0f28bf5d03f78e05f6c16f",
+      "url": "https://raw.githubusercontent.com/georgetown-cset/eto-chip-explorer/9a4e1b128c836cb3bdf065a06a3fc03397e00ff0/data/provision.csv",
+      "what": "ETO Chip Explorer, August 2026 update (2025 shares): provision.csv"
+    },
+    {
+      "sha256": "c529479afe7d35afa750729bf6dd45227a375568c02b8cf401aad239360a13e4",
+      "url": "https://raw.githubusercontent.com/georgetown-cset/eto-chip-explorer/9a4e1b128c836cb3bdf065a06a3fc03397e00ff0/data/providers.csv",
+      "what": "ETO Chip Explorer, August 2026 update (2025 shares): providers.csv"
+    }
+  ],
+  "details": {
+    "events": [
+      {
+        "cls": "entrant",
+        "date": "2025-12-17",
+        "item": "China's prototype EUV machine makes EUV light but no chips",
+        "level": 1,
+        "source": "washenko2025euv",
+        "stage": "euv",
+        "status": "prototype",
+        "where": "article text, relaying Reuters"
+      },
+      {
+        "cls": "substitute",
+        "date": "2026-03-17",
+        "item": "scaled logic made with DUV in place of EUV, judged not viable for data-centre AI chips",
+        "level": 1,
+        "source": "techinsights2026datacenter",
+        "stage": "euv",
+        "status": "demonstrated",
+        "where": "public summary"
+      },
+      {
+        "cls": "entrant",
+        "date": "2024-09-09",
+        "item": "MIIT catalogue lists a domestic ArF lithography machine (resolution 65 nm, overlay 8 nm) not yet on the market",
+        "level": 1,
+        "source": "trendforce2024duv",
+        "stage": "duv-immersion",
+        "status": "prototype",
+        "where": "article text, on MIIT's Guiding Catalog (2024 Edition)"
+      },
+      {
+        "cls": "holder",
+        "date": "2026-01-29",
+        "item": "ASML sold a third of its tools by unit to China in 2025 (41% in 2024)",
+        "level": 1,
+        "source": "shilov2026asml",
+        "stage": "duv-immersion",
+        "status": "sales",
+        "where": "article text"
+      },
+      {
+        "cls": "entrant",
+        "date": "2025-07-14",
+        "item": "China's world share of deposition tools rose from 2% to 7% from 2019 to 2024, and of dry etch by eight points",
+        "level": 2,
+        "source": "feldgoise2025offensive",
+        "stage": "dep-etch",
+        "status": "counted",
+        "where": "key findings, fabrication tools"
+      },
+      {
+        "cls": "entrant",
+        "date": "2026-01-12",
+        "item": "domestic tools rose from 25% (2024) to 35% (2025) of China's own use, and above 40% for etch and deposition",
+        "level": 2,
+        "source": "trendforce2026equipment",
+        "stage": "dep-etch",
+        "status": "counted",
+        "where": "article text, citing China Semiconductor Industry Association data"
+      },
+      {
+        "cls": "holder",
+        "date": "2025-04-09",
+        "item": "China was the largest equipment market in 2024 at 49.6 billion USD of 117.1 billion",
+        "level": 1,
+        "source": "semi2025billings",
+        "stage": "dep-etch",
+        "status": "sales",
+        "where": "press release text"
+      },
+      {
+        "cls": "entrant",
+        "date": "2025-09-08",
+        "item": "SMIC's advanced-node capacity about 45,000 wafers a month by end 2025, against at most 20,000 that Ascend needs",
+        "level": 2,
+        "source": "patel2025ascend",
+        "stage": "leading-logic",
+        "status": "counted",
+        "where": "public portion"
+      },
+      {
+        "cls": "entrant",
+        "date": "2025-12-11",
+        "item": "SMIC N+3 confirmed in the Kirin 9030",
+        "level": 1,
+        "source": "techinsights2025kirin",
+        "stage": "leading-logic",
+        "status": "shipping",
+        "where": "public summary"
+      },
+      {
+        "cls": "leak",
+        "date": "2025-09-08",
+        "item": "more than 2.9 million Ascend dies made at TSMC, which the 2020 entity listing was meant to stop",
+        "level": 2,
+        "source": "patel2025ascend",
+        "stage": "leading-logic",
+        "status": "quantified",
+        "where": "public portion"
+      },
+      {
+        "cls": "substitute",
+        "date": "2025-09-18",
+        "item": "Huawei combines many chips in place of advanced nodes",
+        "level": 1,
+        "source": "xu2025huaweiconnect",
+        "stage": "leading-logic",
+        "status": "announced",
+        "where": "keynote text"
+      },
+      {
+        "cls": "entrant",
+        "date": "2025-09-08",
+        "item": "CXMT projected to make about 2 million HBM stacks in 2026",
+        "level": 1,
+        "source": "patel2025ascend",
+        "stage": "hbm",
+        "status": "announced",
+        "where": "public portion"
+      },
+      {
+        "cls": "entrant",
+        "date": "2025-09-18",
+        "item": "Huawei announces its own HBM",
+        "level": 1,
+        "source": "xu2025huaweiconnect",
+        "stage": "hbm",
+        "status": "announced",
+        "where": "keynote text, roadmap (HiBL 1.0, HiZQ 2.0)"
+      },
+      {
+        "cls": "leak",
+        "date": "2025-09-08",
+        "item": "13 million HBM stacks procured before the December 2024 control",
+        "level": 2,
+        "source": "patel2025ascend",
+        "stage": "hbm",
+        "status": "quantified",
+        "where": "public portion"
+      },
+      {
+        "cls": "entrant",
+        "date": "2024-07-02",
+        "item": "Chinese assemblers do the substrate step of CoWoS-like packaging for SMIC-made logic and interposers",
+        "level": 1,
+        "source": "liang2024cowos",
+        "stage": "packaging",
+        "status": "shipping",
+        "where": "article text, citing Tencent Technology"
+      },
+      {
+        "cls": "entrant",
+        "date": "2024-09-26",
+        "item": "HT-Tech and Tongfu start advanced packaging bases",
+        "level": 1,
+        "source": "trendforce2024packaging",
+        "stage": "packaging",
+        "status": "announced",
+        "where": "article text"
+      },
+      {
+        "cls": "entrant",
+        "date": "2025-06-05",
+        "item": "China's EDA self-sufficiency estimated above 10% in 2024, after Huawei and local firms validated tools for 14 nm and above in 2023",
+        "level": 2,
+        "source": "trendforce2025eda",
+        "stage": "eda",
+        "status": "counted",
+        "where": "article text"
+      },
+      {
+        "cls": "holder",
+        "date": "2025-07-02",
+        "item": "BIS ended the EDA licence requirement for China that it imposed in late May 2025",
+        "level": 2,
+        "source": "sharwood2025eda",
+        "stage": "eda",
+        "status": "relaxed",
+        "where": "article text"
+      },
+      {
+        "cls": "entrant",
+        "date": "2025-03-05",
+        "item": "Alibaba's XuanTie offers a server-grade RISC-V CPU core for licence",
+        "level": 1,
+        "source": "sharwood2025riscv",
+        "stage": "core-ip",
+        "status": "shipping",
+        "where": "article text"
+      },
+      {
+        "cls": "substitute",
+        "date": "2025-03-04",
+        "item": "China drafts national guidance to boost RISC-V chips in place of x86 and Arm",
+        "level": 1,
+        "source": "pan2025riscv",
+        "stage": "core-ip",
+        "status": "announced",
+        "where": "article text"
+      },
+      {
+        "cls": "entrant",
+        "date": "2026-04-01",
+        "item": "Chinese vendors shipped 1.65 million AI cards in China in 2025, 41% of the market",
+        "level": 2,
+        "source": "pan2026idc",
+        "stage": "ai-chips",
+        "status": "counted",
+        "where": "article text, citing IDC"
+      },
+      {
+        "cls": "leak",
+        "date": "2026-04-29",
+        "item": "660,000 H100e smuggled into China through 2025",
+        "level": 2,
+        "source": "juniewicz2026smuggling",
+        "stage": "ai-chips",
+        "status": "quantified",
+        "where": "article text"
+      },
+      {
+        "cls": "leak",
+        "date": "2026-03-19",
+        "item": "defendants allegedly staged dummy servers to deceive auditors and an inspection",
+        "level": 1,
+        "source": "doj2026supermicro",
+        "stage": "ai-chips",
+        "status": "alleged",
+        "where": "press release text"
+      },
+      {
+        "cls": "substitute",
+        "date": "2023-10-25",
+        "item": "buying more, smaller data-centre chips, a workaround the 2023 rule closed",
+        "level": 1,
+        "source": "bis2023advancedcomputing",
+        "stage": "ai-chips",
+        "status": "demonstrated",
+        "where": "88 FR 73458, rationale for the performance density parameter"
+      },
+      {
+        "cls": "holder",
+        "date": "2025-05-13",
+        "item": "the AI diffusion rule rescinded",
+        "level": 2,
+        "source": "bis2025rescission",
+        "stage": "ai-chips",
+        "status": "relaxed",
+        "where": "press release"
+      },
+      {
+        "cls": "holder",
+        "date": "2025-12-10",
+        "item": "H200 exports to China approved for a 25% duty",
+        "level": 2,
+        "source": "james2025h200",
+        "stage": "ai-chips",
+        "status": "relaxed",
+        "where": "article text"
+      },
+      {
+        "cls": "holder",
+        "date": "2026-04-01",
+        "item": "Nvidia shipped about 2.2 million cards in China in 2025, a 55% share",
+        "level": 1,
+        "source": "pan2026idc",
+        "stage": "ai-chips",
+        "status": "sales",
+        "where": "article text, citing IDC"
+      },
+      {
+        "cls": "entrant",
+        "date": "2026-01-28",
+        "item": "China added 315 GW of solar and 119 GW of wind in 2025",
+        "level": 2,
+        "source": "shaw2026chinasolar",
+        "stage": "power",
+        "status": "counted",
+        "where": "article text, citing NEA 2025 statistics"
+      }
+    ],
+    "leave_one_out": {
+      "ai-chips": -0.04322305430397467,
+      "core-ip": 0.4181894985002515,
+      "dep-etch": 0.1963522774695264,
+      "duv-immersion": 0.175760803717497,
+      "eda": 0.3519591564752223,
+      "euv": 0.175760803717497,
+      "hbm": 0.29277002188455997,
+      "leading-logic": 0.36827146210517725,
+      "packaging": 0.5372008177779709
+    },
+    "ledger_inputs": {},
+    "levels": {
+      "entrant": {
+        "announced": 1,
+        "counted": 2,
+        "prototype": 1,
+        "shipping": 1
+      },
+      "holder": {
+        "relaxed": 2,
+        "sales": 1
+      },
+      "leak": {
+        "alleged": 1,
+        "quantified": 2
+      },
+      "substitute": {
+        "announced": 1,
+        "counted": 2,
+        "demonstrated": 1,
+        "shipping": 1
+      }
+    },
+    "no_event_found": {
+      "ai-chips": [],
+      "core-ip": [
+        "leak",
+        "holder"
+      ],
+      "dep-etch": [
+        "leak",
+        "substitute"
+      ],
+      "duv-immersion": [
+        "leak",
+        "substitute"
+      ],
+      "eda": [
+        "leak",
+        "substitute"
+      ],
+      "euv": [
+        "leak",
+        "holder"
+      ],
+      "hbm": [
+        "substitute",
+        "holder"
+      ],
+      "leading-logic": [
+        "holder"
+      ],
+      "packaging": [
+        "leak",
+        "substitute",
+        "holder"
+      ],
+      "power": [
+        "leak",
+        "substitute",
+        "holder"
+      ]
+    },
+    "part1_reference": {
+      "n": 5,
+      "order": {
+        "ai-chips": 5,
+        "euv": 1,
+        "hbm": 3,
+        "leading-logic": 2,
+        "packaging": 4
+      },
+      "p_one_sided": 0.3416666666666667,
+      "rho": 0.3,
+      "rho_critical": 0.9
+    },
+    "power_curve": {
+      "alpha_one_sided": 0.05,
+      "n_formula": 81.87863684070611,
+      "n_tied": 85,
+      "n_untied": 85,
+      "null_sims": 20000,
+      "sims": 4000,
+      "table": {
+        "10": {
+          "critical_tied": 0.5433030434895332,
+          "critical_untied": 0.5393939393939394,
+          "power_tied": 0.19725,
+          "power_untied": 0.21025
+        },
+        "11": {
+          "critical_tied": 0.5244763088406512,
+          "critical_untied": 0.5272727272727272,
+          "power_tied": 0.19275,
+          "power_untied": 0.19875
+        },
+        "12": {
+          "critical_tied": 0.5010299594453305,
+          "critical_untied": 0.4965034965034965,
+          "power_tied": 0.2095,
+          "power_untied": 0.2165
+        },
+        "13": {
+          "critical_tied": 0.47764870825023287,
+          "critical_untied": 0.47802197802197804,
+          "power_tied": 0.217,
+          "power_untied": 0.21925
+        },
+        "14": {
+          "critical_tied": 0.45494795059090937,
+          "critical_untied": 0.4593406593406593,
+          "power_tied": 0.2375,
+          "power_untied": 0.239
+        },
+        "15": {
+          "critical_tied": 0.4411227178588782,
+          "critical_untied": 0.4392857142857143,
+          "power_tied": 0.2545,
+          "power_untied": 0.26875
+        },
+        "16": {
+          "critical_tied": 0.42510208555811657,
+          "critical_untied": 0.4264705882352941,
+          "power_tied": 0.26825,
+          "power_untied": 0.27725
+        },
+        "17": {
+          "critical_tied": 0.4092788672488119,
+          "critical_untied": 0.40441176470588236,
+          "power_tied": 0.27875,
+          "power_untied": 0.2945
+        },
+        "18": {
+          "critical_tied": 0.39610999404669983,
+          "critical_untied": 0.3993808049535604,
+          "power_tied": 0.284,
+          "power_untied": 0.2895
+        },
+        "19": {
+          "critical_tied": 0.3932848682775617,
+          "critical_untied": 0.3860526315789461,
+          "power_tied": 0.28325,
+          "power_untied": 0.30475
+        },
+        "20": {
+          "critical_tied": 0.3757806166417408,
+          "critical_untied": 0.3744360902255639,
+          "power_tied": 0.314,
+          "power_untied": 0.32925
+        },
+        "25": {
+          "critical_tied": 0.33659218754093156,
+          "critical_untied": 0.3353846153846154,
+          "power_tied": 0.3475,
+          "power_untied": 0.3705
+        },
+        "30": {
+          "critical_tied": 0.30551317528070165,
+          "critical_untied": 0.30901001112347054,
+          "power_tied": 0.42725,
+          "power_untied": 0.4285
+        },
+        "35": {
+          "critical_tied": 0.2850804972985737,
+          "critical_untied": 0.2834733893557423,
+          "power_tied": 0.45125,
+          "power_untied": 0.4725
+        },
+        "40": {
+          "critical_tied": 0.26087111375190325,
+          "critical_untied": 0.26660412757973734,
+          "power_tied": 0.53425,
+          "power_untied": 0.534
+        },
+        "45": {
+          "critical_tied": 0.25184440843625244,
+          "critical_untied": 0.2483596837944663,
+          "power_tied": 0.558,
+          "power_untied": 0.584
+        },
+        "5": {
+          "critical_tied": 0.8207826816681233,
+          "critical_untied": 0.8,
+          "power_tied": 0.13875,
+          "power_untied": 0.14175
+        },
+        "50": {
+          "critical_tied": 0.23434475605404023,
+          "critical_untied": 0.2348667466986794,
+          "power_tied": 0.61075,
+          "power_untied": 0.6415
+        },
+        "55": {
+          "critical_tied": 0.2229812415396302,
+          "critical_untied": 0.22077922077922077,
+          "power_tied": 0.63975,
+          "power_untied": 0.6695
+        },
+        "6": {
+          "critical_tied": 0.753702346348183,
+          "critical_untied": 0.7714285714285715,
+          "power_tied": 0.13175,
+          "power_untied": 0.12075
+        },
+        "60": {
+          "critical_tied": 0.21473844135112977,
+          "critical_untied": 0.21200333425951653,
+          "power_tied": 0.6825,
+          "power_untied": 0.7035
+        },
+        "65": {
+          "critical_tied": 0.20193752358220277,
+          "critical_untied": 0.2055528846153846,
+          "power_tied": 0.70125,
+          "power_untied": 0.71225
+        },
+        "7": {
+          "critical_tied": 0.667124384994991,
+          "critical_untied": 0.6785714285714286,
+          "power_tied": 0.155,
+          "power_untied": 0.1495
+        },
+        "70": {
+          "critical_tied": 0.1967706725715109,
+          "critical_untied": 0.19531449566967016,
+          "power_tied": 0.74175,
+          "power_untied": 0.7585
+        },
+        "75": {
+          "critical_tied": 0.19133315995820896,
+          "critical_untied": 0.18794025604551917,
+          "power_tied": 0.7515,
+          "power_untied": 0.78325
+        },
+        "8": {
+          "critical_tied": 0.6383372009823072,
+          "critical_untied": 0.6190476190476191,
+          "power_tied": 0.14875,
+          "power_untied": 0.18275
+        },
+        "80": {
+          "critical_tied": 0.1851164826914133,
+          "critical_untied": 0.18403774027191747,
+          "power_tied": 0.77375,
+          "power_untied": 0.79975
+        },
+        "85": {
+          "critical_tied": 0.1799403464991669,
+          "critical_untied": 0.17724350205198341,
+          "power_tied": 0.803,
+          "power_untied": 0.83425
+        },
+        "9": {
+          "critical_tied": 0.5873670062235365,
+          "critical_untied": 0.5833333333333334,
+          "power_tied": 0.16325,
+          "power_untied": 0.17375
+        }
+      },
+      "target": 0.8
+    },
+    "rule": {
+      "deviation": "HBM's makers come from a report of the 2022 market published on 2023-04-18",
+      "entry": "China is not the stage's largest supplier (country market share where given, else count of non-negligible firms)",
+      "fixed": "before the erosion table was compiled; the builder knew the broad 2022 to 2026 history, so this cannot be proved",
+      "order": "predicted erosion rises with n_c (non-negligible Chinese suppliers), ties broken by n_w (non-negligible suppliers worldwide)"
+    },
+    "rules": {
+      "R1 base then suppliers (the rule)": {
+        "ai-chips": 9.0,
+        "core-ip": 6.0,
+        "dep-etch": 8.0,
+        "duv-immersion": 2.0,
+        "eda": 5.0,
+        "euv": 1.0,
+        "hbm": 3.5,
+        "leading-logic": 3.5,
+        "packaging": 7.0
+      },
+      "R2 suppliers then base": {
+        "ai-chips": 7.0,
+        "core-ip": 6.0,
+        "dep-etch": 9.0,
+        "duv-immersion": 2.0,
+        "eda": 5.0,
+        "euv": 1.0,
+        "hbm": 3.5,
+        "leading-logic": 3.5,
+        "packaging": 8.0
+      },
+      "R3 rank sum of base and suppliers": {
+        "ai-chips": 8.0,
+        "core-ip": 6.0,
+        "dep-etch": 9.0,
+        "duv-immersion": 2.0,
+        "eda": 5.0,
+        "euv": 1.0,
+        "hbm": 3.5,
+        "leading-logic": 3.5,
+        "packaging": 7.0
+      },
+      "R4 base only": {
+        "ai-chips": 9.0,
+        "core-ip": 3.5,
+        "dep-etch": 7.5,
+        "duv-immersion": 3.5,
+        "eda": 3.5,
+        "euv": 3.5,
+        "hbm": 3.5,
+        "leading-logic": 3.5,
+        "packaging": 7.5
+      },
+      "R5 suppliers only": {
+        "ai-chips": 7.0,
+        "core-ip": 6.0,
+        "dep-etch": 9.0,
+        "duv-immersion": 2.0,
+        "eda": 5.0,
+        "euv": 1.0,
+        "hbm": 3.5,
+        "leading-logic": 3.5,
+        "packaging": 8.0
+      },
+      "R6 China's 2022 market share": {
+        "core-ip": 6.0,
+        "dep-etch": 5.0,
+        "duv-immersion": 2.0,
+        "eda": 4.0,
+        "euv": 2.0,
+        "hbm": 2.0,
+        "packaging": 7.0
+      }
+    },
+    "rules_by_scorings": {
+      "R1 base then suppliers (the rule) | S1 sum of class maxima (the score)": {
+        "n": 9,
+        "p_one_sided": 0.23277116402116402,
+        "rho": 0.2778183707602797
+      },
+      "R1 base then suppliers (the rule) | S2 classes with any event": {
+        "n": 9,
+        "p_one_sided": 0.38095238095238093,
+        "rho": 0.11434439916915223
+      },
+      "R1 base then suppliers (the rule) | S3 technical only (entrant, substitute)": {
+        "n": 9,
+        "p_one_sided": 0.21825396825396826,
+        "rho": 0.2907469922895337
+      },
+      "R1 base then suppliers (the rule) | S4 edges only (leak, holder)": {
+        "n": 9,
+        "p_one_sided": 0.2765873015873016,
+        "rho": 0.22622384411864255
+      },
+      "R1 base then suppliers (the rule) | S5 holder counts formal relaxations only": {
+        "n": 9,
+        "p_one_sided": 0.2720238095238095,
+        "rho": 0.2308029541700785
+      },
+      "R1 base then suppliers (the rule) | S6 holder counts only what Part I records": {
+        "n": 9,
+        "p_one_sided": 0.43783068783068785,
+        "rho": 0.06416889479197478
+      },
+      "R2 suppliers then base | S1 sum of class maxima (the score)": {
+        "n": 9,
+        "p_one_sided": 0.4166666666666667,
+        "rho": 0.08120844683762021
+      },
+      "R2 suppliers then base | S2 classes with any event": {
+        "n": 9,
+        "p_one_sided": 0.6408730158730159,
+        "rho": -0.13423038163335263
+      },
+      "R2 suppliers then base | S3 technical only (entrant, substitute)": {
+        "n": 9,
+        "p_one_sided": 0.37857142857142856,
+        "rho": 0.1207718275664217
+      },
+      "R2 suppliers then base | S4 edges only (leak, holder)": {
+        "n": 9,
+        "p_one_sided": 0.476984126984127,
+        "rho": 0.026102751244458756
+      },
+      "R2 suppliers then base | S5 holder counts formal relaxations only": {
+        "n": 9,
+        "p_one_sided": 0.48389550264550263,
+        "rho": 0.01709651512370952
+      },
+      "R2 suppliers then base | S6 holder counts only what Part I records": {
+        "n": 9,
+        "p_one_sided": 0.6775793650793651,
+        "rho": -0.17417271443536014
+      },
+      "R3 rank sum of base and suppliers | S1 sum of class maxima (the score)": {
+        "n": 9,
+        "p_one_sided": 0.2832671957671958,
+        "rho": 0.21798056782729638
+      },
+      "R3 rank sum of base and suppliers | S2 classes with any event": {
+        "n": 9,
+        "p_one_sided": 0.4722222222222222,
+        "rho": 0.024857478080250486
+      },
+      "R3 rank sum of base and suppliers | S3 technical only (entrant, substitute)": {
+        "n": 9,
+        "p_one_sided": 0.2634920634920635,
+        "rho": 0.23707062448223518
+      },
+      "R3 rank sum of base and suppliers | S4 edges only (leak, holder)": {
+        "n": 9,
+        "p_one_sided": 0.3501984126984127,
+        "rho": 0.14791559038526628
+      },
+      "R3 rank sum of base and suppliers | S5 holder counts formal relaxations only": {
+        "n": 9,
+        "p_one_sided": 0.35244708994708995,
+        "rho": 0.14532037855153093
+      },
+      "R3 rank sum of base and suppliers | S6 holder counts only what Part I records": {
+        "n": 9,
+        "p_one_sided": 0.5337301587301587,
+        "rho": -0.027500954910846337
+      },
+      "R4 base only | S1 sum of class maxima (the score)": {
+        "n": 9,
+        "p_one_sided": 0.3253968253968254,
+        "rho": 0.16279138551129593
+      },
+      "R4 base only | S2 classes with any event": {
+        "n": 9,
+        "p_one_sided": 0.4642857142857143,
+        "rho": 0.09467621366623018
+      },
+      "R4 base only | S3 technical only (entrant, substitute)": {
+        "n": 9,
+        "p_one_sided": 0.32142857142857145,
+        "rho": 0.19698694087498148
+      },
+      "R4 base only | S4 edges only (leak, holder)": {
+        "n": 9,
+        "p_one_sided": 0.2976190476190476,
+        "rho": 0.16569860426698668
+      },
+      "R4 base only | S5 holder counts formal relaxations only": {
+        "n": 9,
+        "p_one_sided": 0.42063492063492064,
+        "rho": 0.08139569275564797
+      },
+      "R4 base only | S6 holder counts only what Part I records": {
+        "n": 9,
+        "p_one_sided": 0.5198412698412699,
+        "rho": 0.04364357804719848
+      },
+      "R5 suppliers only | S1 sum of class maxima (the score)": {
+        "n": 9,
+        "p_one_sided": 0.4166666666666667,
+        "rho": 0.08120844683762021
+      },
+      "R5 suppliers only | S2 classes with any event": {
+        "n": 9,
+        "p_one_sided": 0.6408730158730159,
+        "rho": -0.13423038163335263
+      },
+      "R5 suppliers only | S3 technical only (entrant, substitute)": {
+        "n": 9,
+        "p_one_sided": 0.37857142857142856,
+        "rho": 0.1207718275664217
+      },
+      "R5 suppliers only | S4 edges only (leak, holder)": {
+        "n": 9,
+        "p_one_sided": 0.476984126984127,
+        "rho": 0.026102751244458756
+      },
+      "R5 suppliers only | S5 holder counts formal relaxations only": {
+        "n": 9,
+        "p_one_sided": 0.48389550264550263,
+        "rho": 0.01709651512370952
+      },
+      "R5 suppliers only | S6 holder counts only what Part I records": {
+        "n": 9,
+        "p_one_sided": 0.6775793650793651,
+        "rho": -0.17417271443536014
+      },
+      "R6 China's 2022 market share | S1 sum of class maxima (the score)": {
+        "n": 7,
+        "p_one_sided": 0.7714285714285715,
+        "rho": -0.33011264588676237
+      },
+      "R6 China's 2022 market share | S2 classes with any event": {
+        "n": 7,
+        "p_one_sided": 1.0,
+        "rho": -0.6354889093022426
+      },
+      "R6 China's 2022 market share | S3 technical only (entrant, substitute)": {
+        "n": 7,
+        "p_one_sided": 0.45714285714285713,
+        "rho": 0.1497861723788195
+      },
+      "R6 China's 2022 market share | S4 edges only (leak, holder)": {
+        "n": 7,
+        "p_one_sided": 0.8857142857142857,
+        "rho": -0.45106711081782325
+      },
+      "R6 China's 2022 market share | S5 holder counts formal relaxations only": {
+        "n": 7,
+        "p_one_sided": 0.7452380952380953,
+        "rho": -0.25243908214870064
+      },
+      "R6 China's 2022 market share | S6 holder counts only what Part I records": {
+        "n": 7,
+        "p_one_sided": 1.0,
+        "rho": -0.6933752452815364
+      }
+    },
+    "searches": {
+      "core-ip": [
+        "China RISC-V policy guidance 2025 replace Arm"
+      ],
+      "dep-etch": [
+        "China domestic semiconductor equipment self-sufficiency NAURA AMEC 2024",
+        "SEMI 2024 equipment billings China"
+      ],
+      "duv-immersion": [
+        "China MIIT catalogue domestic ArF immersion lithography 2024"
+      ],
+      "eda": [
+        "US lifts EDA export restrictions China July 2025",
+        "Chinese EDA vendors Empyrean market share China 2024"
+      ],
+      "hbm": [
+        "TrendForce 2022 HBM market share SK hynix Samsung Micron"
+      ],
+      "packaging": [
+        "China advanced packaging CoWoS-like capacity Huawei Ascend 910C JCET Tongfu"
+      ]
+    },
+    "selection": [
+      "Events are those found by the survey and our searches; stages under more scrutiny (AI chips, logic) yield more, which raises their scores whatever their durability.",
+      "Statuses are coded from each source's words by one builder who knew the history; the quote is in the table so a reader can recode.",
+      "The 2022 supplier counts come from a 2021 report restructured in 2022 (data mostly for 2019 and 2020); memory is outside it, so HBM uses a report published in April 2023.",
+      "The window is under four years; slow erosion (EUV) may simply not have shown yet.",
+      "Power is left out of the main test because China held it in 2022; putting it back is reported."
+    ],
+    "share_change_check": {
+      "dep-etch": {
+        "change_points": 8.111184723304754,
+        "china_share_2022_release": 1.3445050662509743,
+        "china_share_2025": 9.455689789555729,
+        "event_score": 3.0,
+        "inputs": [
+          "N38",
+          "N39",
+          "N40",
+          "N41",
+          "N42",
+          "N44",
+          "N45",
+          "N49",
+          "N50",
+          "N51"
+        ],
+        "weights": "2019 market sizes from the 2022 release"
+      },
+      "duv-immersion": {
+        "change_points": 0.0,
+        "china_share_2022_release": 0.0,
+        "china_share_2025": 0.0,
+        "event_score": 2.0,
+        "inputs": [
+          "N22"
+        ],
+        "weights": "2019 market sizes from the 2022 release"
+      },
+      "euv": {
+        "change_points": 0.0,
+        "china_share_2022_release": 0.0,
+        "china_share_2025": 0.0,
+        "event_score": 2.0,
+        "inputs": [
+          "N20"
+        ],
+        "weights": "2019 market sizes from the 2022 release"
+      },
+      "hbm": {
+        "change_points": 0.0,
+        "china_share_2022_release": 0.0,
+        "china_share_2025": 0.0,
+        "event_score": 3.0,
+        "note": "Q2 2026 revenue shares of the three makers sum to at least 100%, so any other maker's share is within rounding of zero"
+      },
+      "rho_event_score_vs_share_change": {
+        "note": "four stages, three tied at no change: an illustration of agreement, not a test",
+        "rho": 0.5773502691896258,
+        "stages": [
+          "dep-etch",
+          "duv-immersion",
+          "euv",
+          "hbm"
+        ]
+      }
+    },
+    "stages": {
+      "ai-chips": {
+        "by_class": {
+          "entrant": 2.0,
+          "holder": 2.0,
+          "leak": 2.0,
+          "substitute": 1.0
+        },
+        "enters": true,
+        "erosion_score": 7.0,
+        "n_c": 4,
+        "n_w": 10,
+        "predicted_erosion_rank": 9.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 7.0,
+          "S2 classes with any event": 4.0,
+          "S3 technical only (entrant, substitute)": 3.0,
+          "S4 edges only (leak, holder)": 4.0,
+          "S5 holder counts formal relaxations only": 7.0,
+          "S6 holder counts only what Part I records": 7.0
+        }
+      },
+      "core-ip": {
+        "by_class": {
+          "entrant": 1.0,
+          "holder": 0.0,
+          "leak": 0.0,
+          "substitute": 1.0
+        },
+        "enters": true,
+        "erosion_score": 2.0,
+        "n_c": 0,
+        "n_w": 8,
+        "predicted_erosion_rank": 6.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 2.0,
+          "S2 classes with any event": 2.0,
+          "S3 technical only (entrant, substitute)": 2.0,
+          "S4 edges only (leak, holder)": 0.0,
+          "S5 holder counts formal relaxations only": 2.0,
+          "S6 holder counts only what Part I records": 2.0
+        }
+      },
+      "dep-etch": {
+        "by_class": {
+          "entrant": 2.0,
+          "holder": 1.0,
+          "leak": 0.0,
+          "substitute": 0.0
+        },
+        "enters": true,
+        "erosion_score": 3.0,
+        "n_c": 3,
+        "n_w": 13,
+        "predicted_erosion_rank": 8.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 3.0,
+          "S2 classes with any event": 2.0,
+          "S3 technical only (entrant, substitute)": 2.0,
+          "S4 edges only (leak, holder)": 1.0,
+          "S5 holder counts formal relaxations only": 2.0,
+          "S6 holder counts only what Part I records": 2.0
+        }
+      },
+      "duv-immersion": {
+        "by_class": {
+          "entrant": 1.0,
+          "holder": 1.0,
+          "leak": 0.0,
+          "substitute": 0.0
+        },
+        "enters": true,
+        "erosion_score": 2.0,
+        "n_c": 0,
+        "n_w": 2,
+        "predicted_erosion_rank": 2.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 2.0,
+          "S2 classes with any event": 2.0,
+          "S3 technical only (entrant, substitute)": 1.0,
+          "S4 edges only (leak, holder)": 1.0,
+          "S5 holder counts formal relaxations only": 1.0,
+          "S6 holder counts only what Part I records": 2.0
+        }
+      },
+      "eda": {
+        "by_class": {
+          "entrant": 2.0,
+          "holder": 2.0,
+          "leak": 0.0,
+          "substitute": 0.0
+        },
+        "enters": true,
+        "erosion_score": 4.0,
+        "n_c": 0,
+        "n_w": 6,
+        "predicted_erosion_rank": 5.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 4.0,
+          "S2 classes with any event": 2.0,
+          "S3 technical only (entrant, substitute)": 2.0,
+          "S4 edges only (leak, holder)": 2.0,
+          "S5 holder counts formal relaxations only": 4.0,
+          "S6 holder counts only what Part I records": 2.0
+        }
+      },
+      "euv": {
+        "by_class": {
+          "entrant": 1.0,
+          "holder": 0.0,
+          "leak": 0.0,
+          "substitute": 1.0
+        },
+        "enters": true,
+        "erosion_score": 2.0,
+        "n_c": 0,
+        "n_w": 1,
+        "predicted_erosion_rank": 1.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 2.0,
+          "S2 classes with any event": 2.0,
+          "S3 technical only (entrant, substitute)": 2.0,
+          "S4 edges only (leak, holder)": 0.0,
+          "S5 holder counts formal relaxations only": 2.0,
+          "S6 holder counts only what Part I records": 2.0
+        }
+      },
+      "hbm": {
+        "by_class": {
+          "entrant": 1.0,
+          "holder": 0.0,
+          "leak": 2.0,
+          "substitute": 0.0
+        },
+        "enters": true,
+        "erosion_score": 3.0,
+        "n_c": 0,
+        "n_w": 3,
+        "predicted_erosion_rank": 3.5,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 3.0,
+          "S2 classes with any event": 2.0,
+          "S3 technical only (entrant, substitute)": 1.0,
+          "S4 edges only (leak, holder)": 2.0,
+          "S5 holder counts formal relaxations only": 3.0,
+          "S6 holder counts only what Part I records": 3.0
+        }
+      },
+      "leading-logic": {
+        "by_class": {
+          "entrant": 2.0,
+          "holder": 0.0,
+          "leak": 2.0,
+          "substitute": 1.0
+        },
+        "enters": true,
+        "erosion_score": 5.0,
+        "n_c": 0,
+        "n_w": 3,
+        "predicted_erosion_rank": 3.5,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 5.0,
+          "S2 classes with any event": 3.0,
+          "S3 technical only (entrant, substitute)": 3.0,
+          "S4 edges only (leak, holder)": 2.0,
+          "S5 holder counts formal relaxations only": 5.0,
+          "S6 holder counts only what Part I records": 5.0
+        }
+      },
+      "packaging": {
+        "by_class": {
+          "entrant": 1.0,
+          "holder": 0.0,
+          "leak": 0.0,
+          "substitute": 0.0
+        },
+        "enters": true,
+        "erosion_score": 1.0,
+        "n_c": 3,
+        "n_w": 12,
+        "predicted_erosion_rank": 7.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 1.0,
+          "S2 classes with any event": 1.0,
+          "S3 technical only (entrant, substitute)": 1.0,
+          "S4 edges only (leak, holder)": 0.0,
+          "S5 holder counts formal relaxations only": 1.0,
+          "S6 holder counts only what Part I records": 1.0
+        }
+      },
+      "power": {
+        "by_class": {
+          "entrant": 2.0,
+          "holder": 0.0,
+          "leak": 0.0,
+          "substitute": 0.0
+        },
+        "enters": false,
+        "erosion_score": 2.0,
+        "n_c": null,
+        "n_w": null,
+        "predicted_erosion_rank": 10.0,
+        "scorings": {
+          "S1 sum of class maxima (the score)": 2.0,
+          "S2 classes with any event": 1.0,
+          "S3 technical only (entrant, substitute)": 2.0,
+          "S4 edges only (leak, holder)": 0.0,
+          "S5 holder counts formal relaxations only": 2.0,
+          "S6 holder counts only what Part I records": 2.0
+        }
+      }
+    },
+    "stages_2022": {
+      "ai-chips": {
+        "china_share": null,
+        "country_share": null,
+        "definition": "AI accelerator design",
+        "enters": true,
+        "firms": {
+          "AMD": "USA",
+          "Cambricon": "CHN",
+          "Cerebras": "USA",
+          "Google": "USA",
+          "Graphcore": "GBR",
+          "HiSilicon": "CHN",
+          "Horizon Robotics": "CHN",
+          "Intellifusion": "CHN",
+          "Nvidia": "USA",
+          "Tesla": "USA"
+        },
+        "mapping": "eto:N2 N4",
+        "n_c": 4,
+        "n_w": 10
+      },
+      "core-ip": {
+        "china_share": 2.0,
+        "country_share": {
+          "CHN": 2.0,
+          "GBR": 43.0,
+          "TWN": 1.0,
+          "USA": 52.0,
+          "Various": 2.0
+        },
+        "definition": "design IP",
+        "enters": true,
+        "firms": {
+          "ARM": "GBR",
+          "Achronix": "USA",
+          "Cadence": "USA",
+          "Ceva": "USA",
+          "Imagination Technologies": "GBR",
+          "Rambus": "USA",
+          "SST": "USA",
+          "Synopsys": "USA"
+        },
+        "mapping": "eto:N85",
+        "n_c": 0,
+        "n_w": 8
+      },
+      "dep-etch": {
+        "china_share": 1.3445050662509743,
+        "country_share": {
+          "AUT": 0.12470771628994545,
+          "CHE": 0.09353078721745908,
+          "CHN": 1.3445050662509743,
+          "DEU": 0.12470771628994545,
+          "GBR": 0.2626656274356976,
+          "JPN": 32.78799688230709,
+          "KOR": 3.293063133281372,
+          "NLD": 4.014029618082619,
+          "TWN": 0.13600935307872175,
+          "USA": 58.626266562743574
+        },
+        "definition": "front-end deposition and etch tools",
+        "enters": true,
+        "firms": {
+          "AMEC": "CHN",
+          "ASM International": "NLD",
+          "Applied Materials": "USA",
+          "Hitachi": "JPN",
+          "KLA": "USA",
+          "Kingsemi": "CHN",
+          "Kokusai": "JPN",
+          "Lam Research": "USA",
+          "NAURA": "CHN",
+          "SEMES": "KOR",
+          "Screen": "JPN",
+          "Tokyo Electron": "JPN",
+          "ULVAC": "JPN"
+        },
+        "mapping": "eto:N38 N39 N40 N41 N42 N44 N45 N49 N50 N51",
+        "n_c": 3,
+        "n_w": 13
+      },
+      "duv-immersion": {
+        "china_share": 0.0,
+        "country_share": {
+          "JPN": 9.0,
+          "NLD": 91.0
+        },
+        "definition": "DUV immersion lithography scanners",
+        "enters": true,
+        "firms": {
+          "ASML": "NLD",
+          "Nikon": "JPN"
+        },
+        "mapping": "eto:N22",
+        "n_c": 0,
+        "n_w": 2
+      },
+      "eda": {
+        "china_share": 1.0,
+        "country_share": {
+          "CHN": 1.0,
+          "GBR": 1.0,
+          "ISR": 1.0,
+          "JPN": 3.0,
+          "USA": 96.0
+        },
+        "definition": "chip design software",
+        "enters": true,
+        "firms": {
+          "Ansys": "USA",
+          "Cadence": "USA",
+          "Mentor Graphics": "USA",
+          "PDF Solutions": "USA",
+          "Silvaco": "USA",
+          "Synopsys": "USA"
+        },
+        "mapping": "eto:N84",
+        "n_c": 0,
+        "n_w": 6
+      },
+      "euv": {
+        "china_share": 0.0,
+        "country_share": {
+          "NLD": 100.0
+        },
+        "definition": "EUV lithography scanners",
+        "enters": true,
+        "firms": {
+          "ASML": "NLD"
+        },
+        "mapping": "eto:N20",
+        "n_c": 0,
+        "n_w": 1
+      },
+      "hbm": {
+        "china_share": 0.0,
+        "country_share": null,
+        "definition": "high-bandwidth memory",
+        "enters": true,
+        "firms": {
+          "Micron": "USA",
+          "SK hynix": "KOR",
+          "Samsung": "KOR"
+        },
+        "mapping": "rows",
+        "n_c": 0,
+        "n_w": 3
+      },
+      "leading-logic": {
+        "china_share": null,
+        "country_share": null,
+        "definition": "leading-edge logic fabrication",
+        "enters": true,
+        "firms": {
+          "Intel": "USA",
+          "Samsung": "KOR",
+          "TSMC": "TWN"
+        },
+        "mapping": "rows",
+        "n_c": 0,
+        "n_w": 3
+      },
+      "packaging": {
+        "china_share": 14.0,
+        "country_share": {
+          "CHN": 14.0,
+          "JPN": 7.0,
+          "KOR": 13.0,
+          "MAL": 2.0,
+          "SGP": 2.0,
+          "TWN": 29.0,
+          "USA": 28.0,
+          "Various": 5.0
+        },
+        "definition": "packaging, the whole ATP stage as the 2022 data give it",
+        "enters": true,
+        "firms": {
+          "ASE": "TWN",
+          "Amkor": "USA",
+          "Intel": "USA",
+          "JCET": "CHN",
+          "Micron": "USA",
+          "Powertech": "TWN",
+          "SK Hynix": "KOR",
+          "Samsung": "KOR",
+          "TSMC": "TWN",
+          "Tianshui Huatian Technology": "CHN",
+          "TongFu": "CHN",
+          "UTAC": "SGP"
+        },
+        "mapping": "eto:S3",
+        "n_c": 3,
+        "n_w": 12
+      },
+      "power": {
+        "china_share": 30.53696300972519,
+        "china_twh_2021": 8484.02,
+        "definition": "electricity for data centres",
+        "enters": false,
+        "firms": null,
+        "largest_country": "China",
+        "mapping": "owid:electricity_generation 2021",
+        "n_c": null,
+        "n_w": null,
+        "world_twh_2021": 27782.789
+      }
+    },
+    "test": {
+      "bootstrap_95": [
+        -0.6548672566371682,
+        0.9075630385563792
+      ],
+      "bootstrap_kept": 9999,
+      "fisher_95": [
+        -0.48547963040776215,
+        0.8007724773267177
+      ],
+      "n": 9,
+      "p_one_sided": 0.23277116402116402,
+      "power_here": 0.15675,
+      "rho": 0.2778183707602797,
+      "rho_critical": 0.589829771768
+    },
+    "with_power": {
+      "n": 10,
+      "p_one_sided": 0.4003968253968254,
+      "rho": 0.09124009268835112,
+      "rho_critical": 0.553732976316
+    }
+  },
+  "experiment": "E23",
+  "name": "e23_durability",
+  "numbers": {
+    "e23-china-power-share-2021": {
+      "fmt": ".0f",
+      "label": "China's share of world electricity generation in 2021, from data public at the end of 2022",
+      "note": "",
+      "unit": "%",
+      "value": 30.53696300972519
+    },
+    "e23-eto-inputs-2022": {
+      "fmt": ",.0f",
+      "label": "tools, materials and design inputs the 2022 supply-chain dataset lists, nested and correlated, so fewer independent stages than this",
+      "note": "",
+      "unit": "inputs",
+      "value": 79.0
+    },
+    "e23-events": {
+      "fmt": ",.0f",
+      "label": "sourced erosion events from 2023 to November 2026 at those stages (found by our searches, so a lower bound)",
+      "note": "",
+      "unit": "events",
+      "value": 27.0
+    },
+    "e23-n-needed": {
+      "fmt": ",.0f",
+      "label": "stages a rank test would need to tell the 2022 ranking from a random one at the observed rho, 80% power at one-sided 5%, simulated with the erosion score's ties, on a grid of 5 stages",
+      "note": "",
+      "unit": "stages",
+      "value": 85.0
+    },
+    "e23-n-needed-formula": {
+      "fmt": ",.0f",
+      "label": "the same by Fisher's z with the Bonett and Wright variance (untied)",
+      "note": "",
+      "unit": "stages",
+      "value": 81.87863684070611
+    },
+    "e23-n-needed-untied": {
+      "fmt": ",.0f",
+      "label": "the same with untied scores, the optimistic case",
+      "note": "",
+      "unit": "stages",
+      "value": 85.0
+    },
+    "e23-p": {
+      "fmt": ".2f",
+      "label": "one-sided p value of the rank test, exact over every ordering of the stages",
+      "note": "",
+      "unit": "",
+      "value": 0.23277116402116402
+    },
+    "e23-power-here": {
+      "fmt": ".2f",
+      "label": "statistical power of the one-sided 5% rank test with this many stages if the observed rho were the true one (simulated, ties kept)",
+      "note": "",
+      "unit": "",
+      "value": 0.15675
+    },
+    "e23-rho": {
+      "fmt": ".2f",
+      "label": "Spearman's rho between the 2022 ranking's predicted erosion and the erosion scored 2023 to 2026 (positive means it ordered it; the rule does not order the erosion better than chance at one-sided 5%)",
+      "note": "",
+      "unit": "",
+      "value": 0.2778183707602797
+    },
+    "e23-rho-alt-max": {
+      "fmt": ".2f",
+      "label": "Spearman's rho, highest over the 6 rules and 6 erosion scorings",
+      "note": "",
+      "unit": "",
+      "value": 0.2907469922895337
+    },
+    "e23-rho-alt-median": {
+      "fmt": ".2f",
+      "label": "Spearman's rho, median over the 6 rules and 6 erosion scorings (the rule as fixed is near the top)",
+      "note": "",
+      "unit": "",
+      "value": 0.08120844683762021
+    },
+    "e23-rho-alt-min": {
+      "fmt": ".2f",
+      "label": "Spearman's rho, lowest over the 6 rules and 6 erosion scorings",
+      "note": "",
+      "unit": "",
+      "value": -0.6933752452815364
+    },
+    "e23-rho-boot-hi": {
+      "fmt": ".2f",
+      "label": "Spearman's rho, 97.5th percentile of resampling the stages",
+      "note": "",
+      "unit": "",
+      "value": 0.9075630385563792
+    },
+    "e23-rho-boot-lo": {
+      "fmt": ".2f",
+      "label": "Spearman's rho, 2.5th percentile of resampling the stages",
+      "note": "",
+      "unit": "",
+      "value": -0.6548672566371682
+    },
+    "e23-rho-critical": {
+      "fmt": ".2f",
+      "label": "smallest Spearman's rho the exact one-sided 5% test could call significant with these stages and ties",
+      "note": "",
+      "unit": "",
+      "value": 0.589829771768
+    },
+    "e23-rho-full": {
+      "fmt": ".2f",
+      "label": "Spearman's rho with power put back in, ranked last as the rule places it (every stage O3 names)",
+      "note": "",
+      "unit": "",
+      "value": 0.09124009268835112
+    },
+    "e23-rho-hi": {
+      "fmt": ".2f",
+      "label": "Spearman's rho, 97.5th percentile by Fisher's z with the Bonett and Wright variance",
+      "note": "",
+      "unit": "",
+      "value": 0.8007724773267177
+    },
+    "e23-rho-lo": {
+      "fmt": ".2f",
+      "label": "Spearman's rho, 2.5th percentile by Fisher's z with the Bonett and Wright variance",
+      "note": "",
+      "unit": "",
+      "value": -0.48547963040776215
+    },
+    "e23-rho-loo-max": {
+      "fmt": ".2f",
+      "label": "Spearman's rho with one stage left out, highest (without packaging)",
+      "note": "",
+      "unit": "",
+      "value": 0.5372008177779709
+    },
+    "e23-rho-loo-min": {
+      "fmt": ".2f",
+      "label": "Spearman's rho with one stage left out, lowest (without ai-chips)",
+      "note": "",
+      "unit": "",
+      "value": -0.04322305430397467
+    },
+    "e23-rho-part1": {
+      "fmt": ".2f",
+      "label": "Spearman's rho for Part I's own ranking of 5 stages, made in 2026 with the erosion in view (contaminated, a reference only)",
+      "note": "",
+      "unit": "",
+      "value": 0.3
+    },
+    "e23-stages": {
+      "fmt": ",.0f",
+      "label": "supply-chain stages in the durability backtest that were chokepoints against China by 2022 data (power left out: China was the largest generator)",
+      "note": "",
+      "unit": "stages",
+      "value": 9.0
+    }
+  },
+  "script": "tools/exp/e23_durability.py",
+  "seed": 20261127
+}

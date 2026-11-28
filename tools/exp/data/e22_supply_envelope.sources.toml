@@ -1,0 +1,11 @@
+# Sources E22 cites that no note or chapter had listed, each opened by the experiment's builder on
+# 2026-11-27. tools/sources_from_notes.py merges them into research/sources.toml.
+
+[source.epoch2026chipcomponents]
+type = "dataset"
+title = "Data on AI chip components"
+authors = "Epoch AI"
+year = 2026
+url = "https://epoch.ai/data/ai-chip-components"
+opened = "2026-11-27"
+note = "Quarterly supply of TSMC 3-5 nm logic wafers, CoWoS wafers and HBM (USD), 2024 to 2025, with the per-chip bill-of-materials sheet its methodology links (packages per CoWoS wafer, dies per wafer, yields, HBM per chip)."

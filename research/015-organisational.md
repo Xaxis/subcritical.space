@@ -71,7 +71,7 @@ Huawei's 2025 output those estimates differ by a factor of [4.1](numbers.md#org-
 | Leading-edge logic | TSMC [72.5%](numbers.md#org-tsmc-share-2q26) of foundry revenue, Q2 2026 | dispersing among allied states | [1.9 years](numbers.md#org-fab-years) per fab | wafers, by the foundry | Yes |
 | HBM | SK hynix [50%](numbers.md#org-hbm-skhynix-2q26), Samsung [33%](numbers.md#org-hbm-samsung-2q26), Micron [18%](numbers.md#org-hbm-micron-2q26), Q2 2026 | shares shifting; a Chinese DRAM maker rising | years | stacks, by the maker | Yes, eroding |
 | Advanced packaging | TSMC's CoWoS plus a few outsourced assemblers | over [80%](numbers.md#org-cowos-cagr) a year | short relative to fabs | wafers, by the maker | Weakly |
-| Finished AI chips | [13.6 million H100e](numbers.md#org-sold-2025) sold in 2025, Nvidia [65.5%](numbers.md#org-nvidia-share-2025) | [2.67](numbers.md#org-sold-growth) times 2024 | follows the stages above | shipments; leaks downstream | Where it leaks |
+| Finished AI chips | [13.6 million H100e](numbers.md#org-sold-2025) sold in 2025 by all vendors, Nvidia [65.5%](numbers.md#org-nvidia-share-2025) | [2.67](numbers.md#org-sold-growth) times 2024 | follows the stages above | shipments; leaks downstream | Where it leaks |
 | Power | many utilities and equipment makers | US slow, China fast | [5.1 years](numbers.md#org-interconnect-years) median US interconnection | grid records, satellites | No |
 | Talent | spread across rival blocs | mobile | years to train | publications | No |
 | Data | the public web and private holdings | stock about fixed | none | low | No |
@@ -140,7 +140,7 @@ than [80%](numbers.md#org-cowos-cagr) a year from 2022 to 2027, a doubling every
 **Finished AI chips.** The flow the protocol would register is small enough to count. Summing the
 per-quarter median estimates in Epoch's chip sales data gives
 [5.1 million H100e](numbers.md#org-sold-2024) sold in 2024 and [13.6 million H100e](numbers.md#org-sold-2025)
-in 2025, a ratio of [2.67](numbers.md#org-sold-growth) [@epoch2026chipsales]. The sum is the survey
+in 2025 by all vendors, Huawei included, a ratio of [2.67](numbers.md#org-sold-growth) [@epoch2026chipsales]. The sum is the survey
 helper's, confirmed by the spot-check; it is not a figure Epoch states, and it has no valid interval.
 Nvidia made [65.5%](numbers.md#org-nvidia-share-2025) of 2025's compute, Google's TPUs
 [20%](numbers.md#org-google-share-2025) and Huawei [3.9%](numbers.md#org-huawei-share-2025); the chips
@@ -245,15 +245,51 @@ from [2.6](numbers.md#e1-algo-annual-subset-min) to [1,512](numbers.md#e1-algo-a
 year ([C2](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case)).
 The claims file therefore rests the declared path's line on the compute a chip count sees, not on the
 drift term, which makes the supply this chapter measures carry more weight. The hardware side is
-E22, **the supply envelope backtest**, which has not run. It would take
-the growth rates above (AI compute sold grew [2.67](numbers.md#org-sold-growth) times in a year, and
-EUV capacity doubles in about [2.6 years](numbers.md#org-euv-doubling-years) at plan) and check the
-envelope itself: from sourced capacities (EUV tools, CoWoS wafers, HBM stacks, good dies per wafer),
-compute the most H100e that each of three parties (a member with full access, a denied party with a
-stockpile, a denied party without one) could add in 2024 and 2025, and compare with Epoch's sales
-estimates and the estimates of Huawei's output. The envelope passes if every observed output falls
-inside it, and is revised if any observed output exceeds what it allowed. It runs from `tools/exp/`
-on public data.
+**E22, the supply envelope backtest**, which has run. From sourced capacities (CoWoS wafers, logic,
+HBM stacks, good dies per wafer) it computes, quarter by quarter, the most H100e each kind of party
+could make, taking each quarter's smallest stage at its 95th-percentile capacity with yields of one,
+and compares that upper bound with Epoch's sales estimates [@epoch2026chipsales] and the estimates of
+Huawei's output. The envelope passes: all [19 observations](numbers.md#e22-inside) of
+[19 observations](numbers.md#e22-observations) fall inside, the tightest by a factor of
+[1.97](numbers.md#e22-min-margin).
+
+- **A member with full access.** The allied chain's upper bound is
+  [13.6 million H100e](numbers.md#e22-member-env-2024) in 2024 and
+  [31.3 million H100e](numbers.md#e22-member-env-2025) in 2025: what it could have made, not what it
+  sold. The 2024 bound equals all vendors' 2025 sales above only by coincidence. Allied observed
+  sales, Nvidia, Google, AMD and Amazon only, were [4.9 million H100e](numbers.md#e22-member-obs-2024)
+  in 2024 and [13.0 million H100e](numbers.md#e22-member-obs-2025) in 2025, below the all-vendor totals
+  because Huawei and the smaller makers are left out. The margins, allied upper bound over allied
+  observed sales, are [2.8](numbers.md#e22-member-margin-2024) and [2.4](numbers.md#e22-member-margin-2025). At
+  central inputs the envelope is [11.3 million H100e](numbers.md#e22-member-env-central-2024) and
+  [26.4 million H100e](numbers.md#e22-member-env-central-2025), estimates, not bounds. The binding
+  stage is CoWoS packaging: the observed sales need [71%](numbers.md#e22-cowos-use-2024) and
+  [68%](numbers.md#e22-cowos-use-2025) of median CoWoS capacity in the two years, or
+  [90%](numbers.md#e22-cowos-use-epoch-2024) and [87%](numbers.md#e22-cowos-use-epoch-2025) from
+  Epoch's own lagged consumption.
+- **A denied party with a stockpile.** China's domestic chain could have made at most
+  [3.55 million H100e](numbers.md#e22-china-env-cum) in 2024 and 2025 together, the stockpiled HBM
+  plus CXMT's output, against Huawei's observed [0.71 million H100e](numbers.md#e22-china-obs-cum), a
+  margin of [5.0](numbers.md#e22-china-margin-cum); at central inputs the envelope is
+  [1.23 million H100e](numbers.md#e22-china-env-central-cum). Huawei's output needs
+  [58%](numbers.md#e22-china-stacks-share) of the stockpiled HBM at Epoch's unit mix. The bound leaves
+  room for [2.84 million H100e](numbers.md#e22-china-slack) of undeclared domestic output, so supply
+  data cannot rule out a large hidden domestic fleet.
+- **A denied party without a stockpile.** At most
+  [0.42 million H100e](numbers.md#e22-nostock-env-year) a year from CXMT's HBM. Untested: no such
+  party was observed in 2024 or 2025.
+
+The envelope also bounds phi, the factor by which a party's holdings can grow between declarations,
+which bounds how far its breakout time can fall before the next one; Part III's rule for checking the
+line only at declarations needs it bounded ([Part III](05-formal.md#c1-the-line-per-path), Proposition 1.6). For the allied fleet the
+bound is [2.5](numbers.md#e22-phi-member-year) over a year and
+[1.65](numbers.md#e22-phi-member-quarter) over a quarter; for China on domestic supply alone it is
+[2.4](numbers.md#e22-phi-china-year) over 2026, and imports and smuggling add to it. These are
+bounds on supply, not on what a party holds: on the 2025 envelope, new allied supply alone could
+reach the hardwired-pause breakout budget in [0.45 years](numbers.md#e22-member-years-to-hwp) from
+no chips, China from its end-2025 holdings in [0.7 years](numbers.md#e22-china-years-to-hwp), and a
+denied party without a stockpile in [3.9 years](numbers.md#e22-nostock-years-to-hwp), all lower
+bounds on the time.
 
 ## O2. Race dynamics
 
@@ -510,6 +546,15 @@ by the market and technological complexities of each semiconductor market segmen
 to which export controls were applied"; and "the most important export controls" are "those related
 to advanced semiconductor manufacturing equipment" [@allen2025senate].
 
+This ranking is a judgement made in 2026 with the erosion in view, and the test of rankings of this
+kind does not support it. E23 ranked [9 stages](numbers.md#e23-stages) that were chokepoints against
+China on data public at the end of 2022 and scored the ranking against the erosion found from 2023 to
+November 2026 ([27 events](numbers.md#e23-events), a lower bound, since only events our searches found
+count). Spearman's rho was [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p), with a
+95% interval from [-0.49](numbers.md#e23-rho-lo) to [0.80](numbers.md#e23-rho-hi). Part I's own order
+of five stages scores [0.30](numbers.md#e23-rho-part1), a reference only, since it was made after the
+fact (below).
+
 The rules that already stand on these stages show the core can be held, and gamed. The October 2022
 rule controlled chips by interconnect rate and processing performance, and fabs by node
 [@bis2022advancedcomputing]. In October 2023 it was patched: the new rule added a performance-density
@@ -629,8 +674,10 @@ Two pieces were not found done quantitatively: ranking stages by durability usin
 erosion evidence, and treating the footprint growth that denial forces (the
 [2.5](numbers.md#org-denial-power-multiplier) times power per unit of compute) as a detection gain to set
 against the physical chapter's footprint floor. That is a claim about our search only, and neither is
-claimed. The ranking is too small: with so few stages no test could discriminate one order from
-another. The detection gain is merged into the footprint floor
+claimed. The ranking is too small, and E23 now measures how small: at the observed rho a rank test
+would need [85 stages](numbers.md#e23-n-needed) to tell the 2022 ranking from a random one, while the
+2022 supply-chain dataset lists [79 inputs](numbers.md#e23-eto-inputs-2022), nested and correlated, so
+fewer independent stages than that. The detection gain is merged into the footprint floor
 ([C8](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool)),
 where E8 measures it. O3 is prior work ([novelty file](03-novelty.md#o3-chokepoints)).
 
@@ -639,8 +686,8 @@ where E8 measures it. O3 is prior work ([novelty file](03-novelty.md#o3-chokepoi
 A candidate, not a finding.
 
 1. **Register at birth, at the narrow stages.** New AI chips get a unit identity where they are made,
-   tied to EUV tool records, foundry wafers, HBM stacks and packaging. The yearly flow is about
-   [13.6 million H100e](numbers.md#org-sold-2025), and more than [70%](numbers.md#org-hyperscaler-share) of
+   tied to EUV tool records, foundry wafers, HBM stacks and packaging. The yearly flow from all
+   vendors is about [13.6 million H100e](numbers.md#org-sold-2025), and more than [70%](numbers.md#org-hyperscaler-share) of
    the stock sits with five owners. The cost to useful AI is low; makers already keep unit records.
 2. **Bind the holders, not only the buyers.** The leak the protocol cannot verify its way out of is the
    holder's own decision to sell. The states that host EUV, leading-edge fabs and HBM must be bound by
@@ -687,12 +734,20 @@ compute it delays a power channel's crossing by [3.1 years](numbers.md#e8-denial
 the satellite line in [60%](numbers.md#e8-concentrated-1e26-pause-seen-denied) of draws for a denied
 party against [19%](numbers.md#e8-concentrated-1e26-pause-seen) otherwise. The gain is partial: it
 postpones the year a single site falls below the satellite line, but chips spread over sites below that
-line are still found only on E5's timescale of decades (above). A new test, **the durability
-backtest**, would rank the stages using only data
-public at the end of 2022 (supplier count, capacity growth, technical complexity) and score the ranking
-against the erosion observed from 2022 to 2026 (CXMT's share, the die bank, SMIC's N+3, the EUV
-prototype). A ranking that fails to order the observed erosion is cut. With so few stages it is a sanity
-check, not a proof, which is why the ranking is not claimed.
+line are still found only on E5's timescale of decades (above). **E23, the durability backtest**, has
+run. It ranked [9 stages](numbers.md#e23-stages) by a rule fixed on data public at the end of 2022
+(more Chinese suppliers, more predicted erosion; power left out, since China was the largest
+generator) and scored the ranking against the erosion found from 2023 to November 2026. The ranking is
+not supported: rho is [0.28](numbers.md#e23-rho), one-sided p [0.23](numbers.md#e23-p), and the
+smallest rho the test could call significant with these stages is
+[0.59](numbers.md#e23-rho-critical). The test had power [0.16](numbers.md#e23-power-here) even if the
+observed rho were true. The result moves with every choice: leaving one stage out gives
+[-0.04](numbers.md#e23-rho-loo-min) to [0.54](numbers.md#e23-rho-loo-max); over six rules and six
+erosion scorings rho runs from [-0.69](numbers.md#e23-rho-alt-min) to
+[0.29](numbers.md#e23-rho-alt-max), median [0.08](numbers.md#e23-rho-alt-median); with power put back
+it is [0.09](numbers.md#e23-rho-full). A test that could separate the ranking from chance would need
+[85 stages](numbers.md#e23-n-needed). So the ranking stays unclaimed: the data cannot test it, and
+the window of under four years may be too short to show slow erosion such as EUV's.
 
 ## O4. Covert supply: how secret programmes were run and found
 
@@ -899,7 +954,7 @@ Four quantities from this chapter should enter the protocol, as limits or as inp
 1. **Registered compute.** New AI chips counted at birth at the narrow stages (EUV tools,
    leading-edge wafers, HBM stacks, packaging) and holdings counted at their owners, in H100e.
    *Measurement:* unit records the makers already keep; about [13.6 million H100e](numbers.md#org-sold-2025)
-   a year, more than [70%](numbers.md#org-hyperscaler-share) held by five owners. *Weakest point:* it holds
+   a year from all vendors, more than [70%](numbers.md#org-hyperscaler-share) held by five owners. *Weakest point:* it holds
    only while the states hosting the chokepoints bind their own export decisions, and one of them
    reversed a rule within months.
 2. **Unaccounted compute.** The stock outside the registry (smuggled chips, die banks, stockpiled

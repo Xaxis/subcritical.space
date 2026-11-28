@@ -78,8 +78,8 @@ capability growth between [18%](../research/numbers.md#e1-compute-share-subset-m
 [63%](../research/numbers.md#e1-compute-share-subset-max) across samples. **Distillation** needs a
 teacher: it starts from the best model a party can query, and a student can exceed its teacher
 [@furlanello2018born; @burns2023weak] by an uplift no one has measured. **Self-replication**
-components are rising, from under [5%](../research/numbers.md#def-replibench-2023) to over
-[60%](../research/numbers.md#def-replibench-2025) on simplified tasks [@aisi2025trends], but fail at
+components are rising, from under [5%](../research/numbers.md#dyn-aisi-rep-2023) to over
+[60%](../research/numbers.md#dyn-aisi-rep-2025) on simplified tasks [@aisi2025trends], but fail at
 identity checks [@black2025replibench], which open weights on local hardware never meet
 [@pan2024selfrep]. **Continual learning** is not one capability [@harrington2026continual], and
 forgetting brakes it [@luo2023forgetting]. **Long-horizon autonomy** adds no compute or capability of
@@ -98,7 +98,8 @@ not fix. The experiments are mixed. E5's test of the discovery rate could fail o
 [12.8](../research/numbers.md#e5-memo-over-hazard)-fold error, so its passing is weak evidence. In
 E11 no single pathway's gate issues the coupled-gain certificate with honest bounds
 ([0 pathways](../research/numbers.md#e11-pathways-alone-honest) do); the sets that issue it join
-several pathways' gates. The pathways feed each other, and loops each below 1 can be above 1 together
+several pathways' gates. E18 finds that the cap leaks in jumps, which leaves the pair count
+unchanged. The pathways feed each other, and loops each below 1 can be above 1 together
 [@davidson2026feedback; @burtsev2026criticality], so Part II gates the edges between them too.
 
 **Label.** Prior work, applied. The method is acquisition path analysis, which ranks paths by time

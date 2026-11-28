@@ -1,0 +1,6526 @@
+{
+  "data": [
+    {
+      "sha256": "9da40570947331b12eabb15dff799e0c3d10420102e89bfcc382373030f3b36c",
+      "url": "https://epoch.ai/data/charts/open-closed-eci-gap/benchmarked_models.csv",
+      "what": "Epoch AI, ECI scores of open- and closed-weight models (chart data, open-closed gap insight)"
+    }
+  ],
+  "details": {
+    "backtest": {
+      "data_end": "2026-05-19",
+      "first_closed_model_with_eci": "2023-03-14",
+      "implied_gamma_by_event": [
+        1.90628,
+        1.91897,
+        5.93269,
+        1125.32
+      ],
+      "open_only_same_as_all": true,
+      "records": [
+        {
+          "date": "2023-02-24",
+          "eci": 109.317,
+          "log10_flop": 23.7404,
+          "name": "LLaMA-65B"
+        },
+        {
+          "date": "2023-03-14",
+          "eci": 125.96,
+          "log10_flop": 25.3222,
+          "name": "GPT-4 (Mar 2023)"
+        },
+        {
+          "date": "2024-02-15",
+          "eci": 127.777,
+          "log10_flop": null,
+          "name": "Gemini 1.5 Pro (Feb 2024)"
+        },
+        {
+          "date": "2024-05-13",
+          "eci": 128.909,
+          "log10_flop": null,
+          "name": "GPT-4o (May 2024)"
+        },
+        {
+          "date": "2024-06-20",
+          "eci": 130.0,
+          "log10_flop": 25.4314,
+          "name": "Claude 3.5 Sonnet"
+        },
+        {
+          "date": "2024-09-12",
+          "eci": 136.68,
+          "log10_flop": null,
+          "name": "o1-mini"
+        },
+        {
+          "date": "2024-12-17",
+          "eci": 142.829,
+          "log10_flop": null,
+          "name": "o1"
+        },
+        {
+          "date": "2025-03-25",
+          "eci": 145.068,
+          "log10_flop": null,
+          "name": "Gemini 2.5 Pro (Mar 2025)"
+        },
+        {
+          "date": "2025-04-16",
+          "eci": 147.265,
+          "log10_flop": null,
+          "name": "o3"
+        },
+        {
+          "date": "2025-06-10",
+          "eci": 148.126,
+          "log10_flop": null,
+          "name": "o3-pro"
+        },
+        {
+          "date": "2025-08-07",
+          "eci": 150.0,
+          "log10_flop": 25.8195,
+          "name": "GPT-5"
+        },
+        {
+          "date": "2025-10-07",
+          "eci": 150.211,
+          "log10_flop": null,
+          "name": "GPT-5 Pro"
+        },
+        {
+          "date": "2025-11-18",
+          "eci": 153.447,
+          "log10_flop": null,
+          "name": "Gemini 3 Pro"
+        },
+        {
+          "date": "2025-12-11",
+          "eci": 154.186,
+          "log10_flop": null,
+          "name": "GPT-5.2 Pro"
+        },
+        {
+          "date": "2026-02-05",
+          "eci": 155.888,
+          "log10_flop": null,
+          "name": "GPT-5.3 Codex"
+        },
+        {
+          "date": "2026-02-19",
+          "eci": 156.634,
+          "log10_flop": null,
+          "name": "Gemini 3.1 Pro"
+        },
+        {
+          "date": "2026-03-05",
+          "eci": 157.727,
+          "log10_flop": null,
+          "name": "GPT-5.4 Pro"
+        },
+        {
+          "date": "2026-04-23",
+          "eci": 159.347,
+          "log10_flop": null,
+          "name": "GPT-5.5 Pro"
+        }
+      ],
+      "sensitivity_confident_or_likely": {
+        "censored_at_own_compute": 0,
+        "first_match_at_own_compute_years": [
+          1.51951
+        ],
+        "implied_gamma_min_max": [
+          1.90628,
+          5.93269
+        ],
+        "tally_j0": {
+          "e1_full_sample": {
+            "faster": 0,
+            "inside": 0,
+            "slower": 4,
+            "undetermined": 0
+          },
+          "e1_subsets": {
+            "faster": 0,
+            "inside": 1,
+            "slower": 3,
+            "undetermined": 0
+          },
+          "ho_95ci": {
+            "faster": 0,
+            "inside": 3,
+            "slower": 1,
+            "undetermined": 0
+          },
+          "part1_bracket": {
+            "faster": 0,
+            "inside": 3,
+            "slower": 1,
+            "undetermined": 0
+          },
+          "rosetta_families": {
+            "faster": 0,
+            "inside": 3,
+            "slower": 1,
+            "undetermined": 0
+          }
+        },
+        "targets": 1,
+        "targets_matched_under_own_compute_before_release": 0,
+        "what": "targets and catch-up models whose compute estimate Epoch rates confident or likely"
+      },
+      "sensitivity_near_frontier": {
+        "censored_at_own_compute": 1,
+        "first_match_at_own_compute_years": [
+          0.0793977,
+          0.156057,
+          0.25462,
+          0.353183,
+          0.473648,
+          0.479124,
+          1.51951
+        ],
+        "implied_gamma_min_max": [
+          1.40834,
+          119184000000.0
+        ],
+        "tally_j0": {
+          "e1_full_sample": {
+            "faster": 6,
+            "inside": 0,
+            "slower": 13,
+            "undetermined": 0
+          },
+          "e1_subsets": {
+            "faster": 4,
+            "inside": 3,
+            "slower": 12,
+            "undetermined": 0
+          },
+          "ho_95ci": {
+            "faster": 6,
+            "inside": 3,
+            "slower": 10,
+            "undetermined": 0
+          },
+          "part1_bracket": {
+            "faster": 6,
+            "inside": 3,
+            "slower": 10,
+            "undetermined": 0
+          },
+          "rosetta_families": {
+            "faster": 6,
+            "inside": 5,
+            "slower": 8,
+            "undetermined": 0
+          }
+        },
+        "targets": 10,
+        "targets_matched_under_own_compute_before_release": 2,
+        "what": "targets: every model with a compute estimate whose ECI is at least the standing record's lower interval end at its release; a target already matched under its own compute before its release was not at the efficient frontier and is left out of the tallies"
+      },
+      "steps_between_catch_ups": [
+        {
+          "days": 78,
+          "from": "Qwen2.5-72B",
+          "oom_closed": 0.0554555,
+          "target": "GPT-4 (Mar 2023)",
+          "to": "Llama 3.3 70B"
+        },
+        {
+          "days": 6,
+          "from": "Llama 3.3 70B",
+          "oom_closed": 0.867214,
+          "target": "GPT-4 (Mar 2023)",
+          "to": "Phi-4"
+        }
+      ],
+      "tally_j0": {
+        "e1_full_sample": {
+          "faster": 1,
+          "inside": 0,
+          "slower": 6,
+          "undetermined": 0
+        },
+        "e1_subsets": {
+          "faster": 0,
+          "inside": 2,
+          "slower": 5,
+          "undetermined": 0
+        },
+        "ho_95ci": {
+          "faster": 1,
+          "inside": 3,
+          "slower": 3,
+          "undetermined": 0
+        },
+        "part1_bracket": {
+          "faster": 1,
+          "inside": 3,
+          "slower": 3,
+          "undetermined": 0
+        },
+        "rosetta_families": {
+          "faster": 1,
+          "inside": 3,
+          "slower": 3,
+          "undetermined": 0
+        }
+      },
+      "tally_j_part1_range": {
+        "e1_full_sample": {
+          "faster": 0,
+          "inside": 1,
+          "slower": 6,
+          "undetermined": 0
+        },
+        "e1_subsets": {
+          "faster": 0,
+          "inside": 1,
+          "slower": 6,
+          "undetermined": 0
+        },
+        "ho_95ci": {
+          "faster": 0,
+          "inside": 2,
+          "slower": 5,
+          "undetermined": 0
+        },
+        "part1_bracket": {
+          "faster": 0,
+          "inside": 2,
+          "slower": 5,
+          "undetermined": 0
+        },
+        "rosetta_families": {
+          "faster": 0,
+          "inside": 2,
+          "slower": 5,
+          "undetermined": 0
+        }
+      },
+      "targets_all_models": {
+        "Claude 3.5 Sonnet": {
+          "confidence": [
+            "Speculative"
+          ],
+          "date": "2024-06-20",
+          "eci": 130.0,
+          "events": [
+            {
+              "by": "Phi-4",
+              "date": "2024-12-12",
+              "h": 1.46194,
+              "years": 0.479124
+            }
+          ],
+          "first_match": {
+            "0.0": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "0.25": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "0.5": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "0.75": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "1.0": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "1.25": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "1.5": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "1.75": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "2.0": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "2.25": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "2.5": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            }
+          },
+          "log10_flop": 25.4314,
+          "matched_before_release": []
+        },
+        "GPT-4 (Mar 2023)": {
+          "confidence": [
+            "Likely"
+          ],
+          "date": "2023-03-14",
+          "eci": 125.96,
+          "events": [
+            {
+              "by": "Qwen2.5-72B",
+              "date": "2024-09-19",
+              "h": 0.430125,
+              "years": 1.51951
+            },
+            {
+              "by": "Llama 3.3 70B",
+              "date": "2024-12-06",
+              "h": 0.48558,
+              "years": 1.73306
+            },
+            {
+              "by": "Phi-4",
+              "date": "2024-12-12",
+              "h": 1.35279,
+              "years": 1.74949
+            }
+          ],
+          "first_match": {
+            "0.0": {
+              "by": "Qwen2.5-72B",
+              "censored": false,
+              "years": 1.51951
+            },
+            "0.25": {
+              "by": "Qwen2.5-72B",
+              "censored": false,
+              "years": 1.51951
+            },
+            "0.5": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "0.75": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "1.0": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "1.25": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "1.5": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "1.75": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "2.0": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "2.25": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "2.5": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            }
+          },
+          "log10_flop": 25.3222,
+          "matched_before_release": []
+        },
+        "GPT-5": {
+          "confidence": [
+            "Speculative"
+          ],
+          "date": "2025-08-07",
+          "eci": 150.0,
+          "events": [],
+          "first_match": {
+            "0.0": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "0.25": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "0.5": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "0.75": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.0": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.25": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.5": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.75": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "2.0": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "2.25": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "2.5": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            }
+          },
+          "log10_flop": 25.8195,
+          "matched_before_release": []
+        }
+      },
+      "targets_open_weights_only": {
+        "Claude 3.5 Sonnet": {
+          "confidence": [
+            "Speculative"
+          ],
+          "date": "2024-06-20",
+          "eci": 130.0,
+          "events": [
+            {
+              "by": "Phi-4",
+              "date": "2024-12-12",
+              "h": 1.46194,
+              "years": 0.479124
+            }
+          ],
+          "first_match": {
+            "0.0": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "0.25": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "0.5": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "0.75": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "1.0": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "1.25": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 0.479124
+            },
+            "1.5": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "1.75": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "2.0": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "2.25": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            },
+            "2.5": {
+              "by": null,
+              "censored": true,
+              "years": 1.91102
+            }
+          },
+          "log10_flop": 25.4314,
+          "matched_before_release": []
+        },
+        "GPT-4 (Mar 2023)": {
+          "confidence": [
+            "Likely"
+          ],
+          "date": "2023-03-14",
+          "eci": 125.96,
+          "events": [
+            {
+              "by": "Qwen2.5-72B",
+              "date": "2024-09-19",
+              "h": 0.430125,
+              "years": 1.51951
+            },
+            {
+              "by": "Llama 3.3 70B",
+              "date": "2024-12-06",
+              "h": 0.48558,
+              "years": 1.73306
+            },
+            {
+              "by": "Phi-4",
+              "date": "2024-12-12",
+              "h": 1.35279,
+              "years": 1.74949
+            }
+          ],
+          "first_match": {
+            "0.0": {
+              "by": "Qwen2.5-72B",
+              "censored": false,
+              "years": 1.51951
+            },
+            "0.25": {
+              "by": "Qwen2.5-72B",
+              "censored": false,
+              "years": 1.51951
+            },
+            "0.5": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "0.75": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "1.0": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "1.25": {
+              "by": "Phi-4",
+              "censored": false,
+              "years": 1.74949
+            },
+            "1.5": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "1.75": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "2.0": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "2.25": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            },
+            "2.5": {
+              "by": null,
+              "censored": true,
+              "years": 3.18138
+            }
+          },
+          "log10_flop": 25.3222,
+          "matched_before_release": []
+        },
+        "GPT-5": {
+          "confidence": [
+            "Speculative"
+          ],
+          "date": "2025-08-07",
+          "eci": 150.0,
+          "events": [],
+          "first_match": {
+            "0.0": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "0.25": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "0.5": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "0.75": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.0": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.25": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.5": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "1.75": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "2.0": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "2.25": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            },
+            "2.5": {
+              "by": null,
+              "censored": true,
+              "years": 0.780287
+            }
+          },
+          "log10_flop": 25.8195,
+          "matched_before_release": []
+        }
+      },
+      "what": "Part I's design: a cap at a then-frontier model's compute (h = 0) and at h OOM below it; the first model at or below the cap to match the record's ECI. At h = 0 the expression predicts 0 for every input. Each catch-up closing more headroom than any earlier one is an event, implying a rate 10^(h / t) with J = 0"
+    },
+    "by_e1_sample": {
+      "example_headroom_oom": 3.0,
+      "table": {
+        "all joined models": {
+          "example_cap_against_line": "inside",
+          "gamma": 17.0296,
+          "headroom_needed_cheap_verifier": [
+            3.46241,
+            5.46241
+          ],
+          "headroom_needed_no_verifier": [
+            3.16138,
+            3.76344
+          ],
+          "headroom_needed_no_verifier_record_tr": [
+            3.87452,
+            4.47658
+          ],
+          "leak_years_example_cheap_verifier": [
+            0.0,
+            1.62443
+          ],
+          "leak_years_example_no_verifier": [
+            1.37993,
+            1.86893
+          ]
+        },
+        "at or above 1e24 FLOP": {
+          "example_cap_against_line": "inside",
+          "gamma": 392.5568,
+          "headroom_needed_cheap_verifier": [
+            6.18781,
+            8.18781
+          ],
+          "headroom_needed_no_verifier": [
+            5.88678,
+            6.48884
+          ],
+          "headroom_needed_no_verifier_record_tr": [
+            7.38923,
+            7.99129
+          ],
+          "leak_years_example_cheap_verifier": [
+            0.0,
+            0.771039
+          ],
+          "leak_years_example_no_verifier": [
+            0.654986,
+            0.887092
+          ]
+        },
+        "at or above 1e24.5 FLOP": {
+          "example_cap_against_line": "inside",
+          "gamma": 1512.4678,
+          "headroom_needed_cheap_verifier": [
+            7.35937,
+            9.35937
+          ],
+          "headroom_needed_no_verifier": [
+            7.05834,
+            7.6604
+          ],
+          "headroom_needed_no_verifier_record_tr": [
+            8.90009,
+            9.50215
+          ],
+          "leak_years_example_cheap_verifier": [
+            0.0,
+            0.628993
+          ],
+          "leak_years_example_no_verifier": [
+            0.53432,
+            0.723666
+          ]
+        },
+        "confident compute estimates only": {
+          "example_cap_against_line": "mixed",
+          "gamma": 7.568,
+          "headroom_needed_cheap_verifier": [
+            2.75796,
+            4.75796
+          ],
+          "headroom_needed_no_verifier": [
+            2.45693,
+            3.05899
+          ],
+          "headroom_needed_no_verifier_record_tr": [
+            2.96606,
+            3.56812
+          ],
+          "leak_years_example_cheap_verifier": [
+            0.0,
+            2.27536
+          ],
+          "leak_years_example_no_verifier": [
+            1.93289,
+            2.61784
+          ]
+        },
+        "not open weights": {
+          "example_cap_against_line": "outside",
+          "gamma": 2.6092,
+          "headroom_needed_cheap_verifier": [
+            1.83301,
+            3.83301
+          ],
+          "headroom_needed_no_verifier": [
+            1.53198,
+            2.13404
+          ],
+          "headroom_needed_no_verifier_record_tr": [
+            1.77324,
+            2.3753
+          ],
+          "leak_years_example_cheap_verifier": [
+            0.0,
+            4.80184
+          ],
+          "leak_years_example_no_verifier": [
+            4.07909,
+            5.52458
+          ]
+        },
+        "released 2024 on": {
+          "example_cap_against_line": "inside",
+          "gamma": 45.6454,
+          "headroom_needed_cheap_verifier": [
+            4.31879,
+            6.31879
+          ],
+          "headroom_needed_no_verifier": [
+            4.01776,
+            4.61982
+          ],
+          "headroom_needed_no_verifier_record_tr": [
+            4.97893,
+            5.58099
+          ],
+          "leak_years_example_cheap_verifier": [
+            0.0,
+            1.20526
+          ],
+          "leak_years_example_no_verifier": [
+            1.02385,
+            1.38667
+          ]
+        }
+      },
+      "verdicts": {
+        "inside": 4,
+        "mixed": 1,
+        "outside": 1
+      },
+      "what": "at the example headroom, the leak time [high jump, low jump] and the headroom needed [low jump, high jump] at each of E1's six sample rates; 'inside' means the leak time is below m * T_r at every jump in the range (the example cap fails the line), 'outside' that it exceeds it at every jump"
+    },
+    "c2b_fixed_compute": {
+      "scale_term_if_e1_full_sample_were_trusted": {
+        "table": {
+          "1e24": {
+            "disjoint": true,
+            "expression": [
+              0.830893,
+              2.2422
+            ],
+            "single_multiplier_ho": [
+              3.73717,
+              11.8759
+            ]
+          },
+          "1e26": {
+            "disjoint": false,
+            "expression": [
+              1.54347,
+              5.53927
+            ],
+            "single_multiplier_ho": [
+              3.73717,
+              11.8759
+            ]
+          }
+        },
+        "what": "the expression with E1's full-sample rate at the cap's scale (interaction fit) against one multiplier at Ho et al.'s interval, example headroom, no cheap verifier; E1's six samples do not support that rate (at or above 1e24 FLOP they give 393 and 1,512 a year), so this is not a test"
+      },
+      "separation": {
+        "cheap_verifier|e1_full_sample": {
+          "boundary_oom": 2.03473,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            0.0,
+            2.26637
+          ],
+          "headroom_needed_low_corner_oom": 2.76493,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            1.72879,
+            3.39956
+          ]
+        },
+        "cheap_verifier|e1_subsets": {
+          "boundary_oom": 1.15073,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            0.0,
+            4.80184
+          ],
+          "headroom_needed_low_corner_oom": 1.83301,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            0.943489,
+            7.20275
+          ]
+        },
+        "cheap_verifier|ho_95ci": {
+          "boundary_oom": 1.45918,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            0.0,
+            7.91726
+          ],
+          "headroom_needed_low_corner_oom": 1.50523,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            3.73717,
+            11.8759
+          ]
+        },
+        "cheap_verifier|part1_bracket": {
+          "boundary_oom": 1.30489,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            0.0,
+            11.0
+          ],
+          "headroom_needed_low_corner_oom": 1.36364,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            3.85529,
+            16.5
+          ]
+        },
+        "no_cheap_verifier|e1_full_sample": {
+          "boundary_oom": 1.42222,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            0.979056,
+            2.6075
+          ],
+          "headroom_needed_low_corner_oom": 2.4639,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            1.72879,
+            3.39956
+          ]
+        },
+        "no_cheap_verifier|e1_subsets": {
+          "boundary_oom": 0.804329,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            0.53432,
+            5.52458
+          ],
+          "headroom_needed_low_corner_oom": 1.53198,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            0.943489,
+            7.20275
+          ]
+        },
+        "no_cheap_verifier|ho_95ci": {
+          "boundary_oom": 1.01993,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            2.11645,
+            9.10893
+          ],
+          "headroom_needed_low_corner_oom": 1.2042,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            3.73717,
+            11.8759
+          ]
+        },
+        "no_cheap_verifier|part1_bracket": {
+          "boundary_oom": 0.912082,
+          "disjoint_at_example": false,
+          "expression_at_example": [
+            2.18334,
+            12.6557
+          ],
+          "headroom_needed_low_corner_oom": 1.06261,
+          "separates_only_where_cap_fails_line": true,
+          "single_multiplier_at_example": [
+            3.85529,
+            16.5
+          ]
+        }
+      },
+      "what": "C2(b) read as: the two intervals do not overlap. Where the boundary is below the headroom needed at the low corner, every headroom at which they separate is one where the cap's leak time is below m * T_r at every input in the box. Same rate range for both, so the difference is the jump terms alone; below the boundary headroom the intervals are disjoint, above it they overlap. This is arithmetic on Part I's input ranges, not evidence that either form is right"
+    },
+    "corners": {
+      "classes": {
+        "cheap_verifier": "J = 0, S_v from one technique's typical saving to the cheap-verifier span",
+        "no_cheap_verifier": "J from the typical to the high post-training jump, S_v = 0"
+      },
+      "m_times_tr_years": 2.0,
+      "ranges": {
+        "e1_full_sample": {
+          "central": 17.02964044209155,
+          "high": 54.36439195478479,
+          "low": 7.62899204195958,
+          "what": "E1 on all joined models, 2.5th to 97.5th percentile of resampling"
+        },
+        "e1_subsets": {
+          "central": null,
+          "high": 1512.4678,
+          "low": 2.6092,
+          "what": "E1's six samples of the same models, lowest to highest point"
+        },
+        "ho_95ci": {
+          "central": 2.6918003852647123,
+          "high": 6.3496042078727974,
+          "low": 1.789009240520278,
+          "what": "Ho et al.'s 95% interval"
+        },
+        "part1_bracket": {
+          "central": 2.6918003852647123,
+          "high": 6.0,
+          "low": 1.5199110829529336,
+          "what": "Part I's bracket: the small-compute bound to the Rosetta rate, Ho et al. central"
+        },
+        "rosetta_families": {
+          "central": 6.0,
+          "high": 50.0,
+          "low": 1.0,
+          "what": "the Rosetta fit across model families; its low end of 1 means no drift"
+        }
+      },
+      "record_tr_note": "E5's declared-path detection time plus E24's Kaplan-Meier median response; a median, not a high quantile, and a share of findings were never halted",
+      "record_tr_years": 1.28961,
+      "table": {
+        "cheap_verifier|e1_full_sample": {
+          "headroom_needed_oom": [
+            2.76493,
+            6.47063
+          ],
+          "headroom_needed_oom_record_tr": [
+            3.27608,
+            7.47577
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.283297
+            ],
+            "1.5": [
+              0.0,
+              0.566593
+            ],
+            "1.75": [
+              0.0,
+              0.84989
+            ],
+            "2.0": [
+              0.0,
+              1.13319
+            ],
+            "2.25": [
+              0.0,
+              1.41648
+            ],
+            "2.5": [
+              0.0,
+              1.69978
+            ],
+            "2.75": [
+              0.0,
+              1.98308
+            ],
+            "3.0": [
+              0.0,
+              2.26637
+            ],
+            "3.25": [
+              0.144066,
+              2.54967
+            ],
+            "3.5": [
+              0.288132,
+              2.83297
+            ],
+            "3.75": [
+              0.432198,
+              3.11626
+            ],
+            "4.0": [
+              0.576264,
+              3.39956
+            ],
+            "4.25": [
+              0.720331,
+              3.68286
+            ],
+            "4.5": [
+              0.864397,
+              3.96615
+            ],
+            "4.75": [
+              1.00846,
+              4.24945
+            ],
+            "5.0": [
+              1.15253,
+              4.53275
+            ],
+            "5.25": [
+              1.29659,
+              4.81604
+            ],
+            "5.5": [
+              1.44066,
+              5.09934
+            ],
+            "5.75": [
+              1.58473,
+              5.38264
+            ],
+            "6.0": [
+              1.72879,
+              5.66593
+            ]
+          }
+        },
+        "cheap_verifier|e1_subsets": {
+          "headroom_needed_oom": [
+            1.83301,
+            9.35937
+          ],
+          "headroom_needed_oom_record_tr": [
+            2.07427,
+            11.2011
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.600229
+            ],
+            "1.5": [
+              0.0,
+              1.20046
+            ],
+            "1.75": [
+              0.0,
+              1.80069
+            ],
+            "2.0": [
+              0.0,
+              2.40092
+            ],
+            "2.25": [
+              0.0,
+              3.00115
+            ],
+            "2.5": [
+              0.0,
+              3.60138
+            ],
+            "2.75": [
+              0.0,
+              4.20161
+            ],
+            "3.0": [
+              0.0,
+              4.80184
+            ],
+            "3.25": [
+              0.0786241,
+              5.40207
+            ],
+            "3.5": [
+              0.157248,
+              6.00229
+            ],
+            "3.75": [
+              0.235872,
+              6.60252
+            ],
+            "4.0": [
+              0.314496,
+              7.20275
+            ],
+            "4.25": [
+              0.393121,
+              7.80298
+            ],
+            "4.5": [
+              0.471745,
+              8.40321
+            ],
+            "4.75": [
+              0.550369,
+              9.00344
+            ],
+            "5.0": [
+              0.628993,
+              9.60367
+            ],
+            "5.25": [
+              0.707617,
+              10.2039
+            ],
+            "5.5": [
+              0.786241,
+              10.8041
+            ],
+            "5.75": [
+              0.864865,
+              11.4044
+            ],
+            "6.0": [
+              0.943489,
+              12.0046
+            ]
+          }
+        },
+        "cheap_verifier|ho_95ci": {
+          "headroom_needed_oom": [
+            1.50523,
+            4.60549
+          ],
+          "headroom_needed_oom_record_tr": [
+            1.65154,
+            5.07046
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.989658
+            ],
+            "1.5": [
+              0.0,
+              1.97932
+            ],
+            "1.75": [
+              0.0,
+              2.96897
+            ],
+            "2.0": [
+              0.0,
+              3.95863
+            ],
+            "2.25": [
+              0.0,
+              4.94829
+            ],
+            "2.5": [
+              0.0,
+              5.93795
+            ],
+            "2.75": [
+              0.0,
+              6.9276
+            ],
+            "3.0": [
+              0.0,
+              7.91726
+            ],
+            "3.25": [
+              0.311431,
+              8.90692
+            ],
+            "3.5": [
+              0.622862,
+              9.89658
+            ],
+            "3.75": [
+              0.934292,
+              10.8862
+            ],
+            "4.0": [
+              1.24572,
+              11.8759
+            ],
+            "4.25": [
+              1.55715,
+              12.8656
+            ],
+            "4.5": [
+              1.86858,
+              13.8552
+            ],
+            "4.75": [
+              2.18002,
+              14.8449
+            ],
+            "5.0": [
+              2.49145,
+              15.8345
+            ],
+            "5.25": [
+              2.80288,
+              16.8242
+            ],
+            "5.5": [
+              3.11431,
+              17.8138
+            ],
+            "5.75": [
+              3.42574,
+              18.8035
+            ],
+            "6.0": [
+              3.73717,
+              19.7932
+            ]
+          }
+        },
+        "cheap_verifier|part1_bracket": {
+          "headroom_needed_oom": [
+            1.36364,
+            4.5563
+          ],
+          "headroom_needed_oom_record_tr": [
+            1.46895,
+            5.00703
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              1.375
+            ],
+            "1.5": [
+              0.0,
+              2.75
+            ],
+            "1.75": [
+              0.0,
+              4.125
+            ],
+            "2.0": [
+              0.0,
+              5.5
+            ],
+            "2.25": [
+              0.0,
+              6.875
+            ],
+            "2.5": [
+              0.0,
+              8.25
+            ],
+            "2.75": [
+              0.0,
+              9.625
+            ],
+            "3.0": [
+              0.0,
+              11.0
+            ],
+            "3.25": [
+              0.321274,
+              12.375
+            ],
+            "3.5": [
+              0.642549,
+              13.75
+            ],
+            "3.75": [
+              0.963823,
+              15.125
+            ],
+            "4.0": [
+              1.2851,
+              16.5
+            ],
+            "4.25": [
+              1.60637,
+              17.875
+            ],
+            "4.5": [
+              1.92765,
+              19.25
+            ],
+            "4.75": [
+              2.24892,
+              20.625
+            ],
+            "5.0": [
+              2.57019,
+              22.0
+            ],
+            "5.25": [
+              2.89147,
+              23.375
+            ],
+            "5.5": [
+              3.21274,
+              24.75
+            ],
+            "5.75": [
+              3.53402,
+              26.125
+            ],
+            "6.0": [
+              3.85529,
+              27.5
+            ]
+          }
+        },
+        "cheap_verifier|rosetta_families": {
+          "headroom_needed_oom": [
+            1.0,
+            6.39794
+          ],
+          "headroom_needed_oom_record_tr": [
+            1.0,
+            7.38203
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              null
+            ],
+            "1.5": [
+              0.0,
+              null
+            ],
+            "1.75": [
+              0.0,
+              null
+            ],
+            "2.0": [
+              0.0,
+              null
+            ],
+            "2.25": [
+              0.0,
+              null
+            ],
+            "2.5": [
+              0.0,
+              null
+            ],
+            "2.75": [
+              0.0,
+              null
+            ],
+            "3.0": [
+              0.0,
+              null
+            ],
+            "3.25": [
+              0.147148,
+              null
+            ],
+            "3.5": [
+              0.294296,
+              null
+            ],
+            "3.75": [
+              0.441444,
+              null
+            ],
+            "4.0": [
+              0.588592,
+              null
+            ],
+            "4.25": [
+              0.73574,
+              null
+            ],
+            "4.5": [
+              0.882888,
+              null
+            ],
+            "4.75": [
+              1.03004,
+              null
+            ],
+            "5.0": [
+              1.17718,
+              null
+            ],
+            "5.25": [
+              1.32433,
+              null
+            ],
+            "5.5": [
+              1.47148,
+              null
+            ],
+            "5.75": [
+              1.61863,
+              null
+            ],
+            "6.0": [
+              1.76578,
+              null
+            ]
+          }
+        },
+        "no_cheap_verifier|e1_full_sample": {
+          "headroom_needed_oom": [
+            2.4639,
+            4.77166
+          ],
+          "headroom_needed_oom_record_tr": [
+            2.97505,
+            5.7768
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0578265
+            ],
+            "1.0": [
+              0.0,
+              0.341123
+            ],
+            "1.25": [
+              0.0,
+              0.62442
+            ],
+            "1.5": [
+              0.114659,
+              0.907716
+            ],
+            "1.75": [
+              0.258725,
+              1.19101
+            ],
+            "2.0": [
+              0.402792,
+              1.47431
+            ],
+            "2.25": [
+              0.546858,
+              1.75761
+            ],
+            "2.5": [
+              0.690924,
+              2.0409
+            ],
+            "2.75": [
+              0.83499,
+              2.3242
+            ],
+            "3.0": [
+              0.979056,
+              2.6075
+            ],
+            "3.25": [
+              1.12312,
+              2.89079
+            ],
+            "3.5": [
+              1.26719,
+              3.17409
+            ],
+            "3.75": [
+              1.41125,
+              3.45739
+            ],
+            "4.0": [
+              1.55532,
+              3.74068
+            ],
+            "4.25": [
+              1.69939,
+              4.02398
+            ],
+            "4.5": [
+              1.84345,
+              4.30728
+            ],
+            "4.75": [
+              1.98752,
+              4.59057
+            ],
+            "5.0": [
+              2.13158,
+              4.87387
+            ],
+            "5.25": [
+              2.27565,
+              5.15717
+            ],
+            "5.5": [
+              2.41972,
+              5.44046
+            ],
+            "5.75": [
+              2.56378,
+              5.72376
+            ],
+            "6.0": [
+              2.70785,
+              6.00706
+            ]
+          }
+        },
+        "no_cheap_verifier|e1_subsets": {
+          "headroom_needed_oom": [
+            1.53198,
+            7.6604
+          ],
+          "headroom_needed_oom_record_tr": [
+            1.77324,
+            9.50215
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.122519
+            ],
+            "1.0": [
+              0.0,
+              0.722748
+            ],
+            "1.25": [
+              0.0,
+              1.32298
+            ],
+            "1.5": [
+              0.0625754,
+              1.92321
+            ],
+            "1.75": [
+              0.141199,
+              2.52344
+            ],
+            "2.0": [
+              0.219824,
+              3.12367
+            ],
+            "2.25": [
+              0.298448,
+              3.7239
+            ],
+            "2.5": [
+              0.377072,
+              4.32413
+            ],
+            "2.75": [
+              0.455696,
+              4.92435
+            ],
+            "3.0": [
+              0.53432,
+              5.52458
+            ],
+            "3.25": [
+              0.612944,
+              6.12481
+            ],
+            "3.5": [
+              0.691568,
+              6.72504
+            ],
+            "3.75": [
+              0.770192,
+              7.32527
+            ],
+            "4.0": [
+              0.848816,
+              7.9255
+            ],
+            "4.25": [
+              0.927441,
+              8.52573
+            ],
+            "4.5": [
+              1.00606,
+              9.12596
+            ],
+            "4.75": [
+              1.08469,
+              9.72619
+            ],
+            "5.0": [
+              1.16331,
+              10.3264
+            ],
+            "5.25": [
+              1.24194,
+              10.9266
+            ],
+            "5.5": [
+              1.32056,
+              11.5269
+            ],
+            "5.75": [
+              1.39919,
+              12.1271
+            ],
+            "6.0": [
+              1.47781,
+              12.7273
+            ]
+          }
+        },
+        "no_cheap_verifier|ho_95ci": {
+          "headroom_needed_oom": [
+            1.2042,
+            2.90652
+          ],
+          "headroom_needed_oom_record_tr": [
+            1.35051,
+            3.37149
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.202009
+            ],
+            "1.0": [
+              0.0,
+              1.19167
+            ],
+            "1.25": [
+              0.0,
+              2.18132
+            ],
+            "1.5": [
+              0.247862,
+              3.17098
+            ],
+            "1.75": [
+              0.559292,
+              4.16064
+            ],
+            "2.0": [
+              0.870723,
+              5.1503
+            ],
+            "2.25": [
+              1.18215,
+              6.13996
+            ],
+            "2.5": [
+              1.49358,
+              7.12961
+            ],
+            "2.75": [
+              1.80502,
+              8.11927
+            ],
+            "3.0": [
+              2.11645,
+              9.10893
+            ],
+            "3.25": [
+              2.42788,
+              10.0986
+            ],
+            "3.5": [
+              2.73931,
+              11.0882
+            ],
+            "3.75": [
+              3.05074,
+              12.0779
+            ],
+            "4.0": [
+              3.36217,
+              13.0676
+            ],
+            "4.25": [
+              3.6736,
+              14.0572
+            ],
+            "4.5": [
+              3.98503,
+              15.0469
+            ],
+            "4.75": [
+              4.29646,
+              16.0365
+            ],
+            "5.0": [
+              4.60789,
+              17.0262
+            ],
+            "5.25": [
+              4.91932,
+              18.0158
+            ],
+            "5.5": [
+              5.23075,
+              19.0055
+            ],
+            "5.75": [
+              5.54218,
+              19.9952
+            ],
+            "6.0": [
+              5.85362,
+              20.9848
+            ]
+          }
+        },
+        "no_cheap_verifier|part1_bracket": {
+          "headroom_needed_oom": [
+            1.06261,
+            2.85733
+          ],
+          "headroom_needed_oom_record_tr": [
+            1.16792,
+            3.30806
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.280665
+            ],
+            "1.0": [
+              0.0,
+              1.65566
+            ],
+            "1.25": [
+              0.0,
+              3.03066
+            ],
+            "1.5": [
+              0.255696,
+              4.40566
+            ],
+            "1.75": [
+              0.57697,
+              5.78066
+            ],
+            "2.0": [
+              0.898244,
+              7.15566
+            ],
+            "2.25": [
+              1.21952,
+              8.53066
+            ],
+            "2.5": [
+              1.54079,
+              9.90566
+            ],
+            "2.75": [
+              1.86207,
+              11.2807
+            ],
+            "3.0": [
+              2.18334,
+              12.6557
+            ],
+            "3.25": [
+              2.50462,
+              14.0307
+            ],
+            "3.5": [
+              2.82589,
+              15.4057
+            ],
+            "3.75": [
+              3.14716,
+              16.7807
+            ],
+            "4.0": [
+              3.46844,
+              18.1557
+            ],
+            "4.25": [
+              3.78971,
+              19.5307
+            ],
+            "4.5": [
+              4.11099,
+              20.9057
+            ],
+            "4.75": [
+              4.43226,
+              22.2807
+            ],
+            "5.0": [
+              4.75354,
+              23.6557
+            ],
+            "5.25": [
+              5.07481,
+              25.0307
+            ],
+            "5.5": [
+              5.39608,
+              26.4057
+            ],
+            "5.75": [
+              5.71736,
+              27.7807
+            ],
+            "6.0": [
+              6.03863,
+              29.1557
+            ]
+          }
+        },
+        "no_cheap_verifier|rosetta_families": {
+          "headroom_needed_oom": [
+            0.69897,
+            4.69897
+          ],
+          "headroom_needed_oom_record_tr": [
+            0.69897,
+            5.68306
+          ],
+          "leak_years": {
+            "0.0": [
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              null
+            ],
+            "1.0": [
+              0.0,
+              null
+            ],
+            "1.25": [
+              0.0,
+              null
+            ],
+            "1.5": [
+              0.117112,
+              null
+            ],
+            "1.75": [
+              0.26426,
+              null
+            ],
+            "2.0": [
+              0.411408,
+              null
+            ],
+            "2.25": [
+              0.558556,
+              null
+            ],
+            "2.5": [
+              0.705704,
+              null
+            ],
+            "2.75": [
+              0.852852,
+              null
+            ],
+            "3.0": [
+              1.0,
+              null
+            ],
+            "3.25": [
+              1.14715,
+              null
+            ],
+            "3.5": [
+              1.2943,
+              null
+            ],
+            "3.75": [
+              1.44144,
+              null
+            ],
+            "4.0": [
+              1.58859,
+              null
+            ],
+            "4.25": [
+              1.73574,
+              null
+            ],
+            "4.5": [
+              1.88289,
+              null
+            ],
+            "4.75": [
+              2.03004,
+              null
+            ],
+            "5.0": [
+              2.17718,
+              null
+            ],
+            "5.25": [
+              2.32433,
+              null
+            ],
+            "5.5": [
+              2.47148,
+              null
+            ],
+            "5.75": [
+              2.61863,
+              null
+            ],
+            "6.0": [
+              2.76578,
+              null
+            ]
+          }
+        }
+      },
+      "what": "the exact interval of the leak time (years) at each headroom (OOM), [fast corner, slow corner], and the headroom a cap needs for the leak time to exceed m * T_r, [low, high]; by Theorem 2.1 every input in the box gives a value between the two; null means unbounded (a rate of 1)"
+    },
+    "e1_samples_read": {
+      "algo_annual": {
+        "all joined models": 17.0296,
+        "at or above 1e24 FLOP": 392.5568,
+        "at or above 1e24.5 FLOP": 1512.4678,
+        "confident compute estimates only": 7.568,
+        "not open weights": 2.6092,
+        "released 2024 on": 45.6454
+      },
+      "from": "data/results/e01_capability_compute.json"
+    },
+    "ledger_inputs": {
+      "comp-example-headroom-oom": 3.0,
+      "comp-gundlach-small-annual-max": 1.5199110829529336,
+      "comp-ho-annual": 2.6918003852647123,
+      "comp-ho-annual-hi": 6.3496042078727974,
+      "comp-ho-annual-lo": 1.789009240520278,
+      "comp-oneoff-hi-oom": 1.3010299956639813,
+      "comp-oneoff-lo-oom": 0.6989700043360189,
+      "comp-open-closed-lag": 4.0,
+      "comp-response-years": 1.0,
+      "comp-rosetta-algo": 6.0,
+      "comp-rosetta-algo-hi": 50.0,
+      "comp-rosetta-algo-lo": 1.0,
+      "comp-span-cheapver-train": 3.0,
+      "comp-tradeoff-typical-oom": 1.0,
+      "e1-algo-annual": 17.02964044209155,
+      "e1-algo-annual-1e24": 27.871279089264796,
+      "e1-algo-annual-1e24-hi": 110.854390621245,
+      "e1-algo-annual-1e24-lo": 10.622773143839106,
+      "e1-algo-annual-1e26": 5.814400436790822,
+      "e1-algo-annual-1e26-hi": 12.61084898295512,
+      "e1-algo-annual-1e26-lo": 2.6025763783266727,
+      "e1-algo-annual-hi": 54.36439195478479,
+      "e1-algo-annual-lo": 7.62899204195958,
+      "e1-algo-annual-subset-max": 1512.4678,
+      "e1-algo-annual-subset-min": 2.6092,
+      "e24-halt-km-median-years": 1.1827515400410678,
+      "e24-halt-share-never": 0.25,
+      "e5-td-declared-days": 39.03089986991943,
+      "prot-line-declared": 2.0,
+      "prot-margin": 2.0,
+      "prot-tr-declared": 1.0
+    },
+    "monte_carlo": {
+      "draws": 20000,
+      "example_headroom_median_by_law": {
+        "log_triangular": 4.37705,
+        "log_uniform": 4.16618,
+        "uniform": 3.50755
+      },
+      "jumps": "J or S_v uniform on its range",
+      "laws": {
+        "log_triangular": "log10 gamma triangular, peaked at the range's central value (its log midpoint when it has none)",
+        "log_uniform": "log10 gamma uniform",
+        "uniform": "gamma uniform"
+      },
+      "table": {
+        "log_triangular|cheap_verifier|e1_full_sample": {
+          "headroom_needed_p5_p50_p95": [
+            3.47384,
+            4.56948,
+            5.67718
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.118083
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.314203
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              0.513645
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              0.720773
+            ],
+            "2.25": [
+              0.0,
+              0.188153,
+              0.929133
+            ],
+            "2.5": [
+              0.0,
+              0.382721,
+              1.14431
+            ],
+            "2.75": [
+              0.0,
+              0.577026,
+              1.36143
+            ],
+            "3.0": [
+              0.0766476,
+              0.771884,
+              1.58101
+            ],
+            "3.25": [
+              0.271303,
+              0.967321,
+              1.80067
+            ],
+            "3.5": [
+              0.461862,
+              1.16021,
+              2.02381
+            ],
+            "3.75": [
+              0.648933,
+              1.35709,
+              2.24772
+            ],
+            "4.0": [
+              0.830882,
+              1.55234,
+              2.47301
+            ],
+            "4.25": [
+              1.0105,
+              1.74876,
+              2.70135
+            ],
+            "4.5": [
+              1.18588,
+              1.94549,
+              2.92858
+            ],
+            "4.75": [
+              1.36105,
+              2.14056,
+              3.15607
+            ],
+            "5.0": [
+              1.53557,
+              2.33412,
+              3.38549
+            ],
+            "5.25": [
+              1.70742,
+              2.52917,
+              3.61653
+            ],
+            "5.5": [
+              1.87809,
+              2.72367,
+              3.8478
+            ],
+            "5.75": [
+              2.04947,
+              2.9188,
+              4.07967
+            ],
+            "6.0": [
+              2.21927,
+              3.117,
+              4.31397
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 0.0,
+            "2.5": 0.0,
+            "2.75": 0.0,
+            "3.0": 0.00175,
+            "3.25": 0.0147,
+            "3.5": 0.05535,
+            "3.75": 0.12705,
+            "4.0": 0.2251,
+            "4.25": 0.34125,
+            "4.5": 0.465,
+            "4.75": 0.5865,
+            "5.0": 0.71105,
+            "5.25": 0.8218,
+            "5.5": 0.9097,
+            "5.75": 0.9622,
+            "6.0": 0.98925
+          }
+        },
+        "log_triangular|cheap_verifier|e1_subsets": {
+          "headroom_needed_p5_p50_p95": [
+            3.50078,
+            5.58727,
+            7.70051
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.0846895
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.236799
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              0.413306
+            ],
+            "2.0": [
+              0.0,
+              0.0057316,
+              0.60478
+            ],
+            "2.25": [
+              0.0,
+              0.144224,
+              0.813412
+            ],
+            "2.5": [
+              0.0,
+              0.283772,
+              1.03824
+            ],
+            "2.75": [
+              0.0,
+              0.419556,
+              1.26996
+            ],
+            "3.0": [
+              0.0540759,
+              0.560093,
+              1.50425
+            ],
+            "3.25": [
+              0.186972,
+              0.697923,
+              1.75135
+            ],
+            "3.5": [
+              0.305372,
+              0.83574,
+              1.99933
+            ],
+            "3.75": [
+              0.417139,
+              0.974918,
+              2.25604
+            ],
+            "4.0": [
+              0.525482,
+              1.11388,
+              2.53612
+            ],
+            "4.25": [
+              0.63087,
+              1.25455,
+              2.80841
+            ],
+            "4.5": [
+              0.737917,
+              1.39291,
+              3.08227
+            ],
+            "4.75": [
+              0.840821,
+              1.53242,
+              3.35179
+            ],
+            "5.0": [
+              0.94213,
+              1.6706,
+              3.62126
+            ],
+            "5.25": [
+              1.04338,
+              1.81041,
+              3.90473
+            ],
+            "5.5": [
+              1.14182,
+              1.95103,
+              4.18683
+            ],
+            "5.75": [
+              1.24094,
+              2.08871,
+              4.4791
+            ],
+            "6.0": [
+              1.33969,
+              2.22722,
+              4.76595
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 0.001,
+            "2.5": 0.00355,
+            "2.75": 0.00965,
+            "3.0": 0.0184,
+            "3.25": 0.03085,
+            "3.5": 0.04995,
+            "3.75": 0.07665,
+            "4.0": 0.10865,
+            "4.25": 0.15295,
+            "4.5": 0.20335,
+            "4.75": 0.261,
+            "5.0": 0.32935,
+            "5.25": 0.39695,
+            "5.5": 0.4715,
+            "5.75": 0.54645,
+            "6.0": 0.6212
+          }
+        },
+        "log_triangular|cheap_verifier|ho_95ci": {
+          "headroom_needed_p5_p50_p95": [
+            2.0063,
+            2.98758,
+            3.9792
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.302116
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.828879
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              1.39559
+            ],
+            "2.0": [
+              0.0,
+              0.00680294,
+              1.98385
+            ],
+            "2.25": [
+              0.0,
+              0.512041,
+              2.60167
+            ],
+            "2.5": [
+              0.0,
+              1.01504,
+              3.23187
+            ],
+            "2.75": [
+              0.0,
+              1.52173,
+              3.878
+            ],
+            "3.0": [
+              0.193115,
+              2.02464,
+              4.52773
+            ],
+            "3.25": [
+              0.69641,
+              2.53007,
+              5.19285
+            ],
+            "3.5": [
+              1.16979,
+              3.03408,
+              5.86152
+            ],
+            "3.75": [
+              1.60915,
+              3.53659,
+              6.55153
+            ],
+            "4.0": [
+              2.03498,
+              4.03951,
+              7.25227
+            ],
+            "4.25": [
+              2.4467,
+              4.56059,
+              7.93854
+            ],
+            "4.5": [
+              2.85777,
+              5.08147,
+              8.62885
+            ],
+            "4.75": [
+              3.26353,
+              5.60137,
+              9.33132
+            ],
+            "5.0": [
+              3.66564,
+              6.1211,
+              10.0564
+            ],
+            "5.25": [
+              4.05976,
+              6.63771,
+              10.7745
+            ],
+            "5.5": [
+              4.44256,
+              7.16198,
+              11.4966
+            ],
+            "5.75": [
+              4.83016,
+              7.68805,
+              12.2351
+            ],
+            "6.0": [
+              5.21323,
+              8.21373,
+              12.9762
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0059,
+            "2.0": 0.0484,
+            "2.25": 0.1364,
+            "2.5": 0.25415,
+            "2.75": 0.3809,
+            "3.0": 0.50625,
+            "3.25": 0.63075,
+            "3.5": 0.75325,
+            "3.75": 0.8732,
+            "4.0": 0.95465,
+            "4.25": 0.99015,
+            "4.5": 0.99975,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_triangular|cheap_verifier|part1_bracket": {
+          "headroom_needed_p5_p50_p95": [
+            1.93147,
+            2.92268,
+            3.92138
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.327178
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.895102
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              1.51373
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              2.1876
+            ],
+            "2.25": [
+              0.0,
+              0.537257,
+              2.8925
+            ],
+            "2.5": [
+              0.0,
+              1.08033,
+              3.61447
+            ],
+            "2.75": [
+              0.0,
+              1.62024,
+              4.38405
+            ],
+            "3.0": [
+              0.227562,
+              2.16625,
+              5.14569
+            ],
+            "3.25": [
+              0.75601,
+              2.7021,
+              5.95037
+            ],
+            "3.5": [
+              1.24015,
+              3.24889,
+              6.78298
+            ],
+            "3.75": [
+              1.69035,
+              3.78448,
+              7.58907
+            ],
+            "4.0": [
+              2.13572,
+              4.32769,
+              8.40526
+            ],
+            "4.25": [
+              2.56679,
+              4.87855,
+              9.24408
+            ],
+            "4.5": [
+              2.98971,
+              5.42828,
+              10.1386
+            ],
+            "4.75": [
+              3.40798,
+              5.98011,
+              11.0238
+            ],
+            "5.0": [
+              3.82004,
+              6.53309,
+              11.888
+            ],
+            "5.25": [
+              4.23063,
+              7.08203,
+              12.7623
+            ],
+            "5.5": [
+              4.63288,
+              7.63138,
+              13.6388
+            ],
+            "5.75": [
+              5.03844,
+              8.17236,
+              14.5383
+            ],
+            "6.0": [
+              5.44127,
+              8.72514,
+              15.4116
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0005,
+            "1.75": 0.0154,
+            "2.0": 0.07,
+            "2.25": 0.16685,
+            "2.5": 0.28795,
+            "2.75": 0.4161,
+            "3.0": 0.5383,
+            "3.25": 0.6636,
+            "3.5": 0.7881,
+            "3.75": 0.89745,
+            "4.0": 0.9661,
+            "4.25": 0.99405,
+            "4.5": 1.0,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_triangular|no_cheap_verifier|e1_full_sample": {
+          "headroom_needed_p5_p50_p95": [
+            2.94094,
+            3.55094,
+            4.22787
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0153662
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.215954
+            ],
+            "1.25": [
+              0.0,
+              0.193612,
+              0.42985
+            ],
+            "1.5": [
+              0.175058,
+              0.388411,
+              0.650257
+            ],
+            "1.75": [
+              0.357089,
+              0.584424,
+              0.878383
+            ],
+            "2.0": [
+              0.530851,
+              0.779805,
+              1.10896
+            ],
+            "2.25": [
+              0.702045,
+              0.976365,
+              1.34347
+            ],
+            "2.5": [
+              0.869928,
+              1.17127,
+              1.57878
+            ],
+            "2.75": [
+              1.03615,
+              1.36788,
+              1.81739
+            ],
+            "3.0": [
+              1.20107,
+              1.56508,
+              2.05799
+            ],
+            "3.25": [
+              1.36432,
+              1.76263,
+              2.29929
+            ],
+            "3.5": [
+              1.52703,
+              1.95998,
+              2.54204
+            ],
+            "3.75": [
+              1.6899,
+              2.15716,
+              2.78698
+            ],
+            "4.0": [
+              1.85162,
+              2.35316,
+              3.03396
+            ],
+            "4.25": [
+              2.01436,
+              2.5505,
+              3.28064
+            ],
+            "4.5": [
+              2.17445,
+              2.74816,
+              3.52584
+            ],
+            "4.75": [
+              2.33383,
+              2.94485,
+              3.77373
+            ],
+            "5.0": [
+              2.49551,
+              3.14304,
+              4.02088
+            ],
+            "5.25": [
+              2.6544,
+              3.34031,
+              4.27003
+            ],
+            "5.5": [
+              2.81382,
+              3.53786,
+              4.5188
+            ],
+            "5.75": [
+              2.97318,
+              3.7366,
+              4.76619
+            ],
+            "6.0": [
+              3.13216,
+              3.93441,
+              5.01478
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 0.0,
+            "2.5": 0.0,
+            "2.75": 0.0095,
+            "3.0": 0.07185,
+            "3.25": 0.22145,
+            "3.5": 0.45185,
+            "3.75": 0.6806,
+            "4.0": 0.85385,
+            "4.25": 0.9552,
+            "4.5": 0.99405,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_triangular|no_cheap_verifier|e1_subsets": {
+          "headroom_needed_p5_p50_p95": [
+            2.66696,
+            4.58384,
+            6.5064
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0116834
+            ],
+            "1.0": [
+              0.0,
+              0.00137056,
+              0.18472
+            ],
+            "1.25": [
+              0.0,
+              0.13955,
+              0.409972
+            ],
+            "1.5": [
+              0.114725,
+              0.279129,
+              0.66133
+            ],
+            "1.75": [
+              0.222034,
+              0.418516,
+              0.934466
+            ],
+            "2.0": [
+              0.324344,
+              0.558924,
+              1.22423
+            ],
+            "2.25": [
+              0.423401,
+              0.697354,
+              1.5095
+            ],
+            "2.5": [
+              0.520353,
+              0.837473,
+              1.80172
+            ],
+            "2.75": [
+              0.616156,
+              0.978258,
+              2.09375
+            ],
+            "3.0": [
+              0.710617,
+              1.1172,
+              2.38941
+            ],
+            "3.25": [
+              0.803672,
+              1.25643,
+              2.68103
+            ],
+            "3.5": [
+              0.895795,
+              1.39589,
+              2.97789
+            ],
+            "3.75": [
+              0.987207,
+              1.53488,
+              3.26613
+            ],
+            "4.0": [
+              1.07851,
+              1.67481,
+              3.55573
+            ],
+            "4.25": [
+              1.17068,
+              1.81358,
+              3.85617
+            ],
+            "4.5": [
+              1.26322,
+              1.95329,
+              4.15012
+            ],
+            "4.75": [
+              1.35385,
+              2.09248,
+              4.44166
+            ],
+            "5.0": [
+              1.44814,
+              2.23193,
+              4.73206
+            ],
+            "5.25": [
+              1.53962,
+              2.37258,
+              5.02545
+            ],
+            "5.5": [
+              1.63195,
+              2.51227,
+              5.31698
+            ],
+            "5.75": [
+              1.72258,
+              2.65168,
+              5.60459
+            ],
+            "6.0": [
+              1.81368,
+              2.79158,
+              5.89955
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.00035,
+            "2.0": 0.00465,
+            "2.25": 0.01415,
+            "2.5": 0.0321,
+            "2.75": 0.05935,
+            "3.0": 0.0927,
+            "3.25": 0.1377,
+            "3.5": 0.1899,
+            "3.75": 0.2477,
+            "4.0": 0.31615,
+            "4.25": 0.3903,
+            "4.5": 0.47185,
+            "4.75": 0.5553,
+            "5.0": 0.63205,
+            "5.25": 0.7022,
+            "5.5": 0.7671,
+            "5.75": 0.8243,
+            "6.0": 0.8759
+          }
+        },
+        "log_triangular|no_cheap_verifier|ho_95ci": {
+          "headroom_needed_p5_p50_p95": [
+            1.53083,
+            1.98484,
+            2.48644
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0425005
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.601514
+            ],
+            "1.25": [
+              0.0,
+              0.50173,
+              1.23928
+            ],
+            "1.5": [
+              0.435616,
+              1.00824,
+              1.91528
+            ],
+            "1.75": [
+              0.853237,
+              1.51734,
+              2.61042
+            ],
+            "2.0": [
+              1.25079,
+              2.03217,
+              3.32957
+            ],
+            "2.25": [
+              1.64011,
+              2.55283,
+              4.06672
+            ],
+            "2.5": [
+              2.02061,
+              3.07175,
+              4.81327
+            ],
+            "2.75": [
+              2.39936,
+              3.59196,
+              5.57051
+            ],
+            "3.0": [
+              2.77143,
+              4.11113,
+              6.32543
+            ],
+            "3.25": [
+              3.14173,
+              4.63244,
+              7.08279
+            ],
+            "3.5": [
+              3.50728,
+              5.15323,
+              7.84761
+            ],
+            "3.75": [
+              3.87099,
+              5.67188,
+              8.62477
+            ],
+            "4.0": [
+              4.2314,
+              6.19525,
+              9.39582
+            ],
+            "4.25": [
+              4.59272,
+              6.71484,
+              10.1631
+            ],
+            "4.5": [
+              4.95255,
+              7.23453,
+              10.9375
+            ],
+            "4.75": [
+              5.31472,
+              7.75583,
+              11.7044
+            ],
+            "5.0": [
+              5.67667,
+              8.27374,
+              12.4686
+            ],
+            "5.25": [
+              6.0388,
+              8.79332,
+              13.2374
+            ],
+            "5.5": [
+              6.3997,
+              9.31327,
+              14.0128
+            ],
+            "5.75": [
+              6.76321,
+              9.83401,
+              14.7787
+            ],
+            "6.0": [
+              7.12129,
+              10.3512,
+              15.5557
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 5e-05,
+            "1.5": 0.0375,
+            "1.75": 0.21395,
+            "2.0": 0.5223,
+            "2.25": 0.8085,
+            "2.5": 0.95575,
+            "2.75": 0.99705,
+            "3.0": 1.0,
+            "3.25": 1.0,
+            "3.5": 1.0,
+            "3.75": 1.0,
+            "4.0": 1.0,
+            "4.25": 1.0,
+            "4.5": 1.0,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_triangular|no_cheap_verifier|part1_bracket": {
+          "headroom_needed_p5_p50_p95": [
+            1.43948,
+            1.91913,
+            2.42862
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0445167
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.666572
+            ],
+            "1.25": [
+              0.0,
+              0.536897,
+              1.40211
+            ],
+            "1.5": [
+              0.461609,
+              1.07912,
+              2.20259
+            ],
+            "1.75": [
+              0.900154,
+              1.62773,
+              3.04083
+            ],
+            "2.0": [
+              1.31403,
+              2.17844,
+              3.91486
+            ],
+            "2.25": [
+              1.71627,
+              2.72702,
+              4.80314
+            ],
+            "2.5": [
+              2.11243,
+              3.27181,
+              5.70977
+            ],
+            "2.75": [
+              2.50055,
+              3.82721,
+              6.61663
+            ],
+            "3.0": [
+              2.88867,
+              4.37705,
+              7.52721
+            ],
+            "3.25": [
+              3.26457,
+              4.92686,
+              8.44579
+            ],
+            "3.5": [
+              3.64458,
+              5.47726,
+              9.37353
+            ],
+            "3.75": [
+              4.01915,
+              6.03084,
+              10.2873
+            ],
+            "4.0": [
+              4.3969,
+              6.58281,
+              11.2315
+            ],
+            "4.25": [
+              4.77283,
+              7.13326,
+              12.1685
+            ],
+            "4.5": [
+              5.14494,
+              7.68473,
+              13.1173
+            ],
+            "4.75": [
+              5.52425,
+              8.23217,
+              14.0275
+            ],
+            "5.0": [
+              5.90104,
+              8.78084,
+              14.9531
+            ],
+            "5.25": [
+              6.26967,
+              9.32707,
+              15.8744
+            ],
+            "5.5": [
+              6.64366,
+              9.87673,
+              16.8011
+            ],
+            "5.75": [
+              7.01816,
+              10.4276,
+              17.7332
+            ],
+            "6.0": [
+              7.38941,
+              10.9771,
+              18.6671
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0067,
+            "1.5": 0.0785,
+            "1.75": 0.28995,
+            "2.0": 0.59965,
+            "2.25": 0.85325,
+            "2.5": 0.971,
+            "2.75": 0.9995,
+            "3.0": 1.0,
+            "3.25": 1.0,
+            "3.5": 1.0,
+            "3.75": 1.0,
+            "4.0": 1.0,
+            "4.25": 1.0,
+            "4.5": 1.0,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_uniform|cheap_verifier|e1_full_sample": {
+          "headroom_needed_p5_p50_p95": [
+            3.34746,
+            4.6263,
+            5.89261
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.115734
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.306997
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              0.515804
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              0.733125
+            ],
+            "2.25": [
+              0.0,
+              0.187607,
+              0.95778
+            ],
+            "2.5": [
+              0.0,
+              0.376467,
+              1.19046
+            ],
+            "2.75": [
+              0.0,
+              0.567208,
+              1.42557
+            ],
+            "3.0": [
+              0.073382,
+              0.759716,
+              1.66252
+            ],
+            "3.25": [
+              0.264677,
+              0.95348,
+              1.90541
+            ],
+            "3.5": [
+              0.44485,
+              1.14395,
+              2.14589
+            ],
+            "3.75": [
+              0.617343,
+              1.3351,
+              2.39372
+            ],
+            "4.0": [
+              0.783923,
+              1.52364,
+              2.64135
+            ],
+            "4.25": [
+              0.951009,
+              1.7151,
+              2.89116
+            ],
+            "4.5": [
+              1.11451,
+              1.9051,
+              3.13796
+            ],
+            "4.75": [
+              1.27579,
+              2.09461,
+              3.38634
+            ],
+            "5.0": [
+              1.4375,
+              2.28714,
+              3.63587
+            ],
+            "5.25": [
+              1.59523,
+              2.47747,
+              3.88674
+            ],
+            "5.5": [
+              1.7537,
+              2.66739,
+              4.13601
+            ],
+            "5.75": [
+              1.91021,
+              2.85737,
+              4.39328
+            ],
+            "6.0": [
+              2.06582,
+              3.04834,
+              4.64593
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 0.0,
+            "2.5": 0.0,
+            "2.75": 0.0,
+            "3.0": 0.00745,
+            "3.25": 0.03375,
+            "3.5": 0.07845,
+            "3.75": 0.1403,
+            "4.0": 0.2215,
+            "4.25": 0.3229,
+            "4.5": 0.4398,
+            "4.75": 0.56135,
+            "5.0": 0.6774,
+            "5.25": 0.7764,
+            "5.5": 0.85915,
+            "5.75": 0.9212,
+            "6.0": 0.9664
+          }
+        },
+        "log_uniform|cheap_verifier|e1_subsets": {
+          "headroom_needed_p5_p50_p95": [
+            2.88889,
+            5.61587,
+            8.32103
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.0820266
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.266472
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              0.50829
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              0.797386
+            ],
+            "2.25": [
+              0.0,
+              0.131076,
+              1.11179
+            ],
+            "2.5": [
+              0.0,
+              0.274537,
+              1.44906
+            ],
+            "2.75": [
+              0.0,
+              0.413884,
+              1.80322
+            ],
+            "3.0": [
+              0.0560081,
+              0.551454,
+              2.16448
+            ],
+            "3.25": [
+              0.175497,
+              0.687663,
+              2.53487
+            ],
+            "3.5": [
+              0.279883,
+              0.825981,
+              2.93546
+            ],
+            "3.75": [
+              0.377697,
+              0.963815,
+              3.33525
+            ],
+            "4.0": [
+              0.474063,
+              1.1042,
+              3.76032
+            ],
+            "4.25": [
+              0.56829,
+              1.24183,
+              4.177
+            ],
+            "4.5": [
+              0.660394,
+              1.37822,
+              4.59401
+            ],
+            "4.75": [
+              0.751246,
+              1.51964,
+              5.03301
+            ],
+            "5.0": [
+              0.842024,
+              1.65969,
+              5.45513
+            ],
+            "5.25": [
+              0.931078,
+              1.79903,
+              5.86701
+            ],
+            "5.5": [
+              1.01965,
+              1.93429,
+              6.31136
+            ],
+            "5.75": [
+              1.10741,
+              2.07254,
+              6.77158
+            ],
+            "6.0": [
+              1.1948,
+              2.20849,
+              7.22545
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.00095,
+            "2.25": 0.00695,
+            "2.5": 0.0193,
+            "2.75": 0.03795,
+            "3.0": 0.0618,
+            "3.25": 0.0909,
+            "3.5": 0.1241,
+            "3.75": 0.16325,
+            "4.0": 0.2071,
+            "4.25": 0.2538,
+            "4.5": 0.2975,
+            "4.75": 0.34235,
+            "5.0": 0.3896,
+            "5.25": 0.4342,
+            "5.5": 0.47945,
+            "5.75": 0.5224,
+            "6.0": 0.56665
+          }
+        },
+        "log_uniform|cheap_verifier|ho_95ci": {
+          "headroom_needed_p5_p50_p95": [
+            1.97503,
+            3.06927,
+            4.13918
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.286276
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.801136
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              1.4022
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              2.07189
+            ],
+            "2.25": [
+              0.0,
+              0.443103,
+              2.77056
+            ],
+            "2.5": [
+              0.0,
+              0.922952,
+              3.5027
+            ],
+            "2.75": [
+              0.0,
+              1.39703,
+              4.26162
+            ],
+            "3.0": [
+              0.182108,
+              1.87257,
+              5.02289
+            ],
+            "3.25": [
+              0.637106,
+              2.33155,
+              5.78026
+            ],
+            "3.5": [
+              1.03927,
+              2.81191,
+              6.56461
+            ],
+            "3.75": [
+              1.41988,
+              3.29022,
+              7.346
+            ],
+            "4.0": [
+              1.7922,
+              3.76524,
+              8.13593
+            ],
+            "4.25": [
+              2.16102,
+              4.23852,
+              8.93823
+            ],
+            "4.5": [
+              2.52081,
+              4.71033,
+              9.76446
+            ],
+            "4.75": [
+              2.87203,
+              5.17908,
+              10.5723
+            ],
+            "5.0": [
+              3.22566,
+              5.6476,
+              11.387
+            ],
+            "5.25": [
+              3.57221,
+              6.11945,
+              12.2226
+            ],
+            "5.5": [
+              3.92013,
+              6.59521,
+              13.0426
+            ],
+            "5.75": [
+              4.26547,
+              7.07333,
+              13.8818
+            ],
+            "6.0": [
+              4.61017,
+              7.55229,
+              14.7293
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.01425,
+            "2.0": 0.05515,
+            "2.25": 0.12515,
+            "2.5": 0.2216,
+            "2.75": 0.34115,
+            "3.0": 0.4647,
+            "3.25": 0.5877,
+            "3.5": 0.7149,
+            "3.75": 0.8294,
+            "4.0": 0.9142,
+            "4.25": 0.97035,
+            "4.5": 0.99815,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_uniform|cheap_verifier|part1_bracket": {
+          "headroom_needed_p5_p50_p95": [
+            1.85586,
+            2.96658,
+            4.07774
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.310158
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.92727
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              1.6617
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              2.48163
+            ],
+            "2.25": [
+              0.0,
+              0.504712,
+              3.33148
+            ],
+            "2.5": [
+              0.0,
+              1.02247,
+              4.25044
+            ],
+            "2.75": [
+              0.0,
+              1.5422,
+              5.22242
+            ],
+            "3.0": [
+              0.201147,
+              2.07197,
+              6.19462
+            ],
+            "3.25": [
+              0.68066,
+              2.59255,
+              7.22729
+            ],
+            "3.5": [
+              1.09987,
+              3.11233,
+              8.23636
+            ],
+            "3.75": [
+              1.50032,
+              3.63372,
+              9.24459
+            ],
+            "4.0": [
+              1.88584,
+              4.14452,
+              10.2729
+            ],
+            "4.25": [
+              2.25547,
+              4.67802,
+              11.3277
+            ],
+            "4.5": [
+              2.63312,
+              5.20171,
+              12.4018
+            ],
+            "4.75": [
+              3.00456,
+              5.71678,
+              13.4994
+            ],
+            "5.0": [
+              3.36714,
+              6.22764,
+              14.6136
+            ],
+            "5.25": [
+              3.72643,
+              6.75773,
+              15.7028
+            ],
+            "5.5": [
+              4.08673,
+              7.27504,
+              16.7881
+            ],
+            "5.75": [
+              4.44862,
+              7.80065,
+              17.9018
+            ],
+            "6.0": [
+              4.80359,
+              8.3145,
+              19.0153
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.00365,
+            "1.75": 0.0307,
+            "2.0": 0.0836,
+            "2.25": 0.1618,
+            "2.5": 0.2685,
+            "2.75": 0.3927,
+            "3.0": 0.5165,
+            "3.25": 0.6388,
+            "3.5": 0.75955,
+            "3.75": 0.85925,
+            "4.0": 0.93235,
+            "4.25": 0.97935,
+            "4.5": 0.99925,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_uniform|no_cheap_verifier|e1_full_sample": {
+          "headroom_needed_p5_p50_p95": [
+            2.7886,
+            3.62085,
+            4.44655
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0166131
+            ],
+            "1.0": [
+              0.0,
+              0.00010765,
+              0.219229
+            ],
+            "1.25": [
+              0.0,
+              0.191406,
+              0.451107
+            ],
+            "1.5": [
+              0.166879,
+              0.380711,
+              0.692496
+            ],
+            "1.75": [
+              0.333282,
+              0.572352,
+              0.939867
+            ],
+            "2.0": [
+              0.493941,
+              0.763312,
+              1.19057
+            ],
+            "2.25": [
+              0.651109,
+              0.954234,
+              1.44285
+            ],
+            "2.5": [
+              0.806913,
+              1.14551,
+              1.69982
+            ],
+            "2.75": [
+              0.961906,
+              1.33619,
+              1.95992
+            ],
+            "3.0": [
+              1.11624,
+              1.52652,
+              2.22001
+            ],
+            "3.25": [
+              1.27018,
+              1.71602,
+              2.48206
+            ],
+            "3.5": [
+              1.42402,
+              1.90758,
+              2.74414
+            ],
+            "3.75": [
+              1.57616,
+              2.09846,
+              3.00853
+            ],
+            "4.0": [
+              1.72904,
+              2.28959,
+              3.27196
+            ],
+            "4.25": [
+              1.88028,
+              2.48135,
+              3.53633
+            ],
+            "4.5": [
+              2.03198,
+              2.67255,
+              3.80197
+            ],
+            "4.75": [
+              2.18294,
+              2.86359,
+              4.06672
+            ],
+            "5.0": [
+              2.33308,
+              3.05567,
+              4.33394
+            ],
+            "5.25": [
+              2.48402,
+              3.24648,
+              4.60181
+            ],
+            "5.5": [
+              2.63414,
+              3.43702,
+              4.86834
+            ],
+            "5.75": [
+              2.78377,
+              3.62825,
+              5.13828
+            ],
+            "6.0": [
+              2.93379,
+              3.81922,
+              5.405
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 0.0,
+            "2.5": 0.0007,
+            "2.75": 0.03785,
+            "3.0": 0.13895,
+            "3.25": 0.2831,
+            "3.5": 0.4305,
+            "3.75": 0.57715,
+            "4.0": 0.72265,
+            "4.25": 0.86685,
+            "4.5": 0.96415,
+            "4.75": 0.9998,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_uniform|no_cheap_verifier|e1_subsets": {
+          "headroom_needed_p5_p50_p95": [
+            2.1325,
+            4.61193,
+            7.08295
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0114302
+            ],
+            "1.0": [
+              0.0,
+              0.00024816,
+              0.238331
+            ],
+            "1.25": [
+              0.0,
+              0.138484,
+              0.572587
+            ],
+            "1.5": [
+              0.103082,
+              0.278141,
+              0.943554
+            ],
+            "1.75": [
+              0.197579,
+              0.415871,
+              1.34962
+            ],
+            "2.0": [
+              0.288842,
+              0.553786,
+              1.77015
+            ],
+            "2.25": [
+              0.378382,
+              0.691599,
+              2.2078
+            ],
+            "2.5": [
+              0.46576,
+              0.829001,
+              2.66632
+            ],
+            "2.75": [
+              0.553094,
+              0.968102,
+              3.11577
+            ],
+            "3.0": [
+              0.638871,
+              1.10595,
+              3.562
+            ],
+            "3.25": [
+              0.723801,
+              1.24408,
+              3.99902
+            ],
+            "3.5": [
+              0.80857,
+              1.38243,
+              4.44308
+            ],
+            "3.75": [
+              0.892946,
+              1.52147,
+              4.89141
+            ],
+            "4.0": [
+              0.977878,
+              1.65887,
+              5.32694
+            ],
+            "4.25": [
+              1.06101,
+              1.79766,
+              5.78062
+            ],
+            "4.5": [
+              1.14444,
+              1.93698,
+              6.21648
+            ],
+            "4.75": [
+              1.22801,
+              2.07849,
+              6.6683
+            ],
+            "5.0": [
+              1.31145,
+              2.21695,
+              7.12087
+            ],
+            "5.25": [
+              1.39473,
+              2.35545,
+              7.56645
+            ],
+            "5.5": [
+              1.4774,
+              2.49407,
+              8.00582
+            ],
+            "5.75": [
+              1.55995,
+              2.63355,
+              8.44506
+            ],
+            "6.0": [
+              1.64288,
+              2.77246,
+              8.8892
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.00605,
+            "2.0": 0.0307,
+            "2.25": 0.0738,
+            "2.5": 0.1181,
+            "2.75": 0.1647,
+            "3.0": 0.21145,
+            "3.25": 0.25495,
+            "3.5": 0.29775,
+            "3.75": 0.3438,
+            "4.0": 0.38855,
+            "4.25": 0.43325,
+            "4.5": 0.47995,
+            "4.75": 0.5248,
+            "5.0": 0.56845,
+            "5.25": 0.614,
+            "5.5": 0.65975,
+            "5.75": 0.70705,
+            "6.0": 0.75335
+          }
+        },
+        "log_uniform|no_cheap_verifier|ho_95ci": {
+          "headroom_needed_p5_p50_p95": [
+            1.46171,
+            2.05946,
+            2.64631
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0402086
+            ],
+            "1.0": [
+              0.0,
+              0.00367542,
+              0.629013
+            ],
+            "1.25": [
+              0.0,
+              0.473877,
+              1.34949
+            ],
+            "1.5": [
+              0.393212,
+              0.944811,
+              2.1216
+            ],
+            "1.75": [
+              0.758489,
+              1.41699,
+              2.934
+            ],
+            "2.0": [
+              1.11306,
+              1.88751,
+              3.75606
+            ],
+            "2.25": [
+              1.46028,
+              2.36177,
+              4.59536
+            ],
+            "2.5": [
+              1.8013,
+              2.83344,
+              5.44599
+            ],
+            "2.75": [
+              2.1415,
+              3.30086,
+              6.31049
+            ],
+            "3.0": [
+              2.47876,
+              3.77359,
+              7.18604
+            ],
+            "3.25": [
+              2.81354,
+              4.24986,
+              8.05126
+            ],
+            "3.5": [
+              3.14958,
+              4.72168,
+              8.92898
+            ],
+            "3.75": [
+              3.48376,
+              5.1968,
+              9.80195
+            ],
+            "4.0": [
+              3.8133,
+              5.67146,
+              10.6851
+            ],
+            "4.25": [
+              4.14397,
+              6.14654,
+              11.5799
+            ],
+            "4.5": [
+              4.47277,
+              6.62209,
+              12.4743
+            ],
+            "4.75": [
+              4.79927,
+              7.09639,
+              13.3629
+            ],
+            "5.0": [
+              5.12776,
+              7.56742,
+              14.2622
+            ],
+            "5.25": [
+              5.45597,
+              8.03882,
+              15.1615
+            ],
+            "5.5": [
+              5.7845,
+              8.51166,
+              16.0481
+            ],
+            "5.75": [
+              6.11001,
+              8.9835,
+              16.9436
+            ],
+            "6.0": [
+              6.44034,
+              9.45749,
+              17.8277
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0019,
+            "1.5": 0.06575,
+            "1.75": 0.21835,
+            "2.0": 0.44465,
+            "2.25": 0.6753,
+            "2.5": 0.87465,
+            "2.75": 0.9826,
+            "3.0": 1.0,
+            "3.25": 1.0,
+            "3.5": 1.0,
+            "3.75": 1.0,
+            "4.0": 1.0,
+            "4.25": 1.0,
+            "4.5": 1.0,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "log_uniform|no_cheap_verifier|part1_bracket": {
+          "headroom_needed_p5_p50_p95": [
+            1.32748,
+            1.95978,
+            2.59235
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0453579
+            ],
+            "1.0": [
+              0.0,
+              0.00193997,
+              0.764608
+            ],
+            "1.25": [
+              0.0,
+              0.523441,
+              1.6973
+            ],
+            "1.5": [
+              0.412663,
+              1.04186,
+              2.7143
+            ],
+            "1.75": [
+              0.793102,
+              1.56056,
+              3.79308
+            ],
+            "2.0": [
+              1.15581,
+              2.08328,
+              4.89907
+            ],
+            "2.25": [
+              1.5136,
+              2.60404,
+              6.04167
+            ],
+            "2.5": [
+              1.86918,
+              3.12236,
+              7.19147
+            ],
+            "2.75": [
+              2.2179,
+              3.64412,
+              8.34403
+            ],
+            "3.0": [
+              2.56257,
+              4.16618,
+              9.5131
+            ],
+            "3.25": [
+              2.90702,
+              4.68317,
+              10.6874
+            ],
+            "3.5": [
+              3.25152,
+              5.20262,
+              11.9032
+            ],
+            "3.75": [
+              3.59514,
+              5.72233,
+              13.0824
+            ],
+            "4.0": [
+              3.93577,
+              6.24231,
+              14.2785
+            ],
+            "4.25": [
+              4.27721,
+              6.76195,
+              15.4578
+            ],
+            "4.5": [
+              4.61554,
+              7.27956,
+              16.6491
+            ],
+            "4.75": [
+              4.95399,
+              7.79862,
+              17.827
+            ],
+            "5.0": [
+              5.29193,
+              8.31899,
+              19.0064
+            ],
+            "5.25": [
+              5.63237,
+              8.83694,
+              20.197
+            ],
+            "5.5": [
+              5.96897,
+              9.34905,
+              21.3915
+            ],
+            "5.75": [
+              6.30578,
+              9.87172,
+              22.5619
+            ],
+            "6.0": [
+              6.64237,
+              10.3892,
+              23.7446
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.02675,
+            "1.5": 0.13485,
+            "1.75": 0.3215,
+            "2.0": 0.53195,
+            "2.25": 0.74095,
+            "2.5": 0.9077,
+            "2.75": 0.99125,
+            "3.0": 1.0,
+            "3.25": 1.0,
+            "3.5": 1.0,
+            "3.75": 1.0,
+            "4.0": 1.0,
+            "4.25": 1.0,
+            "4.5": 1.0,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "uniform|cheap_verifier|e1_full_sample": {
+          "headroom_needed_p5_p50_p95": [
+            3.62042,
+            4.87909,
+            6.03797
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.107263
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.279983
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              0.457359
+            ],
+            "2.0": [
+              0.0,
+              0.0052995,
+              0.642127
+            ],
+            "2.25": [
+              0.0,
+              0.178975,
+              0.839239
+            ],
+            "2.5": [
+              0.0,
+              0.350763,
+              1.04134
+            ],
+            "2.75": [
+              0.0,
+              0.52486,
+              1.24658
+            ],
+            "3.0": [
+              0.071889,
+              0.697709,
+              1.46134
+            ],
+            "3.25": [
+              0.243232,
+              0.872476,
+              1.67695
+            ],
+            "3.5": [
+              0.40856,
+              1.04589,
+              1.89297
+            ],
+            "3.75": [
+              0.568772,
+              1.21888,
+              2.11815
+            ],
+            "4.0": [
+              0.728991,
+              1.39262,
+              2.33995
+            ],
+            "4.25": [
+              0.888389,
+              1.56458,
+              2.56511
+            ],
+            "4.5": [
+              1.04739,
+              1.73637,
+              2.79163
+            ],
+            "4.75": [
+              1.2034,
+              1.91038,
+              3.02
+            ],
+            "5.0": [
+              1.35818,
+              2.08492,
+              3.25128
+            ],
+            "5.25": [
+              1.51373,
+              2.25582,
+              3.47973
+            ],
+            "5.5": [
+              1.66912,
+              2.42622,
+              3.7159
+            ],
+            "5.75": [
+              1.8236,
+              2.59258,
+              3.94776
+            ],
+            "6.0": [
+              1.97604,
+              2.76107,
+              4.1836
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 0.0,
+            "2.5": 0.0,
+            "2.75": 0.0,
+            "3.0": 0.00285,
+            "3.25": 0.01415,
+            "3.5": 0.03465,
+            "3.75": 0.071,
+            "4.0": 0.1232,
+            "4.25": 0.2003,
+            "4.5": 0.312,
+            "4.75": 0.43495,
+            "5.0": 0.55935,
+            "5.25": 0.6769,
+            "5.5": 0.77575,
+            "5.75": 0.86735,
+            "6.0": 0.94105
+          }
+        },
+        "uniform|cheap_verifier|e1_subsets": {
+          "headroom_needed_p5_p50_p95": [
+            5.56539,
+            7.59682,
+            8.90517
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.0541204
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.145547
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              0.236202
+            ],
+            "2.0": [
+              0.0,
+              0.00200177,
+              0.330472
+            ],
+            "2.25": [
+              0.0,
+              0.0923247,
+              0.428758
+            ],
+            "2.5": [
+              0.0,
+              0.18385,
+              0.532826
+            ],
+            "2.75": [
+              0.0,
+              0.275647,
+              0.637774
+            ],
+            "3.0": [
+              0.0367314,
+              0.367002,
+              0.745751
+            ],
+            "3.25": [
+              0.126378,
+              0.458285,
+              0.859099
+            ],
+            "3.5": [
+              0.214884,
+              0.548783,
+              0.976404
+            ],
+            "3.75": [
+              0.300981,
+              0.638778,
+              1.09286
+            ],
+            "4.0": [
+              0.386633,
+              0.73004,
+              1.21322
+            ],
+            "4.25": [
+              0.471236,
+              0.819894,
+              1.33724
+            ],
+            "4.5": [
+              0.555445,
+              0.909107,
+              1.4608
+            ],
+            "4.75": [
+              0.638953,
+              0.999127,
+              1.58333
+            ],
+            "5.0": [
+              0.722824,
+              1.08779,
+              1.70805
+            ],
+            "5.25": [
+              0.805492,
+              1.17662,
+              1.83563
+            ],
+            "5.5": [
+              0.887846,
+              1.26561,
+              1.96644
+            ],
+            "5.75": [
+              0.97018,
+              1.3541,
+              2.09526
+            ],
+            "6.0": [
+              1.05241,
+              1.44275,
+              2.22374
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 5e-05,
+            "2.5": 0.00015,
+            "2.75": 0.00055,
+            "3.0": 0.0013,
+            "3.25": 0.00215,
+            "3.5": 0.00315,
+            "3.75": 0.00465,
+            "4.0": 0.0069,
+            "4.25": 0.01,
+            "4.5": 0.0136,
+            "4.75": 0.01865,
+            "5.0": 0.02525,
+            "5.25": 0.0345,
+            "5.5": 0.04635,
+            "5.75": 0.0615,
+            "6.0": 0.0835
+          }
+        },
+        "uniform|cheap_verifier|ho_95ci": {
+          "headroom_needed_p5_p50_p95": [
+            2.09365,
+            3.17078,
+            4.21591
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.257931
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.696403
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              1.20467
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              1.77146
+            ],
+            "2.25": [
+              0.0,
+              0.416097,
+              2.37503
+            ],
+            "2.5": [
+              0.0,
+              0.844727,
+              3.00214
+            ],
+            "2.75": [
+              0.0,
+              1.27395,
+              3.65509
+            ],
+            "3.0": [
+              0.170726,
+              1.71151,
+              4.34819
+            ],
+            "3.25": [
+              0.592452,
+              2.13865,
+              5.04359
+            ],
+            "3.5": [
+              0.974797,
+              2.56258,
+              5.74145
+            ],
+            "3.75": [
+              1.33895,
+              2.98782,
+              6.46633
+            ],
+            "4.0": [
+              1.69334,
+              3.41169,
+              7.20898
+            ],
+            "4.25": [
+              2.04845,
+              3.82682,
+              7.93862
+            ],
+            "4.5": [
+              2.39356,
+              4.23991,
+              8.68785
+            ],
+            "4.75": [
+              2.74188,
+              4.64519,
+              9.45299
+            ],
+            "5.0": [
+              3.08259,
+              5.04591,
+              10.2388
+            ],
+            "5.25": [
+              3.42274,
+              5.44588,
+              11.0075
+            ],
+            "5.5": [
+              3.75939,
+              5.85193,
+              11.7875
+            ],
+            "5.75": [
+              4.10054,
+              6.26459,
+              12.5957
+            ],
+            "6.0": [
+              4.44045,
+              6.6726,
+              13.3996
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0077,
+            "2.0": 0.03305,
+            "2.25": 0.08475,
+            "2.5": 0.1701,
+            "2.75": 0.2894,
+            "3.0": 0.41485,
+            "3.25": 0.5393,
+            "3.5": 0.6655,
+            "3.75": 0.7835,
+            "4.0": 0.88405,
+            "4.25": 0.9584,
+            "4.5": 0.99565,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "uniform|cheap_verifier|part1_bracket": {
+          "headroom_needed_p5_p50_p95": [
+            2.00019,
+            3.09787,
+            4.17272
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "1.25": [
+              0.0,
+              0.0,
+              0.271051
+            ],
+            "1.5": [
+              0.0,
+              0.0,
+              0.741065
+            ],
+            "1.75": [
+              0.0,
+              0.0,
+              1.33136
+            ],
+            "2.0": [
+              0.0,
+              0.0,
+              1.99955
+            ],
+            "2.25": [
+              0.0,
+              0.446482,
+              2.69966
+            ],
+            "2.5": [
+              0.0,
+              0.906289,
+              3.47908
+            ],
+            "2.75": [
+              0.0,
+              1.35804,
+              4.29829
+            ],
+            "3.0": [
+              0.172873,
+              1.81286,
+              5.12466
+            ],
+            "3.25": [
+              0.604357,
+              2.28007,
+              5.97464
+            ],
+            "3.5": [
+              1.00345,
+              2.73589,
+              6.8324
+            ],
+            "3.75": [
+              1.37876,
+              3.1935,
+              7.74111
+            ],
+            "4.0": [
+              1.74791,
+              3.64044,
+              8.66455
+            ],
+            "4.25": [
+              2.11155,
+              4.07616,
+              9.58489
+            ],
+            "4.5": [
+              2.47709,
+              4.49979,
+              10.5706
+            ],
+            "4.75": [
+              2.83109,
+              4.92506,
+              11.5342
+            ],
+            "5.0": [
+              3.18669,
+              5.35184,
+              12.5351
+            ],
+            "5.25": [
+              3.54036,
+              5.76984,
+              13.5608
+            ],
+            "5.5": [
+              3.89196,
+              6.20171,
+              14.5606
+            ],
+            "5.75": [
+              4.24204,
+              6.62906,
+              15.5839
+            ],
+            "6.0": [
+              4.59105,
+              7.0552,
+              16.6047
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.00205,
+            "1.75": 0.0155,
+            "2.0": 0.05,
+            "2.25": 0.1082,
+            "2.5": 0.20145,
+            "2.75": 0.3256,
+            "3.0": 0.45035,
+            "3.25": 0.57955,
+            "3.5": 0.70555,
+            "3.75": 0.8117,
+            "4.0": 0.9019,
+            "4.25": 0.9673,
+            "4.5": 0.99895,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "uniform|no_cheap_verifier|e1_full_sample": {
+          "headroom_needed_p5_p50_p95": [
+            2.96775,
+            3.97197,
+            4.55572
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0137652
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.19158
+            ],
+            "1.25": [
+              0.0,
+              0.172439,
+              0.393481
+            ],
+            "1.5": [
+              0.15438,
+              0.346247,
+              0.611734
+            ],
+            "1.75": [
+              0.312396,
+              0.519107,
+              0.836438
+            ],
+            "2.0": [
+              0.466447,
+              0.690672,
+              1.06545
+            ],
+            "2.25": [
+              0.619393,
+              0.859596,
+              1.30283
+            ],
+            "2.5": [
+              0.771533,
+              1.02581,
+              1.54456
+            ],
+            "2.75": [
+              0.921212,
+              1.18975,
+              1.78736
+            ],
+            "3.0": [
+              1.07145,
+              1.35473,
+              2.03163
+            ],
+            "3.25": [
+              1.22169,
+              1.521,
+              2.27868
+            ],
+            "3.5": [
+              1.37093,
+              1.68645,
+              2.52578
+            ],
+            "3.75": [
+              1.52061,
+              1.85276,
+              2.7757
+            ],
+            "4.0": [
+              1.66952,
+              2.01865,
+              3.02791
+            ],
+            "4.25": [
+              1.81828,
+              2.18538,
+              3.2777
+            ],
+            "4.5": [
+              1.96694,
+              2.35233,
+              3.52947
+            ],
+            "4.75": [
+              2.11479,
+              2.5203,
+              3.77908
+            ],
+            "5.0": [
+              2.26337,
+              2.68675,
+              4.0282
+            ],
+            "5.25": [
+              2.41163,
+              2.85286,
+              4.27851
+            ],
+            "5.5": [
+              2.56078,
+              3.01966,
+              4.52736
+            ],
+            "5.75": [
+              2.70944,
+              3.18706,
+              4.77779
+            ],
+            "6.0": [
+              2.85717,
+              3.35368,
+              5.02753
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0,
+            "2.0": 0.0,
+            "2.25": 0.0,
+            "2.5": 0.0001,
+            "2.75": 0.01425,
+            "3.0": 0.05745,
+            "3.25": 0.12615,
+            "3.5": 0.2224,
+            "3.75": 0.3497,
+            "4.0": 0.5225,
+            "4.25": 0.74545,
+            "4.5": 0.92255,
+            "4.75": 0.99965,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "uniform|no_cheap_verifier|e1_subsets": {
+          "headroom_needed_p5_p50_p95": [
+            4.7565,
+            6.74799,
+            7.42206
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0077651
+            ],
+            "1.0": [
+              0.0,
+              1.16486e-05,
+              0.100284
+            ],
+            "1.25": [
+              0.0,
+              0.0907424,
+              0.204836
+            ],
+            "1.5": [
+              0.0812071,
+              0.181061,
+              0.319044
+            ],
+            "1.75": [
+              0.165619,
+              0.271037,
+              0.439322
+            ],
+            "2.0": [
+              0.248832,
+              0.36018,
+              0.565552
+            ],
+            "2.25": [
+              0.330769,
+              0.448421,
+              0.692201
+            ],
+            "2.5": [
+              0.412944,
+              0.535892,
+              0.81876
+            ],
+            "2.75": [
+              0.494646,
+              0.623222,
+              0.950973
+            ],
+            "3.0": [
+              0.57604,
+              0.70949,
+              1.08074
+            ],
+            "3.25": [
+              0.65762,
+              0.795573,
+              1.21039
+            ],
+            "3.5": [
+              0.738357,
+              0.881069,
+              1.34227
+            ],
+            "3.75": [
+              0.819419,
+              0.966384,
+              1.47335
+            ],
+            "4.0": [
+              0.900382,
+              1.05199,
+              1.60369
+            ],
+            "4.25": [
+              0.981193,
+              1.13792,
+              1.73418
+            ],
+            "4.5": [
+              1.0617,
+              1.22391,
+              1.8655
+            ],
+            "4.75": [
+              1.14223,
+              1.30975,
+              1.99642
+            ],
+            "5.0": [
+              1.22277,
+              1.39577,
+              2.12754
+            ],
+            "5.25": [
+              1.30316,
+              1.48226,
+              2.25798
+            ],
+            "5.5": [
+              1.38379,
+              1.56827,
+              2.38754
+            ],
+            "5.75": [
+              1.46421,
+              1.65451,
+              2.52003
+            ],
+            "6.0": [
+              1.54473,
+              1.74066,
+              2.6514
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0,
+            "1.5": 0.0,
+            "1.75": 0.0001,
+            "2.0": 0.0005,
+            "2.25": 0.00135,
+            "2.5": 0.002,
+            "2.75": 0.0031,
+            "3.0": 0.005,
+            "3.25": 0.00705,
+            "3.5": 0.0103,
+            "3.75": 0.0144,
+            "4.0": 0.0195,
+            "4.25": 0.02645,
+            "4.5": 0.0374,
+            "4.75": 0.0496,
+            "5.0": 0.0668,
+            "5.25": 0.09035,
+            "5.5": 0.11925,
+            "5.75": 0.158,
+            "6.0": 0.2101
+          }
+        },
+        "uniform|no_cheap_verifier|ho_95ci": {
+          "headroom_needed_p5_p50_p95": [
+            1.5346,
+            2.2,
+            2.70729
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0361773
+            ],
+            "1.0": [
+              0.0,
+              0.0,
+              0.537958
+            ],
+            "1.25": [
+              0.0,
+              0.423602,
+              1.17808
+            ],
+            "1.5": [
+              0.35927,
+              0.853283,
+              1.90212
+            ],
+            "1.75": [
+              0.710686,
+              1.27251,
+              2.64394
+            ],
+            "2.0": [
+              1.05434,
+              1.67642,
+              3.41595
+            ],
+            "2.25": [
+              1.39184,
+              2.08189,
+              4.19588
+            ],
+            "2.5": [
+              1.72531,
+              2.48896,
+              4.99889
+            ],
+            "2.75": [
+              2.05665,
+              2.89465,
+              5.80786
+            ],
+            "3.0": [
+              2.38832,
+              3.3045,
+              6.61759
+            ],
+            "3.25": [
+              2.72076,
+              3.71045,
+              7.42929
+            ],
+            "3.5": [
+              3.04947,
+              4.11723,
+              8.25038
+            ],
+            "3.75": [
+              3.37687,
+              4.52164,
+              9.08236
+            ],
+            "4.0": [
+              3.70169,
+              4.93015,
+              9.89995
+            ],
+            "4.25": [
+              4.02695,
+              5.34118,
+              10.7165
+            ],
+            "4.5": [
+              4.35247,
+              5.74766,
+              11.5446
+            ],
+            "4.75": [
+              4.67639,
+              6.15575,
+              12.3524
+            ],
+            "5.0": [
+              5.00096,
+              6.56721,
+              13.176
+            ],
+            "5.25": [
+              5.32278,
+              6.97541,
+              14.0013
+            ],
+            "5.5": [
+              5.64741,
+              7.38387,
+              14.8217
+            ],
+            "5.75": [
+              5.97052,
+              7.7892,
+              15.6442
+            ],
+            "6.0": [
+              6.29409,
+              8.19198,
+              16.4785
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0007,
+            "1.5": 0.0384,
+            "1.75": 0.1392,
+            "2.0": 0.31185,
+            "2.25": 0.55315,
+            "2.5": 0.8095,
+            "2.75": 0.9688,
+            "3.0": 1.0,
+            "3.25": 1.0,
+            "3.5": 1.0,
+            "3.75": 1.0,
+            "4.0": 1.0,
+            "4.25": 1.0,
+            "4.5": 1.0,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        },
+        "uniform|no_cheap_verifier|part1_bracket": {
+          "headroom_needed_p5_p50_p95": [
+            1.4179,
+            2.12919,
+            2.64544
+          ],
+          "leak_years_p5_p50_p95": {
+            "0.0": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.25": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.5": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "0.75": [
+              0.0,
+              0.0,
+              0.0380477
+            ],
+            "1.0": [
+              0.0,
+              0.00267231,
+              0.616962
+            ],
+            "1.25": [
+              0.0,
+              0.460157,
+              1.40775
+            ],
+            "1.5": [
+              0.379493,
+              0.914424,
+              2.29488
+            ],
+            "1.75": [
+              0.746762,
+              1.34954,
+              3.22279
+            ],
+            "2.0": [
+              1.1018,
+              1.77664,
+              4.19791
+            ],
+            "2.25": [
+              1.45209,
+              2.20995,
+              5.20793
+            ],
+            "2.5": [
+              1.79827,
+              2.63937,
+              6.24749
+            ],
+            "2.75": [
+              2.14248,
+              3.07174,
+              7.29206
+            ],
+            "3.0": [
+              2.48433,
+              3.50755,
+              8.32127
+            ],
+            "3.25": [
+              2.82312,
+              3.94554,
+              9.36568
+            ],
+            "3.5": [
+              3.16142,
+              4.37886,
+              10.4149
+            ],
+            "3.75": [
+              3.49958,
+              4.81555,
+              11.4519
+            ],
+            "4.0": [
+              3.83601,
+              5.25136,
+              12.4859
+            ],
+            "4.25": [
+              4.17209,
+              5.68335,
+              13.5239
+            ],
+            "4.5": [
+              4.50681,
+              6.11566,
+              14.5705
+            ],
+            "4.75": [
+              4.84294,
+              6.55086,
+              15.6062
+            ],
+            "5.0": [
+              5.17925,
+              6.98839,
+              16.6662
+            ],
+            "5.25": [
+              5.51343,
+              7.42328,
+              17.6933
+            ],
+            "5.5": [
+              5.84769,
+              7.85704,
+              18.7303
+            ],
+            "5.75": [
+              6.18219,
+              8.29178,
+              19.7637
+            ],
+            "6.0": [
+              6.51474,
+              8.72968,
+              20.7804
+            ]
+          },
+          "share_above_line": {
+            "0.0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "1.0": 0.0,
+            "1.25": 0.0136,
+            "1.5": 0.0768,
+            "1.75": 0.202,
+            "2.0": 0.3835,
+            "2.25": 0.62275,
+            "2.5": 0.8564,
+            "2.75": 0.9864,
+            "3.0": 1.0,
+            "3.25": 1.0,
+            "3.5": 1.0,
+            "3.75": 1.0,
+            "4.0": 1.0,
+            "4.25": 1.0,
+            "4.5": 1.0,
+            "4.75": 1.0,
+            "5.0": 1.0,
+            "5.25": 1.0,
+            "5.5": 1.0,
+            "5.75": 1.0,
+            "6.0": 1.0
+          }
+        }
+      },
+      "what": "percentiles of the leak time inside each box, an illustration only: the box's corners are the result, and the median moves with the assumed law for the rate"
+    },
+    "open_closed_lag": {
+      "days": 148,
+      "evaluable_days": 0,
+      "mean_eci_gap": 8.20203,
+      "mean_lag_months": 7.03768,
+      "models_with_blank_accessibility": 8,
+      "other_readings": {
+        "blank_accessibility_as_open": {
+          "mean_eci_gap": 7.44124,
+          "mean_lag_months": 6.17903,
+          "segments": [
+            {
+              "both_computes_known": false,
+              "from": "2026-01-01",
+              "lag_days_on_first_day": 148,
+              "open_model": "o3-pro",
+              "record_matched": "o3-pro"
+            },
+            {
+              "both_computes_known": false,
+              "from": "2026-01-27",
+              "lag_days_on_first_day": 174,
+              "open_model": "Kimi K2.5",
+              "record_matched": "o3-pro"
+            },
+            {
+              "both_computes_known": false,
+              "from": "2026-04-07",
+              "lag_days_on_first_day": 244,
+              "open_model": "GLM-5.1",
+              "record_matched": "o3-pro"
+            },
+            {
+              "both_computes_known": false,
+              "from": "2026-04-20",
+              "lag_days_on_first_day": 154,
+              "open_model": "Kimi K2.6",
+              "record_matched": "GPT-5 Pro"
+            },
+            {
+              "both_computes_known": false,
+              "from": "2026-05-19",
+              "lag_days_on_first_day": 90,
+              "open_model": "Gemini 3.5 Flash",
+              "record_matched": "GPT-5.3 Codex"
+            }
+          ]
+        },
+        "publication_dates": {
+          "mean_eci_gap": 8.27329,
+          "mean_lag_months": 8.01931,
+          "segments": [
+            {
+              "both_computes_known": false,
+              "from": "2026-01-01",
+              "lag_days_on_first_day": 378,
+              "open_model": "DeepSeek-V3.2",
+              "record_matched": "o1"
+            },
+            {
+              "both_computes_known": false,
+              "from": "2026-02-02",
+              "lag_days_on_first_day": 180,
+              "open_model": "Kimi K2.5",
+              "record_matched": "o3-pro"
+            },
+            {
+              "both_computes_known": false,
+              "from": "2026-04-20",
+              "lag_days_on_first_day": 154,
+              "open_model": "Kimi K2.6",
+              "record_matched": "GPT-5 Pro"
+            }
+          ]
+        },
+        "what": "how the reproduced strict lag moves with two choices the page leaves open; counting blank rows as open also counts closed models (o3-pro, Gemini 3.5 Flash) as open, so it is not Epoch's reading either"
+      },
+      "published_eci_gap_lo_mid_hi": [
+        7.0,
+        8.0,
+        11.0
+      ],
+      "published_headline_months": 4.0,
+      "published_strict_months": 6.0,
+      "segments": [
+        {
+          "both_computes_known": false,
+          "from": "2026-01-01",
+          "lag_days_on_first_day": 261,
+          "open_model": "DeepSeek-V3.2",
+          "record_matched": "Gemini 2.5 Pro (Mar 2025)"
+        },
+        {
+          "both_computes_known": false,
+          "from": "2026-01-27",
+          "lag_days_on_first_day": 174,
+          "open_model": "Kimi K2.5",
+          "record_matched": "o3-pro"
+        },
+        {
+          "both_computes_known": false,
+          "from": "2026-04-20",
+          "lag_days_on_first_day": 154,
+          "open_model": "Kimi K2.6",
+          "record_matched": "GPT-5 Pro"
+        }
+      ],
+      "what": "Epoch's method with point estimates: each day, the best open-weight model so far, and the days since the last date on which the state of the art was strictly below it; the vertical gap is the state of the art minus that open model's ECI",
+      "window": [
+        "2026-01-01",
+        "2026-05-28"
+      ]
+    }
+  },
+  "experiment": "E18",
+  "name": "e18_cap_leak",
+  "numbers": {
+    "e18-b-disjoint-example": {
+      "fmt": ",.0f",
+      "label": "of 8 pairs of class and rate range, those in which the expression's interval and a single multiplier's do not overlap at the example headroom",
+      "note": "",
+      "unit": "cases",
+      "value": 0.0
+    },
+    "e18-b-sep-fails-line": {
+      "fmt": ",.0f",
+      "label": "of 8 pairs of class and rate range, those in which every headroom where the two intervals separate is one where the cap's leak time is below m * T_r at every input",
+      "note": "",
+      "unit": "cases",
+      "value": 8.0
+    },
+    "e18-b-sep-part1": {
+      "fmt": ".2f",
+      "label": "C2(b) at fixed compute, no cheap verifier, Part I's bracket for both: largest headroom at which the expression's interval and a single multiplier's do not overlap (arithmetic on the ranges)",
+      "note": "",
+      "unit": "OOM",
+      "value": 0.912082
+    },
+    "e18-b-sep-subsets": {
+      "fmt": ".2f",
+      "label": "the same boundary with the rate across E1's six samples",
+      "note": "",
+      "unit": "OOM",
+      "value": 0.804329
+    },
+    "e18-b-sep-verifier-part1": {
+      "fmt": ".2f",
+      "label": "the same boundary with a cheap verifier, Part I's bracket",
+      "note": "",
+      "unit": "OOM",
+      "value": 1.30489
+    },
+    "e18-b-sep-verifier-subsets": {
+      "fmt": ".2f",
+      "label": "the same boundary with a cheap verifier, rate across E1's six samples",
+      "note": "",
+      "unit": "OOM",
+      "value": 1.15073
+    },
+    "e18-bt-censored": {
+      "fmt": ",.0f",
+      "label": "records not yet matched by any model with a compute estimate at or below their own compute when the data end",
+      "note": "censored at 0.78 years",
+      "unit": "records",
+      "value": 1.0
+    },
+    "e18-bt-events": {
+      "fmt": ",.0f",
+      "label": "catch-ups below a record's compute that close more headroom than any earlier one",
+      "note": "",
+      "unit": "catch-ups",
+      "value": 4.0
+    },
+    "e18-bt-gamma-hi": {
+      "fmt": ",.0f",
+      "label": "highest yearly rate a catch-up implies, 10^(h / t) with J = 0 (upper end of the observed range)",
+      "note": "",
+      "unit": "",
+      "value": 1125.3158070571358
+    },
+    "e18-bt-gamma-lo": {
+      "fmt": ".2f",
+      "label": "lowest yearly rate a catch-up implies, 10^(h / t) with J = 0 (lower end of the observed range, not an interval)",
+      "note": "",
+      "unit": "",
+      "value": 1.9062799998955762
+    },
+    "e18-bt-h0-hi": {
+      "fmt": ".2f",
+      "label": "longest such time among the records that were matched",
+      "note": "",
+      "unit": "years",
+      "value": 1.51951
+    },
+    "e18-bt-h0-lo": {
+      "fmt": ".2f",
+      "label": "shortest time until a model at or below a then-frontier record's compute matched its ECI (the expression predicts 0 for every input)",
+      "note": "",
+      "unit": "years",
+      "value": 0.479124
+    },
+    "e18-bt-inside-part1": {
+      "fmt": ",.0f",
+      "label": "of 7 backtest points (first matches at the record's compute and catch-ups), those inside the expression's exact interval with Part I's bracket and J = 0",
+      "note": "",
+      "unit": "points",
+      "value": 3.0
+    },
+    "e18-bt-inside-part1-j": {
+      "fmt": ",.0f",
+      "label": "of 7 backtest points, those inside the exact interval with Part I's bracket and J over Part I's post-training range",
+      "note": "",
+      "unit": "points",
+      "value": 2.0
+    },
+    "e18-bt-inside-subsets": {
+      "fmt": ",.0f",
+      "label": "of 7 backtest points, those inside the exact interval with the rate across E1's six samples and J = 0",
+      "note": "",
+      "unit": "points",
+      "value": 2.0
+    },
+    "e18-bt-max-headroom": {
+      "fmt": ".2f",
+      "label": "largest headroom closed below a record's compute in the backtest",
+      "note": "",
+      "unit": "OOM",
+      "value": 1.4619384623852518
+    },
+    "e18-bt-targets": {
+      "fmt": ",.0f",
+      "label": "ECI records with a compute estimate, set on or after the first closed model's ECI: the then-frontier caps the backtest can place",
+      "note": "",
+      "unit": "records",
+      "value": 3.0
+    },
+    "e18-leak-part1-hi": {
+      "fmt": ".1f",
+      "label": "leak time of the example cap, no cheap verifier, slow corner of Part I's bracket (small-compute bound, typical jump); the exact interval's upper end",
+      "note": "",
+      "unit": "years",
+      "value": 12.655664976151899
+    },
+    "e18-leak-part1-lo": {
+      "fmt": ".1f",
+      "label": "leak time of the example cap, no cheap verifier, fast corner of Part I's bracket (Rosetta rate, high post-training jump); the exact interval's lower end",
+      "note": "",
+      "unit": "years",
+      "value": 2.1833416106423957
+    },
+    "e18-leak-subset-hi": {
+      "fmt": ".1f",
+      "label": "leak time of the example cap at the slowest of E1's six sample rates (not open weights) and the typical post-training jump",
+      "note": "",
+      "unit": "years",
+      "value": 5.524584106375315
+    },
+    "e18-leak-subset-lo": {
+      "fmt": ".2f",
+      "label": "leak time of the example cap at the fastest of E1's six sample rates (at or above 1e24.5 FLOP) and the high post-training jump",
+      "note": "",
+      "unit": "years",
+      "value": 0.5343200337737675
+    },
+    "e18-leak-verifier-hi": {
+      "fmt": ".1f",
+      "label": "leak time of the example cap with a cheap verifier, slow corner of Part I's bracket (span of one typical technique); the fast corner is 0, the span covering the headroom",
+      "note": "",
+      "unit": "years",
+      "value": 11.000000000000002
+    },
+    "e18-mc-median-spread": {
+      "fmt": ".2f",
+      "label": "illustration: largest over smallest Monte Carlo median of the example cap's leak time across three assumed laws for the rate inside Part I's bracket (the median is the law's, not data's)",
+      "note": "",
+      "unit": "",
+      "value": 1.247893829025958
+    },
+    "e18-need-part1-hi": {
+      "fmt": ".1f",
+      "label": "headroom a cap needs for its leak time to exceed m * T_r, no cheap verifier, high corner of Part I's bracket",
+      "note": "",
+      "unit": "OOM",
+      "value": 2.8573324964312685
+    },
+    "e18-need-part1-lo": {
+      "fmt": ".1f",
+      "label": "headroom a cap needs for its leak time to exceed m * T_r, no cheap verifier, low corner of Part I's bracket",
+      "note": "",
+      "unit": "OOM",
+      "value": 1.0626063679723825
+    },
+    "e18-need-record-tr-part1-hi": {
+      "fmt": ".1f",
+      "label": "headroom needed, no cheap verifier, high corner of Part I's bracket, with T_r from the record (E5's declared-path detection plus E24's median response, not a high quantile)",
+      "note": "",
+      "unit": "OOM",
+      "value": 3.308056874257332
+    },
+    "e18-need-subset-hi": {
+      "fmt": ".1f",
+      "label": "headroom a cap needs for its leak time to exceed m * T_r at the fastest of E1's six sample rates, no cheap verifier, high jump",
+      "note": "",
+      "unit": "OOM",
+      "value": 7.660402270503173
+    },
+    "e18-need-subset-lo": {
+      "fmt": ".1f",
+      "label": "headroom a cap needs for its leak time to exceed m * T_r at the slowest of E1's six sample rates, no cheap verifier, typical jump",
+      "note": "",
+      "unit": "OOM",
+      "value": 1.531984744036919
+    },
+    "e18-need-verifier-part1-hi": {
+      "fmt": ".1f",
+      "label": "headroom a cap needs for its leak time to exceed m * T_r, cheap verifier, high corner of Part I's bracket",
+      "note": "",
+      "unit": "OOM",
+      "value": 4.556302500767288
+    },
+    "e18-need-verifier-subset-hi": {
+      "fmt": ".1f",
+      "label": "headroom a cap needs at the fastest of E1's six sample rates with a cheap verifier's full span",
+      "note": "",
+      "unit": "OOM",
+      "value": 9.359372274839192
+    },
+    "e18-oc-evaluable-days": {
+      "fmt": ",.0f",
+      "label": "of the window's 148 days, those on which both the best open model and the record it matched have a public compute estimate, so the expression could predict the lag",
+      "note": "",
+      "unit": "days",
+      "value": 0.0
+    },
+    "e18-oc-gap-eci": {
+      "fmt": ".1f",
+      "label": "mean ECI gap between the state of the art and the best open model over Epoch's 2026 window, reproduced",
+      "note": "",
+      "unit": "ECI points",
+      "value": 8.20203462365758
+    },
+    "e18-oc-lag-over-published": {
+      "fmt": ".2f",
+      "label": "reproduced strict lag over the strict lag Epoch publishes (1 means it reproduces)",
+      "note": "",
+      "unit": "",
+      "value": 1.1729470743844461
+    },
+    "e18-oc-lag-strict": {
+      "fmt": ".1f",
+      "label": "Epoch's open-closed lag over its 2026 window, reproduced from its chart data with point estimates (the strict version)",
+      "note": "",
+      "unit": "months",
+      "value": 7.037682446306676
+    },
+    "e18-subsets-inside-line": {
+      "fmt": ",.0f",
+      "label": "of E1's six sample rates, those at which the example cap's leak time is below m * T_r at every post-training jump in Part I's range (the cap fails the illustrative line)",
+      "note": "",
+      "unit": "samples",
+      "value": 4.0
+    },
+    "e18-subsets-outside-line": {
+      "fmt": ",.0f",
+      "label": "of E1's six sample rates, those at which the example cap's leak time exceeds m * T_r at every post-training jump in Part I's range",
+      "note": "",
+      "unit": "samples",
+      "value": 1.0
+    }
+  },
+  "script": "tools/exp/e18_cap_leak.py",
+  "seed": 20261127
+}

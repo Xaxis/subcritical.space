@@ -72,21 +72,24 @@ source (C3); and the pathway order as a judgement with
 pairs fixed by evidence (C12). C6 issues no certificate while edges are unmeasured, and C9 is
 engineering.
 
-Three claims are downgraded. The loop-gain estimator (C4) is a measurement design: at the only
-noise level calibrated to data every estimator tried under-covers or is biased, and the trigger built
-on it fires about as often below 1 as above, on the return or on the gain. Superintelligence
-judged against a named organisation at matched time and money (C10) is a definition, which cannot
-warn. Closure measured one gate at a time (C11) is framing until its experiment runs.
+Four claims are downgraded. Breakout time per path from verified holdings (C2) is an accounting
+frame that claims nothing: tabulating it in advance is cut, since public data cannot identify the
+drift of algorithmic efficiency, its gain over a single efficiency multiplier is not shown, and its
+backtest cuts against it, because the leak of a training cap came in jumps. The loop-gain estimator
+(C4) is a measurement design: at the only noise level calibrated to data every estimator tried
+under-covers or is biased, and the trigger built on it fires about as often below 1 as above, on the
+return or on the gain. Superintelligence judged against a named organisation at matched time and
+money (C10) is a definition, which cannot warn; its claim that the crossover budget rises without
+saturating is withdrawn, since it rises only while a battery's baselines last. Closure measured one
+gate at a time (C11) is framing until its experiment runs.
 
-Three claims remain candidates, each facing levels 5 and 6:
+Two claims remain candidates, each facing levels 5 and 6:
 
-- A per-path breakout time from verified holdings, tested against a single efficiency multiplier and
-  backtested (C2(b), (c)). Both tests are unrun; tabulating it in advance (C2(a)) is cut, since public
-  data cannot identify the drift of algorithmic efficiency.
 - Miss and false-alarm rates per named elicitation budget over a defined population of model
   organisms (C5). They bound only hiding that does not adapt, and the experiment has not run.
 - The aggregate footprint floor as a bound, with each detection channel's margin and the year it
-  crosses one (C8). Supported in part by experiment; a falsifier that could not fail is cut.
+  crosses one (C8). Two of its three parts are supported, on one experiment alone; a falsifier that
+  could not fail is cut.
 
 The red team also cut the response time computed from drills (C1(c)), since every response waits on
 a political decision.

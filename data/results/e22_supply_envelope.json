@@ -1,0 +1,1040 @@
+{
+  "data": [
+    {
+      "sha256": "4c48ae69a393301d5c37ce27e2acf27481190d776aa12fbd82d6588dc8512e34",
+      "url": "https://epoch.ai/data/ai_chip_sales_timelines_by_chip.csv",
+      "what": "Epoch AI chip sales, per chip and quarter"
+    },
+    {
+      "sha256": "13b723a564c9866d6f4d14665994226401b819a98cb2f0e3003ea9e9d5e480ba",
+      "url": "https://epoch.ai/data/ai_chip_sales_chip_types.csv",
+      "what": "Epoch AI chip sales, chip types and peak rates"
+    },
+    {
+      "sha256": "f7bf1e6f0b5f7ed79e857cf3d1d958c40f52fe9741708613aea43c0529939636",
+      "url": "https://epoch.ai/data/ai_chip_components_supply_denominators.csv",
+      "what": "Epoch AI chip components, quarterly supply of logic, CoWoS and HBM"
+    },
+    {
+      "sha256": "0eb3efd11b89bd39ddc398079700a084e491daa240dda108949417611e7be8df",
+      "url": "https://epoch.ai/data/ai_chip_components_quarterly_by_designer.csv",
+      "what": "Epoch AI chip components, quarterly consumption by designer"
+    },
+    {
+      "sha256": "8f7a9278f9daa2047760f2311c1c4f21cf86d52b40fe406100a2ed010a852756",
+      "url": "https://docs.google.com/spreadsheets/d/1aRNP14KndZ1jFZgolakgREm1Ip65KlfrIcmR8dKBI7I/export?format=csv&gid=1424568061",
+      "what": "Epoch AI chip components, bill-of-materials sheet linked from its methodology"
+    },
+    {
+      "sha256": "78934b160430a09cb4c84bca4e709abf66d62538be8990c58ac679e4265636c2",
+      "url": "tools/exp/data/e22_supply_envelope.csv",
+      "what": "hand-compiled analyst figures with sources"
+    }
+  ],
+  "details": {
+    "c7": {
+      "budgets_flop": {
+        "1e26 FLOP": 1e+26,
+        "hardwired-pause breakout budget": 2e+29,
+        "its frozen frontier": 2e+27
+      },
+      "china_holdings_plus_unused_stacks_h100e": 4435778,
+      "fleet_end_2025_h100e": 20297827,
+      "fleet_end_q3_2025_h100e": 15885458,
+      "phi_china_year_domestic_only": 2.426670166666667,
+      "phi_member_quarter": 1.653028312859656,
+      "phi_member_year": 2.5413585920226733,
+      "years_to_budget": {
+        "1e26 FLOP": {
+          "china_from_end_2025_years": 0.000360971591997097,
+          "member_from_zero_at_2025_envelope_years": 0.010117273723664133,
+          "nostock_from_zero_years": 0.08757489648670261
+        },
+        "hardwired-pause breakout budget": {
+          "china_from_end_2025_years": 0.6989608011285813,
+          "member_from_zero_at_2025_envelope_years": 0.45245823586170847,
+          "nostock_from_zero_years": 3.91646843333549
+        },
+        "its frozen frontier": {
+          "china_from_end_2025_years": 0.007217102913431432,
+          "member_from_zero_at_2025_envelope_years": 0.04524582358617085,
+          "nostock_from_zero_years": 0.39164684333354904
+        }
+      }
+    },
+    "c8": {
+      "china_slack_central_h100e": 520797,
+      "china_slack_upper_h100e": 2841311,
+      "floor_h100e": 800.6085854984576,
+      "member_slack_upper_h100e": 26885360,
+      "smuggled_high_over_allied_sales_2024_25": 0.08908551546911514,
+      "units_sold_2022_25": 20587962,
+      "untraced_chips_over_units_sold_2022_25": 0.0485720733310077
+    },
+    "china_observations": [
+      {
+        "central_reading_margin": 6.822,
+        "envelope_upper_bound": 3131715,
+        "h100e": 180111,
+        "inside": true,
+        "margin": 17.388,
+        "observation": "Epoch, Huawei 2024",
+        "period": "2024",
+        "reading": "median",
+        "source": "epoch2026chipsales"
+      },
+      {
+        "central_reading_margin": 5.12,
+        "envelope_upper_bound": 3131715,
+        "h100e": 240000,
+        "inside": true,
+        "margin": 13.049,
+        "observation": "Epoch, Huawei 2024",
+        "period": "2024",
+        "reading": "95th percentile",
+        "source": "epoch2026chipsales"
+      },
+      {
+        "central_reading_margin": 2.328,
+        "envelope_upper_bound": 3549277,
+        "h100e": 527855,
+        "inside": true,
+        "margin": 6.724,
+        "observation": "Epoch, Huawei 2025",
+        "period": "2025",
+        "reading": "median",
+        "source": "epoch2026chipsales"
+      },
+      {
+        "central_reading_margin": 1.982,
+        "envelope_upper_bound": 3549277,
+        "h100e": 620000,
+        "inside": true,
+        "margin": 5.725,
+        "observation": "Epoch, Huawei 2025",
+        "period": "2025",
+        "reading": "95th percentile",
+        "source": "epoch2026chipsales"
+      },
+      {
+        "central_reading_margin": 1.736,
+        "envelope_upper_bound": 3549277,
+        "h100e": 707966,
+        "inside": true,
+        "margin": 5.013,
+        "observation": "Epoch, Huawei 2024 and 2025",
+        "period": "cum",
+        "reading": "median",
+        "source": "epoch2026chipsales"
+      },
+      {
+        "central_reading_margin": 1.429,
+        "envelope_upper_bound": 3549277,
+        "h100e": 860000,
+        "inside": true,
+        "margin": 4.127,
+        "observation": "Epoch, Huawei 2024 and 2025",
+        "period": "cum",
+        "reading": "sum of 95th percentiles",
+        "source": "epoch2026chipsales"
+      },
+      {
+        "central_reading_margin": 1.654,
+        "envelope_upper_bound": 3549277,
+        "h100e": 742892,
+        "inside": true,
+        "margin": 4.778,
+        "observation": "Epoch, Huawei and Cambricon 2024 and 2025",
+        "period": "cum",
+        "reading": "median",
+        "source": "epoch2026chipsales"
+      },
+      {
+        "central_reading_margin": 6.141,
+        "envelope_upper_bound": 3131715,
+        "h100e": 200080,
+        "inside": true,
+        "margin": 15.652,
+        "observation": "SemiAnalysis, Ascend units 2024",
+        "period": "2024",
+        "reading": "Epoch's 2024 mix",
+        "source": "patel2025ascend"
+      },
+      {
+        "central_reading_margin": 4.344,
+        "envelope_upper_bound": 3131715,
+        "h100e": 282892,
+        "inside": true,
+        "margin": 11.07,
+        "observation": "SemiAnalysis, Ascend units 2024",
+        "period": "2024",
+        "reading": "half 910C, the most 'a majority 910B' allows",
+        "source": "patel2025ascend"
+      },
+      {
+        "central_reading_margin": 2.216,
+        "envelope_upper_bound": 3549277,
+        "h100e": 554380,
+        "inside": true,
+        "margin": 6.402,
+        "observation": "SemiAnalysis, Ascend units 2025",
+        "period": "2025",
+        "reading": "its own 910C count",
+        "source": "patel2025ascend"
+      },
+      {
+        "central_reading_margin": 1.468,
+        "envelope_upper_bound": 3549277,
+        "h100e": 837272,
+        "inside": true,
+        "margin": 4.239,
+        "observation": "SemiAnalysis, Ascend units 2024 and 2025",
+        "period": "cum",
+        "reading": "upper reading",
+        "source": "patel2025ascend"
+      },
+      {
+        "central_reading_margin": 2.197,
+        "envelope_upper_bound": 3549277,
+        "h100e": 559201,
+        "inside": true,
+        "margin": 6.347,
+        "observation": "IDC, Huawei AI chips 2025",
+        "period": "2025",
+        "reading": "SemiAnalysis's 2025 mix",
+        "source": "pan2026idc"
+      },
+      {
+        "central_reading_margin": 1.97,
+        "envelope_upper_bound": 3549277,
+        "h100e": 623597,
+        "inside": true,
+        "margin": 5.692,
+        "observation": "IDC, Huawei AI chips 2025",
+        "period": "2025",
+        "reading": "all 910C",
+        "source": "pan2026idc"
+      },
+      {
+        "central_reading_margin": 8.0,
+        "envelope_upper_bound": 3549277,
+        "h100e": 153595,
+        "inside": true,
+        "margin": 23.108,
+        "observation": "US Commerce, Ascend capacity 2025 (at or below)",
+        "period": "2025",
+        "reading": "all 910C",
+        "source": "zafar2025kessler"
+      },
+      {
+        "central_reading_margin": 17.656,
+        "envelope_upper_bound": 3131715,
+        "h100e": 69594,
+        "inside": true,
+        "margin": 45.0,
+        "observation": "Financial Times, Ascend 910B 2024 (910B only)",
+        "period": "2024",
+        "reading": "910B rate",
+        "source": "blablova2025china"
+      }
+    ],
+    "china_stacks": {
+      "chip_setting_the_bound": "Ascend 910B",
+      "die_bank_as_910C_h100e": 1113566.5384615385,
+      "die_bank_dies": 2900000.0,
+      "epoch_units_910B_2024_25": 600000.0,
+      "epoch_units_910C_2024_25": 650000.0,
+      "h100e_per_stack_bound": 0.208781,
+      "h100e_per_stack_central": 0.09452023668639054,
+      "note": "logic is not bounded: the die bank alone (two dies per 910C) would make more H100e than the central HBM reading allows, so HBM binds, as SemiAnalysis judges",
+      "stacks_left_end_2025_central": 5509900.2624277575,
+      "stacks_left_end_2025_most": 11666666.666666666,
+      "stacks_needed_central": 7490099.7375722425,
+      "stacks_needed_fewest": 5333333.333333334,
+      "stacks_per_910B_bound": 1.6666666666666667,
+      "stacks_per_910B_central": 3.681416229287071,
+      "stacks_per_910C_central": 8.125,
+      "stacks_per_910C_generous": 6.666666666666667,
+      "stacks_per_910C_other_end": 8.0
+    },
+    "china_swings_cumulative": {
+      "910B memory in proportion to compute, not Epoch's 32 GB": 1958341,
+      "H100e per unit: Epoch's spec table": 1937948,
+      "all central": 1228763,
+      "no CXMT HBM in 2024-25": 2714153,
+      "stacks per 910C: 8 (2M for 250,000)": 3549277,
+      "stacks per 910C: 8.125 (13M for 1.6M)": 3549277,
+      "stockpile: Samsung's 11.4M stacks only": 3215227,
+      "upper bound": 3549277
+    },
+    "cowos_use_by_observed_sales": {
+      "2024": {
+        "capacity_p50": 351000,
+        "capacity_p95": 390000,
+        "epoch_lagged_use_four_designers": 315725,
+        "epoch_share_of_p50": 0.8995009375803305,
+        "h100e_without_a_bom_row": 8693,
+        "share_of_p50": 0.7133504634050832,
+        "share_of_p95": 0.6420154170645749,
+        "wafers_needed_no_lag": 250386
+      },
+      "2025": {
+        "capacity_p50": 645000,
+        "capacity_p95": 690000,
+        "epoch_lagged_use_four_designers": 562796,
+        "epoch_share_of_p50": 0.872552090987237,
+        "h100e_without_a_bom_row": 0,
+        "share_of_p50": 0.6827160282104702,
+        "share_of_p95": 0.6381910698489177,
+        "wafers_needed_no_lag": 440352
+      }
+    },
+    "h100e_per_cowos_wafer": {
+      "B200": {
+        "h100e_per_cowos_wafer_at_yield_one": 40.42,
+        "h100e_per_unit": 2.5265,
+        "packages_per_wafer": 16.0
+      },
+      "B300": {
+        "h100e_per_cowos_wafer_at_yield_one": 40.42,
+        "h100e_per_unit": 2.5265,
+        "packages_per_wafer": 16.0
+      },
+      "H100/H200": {
+        "h100e_per_cowos_wafer_at_yield_one": 29.0,
+        "h100e_per_unit": 1.0,
+        "packages_per_wafer": 29.0
+      },
+      "H20": {
+        "h100e_per_cowos_wafer_at_yield_one": 4.34,
+        "h100e_per_unit": 0.1496,
+        "packages_per_wafer": 29.0
+      },
+      "MI300A": {
+        "h100e_per_cowos_wafer_at_yield_one": 14.87,
+        "h100e_per_unit": 0.991,
+        "packages_per_wafer": 15.0
+      },
+      "MI300X": {
+        "h100e_per_cowos_wafer_at_yield_one": 15.86,
+        "h100e_per_unit": 1.3213,
+        "packages_per_wafer": 12.0
+      },
+      "MI308X": {
+        "h100e_per_cowos_wafer_at_yield_one": 3.96,
+        "h100e_per_unit": 0.3303,
+        "packages_per_wafer": 12.0
+      },
+      "MI325X": {
+        "h100e_per_cowos_wafer_at_yield_one": 15.77,
+        "h100e_per_unit": 1.3138,
+        "packages_per_wafer": 12.0
+      },
+      "MI350X": {
+        "h100e_per_cowos_wafer_at_yield_one": 27.98,
+        "h100e_per_unit": 2.3315,
+        "packages_per_wafer": 12.0
+      },
+      "MI355X": {
+        "h100e_per_cowos_wafer_at_yield_one": 30.52,
+        "h100e_per_unit": 2.5433,
+        "packages_per_wafer": 12.0
+      },
+      "TPU v5e": {
+        "h100e_per_cowos_wafer_at_yield_one": 11.92,
+        "h100e_per_unit": 0.1986,
+        "packages_per_wafer": 60.0
+      },
+      "TPU v5p": {
+        "h100e_per_cowos_wafer_at_yield_one": 16.7,
+        "h100e_per_unit": 0.4639,
+        "packages_per_wafer": 36.0
+      },
+      "TPU v6e": {
+        "h100e_per_cowos_wafer_at_yield_one": 36.18,
+        "h100e_per_unit": 0.9277,
+        "packages_per_wafer": 39.0
+      },
+      "TPU v7": {
+        "h100e_per_cowos_wafer_at_yield_one": 48.96,
+        "h100e_per_unit": 2.3315,
+        "packages_per_wafer": 21.0
+      },
+      "Trainium1": {
+        "h100e_per_cowos_wafer_at_yield_one": 9.97,
+        "h100e_per_unit": 0.2122,
+        "packages_per_wafer": 47.0
+      },
+      "Trainium2": {
+        "h100e_per_cowos_wafer_at_yield_one": 17.07,
+        "h100e_per_unit": 0.6564,
+        "packages_per_wafer": 26.0
+      }
+    },
+    "h100e_per_unit": {
+      "Ascend 910B": {
+        "hi": 0.348,
+        "implied": 0.348,
+        "memory_gb": 32.0,
+        "spec": 0.19
+      },
+      "Ascend 910C": {
+        "hi": 0.768,
+        "implied": 0.768,
+        "memory_gb": 128.0,
+        "spec": 0.76
+      },
+      "B200": {
+        "hi": 2.5265,
+        "implied": 2.5265,
+        "memory_gb": 186.0,
+        "spec": 2.5265
+      },
+      "B300": {
+        "hi": 2.5265,
+        "implied": 2.5265,
+        "memory_gb": 288.0,
+        "spec": 2.5265
+      },
+      "H100/H200": {
+        "hi": 1.0,
+        "implied": 1.0,
+        "memory_gb": 141.0,
+        "spec": 1.0
+      },
+      "H20": {
+        "hi": 0.1496,
+        "implied": 0.1496,
+        "memory_gb": 96.0,
+        "spec": 0.1496
+      },
+      "MI250X": {
+        "hi": 0.1935,
+        "implied": 0.1935,
+        "memory_gb": 128.0,
+        "spec": 0.1935
+      },
+      "MI300A": {
+        "hi": 0.991,
+        "implied": 0.991,
+        "memory_gb": 128.0,
+        "spec": 0.991
+      },
+      "MI300X": {
+        "hi": 1.3213,
+        "implied": 1.3213,
+        "memory_gb": 192.0,
+        "spec": 1.3213
+      },
+      "MI308X": {
+        "hi": 0.3303,
+        "implied": 0.3303,
+        "memory_gb": 192.0,
+        "spec": 0.3303
+      },
+      "MI325X": {
+        "hi": 1.3138,
+        "implied": 1.3138,
+        "memory_gb": 256.0,
+        "spec": 1.3138
+      },
+      "MI350X": {
+        "hi": 2.3315,
+        "implied": 2.3315,
+        "memory_gb": 288.0,
+        "spec": 2.3315
+      },
+      "MI355X": {
+        "hi": 2.5433,
+        "implied": 2.5433,
+        "memory_gb": 288.0,
+        "spec": 2.5433
+      },
+      "Siyuan 590": {
+        "hi": 0.2587,
+        "implied": 0.2587,
+        "memory_gb": null,
+        "spec": 0.2587
+      },
+      "TPU v5e": {
+        "hi": 0.1986,
+        "implied": 0.1986,
+        "memory_gb": 16.0,
+        "spec": 0.1986
+      },
+      "TPU v5p": {
+        "hi": 0.4639,
+        "implied": 0.4639,
+        "memory_gb": 95.0,
+        "spec": 0.4639
+      },
+      "TPU v6e": {
+        "hi": 0.9277,
+        "implied": 0.9277,
+        "memory_gb": 32.0,
+        "spec": 0.9277
+      },
+      "TPU v7": {
+        "hi": 2.3315,
+        "implied": 2.3315,
+        "memory_gb": 192.0,
+        "spec": 2.3315
+      },
+      "Trainium1": {
+        "hi": 0.2122,
+        "implied": 0.2122,
+        "memory_gb": 32.0,
+        "spec": 0.2122
+      },
+      "Trainium2": {
+        "hi": 0.6564,
+        "implied": 0.6564,
+        "memory_gb": 96.0,
+        "spec": 0.6564
+      }
+    },
+    "inputs": {
+      "CoWoS capacity": "analyst benchmarks (SemiWiki, TrendForce, DigiTimes) interpolated by Epoch; Sevilla et al. and TrendForce in the ledger for the paths",
+      "HBM stockpile, die bank, CXMT projection, stacks per 910C": "analyst estimates (SemiAnalysis)",
+      "HBM supply in US dollars": "vendor claim (Micron's market sizes for 2024 and 2025, corroborated by Goldman Sachs) split by quarter by Epoch",
+      "Huawei output": "Epoch (modelled), SemiAnalysis (analyst), IDC (market tracker), US Commerce (government statement), FT (press)",
+      "TSMC CoWoS growth of more than 80% a year": "vendor claim (TSMC), used only in a sensitivity path",
+      "logic supply": "vendor disclosure (TSMC's per-node wafer revenue) divided by analysts' wafer prices",
+      "packages per CoWoS wafer, dies per wafer, yields, HBM cost per chip": "Epoch's bill-of-materials model",
+      "peak 8-bit rates, so H100e per unit": "vendor claims (spec sheets), via Epoch's chip table; Huawei's are vendor claims too"
+    },
+    "ledger_inputs": {
+      "claim-hwp-frozen-frontier": 2e+27,
+      "def-hwp-breakout-budget": 2e+29,
+      "def-seconds-per-year": 31557600.0,
+      "formal-floor-bound-1e26-pause": 800.6085854984576,
+      "org-china-hbm-stockpile": 13.0,
+      "org-china-implied-stock": 2.0,
+      "org-chips-unaccounted": 1.0,
+      "org-cowos-2026-high": 140000.0,
+      "org-cowos-cagr": 0.8,
+      "org-cowos-dec2023-high": 15000.0,
+      "org-cowos-total-2026": 200000.0,
+      "org-cxmt-hbm-2026": 2.0,
+      "org-hbm-stockpile-packages": 1.6,
+      "org-huawei-commerce-2025": 200000.0,
+      "org-huawei-die-bank": 2.9,
+      "org-huawei-h100e-2025": 530000.0,
+      "org-huawei-idc-2025": 812000.0,
+      "org-huawei-semianalysis-2025": 805000.0,
+      "org-smuggled-cum": 660000.0,
+      "org-smuggled-cum-high": 1600000.0,
+      "org-sold-2024": 5.1,
+      "org-sold-2025": 13.61,
+      "phys-h100-fp8": 1979.0,
+      "phys-rahman-1e26-local": 1e+26
+    },
+    "member_observations": [
+      {
+        "central_reading_margin": 2.3,
+        "envelope_upper_bound": 13559401,
+        "h100e": 4911223,
+        "inside": true,
+        "margin": 2.761,
+        "observation": "Epoch, Nvidia, Google, AMD and Amazon 2024",
+        "period": "2024",
+        "reading": "median"
+      },
+      {
+        "central_reading_margin": 1.823,
+        "envelope_upper_bound": 13559401,
+        "h100e": 6196157,
+        "inside": true,
+        "margin": 2.188,
+        "observation": "Epoch, Nvidia, Google, AMD and Amazon 2024",
+        "period": "2024",
+        "reading": "sum of row 95th percentiles"
+      },
+      {
+        "central_reading_margin": 2.024,
+        "envelope_upper_bound": 31286230,
+        "h100e": 13049048,
+        "inside": true,
+        "margin": 2.398,
+        "observation": "Epoch, Nvidia, Google, AMD and Amazon 2025",
+        "period": "2025",
+        "reading": "median"
+      },
+      {
+        "central_reading_margin": 1.659,
+        "envelope_upper_bound": 31286230,
+        "h100e": 15915058,
+        "inside": true,
+        "margin": 1.966,
+        "observation": "Epoch, Nvidia, Google, AMD and Amazon 2025",
+        "period": "2025",
+        "reading": "sum of row 95th percentiles"
+      }
+    ],
+    "member_quarters_upper_bound": [
+      {
+        "best_chip_cowos": "H100/H200",
+        "best_chip_hbm": "TPU v5e",
+        "best_chip_logic": "MI300A",
+        "binding": "cowos",
+        "cowos_bound_h100e": 1914000,
+        "cowos_wafers": 66000,
+        "hbm_bound_h100e": 2730546,
+        "logic_bound_h100e": 45242165,
+        "quarter": "2024Q1"
+      },
+      {
+        "best_chip_cowos": "H100/H200",
+        "best_chip_hbm": "TPU v5e",
+        "best_chip_logic": "MI300A",
+        "binding": "cowos",
+        "cowos_bound_h100e": 2523000,
+        "cowos_wafers": 87000,
+        "hbm_bound_h100e": 3822764,
+        "logic_bound_h100e": 55375325,
+        "quarter": "2024Q2"
+      },
+      {
+        "best_chip_cowos": "TPU v6e",
+        "best_chip_hbm": "TPU v6e",
+        "best_chip_logic": "MI300A",
+        "binding": "cowos",
+        "cowos_bound_h100e": 3907646,
+        "cowos_wafers": 108000,
+        "hbm_bound_h100e": 10460283,
+        "logic_bound_h100e": 61664119,
+        "quarter": "2024Q3"
+      },
+      {
+        "best_chip_cowos": "B200",
+        "best_chip_hbm": "TPU v6e",
+        "best_chip_logic": "MI300A",
+        "binding": "cowos",
+        "cowos_bound_h100e": 5214755,
+        "cowos_wafers": 129000,
+        "hbm_bound_h100e": 15860510,
+        "logic_bound_h100e": 82596938,
+        "quarter": "2024Q4"
+      },
+      {
+        "best_chip_cowos": "B200",
+        "best_chip_hbm": "TPU v6e",
+        "best_chip_logic": "MI300A",
+        "binding": "cowos",
+        "cowos_bound_h100e": 5381506,
+        "cowos_wafers": 133125,
+        "hbm_bound_h100e": 13776958,
+        "logic_bound_h100e": 74983377,
+        "quarter": "2025Q1"
+      },
+      {
+        "best_chip_cowos": "B200",
+        "best_chip_hbm": "TPU v6e",
+        "best_chip_logic": "MI350X",
+        "binding": "cowos",
+        "cowos_bound_h100e": 6442648,
+        "cowos_wafers": 159375,
+        "hbm_bound_h100e": 16710940,
+        "logic_bound_h100e": 158810827,
+        "quarter": "2025Q2"
+      },
+      {
+        "best_chip_cowos": "TPU v7",
+        "best_chip_hbm": "TPU v6e",
+        "best_chip_logic": "MI355X",
+        "binding": "cowos",
+        "cowos_bound_h100e": 9088422,
+        "cowos_wafers": 185625,
+        "hbm_bound_h100e": 20133919,
+        "logic_bound_h100e": 196889248,
+        "quarter": "2025Q3"
+      },
+      {
+        "best_chip_cowos": "TPU v7",
+        "best_chip_hbm": "TPU v6e",
+        "best_chip_logic": "MI355X",
+        "binding": "cowos",
+        "cowos_bound_h100e": 10373654,
+        "cowos_wafers": 211875,
+        "hbm_bound_h100e": 24237241,
+        "logic_bound_h100e": 203418515,
+        "quarter": "2025Q4"
+      }
+    ],
+    "member_stage_totals_upper_bound": {
+      "2024": {
+        "cowos": 13559401,
+        "hbm": 32874103,
+        "logic": 244878547
+      },
+      "2025": {
+        "cowos": 31286230,
+        "hbm": 74859058,
+        "logic": 634101967
+      }
+    },
+    "member_swings": {
+      "2024": {
+        "CoWoS capacity: TSMC's claimed growth from December 2023": 8640499,
+        "CoWoS capacity: ledger, TSMC to its 2026 high": 9543585,
+        "CoWoS capacity: ledger, with partners to 2026's total": 10304159,
+        "CoWoS capacity: p5": 10893940,
+        "CoWoS capacity: p50": 12226671,
+        "CoWoS capacity: p95": 13559401,
+        "H100e per unit: Epoch's spec table, not the larger of spec and sales rate": 13559401,
+        "HBM supply: p5": 13559401,
+        "HBM supply: p50": 13559401,
+        "HBM supply: p95": 13559401,
+        "Hopper only (H100/H200), no newer chip": 11310000,
+        "logic supply: p5": 13559401,
+        "logic supply: p50": 13559401,
+        "logic supply: p95": 13559401,
+        "packaging and logic yields: sheet p5": 12020876,
+        "packaging and logic yields: sheet p50": 12529401,
+        "packaging and logic yields: sheet p95": 13215217,
+        "without the densest chip (TPU v7)": 13559401
+      },
+      "2025": {
+        "CoWoS capacity: TSMC's claimed growth from December 2023": 20476499,
+        "CoWoS capacity: ledger, TSMC to its 2026 high": 26392635,
+        "CoWoS capacity: ledger, with partners to 2026's total": 32036558,
+        "CoWoS capacity: p5": 27199850,
+        "CoWoS capacity: p50": 29243040,
+        "CoWoS capacity: p95": 31286230,
+        "H100e per unit: Epoch's spec table, not the larger of spec and sales rate": 31286187,
+        "HBM supply: p5": 31286230,
+        "HBM supply: p50": 31286230,
+        "HBM supply: p95": 31286230,
+        "Hopper only (H100/H200), no newer chip": 18542317,
+        "logic supply: p5": 31286230,
+        "logic supply: p50": 31286230,
+        "logic supply: p95": 31286230,
+        "packaging and logic yields: sheet p5": 27177158,
+        "packaging and logic yields: sheet p50": 28251245,
+        "packaging and logic yields: sheet p95": 29721919,
+        "without the densest chip (TPU v7)": 27892875
+      }
+    },
+    "nostock": {
+      "per_year_central": 189040,
+      "per_year_upper_bound": 417562,
+      "semianalysis_910C_for_2M_stacks_h100e": [
+        191994,
+        230393
+      ],
+      "tested": false,
+      "why": "no 2024-25 observation of a denied party without a stockpile"
+    },
+    "verdict": {
+      "end_2024_cowos_paths_wpm": {
+        "TSMC's claimed growth from December 2023": 27000,
+        "ledger, TSMC to its 2026 high": 31582,
+        "ledger, with partners to 2026's total": 35569
+      },
+      "member_binding_stage": [
+        "cowos"
+      ],
+      "sevilla_end_2024_wpm": [
+        33000.0,
+        35000.0
+      ],
+      "test": "passes",
+      "worst_observation": {
+        "central_reading_margin": 1.659,
+        "envelope_upper_bound": 31286230,
+        "h100e": 15915058,
+        "inside": true,
+        "margin": 1.966,
+        "observation": "Epoch, Nvidia, Google, AMD and Amazon 2025",
+        "period": "2025",
+        "reading": "sum of row 95th percentiles"
+      }
+    }
+  },
+  "experiment": "E22",
+  "name": "e22_supply_envelope",
+  "numbers": {
+    "e22-china-budget-year": {
+      "fmt": "sig2",
+      "label": "upper bound on compute a year from China's end-2025 holdings plus every unused stacked HBM made into Ascends, at the 8-bit peak and full utilisation",
+      "note": "",
+      "unit": "FLOP",
+      "value": 2.77025403779028e+29
+    },
+    "e22-china-env-central-cum": {
+      "fmt": ",.2f",
+      "label": "the same at central inputs (13M stacks, no CXMT HBM, 8.1 stacks per 910C), an estimate, not a bound",
+      "note": "",
+      "unit": "million H100e",
+      "value": 1.228763076923077
+    },
+    "e22-china-env-cum": {
+      "fmt": ",.2f",
+      "label": "upper bound on H100e China's domestic chain could make in 2024 and 2025 together: the HBM stockpile plus CXMT at its 2026 rate each year, at the most H100e per stack of any Ascend",
+      "note": "set by the 910B at Epoch's listed 32 GB; with its HBM in proportion to its compute the bound is 1.96 million H100e",
+      "unit": "million H100e",
+      "value": 3.549277
+    },
+    "e22-china-margin-central-upper": {
+      "fmt": ".2f",
+      "label": "the central reading over the sum of Epoch's 95th percentiles for Huawei: inside even then if above 1",
+      "note": "",
+      "unit": "",
+      "value": 1.42879427549195
+    },
+    "e22-china-margin-cum": {
+      "fmt": ".1f",
+      "label": "China's domestic upper bound over Huawei's observed 2024-25 output (above 1: inside)",
+      "note": "",
+      "unit": "",
+      "value": 5.0133438611458745
+    },
+    "e22-china-obs-cum": {
+      "fmt": ",.2f",
+      "label": "Huawei's 2024 and 2025 output in H100e, Epoch's medians",
+      "note": "",
+      "unit": "million H100e",
+      "value": 0.707966
+    },
+    "e22-china-slack": {
+      "fmt": ",.2f",
+      "label": "room the upper bound leaves for undeclared Chinese domestic output in 2024-25 (bound less Epoch's medians)",
+      "note": "",
+      "unit": "million H100e",
+      "value": 2.841311
+    },
+    "e22-china-slack-central-over-floor": {
+      "fmt": ",.0f",
+      "label": "the room at the central reading over the same floor",
+      "note": "",
+      "unit": "",
+      "value": 650.5014889377305
+    },
+    "e22-china-slack-over-floor": {
+      "fmt": ",.0f",
+      "label": "that room over C8's floor for a 1e26 FLOP run under a pause (800 H100e)",
+      "note": "",
+      "unit": "",
+      "value": 3548.9389590182877
+    },
+    "e22-china-stacks-left": {
+      "fmt": ",.1f",
+      "label": "stockpiled HBM stacks left at end 2025 at that mix, before any CXMT output (central)",
+      "note": "",
+      "unit": "million HBM stacks",
+      "value": 5.509900262427758
+    },
+    "e22-china-stacks-share": {
+      "fmt": "%",
+      "label": "share of China's 13M-stack HBM stockpile that Huawei's 2024-25 output needs at Epoch's unit mix (central stacks per chip)",
+      "note": "",
+      "unit": "",
+      "value": 0.5761615182747879
+    },
+    "e22-china-years-to-hwp": {
+      "fmt": ".1f",
+      "label": "least time for China from end 2025 (its implied stock plus every unused stacked HBM made into Ascends, plus CXMT) to the hardwired-pause budget on domestic supply alone, a lower bound",
+      "note": "",
+      "unit": "years",
+      "value": 0.6989608011285813
+    },
+    "e22-cowos-use-2024": {
+      "fmt": "%",
+      "label": "CoWoS wafers the observed 2024 sales need at each chip's own packages per wafer and median yield, as a share of median capacity (no manufacturing lag)",
+      "note": "does not reproduce Epoch's own share: Epoch adds chips made but not sold (inventory, export-control write-downs, stranded H200s) and shifts consumption back by the manufacturing lag; this counts sold units only",
+      "unit": "",
+      "value": 0.7133504634050832
+    },
+    "e22-cowos-use-2025": {
+      "fmt": "%",
+      "label": "CoWoS wafers the observed 2025 sales need at each chip's own packages per wafer and median yield, as a share of median capacity (no manufacturing lag)",
+      "note": "does not reproduce Epoch's own share: Epoch adds chips made but not sold (inventory, export-control write-downs, stranded H200s) and shifts consumption back by the manufacturing lag; this counts sold units only",
+      "unit": "",
+      "value": 0.6827160282104702
+    },
+    "e22-cowos-use-epoch-2024": {
+      "fmt": "%",
+      "label": "the same share in 2024 from Epoch's own lagged consumption of the four designers",
+      "note": "",
+      "unit": "",
+      "value": 0.8995009375803305
+    },
+    "e22-cowos-use-epoch-2025": {
+      "fmt": "%",
+      "label": "the same share in 2025 from Epoch's own lagged consumption of the four designers",
+      "note": "",
+      "unit": "",
+      "value": 0.872552090987237
+    },
+    "e22-inside": {
+      "fmt": ",.0f",
+      "label": "observations inside their envelope (the test passes if this equals the count)",
+      "note": "",
+      "unit": "observations",
+      "value": 19.0
+    },
+    "e22-member-budget-year": {
+      "fmt": "sig2",
+      "label": "upper bound on compute one year of the allied chain's 2025 output delivers in a year at the 8-bit peak and full utilisation",
+      "note": "",
+      "unit": "FLOP",
+      "value": 1.9539029815900016e+30
+    },
+    "e22-member-env-2024": {
+      "fmt": ",.1f",
+      "label": "upper bound on H100e the allied chain (TSMC CoWoS, logic and allied HBM) could make in 2024: each quarter's smallest stage at 95th-percentile capacity, yields of one and the best chip",
+      "note": "",
+      "unit": "million H100e",
+      "value": 13.559401212733704
+    },
+    "e22-member-env-2025": {
+      "fmt": ",.1f",
+      "label": "upper bound on H100e the allied chain (TSMC CoWoS, logic and allied HBM) could make in 2025: each quarter's smallest stage at 95th-percentile capacity, yields of one and the best chip",
+      "note": "",
+      "unit": "million H100e",
+      "value": 31.286230045839797
+    },
+    "e22-member-env-2025-hopper": {
+      "fmt": ",.1f",
+      "label": "the allied chain's 2025 upper bound if only Hopper chips could be made (no Blackwell or TPU v7)",
+      "note": "",
+      "unit": "million H100e",
+      "value": 18.542317
+    },
+    "e22-member-env-2025-p5cap": {
+      "fmt": ",.1f",
+      "label": "the allied chain's 2025 upper bound with CoWoS capacity at its 5th percentile instead",
+      "note": "",
+      "unit": "million H100e",
+      "value": 27.19985
+    },
+    "e22-member-env-central-2024": {
+      "fmt": ",.1f",
+      "label": "the allied chain's 2024 envelope at central inputs (median capacity and yields, best chip), an estimate, not a bound",
+      "note": "",
+      "unit": "million H100e",
+      "value": 11.296429769119962
+    },
+    "e22-member-env-central-2025": {
+      "fmt": ",.1f",
+      "label": "the allied chain's 2025 envelope at central inputs (median capacity and yields, best chip), an estimate, not a bound",
+      "note": "",
+      "unit": "million H100e",
+      "value": 26.405614707774152
+    },
+    "e22-member-margin-2024": {
+      "fmt": ".1f",
+      "label": "the allied chain's 2024 upper bound over its observed sales (above 1: inside)",
+      "note": "",
+      "unit": "",
+      "value": 2.7609011467680666
+    },
+    "e22-member-margin-2025": {
+      "fmt": ".1f",
+      "label": "the allied chain's 2025 upper bound over its observed sales (above 1: inside)",
+      "note": "",
+      "unit": "",
+      "value": 2.397587168492276
+    },
+    "e22-member-obs-2024": {
+      "fmt": ",.1f",
+      "label": "H100e Nvidia, Google, AMD and Amazon sold in 2024, sum of Epoch's per-quarter medians",
+      "note": "",
+      "unit": "million H100e",
+      "value": 4.911223
+    },
+    "e22-member-obs-2025": {
+      "fmt": ",.1f",
+      "label": "H100e Nvidia, Google, AMD and Amazon sold in 2025, sum of Epoch's per-quarter medians",
+      "note": "",
+      "unit": "million H100e",
+      "value": 13.049048
+    },
+    "e22-member-slack": {
+      "fmt": ",.1f",
+      "label": "room the allied upper bound leaves above observed 2024-25 sales",
+      "note": "",
+      "unit": "million H100e",
+      "value": 26.885360258573503
+    },
+    "e22-member-years-to-hwp": {
+      "fmt": ".2f",
+      "label": "least time from no chips to the hardwired-pause budget (2e+29 FLOP) on new allied supply at the 2025 envelope, a lower bound",
+      "note": "",
+      "unit": "years",
+      "value": 0.45245823586170847
+    },
+    "e22-min-margin": {
+      "fmt": ".2f",
+      "label": "smallest margin of any observation over its upper bound (Epoch, Nvidia, Google, AMD and Amazon 2025, sum of row 95th percentiles)",
+      "note": "",
+      "unit": "",
+      "value": 1.966
+    },
+    "e22-nostock-budget-year": {
+      "fmt": "sig2",
+      "label": "upper bound on compute one year of a denied party's CXMT-limited output delivers in a year, no stockpile",
+      "note": "",
+      "unit": "FLOP",
+      "value": 2.60777867964048e+28
+    },
+    "e22-nostock-env-year": {
+      "fmt": ",.2f",
+      "label": "upper bound on H100e a year a denied party without a stockpile could make from CXMT's HBM at its 2026 rate (not tested)",
+      "note": "",
+      "unit": "million H100e",
+      "value": 0.417562
+    },
+    "e22-nostock-years-to-frozen": {
+      "fmt": ".2f",
+      "label": "the same to the hardwired-pause paper's frozen frontier (2e+27 FLOP), a lower bound",
+      "note": "",
+      "unit": "years",
+      "value": 0.39164684333354904
+    },
+    "e22-nostock-years-to-hwp": {
+      "fmt": ".1f",
+      "label": "least time from no chips to the hardwired-pause budget for a denied party without a stockpile (CXMT's HBM only), a lower bound",
+      "note": "",
+      "unit": "years",
+      "value": 3.91646843333549
+    },
+    "e22-observations": {
+      "fmt": ",.0f",
+      "label": "observations tested against the envelopes (two readings of each where the source gives a range)",
+      "note": "",
+      "unit": "observations",
+      "value": 19.0
+    },
+    "e22-phi-china-year": {
+      "fmt": ".1f",
+      "label": "upper bound on phi for China over 2026 on domestic supply only (imports and smuggling add to it)",
+      "note": "",
+      "unit": "",
+      "value": 2.426670166666667
+    },
+    "e22-phi-member-quarter": {
+      "fmt": ".2f",
+      "label": "the same for a quarter: Q4 2025's envelope over the fleet at end Q3 2025",
+      "note": "",
+      "unit": "",
+      "value": 1.653028312859656
+    },
+    "e22-phi-member-year": {
+      "fmt": ".1f",
+      "label": "upper bound on phi for a year between declarations: the fleet Epoch counts at end 2025 plus the 2025 envelope, over that fleet",
+      "note": "",
+      "unit": "",
+      "value": 2.5413585920226733
+    },
+    "e22-smuggled-share-of-allied": {
+      "fmt": ".1%",
+      "label": "the 95th percentile of compute smuggled into China through 2025 as a share of allied 2024-25 sales: the pool fits if below 1",
+      "note": "",
+      "unit": "",
+      "value": 0.08908551546911514
+    }
+  },
+  "script": "tools/exp/e22_supply_envelope.py",
+  "seed": 20261127
+}

@@ -440,10 +440,14 @@ threshold [@fithian2026hardwired]. Inference adds a one-off jump: about
 [1 OOM](numbers.md#comp-tradeoff-typical-oom) per technique without a cheap verifier, up to
 [3 OOM](numbers.md#comp-span-cheapver-train) with one [@villalobos2023tradeoff]. Post-training adds
 [0.7 OOM](numbers.md#comp-oneoff-lo-oom) to [1.3 OOM](numbers.md#comp-oneoff-hi-oom)
-[@davidson2023enhancements]. For a placeholder response time of [1 yr](numbers.md#comp-response-years),
-a cap needs [1.5 OOM](numbers.md#comp-headroom-needed-small) to
-[2.1 OOM](numbers.md#comp-headroom-needed-rosetta) of headroom, and about
-[3.4 OOM](numbers.md#comp-headroom-needed-verifier) where a cheap verifier exists.
+[@davidson2023enhancements]. Against Part II's declared-path line m T_r of
+[2.0 years](numbers.md#prot-line-declared), a cap needs [1.1 OOM](numbers.md#e18-need-part1-lo) to
+[2.9 OOM](numbers.md#e18-need-part1-hi) of headroom on published rates, and up to
+[4.6 OOM](numbers.md#e18-need-verifier-part1-hi) where a cheap verifier exists (E18). Against the
+placeholder response time of [1 yr](numbers.md#comp-response-years) alone, with no margin and the
+high jump, the figures are [1.5 OOM](numbers.md#comp-headroom-needed-small) to
+[2.1 OOM](numbers.md#comp-headroom-needed-rosetta), and about
+[3.4 OOM](numbers.md#comp-headroom-needed-verifier) with a cheap verifier.
 
 **Why third.** It moves T_b most, but the regime sees it best, meters it continuously and computes
 the line from it. As a risk the protocol might miss, it ranks below the two that are hard to see. As

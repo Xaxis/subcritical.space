@@ -40,15 +40,18 @@ algorithmic rate, the one-off post-training jump, inference spans conditioned on
 distillation. Joined in one expression, with each leak sorted by whether the chip channel can see it,
 they are a combination of prior work, C2 in
 [the claims file](04-claims.md#c2-breakout-time-from-verified-holdings-and-the-cap-leak-as-its-fixed-compute-case),
-which adds something only if two untested predictions hold. Tabulating it in advance with an
-interval is cut, since E1 cannot identify the drift rate.
+now downgraded to an accounting frame that claims nothing. Tabulating it in advance with an
+interval is cut, since E1 cannot identify the drift rate, and E18 left neither of the predictions
+that could have added something: its backtest cuts against the expression, and its gain over one
+multiplier is not shown.
 
 Conventions. Every number is a ledger link. Multipliers are written with an x after the number. OOM
 means an order of magnitude, a factor of ten. Where the survey read only a source's abstract, the
 text says "(abstract)". Nothing in this chapter has been tested against an adversary, and the
 protocol consequences are candidates. Of the experiments named, E1 and E9 have run, and their results
-are given under A1 and A3; E5 has run, and the combined leak's test draws on it. E10, E15, E16, E17
-and E18, numbered as in the claims file, are planned, not run.
+are given under A1 and A3; E5 has run, and the combined leak's test draws on it; E18 has run, and its
+result is under the combined leak. E10, E15, E16 and E17, numbered as in the claims file, are
+planned, not run.
 
 ## A1. Capability as a function of effective compute
 
@@ -863,11 +866,17 @@ would shorten by the time one OOM of drift takes at that rate (A3). They are ill
 published rates. E1 found the drift rate not identified, so none of them can be tabulated in advance
 with an interval; the claims file cuts that use, C2(a), for this reason.
 
-For a placeholder response time of [1 yr](numbers.md#comp-response-years), a cap needs about
+Against the placeholder response time of [1 yr](numbers.md#comp-response-years) alone, with no
+margin and the high post-training jump, a cap needs about
 [1.5 OOM](numbers.md#comp-headroom-needed-small) of headroom at the small-compute rate,
 [1.7 OOM](numbers.md#comp-headroom-needed-ho) at Ho et al.'s rate and
 [2.1 OOM](numbers.md#comp-headroom-needed-rosetta) at the Rosetta rate, and about
-[3.4 OOM](numbers.md#comp-headroom-needed-verifier) where a cheap verifier exists. The
+[3.4 OOM](numbers.md#comp-headroom-needed-verifier) where a cheap verifier exists. The protocol's
+line is longer: Part II's declared-path line m T_r is [2.0 years](numbers.md#prot-line-declared),
+its margin times its declared response time. Against it, with the jump from typical to high, E18 finds a cap
+needs [1.1 OOM](numbers.md#e18-need-part1-lo) to [2.9 OOM](numbers.md#e18-need-part1-hi) across this
+chapter's bracket, and up to [4.6 OOM](numbers.md#e18-need-verifier-part1-hi) with a cheap verifier
+(under "What would test it"). For the line, E18's figures supersede the ones above. The
 [1 OOM](numbers.md#comp-heim-buffer-oom) buffer suggested for post-training enhancement
 [@heim2024thresholds] covers only the typical one-off jump.
 
@@ -927,30 +936,76 @@ transfer, and the visible-invisible split. Verification took most of them. The i
 search (L1) found every term prior work and relabelled the whole a combination. The scale-dependent
 rate is Gundlach et al.'s, and E1 did not find it; the verifier-conditioned span and the accounting
 of distillation are rules others wrote; and the ceiling is false as a rule, since a student can
-exceed its teacher (L4). What may remain ours, as C2 states it: one expression evaluated per path
-from verified holdings, a measured rather than assumed loop-gain term (C4), and the split between
-leaks a chip count sees and leaks it does not. It adds something only if, for some holding class the
-protocol cares about, it differs from a single-multiplier breakout time by more than either's
-interval, or if, backtested, it predicts the open-closed lag; both are untested. Tabulating it in
-advance with an interval is cut, since E1 cannot identify the drift rate. The combination was not
+exceed its teacher (L4). What would have remained ours: one expression evaluated per path from
+verified holdings, a measured rather than assumed loop-gain term (C4), and the split between leaks a
+chip count sees and leaks it does not. It would have added something only if, for some holding class
+the protocol cares about, it differed from a single-multiplier breakout time by more than either's
+interval, or if, backtested, it predicted the open-closed lag. E18 found neither (below), so C2 is
+downgraded to an accounting frame and claims nothing. Tabulating it in advance with an interval is
+cut, since E1 cannot identify the drift rate. The combination was not
 found in the searches, which is a claim about those searches, not about the literature. Label: a
 combination of prior work.
 
 ### What would test it
 
-E18 in the claims file, not run: a Monte Carlo over the parameters. E1 was to supply g from the
-scale-binned fit of A3 at the cap's scale and cannot, since the rate is not identified, so E18 runs
-first on this chapter's ranges, with J from E10's post-training and distillation arms and the
-inference span from E10's verifier and no-verifier arms. Compute the distribution of leak time for a
-grid of headrooms, and the headroom needed for the leak time to exceed m T_r, with T_r the detection
-time plus the response time. E5 has run and gives the declared path's detection time,
-[39.0 days](numbers.md#e5-td-declared-days), set by chip sampling; it gives distillation none. The
-response time has no measured bound: of findings made while the party was in its treaty,
-[25%](numbers.md#e24-halt-share-never) were never followed by a halt (E24). So the placeholder of
-[1 yr](numbers.md#comp-response-years) above stays a placeholder. Then backtest: set a hypothetical cap at a past date at the compute of a then-frontier model,
-and check whether the model predicts when open models trained under that cap matched the frontier,
-against the measured open-closed lag of [4 months](numbers.md#comp-open-closed-lag)
-[@edwards2026openclosed]. A model that cannot predict that lag should not set a treaty schedule.
+E18, the cap leak, has run on this chapter's ranges, since E1 could not supply g at the cap's scale.
+It computes the leak time over a grid of headrooms at the corners of each rate range, with J over the
+post-training range and the inference span from one typical technique to the cheap-verifier span,
+against the declared path's illustrative m T_r of [2.0 years](numbers.md#prot-line-declared). For the example cap with no cheap verifier, the leak
+time runs from [2.2 years](numbers.md#e18-leak-part1-lo) to [12.7 years](numbers.md#e18-leak-part1-hi)
+across this chapter's bracket, and from [0.53 years](numbers.md#e18-leak-subset-lo) to
+[5.5 years](numbers.md#e18-leak-subset-hi) across E1's six sample rates. At
+[4 samples](numbers.md#e18-subsets-inside-line) of those six rates the example cap fails the
+illustrative line at every post-training jump, and at [1 samples](numbers.md#e18-subsets-outside-line)
+it passes. The headroom a cap needs runs from [1.1 OOM](numbers.md#e18-need-part1-lo) to
+[2.9 OOM](numbers.md#e18-need-part1-hi) on this chapter's bracket and up to
+[7.7 OOM](numbers.md#e18-need-subset-hi) at the fastest sample rate, or
+[3.3 OOM](numbers.md#e18-need-record-tr-part1-hi) at the bracket's high corner with T_r taken from
+the record (E5's declared-path detection plus E24's median response, a median, not a high quantile).
+The Monte Carlo medians move by a factor of [1.25](numbers.md#e18-mc-median-spread) across three
+assumed laws for the rate inside the bracket, so they illustrate, not measure.
+
+Three findings cut against the model.
+
+1. **It separates from one multiplier only where the cap already fails the line (C2(b), not
+   shown).** At fixed compute, with no cheap verifier, the expression's interval and a single
+   multiplier's are disjoint only at headrooms below [0.91 OOM](numbers.md#e18-b-sep-part1) on this chapter's
+   bracket, [0.80 OOM](numbers.md#e18-b-sep-subsets) on E1's samples, and
+   [1.30 OOM](numbers.md#e18-b-sep-verifier-part1) or [1.15 OOM](numbers.md#e18-b-sep-verifier-subsets)
+   with a cheap verifier. In all [8 cases](numbers.md#e18-b-sep-fails-line) of holding class and rate range, every headroom where
+   they separate is one where the cap's leak time is already below m T_r at every input, and at the
+   example headroom they overlap in all ([0 cases](numbers.md#e18-b-disjoint-example) disjoint). So
+   the expression adds nothing at fixed compute that changes a verdict. This is arithmetic on the
+   ranges, not a measurement.
+2. **The leak comes in jumps, not at a constant rate (C2(c), against).** E18 set a cap at a then-frontier model's
+   compute and at headrooms below it, and recorded when a model at or below the cap first matched the
+   record. Each catch-up closing more headroom than any earlier one implies a yearly rate from
+   [1.91](numbers.md#e18-bt-gamma-lo) to [1,125](numbers.md#e18-bt-gamma-hi), a range of observed
+   events, not an interval. The largest headroom closed was
+   [1.46 OOM](numbers.md#e18-bt-max-headroom), and the last catch-up closed most of it within days of
+   the one before. Of the backtest's points, the
+   first matches of [3 records](numbers.md#e18-bt-targets) at their own compute and the
+   [4 catch-ups](numbers.md#e18-bt-events), only [3 points](numbers.md#e18-bt-inside-part1) fall inside the expression's interval on this chapter's bracket with J = 0,
+   [2 points](numbers.md#e18-bt-inside-part1-j) with J over the post-training range, and
+   [2 points](numbers.md#e18-bt-inside-subsets) on E1's samples.
+3. **The expression has no follower-delay term.** At zero headroom it predicts a leak time of zero
+   for every input, yet a model at or below a frontier record's compute matched it only after
+   [0.48 years](numbers.md#e18-bt-h0-lo) to [1.52 years](numbers.md#e18-bt-h0-hi). Catching up takes
+   time the expression does not model.
+
+The open-closed lag, C2(c)'s stated target, cannot be predicted at all. E18 reproduces Epoch's strict lag
+over its 2026 window at [7.0 months](numbers.md#e18-oc-lag-strict),
+[1.17](numbers.md#e18-oc-lag-over-published) times the strict lag Epoch publishes, and the mean gap
+at [8.2 ECI points](numbers.md#e18-oc-gap-eci); the headline lag is
+[4 months](numbers.md#comp-open-closed-lag) [@edwards2026openclosed]. But on
+[0 days](numbers.md#e18-oc-evaluable-days) of the window do both the best open model and the record it
+matched have a public compute estimate, so the expression cannot predict the lag on public data.
+With the backtest against it, C2(c) has failed. C2 would reopen only if E15 and E10's post-training,
+distillation and verifier arms narrowed the ranges enough for the two intervals to separate where a
+cap passes the line, and a version with a follower's delay backtested. The response time still has no measured bound: of
+findings made while the party was in its treaty, [25%](numbers.md#e24-halt-share-never) were never
+followed by a halt (E24), so the placeholder of [1 yr](numbers.md#comp-response-years) above stays a
+placeholder. A model that cannot predict the open-closed lag should not set a treaty schedule.
 
 ## What this perspective contributes to the line
 
@@ -963,16 +1018,20 @@ Four quantities from this chapter are candidates for the protocol to trigger on 
    capability within [12 months](numbers.md#comp-consumer-lag-hi) and already hosts distributed RL
    rollouts.
 
-2. **The cap's leak rate at its own scale, in OOM a year, and its one-off leak, in OOM.** To be
-   measured by E1, E15 and E10. Together they set how fast thresholds must fall and how much headroom
-   a cap needs: for the placeholder response time of [1 yr](numbers.md#comp-response-years), about
-   [1.5 OOM](numbers.md#comp-headroom-needed-small) to
-   [2.1 OOM](numbers.md#comp-headroom-needed-rosetta) (the one-off jump plus a year's drift) at
-   published rates, and about [3.4 OOM](numbers.md#comp-headroom-needed-verifier) where a cheap
-   verifier exists. Weakest point: E1 could not identify the rate on public data, which ran from
+2. **The cap's leak rate at its own scale, in OOM a year, and its one-off leak, in OOM.** E1 has
+   run and could not identify the rate on public data. E15, scale dependence at fixed algorithms,
+   would measure the rate at the cap's scale, and E10 the one-off jump and the inference span;
+   neither has run. Together they set how fast thresholds must fall and how much headroom a cap
+   needs: against Part II's declared-path line m T_r of [2.0 years](numbers.md#prot-line-declared),
+   E18 finds [1.1 OOM](numbers.md#e18-need-part1-lo) to [2.9 OOM](numbers.md#e18-need-part1-hi) (the
+   one-off jump plus two years' drift) on this chapter's bracket of published rates, and up to
+   [4.6 OOM](numbers.md#e18-need-verifier-part1-hi) where a cheap verifier exists. Weakest point: E1
+   could not identify the rate on public data, which ran from
    [2.6](numbers.md#e1-algo-annual-subset-min)x to [1,512](numbers.md#e1-algo-annual-subset-max)x a
    year with the choice of models; the scale dependence is measured only in small-scale ablations,
-   which E1 did not confirm; and whether techniques stack is unmeasured.
+   which E1 did not confirm; whether techniques stack is unmeasured; and E18 found the leak arrives
+   in jumps, with catch-ups implying rates from [1.91](numbers.md#e18-bt-gamma-lo) to
+   [1,125](numbers.md#e18-bt-gamma-hi) a year, after a follower delay no rate term models.
 
 3. **Capability on a stitched scale at declared checkpoints, at intervals of about
    [4](numbers.md#comp-rsp-cadence)x effective compute.** Measured by refreshed batteries under a

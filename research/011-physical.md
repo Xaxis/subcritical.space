@@ -734,7 +734,18 @@ out a hidden [1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run, let alone one 
 [1e+24 FLOP](numbers.md#phys-miri-strict). Every reading puts the pool far above the floor. This is
 the most consequential result in the chapter, and its weakest input is the size of the untraced
 pool, which is an assumed order of magnitude, not a measurement; the smuggled stock is the better
-measured of the two.
+measured of the two. E22 is no evidence either way on this. Its envelope is an upper bound on what
+supply could make, so it could never have put the pool below the floor, and a test that cannot fail
+is not evidence
+([C8](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool)).
+It shows only that the estimates are consistent with supply, which it could not have shown
+otherwise: the 95th percentile of compute smuggled into China through 2025 is
+[8.9%](numbers.md#e22-smuggled-share-of-allied) of allied sales in 2024 and 2025, and the room the
+envelope leaves for undeclared Chinese domestic output is
+[3,549](numbers.md#e22-china-slack-over-floor) times the bound floor for a
+[1e+26 FLOP](numbers.md#phys-rahman-1e26-local) run under a pause. Only a count of the pool, or a
+sourced estimate of the smuggled stock whose upper end lies below the floor, could refute the pool's
+multiple.
 
 **The floor has a time axis, and the protocol moves it.** Rahman's longest sensible run is set by
 how fast hardware, software and investment grow. A pause slows them, so a covert run can rationally
@@ -892,9 +903,11 @@ what remains is a statement about our search and level 1's.
   distributed margins are definitional, not evidence. The red team cut it
   ([C8](04-claims.md#c8-the-aggregate-footprint-floor-a-margin-per-channel-and-the-untraced-pool)).
   What could refute the floor's role now: a published crossing-year analysis of satellite or grid
-  detection; E13 measuring energy per operation below the e_min the bound uses; or E22, or a count of
-  the pool, putting it far below the floor. A model of a distributed run's traffic or purchases
-  would test the word "only".
+  detection; E13 measuring energy per operation below the e_min the bound uses; or a count of the
+  untraced pool, or a sourced estimate of the smuggled stock, whose upper end lies below the floor.
+  E22 cannot do this: its envelope is an upper bound on supply, so it can show only that the
+  estimates are consistent with supply, never that the pool is small (under "Evidence for and
+  against"). A model of a distributed run's traffic or purchases would test the word "only".
 - **E5 (multi-channel verification)** has run. It combines the channels as the evader sees them,
   by subgoal and not as a product of independent misses, as Baker et al. argue a regime's detection
   is roughly that of its weakest subgoal [@baker2025verifying]. Over a one-year breakout time the

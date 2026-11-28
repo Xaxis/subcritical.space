@@ -5,7 +5,7 @@ The experiments in `tools/exp/`, numbered in `research/04-claims.md`. Each fetch
 `data/results/<name>.json`; `make model` loads each result's `numbers` into the ledger with basis
 `experiment` (`model/ledger.py`, `_load_results`). The contract is `tools/exp/README.md`.
 
-<!-- covers: cli:e01-capability-compute, cli:e02-time-horizons, cli:e04-loop-gain, cli:e05-detection, cli:e06-games, cli:e08-footprint-floor, cli:e09-returns, cli:e11-coupled-loops, cli:e24-response-latency, cli:e25-licence-log -->
+<!-- covers: cli:e01-capability-compute, cli:e02-time-horizons, cli:e04-loop-gain, cli:e05-detection, cli:e06-games, cli:e08-footprint-floor, cli:e09-returns, cli:e11-coupled-loops, cli:e18-cap-leak, cli:e21-team-battery, cli:e22-supply-envelope, cli:e23-durability, cli:e24-response-latency, cli:e25-licence-log -->
 
 ## Sub-features
 
@@ -33,6 +33,17 @@ The experiments in `tools/exp/`, numbered in `research/04-claims.md`. Each fetch
 - e11-coupled-loops (E11): Part I's coupled-loop graph from the ledger, which entries are measured,
   the row-sum floor, rho(U) and the smallest gate sets, the cross-party bound from capability-index
   growth. About 2 s.
+- e18-cap-leak (E18): C2's leak time at fixed compute over Part I's ranges and E1's sample rates,
+  the headroom a cap needs to exceed m * T_r, and a backtest on Epoch's open-closed chart data
+  (`tools/exp/data/e18_cap_leak.csv` for Epoch's published lag). Reads E1's result.
+- e21-team-battery (E21): t* by cluster from METR's RE-Bench runs, Cybench first-solve times,
+  MLE-bench grading reports and ForecastBench and Metaculus rounds, each fetched at a pinned commit;
+  censoring at each battery's ceiling reported. About a minute of network on the first run.
+- e22-supply-envelope (E22): the most H100e each kind of party could add in 2024 and 2025 from
+  CoWoS, HBM and logic capacity, against Epoch's chip sales; phi bounded from supply.
+- e23-durability (E23): supply stages ranked on data public at the end of 2022 (ETO Chip Explorer at
+  a pinned commit), scored against erosion events to 2026 (`tools/exp/data/e23_durability.csv`), with
+  the stage count a rank test would need.
 - e24-response-latency (E24): the time from a confirmed finding to a response in the arms-control
   record, case by case from `tools/exp/data/e24_response_latency.csv`, by response type.
 - e25-licence-log (E25): a header-chain verifier over Bitcoin's real headers; licence spans, the
@@ -53,7 +64,7 @@ python3 model/subcritical.py --only e2-refit-over-metr
 For any experiment, the same rerun-and-compare, without the network for E5, E8 and E24:
 
 ```sh
-for e in e05_detection e08_footprint_floor e09_returns e11_coupled_loops e24_response_latency e25_licence_log; do
+for e in e05_detection e08_footprint_floor e09_returns e11_coupled_loops e18_cap_leak e21_team_battery e22_supply_envelope e23_durability e24_response_latency e25_licence_log; do
   cp data/results/$e.json /tmp/$e.json && .venv/bin/python tools/exp/$e.py && cmp data/results/$e.json /tmp/$e.json && echo "$e identical"
 done
 ```
