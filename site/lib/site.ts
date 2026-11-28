@@ -13,6 +13,7 @@ export const SITE = {
 
 /** The header's links, in order. */
 export const NAV = [
+  { href: "/paper", label: "Paper" },
   { href: "/research", label: "Research" },
   { href: "/experiments", label: "Experiments" },
   { href: "/numbers", label: "Numbers" },

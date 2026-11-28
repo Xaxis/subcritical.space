@@ -5,7 +5,8 @@
 // 404), shot whole at 1440 and at 390 px wide, light and dark. At neither width may anything scroll
 // sideways: the page is no wider than the window, and at 390 px every block keeps a side gutter.
 // Each is checked by axe against WCAG 2.2 A and AA, and a serious or critical finding fails it, as
-// does anything the Content-Security-Policy refuses.
+// does anything the Content-Security-Policy refuses, and any overflowing scroller with an opaque
+// background, which stalls the capture (tools/lib/scrollers.ts).
 //
 // A page is captured in segments of SEGMENT px, written <page>-<width>-<scheme>-<n>.png from the
 // top (one segment: no -<n>). A single full-page capture wraps under SwiftShader past 8,192 px.
@@ -21,6 +22,7 @@ import { chromium } from "playwright-core";
 import { axeViolations, fails } from "../lib/axe.ts";
 import { CHROMIUM_ARGS } from "../lib/chromium.ts";
 import { touchingEdges } from "../lib/gutter.ts";
+import { opaqueScrollers } from "../lib/scrollers.ts";
 
 /** Tall enough to read a section, well under the 8,192 px at which a capture wraps. */
 const SEGMENT = 4000;
@@ -121,6 +123,15 @@ try {
         });
         for (const v of (await axeViolations(page)).filter(fails))
           problems.push(`${path} ${label} ${scheme}: axe ${v.id} at ${v.targets.join(", ")}`);
+        // An opaque scroller stalls the capture below for minutes; name it and skip this capture.
+        const opaque = await page.evaluate(opaqueScrollers);
+        if (opaque.length > 0) {
+          problems.push(
+            `${path} ${label} ${scheme}: a scroller with an opaque background (${opaque.join(", ")}) stalls the capture; colour its content instead (tools/lib/scrollers.ts)`,
+          );
+          await context.close();
+          continue;
+        }
         const tall = await page.evaluate(() => document.documentElement.scrollHeight);
         const parts = Math.ceil(tall / SEGMENT);
         for (let k = 0; k < parts; k++) {

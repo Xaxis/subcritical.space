@@ -291,6 +291,14 @@
       "tests": []
     },
     {
+      "id": "page:/paper",
+      "kind": "page",
+      "entry": "site/app/paper/page.tsx",
+      "reach": "http://localhost:$PORT/paper",
+      "area": "paper",
+      "tests": []
+    },
+    {
       "id": "page:/research",
       "kind": "page",
       "entry": "site/app/research/page.tsx",

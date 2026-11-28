@@ -118,3 +118,44 @@ export const TRACKS = [
   ["09", "mechanism-design", "Mechanism design"],
   ["10", "gameable-evals", "Evaluations that can be gamed"],
 ] as const;
+
+/** One file of the paper: its title, its part (from the file's number) and its body. */
+export interface PaperSection {
+  file: string;
+  /** The anchor for the section, from its file name: "11-physical". */
+  id: string;
+  title: string;
+  part: string;
+  body: string;
+  words: number;
+}
+
+/** The paper's files in paper/, in order. Part I is 1x, Part II 2x, Part III 3x. */
+export function paperSections(): PaperSection[] {
+  const part = (n: number) =>
+    n < 10
+      ? "Introduction"
+      : n < 20
+        ? "Part I: what superintelligence is and how it forms"
+        : n < 30
+          ? "Part II: the protocol"
+          : n < 40
+            ? "Part III: what holds"
+            : "Conclusion";
+  return markdownIn("paper").map((file) => {
+    const text = readRepoFile(file)
+      .replace(/\r\n/g, "\n")
+      .replace(/<!--[\s\S]*?-->\n?/g, "");
+    const m = /^# (.+)$/m.exec(text);
+    const name = file.replace(/^paper\//, "").replace(/\.md$/, "");
+    const body = m ? text.slice((m.index ?? 0) + m[0].length).trim() : text;
+    return {
+      file,
+      id: name,
+      title: m?.[1]?.trim() ?? name,
+      part: part(Number(/^(\d+)/.exec(name)?.[1] ?? 99)),
+      body,
+      words: body.split(/\s+/).filter(Boolean).length,
+    };
+  });
+}

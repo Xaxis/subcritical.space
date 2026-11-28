@@ -25,8 +25,10 @@ const shown = (x: number) => 1 - Math.exp(-x / 0.75);
 export function build({ small }: BuildContext): Built {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(small ? 48 : 40, 1.6, 0.1, 100);
+  // Step 0 frames the figure's wide stage; step 1 stands closer, for the hero's squarer stage.
   const view = rig(camera, [
     { pos: new THREE.Vector3(0, 4.6, 6.4), look: new THREE.Vector3(0, -0.2, 0) },
+    { pos: new THREE.Vector3(0, 3.7, 5.1), look: new THREE.Vector3(0, -0.2, 0) },
   ]);
 
   const centres = LOOPS.map((_, i) => {
@@ -116,7 +118,7 @@ export function build({ small }: BuildContext): Built {
       core.put(p.set(0, 0.35, 0), colour, 0.15 + 1.25 * mean);
       core.flush();
       linkMat.color.copy(DIM).lerp(colour, Math.min(0.7, c * 3));
-      view(0, frame);
+      view(state.step, frame);
     },
   };
 }

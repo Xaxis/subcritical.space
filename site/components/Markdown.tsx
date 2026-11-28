@@ -29,7 +29,18 @@ function text(children: ReactNode): string {
   return "";
 }
 
-function components(inline: boolean, asWritten: boolean): Components {
+/** A heading `shift` levels below the Markdown's, with an id from its text and the prefix. */
+function Heading(p: { level: number; shift: number; prefix: string; children?: ReactNode }) {
+  const Tag = `h${Math.min(6, p.level + p.shift)}` as "h2";
+  return <Tag id={`${p.prefix}${slugify(text(p.children))}`}>{p.children}</Tag>;
+}
+
+function components(
+  inline: boolean,
+  asWritten: boolean,
+  shift: number,
+  prefix: string,
+): Components {
   return {
     a({ href = "", children }) {
       const id = ledgerId(href);
@@ -71,8 +82,21 @@ function components(inline: boolean, asWritten: boolean): Components {
         );
       return <a href={href}>{children}</a>;
     },
-    h2: ({ children }) => <h2 id={slugify(text(children))}>{children}</h2>,
-    h3: ({ children }) => <h3 id={slugify(text(children))}>{children}</h3>,
+    h2: ({ children }) => (
+      <Heading level={2} shift={shift} prefix={prefix}>
+        {children}
+      </Heading>
+    ),
+    h3: ({ children }) => (
+      <Heading level={3} shift={shift} prefix={prefix}>
+        {children}
+      </Heading>
+    ),
+    h4: ({ children }) => (
+      <Heading level={4} shift={shift} prefix={prefix}>
+        {children}
+      </Heading>
+    ),
     pre: ({ children }) => (
       // biome-ignore lint/a11y/noNoninteractiveTabindex: a wide code block scrolls, and a keyboard must reach it
       <pre tabIndex={0}>{children}</pre>
@@ -95,10 +119,16 @@ export function Markdown({
   md,
   inline = false,
   asWritten = false,
+  shift = 0,
+  idPrefix = "",
 }: {
   md: string;
   inline?: boolean;
   asWritten?: boolean;
+  /** Render each heading this many levels lower, for Markdown set under a page's own headings. */
+  shift?: number;
+  /** Put before every heading's id, where several files share one page. */
+  idPrefix?: string;
 }) {
   const byKey = sourceIndex();
   const withCites = linkCitations(
@@ -107,7 +137,10 @@ export function Markdown({
     (k) => byKey.get(k)?.key ?? k,
   );
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} components={components(inline, asWritten)}>
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      components={components(inline, asWritten, shift, idPrefix)}
+    >
       {withCites}
     </ReactMarkdown>
   );
